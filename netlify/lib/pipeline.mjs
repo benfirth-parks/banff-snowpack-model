@@ -10,8 +10,9 @@ import { newSnowDensity } from "../../src/model/snowpack.js";
 import { tzOffset, localDate, snapHour, isSnapHour, addDays } from "../../src/model/time.js";
 
 export const SEASON_START = "2026-09-01";
-const BATCH = 250;
-const HIST = 30; // hours of history before the analysis start (residual tails, 24 h precip windows)
+export const LIVE_SEASON = "2026-27";
+export const BATCH = 250;
+export const HIST = 30; // hours of history before the analysis start (residual tails, 24 h precip windows)
 
 export const PROPS = [
   "hazard", "pNew", "pWind", "pPwl", "pWet",
@@ -19,8 +20,8 @@ export const PROPS = [
   "wind24", "skiPen", "critPwl", "critPwlDist", "critPwlDepth", "lwc", "lwm", "hs", "elev",
 ];
 
-const mean = (a) => (a.length ? a.reduce((s, x) => s + x, 0) / a.length : null);
-const ok = (v) => v !== null && v !== undefined && Number.isFinite(v);
+export const mean = (a) => (a.length ? a.reduce((s, x) => s + x, 0) / a.length : null);
+export const ok = (v) => v !== null && v !== undefined && Number.isFinite(v);
 const r1 = (x) => (ok(x) ? Math.round(x * 10) / 10 : null);
 const r0 = (x) => (ok(x) ? Math.round(x) : null);
 
@@ -45,19 +46,19 @@ export async function ensureMeta(store, fetchElevations, log) {
     version: 1, seasonStart: SEASON_START, createdAt: new Date().toISOString(),
     grid: { ...GRID, nR, nC }, cells: cells.filter((c) => ok(c.z)), points,
     aspects: ASPECTS.map((a) => a.id), analysisHour: null, forecastIssued: null,
-    dates: { analysis: [], forecast: [] },
+    dates: { analysis: [], forecast: [] }, season: LIVE_SEASON,
   };
   await store.setJSON("meta", m);
   return m;
 }
 
 // ---- per-site bookkeeping (rolling forcing history + daily totals) ---------
-function initExtras(site) { site.h = { P: [], S: [], R: [], U: [] }; site.dl = []; site.acc = { s: 0, r: 0 }; return site; }
-function packFull(site) { return { ...packSite(site), x: { h: site.h, dl: site.dl, acc: site.acc } }; }
-function unpackFull(p) { const s = unpackSite(p); if (p.x) { s.h = p.x.h; s.dl = p.x.dl; s.acc = p.x.acc; } else initExtras(s); return s; }
+export function initExtras(site) { site.h = { P: [], S: [], R: [], U: [] }; site.dl = []; site.acc = { s: 0, r: 0 }; return site; }
+export function packFull(site) { return { ...packSite(site), x: { h: site.h, dl: site.dl, acc: site.acc } }; }
+export function unpackFull(p) { const s = unpackSite(p); if (p.x) { s.h = p.x.h; s.dl = p.x.dl; s.acc = p.x.acc; } else initExtras(s); return s; }
 function cloneFull(site) { const c = cloneSite(site); c.h = { P: [...site.h.P], S: [...site.h.S], R: [...site.h.R], U: [...site.h.U] }; c.dl = site.dl.map((d) => ({ ...d })); c.acc = { ...site.acc }; return c; }
 
-function advance(site, f) {
+export function advance(site, f) {
   const snowMm = f.P * f.sf;
   const snowCm = snowMm > 0 ? (snowMm / newSnowDensity(f.Ta, f.U)) * 100 : 0;
   const rain = f.P * (1 - f.sf);
@@ -67,14 +68,14 @@ function advance(site, f) {
   stepSite(site, f);
 }
 
-function closeDay(site, t) {
+export function closeDay(site, t) {
   site.dl.push({ t, s: Math.round(site.acc.s * 10) / 10, r: Math.round(site.acc.r * 10) / 10 });
   if (site.dl.length > 14) site.dl.shift();
   site.acc = { s: 0, r: 0 };
 }
 
 // Values + text for one site at a snapshot hour.
-function snapshot(site, t, withProfile) {
+export function snapshot(site, t, withProfile) {
   const sum = (a, n) => a.slice(-n).reduce((s, x) => s + x, 0);
   const wx = {
     precip24: sum(site.h.P, 24), snow24: sum(site.h.S, 24), rain24: sum(site.h.R, 24),
@@ -303,7 +304,7 @@ export async function runPipeline(deps, opts = {}) {
   return status;
 }
 
-function writeField(fld, ci, snap) {
+export function writeField(fld, ci, snap) {
   for (const p of PROPS) fld.props[p][ci] = snap.v[p];
   fld.text[ci] = snap.text;
 }

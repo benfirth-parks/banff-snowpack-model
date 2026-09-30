@@ -6,6 +6,7 @@
 export const EXPLORER = "https://rockiesweatherdataexplorer.netlify.app";
 export const FXTOOL = "https://rockiesweatherfxtool.netlify.app";
 const OPEN_METEO = "https://api.open-meteo.com/v1/forecast";
+const OPEN_METEO_HIST = "https://historical-forecast-api.open-meteo.com/v1/forecast";
 const ELEVATION = "https://api.open-meteo.com/v1/elevation";
 
 const UA = { "user-agent": "banff-snowpack-model (+netlify function)" };
@@ -85,30 +86,50 @@ const VARS = [
 ];
 export const MODELS = ["gem_hrdps_continental", "gem_regional"];
 
-function forecastQuery(chunk, pastDays, forecastDays) {
+function modelQuery(chunk, models, extra) {
   const p = new URLSearchParams();
   p.set("latitude", chunk.map((n) => n.lat).join(","));
   p.set("longitude", chunk.map((n) => n.lon).join(","));
   p.set("hourly", VARS.map((v) => v[1]).join(","));
-  p.set("models", MODELS.join(","));
-  p.set("past_days", String(pastDays));
-  p.set("forecast_days", String(forecastDays));
+  p.set("models", models.join(","));
+  for (const [k, v] of Object.entries(extra)) p.set(k, String(v));
   p.set("timeformat", "unixtime");
   p.set("timezone", "GMT");
   return p.toString();
 }
 
+// Model columns for one chunk of nodes from an Open-Meteo response. Where
+// several models are requested, the first model with a value wins each hour.
+function parseModel(chunk, data, models, into, allNodes) {
+  const list = Array.isArray(data) ? data : [data];
+  chunk.forEach((n, i) => {
+    const d = list[i];
+    if (!d || !d.hourly) return;
+    const time = d.hourly.time.map((s) => Math.round(s / 3600));
+    const v = {};
+    for (const [k, name] of VARS) {
+      const cols = models.map((m) => d.hourly[`${name}_${m}`] || []);
+      const plain = d.hourly[name] || [];
+      v[k] = time.map((_, j) => {
+        for (const c of cols) if (ok(c[j])) return c[j];
+        return ok(plain[j]) ? plain[j] : null;
+      });
+    }
+    into[allNodes.indexOf(n)] = { id: n.id, lat: n.lat, lon: n.lon, z: d.elevation, t0: time[0], v };
+  });
+}
+
+const chunksOf = (a, n) => { const out = []; for (let i = 0; i < a.length; i += n) out.push(a.slice(i, i + n)); return out; };
+
 // Returns { nodes: [{ id, lat, lon, z, t0, v: { T: [], … } }], source, errors }
 // where v arrays are hourly from epoch hour t0. HRDPS (2.5 km) is used wherever
 // it has data; RDPS (10 km) fills the hours beyond HRDPS's 48 h horizon.
 export async function fetchModel(nodes, pastDays, forecastDays = 4) {
-  const chunks = [];
-  for (let i = 0; i < nodes.length; i += 20) chunks.push(nodes.slice(i, i + 20));
   const errors = [];
   const sources = new Set();
   const out = [];
-  await Promise.all(chunks.map(async (chunk, ci) => {
-    const q = forecastQuery(chunk, pastDays, forecastDays);
+  await Promise.all(chunksOf(nodes, 20).map(async (chunk, ci) => {
+    const q = modelQuery(chunk, MODELS, { past_days: pastDays, forecast_days: forecastDays });
     let data;
     try {
       data = await fetchJSON(`${FXTOOL}/api/forecast?${q}`, { retries: 1, timeoutMs: 30000 });
@@ -118,22 +139,36 @@ export async function fetchModel(nodes, pastDays, forecastDays = 4) {
       data = await fetchJSON(`${OPEN_METEO}?${q}`, { retries: 1, timeoutMs: 30000 });
       sources.add("Open-Meteo direct");
     }
-    const list = Array.isArray(data) ? data : [data];
-    chunk.forEach((n, i) => {
-      const d = list[i];
-      if (!d || !d.hourly) return;
-      const time = d.hourly.time.map((s) => Math.round(s / 3600));
-      const v = {};
-      for (const [k, name] of VARS) {
-        const a = d.hourly[`${name}_${MODELS[0]}`] || [];
-        const b = d.hourly[`${name}_${MODELS[1]}`] || [];
-        const plain = d.hourly[name] || [];
-        v[k] = time.map((_, j) => (ok(a[j]) ? a[j] : ok(b[j]) ? b[j] : ok(plain[j]) ? plain[j] : null));
-      }
-      out[nodes.indexOf(n)] = { id: n.id, lat: n.lat, lon: n.lon, z: d.elevation, t0: time[0], v };
-    });
+    parseModel(chunk, data, MODELS, out, nodes);
   }));
   return { nodes: out.filter(Boolean), source: [...sources].join(" + "), errors };
+}
+
+// Archived model runs for past seasons (Open-Meteo Historical Forecast API:
+// HRDPS archived from March 2023, RDPS from November 2022). HRDPS alone is
+// requested first; RDPS is fetched only for columns with gaps, which keeps the
+// weighted request cost down. Dates are UTC YYYY-MM-DD, inclusive.
+export async function fetchModelHistory(nodes, startDate, endDate) {
+  const errors = [];
+  const out = [];
+  for (const chunk of chunksOf(nodes, 20)) {
+    const q = modelQuery(chunk, [MODELS[0]], { start_date: startDate, end_date: endDate });
+    const data = await fetchJSON(`${OPEN_METEO_HIST}?${q}`, { retries: 2, timeoutMs: 45000 });
+    parseModel(chunk, data, [MODELS[0]], out, nodes);
+  }
+  const gappy = nodes.filter((n, i) => !out[i] || out[i].v.T.filter((x) => x === null).length > out[i].v.T.length * 0.02);
+  if (gappy.length) {
+    const fill = [];
+    for (const chunk of chunksOf(gappy, 20)) {
+      try {
+        const q = modelQuery(chunk, MODELS, { start_date: startDate, end_date: endDate });
+        const data = await fetchJSON(`${OPEN_METEO_HIST}?${q}`, { retries: 1, timeoutMs: 45000 });
+        parseModel(chunk, data, MODELS, fill, gappy);
+      } catch (e) { errors.push(`RDPS gap fill: ${e.message}`); }
+    }
+    gappy.forEach((n, j) => { if (fill[j]) out[nodes.indexOf(n)] = fill[j]; });
+  }
+  return { nodes: out.filter(Boolean), source: gappy.length ? "Open-Meteo archive (HRDPS, RDPS gap-fill)" : "Open-Meteo archive (HRDPS)", errors };
 }
 
 // ---- Terrain ----------------------------------------------------------------

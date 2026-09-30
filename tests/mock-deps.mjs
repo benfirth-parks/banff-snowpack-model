@@ -17,7 +17,8 @@ function synoptic(t) {
 }
 function wx(lat, lon, z, t, bias = { T: 0, P: 1 }) {
   const s = synoptic(t);
-  const seasonal = 6 - (t - 494000) / 24 * 0.25; // cooling through autumn
+  const doy = ((t / 24) % 365.25 + 365.25) % 365.25; // ~day of year (epoch-aligned)
+  const seasonal = 2 - 10 * Math.cos(2 * Math.PI * (doy - 15) / 365.25);
   const localH = ((t - 7) % 24 + 24) % 24;
   const T = seasonal + s.anom - 0.0065 * (z - 1500) + 4 * Math.sin((localH - 9) / 24 * 2 * Math.PI) * (1 - 0.7 * s.cc) + bias.T;
   const sun = sunPosition((t - 0.5) * 3600000, lat, lon);
@@ -56,6 +57,19 @@ export const deps = {
       return { id: n.id, lat: n.lat, lon: n.lon, z, t0, v };
     });
     return { nodes: out, source: "mock", errors: [] };
+  },
+  fetchModelHistory: async (nodes, startDate, endDate) => {
+    const t0 = Date.parse(startDate + "T00:00:00Z") / 3600000, t1 = Date.parse(endDate + "T23:00:00Z") / 3600000;
+    const out = nodes.map((n) => {
+      const z = 1500 + 900 * hash(n.lat * 100 + n.lon);
+      const v = { T: [], RH: [], U: [], dir: [], P: [], ghi: [], dirH: [], difH: [], cc: [] };
+      for (let t = t0; t <= t1; t++) {
+        const w = wx(n.lat, n.lon, z, t, { T: 1.5, P: 1.3 });
+        for (const k of Object.keys(v)) v[k].push(w[k]);
+      }
+      return { id: n.id, lat: n.lat, lon: n.lon, z, t0, v };
+    });
+    return { nodes: out, source: "mock archive", errors: [] };
   },
 };
 

@@ -9,7 +9,7 @@ const $ = (id) => document.getElementById(id);
 const BANDS = ["ALP", "TL", "BTL"];
 const ASPECTS = ["Flat", "N", "E", "S", "W"];
 
-const state = { meta: null, date: null, prop: "hs", point: null, band: "ALP", aspect: 0, fields: new Map(), points: new Map() };
+const state = { meta: null, season: null, date: null, prop: "hs", point: null, band: "ALP", aspect: 0, fields: new Map(), points: new Map() };
 
 // ---------- time helpers ----------
 const ymd = new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" });
@@ -27,12 +27,14 @@ function readUrl() {
   const q = new URLSearchParams(location.search);
   if (q.get("property") && PROP[q.get("property")]) state.prop = q.get("property");
   if (/^\d{4}-\d{2}-\d{2}$/.test(q.get("date") || "")) state.date = q.get("date");
+  if (/^\d{4}-\d{2}$/.test(q.get("season") || "")) state.season = q.get("season");
   if (q.get("point")) state.point = q.get("point");
   if (BANDS.includes(q.get("band"))) state.band = q.get("band");
   if (q.get("aspect") && ASPECTS.includes(q.get("aspect"))) state.aspect = ASPECTS.indexOf(q.get("aspect"));
 }
 function writeUrl() {
   const q = new URLSearchParams();
+  if (state.season && !isLive()) q.set("season", state.season);
   q.set("date", state.date); q.set("property", state.prop);
   if (state.point) { q.set("point", state.point); q.set("band", state.band); q.set("aspect", ASPECTS[state.aspect]); }
   history.replaceState(null, "", `?${q}`);
@@ -45,12 +47,17 @@ async function getJSON(url) {
   if (!r.ok) throw Object.assign(new Error(body.error || r.statusText), { status: r.status });
   return body;
 }
+const isLive = () => !state.meta || !state.season || state.season === state.meta.season;
+const seasonEntry = (id = state.season) => (state.meta.seasons || []).find((s) => s.id === id);
 async function field(date) {
-  if (!state.fields.has(date)) state.fields.set(date, getJSON(`/api/field?date=${date}`).catch((e) => { state.fields.delete(date); throw e; }));
-  return state.fields.get(date);
+  const key = `${state.season}/${date}`;
+  const q = isLive() ? "" : `&season=${state.season}`;
+  if (!state.fields.has(key)) state.fields.set(key, getJSON(`/api/field?date=${date}${q}`).catch((e) => { state.fields.delete(key); throw e; }));
+  return state.fields.get(key);
 }
 function availableDates() {
   const m = state.meta;
+  if (!isLive()) return (seasonEntry() || { dates: [] }).dates;
   return [...new Set([...(m.dates.analysis || []), ...(m.dates.forecast || [])])].sort();
 }
 
@@ -186,7 +193,8 @@ function renderLegend(f) {
   const t = f ? f.t : null;
   const when = t ? snapLabel(t) : state.date;
   const grad = `linear-gradient(to right, ${p.ramp.join(",")})`;
-  $("legend").innerHTML = `<div class="ttl">${p.label} | ${when}${f && f.kind === "forecast" ? '<span class="fc">FORECAST</span>' : ""}</div>` +
+  const badge = f && f.kind === "forecast" ? '<span class="fc">FORECAST</span>' : f && f.kind === "reanalysis" ? `<span class="fc re">${f.season} REANALYSIS</span>` : "";
+  $("legend").innerHTML = `<div class="ttl">${p.label} | ${when}${badge}</div>` +
     `<div class="sub">${p.sub}</div><div class="bar" style="background:${grad}"></div>` +
     `<div class="ticks">${ticks.map((v, i) => `<span style="left:${(100 * i) / (ticks.length - 1)}%">${v}</span>`).join("")}</div>`;
 }
@@ -209,11 +217,36 @@ function renderDateControls() {
   inp.min = dates[0] || ""; inp.max = dates[dates.length - 1] || "";
   inp.value = state.date;
   const today = todayLocal();
+  renderSeasonSelect();
   document.querySelectorAll(".quick button").forEach((b) => {
     const d = addDays(today, Number(b.dataset.quick));
-    b.disabled = !dates.includes(d);
+    b.disabled = !isLive() || !dates.includes(d);
     b.classList.toggle("on", d === state.date);
   });
+}
+
+function renderSeasonSelect() {
+  const sel = $("seasonSelect");
+  const m = state.meta;
+  const opts = [{ id: m.season, label: `${m.season.replace("-", "–")} (current)`, ready: true }]
+    .concat((m.seasons || []).map((s) => ({ id: s.id, label: `${s.id.replace("-", "–")}${s.status === "done" ? "" : s.status === "running" ? ` (building ${s.progress}%)` : s.status === "error" ? " (error)" : " (queued)"}`, ready: (s.dates || []).length > 0 })));
+  sel.innerHTML = opts.map((o) => `<option value="${o.id}"${o.id === state.season ? " selected" : ""}${o.ready ? "" : " disabled"}>${o.label}</option>`).join("");
+}
+
+function setSeason(id) {
+  if (id === state.season) return;
+  const prev = state.date;
+  state.season = id;
+  state.points.clear();
+  const dates = availableDates();
+  // Keep the same day of the season when moving between seasons, if it exists.
+  let d = dates[dates.length - 1];
+  if (prev && dates.length) {
+    const md = prev.slice(5);
+    const hit = dates.find((x) => x.slice(5) === md);
+    if (hit) d = hit;
+  }
+  setDate(d);
 }
 
 function setDate(d) {
@@ -230,7 +263,9 @@ function renderStatus() {
   const m = state.meta;
   const a = m.analysisHour ? hourFmt.format(new Date(m.analysisHour * 3600000)) : "—";
   const f = m.forecastIssued ? hourFmt.format(new Date(m.forecastIssued)) : "—";
-  $("runStatus").innerHTML = `Station data assimilated to <b>${a}</b><br>Forecast run issued ${f}`;
+  const building = (m.seasons || []).filter((s) => s.status !== "done");
+  const past = building.length ? `<br>Past seasons: ${building.map((s) => `${s.id} ${s.status === "running" ? `${s.progress}%` : s.status}`).join(" · ")}` : "";
+  $("runStatus").innerHTML = `Station data assimilated to <b>${a}</b><br>Forecast run issued ${f}${past}`;
 }
 
 // ---------- cell popup ----------
@@ -289,7 +324,8 @@ function closePoint() {
 }
 
 async function pointData(id) {
-  if (!state.points.has(id)) state.points.set(id, getJSON(`/api/point?id=${encodeURIComponent(id)}`).catch((e) => { state.points.delete(id); throw e; }));
+  const q = isLive() ? "" : `&season=${state.season}`;
+  if (!state.points.has(id)) state.points.set(id, getJSON(`/api/point?id=${encodeURIComponent(id)}${q}`).catch((e) => { state.points.delete(id); throw e; }));
   return state.points.get(id);
 }
 
@@ -318,7 +354,7 @@ async function renderPanel() {
   const asp = ASPECTS[state.aspect];
   chart.set({
     days, aspect: state.aspect, selectedDate: sel ? sel.date : null, hasObs: !named,
-    title: `${entry.name} (${named ? entry.band + " " : ""}${entry.z}m) · ${asp === "Flat" ? "flat" : asp + " 38°"}`,
+    title: `${entry.name} (${named ? entry.band + " " : ""}${entry.z}m) · ${asp === "Flat" ? "flat" : asp + " 38°"}${isLive() ? "" : ` · ${state.season.replace("-", "–")}`}`,
     dateLabel: sel ? sel.dateLabel + (sel.fc ? " (fcst)" : "") : "",
   });
   if (!sel) { $("summaryText").textContent = "No simulated days yet."; $("chips").innerHTML = ""; return; }
@@ -344,8 +380,9 @@ async function openStatus() {
   dlg.showModal();
   $("statusBody").textContent = "Loading…";
   try {
-    const { status: s, lastError, running } = await getJSON("/api/status");
-    if (!s) { $("statusBody").textContent = running ? "The first model run is in progress." : "The model has not run yet."; return; }
+    const { status: s, lastError, running, seasons, seasonRunning } = await getJSON("/api/status");
+    const seasonTable = (seasons || []).length ? `<h3>Past seasons (reanalysis)</h3><p class="muted">Archived HRDPS runs corrected with the station actuals held in the explorer archive. Coverage is the share of hours with data.</p><table><thead><tr><th>Season</th><th>Status</th><th>Days built</th><th>Model</th><th>Station coverage (T / HS)</th></tr></thead><tbody>${seasons.map((x) => `<tr><td>${x.id}</td><td>${x.status}${x.status === "running" ? ` ${x.progress}%` : ""}${x.id === seasonRunning ? " ⟳" : ""}${x.error ? ` — ${x.error}` : ""}</td><td>${x.days}</td><td>${x.modelSource || "–"}</td><td>${x.coverage ? Object.entries(x.coverage).filter(([, c]) => c.T || c.HS).map(([id, c]) => `${id.replace("fts-", "")} ${c.T}/${c.HS}`).join(", ") : "–"}</td></tr>`).join("")}</tbody></table>` : "";
+    if (!s) { $("statusBody").innerHTML = (running ? "The first model run is in progress." : "The model has not run yet.") + seasonTable; return; }
     const hf = (t) => (t ? hourFmt.format(new Date(t * 3600000)) : "—");
     const rows = (s.stations || []).map((x) => `<tr><td>${x.name}</td><td>${x.biasT === null ? "–" : (x.biasT > 0 ? "+" : "") + x.biasT}</td><td>${x.biasRH === null ? "–" : (x.biasRH > 0 ? "+" : "") + x.biasRH}</td><td>${x.windRatio ?? "–"}</td><td>${(x.precip || []).map((p) => `${p.obs}/${p.model}`).join(", ") || "–"}</td></tr>`).join("");
     $("statusBody").innerHTML =
@@ -356,7 +393,7 @@ async function openStatus() {
       (lastError ? `<p class="muted">Last error (${lastError.at}): ${String(lastError.error).split("\n")[0]}</p>` : "") +
       `<p>Station corrections applied to the forecast-model first guess. Temperature and humidity: mean observed − model over the last 6 hours (persisted into the forecast with a 12 h / 6 h decay). Wind: observed ÷ model ratio. Precipitation: observed / model mm for each 24 h window ending 17:00 (gauge or snow-height gain).</p>` +
       ((s.hsCheck || []).length ? `<p>Snow height now: model (flat) vs station sensor.</p><table><thead><tr><th>Station</th><th>Elev</th><th>Observed HS cm</th><th>Model HS cm</th></tr></thead><tbody>${s.hsCheck.map((h) => `<tr><td>${h.name}</td><td>${h.z} m</td><td>${h.obsHS ?? "–"}</td><td>${h.modelHS ?? "–"}</td></tr>`).join("")}</tbody></table>` : "") +
-      `<table><thead><tr><th>Station</th><th>T bias °C</th><th>RH bias %</th><th>Wind ratio</th><th>Precip obs/model mm (recent days)</th></tr></thead><tbody>${rows}</tbody></table>`;
+      `<table><thead><tr><th>Station</th><th>T bias °C</th><th>RH bias %</th><th>Wind ratio</th><th>Precip obs/model mm (recent days)</th></tr></thead><tbody>${rows}</tbody></table>` + seasonTable;
   } catch (e) {
     $("statusBody").textContent = `Couldn't load status: ${e.message}`;
   }
@@ -367,6 +404,7 @@ function wire() {
   $("datePrev").onclick = () => { const d = availableDates(); const i = d.indexOf(state.date); if (i > 0) setDate(d[i - 1]); };
   $("dateNext").onclick = () => { const d = availableDates(); const i = d.indexOf(state.date); if (i >= 0 && i < d.length - 1) setDate(d[i + 1]); };
   $("dateInput").onchange = (e) => e.target.value && setDate(e.target.value);
+  $("seasonSelect").onchange = (e) => setSeason(e.target.value);
   document.querySelectorAll(".quick button").forEach((b) => b.onclick = () => setDate(addDays(todayLocal(), Number(b.dataset.quick))));
   const step = (dir) => { const i = PROPS.findIndex((p) => p.key === state.prop); setProp(PROPS[(i + dir + PROPS.length) % PROPS.length].key); };
   $("propPrev").onclick = () => step(-1);
@@ -393,9 +431,11 @@ async function boot() {
     $("runStatus").textContent = "No model run yet.";
     return;
   }
+  if (!state.season || !(state.season === state.meta.season || seasonEntry())) state.season = state.meta.season;
+  if (!isLive() && !(seasonEntry().dates || []).length) state.season = state.meta.season;
   const dates = availableDates();
   const today = todayLocal();
-  if (!state.date || !dates.includes(state.date)) state.date = dates.includes(today) ? today : dates[dates.length - 1];
+  if (!state.date || !dates.includes(state.date)) state.date = isLive() && dates.includes(today) ? today : dates[dates.length - 1];
   renderDateControls();
   renderStatus();
   writeUrl();

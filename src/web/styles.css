@@ -28,6 +28,7 @@ a { color: var(--accent); }
 .steppers { display: inline-flex; }
 .steppers button { border: 0; background: none; cursor: pointer; font-size: 15px; color: var(--ink2); padding: 0 3px; line-height: 1; }
 .steppers button:hover { color: var(--accent); }
+.season { width: 100%; padding: 5px 8px; border: 1px solid #d0d7de; border-radius: 6px; font: inherit; background: #fff; margin-bottom: 8px; }
 #dateInput { width: 100%; padding: 6px 10px; border: 1px solid #d0d7de; border-radius: 6px; font: inherit; background: #fff; }
 .quick { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
 .quick button { border: 1px solid #d0d7de; background: #fff; border-radius: 6px; padding: 3px 7px; font-size: 12.5px; cursor: pointer; }
@@ -51,6 +52,7 @@ a { color: var(--accent); }
 
 .legend { position: absolute; top: 10px; left: 10px; background: rgba(255,255,255,.96); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 16px 10px; box-shadow: 0 2px 8px rgba(0,0,0,.08); min-width: 330px; max-width: calc(100% - 20px); z-index: 2; }
 .legend .ttl { font-size: 18px; font-weight: 600; }
+.legend .ttl .fc.re { background: #626b5a; }
 .legend .ttl .fc { font-size: 11px; font-weight: 600; color: #fff; background: #5a6ea3; border-radius: 4px; padding: 1px 6px; vertical-align: 3px; margin-left: 6px; }
 .legend .sub { font-style: italic; color: var(--ink2); margin: 2px 0 8px; font-size: 13px; }
 .legend .bar { height: 16px; border-radius: 3px; }

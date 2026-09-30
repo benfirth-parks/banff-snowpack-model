@@ -23,8 +23,16 @@ Model weather is interpolated to a ~5 km grid (0.045° × 0.07°) and to named p
 | `src/web/` | Front end: MapLibre map, Property Explorer, profile graphic (`profile.js`) |
 | `tests/` | Synthetic-season physics test and an end-to-end pipeline test on mock data |
 
+## Past seasons (reanalysis)
+`netlify/lib/reanalysis.mjs` reruns the same model through 2023–24, 2024–25 and 2025–26. It uses archived HRDPS from the Open-Meteo Historical Forecast API, with RDPS filling any gaps, plus the station actuals held in the explorer archive. From 30 Dec 2023 the archive has air temperature and snow height, but no humidity, wind or precipitation. Seasons are built in month-long chunks by `season-background`, which re-invokes itself. The hourly `schedule` function restarts the queue if that chain breaks. Progress is kept in the `seasons` blob and shown in the season picker and the status dialog.
+```
+# rebuild one season from scratch (e.g. after a model change)
+curl -X POST -H "x-run-token: $RUN_TOKEN" "https://<site>/.netlify/functions/season-background?season=2024-25&reset=1"
+```
+To add a season, add it to `SEASONS` in `reanalysis.mjs` and it is queued automatically. HRDPS archives only reach back to March 2023.
+
 ## Blobs (store `snowpack-v1`)
-`meta` (grid, points, available dates), `state/c{n}` and `state/points` (snowpack state), `field/{YYYY-MM-DD}` (map values and text for every cell at 17:00 local), `pts/{id}` (daily profiles for a point), `ptf/{id}` (forecast profiles for a point), and `status`.
+`meta` (grid, points, available dates), `state/c{n}` and `state/points` (snowpack state), `field/{YYYY-MM-DD}` (map values and text for every cell at 17:00 local), `pts/{id}` (daily profiles for a point), `ptf/{id}` (forecast profiles for a point), and `status`. Past seasons use the same keys under `seasons/{YYYY-YY}/`, plus `job` and `obs` (staged station actuals). The `seasons` blob is the registry.
 
 ## Develop
 ```

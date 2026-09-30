@@ -69,7 +69,10 @@
   <h2>5. Runs and dates</h2>
   <p>The model runs every hour at :25, after the station archive syncs. Each run advances the stored snowpacks through the newly observed hours; this is the analysis. It then re-runs copies through the forecast about every 3 hours. Each date on the map is the state at 17:00 Mountain time. Past dates are analysis; today (before 17:00), tomorrow and +2 days are forecast. The season starts on 1 September.</p>
 
-  <h2>6. Known limitations</h2>
+  <h2>6. Past seasons</h2>
+  <p>Choose a past season (2023–24, 2024–25, 2025–26) in the season picker to browse it the way it was simulated: the same model and grid, run through the winter as a reanalysis. The weather comes from archived HRDPS runs (the Open-Meteo Historical Forecast API), with RDPS filling any gaps. It is corrected with the station actuals in the Rockies Weather Data Explorer archive, which for these seasons are air temperature and snow height from 30 Dec 2023. There are no station humidity, wind or gauge precipitation corrections for past seasons. Before 30 Dec 2023, 2023–24 is model-only. There is no forecast step, so every date is analysis.</p>
+
+  <h2>7. Known limitations</h2>
   <ul>
     <li>A 5 km cell is represented by one elevation, so terrain within the cell is smoothed out. Named points are also run at fixed ALP, TL and BTL elevations.</li>
     <li>There is no terrain shading, no snow-height assimilation (station HS is used for precipitation and for checking the model only), and no glacier ice.</li>
