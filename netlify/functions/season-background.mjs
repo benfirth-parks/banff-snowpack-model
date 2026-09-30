@@ -5,7 +5,8 @@
 //   curl -X POST -H "x-run-token: $RUN_TOKEN" "https://<site>/.netlify/functions/season-background?season=2024-25"
 //   add &reset=1 to rebuild a season from scratch.
 import { runSeasonChunk, getRegistry, nextSeasonToRun, resetSeason, updateRegistry } from "../lib/reanalysis.mjs";
-import { fetchStationObs, fetchModelHistory, fetchElevations } from "../lib/fetchers.mjs";
+import { fetchStationObs, fetchModelHistory } from "../lib/fetchers.mjs";
+import { boxElevations } from "../lib/terrain.mjs";
 import { blobStore, nowHour } from "../lib/store.mjs";
 
 const BUDGET_MS = 10 * 60 * 1000;
@@ -33,7 +34,7 @@ export default async (req) => {
   await store.setJSON("seasons/lock", { at: Date.now(), season });
   let next = null;
   try {
-    const deps = { store, fetchStationObs, fetchModelHistory, fetchElevations, nowHour };
+    const deps = { store, fetchStationObs, fetchModelHistory, cellElevations: boxElevations, nowHour };
     let lastChunk = 0;
     while (Date.now() - started + Math.max(lastChunk, CHUNK_MS_GUESS) < BUDGET_MS) {
       const t = Date.now();

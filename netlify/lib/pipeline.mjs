@@ -26,19 +26,15 @@ const r1 = (x) => (ok(x) ? Math.round(x * 10) / 10 : null);
 const r0 = (x) => (ok(x) ? Math.round(x) : null);
 
 // ---------------------------------------------------------------------------
-export async function ensureMeta(store, fetchElevations, log) {
+// cellElevations(boxes) → [{ mean, max } | null] for lat/lon boxes (terrain tiles).
+export async function ensureMeta(store, cellElevations, log) {
   const meta = await store.get("meta", { type: "json" });
   if (meta) return meta;
-  log("setup: building grid and fetching terrain elevations");
+  log("setup: building grid and reading terrain tiles");
   const { nR, nC, cells } = gridCells();
-  const offs = [[0, 0], [-0.25, -0.25], [-0.25, 0.25], [0.25, -0.25], [0.25, 0.25]];
-  const samples = [];
-  for (const c of cells) for (const [dy, dx] of offs) samples.push({ lat: c.lat + dy * GRID.dLat, lon: c.lon + dx * GRID.dLon });
-  const elev = await fetchElevations(samples);
-  for (let i = 0; i < cells.length; i++) {
-    const v = elev.slice(i * 5, i * 5 + 5).filter(ok);
-    cells[i].z = v.length ? Math.round(mean(v)) : null;
-  }
+  const boxes = cells.map((c) => ({ lat0: c.lat - GRID.dLat / 2, lat1: c.lat + GRID.dLat / 2, lon0: c.lon - GRID.dLon / 2, lon1: c.lon + GRID.dLon / 2 }));
+  const elev = await cellElevations(boxes);
+  cells.forEach((c, i) => { c.z = elev[i] ? elev[i].mean : null; c.zMax = elev[i] ? elev[i].max : null; });
   const points = [];
   for (const p of NAMED_POINTS) for (const b of BANDS) points.push({ id: `${p.id}:${b.id}`, pid: p.id, name: p.name, band: b.id, lat: p.lat, lon: p.lon, z: b.z, park: p.park, kind: "named" });
   for (const s of STATIONS) if (!s.noPoint) points.push({ id: s.id, pid: s.id, name: s.name, band: null, lat: s.lat, lon: s.lon, z: s.z, park: s.park, kind: "station" });
@@ -124,11 +120,11 @@ function encodeProfile(sim) {
 
 // ---------------------------------------------------------------------------
 export async function runPipeline(deps, opts = {}) {
-  const { store, fetchStationObs, fetchModel, fetchElevations, nowHour } = deps;
+  const { store, fetchStationObs, fetchModel, cellElevations, nowHour } = deps;
   const log = opts.log || console.log;
   const maxAnalysisHours = opts.maxAnalysisHours ?? 24 * 45;
   const started = Date.now();
-  const meta = await ensureMeta(store, fetchElevations, log);
+  const meta = await ensureMeta(store, cellElevations, log);
   const tNow = nowHour();
   const idx = (await store.get("state/index", { type: "json" })) || null;
   const seasonT0 = snapHour(meta.seasonStart) - 17; // local midnight-ish start
@@ -146,7 +142,7 @@ export async function runPipeline(deps, opts = {}) {
   const today = localDate(tNow);
   const tEnd = snapHour(addDays(today, 2));
   const needDays = Math.ceil((tNow - tFrom) / 24) + 1;
-  const pastDays = [2, 3, 7, 14, 31, 62, 92].find((d) => d >= needDays) ?? 92;
+  const pastDays = [2, 3, 7, 14, 21, 35, 62, 92].find((d) => d >= needDays) ?? 92;
   const nodesDef = modelNodes();
   const model = await fetchModel(nodesDef, pastDays, 4);
   if (!model.nodes.length) throw new Error("no forecast-model data");

@@ -74,12 +74,12 @@ async function stageObs(store, season, fetchStationObs, nowHour, log) {
 
 // Run one chunk (≤ CHUNK_HOURS) of a season. Returns { done, t }.
 export async function runSeasonChunk(deps, seasonId, opts = {}) {
-  const { store, fetchStationObs, fetchModelHistory, fetchElevations, nowHour } = deps;
+  const { store, fetchStationObs, fetchModelHistory, cellElevations, nowHour } = deps;
   const log = opts.log || console.log;
   const season = SEASONS.find((s) => s.id === seasonId);
   if (!season) throw new Error(`unknown season ${seasonId}`);
   const P = `seasons/${season.id}/`;
-  const meta = await ensureMeta(store, fetchElevations, log);
+  const meta = await ensureMeta(store, cellElevations, log);
   let job = (await store.get(`${P}job`, { type: "json" })) || { t: seasonT0(season), dates: [], started: new Date().toISOString() };
   const T1 = seasonT1(season);
   if (job.t >= T1) return { done: true, t: job.t };

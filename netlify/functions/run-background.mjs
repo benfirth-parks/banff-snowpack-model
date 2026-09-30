@@ -2,7 +2,8 @@
 // Triggered hourly by `schedule`, or manually with the RUN_TOKEN:
 //   curl -X POST -H "x-run-token: $RUN_TOKEN" https://<site>/.netlify/functions/run-background
 import { runPipeline } from "../lib/pipeline.mjs";
-import { fetchStationObs, fetchModel, fetchElevations } from "../lib/fetchers.mjs";
+import { fetchStationObs, fetchModel } from "../lib/fetchers.mjs";
+import { boxElevations } from "../lib/terrain.mjs";
 import { blobStore, nowHour } from "../lib/store.mjs";
 
 export default async (req) => {
@@ -22,7 +23,7 @@ export default async (req) => {
   await store.setJSON("lock", { at: Date.now() });
   try {
     await runPipeline(
-      { store, fetchStationObs, fetchModel, fetchElevations, nowHour },
+      { store, fetchStationObs, fetchModel, cellElevations: boxElevations, nowHour },
       {
         forceForecast: url.searchParams.get("fc") === "1",
         maxAnalysisHours: Number(url.searchParams.get("max")) || undefined,

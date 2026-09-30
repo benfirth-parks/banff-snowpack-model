@@ -1,30 +1,38 @@
 // Data access: station actuals (Rockies Weather Data Explorer), forecast-model
 // columns (Parks Wx Fx cached Open-Meteo proxy, falling back to Open-Meteo
-// directly), and terrain elevations (Open-Meteo elevation API, 90 m DEM).
+// directly; Open-Meteo's archive for past seasons). Terrain is in terrain.mjs.
 // All sources are free and keyless.
 
 export const EXPLORER = "https://rockiesweatherdataexplorer.netlify.app";
 export const FXTOOL = "https://rockiesweatherfxtool.netlify.app";
 const OPEN_METEO = "https://api.open-meteo.com/v1/forecast";
 const OPEN_METEO_HIST = "https://historical-forecast-api.open-meteo.com/v1/forecast";
-const ELEVATION = "https://api.open-meteo.com/v1/elevation";
 
 const UA = { "user-agent": "banff-snowpack-model (+netlify function)" };
 const ok = (v) => v !== null && v !== undefined && Number.isFinite(v);
 
-async function fetchJSON(url, { timeoutMs = 25000, retries = 1 } = {}) {
-  let lastErr;
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// GET JSON with retries. Open-Meteo's free tier is rate-limited per IP, and
+// Netlify function IPs are shared, so a 429 waits out the minute and retries.
+async function fetchJSON(url, { timeoutMs = 25000, retries = 1, rateLimitRetries = 3 } = {}) {
+  let lastErr, rl = 0;
   for (let i = 0; i <= retries; i++) {
     const ctl = new AbortController();
     const timer = setTimeout(() => ctl.abort(), timeoutMs);
     try {
       const res = await fetch(url, { headers: UA, signal: ctl.signal });
       const text = await res.text();
-      if (!res.ok) throw new Error(`${res.status} ${text.slice(0, 160)}`);
+      if (res.status === 429 && rl < rateLimitRetries) {
+        rl++; i--; clearTimeout(timer);
+        await sleep(/hour/i.test(text) ? 5 * 60000 : 62000);
+        continue;
+      }
+      if (!res.ok) throw Object.assign(new Error(`${res.status} ${text.slice(0, 160)}`), { status: res.status });
       return JSON.parse(text);
     } catch (e) {
       lastErr = e;
-      if (i < retries) await new Promise((r) => setTimeout(r, 1500 * (i + 1)));
+      if (i < retries) await sleep(1500 * (i + 1));
     } finally {
       clearTimeout(timer);
     }
@@ -128,7 +136,12 @@ export async function fetchModel(nodes, pastDays, forecastDays = 4) {
   const errors = [];
   const sources = new Set();
   const out = [];
-  await Promise.all(chunksOf(nodes, 20).map(async (chunk, ci) => {
+  // One request at a time: the weighted cost of each is ~50–100 Open-Meteo calls
+  // and the free tier allows 600 per minute per IP.
+  let ci = -1;
+  for (const chunk of chunksOf(nodes, 20)) {
+    ci++;
+    if (ci) await sleep(1500);
     const q = modelQuery(chunk, MODELS, { past_days: pastDays, forecast_days: forecastDays });
     let data;
     try {
@@ -140,7 +153,7 @@ export async function fetchModel(nodes, pastDays, forecastDays = 4) {
       sources.add("Open-Meteo direct");
     }
     parseModel(chunk, data, MODELS, out, nodes);
-  }));
+  }
   return { nodes: out.filter(Boolean), source: [...sources].join(" + "), errors };
 }
 
@@ -152,6 +165,7 @@ export async function fetchModelHistory(nodes, startDate, endDate) {
   const errors = [];
   const out = [];
   for (const chunk of chunksOf(nodes, 20)) {
+    if (out.length) await sleep(2000);
     const q = modelQuery(chunk, [MODELS[0]], { start_date: startDate, end_date: endDate });
     const data = await fetchJSON(`${OPEN_METEO_HIST}?${q}`, { retries: 2, timeoutMs: 45000 });
     parseModel(chunk, data, [MODELS[0]], out, nodes);
@@ -169,20 +183,4 @@ export async function fetchModelHistory(nodes, startDate, endDate) {
     gappy.forEach((n, j) => { if (fill[j]) out[nodes.indexOf(n)] = fill[j]; });
   }
   return { nodes: out.filter(Boolean), source: gappy.length ? "Open-Meteo archive (HRDPS, RDPS gap-fill)" : "Open-Meteo archive (HRDPS)", errors };
-}
-
-// ---- Terrain ----------------------------------------------------------------
-export async function fetchElevations(points) {
-  const out = new Array(points.length).fill(null);
-  const chunks = [];
-  for (let i = 0; i < points.length; i += 100) chunks.push(i);
-  for (let g = 0; g < chunks.length; g += 6) {
-    await Promise.all(chunks.slice(g, g + 6).map(async (i) => {
-      const part = points.slice(i, i + 100);
-      const q = `latitude=${part.map((p) => p.lat.toFixed(5)).join(",")}&longitude=${part.map((p) => p.lon.toFixed(5)).join(",")}`;
-      const d = await fetchJSON(`${ELEVATION}?${q}`, { retries: 2 });
-      (d.elevation || []).forEach((z, j) => { out[i + j] = ok(z) ? z : null; });
-    }));
-  }
-  return out;
 }

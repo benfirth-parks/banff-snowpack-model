@@ -33,7 +33,7 @@ export const clock = { now: NOW0 };
 export const deps = {
   store: new MemStore(),
   nowHour: () => clock.now,
-  fetchElevations: async (pts) => pts.map((p) => 1400 + 700 * (1 + Math.sin(p.lat * 40) * Math.cos(p.lon * 30))),
+  cellElevations: async (boxes) => boxes.map((b) => { const lat = (b.lat0 + b.lat1) / 2, lon = (b.lon0 + b.lon1) / 2; const m = Math.round(1400 + 700 * (1 + Math.sin(lat * 40) * Math.cos(lon * 30))); return { mean: m, max: m + 400 }; }),
   fetchStationObs: async (stations, hours) => {
     const obs = {};
     for (const s of stations) {
