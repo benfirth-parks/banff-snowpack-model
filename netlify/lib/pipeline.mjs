@@ -222,6 +222,7 @@ export async function runPipeline(deps, opts = {}) {
   const pmap = new Map((savedP?.sites || []).map((p) => [p.id, p]));
   const psites = meta.points.map((p) => (pmap.has(p.id) ? unpackFull(pmap.get(p.id)) : initExtras(createSite({ id: p.id, lat: p.lat, lon: p.lon, z: p.z }))));
   const pAna = new Map(), pFc = new Map();
+  const hsCheck = [];
   for (let i = 0; i < psites.length; i++) {
     const site = psites[i], p = meta.points[i];
     const W = F.weightsFor(site);
@@ -237,6 +238,11 @@ export async function runPipeline(deps, opts = {}) {
     }
     pAna.set(p.id, days);
     const now = snapshot(site, tA, true);
+    if (stObs) {
+      let o = null;
+      for (let dt = 0; dt <= 3 && o === null; dt++) o = stObs.get(tA - dt) ?? null;
+      hsCheck.push({ id: p.id, name: p.name, z: p.z, obsHS: ok(o) ? Math.round(o) : null, modelHS: now.v ? Math.round(now.prof.hs[0] ?? 0) : null });
+    }
     const fdays = [];
     if (fcSnaps.length) {
       const fc = cloneFull(site);
@@ -288,6 +294,7 @@ export async function runPipeline(deps, opts = {}) {
     stationsReporting: lastObs.length, stationErrors: obsErr, modelErrors: model.errors,
     stations: F.stationDiagnostics(),
     lapse: Math.round(F.gamma[kA] * 10000) / 10,
+    hsCheck,
   };
   const hist = (await store.get("status", { type: "json" }))?.history || [];
   hist.push({ at: status.finishedAt, ms: status.durationMs, a: [t0, tA], fc: doForecast });

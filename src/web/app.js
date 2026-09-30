@@ -355,6 +355,7 @@ async function openStatus() {
       (s.stationErrors?.length || s.modelErrors?.length ? `<p class="muted">Fetch issues: ${[...(s.stationErrors || []), ...(s.modelErrors || [])].join("; ")}</p>` : "") +
       (lastError ? `<p class="muted">Last error (${lastError.at}): ${String(lastError.error).split("\n")[0]}</p>` : "") +
       `<p>Station corrections applied to the forecast-model first guess. Temperature and humidity: mean observed − model over the last 6 hours (persisted into the forecast with a 12 h / 6 h decay). Wind: observed ÷ model ratio. Precipitation: observed / model mm for each 24 h window ending 17:00 (gauge or snow-height gain).</p>` +
+      ((s.hsCheck || []).length ? `<p>Snow height now: model (flat) vs station sensor.</p><table><thead><tr><th>Station</th><th>Elev</th><th>Observed HS cm</th><th>Model HS cm</th></tr></thead><tbody>${s.hsCheck.map((h) => `<tr><td>${h.name}</td><td>${h.z} m</td><td>${h.obsHS ?? "–"}</td><td>${h.modelHS ?? "–"}</td></tr>`).join("")}</tbody></table>` : "") +
       `<table><thead><tr><th>Station</th><th>T bias °C</th><th>RH bias %</th><th>Wind ratio</th><th>Precip obs/model mm (recent days)</th></tr></thead><tbody>${rows}</tbody></table>`;
   } catch (e) {
     $("statusBody").textContent = `Couldn't load status: ${e.message}`;
