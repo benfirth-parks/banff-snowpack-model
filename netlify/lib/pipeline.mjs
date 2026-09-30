@@ -304,3 +304,64 @@ export function writeField(fld, ci, snap) {
   for (const p of PROPS) fld.props[p][ci] = snap.v[p];
   fld.text[ci] = snap.text;
 }
+
+// ---------------------------------------------------------------------------
+// Diagnostic replay of one location from the season start to now, returning
+// daily forcing and snow-depth rows (model flat vs station sensor). Used by
+// /api/trace to check the forcing chain against a station.
+export async function traceSite(deps, { id }, opts = {}) {
+  const { store, fetchStationObs, fetchModel, cellElevations, nowHour } = deps;
+  const meta = await ensureMeta(store, cellElevations, () => {});
+  const p = meta.points.find((x) => x.id === id);
+  if (!p) throw new Error(`unknown point ${id}`);
+  const tNow = nowHour();
+  const t0 = Math.floor(snapHour(meta.seasonStart) - 17);
+  const tFrom = t0 - HIST;
+  const { obs } = await fetchStationObs(STATIONS, tNow - tFrom + 3);
+  const needDays = Math.ceil((tNow - tFrom) / 24) + 1;
+  const pastDays = [2, 3, 7, 14, 21, 35, 62, 92].find((d) => d >= needDays) ?? 92;
+  const model = await fetchModel(modelNodes(), pastDays, 4);
+  const start = Math.max(tFrom, Math.min(...model.nodes.map((n) => n.t0)));
+  const lastObs = STATIONS.map((s) => { const r = obs[s.id] || []; for (let i = r.length - 1; i >= 0; i--) if (ok(r[i].T)) return r[i].t; return null; }).filter(ok).sort((a, b) => a - b);
+  const tA = Math.min(tNow, lastObs.length ? lastObs[Math.floor(lastObs.length / 2)] : tNow - 2);
+  const times = [];
+  for (let t = start; t <= tA; t++) times.push(t);
+  const nodes = model.nodes.map((n) => {
+    const v = {};
+    for (const key of Object.keys(n.v)) v[key] = times.map((t) => { const j = t - n.t0; return j >= 0 && j < n.v[key].length ? n.v[key][j] : null; });
+    return { ...n, v };
+  });
+  const stations = STATIONS.map((s) => {
+    const o = { T: [], RH: [], U: [], HS: [], P: [] };
+    const byT = new Map((obs[s.id] || []).map((r) => [r.t, r]));
+    for (const t of times) { const r = byT.get(t); for (const k of Object.keys(o)) o[k].push(r ? r[k] : null); }
+    return { ...s, o };
+  });
+  const kA = times.length - 1;
+  const F = prepareForcing({ times, nodes, stations, tA, windows: snapshotWindows(times, kA, isSnapHour) });
+  const Fraw = prepareForcing({ times, nodes, stations: [], tA, windows: [] }); // model first guess only
+  const site = initExtras(createSite({ id: p.id, lat: p.lat, lon: p.lon, z: p.z }));
+  const W = F.weightsFor(site), W0 = Fraw.weightsFor(site);
+  const own = new Map((obs[p.id] || []).map((r) => [r.t, r]));
+  const rows = [];
+  let d = null;
+  for (let t = Math.max(t0, start) + 1; t <= tA; t++) {
+    const k = t - start;
+    const f = F.at(W, k), f0 = Fraw.at(W0, k);
+    advance(site, f);
+    if (!d) d = { Tsum: 0, Tobs: 0, nTo: 0, n: 0, Traw: 0, P: 0, Praw: 0, snow: 0, rain: 0, sw: 0 };
+    d.n++; d.Tsum += f.Ta; d.Traw += f0.Ta; d.P += f.P; d.Praw += f0.P; d.snow += f.P * f.sf; d.rain += f.P * (1 - f.sf); d.sw += f.ghi;
+    const o = own.get(t);
+    if (o && ok(o.T)) { d.Tobs += o.T; d.nTo++; }
+    if (isSnapHour(t)) {
+      const hs = site.sims.map((s) => Math.round(s.L.reduce((a, l) => a + l.d, 0) * 1000) / 10);
+      rows.push({
+        date: localDate(t), T: +(d.Tsum / d.n).toFixed(1), Traw: +(d.Traw / d.n).toFixed(1), Tobs: d.nTo ? +(d.Tobs / d.nTo).toFixed(1) : null,
+        P: +d.P.toFixed(1), Praw: +d.Praw.toFixed(1), snowMm: +d.snow.toFixed(1), rainMm: +d.rain.toFixed(1), ghi: Math.round(d.sw / d.n),
+        hsFlat: hs[0], hsNESW: hs.slice(1), obsHS: o && ok(o.HS) ? o.HS : null,
+      });
+      d = null;
+    }
+  }
+  return { id: p.id, name: p.name, z: p.z, modelSource: model.source, rows };
+}
