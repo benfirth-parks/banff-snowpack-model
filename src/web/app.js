@@ -385,6 +385,8 @@ async function openStatus() {
     if (!s) { $("statusBody").innerHTML = (running ? "The first model run is in progress." : "The model has not run yet.") + seasonTable; return; }
     const hf = (t) => (t ? hourFmt.format(new Date(t * 3600000)) : "—");
     const rows = (s.stations || []).map((x) => `<tr><td>${x.name}</td><td>${x.biasT === null ? "–" : (x.biasT > 0 ? "+" : "") + x.biasT}</td><td>${x.biasRH === null ? "–" : (x.biasRH > 0 ? "+" : "") + x.biasRH}</td><td>${x.windRatio ?? "–"}</td><td>${(x.precip || []).map((p) => `${p.obs}/${p.model}`).join(", ") || "–"}</td></tr>`).join("");
+    const val = await getJSON(`/api/validation${isLive() ? "" : `?season=${state.season}`}`).catch(() => null);
+    const valTable = val && val.rows.some((x) => x.n >= 5) ? `<h3>Snow height check, ${val.season}</h3><p class="muted">Model (flat) minus station sensor (bare-ground baseline removed), over days with a reading. r is the correlation of the two series.</p><table><thead><tr><th>Station</th><th>Days</th><th>Bias cm</th><th>Mean abs. error cm</th><th>r</th><th>Peak obs / model cm</th></tr></thead><tbody>${val.rows.filter((x) => x.n >= 5).map((x) => `<tr><td>${x.name} (${x.z} m)</td><td>${x.n}</td><td>${x.bias > 0 ? "+" : ""}${x.bias}</td><td>${x.mae}</td><td>${x.r ?? "–"}</td><td>${x.obsMax[1]} / ${x.modelMax[1]}</td></tr>`).join("")}</tbody></table>` : "";
     $("statusBody").innerHTML =
       `<p>Last run finished ${new Date(s.finishedAt).toLocaleString("en-CA", { timeZone: TZ })} in ${(s.durationMs / 1000).toFixed(1)} s. ` +
       `Analysis ${hf(s.analysisFrom)} → ${hf(s.analysisTo)}; ${s.doForecast ? `forecast to ${hf(s.forecastTo)}` : "forecast not re-run this hour"}. ` +
@@ -393,7 +395,7 @@ async function openStatus() {
       (lastError ? `<p class="muted">Last error (${lastError.at}): ${String(lastError.error).split("\n")[0]}</p>` : "") +
       `<p>Station corrections applied to the forecast-model first guess. Temperature and humidity: mean observed − model over the last 6 hours (persisted into the forecast with a 12 h / 6 h decay). Wind: observed ÷ model ratio. Precipitation: observed / model mm for each 24 h window ending 17:00 (gauge or snow-height gain).</p>` +
       ((s.hsCheck || []).length ? `<p>Snow height now: model (flat) vs station sensor. The sensor's bare-ground reading (its baseline, from warm snow-free hours) is subtracted first.</p><table><thead><tr><th>Station</th><th>Elev</th><th>Observed HS cm</th><th>Sensor raw / baseline</th><th>Model HS cm</th></tr></thead><tbody>${s.hsCheck.map((h) => `<tr><td>${h.name}</td><td>${h.z} m</td><td>${h.obsHS ?? "–"}</td><td>${h.rawHS ?? "–"} / ${h.baseline ?? "–"}</td><td>${h.modelHS ?? "–"}</td></tr>`).join("")}</tbody></table>` : "") +
-      `<table><thead><tr><th>Station</th><th>T bias °C</th><th>RH bias %</th><th>Wind ratio</th><th>Precip obs/model mm (recent days)</th></tr></thead><tbody>${rows}</tbody></table>` + seasonTable;
+      `<table><thead><tr><th>Station</th><th>T bias °C</th><th>RH bias %</th><th>Wind ratio</th><th>Precip obs/model mm (recent days)</th></tr></thead><tbody>${rows}</tbody></table>` + valTable + seasonTable;
   } catch (e) {
     $("statusBody").textContent = `Couldn't load status: ${e.message}`;
   }
