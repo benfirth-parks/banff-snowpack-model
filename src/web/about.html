@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How the BYK Snowpack Model Works</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { background: #fff; }
+    .doc { max-width: 820px; margin: 0 auto; padding: 24px 20px 60px; }
+    .doc h1 { font-size: 26px; margin: 8px 0 4px; }
+    .doc h2 { font-size: 18px; margin: 28px 0 8px; }
+    .doc p, .doc li { line-height: 1.55; }
+    .doc table { border-collapse: collapse; margin: 8px 0; width: 100%; font-size: 13px; }
+    .doc th, .doc td { border-bottom: 1px solid #eee; padding: 5px 8px; text-align: left; vertical-align: top; }
+    .note { background: #fff8e1; border: 1px solid #f0d58a; border-radius: 8px; padding: 10px 14px; }
+    code { background: #f4f4f4; padding: 1px 4px; border-radius: 4px; font-size: 90%; }
+  </style>
+</head>
+<body>
+<div class="doc">
+  <p><a href="./">← Back to the map</a></p>
+  <h1>How the BYK Snowpack Model works</h1>
+  <p class="muted">Banff, Yoho and Kootenay · Parks Canada Visitor Safety</p>
+
+  <p class="note"><b>These are unverified model simulations.</b> Nothing on this site has been checked by a person. Use it as one line of evidence next to field observations, the station network and professional judgement — never on its own.</p>
+
+  <h2>1. Weather inputs</h2>
+  <ul>
+    <li><b>Actuals</b> — hourly air temperature, relative humidity, wind, snow height and precipitation from the Parks Canada FTS stations in and around BYK, read from the Rockies Weather Data Explorer (<code>/api/fts</code>).</li>
+    <li><b>Forecasts</b> — ECCC HRDPS (2.5 km) for the first 48 h and RDPS (10 km) beyond, requested through the Parks Wx Fx cached Open-Meteo proxy (<code>/api/forecast</code>) at about 70 model columns: every station, every named forecast point and a coarse fill grid. Open-Meteo is called directly only if the proxy is unavailable.</li>
+  </ul>
+
+  <h2>2. Getting weather to every cell</h2>
+  <p>The model grid is about 5 km (0.045° × 0.07°). Each cell is simulated at its mean terrain elevation (five samples from a 90 m DEM). For every hour:</p>
+  <ol>
+    <li><b>Model first guess.</b> Inverse-distance weighting of the six nearest model columns. Temperature is moved to the cell elevation with the lapse rate fitted across all columns that hour, so inversions are kept. Precipitation is scaled +5 % per 100 m.</li>
+    <li><b>Station correction.</b> At each station the difference between the observation and the first guess is a residual (temperature, humidity) or a log-ratio (wind, 24 h precipitation). Residuals are spread with a Gaussian kernel of 20–25 km horizontally <i>and</i> 300–800 m vertically, and shrink to zero away from stations. Ridge stations therefore correct alpine cells and valley stations correct valley cells. Wind corrections use only representative anemometers.</li>
+    <li><b>Precipitation from stations</b> uses weighing gauges (Bow Summit, Sunshine, Skoki, Pika Run, with a 20 % snow undercatch allowance) and snow-height gain at Bow Summit, Bosworth Lower, Stanley Lower, Simpson Lower and Coleman, in 24 h windows ending 17:00.</li>
+    <li><b>Forecast hours.</b> The last 6 hours of temperature, humidity and wind residuals persist and decay (12 h, 6 h and 12 h e-folding). Forecast precipitation is the raw model amount.</li>
+    <li>Rain and snow are split on air temperature (all snow ≤ −0.5 °C, all rain ≥ +1.5 °C). Incoming longwave is estimated from temperature, humidity and model cloud cover.</li>
+  </ol>
+
+  <h2>3. The snow model</h2>
+  <p>Every cell and point is simulated as five snow columns: flat ground and 38° slopes facing N, E, S and W. Map values are averages over those five. The model is a compact multilayer model written for this site in the style of SNOWPACK and Crocus. It is <b>not</b> SLF's SNOWPACK program.</p>
+  <table>
+    <tr><th>Process</th><th>Treatment</th></tr>
+    <tr><td>New snow</td><td>Density, dendricity and sphericity from air temperature and wind (Crocus, Vionnet et al. 2012).</td></tr>
+    <tr><td>Wind</td><td>Snowfall loads lee slopes and unloads windward slopes by up to ±35 %. Loose snow drifts from windward to lee above a threshold wind, and is deposited as dense wind-affected layers.</td></tr>
+    <tr><td>Energy balance</td><td>Slope shortwave (sun geometry, no terrain shading) with an albedo that depends on age and wetness; longwave with sky view; stability-corrected sensible and latent heat; rain heat. Solved implicitly, with heat conduction through the layers (Calonne et al. 2011 conductivity) to 0 °C ground.</td></tr>
+    <tr><td>Water</td><td>Melt, refreeze and bucket percolation (3 % irreducible water). Refrozen wet layers become melt-freeze crusts.</td></tr>
+    <tr><td>Settlement</td><td>Crocus overburden viscosity plus Anderson (1976) destructive metamorphism of new snow.</td></tr>
+    <tr><td>Metamorphism</td><td>Dendricity, sphericity and grain size change with temperature, temperature gradient and liquid water: rounding below about 5 K/m and faceting above about 7 K/m, plus wet grain growth.</td></tr>
+    <tr><td>Surface hoar</td><td>Grows from deposition on calm (&lt; 3.5 m/s), clear nights. Wind, sun or melt destroys it. When buried it is kept as its own layer if the crystals are 2 mm or larger.</td></tr>
+  </table>
+  <p>Grain types are mapped from these state variables to AVID's five groups: PP/DF, RG/FCxr, SH/DH/FC, MFcr and MF. Hand hardness comes from density and grain type, after the regressions of Geldsetzer &amp; Jamieson (2000).</p>
+
+  <h2>4. Avalanche-problem indices</h2>
+  <table>
+    <tr><th>Map property</th><th>Definition</th></tr>
+    <tr><td>Persistent weak layers</td><td>Threshold-sum ("lemons") structural instability of each buried SH, DH, FC or FCxr layer (Schweizer &amp; Jamieson 2007): persistent grain type, grain size ≥ 1.25 mm, hardness ≤ F+, grain-size difference ≥ 0.75 mm, hardness difference ≥ 1.7 steps, and depth 18–94 cm. The index is a logistic curve centred between 4 and 5 lemons, reduced when the slab is thin or very deep. A layer counts as a <i>critical PWL</i> when the index is ≥ 70 % at 18–150 cm depth.</td></tr>
+    <tr><td>New snow</td><td>From the settled thickness of snow deposited in the last 24 h (centred at 20 cm) and 72 h (centred at 30 cm).</td></tr>
+    <tr><td>Wind slab</td><td>From the thickness of dry, wind-affected layers deposited in the last 96 h in the top metre (centred at 15 cm).</td></tr>
+    <tr><td>Wet snow</td><td>From the mean liquid water content of the top 50 cm relative to 3 % (the SNOWPACK LWC index), and from rain in the last 24 h.</td></tr>
+    <tr><td>Hazard</td><td>1 − (1 − new)(1 − wind)(1 − 0.6 · PWL)(1 − wet). This is an index, not a danger rating.</td></tr>
+    <tr><td>Ski pen</td><td>SNOWPACK's empirical 0.8 × 43.3 / ρ̄, where ρ̄ is the mean density of the top 30 cm.</td></tr>
+  </table>
+
+  <h2>5. Runs and dates</h2>
+  <p>The model runs every hour at :25, after the station archive syncs. Each run advances the stored snowpacks through the newly observed hours; this is the analysis. It then re-runs copies through the forecast about every 3 hours. Each date on the map is the state at 17:00 Mountain time. Past dates are analysis; today (before 17:00), tomorrow and +2 days are forecast. The season starts on 1 September.</p>
+
+  <h2>6. Known limitations</h2>
+  <ul>
+    <li>A 5 km cell is represented by one elevation, so terrain within the cell is smoothed out. Named points are also run at fixed ALP, TL and BTL elevations.</li>
+    <li>There is no terrain shading, no snow-height assimilation (station HS is used for precipitation and for checking the model only), and no glacier ice.</li>
+    <li>The problem indices are heuristics tuned to behave sensibly. They are not statistically calibrated to avalanche observations the way AVID's random-forest instability model is.</li>
+    <li>Model quality depends on station uptime. Open <i>Run &amp; station corrections</i> on the map to see which stations fed the latest run and how large the corrections were.</li>
+  </ul>
+</div>
+</body>
+</html>

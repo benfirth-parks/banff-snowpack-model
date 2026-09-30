@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BYK Snowpack Model</title>
+  <meta name="description" content="Simulated snowpack structure and avalanche-problem indices for Banff, Yoho and Kootenay, driven by Parks Canada weather stations and HRDPS/RDPS forecasts.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%235f5ea3'/%3E%3Cpath d='M4 24h24v4H4z' fill='%23D9AE00'/%3E%3Cpath d='M4 17h24v6H4z' fill='%239F86D4'/%3E%3Cpath d='M4 15h24v2H4z' fill='%2386198A'/%3E%3Cpath d='M4 9h24v6H4z' fill='%23f4efe9'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="maplibre-gl.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <button id="sidebarToggle" class="sidebar-toggle" aria-expanded="true" aria-controls="sidebarBody">Controls</button>
+      <div id="sidebarBody">
+        <section class="card">
+          <div class="card-head">
+            <h2>Date Selection</h2>
+            <span class="steppers" role="group" aria-label="Step date">
+              <button id="datePrev" aria-label="Previous day">◂</button><button id="dateNext" aria-label="Next day">▸</button>
+            </span>
+          </div>
+          <input type="date" id="dateInput" aria-label="Simulation date">
+          <div class="quick" role="group" aria-label="Quick dates">
+            <button data-quick="-1">Yesterday</button><button data-quick="0">Today</button><button data-quick="1">Tomorrow</button><button data-quick="2">+2 days</button>
+          </div>
+        </section>
+        <section class="card">
+          <div class="card-head">
+            <h2>Property Explorer</h2>
+            <span class="steppers" role="group" aria-label="Step property">
+              <button id="propPrev" aria-label="Previous property">▴</button><button id="propNext" aria-label="Next property">▾</button>
+            </span>
+          </div>
+          <div id="propList" role="radiogroup" aria-label="Map property"></div>
+        </section>
+        <section class="card compact">
+          <h3>Map layers</h3>
+          <label class="check"><input type="checkbox" id="showValues" checked> Cell values</label>
+          <label class="check"><input type="checkbox" id="showPoints" checked> Forecast points</label>
+          <label class="check"><input type="checkbox" id="showStations" checked> Weather stations</label>
+        </section>
+        <section class="card compact status-card">
+          <div id="runStatus" class="muted">Loading model status…</div>
+          <div class="links"><button id="openStatus" class="linkish">Run &amp; station corrections</button> · <a href="about.html">How it works</a></div>
+        </section>
+      </div>
+    </aside>
+
+    <main id="mapWrap">
+      <div id="map" aria-label="Map of simulated snowpack properties"></div>
+      <div id="legend" class="legend" aria-live="polite"></div>
+      <div id="hint" class="hint">Click a circled point for its profile graphic, or any grid cell for a text and numeric summary.</div>
+      <div id="banner" class="banner" hidden></div>
+      <footer class="about">
+        <b>About:</b> These are model simulations of snowpack features and avalanche hazard. The simulations on any particular day have not been checked for accuracy or verified by humans. Model predictions should always be interpreted with caution and verified through field observations and expert assessment.
+        Simulations use a SNOWPACK-style multilayer snow model driven by Parks Canada FTS weather stations (via the Rockies Weather Data Explorer) and Environment and Climate Change Canada HRDPS/RDPS forecasts (via Parks Wx Fx). Methods and limitations: <a href="about.html">How it works</a>.
+      </footer>
+    </main>
+
+    <aside id="panel" hidden aria-label="Point profile">
+      <div class="panel-head">
+        <div>
+          <div id="panelTitle" class="panel-title"></div>
+          <div id="panelSub" class="muted"></div>
+        </div>
+        <button id="panelClose" class="close" aria-label="Close profile">✕</button>
+      </div>
+      <div class="tabs-row">
+        <div id="bandTabs" class="tabs" role="tablist" aria-label="Elevation band"></div>
+        <div id="aspectTabs" class="tabs" role="tablist" aria-label="Aspect"></div>
+      </div>
+      <div class="chart-wrap">
+        <canvas id="profileCanvas"></canvas>
+        <div id="profileTip" class="tip" hidden></div>
+      </div>
+      <div class="summary">
+        <div class="summary-text"><p id="summaryText"></p><button id="copySummary" class="copy" title="Copy summary" aria-label="Copy summary">⧉</button></div>
+        <div id="chips" class="chips"></div>
+        <div id="pointExtra" class="muted small"></div>
+      </div>
+    </aside>
+  </div>
+
+  <dialog id="statusDialog">
+    <div class="dlg-head"><h2>Model run &amp; station corrections</h2><button class="close" id="statusClose" aria-label="Close">✕</button></div>
+    <div id="statusBody">Loading…</div>
+  </dialog>
+
+  <script src="maplibre-gl.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

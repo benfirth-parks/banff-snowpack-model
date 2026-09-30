@@ -1,0 +1,20 @@
+{
+  "name": "banff-snowpack-model",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "SNOWPACK-style snowpack structure model for Banff, Yoho and Kootenay driven by Parks Canada weather stations and HRDPS/RDPS forecasts",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node tests/synthetic.mjs && node tests/pipeline-mock.mjs",
+    "preview": "node scripts/build.mjs && node scripts/preview-server.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0",
+    "maplibre-gl": "^4.7.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  },
+  "engines": { "node": ">=20" }
+}

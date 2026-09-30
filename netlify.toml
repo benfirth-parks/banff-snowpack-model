@@ -1,0 +1,33 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/meta"
+  to = "/.netlify/functions/meta"
+  status = 200
+
+[[redirects]]
+  from = "/api/field"
+  to = "/.netlify/functions/field"
+  status = 200
+
+[[redirects]]
+  from = "/api/point"
+  to = "/.netlify/functions/point"
+  status = 200
+
+[[redirects]]
+  from = "/api/status"
+  to = "/.netlify/functions/status"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
