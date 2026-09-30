@@ -11,7 +11,7 @@ import { tzOffset, localDate, snapHour, isSnapHour, addDays } from "../../src/mo
 
 export const SEASON_START = "2026-09-01";
 const BATCH = 250;
-const HIST = 48; // hours of history before the analysis start (residual tails, 24 h windows)
+const HIST = 30; // hours of history before the analysis start (residual tails, 24 h precip windows)
 
 export const PROPS = [
   "hazard", "pNew", "pWind", "pPwl", "pWet",

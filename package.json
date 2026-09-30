@@ -6,7 +6,7 @@
   "description": "SNOWPACK-style snowpack structure model for Banff, Yoho and Kootenay driven by Parks Canada weather stations and HRDPS/RDPS forecasts",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node tests/synthetic.mjs && node tests/pipeline-mock.mjs",
+    "test": "node tests/forcing.test.mjs && node tests/synthetic.mjs && node tests/pipeline-mock.mjs",
     "preview": "node scripts/build.mjs && node scripts/preview-server.mjs"
   },
   "dependencies": {
