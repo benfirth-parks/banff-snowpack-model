@@ -2,7 +2,7 @@
 // advance every simulated snowpack through the observed hours (the "analysis"),
 // then run copies forward through the forecast, writing daily map fields and
 // point profiles to Netlify Blobs.
-import { STATIONS, NAMED_POINTS, BANDS, GRID, gridCells, modelNodes, ASPECTS } from "../../src/model/domain.js";
+import { STATIONS, NAMED_POINTS, BANDS, GRID, gridCells, modelNodes, ASPECTS, kmBetween } from "../../src/model/domain.js";
 import { prepareForcing, snapshotWindows } from "../../src/model/forcing.js";
 import { createSite, stepSite, packSite, unpackSite, cloneSite } from "../../src/model/site.js";
 import { diagnose, summarize, layersTopDown } from "../../src/model/stability.js";
@@ -10,6 +10,9 @@ import { newSnowDensity } from "../../src/model/snowpack.js";
 import { tzOffset, localDate, snapHour, isSnapHour, addDays } from "../../src/model/time.js";
 
 export const SEASON_START = "2026-09-01";
+// Bump when model physics or forcing change: stored seasons are then re-run from
+// their start by the next live run / season chunk.
+export const MODEL_VERSION = 2;
 export const LIVE_SEASON = "2026-27";
 export const BATCH = 250;
 export const HIST = 30; // hours of history before the analysis start (residual tails, 24 h precip windows)
@@ -47,6 +50,28 @@ export async function ensureMeta(store, cellElevations, log) {
   await store.setJSON("meta", m);
   return m;
 }
+
+// ---- snow-height sensor baselines -----------------------------------------
+// Ultrasonic HS sensors read a few cm (vegetation, rocks, mounting) over bare
+// ground. The baseline is the 20th percentile of HS during warm hours (> 5 °C,
+// from the station or the nearest station with a thermometer, lapse-adjusted),
+// which are snow-free in practice; it is subtracted before comparing with the model.
+export function hsBaselines(obsById) {
+  const withT = STATIONS.filter((s) => (obsById[s.id] || []).some((r) => ok(r.T)));
+  const tMaps = Object.fromEntries(withT.map((s) => [s.id, new Map(obsById[s.id].filter((r) => ok(r.T)).map((r) => [r.t, r.T]))]));
+  const out = {};
+  for (const s of STATIONS) {
+    const recs = (obsById[s.id] || []).filter((r) => ok(r.HS));
+    if (!recs.length) continue;
+    const src = tMaps[s.id] ? s : withT.slice().sort((a, b) => (kmBetween(s, a) + Math.abs(s.z - a.z) / 50) - (kmBetween(s, b) + Math.abs(s.z - b.z) / 50))[0];
+    if (!src) continue;
+    const tm = tMaps[src.id], dz = s.z - src.z;
+    const vals = recs.filter((r) => { const T = tm.get(r.t); return ok(T) && T - 0.0065 * dz > 5; }).map((r) => r.HS).sort((a, b) => a - b);
+    if (vals.length >= 24) out[s.id] = { base: Math.max(-5, Math.min(30, Math.round(vals[Math.floor(vals.length * 0.2)] * 10) / 10)), n: vals.length };
+  }
+  return out;
+}
+export const adjHS = (v, b) => (ok(v) ? Math.max(0, Math.round((v - (b ? b.base : 0)) * 10) / 10) : null);
 
 // ---- per-site bookkeeping (rolling forcing history + daily totals) ---------
 export function initExtras(site) { site.h = { P: [], S: [], R: [], U: [] }; site.dl = []; site.acc = { s: 0, r: 0 }; return site; }
@@ -126,13 +151,21 @@ export async function runPipeline(deps, opts = {}) {
   const started = Date.now();
   const meta = await ensureMeta(store, cellElevations, log);
   const tNow = nowHour();
-  const idx = (await store.get("state/index", { type: "json" })) || null;
+  let idx = (await store.get("state/index", { type: "json" })) || null;
+  if (idx && (opts.reset || idx.modelVersion !== MODEL_VERSION)) {
+    log(`re-running the season from ${meta.seasonStart} (model v${idx.modelVersion || 1} → v${MODEL_VERSION}${opts.reset ? ", reset" : ""})`);
+    idx = null;
+  }
   const seasonT0 = snapHour(meta.seasonStart) - 17; // local midnight-ish start
   const t0 = idx ? idx.t : Math.floor(seasonT0); // last completed hour
   const tFrom = t0 - HIST;
 
   // Station actuals
   const { obs, errors: obsErr } = await fetchStationObs(STATIONS, tNow - tFrom + 3);
+  // Sensor baselines: refresh from this fetch when it holds enough warm hours.
+  const baselines = (await store.get("baselines", { type: "json" })) || {};
+  for (const [id, b] of Object.entries(hsBaselines(obs))) if (!baselines[id] || b.n >= baselines[id].n || b.n >= 72) baselines[id] = { ...b, at: new Date().toISOString() };
+  await store.setJSON("baselines", baselines);
   const lastObs = STATIONS.map((s) => { const r = obs[s.id] || []; for (let i = r.length - 1; i >= 0; i--) if (ok(r[i].T)) return r[i].t; return null; }).filter(ok).sort((a, b) => a - b);
   const tObs = lastObs.length ? lastObs[Math.floor(lastObs.length / 2)] : tNow - 2;
   let tA = Math.min(tNow, tObs, t0 + maxAnalysisHours);
@@ -230,7 +263,7 @@ export async function runPipeline(deps, opts = {}) {
       if (fields.has(t)) {
         closeDay(site, t);
         const s = snapshot(site, t, true);
-        days.push({ t, date: localDate(t), ...s.prof, v: s.v, text: s.text, obsHS: stObs ? (stObs.get(t) ?? stObs.get(t - 1) ?? null) : undefined });
+        days.push({ t, date: localDate(t), ...s.prof, v: s.v, text: s.text, obsHS: stObs ? adjHS(stObs.get(t) ?? stObs.get(t - 1), baselines[p.id]) : undefined });
       }
     }
     pAna.set(p.id, days);
@@ -238,7 +271,8 @@ export async function runPipeline(deps, opts = {}) {
     if (stObs) {
       let o = null;
       for (let dt = 0; dt <= 3 && o === null; dt++) o = stObs.get(tA - dt) ?? null;
-      hsCheck.push({ id: p.id, name: p.name, z: p.z, obsHS: ok(o) ? Math.round(o) : null, modelHS: now.v ? Math.round(now.prof.hs[0] ?? 0) : null });
+      const b = baselines[p.id];
+      hsCheck.push({ id: p.id, name: p.name, z: p.z, obsHS: ok(o) ? Math.round(adjHS(o, b)) : null, rawHS: ok(o) ? Math.round(o) : null, baseline: b ? b.base : null, modelHS: now.v ? Math.round(now.prof.hs[0] ?? 0) : null });
     }
     const fdays = [];
     if (fcSnaps.length) {
@@ -281,8 +315,9 @@ export async function runPipeline(deps, opts = {}) {
   }
   meta.analysisHour = tA;
   meta.updatedAt = issued;
+  meta.modelVersion = MODEL_VERSION;
   await store.setJSON("meta", meta);
-  await store.setJSON("state/index", { t: tA, updatedAt: issued });
+  await store.setJSON("state/index", { t: tA, updatedAt: issued, modelVersion: MODEL_VERSION });
 
   const status = {
     finishedAt: new Date().toISOString(), durationMs: Date.now() - started, cellMs,

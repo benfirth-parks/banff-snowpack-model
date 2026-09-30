@@ -150,7 +150,7 @@ export class ProfileChart {
     if (d.hasObs) {
       const y = S.t + 8 + 5 * 13;
       ctx.fillStyle = "rgba(255,255,255,0.8)"; ctx.fillRect(S.l + 4, y - 7, 64, 13);
-      ctx.fillStyle = INK; ctx.beginPath(); ctx.arc(S.l + 12, y, 2.2, 0, 2 * Math.PI); ctx.fill(); ctx.fillText("obs HS", S.l + 20, y + 4);
+      ctx.fillStyle = INK; ctx.beginPath(); ctx.arc(S.l + 12, y, 2.2, 0, 2 * Math.PI); ctx.fill(); ctx.fillText("obs HS*", S.l + 20, y + 4);
     }
     if (d.hoverT) {
       const x = X(d.hoverT - 12);

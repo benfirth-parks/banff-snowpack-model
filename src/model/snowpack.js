@@ -168,7 +168,8 @@ function energyStep(sim, f, dt) {
   const wetTop = theta(top) > 0.001;
   let alb = (top.mk & SH) ? 0.9 : wetTop ? 0.5 + 0.4 * Math.exp(-ageD / 2) : 0.7 + 0.2 * Math.exp(-ageD / 6);
   const hs = sim.L.reduce((s, l) => s + l.d, 0);
-  if (hs < 0.1) alb = 0.2 + (alb - 0.2) * hs / 0.1;
+  // Very thin snow lets the ground show through (fresh snow is optically thick at ~3 cm).
+  if (hs < 0.03) alb = 0.2 + (alb - 0.2) * hs / 0.03;
   const absSW = (1 - alb) * Math.max(0, f.sw);
 
   const Ts0 = Math.min(0, sim.Ts);

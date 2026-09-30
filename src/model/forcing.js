@@ -36,8 +36,9 @@ export function longwaveIn(Ta, RH, cc) {
 }
 
 export function snowFraction(Ta) {
-  // All snow at or below −0.5 °C, all rain at or above +1.5 °C.
-  return clamp((1.5 - Ta) / 2, 0, 1);
+  // 50 % snow at +1 °C air temperature: all snow at or below 0 °C, all rain at
+  // or above +2 °C (mountain rain–snow transitions sit at roughly 1–2 °C).
+  return clamp((2 - Ta) / 2, 0, 1);
 }
 
 const KT = { L: 20, Z: 400, k0: 0.15 };
@@ -130,20 +131,23 @@ export function prepareForcing({ times, nodes, stations, tA, windows }) {
         }
         const tMean = tn ? tsum / tn : 0;
         let obs = null;
-        if (s.precip === "gauge" && no >= (b - a + 1) * 0.75) obs = po * (tMean < 0 ? 1.2 : 1);
+        // Weighing gauges under-catch snow in wind (roughly 20–40 % for a single Alter shield).
+        if (s.precip === "gauge" && no >= (b - a + 1) * 0.75) obs = po * (tMean < -1 ? 1.3 : tMean < 1 ? 1.15 : 1);
         if (s.precip === "hs") {
           const med = (ks) => { const v = ks.map((k) => s.o.HS[k]).filter(ok).sort((x, y) => x - y); return v.length ? v[Math.floor(v.length / 2)] : null; };
           const h0 = med([a - 1, a, a + 1, a + 2]);
           const h1 = med([b - 2, b - 1, b]);
-          if (ok(h0) && ok(h1) && tMean < 1) {
+          if (ok(h0) && ok(h1) && tMean < 0.5) {
             const dHS = h1 - h0;
             if (dHS >= 1.5) obs = dHS * 1.15 * newSnowDensity(tMean, 2) / 100;
-            else if (pm >= 3) obs = 0.4 * pm; // HS says little/no gain: weak evidence the model is high
+            // No HS gain despite model snow: weak evidence the model is high, only trusted when clearly cold.
+            else if (pm >= 3 && tMean < -1) obs = 0.7 * pm;
           }
         }
         if (obs === null || nm < (b - a + 1) * 0.75) continue;
         if (obs < 1 && pm < 1) continue; // dry both ways: no information
-        const r = clamp(Math.log((obs + 1) / (pm + 1)), -1.1, 1.1);
+        // Stations can take at most 40 % off the model's 24 h precipitation, or triple it.
+        const r = clamp(Math.log((obs + 1) / (pm + 1)), Math.log(0.6), Math.log(3));
         precipDiag.push({ a: times[a], b: times[b], obs: +obs.toFixed(1), model: +pm.toFixed(1) });
         for (let k = Math.max(0, from); k <= b; k++) lnP[k] = r;
       }

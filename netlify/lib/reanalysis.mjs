@@ -10,7 +10,8 @@ import { prepareForcing, snapshotWindows } from "../../src/model/forcing.js";
 import { createSite } from "../../src/model/site.js";
 import { localDate, snapHour, isSnapHour } from "../../src/model/time.js";
 import {
-  BATCH, HIST, PROPS, ok, ensureMeta, initExtras, packFull, unpackFull, advance, closeDay, snapshot, writeField,
+  BATCH, HIST, PROPS, MODEL_VERSION, ok, ensureMeta, initExtras, packFull, unpackFull, advance, closeDay, snapshot, writeField,
+  hsBaselines, adjHS,
 } from "./pipeline.mjs";
 
 export const SEASONS = [
@@ -51,6 +52,7 @@ async function stageObs(store, season, fetchStationObs, nowHour, log) {
   const hours = nowHour() - T0 + 24;
   const stations = {};
   const coverage = {};
+  const byId = {};
   for (let i = 0; i < STATIONS.length; i += 4) {
     const group = STATIONS.slice(i, i + 4);
     const { obs, errors } = await fetchStationObs(group, hours);
@@ -65,11 +67,12 @@ async function stageObs(store, season, fetchStationObs, nowHour, log) {
         if (ok(r.T)) cT++; if (ok(r.HS)) cHS++; if (ok(r.RH)) cRH++; if (ok(r.U)) cU++;
       }
       stations[s.id] = a;
+      byId[s.id] = (obs[s.id] || []).filter((r) => r.t >= T0 && r.t <= T1);
       coverage[s.id] = { T: Math.round(100 * cT / n), HS: Math.round(100 * cHS / n), RH: Math.round(100 * cRH / n), U: Math.round(100 * cU / n) };
     }
   }
   await store.setJSON(`seasons/${season.id}/obs`, { t0: T0, n, stations });
-  return coverage;
+  return { coverage, baselines: hsBaselines(byId) };
 }
 
 // Run one chunk (≤ CHUNK_HOURS) of a season. Returns { done, t }.
@@ -80,14 +83,17 @@ export async function runSeasonChunk(deps, seasonId, opts = {}) {
   if (!season) throw new Error(`unknown season ${seasonId}`);
   const P = `seasons/${season.id}/`;
   const meta = await ensureMeta(store, cellElevations, log);
-  let job = (await store.get(`${P}job`, { type: "json" })) || { t: seasonT0(season), dates: [], started: new Date().toISOString() };
+  let job = (await store.get(`${P}job`, { type: "json" })) || null;
+  if (job && job.modelVersion !== MODEL_VERSION) { log(`${season.id}: model v${job.modelVersion || 1} → v${MODEL_VERSION}, restarting season`); job = null; }
+  if (!job) job = { t: seasonT0(season), dates: [], started: new Date().toISOString(), modelVersion: MODEL_VERSION };
   const T1 = seasonT1(season);
   if (job.t >= T1) return { done: true, t: job.t };
   await updateRegistry(store, season.id, { status: "running" });
 
   if (!job.coverage) {
     log(`${season.id}: staging station actuals`);
-    job.coverage = await stageObs(store, season, fetchStationObs, nowHour, log);
+    const st = await stageObs(store, season, fetchStationObs, nowHour, log);
+    job.coverage = st.coverage; job.baselines = st.baselines;
     await store.setJSON(`${P}job`, job);
   }
   const staged = await store.get(`${P}obs`, { type: "json" });
@@ -154,7 +160,7 @@ export async function runSeasonChunk(deps, seasonId, opts = {}) {
         closeDay(site, t);
         const s = snapshot(site, t, true);
         const k = t - staged.t0;
-        days.push({ t, date: localDate(t), ...s.prof, v: s.v, text: s.text, obsHS: hsObs ? (hsObs[k] ?? hsObs[k - 1] ?? null) : undefined });
+        days.push({ t, date: localDate(t), ...s.prof, v: s.v, text: s.text, obsHS: hsObs ? adjHS(hsObs[k] ?? hsObs[k - 1], (job.baselines || {})[p.id]) : undefined });
       }
     }
     if (days.length) {
@@ -176,7 +182,7 @@ export async function runSeasonChunk(deps, seasonId, opts = {}) {
   if (done) job.finished = job.updatedAt;
   await store.setJSON(`${P}job`, job);
   const progress = Math.round(100 * (tA - seasonT0(season)) / (T1 - seasonT0(season)));
-  await updateRegistry(store, season.id, { status: done ? "done" : "running", progress, dates: job.dates, coverage: job.coverage, modelSource: model.source });
+  await updateRegistry(store, season.id, { status: done ? "done" : "running", progress, dates: job.dates, coverage: job.coverage, modelSource: model.source, modelVersion: MODEL_VERSION, error: null });
   return { done, t: tA };
 }
 
@@ -193,6 +199,7 @@ export function nextSeasonToRun(reg, staleMinutes = 20) {
     const age = running.updatedAt ? (now - Date.parse(running.updatedAt)) / 60000 : Infinity;
     return age > staleMinutes ? running.id : null; // stalled → resume
   }
-  const q = reg.list.find((s) => s.status === "queued" || (s.status === "error" && (s.errors || 0) < 3));
+  const q = reg.list.find((s) => s.status === "queued" || (s.status === "error" && (s.errors || 0) < 3) ||
+    (s.status === "done" && s.modelVersion !== MODEL_VERSION));
   return q ? q.id : null;
 }

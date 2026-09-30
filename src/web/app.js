@@ -368,7 +368,7 @@ async function renderPanel() {
       const diffs = withObs.map((d) => d.hs[0] - d.obsHS);
       const bias = diffs.reduce((a, b) => a + b, 0) / diffs.length;
       const mae = diffs.reduce((a, b) => a + Math.abs(b), 0) / diffs.length;
-      extra += `<br>Model vs observed HS (flat, ${withObs.length} days): bias ${bias >= 0 ? "+" : ""}${bias.toFixed(0)} cm, mean abs. error ${mae.toFixed(0)} cm${sel.obsHS != null ? ` · observed ${Math.round(sel.obsHS)} cm on this date` : ""}.`;
+      extra += `<br>*Observed HS has the sensor's bare-ground baseline removed. Model vs observed HS (flat, ${withObs.length} days): bias ${bias >= 0 ? "+" : ""}${bias.toFixed(0)} cm, mean abs. error ${mae.toFixed(0)} cm${sel.obsHS != null ? ` · observed ${Math.round(sel.obsHS)} cm on this date` : ""}.`;
     } else extra += "<br>No snow-height sensor data from this station yet.";
   }
   $("pointExtra").innerHTML = extra;
@@ -392,7 +392,7 @@ async function openStatus() {
       (s.stationErrors?.length || s.modelErrors?.length ? `<p class="muted">Fetch issues: ${[...(s.stationErrors || []), ...(s.modelErrors || [])].join("; ")}</p>` : "") +
       (lastError ? `<p class="muted">Last error (${lastError.at}): ${String(lastError.error).split("\n")[0]}</p>` : "") +
       `<p>Station corrections applied to the forecast-model first guess. Temperature and humidity: mean observed − model over the last 6 hours (persisted into the forecast with a 12 h / 6 h decay). Wind: observed ÷ model ratio. Precipitation: observed / model mm for each 24 h window ending 17:00 (gauge or snow-height gain).</p>` +
-      ((s.hsCheck || []).length ? `<p>Snow height now: model (flat) vs station sensor.</p><table><thead><tr><th>Station</th><th>Elev</th><th>Observed HS cm</th><th>Model HS cm</th></tr></thead><tbody>${s.hsCheck.map((h) => `<tr><td>${h.name}</td><td>${h.z} m</td><td>${h.obsHS ?? "–"}</td><td>${h.modelHS ?? "–"}</td></tr>`).join("")}</tbody></table>` : "") +
+      ((s.hsCheck || []).length ? `<p>Snow height now: model (flat) vs station sensor. The sensor's bare-ground reading (its baseline, from warm snow-free hours) is subtracted first.</p><table><thead><tr><th>Station</th><th>Elev</th><th>Observed HS cm</th><th>Sensor raw / baseline</th><th>Model HS cm</th></tr></thead><tbody>${s.hsCheck.map((h) => `<tr><td>${h.name}</td><td>${h.z} m</td><td>${h.obsHS ?? "–"}</td><td>${h.rawHS ?? "–"} / ${h.baseline ?? "–"}</td><td>${h.modelHS ?? "–"}</td></tr>`).join("")}</tbody></table>` : "") +
       `<table><thead><tr><th>Station</th><th>T bias °C</th><th>RH bias %</th><th>Wind ratio</th><th>Precip obs/model mm (recent days)</th></tr></thead><tbody>${rows}</tbody></table>` + seasonTable;
   } catch (e) {
     $("statusBody").textContent = `Couldn't load status: ${e.message}`;
