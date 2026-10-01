@@ -1,0 +1,244 @@
+{
+  "source_files": [
+    "profiles/2025-2026/Test profiles/2026-01-18_Crowfoot Moraines.pdf"
+  ],
+  "season": "2025-26",
+  "kind": "test_profile",
+  "site": "Crowfoot Moraines",
+  "site_slug": "crowfoot-moraines",
+  "chart_format": "snowpilot",
+  "date": "2026-01-18",
+  "time": "13:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.64618,
+  "lon": -116.43956,
+  "elevation_m": 2030,
+  "elevation_raw": "2030 m",
+  "aspect": "SE",
+  "slope_deg": 20,
+  "air_temp_c": -6,
+  "sky": "SCT",
+  "precip": "NO",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 193,
+  "surface_grain": "SH",
+  "foot_pen_cm": 30,
+  "ski_pen_cm": null,
+  "header_other": {
+    "PF": "30",
+    "org": "Banff, Yoho and Kootenay AB",
+    "chart_title": "Crowfoot Moraines",
+    "wind_loading": "no",
+    "stability": null,
+    "specifics": null,
+    "surface_form": "V (SH) 5 mm, drawn in the fixed top row above the HS line (zero thickness)",
+    "layer_notes": "135-134.5cm: Problematic layer; 43-35cm: Nov crusts"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 35,
+      "depth_top_cm": 158,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "square",
+      "size_mm": [
+        2.0,
+        3.0
+      ],
+      "hardness": "P+",
+      "hardness_idx": 4.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Basal faceted layer; bar edge at 4.32 on the axis"
+    },
+    {
+      "bottom_cm": 35,
+      "top_cm": 43,
+      "depth_top_cm": 150,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "two linked double circles",
+      "size_mm": null,
+      "hardness": "P",
+      "hardness_idx": 4.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Layer note '43-35cm: Nov crusts'; no grain size entered"
+    },
+    {
+      "bottom_cm": 43,
+      "top_cm": 60,
+      "depth_top_cm": 133,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "dome-on-box (rounding facet)",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "P",
+      "hardness_idx": 4.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Moisture cell blank"
+    },
+    {
+      "bottom_cm": 60,
+      "top_cm": 134.5,
+      "depth_top_cm": 58.5,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "filled circle",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "K-",
+      "hardness_idx": 4.5,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Thick RG layer. Hardness tapers linearly from K (5.0) at 60 cm to P (4.0) at 134 cm; idx is layer mean (midway P+/K-)"
+    },
+    {
+      "bottom_cm": 134.5,
+      "top_cm": 135,
+      "depth_top_cm": 58,
+      "grain": "SH",
+      "grain2": null,
+      "grain_raw": "V",
+      "size_mm": [
+        6.0,
+        6.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Thin 0.5 cm buried surface hoar 'Jan 3 SH' (Layer Notes: 'Problematic layer' 135-134.5 cm); bar drawn as a dark-red F-hardness line; CT16 SP at 135 cm. Table row is expanded with a funnel leader because the layer is so thin"
+    },
+    {
+      "bottom_cm": 135,
+      "top_cm": 165,
+      "depth_top_cm": 28,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "small dot",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "P-",
+      "hardness_idx": 3.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Small-dot glyph (small rounded grains)"
+    },
+    {
+      "bottom_cm": 165,
+      "top_cm": 185,
+      "depth_top_cm": 8,
+      "grain": "DF",
+      "grain2": "FC",
+      "grain_raw": "/ ( square with diagonal slash )",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Secondary glyph is a square with a diagonal slash, read as FC (possibly near-surface facets FCsf). CT6 PC @184 and CT15 SC @173 both fall in this layer"
+    },
+    {
+      "bottom_cm": 185,
+      "top_cm": 193,
+      "depth_top_cm": 0,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "small dot",
+      "size_mm": [
+        0.3,
+        0.3
+      ],
+      "hardness": "P",
+      "hardness_idx": 4.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Hard fine-grained surface layer, 8 cm; small-dot glyph"
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT6, PC @184cm x2",
+      "type": "CT",
+      "score": "CT6",
+      "taps": 6,
+      "propagation": null,
+      "fracture": "PC",
+      "height_cm": 184,
+      "depth_cm": 9,
+      "layer_grain": "DF",
+      "count": 2
+    },
+    {
+      "raw": "CT15, SC @173cm x2",
+      "type": "CT",
+      "score": "CT15",
+      "taps": 15,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 173,
+      "depth_cm": 20,
+      "layer_grain": "DF",
+      "count": 2
+    },
+    {
+      "raw": "CT16, SP @135cm Jan 3 SH",
+      "type": "CT",
+      "score": "CT16",
+      "taps": 16,
+      "propagation": null,
+      "fracture": "SP",
+      "height_cm": 135,
+      "depth_cm": 58,
+      "layer_grain": "SH",
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Jan 3 SH",
+      "height_cm": 135,
+      "bottom_cm": 134.5,
+      "top_cm": 135,
+      "depth_cm": 58,
+      "grain": "SH",
+      "comment": "6 mm SH, F hardness; flagged 'Problematic layer' (135-134.5 cm) in Layer Notes; CT16 SP @135 cm"
+    },
+    {
+      "name": "Nov crusts",
+      "height_cm": 43,
+      "bottom_cm": 35,
+      "top_cm": 43,
+      "depth_cm": 150,
+      "grain": "MFcr",
+      "comment": "Layer note '43-35cm: Nov crusts'; chart shows MFcr (linked circles), P hardness"
+    }
+  ],
+  "notes": "Open moraine slope",
+  "summary": "HS 193 cm, SE 20 deg open moraine slope at 2030 m: basal FC 2-3 mm (0-35 cm, P+) under Nov MFcr crusts (35-43 cm, P) and FCxr (43-60 cm), a thick RG 1 mm slab 60-134.5 cm (K tapering to P), a thin 6 mm 'Jan 3 SH' (F) at 134.5-135 cm failing CT16 SP at 135 cm, RG 0.5 mm (P-) 135-165 cm, DF(FC) 1 mm (1F-) 165-185 cm with CT15 SC @173 and CT6 PC @184 (each x2) and an 8 cm hard fine RG surface layer; 5 mm surface hoar on top",
+  "confidence": "high",
+  "reading_issues": "SnowPilot graph embedded as a 994x840 image in an A4 PDF (no text layer). Heights calibrated on the 10 cm ticks (3.077 px/cm, ground at y=751, HS 193 at y=157); hardness ticks I/K/P/1F/4F/F at x=39/111/183/255/327/399 (72 px per class), bars measured from the left edge. Surface-form row (V, 5 mm) recorded in header_other, not as a layer. Small-dot glyphs (0.3 and 0.5 mm) read as RG (small rounded grains). Secondary glyph at 165-185 cm (square with diagonal slash) read as FC; subtype uncertain. The thin SH layer (134.5-135 cm) is only ~2 px thick, its bar is a dark-red line starting at the F tick (hardness F); its top/bottom are taken from the Layer Notes (135-134.5 cm). The 60-134.5 cm layer has a sloped hardness bar (layer mean recorded). 'x2' after CT6 and CT15 read as the result seen twice (count 2). PF 30 is the only penetration in the header (no PS). No temperature profile and no density values. Date read DD/MM/YYYY (18/01/2026), matching the filename."
+}

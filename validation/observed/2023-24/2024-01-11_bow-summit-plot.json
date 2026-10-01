@@ -1,0 +1,52 @@
+{
+  "source_files": ["profiles/2023-2024/Bow Summit/2024-01-11 Bow Summit Plot.jpg"],
+  "season": "2023-24",
+  "kind": "study_plot",
+  "site": "Bow Summit Study Plot",
+  "site_slug": "bow-summit-plot",
+  "chart_format": "snowpilot",
+  "date": "2024-01-11",
+  "time": "14:29",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.7093,
+  "lon": -116.47875,
+  "elevation_m": 2020,
+  "elevation_raw": "2020 m",
+  "aspect": null,
+  "slope_deg": null,
+  "air_temp_c": -30,
+  "sky": "SCT",
+  "precip": "NO",
+  "wind": "N Light Breeze",
+  "blowing_snow": null,
+  "hs_cm": 74,
+  "surface_grain": "PP",
+  "foot_pen_cm": 40,
+  "ski_pen_cm": 20,
+  "header_other": {"PF": "40", "PS": "20", "HS": "74", "wind_loading": "no", "coord_raw": "51.70930N, -116.47875W", "surface_form": "+r (PP, rimed) 0.5 mm, drawn in the fixed top row above the HS line (zero thickness)", "chart_title": "Bow Summit Plot"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 17, "depth_top_cm": 57, "grain": "FC", "grain2": "DH", "grain_raw": "□(∧)", "size_mm": [2.0, 3.0], "hardness": "4F-", "hardness_idx": 1.67, "moisture": null, "density": null, "uncertain": false, "comment": "secondary DH, size '2-3(6)': FC 2-3 mm, secondary DH 6 mm"},
+    {"bottom_cm": 17, "top_cm": 29, "depth_top_cm": 45, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [2.0, 3.0], "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 29, "top_cm": 44, "depth_top_cm": 30, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [1.0, 1.0], "hardness": "1F", "hardness_idx": 3.0, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 44, "top_cm": 56, "depth_top_cm": 18, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [1.0, 1.0], "hardness": "4F+", "hardness_idx": 2.33, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 56, "top_cm": 74, "depth_top_cm": 0, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": [1.0, 1.0], "hardness": "F", "hardness_idx": 1.0, "moisture": null, "density": null, "uncertain": false, "comment": null}
+  ],
+  "temps": [
+    {"h_cm": 0, "t_c": -0.9},
+    {"h_cm": 10, "t_c": -2.5},
+    {"h_cm": 20, "t_c": -3.7},
+    {"h_cm": 30, "t_c": -5.0},
+    {"h_cm": 40, "t_c": -7.2},
+    {"h_cm": 50, "t_c": -10.4},
+    {"h_cm": 60, "t_c": -14.6},
+    {"h_cm": 74, "t_c": -29.0}
+  ],
+  "tests": [
+    {"raw": "CT21, SC @5cm x2", "type": "CT", "score": "CT21", "taps": 21, "propagation": null, "fracture": "SC", "height_cm": 5, "depth_cm": 69, "layer_grain": "FC", "count": 2}
+  ],
+  "named_layers": [],
+  "notes": "Chart 'Notes:' and 'Layer Notes:' fields blank. Stability tests column: 'CT21, SC @5cm x2'.",
+  "summary": "Entire pack faceted: FC/DH 0-17 cm (4F-) with FC 17-56 cm (4F, 1F, 4F+) under 18 cm of DF (F); rimed PP on the surface; CT21 SC at 5 cm (x2) in the basal FC(DH); very cold (air -30 C, surface -29 C); PF 40, PS 20; HS 74 cm",
+  "confidence": "high",
+  "reading_issues": "Hardness bars, layer boundaries and temperature dots measured from pixel positions. Temperature axis labelled every 2 C (-30 to 0), so 14 px per degree; dot readings accurate to about 0.1 C. Surface form '+r' read as PP (rimed particles); chart shows it only in the top surface row. Basal layer 0-17 cm is FC with secondary DH (the DH is only the parenthesised secondary form)."
+}

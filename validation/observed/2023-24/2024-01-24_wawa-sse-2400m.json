@@ -1,0 +1,49 @@
+{
+  "source_files": ["profiles/2023-2024/Other Profiles/2024-01-24 Wawa SSE 2400 m.jpg"],
+  "season": "2023-24",
+  "kind": "test_profile",
+  "site": "Wawa",
+  "site_slug": "wawa-sse-2400m",
+  "chart_format": "snowpilot",
+  "date": "2024-01-24",
+  "time": "12:30",
+  "observer": "Banff Visitor Safety",
+  "lat": null,
+  "lon": null,
+  "elevation_m": 2400,
+  "elevation_raw": "2400 m",
+  "aspect": "SE",
+  "slope_deg": null,
+  "air_temp_c": null,
+  "sky": null,
+  "precip": "NO",
+  "wind": null,
+  "blowing_snow": null,
+  "hs_cm": 100,
+  "surface_grain": "PP",
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {"HS": "100", "wind_loading": null, "layer_notes": "65-64cm: Problematic layer", "chart_title": "Wawa", "region": "Banff, Yoho and Kootenay, AB", "filename_label": "Wawa SSE 2400 m (filename says SSE; header Aspect is SE)", "specifics": null, "stability": null, "surface_form": "asterisk over a triangle (graupel-type PP glyph, PPgp, uncertain) in the fixed top row above the HS line (zero thickness); no size entered", "exif_note": "JPEG carries EXIF orientation=6, which makes viewers show it sideways; raw pixels are upright and were used"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 22, "depth_top_cm": 78, "grain": "DH", "grain2": null, "grain_raw": "∧", "size_mm": [3.0, 4.0], "hardness": "F", "hardness_idx": 1.0, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 22, "top_cm": 25, "depth_top_cm": 75, "grain": "MFcr", "grain2": null, "grain_raw": "◎◎ (two linked circles)", "size_mm": null, "hardness": "P", "hardness_idx": 4.0, "moisture": null, "density": null, "uncertain": false, "comment": "thin hard crust; no size entered; table row is stretched with leader lines"},
+    {"bottom_cm": 25, "top_cm": 30, "depth_top_cm": 70, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [2.0, 3.0], "hardness": "4F+", "hardness_idx": 2.33, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 30, "top_cm": 35, "depth_top_cm": 65, "grain": "MFcr", "grain2": null, "grain_raw": "◎◎ (two linked circles)", "size_mm": null, "hardness": "P", "hardness_idx": 4.0, "moisture": null, "density": null, "uncertain": false, "comment": "no size entered"},
+    {"bottom_cm": 35, "top_cm": 45, "depth_top_cm": 55, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [2.0, 2.0], "hardness": "1F-", "hardness_idx": 2.67, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 45, "top_cm": 64, "depth_top_cm": 36, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [2.0, 3.0], "hardness": "F+", "hardness_idx": 1.33, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 64, "top_cm": 65, "depth_top_cm": 35, "grain": "FC", "grain2": "SH", "grain_raw": "□(V)", "size_mm": null, "hardness": "F-", "hardness_idx": 0.67, "moisture": null, "density": null, "uncertain": false, "comment": "layer note '65-64cm: Problematic layer'; secondary form SH; no size entered; 1 cm layer, table row stretched with leader lines; CT5 SC at its top (65 cm)"},
+    {"bottom_cm": 65, "top_cm": 98, "depth_top_cm": 2, "grain": "DF", "grain2": "FC", "grain_raw": "⟋(□)", "size_mm": [0.3, 0.5], "hardness": "1F", "hardness_idx": 3.0, "moisture": null, "density": null, "uncertain": false, "comment": "size column '0.3-0.5'; secondary form FC"},
+    {"bottom_cm": 98, "top_cm": 100, "depth_top_cm": 0, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": null, "hardness": "F", "hardness_idx": 1.0, "moisture": null, "density": null, "uncertain": false, "comment": "no size entered"}
+  ],
+  "temps": [],
+  "tests": [
+    {"raw": "CT5, SC @65cm", "type": "CT", "score": "CT5", "taps": 5, "propagation": null, "fracture": "SC", "height_cm": 65, "depth_cm": 35, "layer_grain": "FC", "count": 1}
+  ],
+  "named_layers": [
+    {"name": "Problematic layer", "height_cm": 65, "depth_cm": 35, "grain": "FC", "comment": "layer note '65-64cm: Problematic layer'; FC with secondary SH (glyph □(V)), F- hardness, 64-65 cm; CT5 SC at its top"}
+  ],
+  "notes": "Layer Notes: 65-64cm: Problematic layer. Stability tests column: 'CT5, SC @65cm'. Header Slope Angle, Co-ord, Wind Loading, Air Temperature, Sky Cover, Wind, Specifics, Stability and PF/PS blank; chart 'Notes:' blank. No temperature profile. Filename: '2024-01-24 Wawa SSE 2400 m'.",
+  "summary": "Wawa SE (filename: SSE) pit at 2400 m, HS 100 cm: basal DH 3-4 mm 0-22 cm (F) under two thin P MFcr crusts (22-25 and 30-35 cm) separated by FC 25-30; FC 2-3 mm layers 35-64 cm (1F- to F+); a 1 cm F- FC(SH) 'problematic layer' at 64-65 cm with CT5 SC at 65 cm under 33 cm of 1F DF(FC) 0.3-0.5 mm and 2 cm of F DF; graupel-type PP on the surface; no temperatures",
+  "confidence": "high",
+  "reading_issues": "Filename says 'Wawa SSE 2400 m' but the header gives Aspect SE and Elevation 2400 m; header aspect recorded (SE), filename's SSE kept in header_other. Slope, coordinates, air temperature, sky and wind are blank. The JPEG has EXIF orientation=6, so viewers display it rotated 90 degrees; the raw pixels are an upright chart, and all measurements used the raw pixels. Hardness bars and layer boundaries (22, 25, 30, 35, 45, 64, 65, 98 cm) measured from pixels. Glyphs: '◎◎' read as MFcr (two thin crusts at P hardness); '□(V)' read as FC with secondary SH at 64-65 cm (layer_grain for CT5 given as FC); '⟋(□)' read as DF with secondary FC. The surface-form row shows an asterisk-over-triangle glyph that is read as graupel-type PP (PPgp), stored as PP and flagged uncertain; no size. CT5 SC at 65 cm sits at the top of the 64-65 cm flagged layer."
+}

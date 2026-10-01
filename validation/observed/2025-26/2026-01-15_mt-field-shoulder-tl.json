@@ -1,0 +1,201 @@
+{
+  "source_files": [
+    "profiles/2025-2026/Test profiles/2026-01-15_1043_Mt Field Shoulder TL.pdf"
+  ],
+  "season": "2025-26",
+  "kind": "test_profile",
+  "site": "Mt Field Shoulder TL",
+  "site_slug": "mt-field-shoulder-tl",
+  "chart_format": "propagation_labs",
+  "date": "2026-01-15",
+  "time": "10:43",
+  "observer": "ian jackson",
+  "lat": 51.4383,
+  "lon": -116.4441,
+  "elevation_m": 2021,
+  "elevation_raw": "2021m",
+  "aspect": "NE",
+  "slope_deg": 35,
+  "air_temp_c": 4.0,
+  "sky": "Few",
+  "precip": "No Precipitation",
+  "wind": "Moderate,W",
+  "blowing_snow": null,
+  "hs_cm": 235,
+  "surface_grain": "MF",
+  "foot_pen_cm": 50,
+  "ski_pen_cm": 25,
+  "header_other": {
+    "profile_name": "Mt Field Shoulder TL",
+    "surface_grain_raw": "Melt Forms",
+    "org": null,
+    "pit_bottom_cm": 115
+  },
+  "layers": [
+    {
+      "bottom_cm": 115,
+      "top_cm": 159,
+      "depth_top_cm": 76,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "P-",
+      "hardness_idx": 3.66,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Lowest dug layer (pit bottom = blue 'PIT 115' line at 115 cm above ground; snowpack below not dug). No grain form entered. Hardness tapers from P (4.0) at 115 cm to 1F+ (3.33) at 159 cm; idx is layer mean"
+    },
+    {
+      "bottom_cm": 159,
+      "top_cm": 160,
+      "depth_top_cm": 75,
+      "grain": "SH",
+      "grain2": null,
+      "grain_raw": "V (SH) from test label 'on V 4.0-8.0 Jan 3rd'",
+      "size_mm": [
+        4.0,
+        8.0
+      ],
+      "hardness": "4F+",
+      "hardness_idx": 2.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Thin 1 cm buried surface hoar, named 'Jan 3rd'; CT12 SP and ECTP at its top (160 cm). Grain/size come from the test labels; the Grain Form table row is blank"
+    },
+    {
+      "bottom_cm": 160,
+      "top_cm": 192,
+      "depth_top_cm": 43,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "No grain form entered; uniform 1F"
+    },
+    {
+      "bottom_cm": 192,
+      "top_cm": 193,
+      "depth_top_cm": 42,
+      "grain": "PP",
+      "grain2": null,
+      "grain_raw": "+ from test label 'on + 4.0'",
+      "size_mm": [
+        4.0,
+        4.0
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Thin 1 cm layer under the 193 cm test line (CT12 SP); grain/size from the test label; Grain Form table row is blank"
+    },
+    {
+      "bottom_cm": 193,
+      "top_cm": 207,
+      "depth_top_cm": 28,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "1F",
+      "hardness_idx": 3.16,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "No grain form entered. Hardness tapers from 1F (3.0) at 207 cm to 1F+ (3.33) at 193 cm; idx is layer mean"
+    },
+    {
+      "bottom_cm": 207,
+      "top_cm": 233,
+      "depth_top_cm": 2,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "No grain form entered; uniform 4F"
+    },
+    {
+      "bottom_cm": 233,
+      "top_cm": 235,
+      "depth_top_cm": 0,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "o (single open circle)",
+      "size_mm": null,
+      "hardness": "P",
+      "hardness_idx": 4.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "2 cm P-hardness surface layer; open-circle glyph on a thin hard layer read as MFcr per TRANSCRIBE (header surface grain 'Melt Forms', air temp +4 C)"
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT12SP on + 4.0",
+      "type": "CT",
+      "score": "CT12",
+      "taps": 12,
+      "propagation": null,
+      "fracture": "SP",
+      "height_cm": 193,
+      "depth_cm": 42,
+      "layer_grain": "PP",
+      "count": 1
+    },
+    {
+      "raw": "CT12SP on V 4.0-8.0 Jan 3rd",
+      "type": "CT",
+      "score": "CT12",
+      "taps": 12,
+      "propagation": null,
+      "fracture": "SP",
+      "height_cm": 160,
+      "depth_cm": 75,
+      "layer_grain": "SH",
+      "count": 1
+    },
+    {
+      "raw": "ECTP on V 4.0-8.0 Jan 3rd",
+      "type": "ECT",
+      "score": "ECTP",
+      "taps": null,
+      "propagation": "P",
+      "fracture": null,
+      "height_cm": 160,
+      "depth_cm": 75,
+      "layer_grain": "SH",
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Jan 3rd SH",
+      "height_cm": 160,
+      "bottom_cm": 159,
+      "top_cm": 160,
+      "depth_cm": 75,
+      "grain": "SH",
+      "comment": "Chart label name is 'Jan 3rd' (SH 4.0-8.0 mm). CT12 SP and ECTP both at this layer. The same-day file '20260115 Mt Field Jan 3 SH ECTP VIDEO.mp4' very likely documents this ECTP (inference from date and layer name)"
+    }
+  ],
+  "notes": null,
+  "summary": "NE treeline pit, 2021 m, 35 deg, HS 235 cm, +4 C, melt-form surface; only 115-235 cm dug (lower 115 cm not recorded): P-to-1F+ tapered lower pit layer (115-159), thin 1 cm 'Jan 3rd' SH 4-8 mm at 159-160 cm (CT12 SP and ECTP at 160 cm), 1F 160-192, thin 1 cm PP 4 mm layer at 192-193 cm (CT12 SP at 193 cm), 1F-1F+ 193-207, 4F 207-233 and a 2 cm P surface MFcr crust",
+  "confidence": "high",
+  "reading_issues": "Height-axis chart with an axis break: blue 'PIT 115' line and a zig-zag below it mean the pit bottom is 115 cm above ground (HS 235, 120 cm dug); heights are above ground as the axis labels show, calibrated on the 10 cm gridlines (10.52 px/cm) and the 235 cm / 115 cm lines. Layout is the mirror of the usual one: Grain Form column and height axis on the left, bars grow rightward, hardness ticks F/4f/1f/P/K left to right (evenly spaced). Only one glyph is in the Grain Form table (open circle on the 2 cm top row); all other table rows are blank, so grain is null except the two thin 1 cm layers whose grain/size come from the test labels (PP 4.0 mm at 192-193 cm; SH 4.0-8.0 mm 'Jan 3rd' at 159-160 cm). The ECTP label carries no tap count (taps null). Notes field blank; blowing snow '--' (null). Top open-circle glyph read as MFcr (P-hard 2 cm surface layer) by the TRANSCRIBE rule; plain MF is the alternative. Two tapered hardness bars: layer means recorded, end values in comments. No temperature profile."
+}

@@ -1,0 +1,185 @@
+{
+  "source_files": [
+    "profiles/2025-2026/Test profiles/2026-01-07_West Nile.png"
+  ],
+  "season": "2025-26",
+  "kind": "test_profile",
+  "site": "West Nile",
+  "site_slug": "west-nile",
+  "chart_format": "propagation_labs",
+  "date": "2026-01-07",
+  "time": "11:32",
+  "observer": "ben firth",
+  "lat": 51.6129,
+  "lon": -116.3489,
+  "elevation_m": 2176,
+  "elevation_raw": "7139ft",
+  "aspect": "NE",
+  "slope_deg": 10,
+  "air_temp_c": -10.7,
+  "sky": "Overcast",
+  "precip": "Snow",
+  "wind": "Light",
+  "blowing_snow": null,
+  "hs_cm": 245,
+  "surface_grain": "PP",
+  "foot_pen_cm": 60,
+  "ski_pen_cm": 25,
+  "header_other": {
+    "profile_name": "260107 West Nile",
+    "surface_grain_raw": "Precipitation Particles",
+    "org": null,
+    "pit_bottom_cm": 130
+  },
+  "layers": [
+    {
+      "bottom_cm": 130,
+      "top_cm": 188,
+      "depth_top_cm": 57,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "filled circle",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "P+",
+      "hardness_idx": 4.17,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Lowest dug layer (blue 'PIT 130' line: pit bottom 130 cm above ground). Hardness tapers from P (4.0) at 188 cm to P+ (4.33) at 130 cm; idx is layer mean"
+    },
+    {
+      "bottom_cm": 188,
+      "top_cm": 209,
+      "depth_top_cm": 36,
+      "grain": "DF",
+      "grain2": "RG",
+      "grain_raw": "/ ( filled circle )",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Size cell '0.5(0.5)'"
+    },
+    {
+      "bottom_cm": 209,
+      "top_cm": 227,
+      "depth_top_cm": 18,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "/",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "4F+",
+      "hardness_idx": 2.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "CT24 RP at its base (209 cm)"
+    },
+    {
+      "bottom_cm": 227,
+      "top_cm": 245,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": "PP",
+      "grain_raw": "/ ( inverted A = rime )",
+      "size_mm": [
+        1.0,
+        2.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": true,
+      "comment": "Size cell '1.0-2.0(0.5-1.0)': DF 1.0-2.0 mm with secondary rimed form 0.5-1.0 mm (inverted-A glyph, PPrm). Surface layer; header surface grain Precipitation Particles"
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 235,
+      "t_c": -9.1
+    },
+    {
+      "h_cm": 219,
+      "t_c": -8.8
+    },
+    {
+      "h_cm": 211,
+      "t_c": -8.1
+    },
+    {
+      "h_cm": 199,
+      "t_c": -7.6
+    },
+    {
+      "h_cm": 189,
+      "t_c": -6.6
+    },
+    {
+      "h_cm": 179,
+      "t_c": -6.4
+    },
+    {
+      "h_cm": 169,
+      "t_c": -6.0
+    },
+    {
+      "h_cm": 159,
+      "t_c": -5.5
+    },
+    {
+      "h_cm": 149,
+      "t_c": -5.2
+    },
+    {
+      "h_cm": 140,
+      "t_c": -5.1
+    },
+    {
+      "h_cm": 130,
+      "t_c": -4.6
+    }
+  ],
+  "tests": [
+    {
+      "raw": "CT24 RP down 40",
+      "type": "CT",
+      "score": "CT24",
+      "taps": 24,
+      "propagation": null,
+      "fracture": "RP",
+      "height_cm": 209,
+      "depth_cm": 36,
+      "layer_grain": null,
+      "count": 1
+    },
+    {
+      "raw": "ECTX",
+      "type": "ECT",
+      "score": "ECTX",
+      "taps": null,
+      "propagation": null,
+      "fracture": null,
+      "height_cm": null,
+      "depth_cm": null,
+      "layer_grain": null,
+      "count": 1
+    }
+  ],
+  "named_layers": [],
+  "notes": "CT24: CT24 RP down 40,",
+  "summary": "HS 245 cm, 10 deg NE pit at 2176 m (51.6129,-116.3489, not the Banff-townsite West Nile of 2025-12-10), only 130-245 cm dug: P/P+ RG 0.5 mm base (130-188), 1F DF/RG 188-209, 4F+ DF 209-227 and F DF with rime 227-245; CT24 RP at 209 cm; ECTX; temperature -10.7 C air, -9.1 C at 235 cm to -4.6 C at 130 cm",
+  "confidence": "high",
+  "reading_issues": "Full-page Propagation Labs PNG, mirrored layout, with a temperature profile against the top axis (0 at x=1931.5, 170.6 px/degC) and heights on the 10 cm gridlines (11.683 px/cm, HS 245 at y=355.5, PIT 130 line at y=1699). Pit bottom at 130 cm above ground. Header coordinates (51.6129,-116.3489) and 7139 ft (=2176 m) differ from the 2025-12-10 'West Nile' profile (51.1908,-115.5603, 1383 m): same name, different site. Notes 'down 40' vs measured depth 36 cm (245-209) kept as written. Top temperature point (near 245 cm, about -10.4 degC) is hidden behind the ECTX label so not recorded. ECTX drawn at the top with no height. Blowing snow '--'; wind 'Light' has no direction. Inverted-A glyph read as rime (secondary PP)."
+}

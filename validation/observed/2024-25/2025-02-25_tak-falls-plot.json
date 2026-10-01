@@ -1,0 +1,267 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Takkakaw Falls study plot/2025-02-25 Tak Plot.png"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Takakkaw Falls Study Plot",
+  "site_slug": "tak-falls-plot",
+  "chart_format": "propagation_labs",
+  "date": "2025-02-25",
+  "time": "11:24",
+  "observer": "Conrad Janzen",
+  "lat": 51.4983,
+  "lon": -116.4959,
+  "elevation_m": 1800,
+  "elevation_raw": "1800m",
+  "aspect": "NE",
+  "slope_deg": 0,
+  "air_temp_c": -1.5,
+  "sky": "Overcast",
+  "precip": "Snow <0.5cm/hr",
+  "wind": "Calm",
+  "blowing_snow": "No Transport",
+  "hs_cm": 155,
+  "surface_grain": "PP",
+  "foot_pen_cm": 55,
+  "ski_pen_cm": 25,
+  "header_other": {
+    "surface_grain_raw": "Rime 2.0mm",
+    "profile_name": "Takakkaw Falls study plot"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 45,
+      "depth_top_cm": 110,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        3.0
+      ],
+      "hardness": "P+",
+      "hardness_idx": 4.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 45,
+      "top_cm": 75,
+      "depth_top_cm": 80,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "P",
+      "hardness_idx": 4,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 75,
+      "top_cm": 95,
+      "depth_top_cm": 60,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "4F+",
+      "hardness_idx": 2.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "CT28 BRK failed at its top (95 cm)"
+    },
+    {
+      "bottom_cm": 95,
+      "top_cm": 114,
+      "depth_top_cm": 41,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "⊟ (square with rounded top and centre line)",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 114,
+      "top_cm": 137,
+      "depth_top_cm": 18,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "4F+",
+      "hardness_idx": 2.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "CT14 RP and CT19 RP failed at its top (137 cm)"
+    },
+    {
+      "bottom_cm": 137,
+      "top_cm": 155,
+      "depth_top_cm": 0,
+      "grain": "PP",
+      "grain2": null,
+      "grain_raw": "∀ (inverted A, rime)",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "inverted-A glyph = rime (PPrm); matches the header surface grain \"Rime 2.0mm\""
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 0,
+      "t_c": -1.0
+    },
+    {
+      "h_cm": 18,
+      "t_c": -1.7
+    },
+    {
+      "h_cm": 23,
+      "t_c": -2.1
+    },
+    {
+      "h_cm": 28,
+      "t_c": -2.5
+    },
+    {
+      "h_cm": 38,
+      "t_c": -3.3
+    },
+    {
+      "h_cm": 48,
+      "t_c": -3.3
+    },
+    {
+      "h_cm": 58,
+      "t_c": -3.5
+    },
+    {
+      "h_cm": 68,
+      "t_c": -3.7
+    },
+    {
+      "h_cm": 78,
+      "t_c": -4.3
+    },
+    {
+      "h_cm": 88,
+      "t_c": -4.6
+    },
+    {
+      "h_cm": 98,
+      "t_c": -4.8
+    },
+    {
+      "h_cm": 108,
+      "t_c": -4.8
+    },
+    {
+      "h_cm": 118,
+      "t_c": -5.0
+    },
+    {
+      "h_cm": 128,
+      "t_c": -5.0
+    },
+    {
+      "h_cm": 138,
+      "t_c": -4.2
+    },
+    {
+      "h_cm": 145,
+      "t_c": -4.0
+    },
+    {
+      "h_cm": 146,
+      "t_c": -3.9
+    },
+    {
+      "h_cm": 147,
+      "t_c": -3.8
+    },
+    {
+      "h_cm": 150,
+      "t_c": -3.6
+    },
+    {
+      "h_cm": 155,
+      "t_c": -3.2
+    }
+  ],
+  "tests": [
+    {
+      "raw": "CT14RP",
+      "type": "CT",
+      "score": "CT14",
+      "taps": 14,
+      "propagation": null,
+      "fracture": "RP",
+      "height_cm": 137,
+      "depth_cm": 18,
+      "layer_grain": "DF",
+      "count": 1
+    },
+    {
+      "raw": "CT19RP",
+      "type": "CT",
+      "score": "CT19",
+      "taps": 19,
+      "propagation": null,
+      "fracture": "RP",
+      "height_cm": 137,
+      "depth_cm": 18,
+      "layer_grain": "DF",
+      "count": 1
+    },
+    {
+      "raw": "CT28BRK",
+      "type": "CT",
+      "score": "CT28",
+      "taps": 28,
+      "propagation": null,
+      "fracture": "BRK",
+      "height_cm": 95,
+      "depth_cm": 60,
+      "layer_grain": "FC",
+      "count": 1
+    }
+  ],
+  "named_layers": [],
+  "notes": "~28 cm in previous tracks/interval board",
+  "summary": "155 cm HS, hard FC base: FC 0-45 cm (P+, 2-3 mm) and 45-75 cm (P) under FC 75-95 cm (4F+), FCxr 95-114 cm (1F, 1 mm), DF 114-137 cm (4F+) and 18 cm of rime (F, 2 mm) at the surface; CT14 RP and CT19 RP at 137 cm (top of the DF layer) and CT28 BRK at 95 cm; foot pen 55, ski pen 25; air -1.5",
+  "confidence": "high",
+  "reading_issues": "Propagation Labs height-from-ground layout (no depth conversion). Layer boundaries from table row lines at 45.0, 75.0, 95.0, 114.0 and 137.0 cm (+-0.1 cm), matching the bar steps. Hardness read from full-resolution bar edges against the K/P/1f/4f/F gridlines (the hardness axis on this chart is scaled differently from other charts: F gridline at x=1704, 341 px per class). Test lines are orange horizontals at 137.0 cm (CT14RP and CT19RP share one box) and 95.0 cm (CT28BRK); layer_grain is the layer immediately below each line. Temperature profile has 20 dots; three overlapping dots near the surface were separated by a distance-transform peak search (147, 146, 145 cm) and the dot at 138 cm is partly covered by the 137 cm test line (+-0.3 cm). Dots below 28 cm: 23, 18 and then ground (0) with a gap between 18 and 0 cm. The \"∀\" glyph is read as rime per the header \"Rime 2.0mm\". No name column on this chart. Elevation 1800 m as printed."
+}

@@ -1,0 +1,228 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Goats Eye study plot/2025-02-12_Goats Eye Study Plot.jpg"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Goat's Eye Study Plot",
+  "site_slug": "goats-eye-plot",
+  "chart_format": "snowpilot",
+  "date": "2025-02-12",
+  "time": "11:15",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.0883,
+  "lon": -115.76693,
+  "elevation_m": null,
+  "elevation_raw": null,
+  "aspect": null,
+  "slope_deg": null,
+  "air_temp_c": null,
+  "sky": "CLR",
+  "precip": null,
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 86,
+  "surface_grain": "PP",
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {
+    "HS": "86",
+    "wind_loading": null,
+    "coord_raw": "51.08830N, -115.76693W",
+    "specifics": null,
+    "layer_notes": "11-10cm: Problematic layer",
+    "chart_title": "Goat's Eye Profile",
+    "surface_form": "+r (rimed precipitation particles, PPrm) 1 mm, drawn in the fixed top row above the HS line (zero thickness); moisture blank"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 8,
+      "depth_top_cm": 78,
+      "grain": "DH",
+      "grain2": null,
+      "grain_raw": "∧",
+      "size_mm": [
+        4.0,
+        4.0
+      ],
+      "hardness": "P+",
+      "hardness_idx": 4.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 8,
+      "top_cm": 10,
+      "depth_top_cm": 76,
+      "grain": "DH",
+      "grain2": null,
+      "grain_raw": "∧",
+      "size_mm": [
+        6.0,
+        6.0
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 10,
+      "top_cm": 11,
+      "depth_top_cm": 75,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "◎◎ (two linked circles)",
+      "size_mm": null,
+      "hardness": "P",
+      "hardness_idx": 4,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "1 cm crust layer, no size given in the table; layer note \"11-10cm: Problematic layer\" (red flag line drawn across its top edge, 11 cm)"
+    },
+    {
+      "bottom_cm": 11,
+      "top_cm": 41,
+      "depth_top_cm": 45,
+      "grain": "DH",
+      "grain2": null,
+      "grain_raw": "∧",
+      "size_mm": [
+        5.0,
+        5.0
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 41,
+      "top_cm": 54,
+      "depth_top_cm": 32,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 54,
+      "top_cm": 74,
+      "depth_top_cm": 12,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        3.0,
+        3.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 74,
+      "top_cm": 86,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "surface layer; the fixed top (surface-form) row above the HS line shows \"+r\" (rimed PP) 1 mm"
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 0,
+      "t_c": -2.0
+    },
+    {
+      "h_cm": 10,
+      "t_c": -5.0
+    },
+    {
+      "h_cm": 20,
+      "t_c": -6.0
+    },
+    {
+      "h_cm": 30,
+      "t_c": -8.0
+    },
+    {
+      "h_cm": 40,
+      "t_c": -10.0
+    },
+    {
+      "h_cm": 50,
+      "t_c": -11.0
+    },
+    {
+      "h_cm": 60,
+      "t_c": -14.0
+    },
+    {
+      "h_cm": 70,
+      "t_c": -19.0
+    },
+    {
+      "h_cm": 76,
+      "t_c": -21.0
+    }
+  ],
+  "tests": [
+    {
+      "raw": "CTN",
+      "type": "CT",
+      "score": "CTN",
+      "taps": null,
+      "propagation": null,
+      "fracture": null,
+      "height_cm": null,
+      "depth_cm": null,
+      "layer_grain": null,
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Problematic layer",
+      "height_cm": 10.5,
+      "bottom_cm": 10,
+      "top_cm": 11,
+      "depth_cm": 75.5,
+      "grain": "MFcr"
+    }
+  ],
+  "notes": "Layer Notes (header): '11-10cm: Problematic layer'. Stability tests column: 'CTN' (arrow at the ground, no failure height). Chart 'Notes:' field blank. Elevation, aspect, slope angle, wind loading, stability, air temperature, precipitation, PF and PS fields blank.",
+  "summary": "86 cm HS: 11 cm basal pack of DH (4 mm P+, 6 mm 1F-) with a 1 cm MFcr crust at 10-11 cm (P; flagged problematic layer) under 30 cm DH (1F-, 5 mm), FC 41-54 cm (1F) and 54-74 cm (4F, 3 mm), and 12 cm DF (F) at the surface; rimed PP on top; CTN (no result); very cold upper pack (-21 at 76 cm, -2 at ground)",
+  "confidence": "high",
+  "reading_issues": "Single-file JPG (994x840 SnowPilot export). Hardness bar edges and layer boundaries measured from pixels against the axis ticks; boundaries are integer cm (outline rows at 74.1, 54.0, 41.1, 11.0, 10.1 and 8.1 cm). Temperature axis spans about -22.8 to 0 degC with ticks every 2 degC (18.86 px/degC). The top temperature dot (about 76 cm, -21 degC) is partly covered by the SnowPilot logo, so its height is +-0.5 cm and temperature +-0.3 degC. Surface-form glyph \"+r\" read as rimed PP (PPrm); surface_grain \"PP\" rests on that reading. Header is sparse (elevation, air temperature, precipitation, aspect, slope and PF/PS all blank). The CTN arrow sits at the ground of the tests column (no failure height). The red line at 11 cm is the problematic-layer flag. Chart title reads \"Goat's Eye Profile\"."
+}

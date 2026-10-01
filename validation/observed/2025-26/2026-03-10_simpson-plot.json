@@ -1,0 +1,364 @@
+{
+ "source_files": [
+  "profiles/2025-2026/Study Plot profiles/Simpson/2026-03-10 Simpson Pilot.png"
+ ],
+ "season": "2025-26",
+ "kind": "study_plot",
+ "site": "Simpson Study Plot",
+ "site_slug": "simpson-plot",
+ "chart_format": "propagation_labs",
+ "date": "2026-03-10",
+ "time": "14:57",
+ "observer": "Ian Jackson",
+ "lat": 50.9831,
+ "lon": -115.9798,
+ "elevation_m": 2000,
+ "elevation_raw": "2000m",
+ "aspect": null,
+ "slope_deg": 1,
+ "air_temp_c": -7.0,
+ "sky": "Overcast",
+ "precip": "No Precipitation",
+ "wind": "Light,S",
+ "blowing_snow": "No Transport",
+ "hs_cm": 220,
+ "surface_grain": "PP",
+ "foot_pen_cm": 30,
+ "ski_pen_cm": 20,
+ "header_other": {
+  "profile_name": "Simpson Plot",
+  "org": "Parks Canada Visitor Safety",
+  "surface_grain_raw": "Precipitation Particles 1.0mm",
+  "filename_note": "file named \"Simpson Pilot\"; profile name inside is \"Simpson Plot\" but elevation (2000 m vs ~2100 m) and coordinates differ slightly from earlier Simpson plot pits"
+ },
+ "layers": [
+  {
+   "bottom_cm": 0,
+   "top_cm": 15,
+   "depth_top_cm": 205,
+   "grain": "FC",
+   "grain2": "MFcl",
+   "grain_raw": "□(clustered glyph)",
+   "size_mm": [
+    2.0,
+    2.0
+   ],
+   "hardness": "P+",
+   "hardness_idx": 4.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": true,
+   "comment": "secondary glyph uncertain (looks like MFcl)"
+  },
+  {
+   "bottom_cm": 15,
+   "top_cm": 85,
+   "depth_top_cm": 135,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "P+",
+   "hardness_idx": 4.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 85,
+   "top_cm": 105,
+   "depth_top_cm": 115,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "P+",
+   "hardness_idx": 4.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 105,
+   "top_cm": 130,
+   "depth_top_cm": 90,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.5,
+    1.0
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 130,
+   "top_cm": 140,
+   "depth_top_cm": 80,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "1F+",
+   "hardness_idx": 3.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 140,
+   "top_cm": 147,
+   "depth_top_cm": 73,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "4F+",
+   "hardness_idx": 2.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 147,
+   "top_cm": 148,
+   "depth_top_cm": 72,
+   "grain": "SH",
+   "grain2": null,
+   "grain_raw": "V",
+   "size_mm": [
+    10.0,
+    15.0
+   ],
+   "hardness": "4F+",
+   "hardness_idx": 2.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": true,
+   "comment": "Named \"Jan 24\"; bar edge thin, hardness approximate"
+  },
+  {
+   "bottom_cm": 148,
+   "top_cm": 170,
+   "depth_top_cm": 50,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.5,
+    0.5
+   ],
+   "hardness": "1F+",
+   "hardness_idx": 3.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 170,
+   "top_cm": 190,
+   "depth_top_cm": 30,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.5,
+    0.5
+   ],
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 190,
+   "top_cm": 203,
+   "depth_top_cm": 17,
+   "grain": "PP",
+   "grain2": null,
+   "grain_raw": "+",
+   "size_mm": [
+    0.5,
+    0.5
+   ],
+   "hardness": "4F",
+   "hardness_idx": 2,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 203,
+   "top_cm": 220,
+   "depth_top_cm": 0,
+   "grain": "PP",
+   "grain2": null,
+   "grain_raw": "+",
+   "size_mm": [
+    1.0,
+    2.0
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  }
+ ],
+ "temps": [
+  {
+   "h_cm": 0,
+   "t_c": 0.0
+  },
+  {
+   "h_cm": 20,
+   "t_c": -1.0
+  },
+  {
+   "h_cm": 40,
+   "t_c": -1.5
+  },
+  {
+   "h_cm": 60,
+   "t_c": -2.0
+  },
+  {
+   "h_cm": 80,
+   "t_c": -2.5
+  },
+  {
+   "h_cm": 100,
+   "t_c": -3.0
+  },
+  {
+   "h_cm": 120,
+   "t_c": -3.0
+  },
+  {
+   "h_cm": 140,
+   "t_c": -3.5
+  },
+  {
+   "h_cm": 150,
+   "t_c": -3.5
+  },
+  {
+   "h_cm": 160,
+   "t_c": -4.0
+  },
+  {
+   "h_cm": 170,
+   "t_c": -4.0
+  },
+  {
+   "h_cm": 180,
+   "t_c": -5.0
+  },
+  {
+   "h_cm": 190,
+   "t_c": -5.5
+  },
+  {
+   "h_cm": 200,
+   "t_c": -6.5
+  },
+  {
+   "h_cm": 210,
+   "t_c": -6.5
+  },
+  {
+   "h_cm": 220,
+   "t_c": -8.0
+  }
+ ],
+ "tests": [
+  {
+   "raw": "CT30SC",
+   "type": "CT",
+   "score": "CT30",
+   "taps": 30,
+   "propagation": null,
+   "fracture": "SC",
+   "height_cm": 148,
+   "depth_cm": 72,
+   "layer_grain": "SH",
+   "count": 1,
+   "comment": "Label on V 10-15 \"Jan 24\""
+  },
+  {
+   "raw": "CT25RP",
+   "type": "CT",
+   "score": "CT25",
+   "taps": 25,
+   "propagation": null,
+   "fracture": "RP",
+   "height_cm": 170,
+   "depth_cm": 50,
+   "layer_grain": "RG",
+   "count": 1
+  },
+  {
+   "raw": "CT12RP",
+   "type": "CT",
+   "score": "CT12",
+   "taps": 12,
+   "propagation": null,
+   "fracture": "RP",
+   "height_cm": 190,
+   "depth_cm": 30,
+   "layer_grain": "RG",
+   "count": 1
+  },
+  {
+   "raw": "ECTX",
+   "type": "ECT",
+   "score": "ECTX",
+   "taps": null,
+   "propagation": null,
+   "fracture": null,
+   "height_cm": null,
+   "depth_cm": null,
+   "layer_grain": null,
+   "count": 1,
+   "comment": "ECTX label at the top of the chart; no result"
+  }
+ ],
+ "named_layers": [
+  {
+   "name": "Jan 24 SH",
+   "height_cm": 147,
+   "depth_cm": 73,
+   "grain": "SH"
+  }
+ ],
+ "notes": null,
+ "summary": "HS 220 cm deep pack: P+ RG 15-85 cm and FCxr 85-105 cm lower pack, Jan 24 SH 10-15 mm at 147-148 cm failing CT30 SC, RG 148-190 cm (1F+/1F) with CT25 RP at 170 and CT12 RP at 190 cm, PP surface; ECTX no result; temps 0 C at ground to -8 C at surface",
+ "confidence": "medium",
+ "reading_issues": "File is named \"Simpson Pilot\" and elevation (2000 m) and coordinates differ from earlier Simpson plot pits (2100 m); the profile name inside is \"Simpson Plot\" so it is recorded as the Simpson study plot (probably a different position or default elevation). Aspect blank. SH layer edge at 147-148 cm is only 1 cm thick so its hardness is approximate. Linear axis. Layer test heights from yellow lines."
+}

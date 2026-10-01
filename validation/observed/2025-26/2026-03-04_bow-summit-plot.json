@@ -1,0 +1,285 @@
+{
+ "source_files": [
+  "profiles/2025-2026/Study Plot profiles/Bow Summit/2026-03-04 Bow Summit Study Plot.pdf"
+ ],
+ "season": "2025-26",
+ "kind": "study_plot",
+ "site": "Bow Summit Study Plot",
+ "site_slug": "bow-summit-plot",
+ "chart_format": "propagation_labs",
+ "date": "2026-03-04",
+ "time": "12:57",
+ "observer": "ben firth",
+ "lat": 51.7092,
+ "lon": -116.4795,
+ "elevation_m": 2071,
+ "elevation_raw": "6796ft",
+ "aspect": "NW",
+ "slope_deg": null,
+ "air_temp_c": null,
+ "sky": "Scattered",
+ "precip": "No Precipitation",
+ "wind": null,
+ "blowing_snow": null,
+ "hs_cm": 150,
+ "surface_grain": "PP",
+ "foot_pen_cm": null,
+ "ski_pen_cm": null,
+ "header_other": {
+  "profile_name": "26034 Bow Summit Study Plot",
+  "org": null,
+  "surface_grain_raw": "Precipitation Particles 2.0mm"
+ },
+ "layers": [
+  {
+   "bottom_cm": 0,
+   "top_cm": 30,
+   "depth_top_cm": 120,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    3.0,
+    5.0
+   ],
+   "hardness": "P-",
+   "hardness_idx": 3.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 30,
+   "top_cm": 51,
+   "depth_top_cm": 99,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    3.0,
+    5.0
+   ],
+   "hardness": "K-",
+   "hardness_idx": 4.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 51,
+   "top_cm": 55,
+   "depth_top_cm": 95,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    3.0,
+    3.0
+   ],
+   "hardness": "P+",
+   "hardness_idx": 4.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 55,
+   "top_cm": 75,
+   "depth_top_cm": 75,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    3.0,
+    3.0
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 75,
+   "top_cm": 80,
+   "depth_top_cm": 70,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    1.0,
+    3.0
+   ],
+   "hardness": "P-",
+   "hardness_idx": 3.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 80,
+   "top_cm": 109,
+   "depth_top_cm": 41,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    1.0,
+    3.0
+   ],
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 109,
+   "top_cm": 110,
+   "depth_top_cm": 40,
+   "grain": "SH",
+   "grain2": null,
+   "grain_raw": "V",
+   "size_mm": [
+    2.0,
+    3.0
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "Named \"Jan 24 SH\""
+  },
+  {
+   "bottom_cm": 110,
+   "top_cm": 114,
+   "depth_top_cm": 36,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "4F",
+   "hardness_idx": 2,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 114,
+   "top_cm": 115,
+   "depth_top_cm": 35,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    1.0,
+    2.0
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "Named \"Feb 14?\""
+  },
+  {
+   "bottom_cm": 115,
+   "top_cm": 142,
+   "depth_top_cm": 8,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/",
+   "size_mm": [
+    0.1,
+    0.3
+   ],
+   "hardness": "4F-",
+   "hardness_idx": 1.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 142,
+   "top_cm": 148,
+   "depth_top_cm": 2,
+   "grain": "PP",
+   "grain2": null,
+   "grain_raw": "+",
+   "size_mm": [
+    2.0,
+    2.0
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 148,
+   "top_cm": 150,
+   "depth_top_cm": 0,
+   "grain": "PP",
+   "grain2": null,
+   "grain_raw": "+",
+   "size_mm": [
+    2.0,
+    2.0
+   ],
+   "hardness": "F-",
+   "hardness_idx": 0.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  }
+ ],
+ "temps": [],
+ "tests": [
+  {
+   "raw": "CTM12 SC",
+   "type": "CT",
+   "score": "CTM12",
+   "taps": 12,
+   "propagation": null,
+   "fracture": "SC",
+   "height_cm": 114,
+   "depth_cm": 36,
+   "layer_grain": "FC",
+   "count": 1,
+   "comment": "Yellow line at base of the pink \"Feb 14\" layer"
+  }
+ ],
+ "named_layers": [
+  {
+   "name": "Jan 24 SH",
+   "height_cm": 109,
+   "depth_cm": 41,
+   "grain": "SH"
+  },
+  {
+   "name": "Feb 14?",
+   "height_cm": 114,
+   "depth_cm": 36,
+   "grain": "FC"
+  }
+ ],
+ "notes": "CT12: CTM12 SC,",
+ "summary": "HS 150 cm: thick faceted FC/FCxr 0-109 cm (P-/K-/P+ hard slab 30-80 cm), Jan 24 SH at 109-110 cm, thin Feb 14 FC layer at 114-115 cm failing CT12 SC, soft DF 115-142 cm and PP surface; no temperatures",
+ "confidence": "high",
+ "reading_issues": "Linear axis. Elevation in feet (6796 ft = 2071 m). Air temperature, wind, foot/ski pen blank. No temperature profile. Names with question mark kept as printed."
+}

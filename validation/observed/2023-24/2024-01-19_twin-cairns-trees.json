@@ -1,0 +1,48 @@
+{
+  "source_files": ["profiles/2023-2024/Other Profiles/2024-01-19 Twin Carin Trees.jpg"],
+  "season": "2023-24",
+  "kind": "test_profile",
+  "site": "Twin Carin Trees",
+  "site_slug": "twin-cairns-trees",
+  "chart_format": "snowpilot",
+  "date": "2024-01-19",
+  "time": "13:30",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.06776,
+  "lon": -115.79677,
+  "elevation_m": 2330,
+  "elevation_raw": "2330 m",
+  "aspect": null,
+  "slope_deg": null,
+  "air_temp_c": null,
+  "sky": "BKN",
+  "precip": "NO",
+  "wind": null,
+  "blowing_snow": null,
+  "hs_cm": 112,
+  "surface_grain": null,
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {"HS": "112", "wind_loading": null, "coord_raw": "51.06776N, -115.79677W", "layer_notes": "112-104cm: Problematic layer; 36-35cm: old crust", "chart_title": "Twin Carin Trees", "region": "Banff, Yoho and Kootenay, AB", "specifics": null, "stability": null, "surface_form": "top surface-form row blank"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 35, "depth_top_cm": 77, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "1F-", "hardness_idx": 2.5, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered; hardness gradient 1F- at base (0 cm) to 4F+ at top (35 cm); hardness_idx is the mean"},
+    {"bottom_cm": 35, "top_cm": 36, "depth_top_cm": 76, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": "layer note '36-35cm: old crust' (grain/type not recorded); thin 1 cm layer, 4F"},
+    {"bottom_cm": 36, "top_cm": 65, "depth_top_cm": 47, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "4F+", "hardness_idx": 2.17, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered; hardness gradient 4F- at base (36 cm) to 1F- at top (65 cm); hardness_idx is the mean (2.17, exact tie between 4F and 4F+)"},
+    {"bottom_cm": 65, "top_cm": 79, "depth_top_cm": 33, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "F+", "hardness_idx": 1.33, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered"},
+    {"bottom_cm": 79, "top_cm": 80, "depth_top_cm": 32, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "P", "hardness_idx": 4.0, "moisture": null, "density": null, "uncertain": false, "comment": "thin 1 cm hard layer, P; no grain form/size entered; table row is stretched with leader lines"},
+    {"bottom_cm": 80, "top_cm": 104, "depth_top_cm": 8, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "F", "hardness_idx": 1.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered"},
+    {"bottom_cm": 104, "top_cm": 112, "depth_top_cm": 0, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": "layer note '112-104cm: Problematic layer'; base (104 cm) drawn in red on the chart; CT1 SC at 104 cm; no grain form/size entered"}
+  ],
+  "temps": [],
+  "tests": [
+    {"raw": "CT1, SC @104cm", "type": "CT", "score": "CT1", "taps": 1, "propagation": null, "fracture": "SC", "height_cm": 104, "depth_cm": 8, "layer_grain": null, "count": 1}
+  ],
+  "named_layers": [
+    {"name": "Problematic layer", "height_cm": 112, "depth_cm": 0, "grain": null, "comment": "layer note '112-104cm: Problematic layer'; the 104-112 cm 4F layer; its base at 104 cm is red-marked and is the CT1 SC failure plane; grain not recorded"},
+    {"name": "old crust", "height_cm": 36, "depth_cm": 76, "grain": null, "comment": "layer note '36-35cm: old crust'; the 35-36 cm 4F layer; crust type not recorded"}
+  ],
+  "notes": "Layer Notes: 112-104cm: Problematic layer; 36-35cm: old crust. Stability tests column: 'CT1, SC @104cm'. Header Aspect, Slope Angle, Wind Loading, Air Temperature, Wind, Specifics, Stability and PF/PS blank; chart 'Notes:' blank. The crystal form/size/moisture table is blank for every layer. No temperature profile.",
+  "summary": "Pit titled 'Twin Carin Trees' at 2330 m, HS 112 cm, with no grain forms recorded: 0-35 cm 1F- to 4F+ gradient, a 1 cm 4F 'old crust' at 35-36 cm, 36-65 cm 4F- to 1F- gradient, F+ 65-79, a thin P layer at 79-80, soft F 80-104 and a 4F slab 104-112 cm flagged 'problematic layer' (CT1 SC at its base, 104 cm); no temperatures, aspect or slope",
+  "confidence": "medium",
+  "reading_issues": "Hardness bars and boundaries (35, 36, 65, 79, 80, 104 cm) measured from pixels; boundaries fall on whole cm. Three layers are trapezoids (hardness gradients): 0-35 cm 1F- base to 4F+ top (mean 2.5, labelled 1F-), 36-65 cm 4F- base to 1F- top (mean 2.17, exact tie between 4F and 4F+, labelled 4F+). The grain-form/size/moisture table is entirely blank, so every layer has grain null and the only qualitative information is in the layer notes ('problematic layer' 112-104 cm, 'old crust' 36-35 cm). The red line at 104 cm marks the weak interface where CT1 SC occurred. Aspect, slope, wind and air temperature are blank in the header. Site title is spelled 'Twin Carin Trees' (Twin Cairns trees); the slug uses 'cairns'. Confidence medium because no grain information was recorded."
+}

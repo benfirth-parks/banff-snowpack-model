@@ -1,0 +1,356 @@
+{
+ "source_files": [
+  "profiles/2025-2026/Study Plot profiles/Simpson/2025-01-09 Simpson.png"
+ ],
+ "season": "2025-26",
+ "kind": "study_plot",
+ "site": "Simpson Study Plot",
+ "site_slug": "simpson-plot",
+ "chart_format": "propagation_labs",
+ "date": "2026-01-09",
+ "time": "12:08",
+ "observer": "steve holeczi",
+ "lat": 50.9851,
+ "lon": -115.9842,
+ "elevation_m": 2103,
+ "elevation_raw": "2103m",
+ "aspect": "S",
+ "slope_deg": 0,
+ "air_temp_c": null,
+ "sky": "Few",
+ "precip": "Snow <0.5cm/hr",
+ "wind": "Light,SW",
+ "blowing_snow": null,
+ "hs_cm": 185,
+ "surface_grain": "PP",
+ "foot_pen_cm": null,
+ "ski_pen_cm": null,
+ "header_other": {
+  "profile_name": "Simpson plot",
+  "org": null,
+  "filename_date": "2025-01-09 (typo; header says 2026-01-09)",
+  "image": "small 828x784 screenshot"
+ },
+ "layers": [
+  {
+   "bottom_cm": 0,
+   "top_cm": 29,
+   "depth_top_cm": 156,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    2.0,
+    4.0
+   ],
+   "hardness": "1F+",
+   "hardness_idx": 3.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 29,
+   "top_cm": 31,
+   "depth_top_cm": 154,
+   "grain": null,
+   "grain2": null,
+   "grain_raw": null,
+   "size_mm": null,
+   "hardness": "K+",
+   "hardness_idx": 5.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": true,
+   "comment": "thin crust, no glyph or size; bar reaches the left plot edge so hardness is at least K+"
+  },
+  {
+   "bottom_cm": 31,
+   "top_cm": 44,
+   "depth_top_cm": 141,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    0.3,
+    1.0
+   ],
+   "hardness": "P-",
+   "hardness_idx": 3.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 44,
+   "top_cm": 55,
+   "depth_top_cm": 130,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    0.1,
+    0.1
+   ],
+   "hardness": "K-",
+   "hardness_idx": 4.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 55,
+   "top_cm": 75,
+   "depth_top_cm": 110,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    0.1,
+    0.3
+   ],
+   "hardness": "P+",
+   "hardness_idx": 4.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 75,
+   "top_cm": 106,
+   "depth_top_cm": 79,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    0.1,
+    0.3
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 106,
+   "top_cm": 115,
+   "depth_top_cm": 70,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    0.1,
+    0.3
+   ],
+   "hardness": "P-",
+   "hardness_idx": 3.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 115,
+   "top_cm": 120,
+   "depth_top_cm": 65,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    0.1,
+    0.3
+   ],
+   "hardness": "4F",
+   "hardness_idx": 2,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 120,
+   "top_cm": 124,
+   "depth_top_cm": 61,
+   "grain": "FC",
+   "grain2": "DF",
+   "grain_raw": "□(/)",
+   "size_mm": [
+    0.1,
+    0.1
+   ],
+   "hardness": "1F+",
+   "hardness_idx": 3.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 124,
+   "top_cm": 144,
+   "depth_top_cm": 41,
+   "grain": "FC",
+   "grain2": "DF",
+   "grain_raw": "□(/)",
+   "size_mm": [
+    0.1,
+    0.1
+   ],
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 144,
+   "top_cm": 146,
+   "depth_top_cm": 39,
+   "grain": "SH",
+   "grain2": null,
+   "grain_raw": "V",
+   "size_mm": [
+    1.0,
+    3.0
+   ],
+   "hardness": "4F",
+   "hardness_idx": 2,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "pink (named) layer, name text \"surface hoar\""
+  },
+  {
+   "bottom_cm": 146,
+   "top_cm": 165,
+   "depth_top_cm": 20,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/",
+   "size_mm": [
+    0.1,
+    0.3
+   ],
+   "hardness": "F+",
+   "hardness_idx": 1.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 165,
+   "top_cm": 185,
+   "depth_top_cm": 0,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/",
+   "size_mm": [
+    0.1,
+    0.3
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  }
+ ],
+ "temps": [
+  {
+   "h_cm": 0,
+   "t_c": 0.0
+  },
+  {
+   "h_cm": 10,
+   "t_c": -0.5
+  },
+  {
+   "h_cm": 20,
+   "t_c": -1.0
+  },
+  {
+   "h_cm": 30,
+   "t_c": -1.0
+  },
+  {
+   "h_cm": 40,
+   "t_c": -2.0
+  },
+  {
+   "h_cm": 50,
+   "t_c": -2.0
+  },
+  {
+   "h_cm": 60,
+   "t_c": -2.5
+  },
+  {
+   "h_cm": 70,
+   "t_c": -3.0
+  },
+  {
+   "h_cm": 80,
+   "t_c": -3.0
+  },
+  {
+   "h_cm": 90,
+   "t_c": -4.0
+  },
+  {
+   "h_cm": 100,
+   "t_c": -4.0
+  },
+  {
+   "h_cm": 110,
+   "t_c": -6.0
+  },
+  {
+   "h_cm": 135,
+   "t_c": -6.0
+  },
+  {
+   "h_cm": 160,
+   "t_c": -8.5
+  },
+  {
+   "h_cm": 185,
+   "t_c": -3.0
+  }
+ ],
+ "tests": [
+  {
+   "raw": "CT13SC",
+   "type": "CT",
+   "score": "CT13",
+   "taps": 13,
+   "propagation": null,
+   "fracture": "SC",
+   "height_cm": 144,
+   "depth_cm": 41,
+   "layer_grain": "SH",
+   "count": 1,
+   "comment": "Label \"on V surface hoar\"; yellow line at the base of the SH layer"
+  }
+ ],
+ "named_layers": [
+  {
+   "name": "surface hoar",
+   "height_cm": 144,
+   "depth_cm": 41,
+   "grain": "SH"
+  }
+ ],
+ "notes": null,
+ "summary": "HS 185 cm: FC base 0-29 cm under a thin hard crust (29-31 cm), thick FCxr/FC 31-124 cm (K- 44-55 cm, P 75-106 cm), buried SH 1-3 mm at 144-146 cm failing CT13 SC, soft DF/PP above; temps 0 C at ground to -8.5 C at 160 cm",
+ "confidence": "medium",
+ "reading_issues": "Filename says 2025-01-09 but header prints 2026-01-09 (header used). Source is a small 828x784 screenshot, so heights are accurate to about 0.5 cm and grain sizes (0.1-0.3) are small text. Notes and air temperature blank. Crust at 29-31 cm has no glyph. Gridlines at 50, 90, 100, 150 cm are not layer boundaries. Linear axis."
+}

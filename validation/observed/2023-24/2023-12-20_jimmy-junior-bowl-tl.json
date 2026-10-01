@@ -1,0 +1,49 @@
+{
+  "source_files": ["profiles/2023-2024/Other Profiles/2023-12-20 Jimmy Junior Bowl TL.jpg"],
+  "season": "2023-24",
+  "kind": "test_profile",
+  "site": "Jimmy Junior Bowl TL",
+  "site_slug": "jimmy-junior-bowl-tl",
+  "chart_format": "snowpilot",
+  "date": "2023-12-20",
+  "time": "13:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.69406,
+  "lon": -116.48985,
+  "elevation_m": 2290,
+  "elevation_raw": "2290 m",
+  "aspect": "NE",
+  "slope_deg": 23,
+  "air_temp_c": -2,
+  "sky": "OVC",
+  "precip": "S-1",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 85,
+  "surface_grain": "PP",
+  "foot_pen_cm": 70,
+  "ski_pen_cm": 25,
+  "header_other": {"PF": "70", "PS": "25", "HS": "85", "wind_loading": null, "coord_raw": "51.69406N, -116.48985W", "slope_raw": "23°", "layer_notes": "42-23cm: Problematic layer", "chart_title": "Jimmy Junior Bowl TL", "region": "Banff, Yoho and Kootenay, AB", "chart_notes": "Opening at Treeline", "specifics": null, "stability": null, "surface_form": "+r (PP, rimed) 1 mm in the fixed top row above the HS line (zero thickness)"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 23, "depth_top_cm": 62, "grain": "FC", "grain2": "DH", "grain_raw": "□(∧)", "size_mm": [2.0, 2.0], "hardness": "4F-", "hardness_idx": 1.67, "moisture": null, "density": null, "uncertain": false, "comment": "size column '2(5)': FC 2 mm, secondary DH 5 mm"},
+    {"bottom_cm": 23, "top_cm": 42, "depth_top_cm": 43, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [2.0, 2.0], "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": "layer note '42-23cm: Problematic layer'; top edge of this layer is drawn in red on the chart (weak-layer marker); CT22/CT27 SP failures at its top (42 cm, 'Dec. 2nd layer')"},
+    {"bottom_cm": 42, "top_cm": 50, "depth_top_cm": 35, "grain": "FCxr", "grain2": null, "grain_raw": "square with rounded top (FCxr glyph)", "size_mm": [0.5, 0.5], "hardness": "1F+", "hardness_idx": 3.33, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 50, "top_cm": 60, "depth_top_cm": 25, "grain": "FCxr", "grain2": null, "grain_raw": "square with rounded top (FCxr glyph)", "size_mm": [0.5, 0.5], "hardness": "1F-", "hardness_idx": 2.67, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 60, "top_cm": 70, "depth_top_cm": 15, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": [1.0, 1.0], "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 70, "top_cm": 85, "depth_top_cm": 0, "grain": "PP", "grain2": null, "grain_raw": "+r", "size_mm": [1.0, 1.0], "hardness": "F", "hardness_idx": 1.0, "moisture": null, "density": null, "uncertain": false, "comment": "rimed precipitation particles (+ with subscript r)"}
+  ],
+  "temps": [],
+  "tests": [
+    {"raw": "CT13, RP @70cm", "type": "CT", "score": "CT13", "taps": 13, "propagation": null, "fracture": "RP", "height_cm": 70, "depth_cm": 15, "layer_grain": null, "count": 1},
+    {"raw": "CT22, SP @42cm Dec. 2nd layer", "type": "CT", "score": "CT22", "taps": 22, "propagation": null, "fracture": "SP", "height_cm": 42, "depth_cm": 43, "layer_grain": "FC", "count": 1},
+    {"raw": "CT27, SP @42cm", "type": "CT", "score": "CT27", "taps": 27, "propagation": null, "fracture": "SP", "height_cm": 42, "depth_cm": 43, "layer_grain": "FC", "count": 1}
+  ],
+  "named_layers": [
+    {"name": "Problematic layer", "height_cm": 42, "depth_cm": 43, "grain": "FC"},
+    {"name": "Dec. 2nd layer", "height_cm": 42, "depth_cm": 43, "grain": "FC"}
+  ],
+  "notes": "Chart Notes: 'Opening at Treeline'. Layer Notes: 42-23cm: Problematic layer. Stability tests column: 'CT13, RP @70cm'; 'CT22, SP @42cm' followed by the free-text comment 'Dec. 2nd layer'; 'CT27, SP @42cm'. Wind Loading, Specifics and Stability fields blank. No temperature profile on this chart.",
+  "summary": "Treeline NE 23 deg pit at 2290 m: basal FC(DH) 0-23 cm (4F-) under a 'problematic' FC 2 mm layer 23-42 cm (4F, red-flagged) with CT22 and CT27 SP at its top (42 cm, 'Dec. 2nd layer'); 1F+/1F- FCxr 0.5 mm 42-60 cm, DF 60-70 cm (4F) and 15 cm of soft rimed PP on top with CT13 RP at 70 cm; HS 85 cm; PF 70, PS 25; no temperature profile",
+  "confidence": "high",
+  "reading_issues": "Hardness bars and layer boundaries measured from pixels against the chart axes (boundaries 23, 42, 50, 60, 70 cm). Glyphs: slash read as DF; the small square-with-rounded-top glyph at 42-60 cm read as FCxr; '+r' (plus with subscript r) read as rimed PP (stored as PP, as elsewhere in this dataset). Failure heights are the arrow heights (they match the '@Ncm' labels, i.e. height above ground). CT13 RP at 70 cm lies exactly on the DF/PP boundary, so layer_grain is left null. The two 42 cm tests are on the top edge of the red-flagged 23-42 cm layer; layer_grain is given as FC (the flagged layer), not the 42-50 cm FCxr layer above. 'Dec. 2nd layer' is a non-bold free-text comment on the CT22 test; it is kept in raw and as a named layer. The title and the chart Notes ('Opening at Treeline') place the site at treeline; no temperature profile."
+}

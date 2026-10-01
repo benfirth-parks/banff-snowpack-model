@@ -1,0 +1,184 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Goats Eye study plot/2025-01-26_Goats Eye Study Plot.pdf"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Goat's Eye Study Plot",
+  "site_slug": "goats-eye-plot",
+  "chart_format": "snowpilot",
+  "date": "2025-01-26",
+  "time": "11:35",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.09025,
+  "lon": -115.75562,
+  "elevation_m": 2400,
+  "elevation_raw": "2400 m",
+  "aspect": null,
+  "slope_deg": null,
+  "air_temp_c": -8,
+  "sky": "CLR",
+  "precip": "NO",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 84,
+  "surface_grain": "SH",
+  "foot_pen_cm": 60,
+  "ski_pen_cm": 30,
+  "header_other": {
+    "PF": "60",
+    "PS": "30",
+    "HS": "84",
+    "wind_loading": null,
+    "coord_raw": "51.09025N, -115.75562W",
+    "specifics": null,
+    "layer_notes": "10-0cm: Oct Crust; 10-0cm: Problematic layer",
+    "chart_title": "Goats Eye Plot",
+    "surface_form": "V (SH) 3 mm, drawn in the fixed top row above the HS line (zero thickness); moisture blank",
+    "file_format_note": "PDF (FPDF) wrapping a SnowPilot 994x840 image"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 10,
+      "depth_top_cm": 74,
+      "grain": "FC",
+      "grain2": "DH",
+      "grain_raw": "□(∧)",
+      "size_mm": [
+        4.0,
+        4.0
+      ],
+      "hardness": "P-",
+      "hardness_idx": 3.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "chart size \"4(4)\": FC 4 mm, secondary DH 4 mm. Layer notes \"10-0cm: Oct Crust\" and \"10-0cm: Problematic layer\" (red flag line drawn across its top, 10 cm); the grain form column shows faceted/depth-hoar forms, not a crust glyph."
+    },
+    {
+      "bottom_cm": 10,
+      "top_cm": 50,
+      "depth_top_cm": 34,
+      "grain": "FC",
+      "grain2": "DH",
+      "grain_raw": "□(∧)",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "chart size \"2(3)\": FC 2 mm, secondary DH 3 mm"
+    },
+    {
+      "bottom_cm": 50,
+      "top_cm": 70,
+      "depth_top_cm": 14,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 70,
+      "top_cm": 84,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": "FC",
+      "grain_raw": "⟋(□)",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "surface layer; chart size \"1(1)\": DF 1 mm, secondary FC 1 mm"
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 0,
+      "t_c": -2.5
+    },
+    {
+      "h_cm": 10,
+      "t_c": -5.0
+    },
+    {
+      "h_cm": 20,
+      "t_c": -7.0
+    },
+    {
+      "h_cm": 30,
+      "t_c": -8.0
+    },
+    {
+      "h_cm": 40,
+      "t_c": -9.5
+    },
+    {
+      "h_cm": 50,
+      "t_c": -10.5
+    },
+    {
+      "h_cm": 60,
+      "t_c": -12.0
+    },
+    {
+      "h_cm": 70,
+      "t_c": -13.0
+    }
+  ],
+  "tests": [
+    {
+      "raw": "CTN No Result",
+      "type": "CT",
+      "score": "CTN",
+      "taps": null,
+      "propagation": null,
+      "fracture": null,
+      "height_cm": null,
+      "depth_cm": null,
+      "layer_grain": null,
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Oct Crust",
+      "height_cm": 5,
+      "bottom_cm": 0,
+      "top_cm": 10,
+      "depth_cm": 79,
+      "grain": "FC"
+    },
+    {
+      "name": "Problematic layer",
+      "height_cm": 5,
+      "bottom_cm": 0,
+      "top_cm": 10,
+      "depth_cm": 79,
+      "grain": "FC"
+    }
+  ],
+  "notes": "Layer Notes (header): '10-0cm: Oct Crust'; '10-0cm: Problematic layer'. Stability tests column: 'CTN No Result' (arrow at the ground, no failure height); '10-0cm: Oct Crust'. Chart 'Notes:', Specifics, Aspect, Slope Angle, Wind Loading and Stability fields blank.",
+  "summary": "84 cm HS: 10 cm basal FC(DH) layer (P-, 4 mm; flagged \"Oct Crust\" / problematic layer) under 40 cm of FC(DH) (1F, 2 mm), 20 cm of FC (4F) and 14 cm of DF(FC) (F) at the surface; 3 mm surface hoar on top; CTN (no result); PF 60, PS 30; cold, steep gradient (-13.0 at 70 cm to -2.5 at ground; air -8)",
+  "confidence": "high",
+  "reading_issues": "PDF is a single embedded 994x840 SnowPilot raster, extracted at native resolution. Hardness bar edges and layer boundaries measured from pixels against the axis ticks; boundaries are integer cm (outline rows at 70.0, 50.0 and 10.0 cm). Temperature axis spans -15 to 0 degC (28.9 px/degC; labels every 2 degC); the highest temperature dot is at 70 cm, none at the surface (84 cm). The moisture column is blank on this chart. The \"Oct Crust\" layer note covers 0-10 cm but the grain form there is FC(DH), not a crust glyph; grain is recorded as drawn. The red line across the top of the 0-10 cm layer is the problematic-layer flag. CTN arrow sits at the ground of the tests column (no failure height), so height/depth are null. Sizes of the form \"a(b)\" recorded as the primary form size. Elevation printed 2400 m (other visits print 2280, 2295 and 2300 m). The chart title reads \"Goats Eye Plot\"."
+}

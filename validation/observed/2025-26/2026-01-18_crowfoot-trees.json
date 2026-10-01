@@ -1,0 +1,200 @@
+{
+  "source_files": [
+    "profiles/2025-2026/Test profiles/2026-01-18 Crowfoot Trees.jpg"
+  ],
+  "season": "2025-26",
+  "kind": "test_profile",
+  "site": "Crowfoot Trees",
+  "site_slug": "crowfoot-trees",
+  "chart_format": "snowpilot",
+  "date": "2026-01-18",
+  "time": "12:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.64976,
+  "lon": -116.43705,
+  "elevation_m": 1972,
+  "elevation_raw": "1972 m",
+  "aspect": "SW",
+  "slope_deg": 10,
+  "air_temp_c": -4.5,
+  "sky": "SCT",
+  "precip": "NO",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 157,
+  "surface_grain": "SH",
+  "foot_pen_cm": 30,
+  "ski_pen_cm": null,
+  "header_other": {
+    "PF": "30",
+    "org": "Banff, Yoho and Kootenay AB",
+    "chart_title": "Crowfoot Trees",
+    "wind_loading": "no",
+    "stability": null,
+    "specifics": null,
+    "surface_form": "V (SH) 6 mm, drawn in the fixed top row above the HS line (zero thickness)",
+    "layer_notes": "48-48.5cm: Jan 3 SH - rounded SH; 48-48.5cm: Problematic layer; 66-90cm: HS probed to 157",
+    "pit_bottom_cm": 67
+  },
+  "layers": [
+    {
+      "bottom_cm": 67,
+      "top_cm": 91,
+      "depth_top_cm": 66,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "small dot",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "K",
+      "hardness_idx": 5.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Lowest dug layer (depth 66-90 cm); bottom edge at the K tick. Layer comment '66-90cm: HS probed to 157' (snowpack below 90 cm depth not dug)"
+    },
+    {
+      "bottom_cm": 91,
+      "top_cm": 108.5,
+      "depth_top_cm": 48.5,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "filled circle",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "P",
+      "hardness_idx": 4.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Depth 48.5-66 cm"
+    },
+    {
+      "bottom_cm": 108.5,
+      "top_cm": 109,
+      "depth_top_cm": 48,
+      "grain": "SH",
+      "grain2": null,
+      "grain_raw": "V",
+      "size_mm": [
+        6.0,
+        8.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Thin 0.5 cm buried surface hoar 'Jan 3 SH - rounded SH' (Layer Notes 48-48.5 cm: also 'Problematic layer'); bar drawn as a dark-red line at F hardness; CT21 SP @48cm x2. Table row expanded with a funnel leader"
+    },
+    {
+      "bottom_cm": 109,
+      "top_cm": 137,
+      "depth_top_cm": 20,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "small dot",
+      "size_mm": [
+        0.3,
+        0.3
+      ],
+      "hardness": "P-",
+      "hardness_idx": 3.8,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Depth 20-48 cm. Hardness tapers from P- (3.65) at 20 cm depth to P (3.96) at 48 cm depth; idx is layer mean"
+    },
+    {
+      "bottom_cm": 137,
+      "top_cm": 156.5,
+      "depth_top_cm": 0.5,
+      "grain": "DF",
+      "grain2": "FC",
+      "grain_raw": "square with diagonal slash",
+      "size_mm": [
+        0.3,
+        0.5
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Depth 0.5-20 cm. Glyph is a square with a slash; test note 'In DF/FC' gives DF/FC. CT15 SC and CT11 SC @15cm x2 fall in this layer"
+    },
+    {
+      "bottom_cm": 156.5,
+      "top_cm": 157,
+      "depth_top_cm": 0,
+      "grain": "IF",
+      "grain2": null,
+      "grain_raw": "short horizontal dash",
+      "size_mm": null,
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": true,
+      "comment": "Very thin surface layer (about 0.5 cm, expanded with a leader in the table); short dash glyph read as an ice-formation class (thin crust), no grain size; uncertain"
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT15, SC @15cm x2",
+      "type": "CT",
+      "score": "CT15",
+      "taps": 15,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 142,
+      "depth_cm": 15,
+      "layer_grain": "DF",
+      "count": 2
+    },
+    {
+      "raw": "CT11, SC @15cm In DF/FC x 2",
+      "type": "CT",
+      "score": "CT11",
+      "taps": 11,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 142,
+      "depth_cm": 15,
+      "layer_grain": "DF",
+      "count": 2
+    },
+    {
+      "raw": "CT21, SP @48cm Jan 3 SH x 2",
+      "type": "CT",
+      "score": "CT21",
+      "taps": 21,
+      "propagation": null,
+      "fracture": "SP",
+      "height_cm": 109,
+      "depth_cm": 48,
+      "layer_grain": "SH",
+      "count": 2
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Jan 3 SH",
+      "height_cm": 109,
+      "bottom_cm": 108.5,
+      "top_cm": 109,
+      "depth_cm": 48,
+      "grain": "SH",
+      "comment": "6-8 mm SH ('rounded SH'), F hardness; flagged 'Problematic layer' (48-48.5 cm depth); CT21 SP @48cm x2"
+    }
+  ],
+  "notes": "Open boulder field in trees in valley bottom.",
+  "summary": "HS 157 cm, SW 10 deg open boulder field in trees at 1972 m, dug to 90 cm depth only (67-157 cm height): K RG 0.5 mm (67-91), P RG 1 mm (91-108.5), then a thin 6-8 mm 'Jan 3 SH' (F) at 108.5-109 cm that fails CT21 SP @48cm x2, P- to P RG 0.3 mm (109-137) and a 4F DF/FC 0.3-0.5 mm top 20 cm with CT15 SC and CT11 SC @15cm (x2 each); 6 mm surface hoar on top",
+  "confidence": "high",
+  "reading_issues": "JPG of a SnowPilot graph (994x840), depth-from-surface axis (6.044 px/cm, 0 at y=157, 90 at y=701) with an axis break above the label HS 157; heights converted as 157 - depth, so the pit bottom is 67 cm above ground. Test heights are converted from '@Ncm' depths (15 cm and 48 cm). Hardness ticks I/K/P/1F/4F/F at x=39/111/183/255/327/399 (72 px per class). Surface-form row (V, 6 mm) recorded in header_other, not as a layer. The top ~0.5 cm layer (short dash glyph, 4F bar) is read as IF (thin crust) and is uncertain; the funnel leader makes its table row look 3.5 cm tall but the bar is only ~0.5 cm. Square-with-slash glyph read as DF with secondary FC based on the test text 'In DF/FC'. 20-48 cm depth layer has a sloped hardness bar (layer mean recorded). 'x2' read as count 2. No temperature profile or density. Date read DD/MM/YYYY (18/01/2026), matching the filename. Same date as the Crowfoot Moraines pit but a different site (51.64976,-116.43705 vs 51.64618,-116.43956)."
+}

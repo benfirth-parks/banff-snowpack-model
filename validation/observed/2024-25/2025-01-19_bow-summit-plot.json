@@ -1,0 +1,213 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Bow Summit study plot/2025-01-19 Bow Summit Study Plot.jpg"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Bow Summit Study Plot",
+  "site_slug": "bow-summit-plot",
+  "chart_format": "snowpilot",
+  "date": "2025-01-19",
+  "time": "12:30",
+  "observer": null,
+  "lat": null,
+  "lon": null,
+  "elevation_m": null,
+  "elevation_raw": null,
+  "aspect": null,
+  "slope_deg": null,
+  "air_temp_c": null,
+  "sky": "FEW",
+  "precip": "NO",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 73,
+  "surface_grain": null,
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {
+    "wind_loading": "no",
+    "org_line": "Banff Visitor Safety",
+    "region": "Banff, Yoho and Kootenay, AB",
+    "site_header": "Bow CSSummit"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 15,
+      "depth_top_cm": 58,
+      "grain": "DH",
+      "grain2": "MF",
+      "grain_raw": "∧(○)",
+      "size_mm": [
+        5.0,
+        8.0
+      ],
+      "hardness": "1F→4F",
+      "hardness_idx": 2.5,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Hardness gradient in chart: 1F at base (0 cm) decreasing linearly to 4F at top (15 cm); hardness_idx is the mean (2.5). Secondary form is open circle (MF).",
+      "hardness_bottom": "1F",
+      "hardness_bottom_idx": 3.0,
+      "hardness_top": "4F",
+      "hardness_top_idx": 2.0
+    },
+    {
+      "bottom_cm": 15,
+      "top_cm": 24,
+      "depth_top_cm": 49,
+      "grain": "DH",
+      "grain2": null,
+      "grain_raw": "∧",
+      "size_mm": [
+        5.0,
+        5.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 24,
+      "top_cm": 25,
+      "depth_top_cm": 48,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "○",
+      "size_mm": null,
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": true,
+      "comment": "Thin (1 cm) layer with a single open circle, harder than neighbours (1F- vs 4F); class MFcr is an interpretation (single circle would otherwise be MF). No size given."
+    },
+    {
+      "bottom_cm": 25,
+      "top_cm": 40,
+      "depth_top_cm": 33,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        3.0,
+        4.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "CT16 BRK failure at 35 cm lies within this layer."
+    },
+    {
+      "bottom_cm": 40,
+      "top_cm": 47,
+      "depth_top_cm": 26,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 47,
+      "top_cm": 59,
+      "depth_top_cm": 14,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 59,
+      "top_cm": 66,
+      "depth_top_cm": 7,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 66,
+      "top_cm": 73,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Surface layer."
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT16, BRK @35cm",
+      "type": "CT",
+      "score": "CT16",
+      "taps": 16,
+      "propagation": null,
+      "fracture": "BRK",
+      "height_cm": 35,
+      "depth_cm": 38,
+      "layer_grain": "FC",
+      "count": 1
+    },
+    {
+      "raw": "CTN",
+      "type": "CT",
+      "score": "CTN",
+      "taps": null,
+      "propagation": null,
+      "fracture": null,
+      "height_cm": null,
+      "depth_cm": null,
+      "layer_grain": null,
+      "count": 1
+    }
+  ],
+  "named_layers": [],
+  "notes": "",
+  "summary": "Basal DH/MF 0-24 cm (1F at base softening to 4F) with a thin crust at 24-25 cm, FC 25-66 cm (4F; 1F+/1F- bands at 40-59 cm) and 7 cm DF at top; CT16 BRK at 35 cm, CTN also recorded; HS 73 cm.",
+  "confidence": "high",
+  "reading_issues": "Header has no HS or PF/PS; HS 73 cm taken from the top label of the height axis (top outline at 73 cm). Header site name reads \"Bow CSSummit\" (typo for Bow Summit). No elevation, aspect, slope, coordinates or air temperature printed; no temperature profile. Basal 0-15 cm layer has a sloped hardness edge (1F at 0 cm to 4F at 15 cm): recorded as hardness \"1F-4F\" with hardness_idx = mean 2.5 plus explicit bottom/top values. Thin 24-25 cm layer with a single circle at 1F- hardness classed MFcr as an interpretation (uncertain). The CTN arrow is drawn at the bottom of the chart (0 cm) as a no-failure convention, so height_cm is null."
+}

@@ -1,0 +1,44 @@
+{
+  "source_files": ["profiles/2023-2024/Other Profiles/2023-12-12 Dolomite Shoulder.jpg"],
+  "season": "2023-24",
+  "kind": "test_profile",
+  "site": "Dolomite Shoulder",
+  "site_slug": "dolomite-shoulder-2280m",
+  "chart_format": "snowpilot",
+  "date": "2023-12-12",
+  "time": "11:50",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.65273,
+  "lon": -116.34251,
+  "elevation_m": 2280,
+  "elevation_raw": "2280 m",
+  "aspect": "S",
+  "slope_deg": 15,
+  "air_temp_c": -7,
+  "sky": "FEW",
+  "precip": "NO",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 65,
+  "surface_grain": null,
+  "foot_pen_cm": 60,
+  "ski_pen_cm": 30,
+  "header_other": {"PF": "60", "PS": "30", "HS": "65", "wind_loading": "no", "coord_raw": "51.65273N, -116.34251W", "slope_raw": "15°", "layer_notes": "29-0cm: Problematic layer", "chart_title": "Dolomite Shoulder", "region": "Banff, Yoho and Kootenay, AB", "specifics": null, "stability": null, "surface_form": "top surface-form row blank"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 29, "depth_top_cm": 36, "grain": "FC", "grain2": "DH", "grain_raw": "□(∧)", "size_mm": [3.0, 3.0], "hardness": "4F", "hardness_idx": 1.83, "moisture": null, "density": null, "uncertain": false, "comment": "size column '3(4.5)': FC 3 mm, secondary DH 4.5 mm; hardness gradient 4F- at base (0 cm) to 4F at top (29 cm); hardness_idx is the mean; layer note '29-0cm: Problematic layer'"},
+    {"bottom_cm": 29, "top_cm": 40, "depth_top_cm": 25, "grain": "FCxr", "grain2": null, "grain_raw": "square with rounded top (FCxr glyph)", "size_mm": null, "hardness": "1F", "hardness_idx": 3.0, "moisture": null, "density": null, "uncertain": false, "comment": "no size entered"},
+    {"bottom_cm": 40, "top_cm": 50, "depth_top_cm": 15, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": [1.0, 1.0], "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 50, "top_cm": 65, "depth_top_cm": 0, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": [1.0, 2.0], "hardness": "F", "hardness_idx": 1.0, "moisture": null, "density": null, "uncertain": false, "comment": null}
+  ],
+  "temps": [],
+  "tests": [
+    {"raw": "CT13, SC @15cm x2", "type": "CT", "score": "CT13", "taps": 13, "propagation": null, "fracture": "SC", "height_cm": 15, "depth_cm": 50, "layer_grain": "FC", "count": 2}
+  ],
+  "named_layers": [
+    {"name": "Problematic layer", "height_cm": 29, "depth_cm": 36, "grain": "FC"}
+  ],
+  "notes": "Layer Notes: 29-0cm: Problematic layer. Stability tests column: 'CT13, SC @15cm' with the free-text comment 'x2'. Chart 'Notes:' and 'Specifics:' fields blank; Stability field blank; Wind Loading: no. No temperature profile on this chart.",
+  "summary": "Basal 29 cm of FC(DH) 3 mm (4F-/4F gradient, flagged 'problematic layer') under a 1F FCxr layer 29-40 cm, 4F DF 40-50 cm and soft F DF 50-65 cm at the surface; CT13 SC (x2) at 15 cm in the basal FC/DH; S aspect 15 deg at 2280 m; HS 65 cm; PF 60, PS 30; no temperature profile",
+  "confidence": "high",
+  "reading_issues": "Hardness bars and layer boundaries measured from pixels against the chart axes (boundaries 50, 40, 29 cm fall on whole cm). The basal 0-29 cm layer is a trapezoid (4F- at base, 4F at top); hardness_idx is the mean (1.83) and the label '4F' is the nearer-upper label at an exact tie between 4F- and 4F. The small glyph in the 29-40 cm layer (square with a rounded dome and a horizontal line) is read as FCxr; no size entered for that layer. Slash glyphs at 40-65 cm read as DF. The 'x2' after the CT result is non-bold free text; recorded as count 2. Surface-form row above the HS line is blank, so surface_grain is null. Elevation, coordinates, aspect and slope are as printed in the header."
+}

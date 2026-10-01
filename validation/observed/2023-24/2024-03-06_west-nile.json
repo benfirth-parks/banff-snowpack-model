@@ -1,0 +1,48 @@
+{
+  "source_files": ["profiles/2023-2024/Other Profiles/2024-03-06 West Nile Profile.jpg"],
+  "season": "2023-24",
+  "kind": "test_profile",
+  "site": "West Nile",
+  "site_slug": "west-nile",
+  "chart_format": "snowpilot",
+  "date": "2024-03-06",
+  "time": "11:43",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.62,
+  "lon": -116.35,
+  "elevation_m": 2051,
+  "elevation_raw": "2051 m",
+  "aspect": "E",
+  "slope_deg": null,
+  "air_temp_c": null,
+  "sky": "CLR",
+  "precip": null,
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 145,
+  "surface_grain": null,
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {"location": "Banff, Yoho and Kootenay, AB", "co_ord_raw": "51.62000N, -116.35000W", "wind_loading": null, "stability": null, "specifics": null},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 20, "depth_top_cm": 125, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": "layer line at 20 cm (table) between two equal-hardness layers; no grain form entered"},
+    {"bottom_cm": 20, "top_cm": 53, "depth_top_cm": 92, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form entered"},
+    {"bottom_cm": 53, "top_cm": 68, "depth_top_cm": 77, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "1F+", "hardness_idx": 3.33, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form entered"},
+    {"bottom_cm": 68, "top_cm": 75, "depth_top_cm": 70, "grain": "MF", "grain2": null, "grain_raw": "◎◎ (two linked circles)", "size_mm": null, "hardness": "1F+", "hardness_idx": 3.33, "moisture": null, "density": null, "uncertain": false, "comment": "Feb 3 crust per layer notes ('75-68cm: Feb 3- decomposing', 'Problematic layer'); glyph read as MFcr; no size/moisture entered; bar width equals the layer below (1F+); PST cut along its top (red weak-layer line at 75 cm)"},
+    {"bottom_cm": 75, "top_cm": 91, "depth_top_cm": 54, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "P-", "hardness_idx": 3.67, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form entered"},
+    {"bottom_cm": 91, "top_cm": 115, "depth_top_cm": 30, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "1F", "hardness_idx": 3.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form entered"},
+    {"bottom_cm": 115, "top_cm": 145, "depth_top_cm": 0, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "4F-", "hardness_idx": 1.67, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form entered"}
+  ],
+  "temps": [],
+  "tests": [
+    {"raw": "PST85/100 (End) @70cm", "type": "PST", "score": "PST85/100 (End)", "taps": null, "propagation": null, "fracture": "End", "height_cm": 70, "depth_cm": 75, "layer_grain": "MF", "count": 1},
+    {"raw": "ECTX", "type": "ECT", "score": "ECTX", "taps": null, "propagation": null, "fracture": null, "height_cm": 0, "depth_cm": 145, "layer_grain": null, "count": 1}
+  ],
+  "named_layers": [
+    {"name": "Feb 3 crust (decomposing)", "height_cm": 75, "depth_cm": 70, "grain": "MF"}
+  ],
+  "notes": "Layer Notes: '75-68cm: Feb 3- decomposing'; '75-68cm: Problematic layer'. Chart Notes: 'PST cut along the top of the Feb 3 crust.  It would be interesting to test within or below the crust to see if the sensitivity to propagations is greater, but ran out of time.' Stability tests: 'PST85/100 (End) @70cm' and 'ECTX' (arrow at ground).",
+  "summary": "HS 145 cm, 4F base 0-53, 1F+ 53-75 including a 7 cm Feb 3 MFcr (decomposing) problematic layer at 68-75, P- 75-91, 1F 91-115, 4F- 115-145; PST85/100 End at 70 cm (cut along top of the Feb 3 crust), ECTX",
+  "confidence": "high",
+  "reading_issues": "Hardness from bar outer edges against the I-K-P-1F-4F-F axis (4F- 1.67, 1F 3.0, P- 3.67, 1F+ 3.33, 4F 2.0). Boundaries from table lines (115, 91, 75, 68, 53, 20 cm). Slope angle, wind loading, precipitation, air temperature and stability are blank. The 'PST85/100 (End) @70cm' arrow is at 70 cm, inside the 68-75 crust layer, while the chart note says the cut was along the top of the crust (red weak-layer line at 75 cm). 'ECTX' with arrow at 0 cm: meaning not stated on the chart (probably no ECT done); recorded as score 'ECTX', taps null, fracture null. The 68-75 layer's glyph is two linked circles read as MFcr (stored MF). No temperature profile."
+}

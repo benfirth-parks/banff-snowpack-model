@@ -1,0 +1,10938 @@
+[
+ {
+  "file": "2023-24/2023-12-11_bow-summit-plot.json",
+  "season": "2023-24",
+  "date": "2023-12-11",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 59,
+  "hsModel": 61,
+  "hsErr": 2,
+  "partial": false,
+  "groupAgree": 75,
+  "groupN": 40,
+  "conf": [
+   [
+    8,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    9,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    22,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.5,
+  "hardMAE": 1.1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 1,
+   "model": 6,
+   "hit": 1,
+   "falseAlarm": 4
+  },
+  "tests": [
+   {
+    "score": "CT14",
+    "h": 7,
+    "grain": "DH",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": -2,
+  "tempRMSE": 2.4,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2023-12-12_dolomite-shoulder-2280m.json",
+  "season": "2023-24",
+  "date": "2023-12-12",
+  "kind": "test_profile",
+  "site": "dolomite-shoulder-2280m",
+  "aspect": "S",
+  "sim": "S",
+  "point": "fts-bowsummit",
+  "match": "coordinates",
+  "km": 11.3,
+  "dz": -240,
+  "hsObs": 65,
+  "hsModel": 56,
+  "hsErr": -9,
+  "partial": false,
+  "groupAgree": 55,
+  "groupN": 40,
+  "conf": [
+   [
+    4,
+    0,
+    11,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    7,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    18,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.1,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 4,
+   "hit": 0,
+   "falseAlarm": 4
+  },
+  "tests": [
+   {
+    "score": "CT13",
+    "h": 15,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2023-12-19_tak-falls-plot.json",
+  "season": "2023-24",
+  "date": "2023-12-19",
+  "kind": "study_plot",
+  "site": "tak-falls-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "emerald-pk:BTL",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 95,
+  "hsModel": 60,
+  "hsErr": -35,
+  "partial": false,
+  "groupAgree": 10,
+  "groupN": 40,
+  "conf": [
+   [
+    4,
+    0,
+    9,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    24,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.8,
+  "hardMAE": 1.2,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 5,
+   "hit": 0,
+   "falseAlarm": 5
+  },
+  "tests": [
+   {
+    "score": "CT25",
+    "h": 40,
+    "grain": "RGxf",
+    "flagged": true,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "CT10",
+    "h": 0,
+    "grain": "FCxr",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2023-12-20_jimmy-junior-bowl-tl.json",
+  "season": "2023-24",
+  "date": "2023-12-20",
+  "kind": "test_profile",
+  "site": "jimmy-junior-bowl-tl",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "fts-bowsummit",
+  "match": "coordinates",
+  "km": 1.9,
+  "dz": -250,
+  "hsObs": 85,
+  "hsModel": 62,
+  "hsErr": -23,
+  "partial": false,
+  "groupAgree": 55,
+  "groupN": 40,
+  "conf": [
+   [
+    2,
+    0,
+    10,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    8,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    20,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.3,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 5,
+   "hit": 0,
+   "falseAlarm": 5
+  },
+  "tests": [
+   {
+    "score": "CT13",
+    "h": 70,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT22",
+    "h": 42,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT27",
+    "h": 42,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2023-12-21_goats-eye-plot.json",
+  "season": "2023-24",
+  "date": "2023-12-21",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 71,
+  "hsModel": 67,
+  "hsErr": -4,
+  "partial": false,
+  "groupAgree": 69,
+  "groupN": 26,
+  "conf": [
+   [
+    0,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    18,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 12,
+   "hit": 0,
+   "falseAlarm": 12
+  },
+  "tests": [
+   {
+    "score": "CT10",
+    "h": 32,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT13",
+    "h": 5,
+    "grain": "DH",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": -1,
+  "tempRMSE": 1.4,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2023-24/2023-12-27_bow-summit-plot.json",
+  "season": "2023-24",
+  "date": "2023-12-27",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 62,
+  "hsModel": 62,
+  "hsErr": 0,
+  "partial": false,
+  "groupAgree": 80,
+  "groupN": 40,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    6,
+    0,
+    0
+   ],
+   [
+    2,
+    0,
+    32,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.6,
+  "hardMAE": 1.1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 8,
+   "hit": 0,
+   "falseAlarm": 8
+  },
+  "tests": [
+   {
+    "score": "CT17",
+    "h": 10,
+    "grain": "DH",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2023-24/2024-01-01_wawa-test-tl.json",
+  "season": "2023-24",
+  "date": "2024-01-01",
+  "kind": "test_profile",
+  "site": "wawa-test-tl",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "gazetteer",
+  "km": 1.6,
+  "dz": null,
+  "hsObs": 88,
+  "hsModel": 69,
+  "hsErr": -19,
+  "partial": false,
+  "groupAgree": 0,
+  "groupN": 1,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.1,
+  "hardMAE": 0.9,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 16,
+   "hit": 0,
+   "falseAlarm": 16
+  },
+  "tests": [
+   {
+    "score": "CT18",
+    "h": 5,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2023-24/2024-01-04_tak-falls-plot.json",
+  "season": "2023-24",
+  "date": "2024-01-04",
+  "kind": "study_plot",
+  "site": "tak-falls-plot",
+  "aspect": "E",
+  "sim": "flat",
+  "point": "emerald-pk:BTL",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 96,
+  "hsModel": 58,
+  "hsErr": -38,
+  "partial": false,
+  "groupAgree": 43,
+  "groupN": 40,
+  "conf": [
+   [
+    0,
+    0,
+    8,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    13,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    17,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.4,
+  "hardMAE": 0.9,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 5,
+   "hit": 0,
+   "falseAlarm": 5
+  },
+  "tests": [],
+  "tempBias": -1.9,
+  "tempRMSE": 2.1,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2024-01-08_mt-field-treeline.json",
+  "season": "2023-24",
+  "date": "2024-01-08",
+  "kind": "test_profile",
+  "site": "mt-field-treeline",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "mt-dennis:TL",
+  "match": "coordinates",
+  "km": 4.9,
+  "dz": 35,
+  "hsObs": 118,
+  "hsModel": 67,
+  "hsErr": -51,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.2,
+  "hardMAE": 1,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT11",
+    "h": 95,
+    "grain": "SH",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT29",
+    "h": 77,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2024-01-09_wawa-ridge-w.json",
+  "season": "2023-24",
+  "date": "2024-01-09",
+  "kind": "test_profile",
+  "site": "wawa-ridge-w",
+  "aspect": "W",
+  "sim": "W",
+  "point": "fts-sunshine",
+  "match": "coordinates",
+  "km": 1.8,
+  "dz": -100,
+  "hsObs": 105,
+  "hsModel": 87,
+  "hsErr": -18,
+  "partial": false,
+  "groupAgree": 75,
+  "groupN": 40,
+  "conf": [
+   [
+    9,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    8,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    21,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.2,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 19,
+   "hit": 0,
+   "falseAlarm": 19
+  },
+  "tests": [],
+  "tempBias": -0.7,
+  "tempRMSE": 1.5,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2024-01-11_bow-summit-plot.json",
+  "season": "2023-24",
+  "date": "2024-01-11",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 74,
+  "hsModel": 76,
+  "hsErr": 2,
+  "partial": false,
+  "groupAgree": 95,
+  "groupN": 40,
+  "conf": [
+   [
+    8,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    30,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.4,
+  "hardMAE": 1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 11,
+   "hit": 0,
+   "falseAlarm": 11
+  },
+  "tests": [
+   {
+    "score": "CT21",
+    "h": 5,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": -1.6,
+  "tempRMSE": 2,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2024-01-17_dolomite-shoulder-2380m.json",
+  "season": "2023-24",
+  "date": "2024-01-17",
+  "kind": "test_profile",
+  "site": "dolomite-shoulder-2380m",
+  "aspect": null,
+  "sim": "flat",
+  "point": "mt-gordon:ALP",
+  "match": "coordinates",
+  "km": 12.8,
+  "dz": 120,
+  "hsObs": 82,
+  "hsModel": 78,
+  "hsErr": -4,
+  "partial": false,
+  "groupAgree": 90,
+  "groupN": 40,
+  "conf": [
+   [
+    7,
+    0,
+    4,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    29,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.1,
+  "hardMAE": 0.6,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 8,
+   "hit": 0,
+   "falseAlarm": 8
+  },
+  "tests": [
+   {
+    "score": "CT4",
+    "h": 60,
+    "grain": "SH",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT25",
+    "h": 20,
+    "grain": null,
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": 0.2,
+  "tempRMSE": 1.5,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2023-24/2024-01-19_goats-eye-plot.json",
+  "season": "2023-24",
+  "date": "2024-01-19",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 94,
+  "hsModel": 97,
+  "hsErr": 3,
+  "partial": false,
+  "groupAgree": 92,
+  "groupN": 39,
+  "conf": [
+   [
+    9,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    27,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.6,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 2,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 19,
+   "hit": 0,
+   "falseAlarm": 19
+  },
+  "tests": [
+   {
+    "score": "CT2",
+    "h": 90,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "DF"
+   },
+   {
+    "score": "CT17",
+    "h": 70,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT25",
+    "h": 5,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2023-24/2024-01-19_twin-cairns-trees.json",
+  "season": "2023-24",
+  "date": "2024-01-19",
+  "kind": "test_profile",
+  "site": "twin-cairns-trees",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "coordinates",
+  "km": 1.5,
+  "dz": -130,
+  "hsObs": 112,
+  "hsModel": 97,
+  "hsErr": -15,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.2,
+  "hardMAE": 0.6,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 19,
+   "hit": 0,
+   "falseAlarm": 19
+  },
+  "tests": [
+   {
+    "score": "CT1",
+    "h": 104,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "PP"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2023-24/2024-01-21_tak-falls-plot.json",
+  "season": "2023-24",
+  "date": "2024-01-21",
+  "kind": "study_plot",
+  "site": "tak-falls-plot",
+  "aspect": "flat",
+  "sim": "flat",
+  "point": "emerald-pk:BTL",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 115,
+  "hsModel": 75,
+  "hsErr": -40,
+  "partial": false,
+  "groupAgree": 65,
+  "groupN": 40,
+  "conf": [
+   [
+    7,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    10,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    19,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.5,
+  "hardMAE": 1.1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 7,
+   "hit": 0,
+   "falseAlarm": 7
+  },
+  "tests": [],
+  "tempBias": -2.2,
+  "tempRMSE": 2.5,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2024-01-22_simpson-plot.json",
+  "season": "2023-24",
+  "date": "2024-01-22",
+  "kind": "study_plot",
+  "site": "simpson-plot",
+  "aspect": "S",
+  "sim": "flat",
+  "point": "fts-simplo",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 104,
+  "hsModel": 83,
+  "hsErr": -21,
+  "partial": false,
+  "groupAgree": 80,
+  "groupN": 40,
+  "conf": [
+   [
+    4,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    0,
+    28,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.5,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 6,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 3,
+   "hit": 0,
+   "falseAlarm": 3
+  },
+  "tests": [
+   {
+    "score": "CT11",
+    "h": 67,
+    "grain": "SH",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -2.2,
+  "tempRMSE": 2.8,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2023-24/2024-01-24_wawa-sse-2400m.json",
+  "season": "2023-24",
+  "date": "2024-01-24",
+  "kind": "test_profile",
+  "site": "wawa-sse-2400m",
+  "aspect": "SE",
+  "sim": "S",
+  "point": "fts-sunshine",
+  "match": "gazetteer",
+  "km": 1.6,
+  "dz": -200,
+  "hsObs": 100,
+  "hsModel": 84,
+  "hsErr": -16,
+  "partial": false,
+  "groupAgree": 58,
+  "groupN": 40,
+  "conf": [
+   [
+    0,
+    0,
+    14,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    23,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.1,
+  "hardMAE": 1.4,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 2,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 15,
+   "hit": 0,
+   "falseAlarm": 15
+  },
+  "tests": [
+   {
+    "score": "CT5",
+    "h": 65,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2023-24/2024-01-28_ssv-meadows.json",
+  "season": "2023-24",
+  "date": "2024-01-28",
+  "kind": "test_profile",
+  "site": "ssv-meadows",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "gazetteer",
+  "km": 0.1,
+  "dz": null,
+  "hsObs": 95,
+  "hsModel": 86,
+  "hsErr": -9,
+  "partial": false,
+  "groupAgree": 58,
+  "groupN": 40,
+  "conf": [
+   [
+    0,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    13,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    23,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.8,
+  "hardMAE": 1.2,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 19,
+   "hit": 0,
+   "falseAlarm": 19
+  },
+  "tests": [
+   {
+    "score": "CT11",
+    "h": 70,
+    "grain": "FCxr",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT16",
+    "h": 0,
+    "grain": "DH",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2023-24/2024-02-03_goats-eye-plot.json",
+  "season": "2023-24",
+  "date": "2024-02-03",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": "E",
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 95,
+  "hsModel": 94,
+  "hsErr": -1,
+  "partial": false,
+  "groupAgree": 51,
+  "groupN": 35,
+  "conf": [
+   [
+    5,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    12,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    13,
+    4,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.2,
+  "hardMAE": 0.9,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 11,
+   "hit": 1,
+   "falseAlarm": 1
+  },
+  "sh": {
+   "obs": 1,
+   "model": 20,
+   "hit": 1,
+   "falseAlarm": 13
+  },
+  "tests": [
+   {
+    "score": "CT1",
+    "h": 85,
+    "grain": "PP",
+    "flagged": false,
+    "modelLayer": "PP"
+   },
+   {
+    "score": "CT12",
+    "h": 63,
+    "grain": "SH",
+    "flagged": true,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT12",
+    "h": 10,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FCxr"
+   }
+  ],
+  "tempBias": -1.3,
+  "tempRMSE": 1.9,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2024-02-07_bow-summit-plot.json",
+  "season": "2023-24",
+  "date": "2024-02-07",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": "flat",
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 87,
+  "hsModel": 69,
+  "hsErr": -18,
+  "partial": false,
+  "groupAgree": 35,
+  "groupN": 40,
+  "conf": [
+   [
+    3,
+    0,
+    0,
+    4,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    3,
+    0
+   ],
+   [
+    0,
+    14,
+    8,
+    4,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    3,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1,
+    0
+   ]
+  ],
+  "hardBias": 0.7,
+  "hardMAE": 1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 2,
+   "model": 16,
+   "hit": 2,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 6,
+   "hit": 0,
+   "falseAlarm": 6
+  },
+  "tests": [
+   {
+    "score": "CT15",
+    "h": 28,
+    "grain": "DH",
+    "flagged": true,
+    "modelLayer": "FCxr"
+   },
+   {
+    "score": "CT12",
+    "h": 0,
+    "grain": "DH",
+    "flagged": false,
+    "modelLayer": "RG"
+   }
+  ],
+  "tempBias": -0.8,
+  "tempRMSE": 1.2,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2024-02-12_pipestone-bowl.json",
+  "season": "2023-24",
+  "date": "2024-02-12",
+  "kind": "test_profile",
+  "site": "pipestone-bowl",
+  "aspect": "N",
+  "sim": "N",
+  "point": "ll-richardson:TL",
+  "match": "coordinates",
+  "km": 2.9,
+  "dz": -125,
+  "hsObs": 123,
+  "hsModel": 62,
+  "hsErr": -61,
+  "partial": false,
+  "groupAgree": 15,
+  "groupN": 40,
+  "conf": [
+   [
+    3,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    5,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    3,
+    17,
+    7
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.2,
+  "hardMAE": 1.1,
+  "basal": {
+   "obs": true,
+   "model": false,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 6,
+   "hit": 1,
+   "falseAlarm": 3
+  },
+  "sh": {
+   "obs": 0,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2
+  },
+  "tests": [],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2023-24/2024-02-14_skiers-rh-coat-tail.json",
+  "season": "2023-24",
+  "date": "2024-02-14",
+  "kind": "test_profile",
+  "site": "skiers-rh-coat-tail",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "emerald-pk:ALP",
+  "match": "coordinates",
+  "km": 1.5,
+  "dz": 120,
+  "hsObs": 160,
+  "hsModel": 124,
+  "hsErr": -36,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.8,
+  "hardMAE": 0.9,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 10,
+   "hit": 0,
+   "falseAlarm": 10
+  },
+  "tests": [
+   {
+    "score": "CT23",
+    "h": 135,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2024-02-21_tak-falls-plot.json",
+  "season": "2023-24",
+  "date": "2024-02-21",
+  "kind": "study_plot",
+  "site": "tak-falls-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "emerald-pk:BTL",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 129,
+  "hsModel": 72,
+  "hsErr": -57,
+  "partial": false,
+  "groupAgree": 30,
+  "groupN": 40,
+  "conf": [
+   [
+    0,
+    0,
+    6,
+    0,
+    3
+   ],
+   [
+    0,
+    0,
+    13,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    12,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    6,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.4,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 2,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "sh": {
+   "obs": 0,
+   "model": 7,
+   "hit": 0,
+   "falseAlarm": 7
+  },
+  "tests": [
+   {
+    "score": "CT22",
+    "h": 87,
+    "grain": "IF",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": 0,
+  "tempRMSE": 0.4,
+  "modelSurface": "MF"
+ },
+ {
+  "file": "2023-24/2024-02-22_unity-treeline.json",
+  "season": "2023-24",
+  "date": "2024-02-22",
+  "kind": "test_profile",
+  "site": "unity-treeline",
+  "aspect": "W",
+  "sim": "W",
+  "point": "ll-richardson:ALP",
+  "match": "coordinates",
+  "km": 6.9,
+  "dz": null,
+  "hsObs": 81,
+  "hsModel": 90,
+  "hsErr": 9,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.8,
+  "hardMAE": 1.4,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2
+  },
+  "sh": {
+   "obs": 0,
+   "model": 14,
+   "hit": 0,
+   "falseAlarm": 14
+  },
+  "tests": [
+   {
+    "score": "ECTP12",
+    "h": 62,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2023-24/2024-02-27_bow-summit-plot.json",
+  "season": "2023-24",
+  "date": "2024-02-27",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 115,
+  "hsModel": 95,
+  "hsErr": -20,
+  "partial": false,
+  "groupAgree": 90,
+  "groupN": 40,
+  "conf": [
+   [
+    9,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    26,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 1,
+  "hardMAE": 1.3,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 4,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 7,
+   "hit": 0,
+   "falseAlarm": 7
+  },
+  "tests": [
+   {
+    "score": "CT13",
+    "h": 70,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "MFcr"
+   },
+   {
+    "score": "CT16",
+    "h": 70,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "MFcr"
+   },
+   {
+    "score": "CT22",
+    "h": 35,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "CT23",
+    "h": 35,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2023-24/2024-03-04_simpson-plot.json",
+  "season": "2023-24",
+  "date": "2024-03-04",
+  "kind": "study_plot",
+  "site": "simpson-plot",
+  "aspect": "S",
+  "sim": "flat",
+  "point": "fts-simplo",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 150,
+  "hsModel": 122,
+  "hsErr": -28,
+  "partial": false,
+  "groupAgree": 58,
+  "groupN": 40,
+  "conf": [
+   [
+    8,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    0,
+    13,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    15,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.1,
+  "hardMAE": 1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 3,
+   "hit": 0,
+   "falseAlarm": 3
+  },
+  "tests": [
+   {
+    "score": "CT17",
+    "h": 85,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2024-03-05_goats-eye-plot.json",
+  "season": "2023-24",
+  "date": "2024-03-05",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": "flat",
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 128,
+  "hsModel": 144,
+  "hsErr": 16,
+  "partial": false,
+  "groupAgree": 65,
+  "groupN": 40,
+  "conf": [
+   [
+    6,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    6,
+    0,
+    0
+   ],
+   [
+    0,
+    6,
+    20,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.4,
+  "hardMAE": 0.9,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 22,
+   "hit": 0,
+   "falseAlarm": 22
+  },
+  "tests": [
+   {
+    "score": "CT25",
+    "h": 82,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "ECTP24",
+    "h": 68,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": 0.2,
+  "tempRMSE": 1.5,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2023-24/2024-03-06_west-nile.json",
+  "season": "2023-24",
+  "date": "2024-03-06",
+  "kind": "test_profile",
+  "site": "west-nile",
+  "aspect": "E",
+  "sim": "E",
+  "point": "mt-gordon:TL",
+  "match": "coordinates",
+  "km": 11.4,
+  "dz": 99,
+  "hsObs": 145,
+  "hsModel": 97,
+  "hsErr": -48,
+  "partial": false,
+  "groupAgree": 0,
+  "groupN": 2,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.1,
+  "hardMAE": 1.1,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2
+  },
+  "sh": {
+   "obs": 0,
+   "model": 8,
+   "hit": 0,
+   "falseAlarm": 8
+  },
+  "tests": [
+   {
+    "score": "PST85/100 (End)",
+    "h": 70,
+    "grain": "MF",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2023-24/2024-03-07_tak-falls-plot.json",
+  "season": "2023-24",
+  "date": "2024-03-07",
+  "kind": "study_plot",
+  "site": "tak-falls-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "emerald-pk:BTL",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 175,
+  "hsModel": 105,
+  "hsErr": -70,
+  "partial": false,
+  "groupAgree": 13,
+  "groupN": 40,
+  "conf": [
+   [
+    2,
+    0,
+    13,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    4,
+    2,
+    0
+   ],
+   [
+    0,
+    16,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    3,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.4,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": true,
+   "model": false,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 5,
+   "hit": 1,
+   "falseAlarm": 1
+  },
+  "sh": {
+   "obs": 0,
+   "model": 7,
+   "hit": 0,
+   "falseAlarm": 7
+  },
+  "tests": [],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2023-24/2024-03-15_bow-summit-plot.json",
+  "season": "2023-24",
+  "date": "2024-03-15",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": "flat",
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 115,
+  "hsModel": 101,
+  "hsErr": -14,
+  "partial": false,
+  "groupAgree": 55,
+  "groupN": 40,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    2
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    11
+   ],
+   [
+    0,
+    0,
+    21,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    1
+   ]
+  ],
+  "hardBias": -0.2,
+  "hardMAE": 1.4,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 2,
+   "model": 1,
+   "hit": 2,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 7,
+   "hit": 0,
+   "falseAlarm": 7
+  },
+  "tests": [
+   {
+    "score": "CT24",
+    "h": 69,
+    "grain": "MF",
+    "flagged": false,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "CT14",
+    "h": 69,
+    "grain": "MF",
+    "flagged": false,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "ECTP23",
+    "h": 68,
+    "grain": "MF",
+    "flagged": false,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "CT16",
+    "h": 31,
+    "grain": "DH",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": 5.2,
+  "tempRMSE": 6,
+  "modelSurface": "MF"
+ },
+ {
+  "file": "2023-24/2024-03-16_goats-eye-plot.json",
+  "season": "2023-24",
+  "date": "2024-03-16",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": "flat",
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 126,
+  "hsModel": 137,
+  "hsErr": 11,
+  "partial": false,
+  "groupAgree": 10,
+  "groupN": 40,
+  "conf": [
+   [
+    1,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    3,
+    24,
+    0,
+    0
+   ],
+   [
+    0,
+    10,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.4,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 23,
+   "hit": 0,
+   "falseAlarm": 23
+  },
+  "tests": [
+   {
+    "score": "CT22",
+    "h": 73,
+    "grain": "MF",
+    "flagged": true,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT15",
+    "h": 71,
+    "grain": "MF",
+    "flagged": true,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -1.5,
+  "tempRMSE": 2.1,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2023-24/2024-03-19_wolverine-valley-2350m.json",
+  "season": "2023-24",
+  "date": "2024-03-19",
+  "kind": "test_profile",
+  "site": "wolverine-valley-2350m",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "ll-richardson:ALP",
+  "match": "gazetteer",
+  "km": 6.8,
+  "dz": 150,
+  "hsObs": 115,
+  "hsModel": 131,
+  "hsErr": 16,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.5,
+  "hardMAE": 1.1,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 15,
+   "hit": 0,
+   "falseAlarm": 15
+  },
+  "tests": [
+   {
+    "score": "CT1",
+    "h": 32,
+    "grain": null,
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2023-24/2024-03-19_wolverine-valley-2650m.json",
+  "season": "2023-24",
+  "date": "2024-03-19",
+  "kind": "test_profile",
+  "site": "wolverine-valley-2650m",
+  "aspect": "N",
+  "sim": "N",
+  "point": "ll-richardson:ALP",
+  "match": "gazetteer",
+  "km": 6.8,
+  "dz": -150,
+  "hsObs": 145,
+  "hsModel": 131,
+  "hsErr": -14,
+  "partial": false,
+  "groupAgree": 38,
+  "groupN": 40,
+  "conf": [
+   [
+    0,
+    0,
+    9,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    9,
+    15,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    7,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -1,
+  "hardMAE": 1.1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 15,
+   "hit": 0,
+   "falseAlarm": 15
+  },
+  "tests": [
+   {
+    "score": "CT13",
+    "h": 59,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "SH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2023-24/2024-03-21_mt-field.json",
+  "season": "2023-24",
+  "date": "2024-03-21",
+  "kind": "test_profile",
+  "site": "mt-field",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "mt-dennis:TL",
+  "match": "gazetteer",
+  "km": 4.9,
+  "dz": 50,
+  "hsObs": 175,
+  "hsModel": 102,
+  "hsErr": -73,
+  "partial": false,
+  "groupAgree": 40,
+  "groupN": 40,
+  "conf": [
+   [
+    2,
+    0,
+    0,
+    4,
+    0
+   ],
+   [
+    0,
+    0,
+    16,
+    0,
+    0
+   ],
+   [
+    0,
+    2,
+    14,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 5,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT2",
+    "h": 160,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "MFcr"
+   },
+   {
+    "score": "CT22",
+    "h": 70,
+    "grain": "MF",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2024-03-29_bow-summit-plot.json",
+  "season": "2023-24",
+  "date": "2024-03-29",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": "flat",
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 125,
+  "hsModel": 84,
+  "hsErr": -41,
+  "partial": false,
+  "groupAgree": 13,
+  "groupN": 40,
+  "conf": [
+   [
+    3,
+    0,
+    0,
+    4,
+    0
+   ],
+   [
+    0,
+    0,
+    4,
+    9,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    4,
+    14
+   ],
+   [
+    0,
+    0,
+    0,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.2,
+  "hardMAE": 1,
+  "basal": {
+   "obs": true,
+   "model": false,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 4,
+   "model": 12,
+   "hit": 4,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT13",
+    "h": 23,
+    "grain": "DH",
+    "flagged": false,
+    "modelLayer": "MF"
+   },
+   {
+    "score": "CT14",
+    "h": 23,
+    "grain": "DH",
+    "flagged": false,
+    "modelLayer": "MF"
+   }
+  ],
+  "tempBias": 0.8,
+  "tempRMSE": 2.5,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2024-04-04_goats-eye-plot.json",
+  "season": "2023-24",
+  "date": "2024-04-04",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": "flat",
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 150,
+  "hsModel": 151,
+  "hsErr": 1,
+  "partial": false,
+  "groupAgree": 15,
+  "groupN": 40,
+  "conf": [
+   [
+    2,
+    0,
+    0,
+    2,
+    1
+   ],
+   [
+    0,
+    4,
+    20,
+    0,
+    1
+   ],
+   [
+    0,
+    8,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.5,
+  "hardMAE": 1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 3,
+   "model": 8,
+   "hit": 2,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 23,
+   "hit": 0,
+   "falseAlarm": 23
+  },
+  "tests": [
+   {
+    "score": "CT23",
+    "h": 120,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT24",
+    "h": 120,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -0.7,
+  "tempRMSE": 1.4,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2024-25/2024-11-12_bow-summit-glades.json",
+  "season": "2024-25",
+  "date": "2024-11-12",
+  "kind": "test_profile",
+  "site": "bow-summit-glades",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "fts-bowsummit",
+  "match": "coordinates",
+  "km": 1.4,
+  "dz": -261,
+  "hsObs": 59,
+  "hsModel": 38,
+  "hsErr": -21,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.8,
+  "hardMAE": 1.2,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 6,
+   "hit": 0,
+   "falseAlarm": 6
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT11",
+    "h": 39,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT16",
+    "h": 18,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2024-11-18_wawa-ridge.json",
+  "season": "2024-25",
+  "date": "2024-11-18",
+  "kind": "test_profile",
+  "site": "wawa-ridge",
+  "aspect": "E",
+  "sim": "E",
+  "point": "fts-sunshine",
+  "match": "coordinates",
+  "km": 1.8,
+  "dz": -195,
+  "hsObs": 58,
+  "hsModel": 34,
+  "hsErr": -24,
+  "partial": false,
+  "groupAgree": 37,
+  "groupN": 38,
+  "conf": [
+   [
+    8,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    24,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    6,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.3,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2
+  },
+  "tests": [
+   {
+    "score": "ECTP11",
+    "h": 24,
+    "grain": "SH",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT7",
+    "h": 24,
+    "grain": "SH",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -1.2,
+  "tempRMSE": 1.2,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2024-11-21_jj-bowl.json",
+  "season": "2024-25",
+  "date": "2024-11-21",
+  "kind": "test_profile",
+  "site": "jj-bowl",
+  "aspect": "E",
+  "sim": "E",
+  "point": "fts-bowsummit",
+  "match": "gazetteer",
+  "km": 1.9,
+  "dz": -310,
+  "hsObs": 90,
+  "hsModel": 44,
+  "hsErr": -46,
+  "partial": false,
+  "groupAgree": 78,
+  "groupN": 40,
+  "conf": [
+   [
+    11,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    20,
+    3,
+    0
+   ],
+   [
+    0,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0,
+  "hardMAE": 1.1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 2,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT24",
+    "h": 13,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2024-11-22_bow-summit-plot.json",
+  "season": "2024-25",
+  "date": "2024-11-22",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 50,
+  "hsModel": 43,
+  "hsErr": -7,
+  "partial": false,
+  "groupAgree": 48,
+  "groupN": 40,
+  "conf": [
+   [
+    10,
+    0,
+    6,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    9,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    9,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    4,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.1,
+  "hardMAE": 1,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 3,
+   "model": 2,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2024-11-24_wolverine-valley.json",
+  "season": "2024-25",
+  "date": "2024-11-24",
+  "kind": "test_profile",
+  "site": "wolverine-valley",
+  "aspect": "NW",
+  "sim": "N",
+  "point": "ll-richardson:ALP",
+  "match": "coordinates",
+  "km": 6.9,
+  "dz": 0,
+  "hsObs": 65,
+  "hsModel": 58,
+  "hsErr": -7,
+  "partial": false,
+  "groupAgree": 70,
+  "groupN": 40,
+  "conf": [
+   [
+    5,
+    0,
+    7,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    20,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    5,
+    3,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.2,
+  "hardMAE": 1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 2,
+   "model": 3,
+   "hit": 2,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 3,
+   "hit": 0,
+   "falseAlarm": 3
+  },
+  "tests": [
+   {
+    "score": "CT13",
+    "h": 31,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "CT18",
+    "h": 31,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2024-12-06_goats-eye-plot.json",
+  "season": "2024-25",
+  "date": "2024-12-06",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": "N",
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 60,
+  "hsModel": 40,
+  "hsErr": -20,
+  "partial": false,
+  "groupAgree": 28,
+  "groupN": 39,
+  "conf": [
+   [
+    0,
+    0,
+    7,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    14,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    11,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    7,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.5,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2
+  },
+  "tests": [
+   {
+    "score": "CT22",
+    "h": 25,
+    "grain": "FCxr",
+    "flagged": false,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "CT22",
+    "h": 25,
+    "grain": "FCxr",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2024-12-08_bow-summit-plot.json",
+  "season": "2024-25",
+  "date": "2024-12-08",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": "S",
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 56,
+  "hsModel": 51,
+  "hsErr": -5,
+  "partial": false,
+  "groupAgree": 80,
+  "groupN": 40,
+  "conf": [
+   [
+    8,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    24,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.7,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 3,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2024-12-10_mount-nile-south-shoulder.json",
+  "season": "2024-25",
+  "date": "2024-12-10",
+  "kind": "test_profile",
+  "site": "mount-nile-south-shoulder",
+  "aspect": "SW",
+  "sim": "S",
+  "point": "mt-bosworth:ALP",
+  "match": "coordinates",
+  "km": 6.7,
+  "dz": -17,
+  "hsObs": 110,
+  "hsModel": 101,
+  "hsErr": -9,
+  "partial": false,
+  "groupAgree": 70,
+  "groupN": 40,
+  "conf": [
+   [
+    6,
+    2,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    22,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    10,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.7,
+  "hardMAE": 1.2,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 2,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 6,
+   "hit": 0,
+   "falseAlarm": 6
+  },
+  "tests": [
+   {
+    "score": "CT11",
+    "h": 87,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2024-12-10_mt-field.json",
+  "season": "2024-25",
+  "date": "2024-12-10",
+  "kind": "test_profile",
+  "site": "mt-field",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "mt-dennis:TL",
+  "match": "coordinates",
+  "km": 4.6,
+  "dz": -120,
+  "hsObs": 120,
+  "hsModel": 62,
+  "hsErr": -58,
+  "partial": false,
+  "groupAgree": 80,
+  "groupN": 40,
+  "conf": [
+   [
+    12,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    20,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    7,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.5,
+  "hardMAE": 1.3,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 2,
+   "model": 1,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT7",
+    "h": 98,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "DF"
+   },
+   {
+    "score": "CT19",
+    "h": 80,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "DT12",
+    "h": 65,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "DT23",
+    "h": 50,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2024-25/2024-12-11_dolomite-moraine-tl.json",
+  "season": "2024-25",
+  "date": "2024-12-11",
+  "kind": "test_profile",
+  "site": "dolomite-moraine-tl",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "ll-richardson:TL",
+  "match": "coordinates",
+  "km": 4.1,
+  "dz": -46,
+  "hsObs": 75,
+  "hsModel": 28,
+  "hsErr": -47,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.1,
+  "hardMAE": 1,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 3,
+   "hit": 0,
+   "falseAlarm": 3
+  },
+  "tests": [
+   {
+    "score": "CT5",
+    "h": 65,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT11",
+    "h": 50,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2024-12-11_dolomite-shoulder-tl.json",
+  "season": "2024-25",
+  "date": "2024-12-11",
+  "kind": "test_profile",
+  "site": "dolomite-shoulder-tl",
+  "aspect": "E",
+  "sim": "E",
+  "point": "fts-pikarun",
+  "match": "coordinates",
+  "km": 5.2,
+  "dz": 4,
+  "hsObs": 65,
+  "hsModel": 47,
+  "hsErr": -18,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.3,
+  "hardMAE": 1.1,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT11",
+    "h": 40,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2024-25/2024-12-23_bow-summit-plot.json",
+  "season": "2024-25",
+  "date": "2024-12-23",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 65,
+  "hsModel": 55,
+  "hsErr": -10,
+  "partial": false,
+  "groupAgree": 85,
+  "groupN": 40,
+  "conf": [
+   [
+    5,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    29,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.7,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT4",
+    "h": 58,
+    "grain": "PP",
+    "flagged": false,
+    "modelLayer": "DF"
+   },
+   {
+    "score": "CT10",
+    "h": 9,
+    "grain": "DH",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": -3.3,
+  "tempRMSE": 4.2,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2024-12-23_goats-eye-plot.json",
+  "season": "2024-25",
+  "date": "2024-12-23",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 72,
+  "hsModel": 62,
+  "hsErr": -10,
+  "partial": false,
+  "groupAgree": 70,
+  "groupN": 40,
+  "conf": [
+   [
+    3,
+    0,
+    7,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    4,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    25,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.1,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 9,
+   "hit": 0,
+   "falseAlarm": 9
+  },
+  "tests": [
+   {
+    "score": "CT12",
+    "h": 54,
+    "grain": "SH",
+    "flagged": true,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT22",
+    "h": 19,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": -0.3,
+  "tempRMSE": 0.4,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2025-01-02_cathedral-boulderfield.json",
+  "season": "2024-25",
+  "date": "2025-01-02",
+  "kind": "test_profile",
+  "site": "cathedral-boulderfield",
+  "aspect": "NW",
+  "sim": "N",
+  "point": "mt-dennis:TL",
+  "match": "coordinates",
+  "km": 5.6,
+  "dz": 80,
+  "hsObs": 75,
+  "hsModel": 68,
+  "hsErr": -7,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.7,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT15",
+    "h": 35,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "CT13",
+    "h": 5,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-01-07_little-crowfoot.json",
+  "season": "2024-25",
+  "date": "2025-01-07",
+  "kind": "test_profile",
+  "site": "little-crowfoot",
+  "aspect": "N",
+  "sim": "N",
+  "point": "fts-vulture",
+  "match": "coordinates",
+  "km": 1.3,
+  "dz": 190,
+  "hsObs": 153,
+  "hsModel": 158,
+  "hsErr": 5,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -1.2,
+  "hardMAE": 1.4,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 5,
+   "hit": 0,
+   "falseAlarm": 5
+  },
+  "tests": [
+   {
+    "score": "CT23",
+    "h": 133,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2025-01-08_goats-eye-plot.json",
+  "season": "2024-25",
+  "date": "2025-01-08",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 73,
+  "hsModel": 65,
+  "hsErr": -8,
+  "partial": false,
+  "groupAgree": 95,
+  "groupN": 40,
+  "conf": [
+   [
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    37,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.2,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 13,
+   "hit": 0,
+   "falseAlarm": 13
+  },
+  "tests": [],
+  "tempBias": -0.7,
+  "tempRMSE": 1.3,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2025-01-15_crowfoot-treeline.json",
+  "season": "2024-25",
+  "date": "2025-01-15",
+  "kind": "test_profile",
+  "site": "crowfoot-treeline",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "mt-gordon:TL",
+  "match": "coordinates",
+  "km": 7.9,
+  "dz": -86,
+  "hsObs": 110,
+  "hsModel": 122,
+  "hsErr": 12,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.2,
+  "hardMAE": 0.4,
+  "basal": {
+   "obs": false,
+   "model": false,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 1,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 8,
+   "hit": 0,
+   "falseAlarm": 8
+  },
+  "tests": [],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2025-01-19_bow-summit-plot.json",
+  "season": "2024-25",
+  "date": "2025-01-19",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 73,
+  "hsModel": 60,
+  "hsErr": -13,
+  "partial": false,
+  "groupAgree": 98,
+  "groupN": 40,
+  "conf": [
+   [
+    4,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    35,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.2,
+  "hardMAE": 1.1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "tests": [],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-01-21_tak-falls-plot.json",
+  "season": "2024-25",
+  "date": "2025-01-21",
+  "kind": "study_plot",
+  "site": "tak-falls-plot",
+  "aspect": "flat",
+  "sim": "flat",
+  "point": "emerald-pk:BTL",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 115,
+  "hsModel": 99,
+  "hsErr": -16,
+  "partial": false,
+  "groupAgree": 78,
+  "groupN": 40,
+  "conf": [
+   [
+    2,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    8,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    29,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.6,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT3",
+    "h": 107,
+    "grain": "MFcr",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -3.3,
+  "tempRMSE": 4.2,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-01-26_goats-eye-plot.json",
+  "season": "2024-25",
+  "date": "2025-01-26",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 84,
+  "hsModel": 66,
+  "hsErr": -18,
+  "partial": false,
+  "groupAgree": 85,
+  "groupN": 40,
+  "conf": [
+   [
+    1,
+    0,
+    6,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    33,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.1,
+  "hardMAE": 0.5,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 16,
+   "hit": 0,
+   "falseAlarm": 16
+  },
+  "tests": [],
+  "tempBias": -0.4,
+  "tempRMSE": 1.8,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2024-25/2025-01-30_tak-falls-area.json",
+  "season": "2024-25",
+  "date": "2025-01-30",
+  "kind": "test_profile",
+  "site": "tak-falls-area",
+  "aspect": "E",
+  "sim": "E",
+  "point": "emerald-pk:BTL",
+  "match": "coordinates",
+  "km": 6.5,
+  "dz": -50,
+  "hsObs": 135,
+  "hsModel": 98,
+  "hsErr": -37,
+  "partial": false,
+  "groupAgree": 55,
+  "groupN": 40,
+  "conf": [
+   [
+    1,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    13,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    21,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.1,
+  "hardMAE": 0.5,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [],
+  "tempBias": -3.5,
+  "tempRMSE": 3.8,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-02-01_bow-summit-plot.json",
+  "season": "2024-25",
+  "date": "2025-02-01",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 85,
+  "hsModel": 68,
+  "hsErr": -17,
+  "partial": false,
+  "groupAgree": 98,
+  "groupN": 40,
+  "conf": [
+   [
+    6,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    33,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.7,
+  "hardMAE": 0.9,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "tests": [],
+  "tempBias": -2.8,
+  "tempRMSE": 3.7,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-02-04_ruby-trees.json",
+  "season": "2024-25",
+  "date": "2025-02-04",
+  "kind": "test_profile",
+  "site": "ruby-trees",
+  "aspect": "S",
+  "sim": "S",
+  "point": "emerald-pk:TL",
+  "match": "coordinates",
+  "km": 0.5,
+  "dz": -40,
+  "hsObs": 145,
+  "hsModel": 144,
+  "hsErr": -1,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0,
+  "hardMAE": 1,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 8,
+   "hit": 1,
+   "falseAlarm": 1
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT14",
+    "h": 95,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT1",
+    "h": 95,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-02-06_tak-falls-plot.json",
+  "season": "2024-25",
+  "date": "2025-02-06",
+  "kind": "study_plot",
+  "site": "tak-falls-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "emerald-pk:BTL",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 145,
+  "hsModel": 115,
+  "hsErr": -30,
+  "partial": false,
+  "groupAgree": 38,
+  "groupN": 32,
+  "conf": [
+   [
+    7,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    17,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.3,
+  "hardMAE": 1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT14",
+    "h": 120,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "DF"
+   },
+   {
+    "score": "CT16",
+    "h": 117,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -3.1,
+  "tempRMSE": 4,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-02-12_goats-eye-plot.json",
+  "season": "2024-25",
+  "date": "2025-02-12",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 86,
+  "hsModel": 74,
+  "hsErr": -12,
+  "partial": false,
+  "groupAgree": 90,
+  "groupN": 40,
+  "conf": [
+   [
+    2,
+    0,
+    4,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    34,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 18,
+   "hit": 0,
+   "falseAlarm": 18
+  },
+  "tests": [],
+  "tempBias": 0.1,
+  "tempRMSE": 1.8,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-02-14_bow-summit-plot.json",
+  "season": "2024-25",
+  "date": "2025-02-14",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": "SE",
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 83,
+  "hsModel": 64,
+  "hsErr": -19,
+  "partial": false,
+  "groupAgree": 93,
+  "groupN": 40,
+  "conf": [
+   [
+    4,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    33,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "tests": [
+   {
+    "score": "CT26",
+    "h": 24,
+    "grain": "DH",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-02-24_schaefer-bowl-tl.json",
+  "season": "2024-25",
+  "date": "2025-02-24",
+  "kind": "test_profile",
+  "site": "schaefer-bowl-tl",
+  "aspect": "NW",
+  "sim": "N",
+  "point": "mt-dennis:TL",
+  "match": "coordinates",
+  "km": 11.6,
+  "dz": -61,
+  "hsObs": 150,
+  "hsModel": 75,
+  "hsErr": -75,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.6,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT11",
+    "h": 135,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT18",
+    "h": 107,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-02-25_bow-summit-plot.json",
+  "season": "2024-25",
+  "date": "2025-02-25",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 90,
+  "hsModel": 74,
+  "hsErr": -16,
+  "partial": false,
+  "groupAgree": 98,
+  "groupN": 40,
+  "conf": [
+   [
+    6,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    33,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.7,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "sh": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "tests": [
+   {
+    "score": "CT13",
+    "h": 60,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT13",
+    "h": 60,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT12",
+    "h": 60,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-02-25_tak-falls-plot.json",
+  "season": "2024-25",
+  "date": "2025-02-25",
+  "kind": "study_plot",
+  "site": "tak-falls-plot",
+  "aspect": "NE",
+  "sim": "flat",
+  "point": "emerald-pk:BTL",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 155,
+  "hsModel": 119,
+  "hsErr": -36,
+  "partial": false,
+  "groupAgree": 73,
+  "groupN": 40,
+  "conf": [
+   [
+    4,
+    0,
+    7,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    4,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    25,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.3,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT14",
+    "h": 137,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT19",
+    "h": 137,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -1.6,
+  "tempRMSE": 2.1,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2025-03-01_simpson-plot.json",
+  "season": "2024-25",
+  "date": "2025-03-01",
+  "kind": "study_plot",
+  "site": "simpson-plot",
+  "aspect": "SE",
+  "sim": "flat",
+  "point": "fts-simplo",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 117,
+  "hsModel": 84,
+  "hsErr": -33,
+  "partial": false,
+  "groupAgree": 60,
+  "groupN": 40,
+  "conf": [
+   [
+    0,
+    0,
+    2,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    13,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    24,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.2,
+  "hardMAE": 0.5,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 2,
+   "model": 1,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "tests": [
+   {
+    "score": "CT9",
+    "h": 87,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -2.8,
+  "tempRMSE": 3.4,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2025-03-09_goats-eye-plot.json",
+  "season": "2024-25",
+  "date": "2025-03-09",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": "SW",
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 119,
+  "hsModel": 93,
+  "hsErr": -26,
+  "partial": false,
+  "groupAgree": 58,
+  "groupN": 40,
+  "conf": [
+   [
+    3,
+    0,
+    7,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    4,
+    0,
+    0
+   ],
+   [
+    0,
+    6,
+    20,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.5,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 21,
+   "hit": 0,
+   "falseAlarm": 21
+  },
+  "tests": [
+   {
+    "score": "CT18",
+    "h": 67,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "CT19",
+    "h": 67,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": -1.8,
+  "tempRMSE": 2.1,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2024-25/2025-03-10_bow-summit-plot.json",
+  "season": "2024-25",
+  "date": "2025-03-10",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": "S",
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 160,
+  "hsModel": 107,
+  "hsErr": -53,
+  "partial": false,
+  "groupAgree": 70,
+  "groupN": 40,
+  "conf": [
+   [
+    12,
+    0,
+    8,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    16,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.7,
+  "hardMAE": 1.1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2
+  },
+  "sh": {
+   "obs": 0,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2
+  },
+  "tests": [
+   {
+    "score": "ECTP26",
+    "h": 75,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "CT25",
+    "h": 70,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-03-12_bow-summit-plot.json",
+  "season": "2024-25",
+  "date": "2025-03-12",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": "SW",
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 145,
+  "hsModel": 100,
+  "hsErr": -45,
+  "partial": false,
+  "groupAgree": 65,
+  "groupN": 40,
+  "conf": [
+   [
+    10,
+    0,
+    8,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    16,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.6,
+  "hardMAE": 1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2
+  },
+  "sh": {
+   "obs": 0,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2
+  },
+  "tests": [
+   {
+    "score": "CT22",
+    "h": 45,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2024-25/2025-03-13_mt-field-tl.json",
+  "season": "2024-25",
+  "date": "2025-03-13",
+  "kind": "test_profile",
+  "site": "mt-field-tl",
+  "aspect": "N",
+  "sim": "N",
+  "point": "mt-dennis:TL",
+  "match": "coordinates",
+  "km": 5.4,
+  "dz": 194,
+  "hsObs": 210,
+  "hsModel": 81,
+  "hsErr": -129,
+  "partial": true,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.3,
+  "hardMAE": 0.9,
+  "basal": null,
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT13",
+    "h": 115,
+    "grain": "FCxr",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-03-15_tak-falls-plot.json",
+  "season": "2024-25",
+  "date": "2025-03-15",
+  "kind": "study_plot",
+  "site": "tak-falls-plot",
+  "aspect": "NE",
+  "sim": "flat",
+  "point": "emerald-pk:BTL",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 192,
+  "hsModel": 155,
+  "hsErr": -37,
+  "partial": false,
+  "groupAgree": 48,
+  "groupN": 40,
+  "conf": [
+   [
+    5,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    7,
+    17,
+    1,
+    0
+   ],
+   [
+    0,
+    3,
+    7,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.2,
+  "hardMAE": 0.6,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 2,
+   "model": 2,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "tests": [
+   {
+    "score": "CT5",
+    "h": 174,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "DF"
+   },
+   {
+    "score": "CT30",
+    "h": 129,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -4,
+  "tempRMSE": 4.3,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-03-16_observation-subpeak-tl.json",
+  "season": "2024-25",
+  "date": "2025-03-16",
+  "kind": "test_profile",
+  "site": "observation-subpeak-tl",
+  "aspect": "W",
+  "sim": "W",
+  "point": "observation-pk:ALP",
+  "match": "coordinates",
+  "km": 2.3,
+  "dz": 120,
+  "hsObs": 153,
+  "hsModel": 84,
+  "hsErr": -69,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.3,
+  "hardMAE": 0.9,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "tests": [
+   {
+    "score": "ECTP23",
+    "h": 83,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "ECTP28",
+    "h": 50,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-03-21_bow-summit-fracture-line.json",
+  "season": "2024-25",
+  "date": "2025-03-21",
+  "kind": "fracture_line",
+  "site": "bow-summit-fracture-line",
+  "aspect": "N",
+  "sim": "N",
+  "point": "fts-bowsummit",
+  "match": "coordinates",
+  "km": 1.5,
+  "dz": null,
+  "hsObs": 175,
+  "hsModel": 110,
+  "hsErr": -65,
+  "partial": false,
+  "groupAgree": 100,
+  "groupN": 13,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    13,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0,
+  "hardMAE": 0.9,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 4,
+   "hit": 0,
+   "falseAlarm": 4
+  },
+  "sh": {
+   "obs": 0,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2
+  },
+  "tests": [
+   {
+    "score": "CT4",
+    "h": 40,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "CT1",
+    "h": 40,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2025-03-22_mt-field.json",
+  "season": "2024-25",
+  "date": "2025-03-22",
+  "kind": "test_profile",
+  "site": "mt-field",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "mt-dennis:TL",
+  "match": "coordinates",
+  "km": 4.8,
+  "dz": 0,
+  "hsObs": 205,
+  "hsModel": 79,
+  "hsErr": -126,
+  "partial": true,
+  "groupAgree": 100,
+  "groupN": 4,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    4,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -1.1,
+  "hardMAE": 1.3,
+  "basal": null,
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT24",
+    "h": 160,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2024-25/2025-03-27_bow-summit-plot.json",
+  "season": "2024-25",
+  "date": "2025-03-27",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 143,
+  "hsModel": 116,
+  "hsErr": -27,
+  "partial": false,
+  "groupAgree": 43,
+  "groupN": 40,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    13,
+    0,
+    4
+   ],
+   [
+    0,
+    3,
+    17,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    2,
+    0
+   ]
+  ],
+  "hardBias": -0.3,
+  "hardMAE": 1.3,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 3,
+   "hit": 0,
+   "falseAlarm": 3
+  },
+  "sh": {
+   "obs": 0,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2
+  },
+  "tests": [
+   {
+    "score": "CT25",
+    "h": 65,
+    "grain": "DH",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "MFcr"
+ },
+ {
+  "file": "2024-25/2025-03-30_observation-treeline.json",
+  "season": "2024-25",
+  "date": "2025-03-30",
+  "kind": "test_profile",
+  "site": "observation-treeline",
+  "aspect": "W",
+  "sim": "W",
+  "point": "observation-pk:ALP",
+  "match": "coordinates",
+  "km": 2.2,
+  "dz": 120,
+  "hsObs": 143,
+  "hsModel": 87,
+  "hsErr": -56,
+  "partial": false,
+  "groupAgree": 91,
+  "groupN": 23,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    20,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.5,
+  "hardMAE": 1.2,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 3,
+   "model": 6,
+   "hit": 2,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "tests": [
+   {
+    "score": "ECTP22",
+    "h": 68,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "CT16",
+    "h": 68,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "MF"
+ },
+ {
+  "file": "2024-25/2025-04-03_tak-falls-moraine.json",
+  "season": "2024-25",
+  "date": "2025-04-03",
+  "kind": "test_profile",
+  "site": "tak-falls-moraine",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "emerald-pk:TL",
+  "match": "coordinates",
+  "km": 6.1,
+  "dz": 141,
+  "hsObs": 165,
+  "hsModel": 228,
+  "hsErr": 63,
+  "partial": false,
+  "groupAgree": 84,
+  "groupN": 37,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    27,
+    2,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    4,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.2,
+  "hardMAE": 0.9,
+  "basal": {
+   "obs": true,
+   "model": false,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 17,
+   "hit": 1,
+   "falseAlarm": 2
+  },
+  "sh": {
+   "obs": 0,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2
+  },
+  "tests": [
+   {
+    "score": "CT15",
+    "h": 85,
+    "grain": "FCxr/RGxf",
+    "flagged": true,
+    "modelLayer": "RG"
+   }
+  ],
+  "tempBias": -1.5,
+  "tempRMSE": 1.6,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2025-11-08_bath-glacier.json",
+  "season": "2025-26",
+  "date": "2025-11-08",
+  "kind": "test_profile",
+  "site": "bath-glacier",
+  "aspect": "SE",
+  "sim": "flat",
+  "point": "fts-bosup",
+  "match": "coordinates",
+  "km": 5.8,
+  "dz": 145,
+  "hsObs": 105,
+  "hsModel": 70,
+  "hsErr": -35,
+  "partial": false,
+  "groupAgree": 15,
+  "groupN": 40,
+  "conf": [
+   [
+    6,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    28,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -1.4,
+  "hardMAE": 1.5,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 3,
+   "hit": 0,
+   "falseAlarm": 3
+  },
+  "tests": [
+   {
+    "score": "CT28",
+    "h": 7,
+    "grain": "FCxr",
+    "flagged": false,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "CT5",
+    "h": 77,
+    "grain": "PP",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT11",
+    "h": 87,
+    "grain": "PP",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -1.5,
+  "tempRMSE": 1.8,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2025-26/2025-11-15_wawa-ridge.json",
+  "season": "2025-26",
+  "date": "2025-11-15",
+  "kind": "test_profile",
+  "site": "wawa-ridge",
+  "aspect": "E",
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "coordinates",
+  "km": 1,
+  "dz": -143,
+  "hsObs": 55,
+  "hsModel": 56,
+  "hsErr": 1,
+  "partial": false,
+  "groupAgree": 8,
+  "groupN": 40,
+  "conf": [
+   [
+    3,
+    0,
+    1,
+    6,
+    5
+   ],
+   [
+    0,
+    0,
+    6,
+    0,
+    19
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.8,
+  "hardMAE": 1.5,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 10,
+   "hit": 0,
+   "falseAlarm": 10
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT25",
+    "h": 35,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "MF"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2025-26/2025-11-23_bow-summit-plot.json",
+  "season": "2025-26",
+  "date": "2025-11-23",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": "S",
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 65,
+  "hsModel": 62,
+  "hsErr": -3,
+  "partial": false,
+  "groupAgree": 40,
+  "groupN": 40,
+  "conf": [
+   [
+    11,
+    0,
+    0,
+    7,
+    0
+   ],
+   [
+    0,
+    0,
+    16,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    5,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.5,
+  "hardMAE": 1.2,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 2,
+   "model": 14,
+   "hit": 2,
+   "falseAlarm": 4
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2025-11-24_west-bowl-flats.json",
+  "season": "2025-26",
+  "date": "2025-11-24",
+  "kind": "test_profile",
+  "site": "west-bowl-flats",
+  "aspect": "SW",
+  "sim": "flat",
+  "point": "ll-richardson:ALP",
+  "match": "coordinates",
+  "km": 3.3,
+  "dz": 134,
+  "hsObs": 81,
+  "hsModel": 62,
+  "hsErr": -19,
+  "partial": false,
+  "groupAgree": 40,
+  "groupN": 40,
+  "conf": [
+   [
+    11,
+    0,
+    5,
+    4,
+    0
+   ],
+   [
+    0,
+    0,
+    12,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    2,
+    0
+   ]
+  ],
+  "hardBias": 0,
+  "hardMAE": 1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 11,
+   "hit": 0,
+   "falseAlarm": 11
+  },
+  "sh": {
+   "obs": 0,
+   "model": 5,
+   "hit": 0,
+   "falseAlarm": 5
+  },
+  "tests": [
+   {
+    "score": "CT16",
+    "h": 41,
+    "grain": "MF",
+    "flagged": true,
+    "modelLayer": "MFcr"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2025-26/2025-11-25_saddle-pass-tl.json",
+  "season": "2025-26",
+  "date": "2025-11-25",
+  "kind": "test_profile",
+  "site": "saddle-pass-tl",
+  "aspect": "E",
+  "sim": "flat",
+  "point": "fts-pikarun",
+  "match": "coordinates",
+  "km": 5.3,
+  "dz": -120,
+  "hsObs": 98,
+  "hsModel": 42,
+  "hsErr": -56,
+  "partial": false,
+  "groupAgree": 15,
+  "groupN": 40,
+  "conf": [
+   [
+    6,
+    0,
+    7,
+    6,
+    0
+   ],
+   [
+    0,
+    0,
+    21,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.1,
+  "hardMAE": 1.1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 6,
+   "hit": 0,
+   "falseAlarm": 6
+  },
+  "sh": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "tests": [],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2025-12-08_tak-falls-plot.json",
+  "season": "2025-26",
+  "date": "2025-12-08",
+  "kind": "study_plot",
+  "site": "tak-falls-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "emerald-pk:BTL",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 113,
+  "hsModel": 71,
+  "hsErr": -42,
+  "partial": false,
+  "groupAgree": 20,
+  "groupN": 40,
+  "conf": [
+   [
+    8,
+    0,
+    7,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    22,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0,
+  "hardMAE": 0.6,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT2",
+    "h": 84,
+    "grain": "PP",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT13",
+    "h": 70,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT26",
+    "h": 39,
+    "grain": "FCxr",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2025-12-10_west-nile.json",
+  "season": "2025-26",
+  "date": "2025-12-10",
+  "kind": "test_profile",
+  "site": "west-nile",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "fts-vulture",
+  "match": "gazetteer",
+  "km": 8.4,
+  "dz": null,
+  "hsObs": 120,
+  "hsModel": 148,
+  "hsErr": 28,
+  "partial": true,
+  "groupAgree": 29,
+  "groupN": 7,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.3,
+  "hardMAE": 0.6,
+  "basal": null,
+  "crusts": {
+   "obs": 2,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 4,
+   "hit": 0,
+   "falseAlarm": 4
+  },
+  "tests": [
+   {
+    "score": "CT16",
+    "h": 75,
+    "grain": null,
+    "flagged": true,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2025-12-12_panorama-ridge-sse.json",
+  "season": "2025-26",
+  "date": "2025-12-12",
+  "kind": "test_profile",
+  "site": "panorama-ridge-sse",
+  "aspect": "SE",
+  "sim": "S",
+  "point": "fts-whymper",
+  "match": "coordinates",
+  "km": 11,
+  "dz": 190,
+  "hsObs": 120,
+  "hsModel": 101,
+  "hsErr": -19,
+  "partial": false,
+  "groupAgree": 100,
+  "groupN": 2,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.3,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 4,
+   "hit": 0,
+   "falseAlarm": 4
+  },
+  "tests": [
+   {
+    "score": "CT14",
+    "h": 62,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2025-12-13_goats-eye-plot.json",
+  "season": "2025-26",
+  "date": "2025-12-13",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": "S",
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 109,
+  "hsModel": 106,
+  "hsErr": -3,
+  "partial": false,
+  "groupAgree": 18,
+  "groupN": 40,
+  "conf": [
+   [
+    5,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    2,
+    20,
+    6,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.3,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 8,
+   "hit": 0,
+   "falseAlarm": 8
+  },
+  "sh": {
+   "obs": 0,
+   "model": 5,
+   "hit": 0,
+   "falseAlarm": 5
+  },
+  "tests": [
+   {
+    "score": "CT15",
+    "h": 60,
+    "grain": null,
+    "flagged": true,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT24",
+    "h": 55,
+    "grain": "FCxr",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -4.1,
+  "tempRMSE": 4.2,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2025-26/2025-12-20_bow-summit-plot.json",
+  "season": "2025-26",
+  "date": "2025-12-20",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": "SW",
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 138,
+  "hsModel": 128,
+  "hsErr": -10,
+  "partial": false,
+  "groupAgree": 25,
+  "groupN": 40,
+  "conf": [
+   [
+    10,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    25,
+    3,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.2,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 3,
+   "model": 3,
+   "hit": 0,
+   "falseAlarm": 3
+  },
+  "sh": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "tests": [
+   {
+    "score": "CT21",
+    "h": 28,
+    "grain": "FCxr",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": -4,
+  "tempRMSE": 4.2,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2025-12-21_simpson-plot.json",
+  "season": "2025-26",
+  "date": "2025-12-21",
+  "kind": "study_plot",
+  "site": "simpson-plot",
+  "aspect": "E",
+  "sim": "flat",
+  "point": "fts-simplo",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 180,
+  "hsModel": 135,
+  "hsErr": -45,
+  "partial": false,
+  "groupAgree": 28,
+  "groupN": 40,
+  "conf": [
+   [
+    11,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    28,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.3,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT19",
+    "h": 145,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "DF"
+   }
+  ],
+  "tempBias": -2.7,
+  "tempRMSE": 3.2,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2025-12-23_mt-field.json",
+  "season": "2025-26",
+  "date": "2025-12-23",
+  "kind": "test_profile",
+  "site": "mt-field",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "mt-dennis:TL",
+  "match": "coordinates",
+  "km": 5.1,
+  "dz": 49,
+  "hsObs": 255,
+  "hsModel": 82,
+  "hsErr": -173,
+  "partial": false,
+  "groupAgree": 33,
+  "groupN": 30,
+  "conf": [
+   [
+    7,
+    0,
+    8,
+    3,
+    0
+   ],
+   [
+    0,
+    0,
+    9,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.8,
+  "hardMAE": 1.2,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 3,
+   "hit": 0,
+   "falseAlarm": 3
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT18",
+    "h": 190,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT12",
+    "h": 210,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "DF"
+   }
+  ],
+  "tempBias": -4.6,
+  "tempRMSE": 4.8,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2025-12-24_vermillion.json",
+  "season": "2025-26",
+  "date": "2025-12-24",
+  "kind": "test_profile",
+  "site": "vermillion",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-stanley",
+  "match": "coordinates",
+  "km": 7.4,
+  "dz": null,
+  "hsObs": 130,
+  "hsModel": 95,
+  "hsErr": -35,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.1,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 2,
+   "model": 8,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "tests": [
+   {
+    "score": "CT17",
+    "h": 95,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT25",
+    "h": 84,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "MFcr"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2025-12-30_tak-falls-plot.json",
+  "season": "2025-26",
+  "date": "2025-12-30",
+  "kind": "study_plot",
+  "site": "tak-falls-plot",
+  "aspect": "E",
+  "sim": "flat",
+  "point": "emerald-pk:BTL",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 190,
+  "hsModel": 150,
+  "hsErr": -40,
+  "partial": false,
+  "groupAgree": 20,
+  "groupN": 40,
+  "conf": [
+   [
+    6,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    20,
+    1,
+    0
+   ],
+   [
+    0,
+    8,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    1,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.8,
+  "hardMAE": 1.4,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 3,
+   "model": 3,
+   "hit": 2,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT9",
+    "h": 160,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "DF"
+   },
+   {
+    "score": "CT12",
+    "h": 150,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2026-01-06_cathedral.json",
+  "season": "2025-26",
+  "date": "2026-01-06",
+  "kind": "test_profile",
+  "site": "cathedral",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-boslo",
+  "match": "coordinates",
+  "km": 5.2,
+  "dz": 278,
+  "hsObs": 165,
+  "hsModel": 181,
+  "hsErr": 16,
+  "partial": false,
+  "groupAgree": 58,
+  "groupN": 40,
+  "conf": [
+   [
+    4,
+    0,
+    6,
+    0,
+    0
+   ],
+   [
+    0,
+    19,
+    10,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.8,
+  "hardMAE": 1.2,
+  "basal": {
+   "obs": true,
+   "model": false,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 8,
+   "hit": 0,
+   "falseAlarm": 8
+  },
+  "tests": [
+   {
+    "score": "CT4",
+    "h": 150,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "DF"
+   },
+   {
+    "score": "CT10",
+    "h": 140,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2025-26/2026-01-07_bow-summit-plot.json",
+  "season": "2025-26",
+  "date": "2026-01-07",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": "N",
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 145,
+  "hsModel": 144,
+  "hsErr": -1,
+  "partial": false,
+  "groupAgree": 35,
+  "groupN": 40,
+  "conf": [
+   [
+    6,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    21,
+    1,
+    0
+   ],
+   [
+    0,
+    1,
+    8,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.9,
+  "hardMAE": 1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "sh": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "tests": [
+   {
+    "score": "CT14",
+    "h": 119,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT25",
+    "h": 104,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -3.1,
+  "tempRMSE": 4,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2025-26/2026-01-07_west-nile.json",
+  "season": "2025-26",
+  "date": "2026-01-07",
+  "kind": "test_profile",
+  "site": "west-nile",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "mt-gordon:TL",
+  "match": "coordinates",
+  "km": 11.4,
+  "dz": -26,
+  "hsObs": 245,
+  "hsModel": 195,
+  "hsErr": -50,
+  "partial": true,
+  "groupAgree": 42,
+  "groupN": 19,
+  "conf": [
+   [
+    6,
+    1,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    2,
+    8,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -1.1,
+  "hardMAE": 1.4,
+  "basal": null,
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "tests": [
+   {
+    "score": "CT24",
+    "h": 209,
+    "grain": null,
+    "flagged": true,
+    "modelLayer": "DF"
+   }
+  ],
+  "tempBias": -2.5,
+  "tempRMSE": 2.5,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2025-26/2026-01-09_simpson-plot.json",
+  "season": "2025-26",
+  "date": "2026-01-09",
+  "kind": "study_plot",
+  "site": "simpson-plot",
+  "aspect": "S",
+  "sim": "flat",
+  "point": "fts-simplo",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 185,
+  "hsModel": 149,
+  "hsErr": -36,
+  "partial": false,
+  "groupAgree": 41,
+  "groupN": 39,
+  "conf": [
+   [
+    5,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    14,
+    0,
+    0
+   ],
+   [
+    0,
+    6,
+    11,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.4,
+  "hardMAE": 0.9,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT13",
+    "h": 144,
+    "grain": "SH",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -2.2,
+  "tempRMSE": 2.9,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2026-01-12_goats-eye-plot.json",
+  "season": "2025-26",
+  "date": "2026-01-12",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 149,
+  "hsModel": 177,
+  "hsErr": 28,
+  "partial": false,
+  "groupAgree": 35,
+  "groupN": 40,
+  "conf": [
+   [
+    3,
+    0,
+    6,
+    0,
+    0
+   ],
+   [
+    0,
+    11,
+    14,
+    1,
+    0
+   ],
+   [
+    0,
+    1,
+    0,
+    3,
+    0
+   ],
+   [
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.9,
+  "hardMAE": 1.2,
+  "basal": {
+   "obs": true,
+   "model": false,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 4,
+   "hit": 0,
+   "falseAlarm": 4
+  },
+  "sh": {
+   "obs": 1,
+   "model": 9,
+   "hit": 1,
+   "falseAlarm": 8
+  },
+  "tests": [
+   {
+    "score": "CT13",
+    "h": 114,
+    "grain": "SH",
+    "flagged": true,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -1.3,
+  "tempRMSE": 1.7,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2025-26/2026-01-15_diableret-glacier.json",
+  "season": "2025-26",
+  "date": "2026-01-15",
+  "kind": "test_profile",
+  "site": "diableret-glacier",
+  "aspect": "N",
+  "sim": "N",
+  "point": "mt-gordon:ALP",
+  "match": "coordinates",
+  "km": 4.5,
+  "dz": -289,
+  "hsObs": 400,
+  "hsModel": 229,
+  "hsErr": -171,
+  "partial": true,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -2.5,
+  "hardMAE": 2.7,
+  "basal": null,
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "tests": [
+   {
+    "score": "CT11",
+    "h": 375,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "DF"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2025-26/2026-01-15_mt-field-shoulder-tl.json",
+  "season": "2025-26",
+  "date": "2026-01-15",
+  "kind": "test_profile",
+  "site": "mt-field-shoulder-tl",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "mt-dennis:TL",
+  "match": "coordinates",
+  "km": 5.3,
+  "dz": 129,
+  "hsObs": 235,
+  "hsModel": 95,
+  "hsErr": -140,
+  "partial": true,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.8,
+  "hardMAE": 1.1,
+  "basal": null,
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT12",
+    "h": 193,
+    "grain": "PP",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT12",
+    "h": 160,
+    "grain": "SH",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "ECTP",
+    "h": 160,
+    "grain": "SH",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2025-26/2026-01-18_crowfoot-moraines.json",
+  "season": "2025-26",
+  "date": "2026-01-18",
+  "kind": "test_profile",
+  "site": "crowfoot-moraines",
+  "aspect": "SE",
+  "sim": "S",
+  "point": "fts-bowsummit",
+  "match": "coordinates",
+  "km": 7.5,
+  "dz": 10,
+  "hsObs": 193,
+  "hsModel": 139,
+  "hsErr": -54,
+  "partial": false,
+  "groupAgree": 5,
+  "groupN": 40,
+  "conf": [
+   [
+    0,
+    0,
+    4,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    26,
+    0,
+    0
+   ],
+   [
+    0,
+    5,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -1.2,
+  "hardMAE": 1.2,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "sh": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT6",
+    "h": 184,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "DF"
+   },
+   {
+    "score": "CT15",
+    "h": 173,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT16",
+    "h": 135,
+    "grain": "SH",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2025-26/2026-01-18_crowfoot-trees.json",
+  "season": "2025-26",
+  "date": "2026-01-18",
+  "kind": "test_profile",
+  "site": "crowfoot-trees",
+  "aspect": "SW",
+  "sim": "S",
+  "point": "fts-bowsummit",
+  "match": "coordinates",
+  "km": 7.2,
+  "dz": 68,
+  "hsObs": 157,
+  "hsModel": 139,
+  "hsErr": -18,
+  "partial": true,
+  "groupAgree": 4,
+  "groupN": 23,
+  "conf": [
+   [
+    1,
+    0,
+    4,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    18,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -1.3,
+  "hardMAE": 1.4,
+  "basal": null,
+  "crusts": {
+   "obs": 1,
+   "model": 1,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT15",
+    "h": 142,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT11",
+    "h": 142,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT21",
+    "h": 109,
+    "grain": "SH",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2025-26/2026-01-19_corral-3.json",
+  "season": "2025-26",
+  "date": "2026-01-19",
+  "kind": "test_profile",
+  "site": "corral-3",
+  "aspect": "SE",
+  "sim": "S",
+  "point": "ll-richardson:ALP",
+  "match": "coordinates",
+  "km": 2.5,
+  "dz": 107,
+  "hsObs": 170,
+  "hsModel": 132,
+  "hsErr": -38,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.7,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 5,
+   "hit": 0,
+   "falseAlarm": 5
+  },
+  "tests": [
+   {
+    "score": "CT11",
+    "h": 158,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT19",
+    "h": 150,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT22",
+    "h": 139,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2025-26/2026-01-19_hidden-bowl.json",
+  "season": "2025-26",
+  "date": "2026-01-19",
+  "kind": "test_profile",
+  "site": "hidden-bowl",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "ll-richardson:ALP",
+  "match": "coordinates",
+  "km": 2.4,
+  "dz": 10,
+  "hsObs": 205,
+  "hsModel": 140,
+  "hsErr": -65,
+  "partial": false,
+  "groupAgree": 0,
+  "groupN": 3,
+  "conf": [
+   [
+    0,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.9,
+  "hardMAE": 1,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 9,
+   "hit": 0,
+   "falseAlarm": 9
+  },
+  "tests": [
+   {
+    "score": "CT4",
+    "h": 190,
+    "grain": "PP",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2025-26/2026-01-24_bow-summit-plot.json",
+  "season": "2025-26",
+  "date": "2026-01-24",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 135,
+  "hsModel": 141,
+  "hsErr": 6,
+  "partial": false,
+  "groupAgree": 25,
+  "groupN": 40,
+  "conf": [
+   [
+    2,
+    0,
+    6,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    21,
+    0,
+    0
+   ],
+   [
+    0,
+    2,
+    8,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.1,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 1,
+   "model": 2,
+   "hit": 1,
+   "falseAlarm": 1
+  },
+  "tests": [
+   {
+    "score": "CTE1",
+    "h": 125,
+    "grain": "SH",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CTM18",
+    "h": 105,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -3.1,
+  "tempRMSE": 4,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2026-01-26_goats-eye-plot.json",
+  "season": "2025-26",
+  "date": "2026-01-26",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 135,
+  "hsModel": 166,
+  "hsErr": 31,
+  "partial": false,
+  "groupAgree": 38,
+  "groupN": 40,
+  "conf": [
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    15,
+    20,
+    4,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -1.1,
+  "hardMAE": 1.2,
+  "basal": {
+   "obs": true,
+   "model": false,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 4,
+   "hit": 0,
+   "falseAlarm": 4
+  },
+  "sh": {
+   "obs": 1,
+   "model": 9,
+   "hit": 1,
+   "falseAlarm": 8
+  },
+  "tests": [
+   {
+    "score": "CT22",
+    "h": 105,
+    "grain": "SH",
+    "flagged": true,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT23",
+    "h": 105,
+    "grain": "SH",
+    "flagged": true,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT25",
+    "h": 30,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "RG"
+   }
+  ],
+  "tempBias": 0.4,
+  "tempRMSE": 2.2,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2025-26/2026-02-02_tak-falls-plot.json",
+  "season": "2025-26",
+  "date": "2026-02-02",
+  "kind": "study_plot",
+  "site": "tak-falls-plot",
+  "aspect": "NE",
+  "sim": "flat",
+  "point": "emerald-pk:BTL",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 205,
+  "hsModel": 164,
+  "hsErr": -41,
+  "partial": true,
+  "groupAgree": 12,
+  "groupN": 25,
+  "conf": [
+   [
+    1,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    18,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -1,
+  "hardMAE": 1,
+  "basal": null,
+  "crusts": {
+   "obs": 3,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 2,
+   "model": 1,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT11",
+    "h": 189,
+    "grain": "SH",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "ECTP8",
+    "h": 189,
+    "grain": "SH",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2026-02-04_noseeum-boulderfield.json",
+  "skipped": "no usable location"
+ },
+ {
+  "file": "2025-26/2026-02-12_bow-summit-plot.json",
+  "season": "2025-26",
+  "date": "2026-02-12",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 121,
+  "hsModel": 135,
+  "hsErr": 14,
+  "partial": false,
+  "groupAgree": 3,
+  "groupN": 40,
+  "conf": [
+   [
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    35,
+    2,
+    0
+   ],
+   [
+    0,
+    2,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.4,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 4,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 1,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "tests": [
+   {
+    "score": "CT5",
+    "h": 111,
+    "grain": "SH",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2026-02-14_simpson-n-test.json",
+  "season": "2025-26",
+  "date": "2026-02-14",
+  "kind": "test_profile",
+  "site": "simpson-n-test",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "simpson:BTL",
+  "match": "coordinates",
+  "km": 3.3,
+  "dz": -50,
+  "hsObs": 165,
+  "hsModel": 112,
+  "hsErr": -53,
+  "partial": false,
+  "groupAgree": 6,
+  "groupN": 35,
+  "conf": [
+   [
+    1,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    24,
+    0,
+    0
+   ],
+   [
+    0,
+    4,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.2,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 2,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 3,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT2",
+    "h": 147,
+    "grain": "SH",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2026-02-17_goats-eye-plot.json",
+  "season": "2025-26",
+  "date": "2026-02-17",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 157,
+  "hsModel": 169,
+  "hsErr": 12,
+  "partial": false,
+  "groupAgree": 53,
+  "groupN": 40,
+  "conf": [
+   [
+    2,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    14,
+    11,
+    3,
+    0
+   ],
+   [
+    0,
+    2,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -1.1,
+  "hardMAE": 1.3,
+  "basal": {
+   "obs": true,
+   "model": false,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2
+  },
+  "sh": {
+   "obs": 1,
+   "model": 15,
+   "hit": 1,
+   "falseAlarm": 9
+  },
+  "tests": [
+   {
+    "score": "CT5",
+    "h": 142,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -0.2,
+  "tempRMSE": 1.1,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2025-26/2026-03-04_bow-summit-plot.json",
+  "season": "2025-26",
+  "date": "2026-03-04",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": "NW",
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 150,
+  "hsModel": 158,
+  "hsErr": 8,
+  "partial": false,
+  "groupAgree": 55,
+  "groupN": 40,
+  "conf": [
+   [
+    3,
+    0,
+    5,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    7,
+    0,
+    0
+   ],
+   [
+    0,
+    4,
+    19,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.1,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 7,
+   "hit": 0,
+   "falseAlarm": 7
+  },
+  "sh": {
+   "obs": 1,
+   "model": 2,
+   "hit": 1,
+   "falseAlarm": 1
+  },
+  "tests": [
+   {
+    "score": "CTM12",
+    "h": 114,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "MFcr"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "MFcr"
+ },
+ {
+  "file": "2025-26/2026-03-04_goats-eye-plot.json",
+  "season": "2025-26",
+  "date": "2026-03-04",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": "NW",
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 160,
+  "hsModel": 182,
+  "hsErr": 22,
+  "partial": false,
+  "groupAgree": 38,
+  "groupN": 40,
+  "conf": [
+   [
+    1,
+    0,
+    6,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    13,
+    14,
+    3,
+    0
+   ],
+   [
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.3,
+  "hardMAE": 0.6,
+  "basal": {
+   "obs": true,
+   "model": false,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 2,
+   "model": 2,
+   "hit": 2,
+   "falseAlarm": 1
+  },
+  "sh": {
+   "obs": 1,
+   "model": 16,
+   "hit": 1,
+   "falseAlarm": 7
+  },
+  "tests": [
+   {
+    "score": "CT11",
+    "h": 130,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "SH"
+   },
+   {
+    "score": "CT18",
+    "h": 122,
+    "grain": "SH",
+    "flagged": true,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": -1.7,
+  "tempRMSE": 2.3,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2025-26/2026-03-04_jimmy-junior-bowl.json",
+  "season": "2025-26",
+  "date": "2026-03-04",
+  "kind": "test_profile",
+  "site": "jimmy-junior-bowl",
+  "aspect": "NE",
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "coordinates",
+  "km": 2.1,
+  "dz": -95,
+  "hsObs": 200,
+  "hsModel": 158,
+  "hsErr": -42,
+  "partial": true,
+  "groupAgree": 22,
+  "groupN": 18,
+  "conf": [
+   [
+    3,
+    0,
+    3,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    9,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.1,
+  "hardMAE": 0.7,
+  "basal": null,
+  "crusts": {
+   "obs": 0,
+   "model": 7,
+   "hit": 0,
+   "falseAlarm": 7
+  },
+  "sh": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "tests": [
+   {
+    "score": "CT25",
+    "h": 140,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "MFcr"
+ },
+ {
+  "file": "2025-26/2026-03-05_mcarthur-pass.json",
+  "season": "2025-26",
+  "date": "2026-03-05",
+  "kind": "test_profile",
+  "site": "mcarthur-pass",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "mt-dennis:TL",
+  "match": "coordinates",
+  "km": 11.3,
+  "dz": -50,
+  "hsObs": 200,
+  "hsModel": 95,
+  "hsErr": -105,
+  "partial": true,
+  "groupAgree": 58,
+  "groupN": 19,
+  "conf": [
+   [
+    1,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    6,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    10,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.7,
+  "hardMAE": 0.9,
+  "basal": null,
+  "crusts": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "ECTP14",
+    "h": 154,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "CT12",
+    "h": 154,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2025-26/2026-03-06_tak-falls-mid-slope.json",
+  "season": "2025-26",
+  "date": "2026-03-06",
+  "kind": "test_profile",
+  "site": "tak-falls-mid-slope",
+  "aspect": null,
+  "sim": "flat",
+  "point": "emerald-pk:BTL",
+  "match": "coordinates",
+  "km": 6.6,
+  "dz": 24,
+  "hsObs": 225,
+  "hsModel": 182,
+  "hsErr": -43,
+  "partial": true,
+  "groupAgree": 0,
+  "groupN": 18,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    17,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.5,
+  "hardMAE": 0.6,
+  "basal": null,
+  "crusts": {
+   "obs": 1,
+   "model": 5,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 1,
+   "model": 1,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT12",
+    "h": 170,
+    "grain": "SH",
+    "flagged": true,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "MFcr"
+ },
+ {
+  "file": "2025-26/2026-03-06_tak-falls-plot.json",
+  "season": "2025-26",
+  "date": "2026-03-06",
+  "kind": "study_plot",
+  "site": "tak-falls-plot",
+  "aspect": "NE",
+  "sim": "flat",
+  "point": "emerald-pk:BTL",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 230,
+  "hsModel": 182,
+  "hsErr": -48,
+  "partial": true,
+  "groupAgree": 10,
+  "groupN": 20,
+  "conf": [
+   [
+    0,
+    0,
+    8,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    10,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.8,
+  "hardMAE": 0.9,
+  "basal": null,
+  "crusts": {
+   "obs": 1,
+   "model": 5,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 1,
+   "model": 1,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT22",
+    "h": 170,
+    "grain": "SH",
+    "flagged": true,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT11",
+    "h": 181,
+    "grain": "SH",
+    "flagged": true,
+    "modelLayer": "FC"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "MFcr"
+ },
+ {
+  "file": "2025-26/2026-03-10_simpson-plot.json",
+  "season": "2025-26",
+  "date": "2026-03-10",
+  "kind": "study_plot",
+  "site": "simpson-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-simplo",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 220,
+  "hsModel": 174,
+  "hsErr": -46,
+  "partial": false,
+  "groupAgree": 25,
+  "groupN": 40,
+  "conf": [
+   [
+    5,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    5,
+    24,
+    2,
+    0
+   ],
+   [
+    0,
+    3,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.6,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": true
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 9,
+   "hit": 0,
+   "falseAlarm": 9
+  },
+  "sh": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT30",
+    "h": 148,
+    "grain": "SH",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT25",
+    "h": 170,
+    "grain": "RG",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT12",
+    "h": 190,
+    "grain": "RG",
+    "flagged": false,
+    "modelLayer": "DF"
+   }
+  ],
+  "tempBias": -3.4,
+  "tempRMSE": 4,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2025-26/2026-03-15_fairview-btl-e.json",
+  "season": "2025-26",
+  "date": "2026-03-15",
+  "kind": "test_profile",
+  "site": "fairview-btl-e",
+  "aspect": "E",
+  "sim": "E",
+  "point": "fts-pikarun",
+  "match": "coordinates",
+  "km": 4.8,
+  "dz": 30,
+  "hsObs": 223,
+  "hsModel": 120,
+  "hsErr": -103,
+  "partial": true,
+  "groupAgree": 100,
+  "groupN": 1,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.1,
+  "hardMAE": 0.5,
+  "basal": null,
+  "crusts": {
+   "obs": 0,
+   "model": 5,
+   "hit": 0,
+   "falseAlarm": 5
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT23",
+    "h": 135,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2025-26/2026-03-15_fairview-tl-s.json",
+  "season": "2025-26",
+  "date": "2026-03-15",
+  "kind": "test_profile",
+  "site": "fairview-tl-s",
+  "aspect": "S",
+  "sim": "S",
+  "point": "fts-pikarun",
+  "match": "coordinates",
+  "km": 5.2,
+  "dz": -180,
+  "hsObs": 240,
+  "hsModel": 90,
+  "hsErr": -150,
+  "partial": true,
+  "groupAgree": 25,
+  "groupN": 4,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.5,
+  "hardMAE": 1.3,
+  "basal": null,
+  "crusts": {
+   "obs": 3,
+   "model": 11,
+   "hit": 3,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT23",
+    "h": 165,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "MFcr"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2025-26/2026-03-16_simpson-1-2000m.json",
+  "season": "2025-26",
+  "date": "2026-03-16",
+  "kind": "test_profile",
+  "site": "simpson-1-2000m",
+  "aspect": "E",
+  "sim": "E",
+  "point": "fts-simplo",
+  "match": "coordinates",
+  "km": 0.4,
+  "dz": 131,
+  "hsObs": 230,
+  "hsModel": 184,
+  "hsErr": -46,
+  "partial": true,
+  "groupAgree": 35,
+  "groupN": 17,
+  "conf": [
+   [
+    5,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    8,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0,
+  "hardMAE": 0.5,
+  "basal": null,
+  "crusts": {
+   "obs": 1,
+   "model": 6,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT23",
+    "h": 140,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2025-26/2026-03-23_pipestone-tl.json",
+  "season": "2025-26",
+  "date": "2026-03-23",
+  "kind": "test_profile",
+  "site": "pipestone-tl",
+  "aspect": null,
+  "sim": "flat",
+  "point": "ll-richardson:ALP",
+  "match": "coordinates",
+  "km": 2.9,
+  "dz": 147,
+  "hsObs": 250,
+  "hsModel": 173,
+  "hsErr": -77,
+  "partial": true,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.7,
+  "hardMAE": 1.7,
+  "basal": null,
+  "crusts": {
+   "obs": 0,
+   "model": 12,
+   "hit": 0,
+   "falseAlarm": 12
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "ECTP30",
+    "h": 145,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "MF"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2025-26/2026-03-25_goats-eye-plot.json",
+  "season": "2025-26",
+  "date": "2026-03-25",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 175,
+  "hsModel": 226,
+  "hsErr": 51,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -1.2,
+  "hardMAE": 2,
+  "basal": {
+   "obs": false,
+   "model": false,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 2,
+   "model": 20,
+   "hit": 0,
+   "falseAlarm": 20
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CTE1",
+    "h": 145,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "MFcr"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2025-26/2026-03-27_puzzle-treeline.json",
+  "season": "2025-26",
+  "date": "2026-03-27",
+  "kind": "test_profile",
+  "site": "puzzle-treeline",
+  "aspect": "S",
+  "sim": "S",
+  "point": "fts-bowsummit",
+  "match": "coordinates",
+  "km": 10.8,
+  "dz": -249,
+  "hsObs": 283,
+  "hsModel": 168,
+  "hsErr": -115,
+  "partial": true,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -2.3,
+  "hardMAE": 2.5,
+  "basal": null,
+  "crusts": {
+   "obs": 1,
+   "model": 19,
+   "hit": 1,
+   "falseAlarm": 12
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT7",
+    "h": 255,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "MFcr"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "MFcr"
+ },
+ {
+  "file": "2025-26/2026-04-05_peyto-path.json",
+  "season": "2025-26",
+  "date": "2026-04-05",
+  "kind": "test_profile",
+  "site": "peyto-path",
+  "aspect": "N",
+  "sim": "N",
+  "point": "fts-bowsummit",
+  "match": "coordinates",
+  "km": 2.5,
+  "dz": -118,
+  "hsObs": 253,
+  "hsModel": 175,
+  "hsErr": -78,
+  "partial": true,
+  "groupAgree": 20,
+  "groupN": 10,
+  "conf": [
+   [
+    0,
+    0,
+    3,
+    1,
+    4
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -1.7,
+  "hardMAE": 1.7,
+  "basal": null,
+  "crusts": {
+   "obs": 1,
+   "model": 2,
+   "hit": 1,
+   "falseAlarm": 0
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0
+  },
+  "tests": [
+   {
+    "score": "CT14",
+    "h": 230,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "MF"
+   },
+   {
+    "score": "CT13",
+    "h": 230,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "MF"
+   }
+  ],
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "MF"
+ }
+]

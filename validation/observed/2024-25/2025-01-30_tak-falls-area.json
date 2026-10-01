@@ -1,0 +1,206 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Test profiles/20250130 Tak Falls Area Test 1800m BW TH.jpg",
+    "profiles/2024-2025/Test profiles/20250130 Tak Falls Area Test Profile BW TH.pdf"
+  ],
+  "season": "2024-25",
+  "kind": "test_profile",
+  "site": "Tak Falls",
+  "site_slug": "tak-falls-area",
+  "chart_format": "snowpilot",
+  "date": "2025-01-30",
+  "time": "13:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.49829,
+  "lon": -116.49621,
+  "elevation_m": 1800,
+  "elevation_raw": "1800 m",
+  "aspect": "E",
+  "slope_deg": 30,
+  "air_temp_c": null,
+  "sky": "OVC",
+  "precip": "S-1",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 135,
+  "surface_grain": null,
+  "foot_pen_cm": 50,
+  "ski_pen_cm": 25,
+  "header_other": {
+    "PF": "50",
+    "PS": "25",
+    "chart_title": "Tak Falls",
+    "region": "Banff, Yoho and Kootenay, AB",
+    "header_date_raw": "30/01/2025 - 13:00",
+    "wind_loading": null,
+    "stability": null,
+    "specifics": null,
+    "layer_notes": [
+      "135-115cm: Sluffs easy in steep gnd",
+      "115-90cm: Problematic layer"
+    ],
+    "filename_suffix": "BW TH (unexplained, probably initials)"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 20,
+      "depth_top_cm": 115,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "square with a rounded (arched) top and a bar (mixed FC/RG glyph)",
+      "size_mm": [
+        1.5,
+        2.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 20,
+      "top_cm": 45,
+      "depth_top_cm": 90,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "square with a rounded (arched) top and a bar (mixed FC/RG glyph)",
+      "size_mm": [
+        1.5,
+        2.0
+      ],
+      "hardness": "P",
+      "hardness_idx": 4.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 45,
+      "top_cm": 75,
+      "depth_top_cm": 60,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.5,
+        1.5
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 75,
+      "top_cm": 90,
+      "depth_top_cm": 45,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 90,
+      "top_cm": 115,
+      "depth_top_cm": 20,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "layer note '115-90cm: Problematic layer'; red line along its base (90 cm)"
+    },
+    {
+      "bottom_cm": 115,
+      "top_cm": 135,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": "PP",
+      "grain_raw": "⟋(+)",
+      "size_mm": null,
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "layer note '135-115cm: Sluffs easy in steep gnd'; no size entered"
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 120,
+      "t_c": -6.5
+    },
+    {
+      "h_cm": 100,
+      "t_c": -6.5
+    },
+    {
+      "h_cm": 80,
+      "t_c": -5.2
+    },
+    {
+      "h_cm": 60,
+      "t_c": -3.4
+    },
+    {
+      "h_cm": 40,
+      "t_c": -2.0
+    },
+    {
+      "h_cm": 20,
+      "t_c": -0.7
+    }
+  ],
+  "tests": [
+    {
+      "raw": "CTN",
+      "type": "CT",
+      "score": "CTN",
+      "taps": null,
+      "propagation": null,
+      "fracture": null,
+      "height_cm": 0,
+      "depth_cm": 135,
+      "layer_grain": null,
+      "count": 1,
+      "comment": "arrow tip at the bottom (0 cm); no fracture"
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Problematic layer (layer note 115-90 cm)",
+      "height_cm": 102.5,
+      "depth_cm": 32.5,
+      "grain": "FC",
+      "bottom_cm": 90,
+      "top_cm": 115
+    }
+  ],
+  "notes": "Chart 'Notes:' blank. Layer Notes: '135-115cm: Sluffs easy in steep gnd'; '115-90cm: Problematic layer'. Stability tests column: 'CTN' (arrow at the bottom of the chart). Air temperature, stability and wind loading blank. Temperature profile present (6 points, 20 to 120 cm).",
+  "summary": "Basal FCxr 1.5-2 mm 0-45 cm (1F then P), FC 45-115 cm (1F+, 1F-, F; 1-1.5 mm; 90-115 cm flagged problematic layer) under 20 cm of DF/PP (F) with easy sluffing; CTN (no result); temps -6.5 C at 120-100 cm to -0.7 C at 20 cm; E 1800 m, 30 deg; HS 135 cm; PF 50, PS 25",
+  "confidence": "high",
+  "reading_issues": "Same pit supplied as JPG and PDF (identical content), one JSON lists both. Bar steps and boundaries measured from pixels in both renders (0, 20, 45, 75, 90, 115, 135 cm). Glyph for 0-45 cm (small square with an arched top and horizontal bar) read as FCxr (square-based). CTN arrow points at the 0 cm line, so test height recorded 0 with a comment; the result is 'no result/no fracture'. Temperatures read by pixel centroid on the -10..0 C axis (20 cm intervals; no point below 20 cm or at the surface). Red line at 90 cm marks the base of the flagged 90-115 cm layer. Surface grain not in header; top layer is DF with PP secondary so header surface_grain left null."
+}

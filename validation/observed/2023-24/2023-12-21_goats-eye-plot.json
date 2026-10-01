@@ -1,0 +1,56 @@
+{
+  "source_files": ["profiles/2023-2024/Goats Eye/20231220 Goat's Eye.jpg"],
+  "season": "2023-24",
+  "kind": "study_plot",
+  "site": "Goat's Eye Study Plot",
+  "site_slug": "goats-eye-plot",
+  "chart_format": "snowpilot",
+  "date": "2023-12-21",
+  "time": "13:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.08562,
+  "lon": -115.7577,
+  "elevation_m": 2250,
+  "elevation_raw": "2250 m",
+  "aspect": null,
+  "slope_deg": null,
+  "air_temp_c": null,
+  "sky": "OVC",
+  "precip": "NO",
+  "wind": "SW Light Breeze",
+  "blowing_snow": null,
+  "hs_cm": 71,
+  "surface_grain": null,
+  "foot_pen_cm": 62,
+  "ski_pen_cm": 10,
+  "header_other": {"PF": "62", "PS": "10", "HS": "71", "wind_loading": "previous", "coord_raw": "51.08562N, -115.75770W", "layer_notes": "10-0cm: Problematic layer", "chart_title": "Goat's Eye - SSV", "surface_form": "top surface-form row has size 1 but no glyph", "filename_date_note": "file named 20231220; header date is 21/12/2023"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 10, "depth_top_cm": 61, "grain": "DH", "grain2": null, "grain_raw": "∧", "size_mm": [3.0, 3.0], "hardness": "4F-", "hardness_idx": 1.67, "moisture": "D", "density": null, "uncertain": false, "comment": "layer note: '10-0cm: Problematic layer'"},
+    {"bottom_cm": 10, "top_cm": 31, "depth_top_cm": 40, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [2.0, 2.0], "hardness": "4F+", "hardness_idx": 2.33, "moisture": "D", "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 31, "top_cm": 32, "depth_top_cm": 39, "grain": "FC", "grain2": "SH", "grain_raw": "□(V)", "size_mm": [2.0, 2.0], "hardness": "F", "hardness_idx": 1.0, "moisture": "D", "density": null, "uncertain": false, "comment": "size column '2(3)': FC 2 mm, secondary SH 3 mm; thin 1 cm layer"},
+    {"bottom_cm": 32, "top_cm": 40, "depth_top_cm": 31, "grain": "FCxr", "grain2": null, "grain_raw": "square with rounded top (FCxr glyph)", "size_mm": [1.0, 1.0], "hardness": "P", "hardness_idx": 4.0, "moisture": "D", "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 40, "top_cm": 41, "depth_top_cm": 30, "grain": "IF", "grain2": null, "grain_raw": "=", "size_mm": null, "hardness": "K", "hardness_idx": 5.0, "moisture": null, "density": null, "uncertain": false, "comment": "thin hard layer drawn with '=' glyph (ice formation / crust), 1 cm; no size given"},
+    {"bottom_cm": 41, "top_cm": 65, "depth_top_cm": 6, "grain": null, "grain2": null, "grain_raw": null, "size_mm": [1.0, 1.0], "hardness": "1F-", "hardness_idx": 2.5, "moisture": "D", "density": null, "uncertain": true, "comment": "grain form glyph blank on chart (size 1 mm, D); hardness gradient 4F at top (65 cm) to 1F at bottom (41 cm); hardness_idx is the mean"},
+    {"bottom_cm": 65, "top_cm": 71, "depth_top_cm": 0, "grain": "PP", "grain2": null, "grain_raw": "+r", "size_mm": [1.0, 1.0], "hardness": "F", "hardness_idx": 1.0, "moisture": "D-M", "density": null, "uncertain": false, "comment": "rimed precipitation particles (+ with subscript r)"}
+  ],
+  "temps": [
+    {"h_cm": 0, "t_c": 0.0},
+    {"h_cm": 10, "t_c": -2.0},
+    {"h_cm": 20, "t_c": -2.0},
+    {"h_cm": 30, "t_c": -2.8},
+    {"h_cm": 40, "t_c": -2.8},
+    {"h_cm": 50, "t_c": -3.4},
+    {"h_cm": 60, "t_c": -3.4}
+  ],
+  "tests": [
+    {"raw": "CT10, SP @32cm x2", "type": "CT", "score": "CT10", "taps": 10, "propagation": null, "fracture": "SP", "height_cm": 32, "depth_cm": 39, "layer_grain": "FC", "count": 2},
+    {"raw": "CT13, SC @5cm", "type": "CT", "score": "CT13", "taps": 13, "propagation": null, "fracture": "SC", "height_cm": 5, "depth_cm": 66, "layer_grain": "DH", "count": 1}
+  ],
+  "named_layers": [
+    {"name": "Problematic layer", "height_cm": 10, "depth_cm": 61, "grain": "DH"}
+  ],
+  "notes": "Layer Notes: 10-0cm: Problematic layer. Stability tests column: CT10, SP @32cm x2; CT13, SC @5cm. Chart 'Notes:' field blank.",
+  "summary": "Basal DH 0-10 cm (4F-, 'problematic layer') and FC 10-31 cm (4F+) under a thin FC(SH) layer 31-32 cm (F; CT10 SP at 32 cm x2), FCxr 32-40 cm (P), a thin K '=' layer at 40-41 cm, a 24 cm layer of unrecorded form (4F at top to 1F at base) and 6 cm of rimed PP; CT13 SC at 5 cm; HS 71 cm; ground 0 C, -3.4 C at 60 cm",
+  "confidence": "medium",
+  "reading_issues": "Filename says 20231220 but the header date is 21/12/2023 13:00; header date used. Hardness bars and boundaries measured from pixels. The 41-65 cm layer (24 cm thick) has NO grain-form glyph on the chart (only size 1 mm and moisture D), so grain is null (flagged uncertain); it is a hardness-gradient trapezoid (4F top to 1F base), hardness_idx is the mean. The top surface-form row shows a size (1) but no glyph, so surface_grain is null. '=' glyph read as IF. Air temperature blank. Temperature profile only 0-60 cm with repeated values at 10-cm pairs (as plotted). The CT10 SP failure at 32 cm is the top of the thin FC(SH) layer."
+}

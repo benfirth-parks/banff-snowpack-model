@@ -1,0 +1,58 @@
+{
+  "source_files": ["profiles/2023-2024/Tak Falls/Tak Falls -04-Jan.jpg"],
+  "season": "2023-24",
+  "kind": "study_plot",
+  "site": "Takakkaw Falls Study Plot",
+  "site_slug": "tak-falls-plot",
+  "chart_format": "snowpilot",
+  "date": "2024-01-04",
+  "time": "12:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.49883,
+  "lon": -116.49601,
+  "elevation_m": 1800,
+  "elevation_raw": "1800 m",
+  "aspect": "E",
+  "slope_deg": 0,
+  "air_temp_c": -4,
+  "sky": "BKN",
+  "precip": "S-1",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 96,
+  "surface_grain": null,
+  "foot_pen_cm": 30,
+  "ski_pen_cm": 15,
+  "header_other": {"PF": "30", "PS": "15", "HS": "96", "wind_loading": null, "coord_raw": "51.49883N, -116.49601W", "slope_raw": "0°", "specifics": null, "layer_notes": "31-0cm: Problematic layer", "chart_title": "Tak Falls", "surface_form": "blank (fixed top row above the HS line is empty)"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 31, "depth_top_cm": 65, "grain": "DH", "grain2": "FC", "grain_raw": "Λ with flat top and crossbar (DHxr-type glyph)(□)", "size_mm": [3.0, 6.0], "hardness": "4F-", "hardness_idx": 1.67, "moisture": null, "density": null, "uncertain": true, "comment": "size column '3-6'; primary glyph is an A-shaped caret with a flat top and crossbar, read as rounding depth hoar (DHxr) and mapped to DH, secondary FC; layer note '31-0cm: Problematic layer'; CT21 and CT18 BRK at 6 cm are inside this layer"},
+    {"bottom_cm": 31, "top_cm": 41, "depth_top_cm": 55, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [1.0, 3.0], "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": "size column '1-3'"},
+    {"bottom_cm": 41, "top_cm": 51, "depth_top_cm": 45, "grain": "RG", "grain2": null, "grain_raw": "• (small filled dot, RGsr-type glyph)", "size_mm": [1.0, 1.0], "hardness": "1F", "hardness_idx": 3.0, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 51, "top_cm": 56, "depth_top_cm": 40, "grain": "MF", "grain2": null, "grain_raw": "three clustered circles (MFcl glyph)", "size_mm": null, "hardness": "P+", "hardness_idx": 4.33, "moisture": null, "density": null, "uncertain": false, "comment": "no size given"},
+    {"bottom_cm": 56, "top_cm": 76, "depth_top_cm": 20, "grain": "FCxr", "grain2": null, "grain_raw": "square with rounded top (FCxr glyph)", "size_mm": [1.0, 2.0], "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": "size column '1-2'"},
+    {"bottom_cm": 76, "top_cm": 96, "depth_top_cm": 0, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": [1.0, 1.0], "hardness": "F", "hardness_idx": 1.0, "moisture": null, "density": null, "uncertain": false, "comment": null}
+  ],
+  "temps": [
+    {"h_cm": 0, "t_c": -0.5},
+    {"h_cm": 10, "t_c": -1.4},
+    {"h_cm": 20, "t_c": -2.1},
+    {"h_cm": 30, "t_c": -2.4},
+    {"h_cm": 40, "t_c": -3.2},
+    {"h_cm": 50, "t_c": -4.5},
+    {"h_cm": 56, "t_c": -5.4},
+    {"h_cm": 66, "t_c": -5.6},
+    {"h_cm": 76, "t_c": -5.8},
+    {"h_cm": 86, "t_c": -4.8}
+  ],
+  "tests": [
+    {"raw": "CT21, BRK @6cm", "type": "CT", "score": "CT21", "taps": 21, "propagation": null, "fracture": "BRK", "height_cm": 6, "depth_cm": 90, "layer_grain": "DH", "count": 1},
+    {"raw": "CT18, BRK @6cm", "type": "CT", "score": "CT18", "taps": 18, "propagation": null, "fracture": "BRK", "height_cm": 6, "depth_cm": 90, "layer_grain": "DH", "count": 1}
+  ],
+  "named_layers": [
+    {"name": "Problematic layer", "height_cm": 31, "depth_cm": 65, "grain": "DH"}
+  ],
+  "notes": "Chart 'Notes:' field blank. Layer Notes: 31-0cm: Problematic layer. Stability tests column: CT21, BRK @6cm; CT18, BRK @6cm. Wind Loading, Specifics and Stability fields blank; no moisture entered.",
+  "summary": "Basal DH(xr)/FC 0-31 cm (3-6 mm, 4F-; flagged problematic layer; CT21 and CT18 BRK at 6 cm) under FC 31-41 cm (4F), RG 41-51 cm (1F), a thin MFcl layer 51-56 cm (P+), FCxr 56-76 cm (4F) and 20 cm of DF (F); HS 96 cm; snow -0.5 C at the ground, -5.8 C at 76 cm, -4.8 C at 86 cm",
+  "confidence": "high",
+  "reading_issues": "Hardness bars, boundaries and temperature dots were measured from native pixels (HS line at y=157, ground at y=751 give 6.19 px/cm; hardness ticks every 24 px = 1/3 step); boundaries rounded to integer cm (within 0.2 cm). The basal glyph is an A-shaped caret with flat top and crossbar (as in the Bow Summit 2024-03-15 chart); read as rounding DH (DHxr), recorded as DH and flagged uncertain. The 41-51 cm glyph is a very small filled dot, read as RG (small rounded grains). Temperature dots are at 0, 10, 20, 30, 40, 50, 56, 66, 76 and 86 cm (no dot at the surface, 96 cm); the odd heights 56-86 cm are 10 cm steps below the surface. The two CT results (CT21 and CT18 BRK) are both at 6 cm, inside the basal layer; arrows converge at the same height. No moisture entered. Aspect E is as printed even though the slope is 0 deg."
+}

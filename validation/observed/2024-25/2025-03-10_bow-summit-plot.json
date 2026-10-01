@@ -1,0 +1,198 @@
+{
+  "source_files": [
+    "profiles/2024-2025/2025-03-10_1438_Bow Summit study plot.png",
+    "profiles/2024-2025/Bow Summit study plot/2025-03-10 Bow Summit Study Plot.png"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Bow Summit Study Plot",
+  "site_slug": "bow-summit-plot",
+  "chart_format": "propagation_labs",
+  "date": "2025-03-10",
+  "time": "14:38",
+  "observer": "Conrad Janzen",
+  "lat": 51.7093,
+  "lon": -116.479,
+  "elevation_m": 2030,
+  "elevation_raw": "2030m",
+  "aspect": "S",
+  "slope_deg": 0,
+  "air_temp_c": -4.5,
+  "sky": "Broken",
+  "precip": "Snow <0.5cm/hr",
+  "wind": "Moderate, SW",
+  "blowing_snow": "No Transport",
+  "hs_cm": 160,
+  "surface_grain": "PP",
+  "foot_pen_cm": 90,
+  "ski_pen_cm": 60,
+  "header_other": {
+    "surface_grain_raw": "Rime 2.0mm",
+    "profile_name": "Bow Summit study plot"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 10,
+      "depth_top_cm": 150,
+      "grain": "MFcr",
+      "grain2": "DH",
+      "grain_raw": "◎(∧)",
+      "size_mm": null,
+      "hardness": "P→K",
+      "hardness_idx": 4.5,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Basal melt-freeze crust with DH secondary; no size given. Hardness gradient in chart: P at ground (0 cm) rising linearly to K at 10 cm; hardness_idx is the mean (4.5).",
+      "hardness_bottom": "P",
+      "hardness_bottom_idx": 4.0,
+      "hardness_top": "K",
+      "hardness_top_idx": 5.0
+    },
+    {
+      "bottom_cm": 10,
+      "top_cm": 45,
+      "depth_top_cm": 115,
+      "grain": "DH",
+      "grain2": null,
+      "grain_raw": "∧",
+      "size_mm": [
+        5.0,
+        6.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 45,
+      "top_cm": 75,
+      "depth_top_cm": 85,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        3.0,
+        4.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Named \"January drought facets\"; bar rendered red/salmon (flagged weak layer). ECTP26 failed on top of this layer (75 cm); CT25SC at 70 cm."
+    },
+    {
+      "bottom_cm": 75,
+      "top_cm": 90,
+      "depth_top_cm": 70,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.5,
+        1.5
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Notes column: \"March 3 Interface\"."
+    },
+    {
+      "bottom_cm": 90,
+      "top_cm": 115,
+      "depth_top_cm": 45,
+      "grain": "PP",
+      "grain2": null,
+      "grain_raw": "∀",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": null,
+      "density": null,
+      "uncertain": true,
+      "comment": "Inverted-A glyph read as rime (header surface grain is Rime 2.0 mm); classed PP (PPrm)."
+    },
+    {
+      "bottom_cm": 115,
+      "top_cm": 160,
+      "depth_top_cm": 0,
+      "grain": "PP",
+      "grain2": null,
+      "grain_raw": "∀",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": null,
+      "density": null,
+      "uncertain": true,
+      "comment": "Inverted-A glyph read as rime (header surface grain is Rime 2.0 mm); classed PP (PPrm). Surface layer."
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 160,
+      "t_c": -5.4
+    }
+  ],
+  "tests": [
+    {
+      "raw": "ECTP26 on □ January drought facets",
+      "type": "ECT",
+      "score": "ECTP26",
+      "taps": 26,
+      "propagation": "P",
+      "fracture": null,
+      "height_cm": 75,
+      "depth_cm": 85,
+      "layer_grain": "FC",
+      "count": 1
+    },
+    {
+      "raw": "CT25SC",
+      "type": "CT",
+      "score": "CT25",
+      "taps": 25,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 70,
+      "depth_cm": 90,
+      "layer_grain": "FC",
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "January drought facets",
+      "height_cm": 60,
+      "bottom_cm": 45,
+      "top_cm": 75,
+      "depth_cm": 100,
+      "grain": "FC"
+    },
+    {
+      "name": "March 3 Interface",
+      "height_cm": 82.5,
+      "bottom_cm": 75,
+      "top_cm": 90,
+      "depth_cm": 77.5,
+      "grain": "DF"
+    }
+  ],
+  "notes": "",
+  "summary": "Basal MFcr/DH crust 0-10 cm (P rising to K), DH 10-45 cm (4F), 30 cm \"January drought facets\" FC (3-4 mm, F) at 45-75 cm failing in ECTP26 on its top (75 cm) and CT25 SC at 70 cm, under 85 cm of storm snow (DF at 75-90 cm \"March 3 interface\", rimed PP above); HS 160 cm.",
+  "confidence": "high",
+  "reading_issues": "Two source files are byte-identical (same MD5), so one JSON lists both. Inverted-A glyph (115-160 and 90-115 cm) read as rime per the header surface-grain text; stored as PP (uncertain). Only one temperature point (surface, -5.4 degC at 160 cm; air temperature -4.5 degC in header). Basal 0-10 cm layer has a sloped hardness edge (P at 0 cm to K at 10 cm): hardness \"P→K\", hardness_idx mean 4.5 plus explicit bottom/top values. CT25SC label is connected by a sloped leader to the 70 cm line. ECTP26 line sits at the top of the red-flagged layer (75 cm)."
+}

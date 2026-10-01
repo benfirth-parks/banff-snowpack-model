@@ -1,0 +1,175 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Bow Summit study plot/2024-12-10 Bow Summit Study Plot.pdf"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Bow Summit Study Plot",
+  "site_slug": "bow-summit-plot",
+  "chart_format": "propagation_labs",
+  "date": "2024-12-08",
+  "time": "12:10",
+  "observer": "Conrad Janzen",
+  "lat": 51.7088,
+  "lon": -116.4788,
+  "elevation_m": 2030,
+  "elevation_raw": "2030m",
+  "aspect": "S",
+  "slope_deg": 1,
+  "air_temp_c": -4.0,
+  "sky": "Broken",
+  "precip": "No Precipitation",
+  "wind": "Light, NW",
+  "blowing_snow": "No Transport",
+  "hs_cm": 56,
+  "surface_grain": "PP",
+  "foot_pen_cm": 35,
+  "ski_pen_cm": 25,
+  "header_other": {
+    "surface_grain_raw": "Precipitation Particles 2.0-3.0mm",
+    "profile_name": "Bow Summit Study Plot"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 4,
+      "depth_top_cm": 52,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "◎ (two linked circles)",
+      "size_mm": [
+        3.0,
+        5.0
+      ],
+      "hardness": "P",
+      "hardness_idx": 4,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Basal melt-freeze crust/layer at ground; chart size 3.0-5.0 mm."
+    },
+    {
+      "bottom_cm": 4,
+      "top_cm": 9,
+      "depth_top_cm": 47,
+      "grain": "FC",
+      "grain2": "FC",
+      "grain_raw": "□(□)",
+      "size_mm": null,
+      "hardness": "4F+",
+      "hardness_idx": 2.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "FC primary with FC secondary (secondary glyph drawn bold; sub-type not distinguishable); no size given."
+    },
+    {
+      "bottom_cm": 9,
+      "top_cm": 10,
+      "depth_top_cm": 46,
+      "grain": "IF",
+      "grain2": null,
+      "grain_raw": "▬ (filled bar)",
+      "size_mm": null,
+      "hardness": "P-",
+      "hardness_idx": 3.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Named \"Oct crust\" in Name column; thin ice/crust layer."
+    },
+    {
+      "bottom_cm": 10,
+      "top_cm": 20,
+      "depth_top_cm": 36,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        3.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 20,
+      "top_cm": 21,
+      "depth_top_cm": 35,
+      "grain": "IF",
+      "grain2": null,
+      "grain_raw": "▬ (filled bar)",
+      "size_mm": null,
+      "hardness": "1F",
+      "hardness_idx": 3,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Named \"Nov crust\" in Name column; thin ice/crust layer."
+    },
+    {
+      "bottom_cm": 21,
+      "top_cm": 41,
+      "depth_top_cm": 15,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        0.5,
+        1.5
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Bar rendered red/salmon in chart (layer highlighted by observer, probable weak-layer marker); no test results recorded."
+    },
+    {
+      "bottom_cm": 41,
+      "top_cm": 56,
+      "depth_top_cm": 0,
+      "grain": "PP",
+      "grain2": null,
+      "grain_raw": "+",
+      "size_mm": [
+        2.0,
+        3.0
+      ],
+      "hardness": "F+",
+      "hardness_idx": 1.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Surface layer: precipitation particles 2.0-3.0 mm."
+    }
+  ],
+  "temps": [],
+  "tests": [],
+  "named_layers": [
+    {
+      "name": "Oct crust",
+      "height_cm": 9.5,
+      "bottom_cm": 9,
+      "top_cm": 10,
+      "depth_cm": 46.5,
+      "grain": "IF"
+    },
+    {
+      "name": "Nov crust",
+      "height_cm": 20.5,
+      "bottom_cm": 20,
+      "top_cm": 21,
+      "depth_cm": 35.5,
+      "grain": "IF"
+    }
+  ],
+  "notes": "",
+  "summary": "Basal MFcr 0-4 cm (P) and FC 4-9 cm, thin Oct crust at 9-10 cm (P-), FC 10-20 cm (4F), thin Nov crust at 20-21 cm (1F), 20 cm of soft FC (0.5-1.5 mm, F, flagged red) at 21-41 cm under 15 cm of PP (F+); HS 56 cm; no tests.",
+  "confidence": "high",
+  "reading_issues": "File name says 2024-12-10 but header date is 2024-12-08 12:10 (header used). Layer boundaries measured from pixel positions against the height axis (+/-0.5 cm); hardness from bar edges vs grid ticks. Thin crust glyphs are a filled horizontal bar, read as IF per guide. The red-shaded layer (21-41 cm) is flagged in the chart but no test or note explains it. No temperature profile or tests on this chart; notes blank."
+}

@@ -1,0 +1,238 @@
+{
+ "source_files": [
+  "profiles/2025-2026/Study Plot profiles/Tak Falls/2026-03-06 Tak Falls Study Plot.pdf"
+ ],
+ "season": "2025-26",
+ "kind": "study_plot",
+ "site": "Takakkaw Falls Study Plot",
+ "site_slug": "tak-falls-plot",
+ "chart_format": "propagation_labs",
+ "date": "2026-03-06",
+ "time": "11:47",
+ "observer": "ben firth",
+ "lat": 51.4985,
+ "lon": -116.4961,
+ "elevation_m": 1790,
+ "elevation_raw": "5873ft",
+ "aspect": "NE",
+ "slope_deg": 1,
+ "air_temp_c": null,
+ "sky": "Overcast",
+ "precip": "Snow <0.5cm/hr",
+ "wind": "Light,SE",
+ "blowing_snow": null,
+ "hs_cm": 230,
+ "surface_grain": "PP",
+ "foot_pen_cm": 30,
+ "ski_pen_cm": 15,
+ "header_other": {
+  "profile_name": "260306 Tak Falls Study Plot",
+  "org": null,
+  "pit_bottom_cm": 114
+ },
+ "layers": [
+  {
+   "bottom_cm": 114,
+   "top_cm": 160,
+   "depth_top_cm": 70,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 160,
+   "top_cm": 169,
+   "depth_top_cm": 61,
+   "grain": "FCxr/RGxf",
+   "grain2": null,
+   "grain_raw": "square with filled dot",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "1F+",
+   "hardness_idx": 3.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": true,
+   "comment": null
+  },
+  {
+   "bottom_cm": 169,
+   "top_cm": 170,
+   "depth_top_cm": 60,
+   "grain": "SH",
+   "grain2": null,
+   "grain_raw": "V",
+   "size_mm": [
+    6.0,
+    8.0
+   ],
+   "hardness": "4F",
+   "hardness_idx": 2,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "pink layer; named \"Jan 24 SH\""
+  },
+  {
+   "bottom_cm": 170,
+   "top_cm": 181,
+   "depth_top_cm": 49,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    1.0,
+    2.0
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 181,
+   "top_cm": 195,
+   "depth_top_cm": 35,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/",
+   "size_mm": [
+    0.5,
+    1.0
+   ],
+   "hardness": "1F+",
+   "hardness_idx": 3.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "Layer note \"SH @ 181cm needles\"; named \"Feb 14\""
+  },
+  {
+   "bottom_cm": 195,
+   "top_cm": 212,
+   "depth_top_cm": 18,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 212,
+   "top_cm": 227,
+   "depth_top_cm": 3,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/",
+   "size_mm": [
+    1.0,
+    2.0
+   ],
+   "hardness": "4F",
+   "hardness_idx": 2,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 227,
+   "top_cm": 228,
+   "depth_top_cm": 2,
+   "grain": "MFcr",
+   "grain2": null,
+   "grain_raw": "◎○",
+   "size_mm": null,
+   "hardness": "P+",
+   "hardness_idx": 4.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 228,
+   "top_cm": 230,
+   "depth_top_cm": 0,
+   "grain": "PP",
+   "grain2": "PPrm",
+   "grain_raw": "+(∀)",
+   "size_mm": null,
+   "hardness": "F-",
+   "hardness_idx": 0.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "no size entered"
+  }
+ ],
+ "temps": [],
+ "tests": [
+  {
+   "raw": "CTH22 SC",
+   "type": "CT",
+   "score": "CT22",
+   "taps": 22,
+   "propagation": null,
+   "fracture": "SC",
+   "height_cm": 170,
+   "depth_cm": 60,
+   "layer_grain": "SH",
+   "count": 1,
+   "comment": "Label \"Jan 24 SH\""
+  },
+  {
+   "raw": "CTM11 SP",
+   "type": "CT",
+   "score": "CT11",
+   "taps": 11,
+   "propagation": null,
+   "fracture": "SP",
+   "height_cm": 181,
+   "depth_cm": 49,
+   "layer_grain": "SH",
+   "count": 1,
+   "comment": "Label on V \"Feb 14\"; layer note \"SH @ 181cm needles\""
+  }
+ ],
+ "named_layers": [
+  {
+   "name": "Jan 24 SH",
+   "height_cm": 169,
+   "depth_cm": 61,
+   "grain": "SH"
+  },
+  {
+   "name": "Feb 14 SH",
+   "height_cm": 181,
+   "depth_cm": 49,
+   "grain": "SH"
+  }
+ ],
+ "notes": "CT22: CTH 22 SC, CT11: CTM 11 SP,",
+ "summary": "HS 230 cm; pit starts at 114 cm: P RG 114-160 cm, 1F+ FCxr/RGxf, Jan 24 SH at 169-170 cm (CTH22 SC), P RG 170-181 cm, Feb 14 SH needles at 181 cm (CTM11 SP), DF 181-227 cm softening upward, thin MFcr at 227-228 cm and soft PP/rime surface",
+ "confidence": "medium",
+ "reading_issues": "Broken axis: the chart only shows the pack from 114 cm up; the lower 114 cm was not observed, so bottom_cm of the first layer is 114 (not ground). Elevation in feet (5873 ft = 1790 m). Air temperature blank, no temperature profile. Square-with-dot glyph uncertain (FCxr/RGxf). Layer 169-170 is pink (named). Test lines sit at 170 and 181 cm as printed; 181 cm label says V \"Feb 14\" (SH needles in layer note)."
+}

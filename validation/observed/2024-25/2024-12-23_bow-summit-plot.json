@@ -1,0 +1,230 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Bow Summit study plot/2024-12-23 Bow Summit Study Plot.jpg"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Bow Summit Study Plot",
+  "site_slug": "bow-summit-plot",
+  "chart_format": "snowpilot",
+  "date": "2024-12-23",
+  "time": "13:00",
+  "observer": null,
+  "lat": null,
+  "lon": null,
+  "elevation_m": null,
+  "elevation_raw": null,
+  "aspect": null,
+  "slope_deg": null,
+  "air_temp_c": -1.0,
+  "sky": "OVC",
+  "precip": "S-1",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 65,
+  "surface_grain": null,
+  "foot_pen_cm": 65,
+  "ski_pen_cm": null,
+  "header_other": {
+    "PF": "65",
+    "org_line": "Banff Visitor Safety",
+    "region": "Banff, Yoho and Kootenay, AB",
+    "site_header": "Bow Summit plot"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 9,
+      "depth_top_cm": 56,
+      "grain": "DH",
+      "grain2": "MF",
+      "grain_raw": "∧(○)",
+      "size_mm": [
+        5.0,
+        5.0
+      ],
+      "hardness": "F→P",
+      "hardness_idx": 2.5,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Hardness gradient in chart: F at base (0 cm) rising linearly to P at top (9 cm); hardness_idx is the mean (2.5). Secondary form is open circle (MF).",
+      "hardness_bottom": "F",
+      "hardness_bottom_idx": 1.0,
+      "hardness_top": "P",
+      "hardness_top_idx": 4.0
+    },
+    {
+      "bottom_cm": 9,
+      "top_cm": 11,
+      "depth_top_cm": 54,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "◎ (two linked circles)",
+      "size_mm": null,
+      "hardness": "P-",
+      "hardness_idx": 3.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Thin crust (2 cm) above basal DH; CT10 SC failure at its base (9 cm)."
+    },
+    {
+      "bottom_cm": 11,
+      "top_cm": 20,
+      "depth_top_cm": 45,
+      "grain": "FC",
+      "grain2": "DH",
+      "grain_raw": "□(∧)",
+      "size_mm": [
+        2.0,
+        5.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Chart size \"2-5(4)\": FC 2-5 mm, secondary DH 4 mm."
+    },
+    {
+      "bottom_cm": 20,
+      "top_cm": 33,
+      "depth_top_cm": 32,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        3.0
+      ],
+      "hardness": "4F-",
+      "hardness_idx": 1.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 33,
+      "top_cm": 40,
+      "depth_top_cm": 25,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 40,
+      "top_cm": 48,
+      "depth_top_cm": 17,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 48,
+      "top_cm": 62,
+      "depth_top_cm": 3,
+      "grain": "PP",
+      "grain2": "FC",
+      "grain_raw": "+(□)",
+      "size_mm": [
+        1.0,
+        2.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Chart size \"1-2(0.5)\": PP 1-2 mm, secondary FC 0.5 mm. CT4 SC failure at 58 cm lies within this layer."
+    },
+    {
+      "bottom_cm": 62,
+      "top_cm": 65,
+      "depth_top_cm": 0,
+      "grain": "PP",
+      "grain2": null,
+      "grain_raw": "+",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Surface layer, PP 2 mm."
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 0,
+      "t_c": 0.0
+    },
+    {
+      "h_cm": 40,
+      "t_c": -2.0
+    },
+    {
+      "h_cm": 55,
+      "t_c": -2.0
+    },
+    {
+      "h_cm": 65,
+      "t_c": -1.0
+    }
+  ],
+  "tests": [
+    {
+      "raw": "CT4, SC @58cm x2",
+      "type": "CT",
+      "score": "CT4",
+      "taps": 4,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 58,
+      "depth_cm": 7,
+      "layer_grain": "PP",
+      "count": 2
+    },
+    {
+      "raw": "CT10, SC @9cm x2",
+      "type": "CT",
+      "score": "CT10",
+      "taps": 10,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 9,
+      "depth_cm": 56,
+      "layer_grain": "DH",
+      "count": 2
+    }
+  ],
+  "named_layers": [],
+  "notes": "",
+  "summary": "Basal DH/MF 0-9 cm (hardness gradient F to P) under a thin MFcr crust at 9-11 cm, FC/DH 11-20 cm (4F), FC 20-48 cm (4F- to F), 14 cm of PP/FC-PP at top; CT10 SC at 9 cm (base of crust, x2) and CT4 SC at 58 cm (x2); HS 65 cm.",
+  "confidence": "high",
+  "reading_issues": "SnowPilot chart with no elevation, aspect, slope or coordinates in header (nominal plot ~2040 m, 51.709,-116.479 not printed); no surface-grain field in SnowPilot header. Date 23/12/2024 read DD/MM/YYYY. Basal layer 0-9 cm has a sloped hardness edge (F at 0 cm to P at 9 cm): recorded with hardness \"F-P\", hardness_idx = mean 2.5 plus explicit bottom/top values. \"x2\" after each test read as the result seen twice (count 2). Temperature dots at 0, 40, 55, 65 cm read against the top axis (43.25 px per degC)."
+}

@@ -1,0 +1,232 @@
+{
+  "source_files": [
+    "profiles/2024-2025/20241112 Wawa Ridge profile GS & LP.jpg"
+  ],
+  "season": "2024-25",
+  "kind": "test_profile",
+  "site": "Wawa Ridge",
+  "site_slug": "wawa-ridge",
+  "chart_format": "snowpilot",
+  "date": "2024-11-18",
+  "time": "12:30",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.09281,
+  "lon": -115.79463,
+  "elevation_m": 2395,
+  "elevation_raw": "2395 m",
+  "aspect": "E",
+  "slope_deg": null,
+  "air_temp_c": -8,
+  "sky": null,
+  "precip": null,
+  "wind": null,
+  "blowing_snow": null,
+  "hs_cm": 58,
+  "surface_grain": null,
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {
+    "chart_title": "Wawa Ridge",
+    "region": "Banff, Yoho and Kootenay, AB",
+    "header_date_raw": "18/11/2024 - 12:30",
+    "stability": null,
+    "wind_loading": null,
+    "specifics": null,
+    "layer_notes": [
+      "46-24cm: Problematic layer",
+      "6-0cm: clusters"
+    ],
+    "filename_suffix": "GS & LP (unexplained, probably initials)"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 6,
+      "depth_top_cm": 52,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        3.0,
+        6.0
+      ],
+      "hardness": "P",
+      "hardness_idx": 4.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "layer note '6-0cm: clusters' (clustered facets)"
+    },
+    {
+      "bottom_cm": 6,
+      "top_cm": 8,
+      "depth_top_cm": 50,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "I",
+      "hardness_idx": 6.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "no grain form/size entered; thin ice-hard (I) layer, bar reaches the I tick; moisture D"
+    },
+    {
+      "bottom_cm": 8,
+      "top_cm": 12,
+      "depth_top_cm": 46,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        3.0
+      ],
+      "hardness": "4F-",
+      "hardness_idx": 1.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 12,
+      "top_cm": 24,
+      "depth_top_cm": 34,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "square outline with filled rounded bottom (mixed FC/RG glyph)",
+      "size_mm": [
+        1.0,
+        2.0
+      ],
+      "hardness": "4F+",
+      "hardness_idx": 2.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "red problematic-layer line along its top edge at 24 cm, where both tests failed (Nov 9 decomposing SH 10 mm with facets)"
+    },
+    {
+      "bottom_cm": 24,
+      "top_cm": 46,
+      "depth_top_cm": 12,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "square outline with filled rounded bottom (mixed FC/RG glyph)",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "4F+",
+      "hardness_idx": 2.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "layer note '46-24cm: Problematic layer'"
+    },
+    {
+      "bottom_cm": 46,
+      "top_cm": 56,
+      "depth_top_cm": 2,
+      "grain": "DF",
+      "grain2": "RG",
+      "grain_raw": "⟋(●)",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 56,
+      "top_cm": 58,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "surface layer"
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 50,
+      "t_c": -7.5
+    },
+    {
+      "h_cm": 40,
+      "t_c": -6.5
+    },
+    {
+      "h_cm": 30,
+      "t_c": -4.5
+    },
+    {
+      "h_cm": 20,
+      "t_c": -2.5
+    },
+    {
+      "h_cm": 10,
+      "t_c": -1.2
+    },
+    {
+      "h_cm": 0,
+      "t_c": 0.0
+    }
+  ],
+  "tests": [
+    {
+      "raw": "ECTP11 @24cm on sh 10 mm",
+      "type": "ECT",
+      "score": "ECTP11",
+      "taps": 11,
+      "propagation": "P",
+      "fracture": null,
+      "height_cm": 24,
+      "depth_cm": 34,
+      "layer_grain": "SH",
+      "count": 1,
+      "comment": "on decomposing surface hoar 10 mm (Nov 9 layer)"
+    },
+    {
+      "raw": "CT7, SC @24cm Nov 9",
+      "type": "CT",
+      "score": "CT7",
+      "taps": 7,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 24,
+      "depth_cm": 34,
+      "layer_grain": "SH",
+      "count": 1,
+      "comment": "Nov 9 layer"
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Nov 9 layer (decomposing SH 10 mm with facets)",
+      "height_cm": 24,
+      "depth_cm": 34,
+      "grain": "SH"
+    }
+  ],
+  "notes": "Chart Notes: 'Nov 9th layer at 24 cm - decomposing sh at 10 mm with facets'. Layer Notes: '46-24cm: Problematic layer'; '6-0cm: clusters'. Stability tests column: 'ECTP11 @24cm on sh 10 mm', 'CT7, SC @24cm Nov 9'. Sky cover, precipitation, wind, slope angle blank.",
+  "summary": "Basal FC 3-6 mm (P, clustered) 0-6 cm under a thin ice layer (6-8 cm), FC 8-12 cm (4F-), FCxr 1-2 mm 12-46 cm (4F+, 'problematic layer' 24-46 cm) and DF/RG 46-58 cm (4F then F); ECTP11 and CT7 SC both at 24 cm on the Nov 9 decomposing SH layer; temps -7.5 C at 50 cm to 0 C at ground; HS 58 cm",
+  "confidence": "high",
+  "reading_issues": "Filename date is 20241112 but the chart header reads 18/11/2024 - 12:30; header date used. Mixed square/rounded glyph at 12-46 cm (open square with a filled rounded bottom) read as FCxr per the square-based rule; could be RGxf. Bar edges and boundaries measured from pixels (0, 6, 8, 12, 24, 46, 56, 58 cm) and match the table gutter lines; 6-8 cm layer has a blank form/size and I (ice) hardness. Temperature dots extracted by pixel centroid against the top axis (-10 to 0 C). Red line at 24 cm is the problematic-layer marker."
+}

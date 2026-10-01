@@ -1,0 +1,180 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Bow Summit study plot/2025-02-14 Bow Summit Study Plot.pdf"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Bow Summit Study Plot",
+  "site_slug": "bow-summit-plot",
+  "chart_format": "propagation_labs",
+  "date": "2025-02-14",
+  "time": "14:03",
+  "observer": "Conrad Janzen",
+  "lat": 51.7093,
+  "lon": -116.4787,
+  "elevation_m": 2030,
+  "elevation_raw": "2030m",
+  "aspect": "SE",
+  "slope_deg": 0,
+  "air_temp_c": -15.0,
+  "sky": "Overcast",
+  "precip": "No Precipitation",
+  "wind": "Calm",
+  "blowing_snow": "No Transport",
+  "hs_cm": 83,
+  "surface_grain": "SH",
+  "foot_pen_cm": 45,
+  "ski_pen_cm": 15,
+  "header_other": {
+    "surface_grain_raw": "Surface Hoar",
+    "profile_name": "Bow Summit study plot"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 13,
+      "depth_top_cm": 70,
+      "grain": "DH",
+      "grain2": "IF",
+      "grain_raw": "∧(▬)",
+      "size_mm": [
+        4.0,
+        8.0
+      ],
+      "hardness": "P",
+      "hardness_idx": 4,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "DH primary with a filled-bar secondary (IF, ice formation/crust remnant); chart size 4.0-8.0 mm."
+    },
+    {
+      "bottom_cm": 13,
+      "top_cm": 24,
+      "depth_top_cm": 59,
+      "grain": "DH",
+      "grain2": "FC",
+      "grain_raw": "∧(□)",
+      "size_mm": [
+        4.0,
+        8.0
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Chart size \"4.0-8.0(3.0-5.0)\": DH 4-8 mm, secondary FC 3-5 mm."
+    },
+    {
+      "bottom_cm": 24,
+      "top_cm": 28,
+      "depth_top_cm": 55,
+      "grain": "DH",
+      "grain2": null,
+      "grain_raw": "∧",
+      "size_mm": [
+        5.0,
+        8.0
+      ],
+      "hardness": "4F+",
+      "hardness_idx": 2.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Softer DH layer between harder layers; CT26 PC failure at its base (24 cm)."
+    },
+    {
+      "bottom_cm": 28,
+      "top_cm": 40,
+      "depth_top_cm": 43,
+      "grain": "FC",
+      "grain2": "DH",
+      "grain_raw": "□(∧)",
+      "size_mm": [
+        3.0,
+        5.0
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Chart size \"3.0-5.0(4.0-8.0)\": FC 3-5 mm, secondary DH 4-8 mm."
+    },
+    {
+      "bottom_cm": 40,
+      "top_cm": 55,
+      "depth_top_cm": 28,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        3.0,
+        5.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 55,
+      "top_cm": 69,
+      "depth_top_cm": 14,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        3.0,
+        5.0
+      ],
+      "hardness": "F+",
+      "hardness_idx": 1.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 69,
+      "top_cm": 83,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        2.0,
+        3.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Surface layer."
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT26PC",
+      "type": "CT",
+      "score": "CT26",
+      "taps": 26,
+      "propagation": null,
+      "fracture": "PC",
+      "height_cm": 24,
+      "depth_cm": 59,
+      "layer_grain": "DH",
+      "count": 1
+    }
+  ],
+  "named_layers": [],
+  "notes": "Occasional SH crystals to 5mm but not a widespread layer.",
+  "summary": "Basal DH 0-28 cm (P at ground, 1F+ at 13-24 cm, softer 4F+ DH at 24-28 cm), FC/DH 28-40 cm (1F-), FC 40-69 cm (1F to F+) and 14 cm DF at top; CT26 PC at 24 cm (base of the soft DH layer); HS 83 cm.",
+  "confidence": "high",
+  "reading_issues": "Header surface grain is \"Surface Hoar\" but notes say SH is only occasional and not a widespread layer; the top layer in the table is DF 2-3 mm, so no SH layer is recorded in layers. Test line (CT26PC) sits exactly on the 24 cm layer boundary. No temperature profile on this chart. Hardness read from bar edges vs. gridlines (1/3-step ticks)."
+}

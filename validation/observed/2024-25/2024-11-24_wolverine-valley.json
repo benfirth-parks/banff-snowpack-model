@@ -1,0 +1,230 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Test profiles/Wolverine Valley 20241124.pdf"
+  ],
+  "season": "2024-25",
+  "kind": "test_profile",
+  "site": "Wolverine Valley",
+  "site_slug": "wolverine-valley",
+  "chart_format": "snowpilot",
+  "date": "2024-11-24",
+  "time": "13:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.43555,
+  "lon": -116.08634,
+  "elevation_m": 2500,
+  "elevation_raw": "2500 m",
+  "aspect": "NW",
+  "slope_deg": 15,
+  "air_temp_c": -10.5,
+  "sky": "SCT",
+  "precip": "NO",
+  "wind": "SW Light Breeze",
+  "blowing_snow": null,
+  "hs_cm": 65,
+  "surface_grain": null,
+  "foot_pen_cm": 35,
+  "ski_pen_cm": 15,
+  "header_other": {
+    "PF": "35",
+    "PS": "15",
+    "chart_title": "Wolverine Valley",
+    "region": "Banff, Yoho and Kootenay, AB",
+    "header_date_raw": "24/11/2024 - 13:00",
+    "wind_loading": "no",
+    "stability": null,
+    "specifics": null,
+    "layer_notes": [
+      "15-11cm: Problematic layer"
+    ]
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 11,
+      "depth_top_cm": 54,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "◎ (two linked circles)",
+      "size_mm": null,
+      "hardness": "K",
+      "hardness_idx": 5.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "basal crust, no size entered (the 'Oct crust' of the notes)"
+    },
+    {
+      "bottom_cm": 11,
+      "top_cm": 15,
+      "depth_top_cm": 50,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        3.0,
+        3.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "layer note '15-11cm: Problematic layer'"
+    },
+    {
+      "bottom_cm": 15,
+      "top_cm": 16,
+      "depth_top_cm": 49,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "◎ (two linked circles)",
+      "size_mm": null,
+      "hardness": "K",
+      "hardness_idx": 5.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "thin 1 cm crust, no size entered"
+    },
+    {
+      "bottom_cm": 16,
+      "top_cm": 26,
+      "depth_top_cm": 39,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 26,
+      "top_cm": 31,
+      "depth_top_cm": 34,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "CT13 and CT18 SC failed at its top (31 cm)"
+    },
+    {
+      "bottom_cm": 31,
+      "top_cm": 46,
+      "depth_top_cm": 19,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 46,
+      "top_cm": 54,
+      "depth_top_cm": 11,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 54,
+      "top_cm": 65,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "surface layer"
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT13, SC @31cm",
+      "type": "CT",
+      "score": "CT13",
+      "taps": 13,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 31,
+      "depth_cm": 34,
+      "layer_grain": "FC",
+      "count": 1
+    },
+    {
+      "raw": "CT18, SC @31cm",
+      "type": "CT",
+      "score": "CT18",
+      "taps": 18,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 31,
+      "depth_cm": 34,
+      "layer_grain": "FC",
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Oct crust (no result)",
+      "height_cm": 5.5,
+      "depth_cm": 59.5,
+      "grain": "MFcr",
+      "bottom_cm": 0,
+      "top_cm": 11
+    },
+    {
+      "name": "Problematic layer (layer note 15-11 cm)",
+      "height_cm": 13,
+      "depth_cm": 52,
+      "grain": "FC",
+      "bottom_cm": 11,
+      "top_cm": 15
+    }
+  ],
+  "notes": "Chart Notes: 'No result on the Oct crust layer'. Layer Notes: '15-11cm: Problematic layer'. Stability tests column: 'CT13, SC @31cm' and 'CT18, SC @31cm' (two arrows to 31 cm). Header has no HS field (HS taken from the top height-axis label, 65). Stability blank. No temperature profile.",
+  "summary": "Basal K crust (MFcr) 0-11 cm ('Oct crust', no test result) under FC 3 mm 11-15 cm (F, problematic layer) and a thin K crust at 15-16 cm; FC 16-46 cm (4F/1F, 1-2 mm) and DF 46-65 cm; CT13 and CT18 SC at 31 cm (top of 1F FC layer); PF 35, PS 15; HS 65 cm",
+  "confidence": "high",
+  "reading_issues": "Header has no 'HS:' field; hs_cm 65 is the top label of the height axis (consistent with the first layer line). Layer boundaries from bar steps (0, 11, 15, 16, 26, 31, 46, 54, 65 cm); the thin 15-16 cm crust edges are +-0.2 cm. Moisture column blank. Rendered from a vector PDF (no text layer), read visually."
+}

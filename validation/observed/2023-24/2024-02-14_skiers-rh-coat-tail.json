@@ -1,0 +1,48 @@
+{
+  "source_files": ["profiles/2023-2024/Other Profiles/2024-02-15 Skiers RH Coat Tail.jpg"],
+  "season": "2023-24",
+  "kind": "test_profile",
+  "site": "Skiers RH Coat Tail",
+  "site_slug": "skiers-rh-coat-tail",
+  "chart_format": "snowpilot",
+  "date": "2024-02-14",
+  "time": "13:15",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.46257,
+  "lon": -116.57224,
+  "elevation_m": 2380,
+  "elevation_raw": "2380 m",
+  "aspect": "NE",
+  "slope_deg": 28,
+  "air_temp_c": -22,
+  "sky": "CLR",
+  "precip": "NO",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 160,
+  "surface_grain": null,
+  "foot_pen_cm": 30,
+  "ski_pen_cm": 20,
+  "header_other": {"PF": "30", "PS": "20", "HS": "160", "wind_loading": null, "coord_raw": "51.46257N, -116.57224W", "slope_raw": "28°", "layer_notes": "135-134cm: Feb 3rd", "chart_title": "Skiers RH Coat Tail", "region": "Banff, Yoho and Kootenay, AB", "specifics": null, "stability": null, "surface_form": "top surface-form row blank", "filename_date": "2024-02-15 (header date is 14/02/2024)"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 24, "depth_top_cm": 136, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "1F+", "hardness_idx": 3.33, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered"},
+    {"bottom_cm": 24, "top_cm": 55, "depth_top_cm": 105, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "P", "hardness_idx": 4.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered"},
+    {"bottom_cm": 55, "top_cm": 96, "depth_top_cm": 64, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "P+", "hardness_idx": 4.33, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered; hardest thick layer in the pit"},
+    {"bottom_cm": 96, "top_cm": 121, "depth_top_cm": 39, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "P", "hardness_idx": 4.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered"},
+    {"bottom_cm": 121, "top_cm": 134, "depth_top_cm": 26, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "1F", "hardness_idx": 3.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered"},
+    {"bottom_cm": 134, "top_cm": 135, "depth_top_cm": 25, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "K", "hardness_idx": 5.0, "moisture": null, "density": null, "uncertain": false, "comment": "layer note '135-134cm: Feb 3rd'; 1 cm very hard layer (crust by hardness); grain not recorded; CT23 PC at its top (135 cm)"},
+    {"bottom_cm": 135, "top_cm": 148, "depth_top_cm": 12, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered"},
+    {"bottom_cm": 148, "top_cm": 160, "depth_top_cm": 0, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "F", "hardness_idx": 1.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered"}
+  ],
+  "temps": [],
+  "tests": [
+    {"raw": "CT23, PC @135cm x2", "type": "CT", "score": "CT23", "taps": 23, "propagation": null, "fracture": "PC", "height_cm": 135, "depth_cm": 25, "layer_grain": null, "count": 2}
+  ],
+  "named_layers": [
+    {"name": "Feb 3rd", "height_cm": 135, "depth_cm": 25, "grain": null, "comment": "layer note '135-134cm: Feb 3rd'; the 1 cm K-hardness layer at 134-135 cm; grain/type not recorded"}
+  ],
+  "notes": "Layer Notes: 135-134cm: Feb 3rd. Stability tests column: 'CT23, PC @135cm' with free text 'x2'; layer comment '135-134cm: Feb 3rd'. Wind Loading, Specifics, Stability blank; chart 'Notes:' blank. The crystal form/size/moisture table is blank for every layer. No temperature profile.",
+  "summary": "Cold (air -22 C), clear NE 28 deg pit at 2380 m, HS 160 cm, with no grain forms recorded: very hard snowpack (1F+ 0-24, P 24-55, P+ 55-96, P 96-121, 1F 121-134) under a 1 cm K layer 'Feb 3rd' at 134-135 cm, then 4F 135-148 and soft F 148-160; CT23 PC (x2) at 135 cm on the Feb 3rd layer; PF 30, PS 20; no temperatures",
+  "confidence": "high",
+  "reading_issues": "Filename says 2024-02-15 but the chart header date is 14/02/2024 (13:15); the header date is used. Hardness bars and boundaries (24, 55, 96, 121, 134, 135, 148 cm) measured from pixels; at 3.7 px/cm boundaries are good to about 0.3 cm and were rounded to whole cm. The grain-form/size/moisture table is blank for every layer, so all grain fields are null; only the layer note 'Feb 3rd' (134-135 cm, K-hard) gives a layer identity (likely a crust, type not stated). CT23 PC at 135 cm sits at the top of that thin K layer (layer_grain left null); 'x2' is non-bold free text, count 2. Elevation, coordinates, aspect, slope and air temperature are as printed in the header."
+}

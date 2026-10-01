@@ -1,0 +1,218 @@
+{
+ "source_files": [
+  "profiles/2025-2026/Study Plot profiles/Goat's Eye/2025-12-13_1224_SSV Goat's Eye Study Plot.pdf",
+  "profiles/2025-2026/Study Plot profiles/Goat's Eye/2025-12-13_1224_SSV Goat's Eye Study Plot.png"
+ ],
+ "season": "2025-26",
+ "kind": "study_plot",
+ "site": "Goat's Eye Study Plot",
+ "site_slug": "goats-eye-plot",
+ "chart_format": "propagation_labs",
+ "date": "2025-12-13",
+ "time": "12:24",
+ "observer": "Conrad Janzen",
+ "lat": 51.0902,
+ "lon": -115.7553,
+ "elevation_m": 2271,
+ "elevation_raw": "2271m",
+ "aspect": "S",
+ "slope_deg": 0,
+ "air_temp_c": -1.7,
+ "sky": "Overcast",
+ "precip": "No Precipitation",
+ "wind": "Moderate,SW",
+ "blowing_snow": "Moderate",
+ "hs_cm": 109,
+ "surface_grain": "PP",
+ "foot_pen_cm": 65,
+ "ski_pen_cm": 25,
+ "header_other": {
+  "profile_name": "SSV Goat's Eye Study Plot",
+  "org": null,
+  "hardness_axis": "older non-linear Propagation Labs axis"
+ },
+ "layers": [
+  {
+   "bottom_cm": 0,
+   "top_cm": 40,
+   "depth_top_cm": 69,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    1.0,
+    2.0
+   ],
+   "hardness": "P-",
+   "hardness_idx": 3.83,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "P at base to P- at top"
+  },
+  {
+   "bottom_cm": 40,
+   "top_cm": 47,
+   "depth_top_cm": 62,
+   "grain": "IF",
+   "grain2": "FCxr",
+   "grain_raw": "=(⌂)",
+   "size_mm": null,
+   "hardness": "K-",
+   "hardness_idx": 4.5,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "Named \"Nov13 crust\"; layer note \"FC crystals immediately below the crust\"; K- at base to P+ at top"
+  },
+  {
+   "bottom_cm": 47,
+   "top_cm": 55,
+   "depth_top_cm": 54,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    2.0,
+    3.0
+   ],
+   "hardness": "4F",
+   "hardness_idx": 2,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "Named \"Nov 22 FC/CR\""
+  },
+  {
+   "bottom_cm": 55,
+   "top_cm": 82,
+   "depth_top_cm": 27,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.5,
+    0.5
+   ],
+   "hardness": "1F-",
+   "hardness_idx": 2.83,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "1F at base to 1F- at top"
+  },
+  {
+   "bottom_cm": 82,
+   "top_cm": 95,
+   "depth_top_cm": 14,
+   "grain": "PP",
+   "grain2": null,
+   "grain_raw": "+",
+   "size_mm": [
+    1.0,
+    1.5
+   ],
+   "hardness": "4F",
+   "hardness_idx": 2,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 95,
+   "top_cm": 109,
+   "depth_top_cm": 0,
+   "grain": "PPrm",
+   "grain2": null,
+   "grain_raw": "∀",
+   "size_mm": [
+    2.0,
+    2.0
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "Surface rime"
+  }
+ ],
+ "temps": [
+  {
+   "h_cm": 79,
+   "t_c": -5.0
+  },
+  {
+   "h_cm": 89,
+   "t_c": -5.0
+  },
+  {
+   "h_cm": 99,
+   "t_c": -4.0
+  },
+  {
+   "h_cm": 109,
+   "t_c": -2.0
+  }
+ ],
+ "tests": [
+  {
+   "raw": "CT15SP",
+   "type": "CT",
+   "score": "CT15",
+   "taps": 15,
+   "propagation": null,
+   "fracture": "SP",
+   "height_cm": 60,
+   "depth_cm": 49,
+   "layer_grain": null,
+   "count": 1,
+   "comment": "Notes: \"Not quite planar\"; no layer given"
+  },
+  {
+   "raw": "CT24SC",
+   "type": "CT",
+   "score": "CT24",
+   "taps": 24,
+   "propagation": null,
+   "fracture": "SC",
+   "height_cm": 55,
+   "depth_cm": 54,
+   "layer_grain": "FCxr",
+   "count": 1,
+   "comment": "Label on Nov 22 FC/CR"
+  },
+  {
+   "raw": "CT24BRK",
+   "type": "CT",
+   "score": "CT24",
+   "taps": 24,
+   "propagation": null,
+   "fracture": "BRK",
+   "height_cm": 5,
+   "depth_cm": 104,
+   "layer_grain": "FCxr",
+   "count": 1,
+   "comment": "fracture character printed as BRK"
+  }
+ ],
+ "named_layers": [
+  {
+   "name": "Nov13 crust",
+   "height_cm": 40,
+   "depth_cm": 69,
+   "grain": "IF"
+  },
+  {
+   "name": "Nov 22 FC/CR",
+   "height_cm": 55,
+   "depth_cm": 54,
+   "grain": "FCxr"
+  }
+ ],
+ "notes": "CT15SP: Not quite planar,",
+ "summary": "HS 109 cm: hard FCxr base 0-40 cm (P) under Nov13 crust 40-47 cm (K-/P+) with FC below, Nov 22 FC/CR layer 47-55 cm (4F) failing CT24 SC, RG 55-82 cm (1F), soft PP 82-95 cm and rime surface; CT15 SP at 60 cm, CT24 BRK at 5 cm; temps only in upper pack",
+ "confidence": "medium",
+ "reading_issues": "PDF and PNG exports are the same pit; both used. Older non-linear hardness axis. CT15SP height (60) is from the yellow line and has no layer label. CT24BRK fracture text printed as BRK (kept). Temperature dots only exist for the upper 30 cm (79-109 cm). Sloped bars reported as mean hardness."
+}

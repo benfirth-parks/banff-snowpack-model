@@ -1,0 +1,154 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Bow Summit study plot/2025-02-01 Bow Summit Study Plot.pdf"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Bow Summit Study Plot",
+  "site_slug": "bow-summit-plot",
+  "chart_format": "propagation_labs",
+  "date": "2025-02-01",
+  "time": "11:40",
+  "observer": "Aaron Beardmore",
+  "lat": 51.748,
+  "lon": -116.515,
+  "elevation_m": 1880,
+  "elevation_raw": "6168ft",
+  "aspect": null,
+  "slope_deg": 2,
+  "air_temp_c": null,
+  "sky": null,
+  "precip": null,
+  "wind": "Light, NW",
+  "blowing_snow": "Light",
+  "hs_cm": 85,
+  "surface_grain": "PP",
+  "foot_pen_cm": 50,
+  "ski_pen_cm": 25,
+  "header_other": {
+    "surface_grain_raw": "Rime 1.0mm",
+    "profile_name": "Bow Summit Profile - 2025-02-01"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 12,
+      "depth_top_cm": 73,
+      "grain": "DH",
+      "grain2": null,
+      "grain_raw": "∧",
+      "size_mm": [
+        5.0,
+        5.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Named \"October crust\"; note \"remnants of October crust\". Basal layer drawn with DH glyph, 5.0 mm. Bar rendered red/salmon in chart (layer highlighted by observer)."
+    },
+    {
+      "bottom_cm": 12,
+      "top_cm": 70,
+      "depth_top_cm": 15,
+      "grain": "FC",
+      "grain2": "DH",
+      "grain_raw": "□(∧)",
+      "size_mm": [
+        2.0,
+        3.0
+      ],
+      "hardness": "4F-",
+      "hardness_idx": 1.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Chart size \"2.0-3.0(2.0-3.0)\": FC 2.0-3.0 mm with secondary DH 2.0-3.0 mm."
+    },
+    {
+      "bottom_cm": 70,
+      "top_cm": 85,
+      "depth_top_cm": 0,
+      "grain": "PP",
+      "grain2": null,
+      "grain_raw": "∀",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": null,
+      "density": null,
+      "uncertain": true,
+      "comment": "Glyph drawn as inverted A (Propagation Labs rime symbol); header surface grain is Rime 1.0 mm. Classed PP (rimed precipitation particles, PPrm)."
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 0,
+      "t_c": -1.2
+    },
+    {
+      "h_cm": 10,
+      "t_c": -2.0
+    },
+    {
+      "h_cm": 20,
+      "t_c": -2.6
+    },
+    {
+      "h_cm": 31,
+      "t_c": -3.3
+    },
+    {
+      "h_cm": 41,
+      "t_c": -3.9
+    },
+    {
+      "h_cm": 51,
+      "t_c": -4.0
+    },
+    {
+      "h_cm": 61,
+      "t_c": -4.6
+    },
+    {
+      "h_cm": 75,
+      "t_c": -5.3
+    },
+    {
+      "h_cm": 85,
+      "t_c": -6.2
+    }
+  ],
+  "tests": [
+    {
+      "raw": "CTN: x 2",
+      "type": "CT",
+      "score": "CTN",
+      "taps": null,
+      "propagation": null,
+      "fracture": null,
+      "height_cm": null,
+      "depth_cm": null,
+      "layer_grain": null,
+      "count": 2
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "October crust",
+      "height_cm": 6,
+      "bottom_cm": 0,
+      "top_cm": 12,
+      "depth_cm": 79,
+      "grain": "DH"
+    }
+  ],
+  "notes": "CTN: x 2,",
+  "summary": "85 cm HS: 12 cm basal DH (4F, \"remnants of October crust\"), 58 cm FC/DH (4F-, 2-3 mm) and 15 cm rimed PP (F) on top; CTN x2 (no failure); temperature profile from -1.2 degC at ground to -6.2 degC at surface.",
+  "confidence": "medium",
+  "reading_issues": "Header coordinates (51.7480,-116.5150) and elevation (6168 ft = 1880 m) do NOT match the Bow Summit study plot (~2040 m, 51.709,-116.479): about 5 km away and ~160 m lower, different observer (Aaron Beardmore), profile named \"Bow Summit Profile - 2025-02-01\". Filed as bow-summit-plot because of the folder/filename, but it may not be the plot itself. Surface grain in header is \"Rime 1.0mm\" and top layer glyph (inverted A) read as rime; surface_grain stored as PP (rime = PPrm; the TRANSCRIBE class list has no separate rime class) with the raw header text kept in header_other. CTN label drawn at the top of the chart; no failure height. Temperature dots read against the top axis (0 at left, 128.3 px per degC), heights against the left axis."
+}

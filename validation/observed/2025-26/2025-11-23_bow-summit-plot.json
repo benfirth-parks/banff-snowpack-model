@@ -1,0 +1,133 @@
+{
+ "source_files": [
+  "profiles/2025-2026/Study Plot profiles/Bow Summit/2025-11-23_Bow Summit Study Plot.pdf"
+ ],
+ "season": "2025-26",
+ "kind": "study_plot",
+ "site": "Bow Summit Study Plot",
+ "site_slug": "bow-summit-plot",
+ "chart_format": "propagation_labs",
+ "date": "2025-11-23",
+ "time": "13:02",
+ "observer": "Conrad Janzen",
+ "lat": 51.711,
+ "lon": -116.4794,
+ "elevation_m": 2040,
+ "elevation_raw": "2040m",
+ "aspect": "S",
+ "slope_deg": 0,
+ "air_temp_c": -2.4,
+ "sky": "Overcast",
+ "precip": "Snow <0.5cm/hr",
+ "wind": "Calm",
+ "blowing_snow": "No Transport",
+ "hs_cm": 65,
+ "surface_grain": "PP",
+ "foot_pen_cm": 35,
+ "ski_pen_cm": 20,
+ "header_other": {
+  "profile_name": "Bow Summit Study Plot",
+  "org": null,
+  "hardness_axis": "older non-linear Propagation Labs axis"
+ },
+ "layers": [
+  {
+   "bottom_cm": 0,
+   "top_cm": 21,
+   "depth_top_cm": 44,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.5,
+    0.5
+   ],
+   "hardness": "1F+",
+   "hardness_idx": 3.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 21,
+   "top_cm": 23,
+   "depth_top_cm": 42,
+   "grain": "MFcr",
+   "grain2": null,
+   "grain_raw": "◎○ linked circles",
+   "size_mm": null,
+   "hardness": "P+",
+   "hardness_idx": 4.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "no grain size entered"
+  },
+  {
+   "bottom_cm": 23,
+   "top_cm": 28,
+   "depth_top_cm": 37,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "4F+",
+   "hardness_idx": 2.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 28,
+   "top_cm": 35,
+   "depth_top_cm": 30,
+   "grain": "IF",
+   "grain2": null,
+   "grain_raw": "▬",
+   "size_mm": null,
+   "hardness": "1F+",
+   "hardness_idx": 3.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "Named layer \"Nov13 crust\"; no grain size entered"
+  },
+  {
+   "bottom_cm": 35,
+   "top_cm": 65,
+   "depth_top_cm": 0,
+   "grain": "PPrm",
+   "grain2": null,
+   "grain_raw": "∀",
+   "size_mm": [
+    2.0,
+    2.0
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "Rime glyph; header surface grain PP"
+  }
+ ],
+ "temps": [],
+ "tests": [],
+ "named_layers": [
+  {
+   "name": "Nov13 crust",
+   "height_cm": 28,
+   "depth_cm": 37,
+   "grain": "IF"
+  }
+ ],
+ "notes": "No significant results in test results",
+ "summary": "HS 65 cm early-season pack: RG 0-28 cm (1F+/4F+) with thin MFcr at 21-23 cm, 1F+ ice layer (Nov13 crust) 28-35 cm, 2 mm rime (PPrm) F snow 35-65 cm; no tests, no temperatures",
+ "confidence": "high",
+ "reading_issues": "Older non-linear hardness axis (decoded against its own tick labels). Foot/ski pen from header. Pit has no stability tests and no temperature profile. Glyph at 35-65 cm read as rime (PPrm). Crust at 28-35 cm drawn as horizontal bar (IF), 7 cm thick and only 1F+, so the Nov13 crust is soft; MFcr at 21-23 cm is thin P+."
+}

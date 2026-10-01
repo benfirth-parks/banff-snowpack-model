@@ -1,0 +1,246 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Goats Eye study plot/2025-01-08_Goats Eye Study Plot.pdf",
+    "profiles/2024-2025/Goats Eye study plot/2025-01-08 Goats Eye study plot.jpg"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Goat's Eye Study Plot",
+  "site_slug": "goats-eye-plot",
+  "chart_format": "snowpilot",
+  "date": "2025-01-08",
+  "time": "11:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.08977,
+  "lon": -115.75474,
+  "elevation_m": 2280,
+  "elevation_raw": "2280 m",
+  "aspect": null,
+  "slope_deg": 0,
+  "air_temp_c": -1.5,
+  "sky": "BKN",
+  "precip": "NO",
+  "wind": "W Light Breeze",
+  "blowing_snow": null,
+  "hs_cm": 73,
+  "surface_grain": null,
+  "foot_pen_cm": 60,
+  "ski_pen_cm": null,
+  "header_other": {
+    "PF": "60",
+    "HS": "73",
+    "wind_loading": "yes",
+    "coord_raw": "51.08977N, -115.75474W",
+    "slope_raw": "0°",
+    "specifics": "Pit dug in a Ski Area",
+    "layer_notes": "31-13cm: Problematic layer",
+    "chart_title": "Goat's Eye study plot",
+    "surface_form": "blank (fixed top row above the HS line is empty); the top layer 71-73 cm is PP(DF) 1(1) mm",
+    "file_format_note": "PDF (FPDF) wrapping a SnowPilot 994x840 image; the JPG is the identical image"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 11,
+      "depth_top_cm": 62,
+      "grain": "DH",
+      "grain2": null,
+      "grain_raw": "∧",
+      "size_mm": [
+        3.0,
+        6.0
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 11,
+      "top_cm": 13,
+      "depth_top_cm": 60,
+      "grain": "MFcr",
+      "grain2": "FC",
+      "grain_raw": "◎◎(□)",
+      "size_mm": null,
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "thin 2 cm crust layer, the hardest layer in the pit (bar protrudes left of its neighbours); no size given in the table. A red flag line is drawn across its top edge (13 cm)."
+    },
+    {
+      "bottom_cm": 13,
+      "top_cm": 31,
+      "depth_top_cm": 42,
+      "grain": "FC",
+      "grain2": "DH",
+      "grain_raw": "□(∧)",
+      "size_mm": [
+        3.0,
+        5.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "chart size \"3-5(5)\": FC 3-5 mm, secondary DH 5 mm. Layer note \"31-13cm: Problematic layer\"."
+    },
+    {
+      "bottom_cm": 31,
+      "top_cm": 44,
+      "depth_top_cm": 29,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        4.0
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 44,
+      "top_cm": 50,
+      "depth_top_cm": 23,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        3.0
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 50,
+      "top_cm": 60,
+      "depth_top_cm": 13,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 60,
+      "top_cm": 71,
+      "depth_top_cm": 2,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 71,
+      "top_cm": 73,
+      "depth_top_cm": 0,
+      "grain": "PP",
+      "grain2": "DF",
+      "grain_raw": "+(⟋)",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "surface layer; chart size \"1(1)\": PP 1 mm, secondary DF 1 mm"
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 0,
+      "t_c": -1.0
+    },
+    {
+      "h_cm": 10,
+      "t_c": -2.5
+    },
+    {
+      "h_cm": 20,
+      "t_c": -4.0
+    },
+    {
+      "h_cm": 30,
+      "t_c": -5.5
+    },
+    {
+      "h_cm": 40,
+      "t_c": -6.5
+    },
+    {
+      "h_cm": 50,
+      "t_c": -7.5
+    },
+    {
+      "h_cm": 60,
+      "t_c": -9.0
+    },
+    {
+      "h_cm": 70,
+      "t_c": -4.5
+    }
+  ],
+  "tests": [
+    {
+      "raw": "CTN",
+      "type": "CT",
+      "score": "CTN",
+      "taps": null,
+      "propagation": null,
+      "fracture": null,
+      "height_cm": null,
+      "depth_cm": null,
+      "layer_grain": null,
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Problematic layer",
+      "height_cm": 22,
+      "bottom_cm": 13,
+      "top_cm": 31,
+      "depth_cm": 51,
+      "grain": "FC"
+    }
+  ],
+  "notes": "Specifics: Pit dug in a Ski Area. Wind Loading: yes. Layer Notes (header): '31-13cm: Problematic layer'. Stability tests column: 'CTN' (arrow at the ground, no failure height). Chart 'Notes:' field blank. Aspect and stability fields blank.",
+  "summary": "73 cm HS, faceted pack: basal DH 0-11 cm (1F-, 3-6 mm), a thin MFcr(FC) crust at 11-13 cm (1F+, hardest layer) under flagged FC(DH) 13-31 cm (4F, 3-5 mm), FC 31-60 cm (1F-), FC 60-71 cm (F, 1 mm) and PP(DF) 71-73 cm; strong near-surface temperature gradient (-4.5 at 70 cm, -9.0 at 60 cm, -1.0 at ground); CTN (no result)",
+  "confidence": "high",
+  "reading_issues": "The PDF wraps the same 994x840 SnowPilot raster as the JPG (pixel difference is JPEG noise only), so one JSON lists both. Hardness bar edges and layer boundaries measured from native-resolution pixels against the axis ticks; boundaries are integer cm (outline rows at 71.0, 60.0, 50.0, 44.1, 31.1, 13.0 and 11.05 cm). This chart's temperature axis spans -11 to 0 degC (39.4 px/degC), unlike the other Goat's Eye charts. The top (surface-form) row is blank so surface_grain is null; the highest temperature dot is at 70 cm, not at the surface (73 cm). Moisture column is D for every layer. The CTN arrow sits at the ground of the tests column (no failure height), so height/depth are null. Red flag line across the 13 cm boundary sits on top of the thin crust layer, whereas the Layer Notes call 13-31 cm the \"Problematic layer\"; the flag position vs layer is not fully clear. Sizes of the form \"a(b)\" recorded as the primary form size. Elevation printed 2280 m (other visits print 2295, 2300 and 2400 m)."
+}

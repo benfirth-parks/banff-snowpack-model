@@ -1,0 +1,146 @@
+{
+  "source_files": [
+    "profiles/2025-2026/Test profiles/2025-12-12_1355_Panorama Ridge SSE Aspect.pdf",
+    "profiles/2025-2026/Test profiles/2025-12-12_1355_Panorama Ridge SSE Aspect.png"
+  ],
+  "season": "2025-26",
+  "kind": "test_profile",
+  "site": "Panorama Ridge SSE Aspect",
+  "site_slug": "panorama-ridge-sse",
+  "chart_format": "propagation_labs",
+  "date": "2025-12-12",
+  "time": "13:55",
+  "observer": "Conrad Janzen",
+  "lat": 51.3114,
+  "lon": -116.1051,
+  "elevation_m": 2410,
+  "elevation_raw": "2410m",
+  "aspect": "SE",
+  "slope_deg": 27,
+  "air_temp_c": -14,
+  "sky": "Overcast",
+  "precip": "Snow <0.5cm/hr",
+  "wind": "Light,NW",
+  "blowing_snow": "No Transport",
+  "hs_cm": 120,
+  "surface_grain": "PP",
+  "foot_pen_cm": 60,
+  "ski_pen_cm": 25,
+  "header_other": {
+    "profile_name": "Panorama Ridge SSE Aspect",
+    "surface_grain_raw": "Precipitation Particles",
+    "org": null
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 28,
+      "depth_top_cm": 92,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "P",
+      "hardness_idx": 4.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "No grain form entered"
+    },
+    {
+      "bottom_cm": 28,
+      "top_cm": 58,
+      "depth_top_cm": 62,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "No grain form entered"
+    },
+    {
+      "bottom_cm": 58,
+      "top_cm": 62,
+      "depth_top_cm": 58,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": null,
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Named layer 'Nov 22 FC/CR' (4 cm thick, highlighted pink); CT14 SC failure at its top (62 cm). Notes call it 'the FC layer halfway down the snowpack'"
+    },
+    {
+      "bottom_cm": 62,
+      "top_cm": 90,
+      "depth_top_cm": 30,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "1F-",
+      "hardness_idx": 2.66,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "No grain form entered. Hardness tapers from 4F+ (2.33) at top (90 cm) to 1F (3.0) at base (62 cm); idx is layer mean"
+    },
+    {
+      "bottom_cm": 90,
+      "top_cm": 120,
+      "depth_top_cm": 0,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "4F-",
+      "hardness_idx": 1.5,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "No grain form entered (header surface grain: Precipitation Particles). Hardness tapers from F (1.0) at top (120 cm) to 4F (2.0) at base (90 cm); idx is layer mean (midway F+/4F-)"
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT14SC",
+      "type": "CT",
+      "score": "CT14",
+      "taps": 14,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 62,
+      "depth_cm": 58,
+      "layer_grain": "FC",
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Nov 22 FC/CR",
+      "height_cm": 62,
+      "depth_cm": 58,
+      "grain": "FC",
+      "comment": "Layer spans 58-62 cm (table 'Name' column, glyph square = FC); CT14 SC at its top"
+    },
+    {
+      "name": "Nov 13 CR",
+      "height_cm": null,
+      "depth_cm": null,
+      "grain": null,
+      "comment": "Mentioned only in notes: 'disappears ~2250 m', i.e. not present in this 2410 m pit"
+    }
+  ],
+  "notes": "Some wind effect in open areas near the ridgetop. Nov 13 CR disappears ~2250 m. Main concerns were areas with wind effect, and the FC layer halfway down the snowpack with moderate RP to SC test results on this layer. Treeline HS ~120-140 cm.",
+  "summary": "HS 120 cm, 2410 m SE (profile name SSE): hard P base 0-28 cm, 1F 28-58 cm, thin 4F FC layer 'Nov 22 FC/CR' at 58-62 cm (CT14 SC at 62 cm) under a 62-90 cm layer of 4F+ to 1F and soft F to 4F surface snow 90-120 cm; Nov 13 crust absent above ~2250 m",
+  "confidence": "high",
+  "reading_issues": "Same pit in PDF and PNG (both height-axis charts, identical readings). Header aspect is SE but profile name/filename say 'SSE Aspect'; header value recorded. Only the FC/CR layer has a grain glyph; other layers have none (grain null). Two layers (62-90 and 90-120 cm) have tapered hardness bars; hardness_idx is the layer mean, top/bottom values in comment. Hardness axis is non-uniform (F, 4F, 1F, P, K tick spacing increases); interpolated piecewise-linearly between ticks. The 'Nov 13 CR' named crust is only in the notes (absent above ~2250 m) so has null height. The CT14SC label gives no failure-layer grain; FC taken from the pink-highlighted named layer. No temperature profile drawn."
+}

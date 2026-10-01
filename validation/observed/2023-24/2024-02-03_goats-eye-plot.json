@@ -1,0 +1,61 @@
+{
+  "source_files": ["profiles/2023-2024/Goats Eye/240203 Goats Eye Study Plot Full Profile.pdf"],
+  "season": "2023-24",
+  "kind": "study_plot",
+  "site": "Goat's Eye Study Plot",
+  "site_slug": "goats-eye-plot",
+  "chart_format": "snowpilot",
+  "date": "2024-02-03",
+  "time": "12:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.08617,
+  "lon": -115.75869,
+  "elevation_m": 2250,
+  "elevation_raw": "2250 m",
+  "aspect": "E",
+  "slope_deg": 5,
+  "air_temp_c": -6,
+  "sky": "OVC",
+  "precip": "S1",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 95,
+  "surface_grain": "PP",
+  "foot_pen_cm": 60,
+  "ski_pen_cm": 10,
+  "header_other": {"PF": "60", "PS": "10", "HS": "95", "wind_loading": "no", "coord_raw": "51.08617N, -115.75869W", "slope_raw": "5°", "specifics": "Pit dug in a Ski Area; Pit is representative of backcountry", "layer_notes": "65-63cm: Problematic layer", "chart_title": "Goats Eye Study Plot", "surface_form": "+ (PP) 1 mm in the fixed top row above the HS line (zero thickness)", "file_format_note": "PDF (FPDF) wrapping a SnowPilot 994x840 image"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 13, "depth_top_cm": 82, "grain": null, "grain2": null, "grain_raw": null, "size_mm": [5.0, 6.0], "hardness": "1F", "hardness_idx": 3.0, "moisture": null, "density": null, "uncertain": true, "comment": "grain form glyph blank on chart (size 5-6 mm); basal layer, probably DH but not recorded"},
+    {"bottom_cm": 13, "top_cm": 35, "depth_top_cm": 60, "grain": "DH", "grain2": "FC", "grain_raw": "∧(□)", "size_mm": [5.0, 5.0], "hardness": "1F-", "hardness_idx": 2.67, "moisture": null, "density": null, "uncertain": false, "comment": "size column '5(3)': DH 5 mm, secondary FC 3 mm"},
+    {"bottom_cm": 35, "top_cm": 63, "depth_top_cm": 32, "grain": "RGxf", "grain2": null, "grain_raw": "filled circle with flat top (RGxf glyph)", "size_mm": [3.0, 3.0], "hardness": "P", "hardness_idx": 4.0, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 63, "top_cm": 65, "depth_top_cm": 30, "grain": "SH", "grain2": "FC", "grain_raw": "V(□)", "size_mm": [3.0, 5.0], "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": "size column '3-5(2)': SH 3-5 mm, secondary FC 2 mm; layer note: '65-63cm: Problematic layer'"},
+    {"bottom_cm": 65, "top_cm": 83, "depth_top_cm": 12, "grain": "FC", "grain2": "FCxr", "grain_raw": "□(⌂)", "size_mm": [0.5, 0.5], "hardness": "1F", "hardness_idx": 3.0, "moisture": null, "density": null, "uncertain": false, "comment": "size column '0.5(0.5)'; secondary form is square with rounded top (FCxr)"},
+    {"bottom_cm": 83, "top_cm": 84, "depth_top_cm": 11, "grain": "MFcr", "grain2": null, "grain_raw": "◎◎", "size_mm": [1.0, 1.0], "hardness": "K", "hardness_idx": 5.0, "moisture": null, "density": null, "uncertain": false, "comment": "thin melt-freeze/rain crust ~1 cm; size column '1-1'"},
+    {"bottom_cm": 84, "top_cm": 95, "depth_top_cm": 0, "grain": "PP", "grain2": "DF", "grain_raw": "+(⟋)", "size_mm": [1.0, 2.0], "hardness": "F", "hardness_idx": 1.0, "moisture": null, "density": null, "uncertain": false, "comment": "size column '1-2(1)': PP 1-2 mm, secondary DF 1 mm"}
+  ],
+  "temps": [
+    {"h_cm": 0, "t_c": -0.5},
+    {"h_cm": 10, "t_c": -0.7},
+    {"h_cm": 20, "t_c": -1.0},
+    {"h_cm": 30, "t_c": -1.4},
+    {"h_cm": 40, "t_c": -1.7},
+    {"h_cm": 50, "t_c": -2.0},
+    {"h_cm": 60, "t_c": -2.4},
+    {"h_cm": 70, "t_c": -2.7},
+    {"h_cm": 80, "t_c": -2.2},
+    {"h_cm": 90, "t_c": -1.7},
+    {"h_cm": 95, "t_c": -2.0}
+  ],
+  "tests": [
+    {"raw": "CT1, SC @85cm", "type": "CT", "score": "CT1", "taps": 1, "propagation": null, "fracture": "SC", "height_cm": 85, "depth_cm": 10, "layer_grain": "PP", "count": 1},
+    {"raw": "CT12, SP @63cm", "type": "CT", "score": "CT12", "taps": 12, "propagation": null, "fracture": "SP", "height_cm": 63, "depth_cm": 32, "layer_grain": "SH", "count": 1},
+    {"raw": "CT12, SC @10cm", "type": "CT", "score": "CT12", "taps": 12, "propagation": null, "fracture": "SC", "height_cm": 10, "depth_cm": 85, "layer_grain": null, "count": 1}
+  ],
+  "named_layers": [
+    {"name": "Problematic layer", "height_cm": 65, "depth_cm": 30, "grain": "SH"}
+  ],
+  "notes": "Specifics: Pit dug in a Ski Area; Pit is representative of backcountry. Layer Notes: 65-63cm: Problematic layer. Stability tests column: CT1, SC @85cm; CT12, SP @63cm; CT12, SC @10cm. Chart 'Notes:' field blank.",
+  "summary": "Basal 0-13 cm (5-6 mm, form not recorded, 1F) under DH(FC) 13-35 cm (1F-), a 28 cm RGxf layer 35-63 cm (P), a thin SH(FC) 'problematic layer' 63-65 cm (4F; CT12 SP at 63 cm), FC 65-83 (1F), a thin K crust at 83-84 cm and 11 cm of PP/DF on top (CT1 SC at 85 cm); CT12 SC at 10 cm; HS 95 cm; E aspect, 5 deg ski-area pit",
+  "confidence": "high",
+  "reading_issues": "Hardness bars, boundaries and temperature dots measured from pixels (the SnowPilot logo overlays the left end of the 83-84 cm crust bar, whose edge is at the K tick). The basal 0-13 cm layer has size 5-6 mm but no grain-form glyph, so grain is null (flagged uncertain). Glyph readings: filled circle with flat top read as RGxf; '◎◎' read as MFcr. The CT12 SP failure at 63 cm is at the base of the 63-65 cm SH(FC) layer; layer_grain is given as that SH layer rather than the RGxf layer below. CT1 SC at 85 cm is 1 cm above the top of the 83-84 crust, inside the PP/DF layer. The CT12 SC at 10 cm is in the basal layer with blank form (layer_grain null). Field is a ski-area pit on a 5 deg E slope (per header), not a flat plot."
+}

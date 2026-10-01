@@ -1,0 +1,275 @@
+{
+ "source_files": [
+  "profiles/2025-2026/Study Plot profiles/Tak Falls/2025-12-30_1230_Tak Falks SP.pdf"
+ ],
+ "season": "2025-26",
+ "kind": "study_plot",
+ "site": "Takakkaw Falls Study Plot",
+ "site_slug": "tak-falls-plot",
+ "chart_format": "propagation_labs",
+ "date": "2025-12-30",
+ "time": "12:30",
+ "observer": "william Lawson",
+ "lat": 51.1908,
+ "lon": -115.5603,
+ "elevation_m": 1383,
+ "elevation_raw": "4538ft",
+ "aspect": "E",
+ "slope_deg": null,
+ "air_temp_c": null,
+ "sky": "Overcast",
+ "precip": "No Precipitation",
+ "wind": "Calm",
+ "blowing_snow": "No Transport",
+ "hs_cm": 190,
+ "surface_grain": "DF",
+ "foot_pen_cm": 30,
+ "ski_pen_cm": null,
+ "header_other": {
+  "profile_name": "Tak Falks SP",
+  "org": null,
+  "surface_grain_raw": "Decomposing PP 1.0-2.0mm",
+  "header_suspect": "Lat/lon (51.1908,-115.5603) and elevation 4538 ft (1383 m) are Banff townsite values, probably auto-filled; layer structure and file location (Tak Falls) suggest Takakkaw Falls study plot (~1790 m)"
+ },
+ "layers": [
+  {
+   "bottom_cm": 0,
+   "top_cm": 20,
+   "depth_top_cm": 170,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    1.0,
+    2.0
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 20,
+   "top_cm": 22,
+   "depth_top_cm": 168,
+   "grain": "MFcr",
+   "grain2": null,
+   "grain_raw": "◎○",
+   "size_mm": null,
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 22,
+   "top_cm": 50,
+   "depth_top_cm": 140,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "K-",
+   "hardness_idx": 4.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 50,
+   "top_cm": 75,
+   "depth_top_cm": 115,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.5,
+    0.5
+   ],
+   "hardness": "K-",
+   "hardness_idx": 4.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 75,
+   "top_cm": 102,
+   "depth_top_cm": 88,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.5,
+    0.5
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 102,
+   "top_cm": 103,
+   "depth_top_cm": 87,
+   "grain": "IF",
+   "grain2": null,
+   "grain_raw": "=",
+   "size_mm": null,
+   "hardness": "K",
+   "hardness_idx": 5,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 103,
+   "top_cm": 105,
+   "depth_top_cm": 85,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.5,
+    0.5
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 105,
+   "top_cm": 110,
+   "depth_top_cm": 80,
+   "grain": "IF",
+   "grain2": null,
+   "grain_raw": "=",
+   "size_mm": null,
+   "hardness": "K",
+   "hardness_idx": 5,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 110,
+   "top_cm": 125,
+   "depth_top_cm": 65,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.5,
+    1.0
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 125,
+   "top_cm": 150,
+   "depth_top_cm": 40,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 150,
+   "top_cm": 160,
+   "depth_top_cm": 30,
+   "grain": "FCxr/RGxf",
+   "grain2": null,
+   "grain_raw": "square with filled dot",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "4F",
+   "hardness_idx": 2,
+   "moisture": null,
+   "density": null,
+   "uncertain": true,
+   "comment": null
+  },
+  {
+   "bottom_cm": 160,
+   "top_cm": 190,
+   "depth_top_cm": 0,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  }
+ ],
+ "temps": [],
+ "tests": [
+  {
+   "raw": "CT9PC",
+   "type": "CT",
+   "score": "CT9",
+   "taps": 9,
+   "propagation": null,
+   "fracture": "PC",
+   "height_cm": 160,
+   "depth_cm": 30,
+   "layer_grain": null,
+   "count": 1
+  },
+  {
+   "raw": "CT12PC",
+   "type": "CT",
+   "score": "CT12",
+   "taps": 12,
+   "propagation": null,
+   "fracture": "PC",
+   "height_cm": 150,
+   "depth_cm": 40,
+   "layer_grain": null,
+   "count": 1
+  }
+ ],
+ "named_layers": [],
+ "notes": null,
+ "summary": "HS 190 cm: very hard lower pack (FC/RG 0-102 cm, P to K-, thin MFcr at 20-22 cm and IF crusts at 102-103 and 105-110 cm), RG 105-150 cm softening upward, 4F FCxr/RGxf at 150-160 cm (CT12 PC) and soft DF 160-190 cm (CT9 PC at 160 cm)",
+ "confidence": "medium",
+ "reading_issues": "HEADER SUSPECT: lat/lon and elevation (4538 ft = 1383 m) are Banff townsite values, so the site is taken from the file path (Tak Falls) and recorded values are as printed. Notes, air temperature, ski pen blank; no temperature profile; table has Grain Form/Size only. Chart linear axis. IF \"=\" thin layers at 102-103 and 105-110 cm read from double-bar glyphs. Square-with-dot at 150-160 cm uncertain (FCxr/RGxf)."
+}

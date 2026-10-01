@@ -1,0 +1,57 @@
+{
+  "source_files": ["profiles/2023-2024/Other Profiles/2024-01-17 Dolomite Shoulder.jpg"],
+  "season": "2023-24",
+  "kind": "test_profile",
+  "site": "Dolomite Shoulder",
+  "site_slug": "dolomite-shoulder-2380m",
+  "chart_format": "snowpilot",
+  "date": "2024-01-17",
+  "time": "12:30",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.65462,
+  "lon": -116.34561,
+  "elevation_m": 2380,
+  "elevation_raw": "2380 m",
+  "aspect": null,
+  "slope_deg": null,
+  "air_temp_c": null,
+  "sky": "OVC",
+  "precip": "S-1",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 82,
+  "surface_grain": null,
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {"HS": "82", "wind_loading": "previous", "coord_raw": "51.65462N, -116.34561W", "layer_notes": "76-60cm: Problematic layer", "chart_title": "Dolomite Shoulder", "region": "Banff, Yoho and Kootenay, AB", "specifics": "Collapsing, localize[d] (text cut off at the edge of the header column on the chart)", "stability": null, "surface_form": "top surface-form row blank"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 20, "depth_top_cm": 62, "grain": "DH", "grain2": null, "grain_raw": "∧", "size_mm": [4.0, 8.0], "hardness": "1F-", "hardness_idx": 2.67, "moisture": "D", "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 20, "top_cm": 42, "depth_top_cm": 40, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [2.0, 4.0], "hardness": "1F", "hardness_idx": 3.0, "moisture": "D", "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 42, "top_cm": 60, "depth_top_cm": 22, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [2.0, 3.0], "hardness": "4F", "hardness_idx": 2.0, "moisture": "D", "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 60, "top_cm": 76, "depth_top_cm": 6, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": [0.5, 0.5], "hardness": "4F-", "hardness_idx": 1.67, "moisture": "D", "density": null, "uncertain": false, "comment": "layer note '76-60cm: Problematic layer'; its base (60 cm) is drawn in red on the chart and carries the buried SH 6 mm (CT4 SC x2 'on SH 6mm', ECTN4)"},
+    {"bottom_cm": 76, "top_cm": 82, "depth_top_cm": 0, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": [0.5, 0.5], "hardness": "F", "hardness_idx": 1.0, "moisture": "D", "density": null, "uncertain": false, "comment": null}
+  ],
+  "temps": [
+    {"h_cm": 0, "t_c": -3.0},
+    {"h_cm": 10, "t_c": -5.0},
+    {"h_cm": 20, "t_c": -6.0},
+    {"h_cm": 30, "t_c": -8.0},
+    {"h_cm": 40, "t_c": -9.0},
+    {"h_cm": 50, "t_c": -11.0},
+    {"h_cm": 60, "t_c": -13.0},
+    {"h_cm": 72, "t_c": -13.0}
+  ],
+  "tests": [
+    {"raw": "CT4, SC @60cm x2 on SH 6mm", "type": "CT", "score": "CT4", "taps": 4, "propagation": null, "fracture": "SC", "height_cm": 60, "depth_cm": 22, "layer_grain": "SH", "count": 2},
+    {"raw": "ECTN4 @60cm", "type": "ECT", "score": "ECTN4", "taps": 4, "propagation": "N", "fracture": null, "height_cm": 60, "depth_cm": 22, "layer_grain": "SH", "count": 1},
+    {"raw": "CT25, SC @20cm", "type": "CT", "score": "CT25", "taps": 25, "propagation": null, "fracture": "SC", "height_cm": 20, "depth_cm": 62, "layer_grain": null, "count": 1}
+  ],
+  "named_layers": [
+    {"name": "SH 6 mm (buried surface hoar)", "height_cm": 60, "depth_cm": 22, "grain": "SH", "comment": "from the CT4 free text 'x2 on SH 6mm'; red marker at 60 cm"},
+    {"name": "Problematic layer", "height_cm": 76, "depth_cm": 6, "grain": "DF", "comment": "layer note '76-60cm: Problematic layer'; the DF 0.5 mm layer 60-76 cm sitting on the SH at 60 cm"}
+  ],
+  "notes": "Specifics: 'Collapsing, localize[d]' (cut off on the chart). Layer Notes: 76-60cm: Problematic layer. Wind Loading: previous. Stability tests column: 'CT4, SC @60cm' with free text 'x2 on SH 6mm'; 'ECTN4 @60cm'; 'CT25, SC @20cm'. Air Temperature, Aspect, Slope Angle, PF/PS blank; chart 'Notes:' blank.",
+  "summary": "HS 82 cm at 2380 m (aspect/slope not given; 'Collapsing, localized'): basal DH 4-8 mm 0-20 cm (1F-) under FC 20-42 (1F, 2-4 mm) and FC 42-60 (4F, 2-3 mm), then a 'problematic' DF 0.5 mm layer 60-76 (4F-) and 6 cm of F DF; buried SH 6 mm at 60 cm with CT4 SC (x2) and ECTN4; CT25 SC at 20 cm; temperatures -3 C at the ground to -13 C at 60-72 cm",
+  "confidence": "high",
+  "reading_issues": "Hardness bars, boundaries (20, 42, 60, 76 cm) and temperature dots measured from pixels (temperature axis 28.9 px per degree C, ticks every 2 C). The temperature profile has no surface reading: its top two points are at 72 and 60 cm (both -13.0 C), 10 cm below the 82 cm snow surface; air temperature is blank. Aspect and slope are blank in the header (left null; the earlier 12 Dec pit labelled 'Dolomite Shoulder' was at 2280 m, S, 15 deg, a different spot ~300 m away). The Specifics text is truncated on the chart ('Collapsing, localizec'), so it may continue. 'x2 on SH 6mm' is non-bold free text on the CT4 test (count 2, failure on buried SH 6 mm at 60 cm, a boundary with no separate SH layer on the bar chart). The red line at 60 cm is the weak-layer marker at the base of the flagged 60-76 cm layer. ECTN4 read as no propagation at 4 taps. CT25 SC at 20 cm sits on the DH/FC boundary, layer_grain left null. DF slash glyphs and the DH caret are clear; moisture D (dry) for all layers."
+}

@@ -1,0 +1,193 @@
+{
+  "source_files": [
+    "profiles/2025-2026/Test profiles/2026-04-05_1139_peyto path .pdf"
+  ],
+  "season": "2025-26",
+  "kind": "test_profile",
+  "site": "Peyto path",
+  "site_slug": "peyto-path",
+  "chart_format": "propagation_labs",
+  "date": "2026-04-05",
+  "time": "11:39",
+  "observer": "tim haggarty",
+  "lat": 51.7053,
+  "lon": -116.5145,
+  "elevation_m": 2158,
+  "elevation_raw": "7079ft",
+  "aspect": "N",
+  "slope_deg": 22,
+  "air_temp_c": 0,
+  "sky": "Overcast",
+  "precip": "No Precipitation",
+  "wind": "Calm",
+  "blowing_snow": "No Transport",
+  "hs_cm": 253,
+  "surface_grain": "PP",
+  "foot_pen_cm": 15,
+  "ski_pen_cm": 5,
+  "header_other": {
+    "profile_name": "peyto path",
+    "surface_grain_raw": "Precipitation Particles 1-1.5mm",
+    "org": null,
+    "pit_bottom_cm": 173,
+    "pit_depth_cm": 80
+  },
+  "layers": [
+    {
+      "bottom_cm": 173,
+      "top_cm": 188,
+      "depth_top_cm": 65,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "P+",
+      "hardness_idx": 4.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Lowest dug layer (blue 'PIT 80' line: pit bottom at 80 cm depth = 173 cm above ground; snowpack below not dug). Table row blank (no grain, size or LWC)"
+    },
+    {
+      "bottom_cm": 188,
+      "top_cm": 203,
+      "depth_top_cm": 50,
+      "grain": "MF",
+      "grain2": null,
+      "grain_raw": "three clustered circles (MFcl) taken from the CT24BRK label; table row has no glyph",
+      "size_mm": null,
+      "hardness": "K+",
+      "hardness_idx": 5.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": true,
+      "comment": "'March 20 rain crust' (Name column), 15 cm thick (depth 50-65 cm). Bar reaches the left limit of the hardness axis (K+ is the largest value the chart can show), so hardness is K+ or harder. Part of the bar top is hidden behind the CT24BRK label; the visible part is uniform. Grain MF/MFcl comes only from the test label (failure layer description), not from the table"
+    },
+    {
+      "bottom_cm": 203,
+      "top_cm": 228,
+      "depth_top_cm": 25,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "/",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "P",
+      "hardness_idx": 4.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "LWC Dry"
+    },
+    {
+      "bottom_cm": 228,
+      "top_cm": 230,
+      "depth_top_cm": 23,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "/",
+      "size_mm": [
+        1.0,
+        2.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Thin 2 cm layer, highlighted pink (failure layer of CT14RP and CT13RP, label 'on / 1-2'); LWC Dry"
+    },
+    {
+      "bottom_cm": 230,
+      "top_cm": 245,
+      "depth_top_cm": 8,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "/",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "LWC Dry"
+    },
+    {
+      "bottom_cm": 245,
+      "top_cm": 253,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "/",
+      "size_mm": [
+        0.5,
+        1.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Top layer in the table is DF 0.5-1 mm; header surface grain is Precipitation Particles 1-1.5 mm; LWC Dry"
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT14RP on / 1-2",
+      "type": "CT",
+      "score": "CT14",
+      "taps": 14,
+      "propagation": null,
+      "fracture": "RP",
+      "height_cm": 230,
+      "depth_cm": 23,
+      "layer_grain": "DF",
+      "count": 1
+    },
+    {
+      "raw": "CT13RP",
+      "type": "CT",
+      "score": "CT13",
+      "taps": 13,
+      "propagation": null,
+      "fracture": "RP",
+      "height_cm": 230,
+      "depth_cm": 23,
+      "layer_grain": null,
+      "count": 1
+    },
+    {
+      "raw": "CT24BRK on MFcl (three clustered circles)",
+      "type": "CT",
+      "score": "CT24",
+      "taps": 24,
+      "propagation": null,
+      "fracture": "BRK",
+      "height_cm": 203,
+      "depth_cm": 50,
+      "layer_grain": "MF",
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "March 20 rain crust",
+      "height_cm": 203,
+      "bottom_cm": 188,
+      "top_cm": 203,
+      "depth_cm": 50,
+      "grain": "MF",
+      "comment": "15 cm thick K+ layer (depth 50-65 cm); CT24 BRK at its top with 'evidence of debris chunks in failure plane'"
+    }
+  ],
+  "notes": "CT24BRK: evidence of debris chunks in failure plane,",
+  "summary": "HS 253 cm, 22 deg N 'Peyto path' pit at ~2158 m, only the top 80 cm dug (173-253 cm above ground): P+ 173-188 cm under a 15 cm K+ 'March 20 rain crust' (188-203 cm, CT24 BRK at its top), 25 cm P DF 203-228, a thin 2 cm 4F DF layer at 228-230 cm (CT14 RP and CT13 RP at 230 cm), 1F+ DF 230-245 and 4F DF 245-253 (all DF 0.5-2 mm, dry)",
+  "confidence": "high",
+  "reading_issues": "DEPTH-FROM-SURFACE chart (axis titled 'Depth (cm)', 0 at the top, blue 'PIT 80' line at 80 cm depth, HS 253 in orange at the bottom after an axis break): depths were converted to height above ground as 253 minus depth (calibrated on the 10 cm gridlines, 15.79 px/cm; boundaries at depths 8, 23, 25, 50, 65 and 80 cm all land on whole cm). Mirrored layout (bars extend left from the right-hand axis, hardness ticks K/P/1f/4f/F left to right, evenly spaced). The 'March 20 rain crust' bar runs to the left limit of the axis (K+); the true hardness could be I. Its grain (MF/MFcl, three clustered circles) is taken from the CT24BRK label because the table row has only the name. CT13RP is stacked on the CT14RP label with no 'on' info, so its failure-layer grain is null (same height). Elevation printed as 7079 ft (= 2158 m). Surface grain in the header (PP 1-1.5 mm) differs from the top table layer (DF 0.5-1 mm). LWC column 'Dry' recorded as moisture D. No temperature profile."
+}

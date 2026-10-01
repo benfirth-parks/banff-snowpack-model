@@ -1,0 +1,61 @@
+{
+  "source_files": ["profiles/2023-2024/Bow Summit/2024-03-15 Bow  Summit.jpg"],
+  "season": "2023-24",
+  "kind": "study_plot",
+  "site": "Bow Summit Study Plot",
+  "site_slug": "bow-summit-plot",
+  "chart_format": "snowpilot",
+  "date": "2024-03-15",
+  "time": "12:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.7098,
+  "lon": -116.47945,
+  "elevation_m": 2030,
+  "elevation_raw": "2030 m",
+  "aspect": "flat",
+  "slope_deg": 0,
+  "air_temp_c": 2,
+  "sky": "OVC",
+  "precip": "NO",
+  "wind": "S Light Breeze",
+  "blowing_snow": null,
+  "hs_cm": 115,
+  "surface_grain": null,
+  "foot_pen_cm": 30,
+  "ski_pen_cm": 10,
+  "header_other": {"PF": "30", "PS": "10", "HS": "115", "coord_raw": "51.70980N, -116.47945W", "slope_raw": "0°", "layer_notes": "69-66cm: friable -Feb 3; 30-27cm: aggregates remnant of crust", "chart_title": "Bow Summit Study Full"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 27, "depth_top_cm": 88, "grain": "DH", "grain2": null, "grain_raw": "∧ with an extra diagonal stroke (DH, possibly chains/large striated)", "size_mm": [4.0, 6.0], "hardness": "1F-", "hardness_idx": 2.5, "moisture": "D", "density": null, "uncertain": false, "comment": "hardness gradient 1F at base (0 cm) to 4F at top (27 cm); hardness_idx is the mean"},
+    {"bottom_cm": 27, "top_cm": 30, "depth_top_cm": 85, "grain": "DH", "grain2": null, "grain_raw": "Λ with flat top and crossbar (DHxr-type glyph)", "size_mm": null, "hardness": "1F", "hardness_idx": 3.0, "moisture": "D", "density": null, "uncertain": true, "comment": "layer comment: '30-27cm: aggregates remnant of crust'; no size given; glyph same as 30-60.5 cm layer"},
+    {"bottom_cm": 30, "top_cm": 60.5, "depth_top_cm": 54.5, "grain": "DH", "grain2": null, "grain_raw": "Λ with flat top and crossbar (DHxr-type glyph, rounding depth hoar)", "size_mm": [2.0, 2.0], "hardness": "1F-", "hardness_idx": 2.5, "moisture": "D", "density": null, "uncertain": true, "comment": "size shown as '2-2'; hardness gradient 4F at base (30 cm) to 1F at top (60.5 cm); hardness_idx is the mean; glyph read as rounding DH (DHxr)"},
+    {"bottom_cm": 60.5, "top_cm": 61, "depth_top_cm": 54, "grain": "IF", "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "I", "hardness_idx": 6.0, "moisture": "D", "density": null, "uncertain": true, "comment": "very thin (~0.5 cm) ice-hard layer; grain form and size blank on chart; class IF assigned from hardness I (ice)"},
+    {"bottom_cm": 61, "top_cm": 66, "depth_top_cm": 49, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [1.0, 1.0], "hardness": "1F", "hardness_idx": 3.0, "moisture": "D", "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 66, "top_cm": 69, "depth_top_cm": 46, "grain": "MF", "grain2": null, "grain_raw": "three clustered circles (MFcl glyph)", "size_mm": [2.0, 10.0], "hardness": "P", "hardness_idx": 4.0, "moisture": "D", "density": null, "uncertain": false, "comment": "layer note: '69-66cm: friable -Feb 3'"},
+    {"bottom_cm": 69, "top_cm": 75, "depth_top_cm": 40, "grain": "FCxr", "grain2": null, "grain_raw": "square with rounded top (FCxr glyph)", "size_mm": [1.0, 1.0], "hardness": "1F-", "hardness_idx": 2.67, "moisture": "D", "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 75, "top_cm": 105, "depth_top_cm": 10, "grain": "FCxr", "grain2": null, "grain_raw": "square with rounded top (FCxr glyph)", "size_mm": [0.3, 0.5], "hardness": "P-", "hardness_idx": 3.67, "moisture": "D", "density": null, "uncertain": false, "comment": "hardness gradient P at base (75 cm) to 1F+ at top (105 cm); hardness_idx is the mean"},
+    {"bottom_cm": 105, "top_cm": 113, "depth_top_cm": 2, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": [0.5, 0.5], "hardness": "F", "hardness_idx": 1.0, "moisture": "D", "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 113, "top_cm": 115, "depth_top_cm": 0, "grain": "MF", "grain2": null, "grain_raw": "cluster of three small circles (MFcl glyph)", "size_mm": [0.5, 0.5], "hardness": "F", "hardness_idx": 1.0, "moisture": "M", "density": null, "uncertain": false, "comment": "surface layer, moist"}
+  ],
+  "temps": [
+    {"h_cm": 60, "t_c": -7.0},
+    {"h_cm": 70, "t_c": -7.0},
+    {"h_cm": 80, "t_c": -8.0},
+    {"h_cm": 90, "t_c": -9.0},
+    {"h_cm": 100, "t_c": -10.0},
+    {"h_cm": 105, "t_c": -8.5},
+    {"h_cm": 115, "t_c": 0.0}
+  ],
+  "tests": [
+    {"raw": "CT24, SC @69cm", "type": "CT", "score": "CT24", "taps": 24, "propagation": null, "fracture": "SC", "height_cm": 69, "depth_cm": 46, "layer_grain": "MF", "count": 1},
+    {"raw": "CT14, SC @69cm", "type": "CT", "score": "CT14", "taps": 14, "propagation": null, "fracture": "SC", "height_cm": 69, "depth_cm": 46, "layer_grain": "MF", "count": 1},
+    {"raw": "ECTP23 @68cm", "type": "ECT", "score": "ECTP23", "taps": 23, "propagation": "P", "fracture": null, "height_cm": 68, "depth_cm": 47, "layer_grain": "MF", "count": 1},
+    {"raw": "CT16, SC @31cm", "type": "CT", "score": "CT16", "taps": 16, "propagation": null, "fracture": "SC", "height_cm": 31, "depth_cm": 84, "layer_grain": "DH", "count": 1}
+  ],
+  "named_layers": [
+    {"name": "Feb 3 (friable)", "height_cm": 69, "depth_cm": 46, "grain": "MF"}
+  ],
+  "notes": "Notes: thin overcast upon arrival- skies cleared before leaving- temperatures climbed rapidly. Layer Notes: 69-66cm: friable -Feb 3; 30-27cm: aggregates remnant of crust. Stability tests column: CT24, SC @69cm; CT14, SC @69cm; ECTP23 @68cm; CT16, SC @31cm.",
+  "summary": "Deep basal DH 0-60 cm (4-6 mm DH 0-27 cm with a 3 cm 'aggregates remnant of crust' layer at 27-30; rounding DH 2 mm 30-60.5 cm; hardness 1F at the base fading to 4F then back to 1F) under a thin ice-hard (I) layer at 60.5-61 cm, FC 61-66 (1F), friable MFcl layer 66-69 cm (P, 'Feb 3'), FCxr 69-105 cm (1F- then 1F+ to P gradient), DF 105-113 and moist MF 113-115; CT24 and CT14 SC at 69 cm, ECTP23 at 68 cm, CT16 SC at 31 cm; HS 115 cm; surface 0 C (air +2 C)",
+  "confidence": "medium",
+  "reading_issues": "Hardness bars, boundaries and temperature dots were measured from pixels. Three layers are trapezoids (hardness gradients) and hardness_idx is the mean of the top and bottom values: 0-27 cm 1F(base)->4F(top); 30-60.5 cm 4F(base)->1F(top); 75-105 cm P(base)->1F+(top). The 60.5-61 cm thin layer has a blank form and size and I-hardness; class IF is inferred from the hardness. Glyphs: the flat-topped 'Λ with crossbar' at 27-60.5 cm is read as rounding depth hoar (DHxr, flagged uncertain); the 0-27 cm glyph (Λ with an extra stroke) is read as DH. Temperature profile only covers 60-115 cm. Tests at 69 cm sit at the top of the 66-69 cm MFcl layer; ECTP23 at 68 cm is inside it (layer_grain MF). Top 'surface form' row blank, so surface_grain is null."
+}

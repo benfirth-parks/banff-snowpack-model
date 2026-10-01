@@ -1,0 +1,49 @@
+{
+  "source_files": ["profiles/2023-2024/Other Profiles/2024-01-08 Treeline - Mt Field.jpg"],
+  "season": "2023-24",
+  "kind": "test_profile",
+  "site": "Treeline - Mt Field",
+  "site_slug": "mt-field-treeline",
+  "chart_format": "snowpilot",
+  "date": "2024-01-08",
+  "time": "12:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.43822,
+  "lon": -116.45483,
+  "elevation_m": 2115,
+  "elevation_raw": "2115 m",
+  "aspect": "NE",
+  "slope_deg": 20,
+  "air_temp_c": -14.5,
+  "sky": "BKN",
+  "precip": "NO",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 118,
+  "surface_grain": null,
+  "foot_pen_cm": 40,
+  "ski_pen_cm": 20,
+  "header_other": {"PF": "40", "PS": "20", "HS": "118", "wind_loading": null, "coord_raw": "51.43822N, -116.45483W", "slope_raw": "20°", "layer_notes": "118-95cm: Dec 31st = Spotty 2-3 mm SH; 55-45cm: Dec. 5th layer @ 45 cm", "chart_title": "Treeline - Mt Field", "region": "Banff, Yoho and Kootenay, AB", "chart_notes": "Treeline Glade. Some variable wind effect on surface in TL/ALP.", "specifics": null, "stability": null, "surface_form": "top surface-form row blank"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 25, "depth_top_cm": 93, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "4F+", "hardness_idx": 2.33, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered"},
+    {"bottom_cm": 25, "top_cm": 45, "depth_top_cm": 73, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "1F", "hardness_idx": 3.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered"},
+    {"bottom_cm": 45, "top_cm": 55, "depth_top_cm": 63, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "P", "hardness_idx": 4.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered; layer note '55-45cm: Dec. 5th layer @ 45 cm'"},
+    {"bottom_cm": 55, "top_cm": 77, "depth_top_cm": 41, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "P-", "hardness_idx": 3.67, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered"},
+    {"bottom_cm": 77, "top_cm": 85, "depth_top_cm": 33, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "1F", "hardness_idx": 3.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered"},
+    {"bottom_cm": 85, "top_cm": 95, "depth_top_cm": 23, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "4F+", "hardness_idx": 2.33, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered; the spotty Dec 31st surface hoar (2-3 mm, per layer note) is buried at the top of this layer / base of the 95-118 cm layer"},
+    {"bottom_cm": 95, "top_cm": 118, "depth_top_cm": 0, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "F", "hardness_idx": 1.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain form/size entered; layer note '118-95cm: Dec 31st = Spotty 2-3 mm SH' (storm snow deposited on the Dec 31st SH)"}
+  ],
+  "temps": [],
+  "tests": [
+    {"raw": "CT11, RP @95cm x2 on Dec. 31st", "type": "CT", "score": "CT11", "taps": 11, "propagation": null, "fracture": "RP", "height_cm": 95, "depth_cm": 23, "layer_grain": "SH", "count": 2},
+    {"raw": "CT29, RP @77cm", "type": "CT", "score": "CT29", "taps": 29, "propagation": null, "fracture": "RP", "height_cm": 77, "depth_cm": 41, "layer_grain": null, "count": 1}
+  ],
+  "named_layers": [
+    {"name": "Dec 31st spotty SH (2-3 mm)", "height_cm": 95, "depth_cm": 23, "grain": "SH", "comment": "layer note '118-95cm: Dec 31st = Spotty 2-3 mm SH'; CT11 RP at 95 cm 'on Dec. 31st'"},
+    {"name": "Dec. 5th layer", "height_cm": 45, "depth_cm": 73, "grain": null, "comment": "layer note '55-45cm: Dec. 5th layer @ 45 cm'; coincides with the P-hardness layer at 45-55 cm; grain not recorded"}
+  ],
+  "notes": "Notes: Treeline Glade. Some variable wind effect on surface in TL/ALP. Layer Notes: 118-95cm: Dec 31st = Spotty 2-3 mm SH; 55-45cm: Dec. 5th layer @ 45 cm. Stability tests column: 'CT11, RP @95cm' with free text 'x2 on Dec. 31st'; 'CT29, RP @77cm'. Wind Loading, Specifics and Stability fields blank. No temperature profile.",
+  "summary": "Treeline glade pit (NE 20 deg, 2115 m, -14.5 C air): 4F+ base 0-25 cm, 1F 25-45, a P-hard 'Dec. 5th layer' at 45-55 (P) under P- 55-77, 1F 77-85, 4F+ 85-95 and soft F 95-118 cm deposited on the spotty Dec 31st SH at 95 cm; CT11 RP (x2) at 95 cm on the Dec 31 SH and CT29 RP at 77 cm; HS 118; PF 40, PS 20; no grain forms or temperatures drawn",
+  "confidence": "high",
+  "reading_issues": "Hardness bars and layer boundaries measured from pixels against the chart axes (boundaries 25, 45, 55, 77, 85, 95 cm). The form/size/moisture table is entirely blank, so every layer has grain null; the only grain information is in the layer notes (spotty 2-3 mm SH from Dec 31st at 95 cm). layer_grain for CT11 is SH from that note and the CT label ('on Dec. 31st'); the 'x2' is non-bold free text, recorded as count 2. CT29 RP at 77 cm sits on the 1F/P- boundary, layer_grain null. Layer note ranges '118-95cm' and '55-45cm' are placed as named layers at 95 cm and 45 cm (the stated '@ 45 cm' and the CT height). No temperature profile; surface-form row blank."
+}

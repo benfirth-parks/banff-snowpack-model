@@ -1,0 +1,130 @@
+{
+  "source_files": [
+    "profiles/2025-2026/Test profiles/2026-03-06  1720m Tak Falls mid slope test pit.pdf"
+  ],
+  "season": "2025-26",
+  "kind": "test_profile",
+  "site": "Tak Falls mid slope test pit",
+  "site_slug": "tak-falls-mid-slope",
+  "chart_format": "propagation_labs",
+  "date": "2026-03-06",
+  "time": "11:07",
+  "observer": "ben firth",
+  "lat": 51.4972,
+  "lon": -116.4928,
+  "elevation_m": 1726,
+  "elevation_raw": "5662ft",
+  "aspect": null,
+  "slope_deg": 23,
+  "air_temp_c": null,
+  "sky": "Overcast",
+  "precip": "Snow",
+  "wind": "Light,SE",
+  "blowing_snow": "No Transport",
+  "hs_cm": 225,
+  "surface_grain": "MFcr",
+  "foot_pen_cm": 30,
+  "ski_pen_cm": 10,
+  "header_other": {
+    "profile_name": "260306 Tak Falls mid slope test pit",
+    "surface_grain_raw": "Melt-Freeze Crust",
+    "org": null,
+    "pit_bottom_cm": 125,
+    "filename_elevation": "1720m"
+  },
+  "layers": [
+    {
+      "bottom_cm": 125,
+      "top_cm": 169,
+      "depth_top_cm": 56,
+      "grain": "RGxf",
+      "grain2": null,
+      "grain_raw": "U-shaped box with filled dot (flat top, round bottom)",
+      "size_mm": null,
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Lowest dug layer (blue 'PIT 125' line: pit bottom 125 cm above ground; snowpack below not dug). Uniform 1F; no grain size entered"
+    },
+    {
+      "bottom_cm": 169,
+      "top_cm": 170,
+      "depth_top_cm": 55,
+      "grain": "SH",
+      "grain2": null,
+      "grain_raw": "V",
+      "size_mm": [
+        5.0,
+        10.0
+      ],
+      "hardness": "F+",
+      "hardness_idx": 1.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Thin 1 cm buried surface hoar named 'Jan 24 SH' (pink-highlighted failure layer); CT12 SP at its top (170 cm)"
+    },
+    {
+      "bottom_cm": 170,
+      "top_cm": 224,
+      "depth_top_cm": 1,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "filled circle",
+      "size_mm": null,
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "No grain size entered. Hardness tapers from 1F- (2.67) at 224 cm to 1F+ (3.33) at 170 cm; idx is layer mean (= 1F)"
+    },
+    {
+      "bottom_cm": 224,
+      "top_cm": 225,
+      "depth_top_cm": 0,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "two linked circles (one double)",
+      "size_mm": null,
+      "hardness": "P+",
+      "hardness_idx": 4.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Thin 1 cm surface melt-freeze crust; header surface grain 'Melt-Freeze Crust'"
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CTM12 SP on V 5.0-10.0 Jan 24 SH",
+      "type": "CT",
+      "score": "CT12",
+      "taps": 12,
+      "propagation": null,
+      "fracture": "SP",
+      "height_cm": 170,
+      "depth_cm": 55,
+      "layer_grain": "SH",
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Jan 24 SH",
+      "height_cm": 170,
+      "bottom_cm": 169,
+      "top_cm": 170,
+      "depth_cm": 55,
+      "grain": "SH",
+      "comment": "SH 5.0-10.0 mm, F+ hardness; CT12 SP failed on it"
+    }
+  ],
+  "notes": "CT12: CTM12 SP,",
+  "summary": "HS 225 cm, 23 deg mid-slope pit at ~1726 m (Tak Falls, Yoho), only 125-225 cm dug (lower 125 cm not recorded): 1F RGxf 125-169 cm under a thin 1 cm F+ 'Jan 24 SH' (5-10 mm) at 169-170 cm, 54 cm of RG (1F, tapering 1F+ to 1F-) 170-224 cm and a 1 cm P+ MFcr surface crust; CT12 SP (CTM) on the Jan 24 SH at 170 cm",
+  "confidence": "high",
+  "reading_issues": "Height-axis chart with axis break: blue 'PIT 125' line and zig-zag mean the pit bottom is 125 cm above ground (HS 225, 100 cm dug). Heights calibrated on the 10 cm gridlines (12.63 px/cm). Mirrored layout (bars extend left from the right-hand height axis, ticks K/P/1f/4f/F left to right, evenly spaced); table columns Name / Grain Form / Grain Size on the right. Elevation printed as 5662 ft (= 1726 m; the filename says 1720 m). Aspect is blank in the header ('--') and not in the filename ('mid slope'), so aspect is null. Air temperature blank. Grain size is only given for the SH layer. The 'U-shaped box with filled dot' glyph read as RGxf (same reading as the 2025-12-23 Mt Field chart). The RG layer 170-224 has a tapered hardness bar (layer mean recorded). CT12 line is at the top of the thin pink SH layer (170 cm). No temperature profile on the chart."
+}

@@ -1,0 +1,160 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Test profiles/Cathedral Boulderfield-02-Jan.jpg"
+  ],
+  "season": "2024-25",
+  "kind": "test_profile",
+  "site": "Cathedral Boulderfield",
+  "site_slug": "cathedral-boulderfield",
+  "chart_format": "snowpilot",
+  "date": "2025-01-02",
+  "time": "13:10",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.41422,
+  "lon": -116.4134,
+  "elevation_m": 2070,
+  "elevation_raw": "2070 m",
+  "aspect": "NW",
+  "slope_deg": 20,
+  "air_temp_c": null,
+  "sky": "OVC",
+  "precip": "NO",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 75,
+  "surface_grain": null,
+  "foot_pen_cm": 70,
+  "ski_pen_cm": 30,
+  "header_other": {
+    "PF": "70",
+    "PS": "30",
+    "chart_title": "Cathedral Boulderfield",
+    "region": "Banff, Yoho and Kootenay, AB",
+    "header_date_raw": "02/01/2025 - 13:10",
+    "wind_loading": null,
+    "stability": null,
+    "specifics": null,
+    "layer_notes": [
+      "35-20cm: Dec. 7th @ 35 cm?"
+    ]
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 20,
+      "depth_top_cm": 55,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": "M",
+      "density": null,
+      "uncertain": false,
+      "comment": "no grain form/size entered; moisture M (moist)"
+    },
+    {
+      "bottom_cm": 20,
+      "top_cm": 35,
+      "depth_top_cm": 40,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "F+",
+      "hardness_idx": 1.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "no grain form/size entered; layer note '35-20cm: Dec. 7th @ 35 cm?'"
+    },
+    {
+      "bottom_cm": 35,
+      "top_cm": 40,
+      "depth_top_cm": 35,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "no grain form/size entered; CT15 SC at its base (35 cm)"
+    },
+    {
+      "bottom_cm": 40,
+      "top_cm": 50,
+      "depth_top_cm": 25,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "no grain form/size entered"
+    },
+    {
+      "bottom_cm": 50,
+      "top_cm": 75,
+      "depth_top_cm": 0,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "no grain form/size entered; surface layer"
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT15, SC @35cm on 1 of 2",
+      "type": "CT",
+      "score": "CT15",
+      "taps": 15,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 35,
+      "depth_cm": 40,
+      "layer_grain": null,
+      "count": 1,
+      "comment": "'on 1 of 2': one of two tests; failed at 35 cm, top of the 20-35 cm layer"
+    },
+    {
+      "raw": "CT13, SC @5cm x 2",
+      "type": "CT",
+      "score": "CT13",
+      "taps": 13,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 5,
+      "depth_cm": 70,
+      "layer_grain": null,
+      "count": 2
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Dec. 7th @ 35 cm? (layer note 35-20 cm)",
+      "height_cm": 35,
+      "depth_cm": 40,
+      "grain": null,
+      "bottom_cm": 20,
+      "top_cm": 35
+    }
+  ],
+  "notes": "Chart Notes: 'Facetted snowpack with no obvious layers. Mostly supportive to ski travel.' Layer Notes: '35-20cm: Dec. 7th @ 35 cm?'. Stability tests column: 'CT15, SC @35cm on 1 of 2'; 'CT13, SC @5cm x 2'. Air temperature, stability, wind loading blank. No temperature profile. Form/size columns blank; moisture M at 0-20 cm.",
+  "summary": "Uniformly soft snowpack (F at surface 50-75 cm, 4F 40-50, 1F 35-40, F+ 20-35, 1F- 0-20 cm moist) with no grain forms entered, described as faceted; CT15 SC at 35 cm (Dec 7 layer?) and CT13 SC (x2) at 5 cm; PF 70, PS 30; NW 2070 m, 20 deg; HS 75 cm",
+  "confidence": "high",
+  "reading_issues": "Hardness steps and boundaries measured from pixels (0, 20, 35, 40, 50, 75 cm) and match the table lines. No grain form or size in any layer (chart notes call it faceted, not coded). 'on 1 of 2' read as one of two repeated tests; recorded count 1."
+}

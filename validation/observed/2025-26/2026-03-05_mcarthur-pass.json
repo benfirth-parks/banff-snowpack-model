@@ -1,0 +1,187 @@
+{
+  "source_files": [
+    "profiles/2025-2026/Test profiles/2026-03-05 McArthur Pass Yoho.pdf"
+  ],
+  "season": "2025-26",
+  "kind": "test_profile",
+  "site": "McArthur Pass",
+  "site_slug": "mcarthur-pass",
+  "chart_format": "snowpilot",
+  "date": "2026-03-05",
+  "time": "12:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.34781,
+  "lon": -116.35262,
+  "elevation_m": 2200,
+  "elevation_raw": "2200 m",
+  "aspect": "NE",
+  "slope_deg": 25,
+  "air_temp_c": -2,
+  "sky": "OVC",
+  "precip": "NO",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 200,
+  "surface_grain": null,
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {
+    "org": "Banff, Yoho and Kootenay AB",
+    "chart_title": "McArthur Pass",
+    "wind_loading": null,
+    "stability": null,
+    "specifics": null,
+    "layer_notes": "46-58cm: Problematic layer",
+    "pit_depth_cm": 95,
+    "filename_label": "McArthur Pass Yoho"
+  },
+  "layers": [
+    {
+      "bottom_cm": 105,
+      "top_cm": 142,
+      "depth_top_cm": 58,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "square",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Lowest dug layer (depth 58-95 cm); pit bottom at 95 cm depth = 105 cm above ground, snow below not dug (axis break to 200)"
+    },
+    {
+      "bottom_cm": 142,
+      "top_cm": 154,
+      "depth_top_cm": 46,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "square",
+      "size_mm": [
+        2.0,
+        3.0
+      ],
+      "hardness": "4F-",
+      "hardness_idx": 1.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Depth 46-58 cm: Layer Notes 'Problematic layer'; ECTP14 and CT12 SC at its top (46 cm depth); bar outline at the top is red"
+    },
+    {
+      "bottom_cm": 154,
+      "top_cm": 163,
+      "depth_top_cm": 37,
+      "grain": "RGxf",
+      "grain2": null,
+      "grain_raw": "U-shaped box with filled dot (flat top, round bottom)",
+      "size_mm": null,
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Depth 37-46 cm; size cell blank"
+    },
+    {
+      "bottom_cm": 163,
+      "top_cm": 185,
+      "depth_top_cm": 15,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "filled circle",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Depth 15-37 cm"
+    },
+    {
+      "bottom_cm": 185,
+      "top_cm": 194,
+      "depth_top_cm": 6,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "/",
+      "size_mm": [
+        1.0,
+        1.5
+      ],
+      "hardness": "4F-",
+      "hardness_idx": 1.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Depth 6-15 cm"
+    },
+    {
+      "bottom_cm": 194,
+      "top_cm": 200,
+      "depth_top_cm": 0,
+      "grain": "PP",
+      "grain2": "PP",
+      "grain_raw": "+ ( asterisk-on-triangle )",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": true,
+      "comment": "Depth 0-6 cm; size cell reads '2(2)'. Secondary glyph (asterisk over a triangle) read as graupel (PPgp), so grain2 is the graupel subtype of PP; glyph identity not certain"
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "ECTP14 @46cm",
+      "type": "ECT",
+      "score": "ECTP14",
+      "taps": 14,
+      "propagation": "P",
+      "fracture": null,
+      "height_cm": 154,
+      "depth_cm": 46,
+      "layer_grain": "FC",
+      "count": 1
+    },
+    {
+      "raw": "CT12, SC @46cm Repeated X2",
+      "type": "CT",
+      "score": "CT12",
+      "taps": 12,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 154,
+      "depth_cm": 46,
+      "layer_grain": "FC",
+      "count": 2
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Problematic layer",
+      "height_cm": 154,
+      "bottom_cm": 142,
+      "top_cm": 154,
+      "depth_cm": 46,
+      "grain": "FC",
+      "comment": "Layer Notes '46-58cm' (depths below the surface); FC 2-3 mm, 4F-; ECTP14 and CT12 SC at its top"
+    }
+  ],
+  "notes": "Protected area at TL",
+  "summary": "HS 200 cm, NE 25 deg protected treeline pit at 2200 m, only the top 95 cm dug (105-200 cm above ground): FC 1 mm (1F) at depth 58-95 cm under a 12 cm FC 2-3 mm 'Problematic layer' (4F-, depth 46-58 cm) that failed ECTP14 and CT12 SC (x2) at 46 cm depth, RGxf 1F (37-46), RG 0.5 mm 1F+ (15-37), DF 4F- (6-15) and 6 cm soft PP/graupel (F) at the surface",
+  "confidence": "high",
+  "reading_issues": "DEPTH-FROM-SURFACE SnowPilot chart (0 at the top, 95 at the pit bottom, axis break, 200 = ground/HS at the bottom): depths converted to height above ground as 200 minus depth (calibrated on 10 cm ticks, 5.725 px/cm, 0 at y=157; boundaries at depths 6, 15, 37, 46, 58, 95 cm). Layer Notes '46-58cm' and the tests '@46cm' are depths. Graph is a 994x840 image in an A4 PDF without a text layer. Hardness ticks I/K/P/1F/4F/F at x=39/111/183/255/327/399; bars measured at the left edge. Header has no PF/PS (null), Wind Loading is blank, no surface-form row entry (surface_grain null; the top layer is PP/graupel). Moisture column empty for every layer (null). Row 4 glyph (box with filled dot) read as RGxf as in other charts. ECTP14 label gives no fracture character. 'Repeated X2' read as count 2. No temperature profile or densities. Date read DD/MM/YYYY (05/03/2026 = 5 March), matching the filename."
+}

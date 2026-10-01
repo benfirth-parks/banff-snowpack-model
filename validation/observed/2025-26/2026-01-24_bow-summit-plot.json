@@ -1,0 +1,295 @@
+{
+ "source_files": [
+  "profiles/2025-2026/Study Plot profiles/Bow Summit/2026-01-24_1036_260124 Bow Summit.pdf"
+ ],
+ "season": "2025-26",
+ "kind": "study_plot",
+ "site": "Bow Summit Study Plot",
+ "site_slug": "bow-summit-plot",
+ "chart_format": "propagation_labs",
+ "date": "2026-01-24",
+ "time": "10:36",
+ "observer": "ben firth",
+ "lat": 51.7094,
+ "lon": -116.479,
+ "elevation_m": 2032,
+ "elevation_raw": "6668ft",
+ "aspect": null,
+ "slope_deg": null,
+ "air_temp_c": -7.8,
+ "sky": "Overcast",
+ "precip": "Snow 1cm/hr",
+ "wind": "Calm",
+ "blowing_snow": null,
+ "hs_cm": 135,
+ "surface_grain": "PP",
+ "foot_pen_cm": 35,
+ "ski_pen_cm": 20,
+ "header_other": {
+  "profile_name": "260124 Bow Summit",
+  "org": null
+ },
+ "layers": [
+  {
+   "bottom_cm": 0,
+   "top_cm": 10,
+   "depth_top_cm": 125,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    3.0,
+    4.0
+   ],
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 10,
+   "top_cm": 12,
+   "depth_top_cm": 123,
+   "grain": "MFcr",
+   "grain2": null,
+   "grain_raw": "◎○",
+   "size_mm": null,
+   "hardness": "K",
+   "hardness_idx": 5,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 12,
+   "top_cm": 25,
+   "depth_top_cm": 110,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    2.0,
+    3.0
+   ],
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 25,
+   "top_cm": 35,
+   "depth_top_cm": 100,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    3.0,
+    3.0
+   ],
+   "hardness": "1F+",
+   "hardness_idx": 3.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 35,
+   "top_cm": 50,
+   "depth_top_cm": 85,
+   "grain": "RGxf",
+   "grain2": null,
+   "grain_raw": "square with filled dot, flat top",
+   "size_mm": [
+    1.0,
+    2.0
+   ],
+   "hardness": "P+",
+   "hardness_idx": 4.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 50,
+   "top_cm": 92,
+   "depth_top_cm": 43,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": null,
+   "hardness": "P-",
+   "hardness_idx": 3.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "no size entered"
+  },
+  {
+   "bottom_cm": 92,
+   "top_cm": 105,
+   "depth_top_cm": 30,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "1F+",
+   "hardness_idx": 3.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 105,
+   "top_cm": 122,
+   "depth_top_cm": 13,
+   "grain": "DF",
+   "grain2": "FC",
+   "grain_raw": "/(□)",
+   "size_mm": null,
+   "hardness": "4F-",
+   "hardness_idx": 1.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "no size entered"
+  },
+  {
+   "bottom_cm": 122,
+   "top_cm": 125,
+   "depth_top_cm": 10,
+   "grain": "SH",
+   "grain2": null,
+   "grain_raw": "V",
+   "size_mm": [
+    2.0,
+    5.0
+   ],
+   "hardness": "F-",
+   "hardness_idx": 0.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 125,
+   "top_cm": 135,
+   "depth_top_cm": 0,
+   "grain": "PP",
+   "grain2": "DF",
+   "grain_raw": "+(/)",
+   "size_mm": null,
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "no size entered"
+  }
+ ],
+ "temps": [
+  {
+   "h_cm": 10,
+   "t_c": -0.9
+  },
+  {
+   "h_cm": 20,
+   "t_c": -2.1
+  },
+  {
+   "h_cm": 30,
+   "t_c": -3.0
+  },
+  {
+   "h_cm": 40,
+   "t_c": -3.7
+  },
+  {
+   "h_cm": 50,
+   "t_c": -4.6
+  },
+  {
+   "h_cm": 60,
+   "t_c": -5.4
+  },
+  {
+   "h_cm": 70,
+   "t_c": -6.4
+  },
+  {
+   "h_cm": 80,
+   "t_c": -7.5
+  },
+  {
+   "h_cm": 90,
+   "t_c": -9.2
+  },
+  {
+   "h_cm": 100,
+   "t_c": -10.2
+  },
+  {
+   "h_cm": 110,
+   "t_c": -11.0
+  },
+  {
+   "h_cm": 120,
+   "t_c": -11.5
+  },
+  {
+   "h_cm": 135,
+   "t_c": -7.7
+  }
+ ],
+ "tests": [
+  {
+   "raw": "CTE1 SC",
+   "type": "CT",
+   "score": "CTE1",
+   "taps": 1,
+   "propagation": null,
+   "fracture": "SC",
+   "height_cm": 125,
+   "depth_cm": 10,
+   "layer_grain": "SH",
+   "count": 1,
+   "comment": "yellow line at top of SH layer"
+  },
+  {
+   "raw": "CTM18 RP",
+   "type": "CT",
+   "score": "CTM18",
+   "taps": 18,
+   "propagation": null,
+   "fracture": "RP",
+   "height_cm": 105,
+   "depth_cm": 30,
+   "layer_grain": null,
+   "count": 1
+  }
+ ],
+ "named_layers": [
+  {
+   "name": "SH",
+   "height_cm": 122,
+   "depth_cm": 13,
+   "grain": "SH"
+  }
+ ],
+ "notes": "CT1: CTE1 SC, CT18: CTM18 RP,",
+ "summary": "Basal FC 0-35 cm (1F, thin MFcr at 10-12 cm) under RGxf 35-50 cm (P+) and a hard FCxr slab 50-105 cm (P-/1F+), DF 105-122 cm over a 3 cm SH at 122-125 cm and thin PP/DF surface; CTE1 SC on the SH at 125 cm and CTM18 RP at 105 cm; HS 135 cm",
+ "confidence": "high",
+ "reading_issues": "Linear hardness axis. Elevation given in feet (6668 ft = 2032 m). Aspect and slope blank. Surface temperature dot at 135 cm is -7.7 while air is -7.8. Glyph at 35-50 cm (square with filled dot) read as RGxf, glyph at 50-105 cm (square with rounded top) as FCxr. Test heights from the yellow lines; SH layer has no name in the table."
+}

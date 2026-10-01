@@ -1,0 +1,376 @@
+{
+ "source_files": [
+  "profiles/2025-2026/Study Plot profiles/Goat's Eye/2026-03-04 Goats Eye Study Plot Full.pdf"
+ ],
+ "season": "2025-26",
+ "kind": "study_plot",
+ "site": "Goat's Eye Study Plot",
+ "site_slug": "goats-eye-plot",
+ "chart_format": "propagation_labs",
+ "date": "2026-03-04",
+ "time": "10:36",
+ "observer": "ben firth",
+ "lat": 51.0901,
+ "lon": -115.7554,
+ "elevation_m": 2311,
+ "elevation_raw": "7581ft",
+ "aspect": "NW",
+ "slope_deg": 1,
+ "air_temp_c": -5.6,
+ "sky": "Few",
+ "precip": "No Precipitation",
+ "wind": "Calm",
+ "blowing_snow": "No Transport",
+ "hs_cm": 160,
+ "surface_grain": "PP",
+ "foot_pen_cm": 35,
+ "ski_pen_cm": 20,
+ "header_other": {
+  "profile_name": "260304 Goats Eye Full",
+  "org": null
+ },
+ "layers": [
+  {
+   "bottom_cm": 0,
+   "top_cm": 45,
+   "depth_top_cm": 115,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    4.0,
+    4.0
+   ],
+   "hardness": "1F+",
+   "hardness_idx": 3.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 45,
+   "top_cm": 59,
+   "depth_top_cm": 101,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    2.5,
+    2.5
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 59,
+   "top_cm": 62,
+   "depth_top_cm": 98,
+   "grain": "MFcr",
+   "grain2": null,
+   "grain_raw": "◎○",
+   "size_mm": [
+    3.0,
+    3.0
+   ],
+   "hardness": "K",
+   "hardness_idx": 5,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 62,
+   "top_cm": 75,
+   "depth_top_cm": 85,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    2.0,
+    3.0
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 75,
+   "top_cm": 77,
+   "depth_top_cm": 83,
+   "grain": "MFcr",
+   "grain2": null,
+   "grain_raw": "◎○",
+   "size_mm": [
+    3.0,
+    3.0
+   ],
+   "hardness": "K",
+   "hardness_idx": 5,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 77,
+   "top_cm": 90,
+   "depth_top_cm": 70,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    2.0,
+    3.5
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 90,
+   "top_cm": 105,
+   "depth_top_cm": 55,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    1.0,
+    4.0
+   ],
+   "hardness": "P-",
+   "hardness_idx": 3.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 105,
+   "top_cm": 120,
+   "depth_top_cm": 40,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    1.0,
+    3.0
+   ],
+   "hardness": "1F+",
+   "hardness_idx": 3.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 120,
+   "top_cm": 122,
+   "depth_top_cm": 38,
+   "grain": "SH",
+   "grain2": null,
+   "grain_raw": "V",
+   "size_mm": [
+    1.0,
+    3.0
+   ],
+   "hardness": "F+",
+   "hardness_idx": 1.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "Named \"Jan 24th SH\""
+  },
+  {
+   "bottom_cm": 122,
+   "top_cm": 130,
+   "depth_top_cm": 30,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    0.1,
+    0.3
+   ],
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": null,
+   "density": null,
+   "uncertain": true,
+   "comment": "row glyph reads ⌂ but the CT11 label shows a plain square"
+  },
+  {
+   "bottom_cm": 130,
+   "top_cm": 150,
+   "depth_top_cm": 10,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/",
+   "size_mm": [
+    0.3,
+    0.3
+   ],
+   "hardness": "4F",
+   "hardness_idx": 2,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 150,
+   "top_cm": 155,
+   "depth_top_cm": 5,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/",
+   "size_mm": [
+    2.0,
+    2.0
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 155,
+   "top_cm": 160,
+   "depth_top_cm": 0,
+   "grain": "PP",
+   "grain2": null,
+   "grain_raw": "+",
+   "size_mm": [
+    3.0,
+    3.0
+   ],
+   "hardness": "F-",
+   "hardness_idx": 0.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  }
+ ],
+ "temps": [
+  {
+   "h_cm": 20,
+   "t_c": -2.3
+  },
+  {
+   "h_cm": 30,
+   "t_c": -2.5
+  },
+  {
+   "h_cm": 40,
+   "t_c": -2.8
+  },
+  {
+   "h_cm": 50,
+   "t_c": -3.4
+  },
+  {
+   "h_cm": 60,
+   "t_c": -3.7
+  },
+  {
+   "h_cm": 70,
+   "t_c": -4.2
+  },
+  {
+   "h_cm": 80,
+   "t_c": -4.5
+  },
+  {
+   "h_cm": 90,
+   "t_c": -4.9
+  },
+  {
+   "h_cm": 100,
+   "t_c": -5.0
+  },
+  {
+   "h_cm": 110,
+   "t_c": -5.1
+  },
+  {
+   "h_cm": 120,
+   "t_c": -5.3
+  },
+  {
+   "h_cm": 130,
+   "t_c": -5.6
+  },
+  {
+   "h_cm": 140,
+   "t_c": -6.0
+  },
+  {
+   "h_cm": 150,
+   "t_c": -7.0
+  },
+  {
+   "h_cm": 160,
+   "t_c": -5.3
+  }
+ ],
+ "tests": [
+  {
+   "raw": "CT11",
+   "type": "CT",
+   "score": "CT11",
+   "taps": 11,
+   "propagation": null,
+   "fracture": null,
+   "height_cm": 130,
+   "depth_cm": 30,
+   "layer_grain": "FC",
+   "count": 1,
+   "comment": "Notes \"Feb 14th?\"; label shows plain square"
+  },
+  {
+   "raw": "CT18",
+   "type": "CT",
+   "score": "CT18",
+   "taps": 18,
+   "propagation": null,
+   "fracture": null,
+   "height_cm": 122,
+   "depth_cm": 38,
+   "layer_grain": "SH",
+   "count": 1,
+   "comment": "Label on Jan 24th SH"
+  }
+ ],
+ "named_layers": [
+  {
+   "name": "Jan 24th SH",
+   "height_cm": 120,
+   "depth_cm": 40,
+   "grain": "SH"
+  },
+  {
+   "name": "Feb 14th?",
+   "height_cm": 130,
+   "depth_cm": 30,
+   "grain": "FC"
+  }
+ ],
+ "notes": "CT11: Feb 14th?,",
+ "summary": "HS 160 cm: deep faceted FC pack 0-120 cm (1F+ to P, two MFcr crusts at 59-62 and 75-77 cm), Jan 24 SH at 120-122 cm (CT18), thin FCxr layer at 122-130 cm (CT11, possible Feb 14), DF 130-155 cm and PP surface; temps -2.3 C at 20 cm to -7 C at 150 cm",
+ "confidence": "high",
+ "reading_issues": "Linear axis. Elevation in feet (7581 ft = 2311 m). Fracture characters not printed on the CT labels. CT11 layer glyph ambiguous (row shows rounded-top square, label shows plain square). No temperature dots below 20 cm."
+}

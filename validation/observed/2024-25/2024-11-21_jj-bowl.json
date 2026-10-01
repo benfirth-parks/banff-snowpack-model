@@ -1,0 +1,274 @@
+{
+  "source_files": [
+    "profiles/2024-2025/20241121 JJ Bowl Bow Sum-21-Nov.jpg"
+  ],
+  "season": "2024-25",
+  "kind": "test_profile",
+  "site": "JJ Bowl Bow Sum",
+  "site_slug": "jj-bowl",
+  "chart_format": "snowpilot",
+  "date": "2024-11-21",
+  "time": "12:00",
+  "observer": "Banff Visitor Safety",
+  "lat": null,
+  "lon": null,
+  "elevation_m": 2350,
+  "elevation_raw": "2350 m",
+  "aspect": "E",
+  "slope_deg": null,
+  "air_temp_c": -11,
+  "sky": "OVC",
+  "precip": null,
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 90,
+  "surface_grain": "PP",
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {
+    "chart_title": "241121 JJ Bowl Bow Sum",
+    "region": "Banff, Yoho and Kootenay, AB",
+    "header_date_raw": "21/11/2024 - 12:00",
+    "stability": null,
+    "wind_loading": null,
+    "specifics": null,
+    "surface_form": "+ (PP), no size, drawn in the fixed top row above the HS line (zero thickness)",
+    "layer_notes": [
+      "43-16cm: Nov 9 @ 43",
+      "13-10cm: Oct 20th",
+      "13-10cm: Problematic layer"
+    ]
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 10,
+      "depth_top_cm": 80,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "◎ (two linked circles)",
+      "size_mm": null,
+      "hardness": "K",
+      "hardness_idx": 5.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "basal crust, no size entered"
+    },
+    {
+      "bottom_cm": 10,
+      "top_cm": 13,
+      "depth_top_cm": 77,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.5,
+        2.5
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "layer notes '13-10cm: Oct 20th' and '13-10cm: Problematic layer'; red line along its top edge (13 cm)"
+    },
+    {
+      "bottom_cm": 13,
+      "top_cm": 15,
+      "depth_top_cm": 75,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "◎ (two linked circles)",
+      "size_mm": [
+        2.5,
+        2.5
+      ],
+      "hardness": "K",
+      "hardness_idx": 5.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "thin crust; CT24 SC at its base (13 cm)"
+    },
+    {
+      "bottom_cm": 15,
+      "top_cm": 16,
+      "depth_top_cm": 74,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": null,
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "thin 1 cm layer, no size entered"
+    },
+    {
+      "bottom_cm": 16,
+      "top_cm": 43,
+      "depth_top_cm": 47,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "layer note '43-16cm: Nov 9 @ 43'"
+    },
+    {
+      "bottom_cm": 43,
+      "top_cm": 49,
+      "depth_top_cm": 41,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 49,
+      "top_cm": 51,
+      "depth_top_cm": 39,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "thin 2 cm firmer layer"
+    },
+    {
+      "bottom_cm": 51,
+      "top_cm": 65,
+      "depth_top_cm": 25,
+      "grain": "FC",
+      "grain2": "DF",
+      "grain_raw": "□(⟋)",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 65,
+      "top_cm": 76,
+      "depth_top_cm": 14,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 76,
+      "top_cm": 77,
+      "depth_top_cm": 13,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "thin 1 cm firmer layer"
+    },
+    {
+      "bottom_cm": 77,
+      "top_cm": 90,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.5,
+        1.5
+      ],
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "surface layer; PP '+' in the top surface row"
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT24, SC @13cm X2",
+      "type": "CT",
+      "score": "CT24",
+      "taps": 24,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 13,
+      "depth_cm": 77,
+      "layer_grain": "FC",
+      "count": 2,
+      "comment": "arrow at 13 cm = top of the 10-13 cm FC layer / base of the 13-15 cm crust"
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Oct 20th (flagged problematic layer)",
+      "height_cm": 11.5,
+      "depth_cm": 78.5,
+      "grain": "FC",
+      "bottom_cm": 10,
+      "top_cm": 13
+    },
+    {
+      "name": "Nov 9 @ 43",
+      "height_cm": 43,
+      "depth_cm": 47,
+      "grain": "FC",
+      "bottom_cm": 16,
+      "top_cm": 43
+    }
+  ],
+  "notes": "Chart 'Notes:' blank. Layer Notes: '43-16cm: Nov 9 @ 43'; '13-10cm: Oct 20th'; '13-10cm: Problematic layer'. Stability tests column: 'CT24, SC @13cm X2'. Coordinates, slope, precipitation blank. No temperature profile.",
+  "summary": "Basal K crust (MFcr) 0-10 cm, 10-13 cm FC 2.5 mm (4F, Oct 20th problematic layer) under a thin K crust at 13-15 cm, then FC 1F/4F 16-65 cm (Nov 9 layer at 43 cm) and DF 65-90 cm (F) with PP at the surface; CT24 SC (x2) at 13 cm; E 2350 m; HS 90 cm",
+  "confidence": "high",
+  "reading_issues": "Table rows for the thin layers are enlarged with diagonal connectors; the true layer boundaries (0, 10, 13, 15, 16, 43, 49, 51, 65, 76, 77, 90 cm) were taken from the connector ends and agree with the hardness bar steps measured from pixels. Rows matched to bars in order (11 rows, 11 bar segments). Chart title carries the date prefix '241121'. Slope and coordinates blank. The 15-16 cm FC layer has no size."
+}

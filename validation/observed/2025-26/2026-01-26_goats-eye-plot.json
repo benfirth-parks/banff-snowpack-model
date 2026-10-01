@@ -1,0 +1,302 @@
+{
+ "source_files": [
+  "profiles/2025-2026/Study Plot profiles/Goat's Eye/2026-01-26_Goats Eye.pdf"
+ ],
+ "season": "2025-26",
+ "kind": "study_plot",
+ "site": "Goat's Eye Study Plot",
+ "site_slug": "goats-eye-plot",
+ "chart_format": "propagation_labs",
+ "date": "2026-01-26",
+ "time": "11:32",
+ "observer": "Lisa Paulson",
+ "lat": 51.1908,
+ "lon": -115.5601,
+ "elevation_m": 1399,
+ "elevation_raw": "1399m",
+ "aspect": null,
+ "slope_deg": null,
+ "air_temp_c": 9.0,
+ "sky": "Scattered",
+ "precip": "No Precipitation",
+ "wind": "Light,SW",
+ "blowing_snow": "No Transport",
+ "hs_cm": 135,
+ "surface_grain": null,
+ "foot_pen_cm": null,
+ "ski_pen_cm": null,
+ "header_other": {
+  "profile_name": "Goats Eye",
+  "org": null,
+  "header_suspect": "Lat/lon (51.1908,-115.5601) and elevation 1399 m are Banff townsite values, probably auto-filled; air temp +9.0 C is inconsistent with a -14 C snow surface. Layer names (Jan 3, Jan 24, Nov 13) match Goat's Eye so the pit is treated as Goat's Eye."
+ },
+ "layers": [
+  {
+   "bottom_cm": 0,
+   "top_cm": 15,
+   "depth_top_cm": 120,
+   "grain": "FCxr",
+   "grain2": "DH",
+   "grain_raw": "⌂(∧)",
+   "size_mm": [
+    3.0,
+    3.0
+   ],
+   "hardness": "P-",
+   "hardness_idx": 3.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 15,
+   "top_cm": 50,
+   "depth_top_cm": 85,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    3.0,
+    3.0
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "Layer note: \"Nov 27 30-35 cm in welded in middle\""
+  },
+  {
+   "bottom_cm": 50,
+   "top_cm": 77,
+   "depth_top_cm": 58,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "K",
+   "hardness_idx": 5,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 77,
+   "top_cm": 105,
+   "depth_top_cm": 30,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.5,
+    1.0
+   ],
+   "hardness": "P-",
+   "hardness_idx": 3.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 105,
+   "top_cm": 106,
+   "depth_top_cm": 29,
+   "grain": "SH",
+   "grain2": null,
+   "grain_raw": "V",
+   "size_mm": [
+    4.0,
+    4.0
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "Named \"Jan 3\""
+  },
+  {
+   "bottom_cm": 106,
+   "top_cm": 132,
+   "depth_top_cm": 3,
+   "grain": "RGxf",
+   "grain2": null,
+   "grain_raw": "square with filled dot",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 132,
+   "top_cm": 133,
+   "depth_top_cm": 2,
+   "grain": "SH",
+   "grain2": null,
+   "grain_raw": "V",
+   "size_mm": [
+    10.0,
+    10.0
+   ],
+   "hardness": "F-",
+   "hardness_idx": 0.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "Named \"Jan 24\""
+  },
+  {
+   "bottom_cm": 133,
+   "top_cm": 135,
+   "depth_top_cm": 0,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/",
+   "size_mm": [
+    1.0,
+    2.0
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  }
+ ],
+ "temps": [
+  {
+   "h_cm": 0,
+   "t_c": 0.0
+  },
+  {
+   "h_cm": 10,
+   "t_c": -2.5
+  },
+  {
+   "h_cm": 20,
+   "t_c": -3.9
+  },
+  {
+   "h_cm": 30,
+   "t_c": -4.4
+  },
+  {
+   "h_cm": 40,
+   "t_c": -5.5
+  },
+  {
+   "h_cm": 50,
+   "t_c": -6.5
+  },
+  {
+   "h_cm": 60,
+   "t_c": -7.2
+  },
+  {
+   "h_cm": 70,
+   "t_c": -8.1
+  },
+  {
+   "h_cm": 80,
+   "t_c": -8.8
+  },
+  {
+   "h_cm": 90,
+   "t_c": -9.8
+  },
+  {
+   "h_cm": 100,
+   "t_c": -10.6
+  },
+  {
+   "h_cm": 110,
+   "t_c": -12.3
+  },
+  {
+   "h_cm": 120,
+   "t_c": -14.0
+  },
+  {
+   "h_cm": 125,
+   "t_c": -14.3
+  }
+ ],
+ "tests": [
+  {
+   "raw": "CT22SP",
+   "type": "CT",
+   "score": "CT22",
+   "taps": 22,
+   "propagation": null,
+   "fracture": "SP",
+   "height_cm": 105,
+   "depth_cm": 30,
+   "layer_grain": "SH",
+   "count": 1,
+   "comment": "Label on Jan 3 SH"
+  },
+  {
+   "raw": "CT23SP",
+   "type": "CT",
+   "score": "CT23",
+   "taps": 23,
+   "propagation": null,
+   "fracture": "SP",
+   "height_cm": 105,
+   "depth_cm": 30,
+   "layer_grain": "SH",
+   "count": 1,
+   "comment": "Second test on Jan 3 SH"
+  },
+  {
+   "raw": "CT25SC",
+   "type": "CT",
+   "score": "CT25",
+   "taps": 25,
+   "propagation": null,
+   "fracture": "SC",
+   "height_cm": 30,
+   "depth_cm": 105,
+   "layer_grain": "FC",
+   "count": 1,
+   "comment": "Label on square 2.0-3.0 \"Nov 13\""
+  }
+ ],
+ "named_layers": [
+  {
+   "name": "Nov 13",
+   "height_cm": 30,
+   "depth_cm": 105,
+   "grain": "FC"
+  },
+  {
+   "name": "Jan 3",
+   "height_cm": 105,
+   "depth_cm": 30,
+   "grain": "SH"
+  },
+  {
+   "name": "Jan 24",
+   "height_cm": 132,
+   "depth_cm": 3,
+   "grain": "SH"
+  }
+ ],
+ "notes": null,
+ "summary": "HS 135 cm, cold pack (-14 C near surface): FCxr 0-50 cm (P-/P) under K RG 50-77 cm, P- RG 77-105 cm, Jan 3 SH at 105 cm (CT22/CT23 SP), RGxf 106-132 cm, Jan 24 SH 10 mm at 132 cm and thin DF surface; CT25 SC at 30 cm on Nov 13",
+ "confidence": "medium",
+ "reading_issues": "HEADER SUSPECT: lat/lon, elevation 1399 m and air +9 C look like device defaults (Banff townsite), not Goat's Eye; recorded as printed. Site assumed Goat's Eye from layer names and file location. Layer 15-50 cm hardness measured away from the CT label that overlaps the bar. Temperature dot at 110 cm partly hidden by the CT22/CT23 label (about -12.3). No surface dot at HS. Notes blank; surface grain, foot/ski pen blank. Linear axis."
+}

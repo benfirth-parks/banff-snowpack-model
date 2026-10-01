@@ -1,0 +1,63 @@
+{
+  "source_files": ["profiles/2023-2024/Tak Falls/Tak Falls 02-21-2024.png"],
+  "season": "2023-24",
+  "kind": "study_plot",
+  "site": "Takakkaw Falls Study Plot",
+  "site_slug": "tak-falls-plot",
+  "chart_format": "propagation_labs",
+  "date": "2024-02-21",
+  "time": "11:28",
+  "observer": "steve holeczi",
+  "lat": 51.4986,
+  "lon": -116.4963,
+  "elevation_m": 1789,
+  "elevation_raw": "1789m",
+  "aspect": null,
+  "slope_deg": null,
+  "air_temp_c": 0.0,
+  "sky": "Broken",
+  "precip": "Snow <0.5cm/hr",
+  "wind": "Light,SW",
+  "blowing_snow": "No Transport",
+  "hs_cm": 129,
+  "surface_grain": "PP",
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {"profile_name": "tak falls", "surface_grain_raw": "Precipitation Particles 2.0mm", "org": null, "aspect_raw": "?", "slope_raw": "?", "foot_pen_raw": "?", "ski_pen_raw": "?", "date_raw": "2024-02-21 11:28:25.000"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 25, "depth_top_cm": 104, "grain": "FC", "grain2": "DH", "grain_raw": "□(∧)", "size_mm": [2.0, 2.0], "hardness": "P-", "hardness_idx": 3.67, "moisture": null, "density": null, "uncertain": false, "comment": "size column '2.0(3.0)': FC 2.0 mm, secondary DH 3.0 mm"},
+    {"bottom_cm": 25, "top_cm": 38.8, "depth_top_cm": 90.2, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [1.5, 1.5], "hardness": "P", "hardness_idx": 4.0, "moisture": null, "density": null, "uncertain": false, "comment": "upper bound (38.8 cm) taken from the table row line; the hardness bar has the same P edge as the layer above, so the boundary is only visible in the table"},
+    {"bottom_cm": 38.8, "top_cm": 44, "depth_top_cm": 85, "grain": "MFcr", "grain2": null, "grain_raw": "◎◎", "size_mm": null, "hardness": "P", "hardness_idx": 4.0, "moisture": null, "density": null, "uncertain": false, "comment": "two linked circles = melt-freeze crust; no size given; boundary at 38.8 cm from the table row line"},
+    {"bottom_cm": 44, "top_cm": 69, "depth_top_cm": 60, "grain": "FCxr", "grain2": null, "grain_raw": "square with rounded top (FCxr glyph)", "size_mm": [2.0, 2.0], "hardness": "1F", "hardness_idx": 3.0, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 69, "top_cm": 87, "depth_top_cm": 42, "grain": "RG", "grain2": null, "grain_raw": "●", "size_mm": [1.0, 1.0], "hardness": "P-", "hardness_idx": 3.67, "moisture": null, "density": null, "uncertain": false, "comment": "CT22RP failure line at its top (87 cm)"},
+    {"bottom_cm": 87, "top_cm": 100, "depth_top_cm": 29, "grain": "IF", "grain2": "MF", "grain_raw": "=(three clustered circles)", "size_mm": null, "hardness": "P", "hardness_idx": 4.0, "moisture": null, "density": null, "uncertain": false, "comment": "'=' primary with three-clustered-circles (MFcl) secondary; no size given; drawn in the red highlight band as the layer flagged for the CT22RP failure at 87 cm"},
+    {"bottom_cm": 100, "top_cm": 116, "depth_top_cm": 13, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": [2.0, 2.0], "hardness": "4F-", "hardness_idx": 1.67, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 116, "top_cm": 129, "depth_top_cm": 0, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": [2.0, 2.0], "hardness": "F", "hardness_idx": 1.0, "moisture": null, "density": null, "uncertain": false, "comment": null}
+  ],
+  "temps": [
+    {"h_cm": 0, "t_c": -1.0},
+    {"h_cm": 10, "t_c": -2.0},
+    {"h_cm": 20, "t_c": -3.0},
+    {"h_cm": 30, "t_c": -3.5},
+    {"h_cm": 40, "t_c": -4.5},
+    {"h_cm": 50, "t_c": -5.0},
+    {"h_cm": 60, "t_c": -6.0},
+    {"h_cm": 70, "t_c": -7.0},
+    {"h_cm": 80, "t_c": -7.0},
+    {"h_cm": 90, "t_c": -6.5},
+    {"h_cm": 100, "t_c": -6.0},
+    {"h_cm": 110, "t_c": -5.0},
+    {"h_cm": 119, "t_c": -3.0},
+    {"h_cm": 129, "t_c": -1.0}
+  ],
+  "tests": [
+    {"raw": "CT22RP", "type": "CT", "score": "CT22", "taps": 22, "propagation": null, "fracture": "RP", "height_cm": 87, "depth_cm": 42, "layer_grain": "IF", "count": 1}
+  ],
+  "named_layers": [
+    {"name": "highlighted layer (CT22RP failure layer)", "height_cm": 100, "depth_cm": 29, "grain": "IF"}
+  ],
+  "notes": "Notes: 22hst since Feb 10. Yellow test label: CT22RP at 87 cm. The 87-100 cm layer is shaded red in the hardness chart. Aspect, Slope, Foot Pen and Ski Pen printed as '?'. Org blank.",
+  "summary": "FC(DH) 0-25 cm (2 mm, P-) under FC 25-38.8 cm (P), a P MFcr 38.8-44 cm, FCxr 44-69 cm (1F), RG 69-87 cm (P-), a 13 cm P IF/MF layer at 87-100 cm flagged for CT22 RP at 87 cm, and 29 cm of DF (4F- at 100-116, F above); PP 2 mm at the surface; HS 129 cm; air 0.0 C; snow -1.0 C at the ground, -7.0 C at 70-80 cm, -1.0 C at the surface; 22 cm new snow since Feb 10",
+  "confidence": "high",
+  "reading_issues": "Propagation Labs PNG (2523x2526). Measured from native pixels: height axis HS 129 cm at y=355.5 and 0 cm at y=1776.5 (11.02 px/cm); hardness gridlines K, P, 1f, 4f, F at x=340, 680, 1020, 1361, 1701 (340.3 px per index); temperature axis -7..0 C with 0 at the right axis (243.3 px per C). Layer boundaries from the table row lines: 25, 38.8, 44, 69, 87, 100, 116 cm. The 38.8 cm boundary (between FC and MFcr, both P) is only visible in the table row line (1349 px = 38.8 cm, kept as printed, not rounded). The 87-100 cm layer's hardness bar is drawn in the red 'failure layer' highlight and starts at the P gridline. The temperature dot at 90 cm is partly covered by the CT22RP label (centre read at 90 cm, -6.5 C); dots sit at 0, 10, 20, ... 110, 119 and 129 cm. Glyphs: '=' read as IF and the parenthesised three-circle cluster as MFcl (secondary); two linked circles on the 38.8-44 cm layer read as MFcr; square-with-rounded-top read as FCxr; '□(∧)' read as FC with secondary DH. Header surface grain is 'Precipitation Particles 2.0mm'. For the CT22RP failure, layer_grain IF uses the highlighted 87-100 cm layer (the line is at its base); the failure plane lies between the P- RG below and this P layer. Observer is printed as 'steve holeczi' (the SnowPilot chart of 2023-12-19 prints 'Stephen Holeczi')."
+}

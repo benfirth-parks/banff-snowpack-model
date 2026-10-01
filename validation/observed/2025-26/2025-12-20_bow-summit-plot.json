@@ -1,0 +1,322 @@
+{
+ "source_files": [
+  "profiles/2025-2026/Study Plot profiles/Bow Summit/2025-12-20_Bow Summit Study Plot.pdf",
+  "profiles/2025-2026/Study Plot profiles/Bow Summit/2025-12-20_Bow Summit Study Plot.png"
+ ],
+ "season": "2025-26",
+ "kind": "study_plot",
+ "site": "Bow Summit Study Plot",
+ "site_slug": "bow-summit-plot",
+ "chart_format": "propagation_labs",
+ "date": "2025-12-20",
+ "time": "15:19",
+ "observer": "Snow Safety",
+ "lat": 51.7088,
+ "lon": -116.4794,
+ "elevation_m": 2039,
+ "elevation_raw": "2039m",
+ "aspect": "SW",
+ "slope_deg": 0,
+ "air_temp_c": -8.5,
+ "sky": "Obscured",
+ "precip": "Snow",
+ "wind": "Calm",
+ "blowing_snow": null,
+ "hs_cm": 138,
+ "surface_grain": null,
+ "foot_pen_cm": 70,
+ "ski_pen_cm": 30,
+ "header_other": {
+  "profile_name": null,
+  "org": "Parks Canada Visitor Safety",
+  "hardness_axis": "older non-linear Propagation Labs axis",
+  "surface_grain_raw": "--"
+ },
+ "layers": [
+  {
+   "bottom_cm": 0,
+   "top_cm": 16,
+   "depth_top_cm": 122,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    1.0,
+    3.0
+   ],
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": "size column '1(3)'"
+  },
+  {
+   "bottom_cm": 16,
+   "top_cm": 18,
+   "depth_top_cm": 120,
+   "grain": "IF",
+   "grain2": null,
+   "grain_raw": "=",
+   "size_mm": [
+    1.0,
+    3.0
+   ],
+   "hardness": "K-",
+   "hardness_idx": 4.67,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": "size column '1(3)'"
+  },
+  {
+   "bottom_cm": 18,
+   "top_cm": 25,
+   "depth_top_cm": 113,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    1.0,
+    3.0
+   ],
+   "hardness": "1F-",
+   "hardness_idx": 2.67,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": "size column '1(3)'"
+  },
+  {
+   "bottom_cm": 25,
+   "top_cm": 26,
+   "depth_top_cm": 112,
+   "grain": "MFcr",
+   "grain2": null,
+   "grain_raw": "◎○",
+   "size_mm": [
+    1.0,
+    3.0
+   ],
+   "hardness": "K-",
+   "hardness_idx": 4.67,
+   "moisture": "D",
+   "density": null,
+   "uncertain": true,
+   "comment": "Thin crust; bar hidden behind test label, only seen to be at least P+; K- is a best estimate"
+  },
+  {
+   "bottom_cm": 26,
+   "top_cm": 27,
+   "depth_top_cm": 111,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    1.0,
+    3.0
+   ],
+   "hardness": "1F-",
+   "hardness_idx": 2.67,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 27,
+   "top_cm": 28,
+   "depth_top_cm": 110,
+   "grain": "MFcr",
+   "grain2": null,
+   "grain_raw": "◎○",
+   "size_mm": [
+    1.0,
+    3.0
+   ],
+   "hardness": "K-",
+   "hardness_idx": 4.67,
+   "moisture": "D",
+   "density": null,
+   "uncertain": true,
+   "comment": "Thin crust; bar hidden behind test label, at least P+"
+  },
+  {
+   "bottom_cm": 28,
+   "top_cm": 43,
+   "depth_top_cm": 95,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    1.0,
+    2.0
+   ],
+   "hardness": "1F-",
+   "hardness_idx": 2.83,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": "1F- at base (28 cm) to 1F at top (43 cm); size column '1(2)'"
+  },
+  {
+   "bottom_cm": 43,
+   "top_cm": 65,
+   "depth_top_cm": 73,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.5,
+    0.5
+   ],
+   "hardness": "1F+",
+   "hardness_idx": 3.33,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 65,
+   "top_cm": 73,
+   "depth_top_cm": 65,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.3,
+    0.3
+   ],
+   "hardness": "P-",
+   "hardness_idx": 3.67,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 73,
+   "top_cm": 99,
+   "depth_top_cm": 39,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.5,
+    0.5
+   ],
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 99,
+   "top_cm": 132,
+   "depth_top_cm": 6,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/",
+   "size_mm": [
+    0.3,
+    0.3
+   ],
+   "hardness": "4F",
+   "hardness_idx": 2.0,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": "4F+ (2.3) at base to 4F- (1.7) at top"
+  },
+  {
+   "bottom_cm": 132,
+   "top_cm": 138,
+   "depth_top_cm": 0,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/ (broken slash)",
+   "size_mm": [
+    0.3,
+    0.3
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": "D",
+   "density": null,
+   "uncertain": true,
+   "comment": "glyph looks like DFbk"
+  }
+ ],
+ "temps": [
+  {
+   "h_cm": 40,
+   "t_c": -1.5
+  },
+  {
+   "h_cm": 50,
+   "t_c": -1.9
+  },
+  {
+   "h_cm": 60,
+   "t_c": -2.4
+  },
+  {
+   "h_cm": 69,
+   "t_c": -2.9
+  },
+  {
+   "h_cm": 80,
+   "t_c": -3.5
+  },
+  {
+   "h_cm": 90,
+   "t_c": -4.3
+  },
+  {
+   "h_cm": 100,
+   "t_c": -4.7
+  },
+  {
+   "h_cm": 110,
+   "t_c": -6.7
+  },
+  {
+   "h_cm": 120,
+   "t_c": -8.0
+  },
+  {
+   "h_cm": 130,
+   "t_c": -9.4
+  }
+ ],
+ "tests": [
+  {
+   "raw": "CT21SC",
+   "type": "CT",
+   "score": "CT21",
+   "taps": 21,
+   "propagation": null,
+   "fracture": "SC",
+   "height_cm": 28,
+   "depth_cm": 110,
+   "layer_grain": "FCxr",
+   "count": 1,
+   "comment": "Label \"Nov 22\"; column top removed before test (see notes)"
+  }
+ ],
+ "named_layers": [
+  {
+   "name": "Nov 22",
+   "height_cm": 28,
+   "depth_cm": 110,
+   "grain": "FCxr"
+  }
+ ],
+ "notes": "CT21SC: removed top of colum to firm snow at 70cm,",
+ "summary": "HS 138 cm; faceted FCxr 0-43 cm with IF 16-18 cm and thin crusts at 25-28 cm; RG 43-99 cm (P- band 65-73); DF 99-138 cm softening upward; CT21 SC at 28 cm (Nov 22 layer); cold gradient to -9.4 C at 130 cm",
+ "confidence": "medium",
+ "reading_issues": "PDF (layout L) and PNG (layout R) are the same pit; both used. Older non-linear hardness axis. Thin crusts at 25-26 and 27-28 cm are hidden behind the CT label/yellow line so their hardness is only bounded (>= P+). Sizes in column read as \"1(3)\"/\"1(2)\" kept as [min,max]. Notes say the column top was removed to firm snow at 70 cm; foot pen is 70 so the 70 is probably depth from the surface; test height 28 cm taken from the yellow line. Header name/surface grain/blowing snow are blank (\"--\")."
+}

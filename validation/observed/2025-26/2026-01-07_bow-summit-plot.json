@@ -1,0 +1,314 @@
+{
+ "source_files": [
+  "profiles/2025-2026/Study Plot profiles/Bow Summit/2026-01-07_Bow Summit Study Plot.png"
+ ],
+ "season": "2025-26",
+ "kind": "study_plot",
+ "site": "Bow Summit Study Plot",
+ "site_slug": "bow-summit-plot",
+ "chart_format": "propagation_labs",
+ "date": "2026-01-07",
+ "time": "13:37",
+ "observer": "ben firth",
+ "lat": 51.7094,
+ "lon": -116.4787,
+ "elevation_m": null,
+ "elevation_raw": null,
+ "aspect": "N",
+ "slope_deg": null,
+ "air_temp_c": null,
+ "sky": "Broken",
+ "precip": "No Precipitation",
+ "wind": "Moderate,NW",
+ "blowing_snow": "Light",
+ "hs_cm": 145,
+ "surface_grain": "PP",
+ "foot_pen_cm": 50,
+ "ski_pen_cm": 30,
+ "header_other": {
+  "profile_name": "260107 Bow Summit Snow Study Plot",
+  "org": null
+ },
+ "layers": [
+  {
+   "bottom_cm": 0,
+   "top_cm": 17,
+   "depth_top_cm": 128,
+   "grain": "FC",
+   "grain2": "DH",
+   "grain_raw": "□(∧)",
+   "size_mm": [
+    3.0,
+    3.0
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "secondary DH"
+  },
+  {
+   "bottom_cm": 17,
+   "top_cm": 23,
+   "depth_top_cm": 122,
+   "grain": "FC",
+   "grain2": "DH",
+   "grain_raw": "□(∧)",
+   "size_mm": [
+    3.0,
+    5.0
+   ],
+   "hardness": "P-",
+   "hardness_idx": 3.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "Named \"Nov 17 Cr\""
+  },
+  {
+   "bottom_cm": 23,
+   "top_cm": 34,
+   "depth_top_cm": 111,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    2.0,
+    3.0
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 34,
+   "top_cm": 60,
+   "depth_top_cm": 85,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    1.0,
+    1.5
+   ],
+   "hardness": "K",
+   "hardness_idx": 5,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 60,
+   "top_cm": 98,
+   "depth_top_cm": 47,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 98,
+   "top_cm": 104,
+   "depth_top_cm": 41,
+   "grain": "PPgp",
+   "grain2": "RG",
+   "grain_raw": "●-like with note \"104 graupel\"",
+   "size_mm": null,
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": null,
+   "density": null,
+   "uncertain": true,
+   "comment": "Named \"Dec 15 Cr\"; graupel-like layer"
+  },
+  {
+   "bottom_cm": 104,
+   "top_cm": 119,
+   "depth_top_cm": 26,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.3,
+    0.3
+   ],
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 119,
+   "top_cm": 133,
+   "depth_top_cm": 12,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "4F",
+   "hardness_idx": 2,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 133,
+   "top_cm": 145,
+   "depth_top_cm": 0,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  }
+ ],
+ "temps": [
+  {
+   "h_cm": 0,
+   "t_c": -0.6
+  },
+  {
+   "h_cm": 10,
+   "t_c": -1.4
+  },
+  {
+   "h_cm": 20,
+   "t_c": -2.0
+  },
+  {
+   "h_cm": 30,
+   "t_c": -2.5
+  },
+  {
+   "h_cm": 40,
+   "t_c": -2.9
+  },
+  {
+   "h_cm": 50,
+   "t_c": -3.4
+  },
+  {
+   "h_cm": 60,
+   "t_c": -4.0
+  },
+  {
+   "h_cm": 70,
+   "t_c": -4.3
+  },
+  {
+   "h_cm": 80,
+   "t_c": -4.7
+  },
+  {
+   "h_cm": 90,
+   "t_c": -5.3
+  },
+  {
+   "h_cm": 100,
+   "t_c": -5.9
+  },
+  {
+   "h_cm": 110,
+   "t_c": -6.7
+  },
+  {
+   "h_cm": 120,
+   "t_c": -7.7
+  },
+  {
+   "h_cm": 128,
+   "t_c": -8.2
+  },
+  {
+   "h_cm": 135,
+   "t_c": -8.6
+  }
+ ],
+ "tests": [
+  {
+   "raw": "CTN",
+   "type": "CT",
+   "score": "CTN",
+   "taps": null,
+   "propagation": null,
+   "fracture": "NR",
+   "height_cm": null,
+   "depth_cm": null,
+   "layer_grain": null,
+   "count": 1,
+   "comment": "No result; label at the top of the chart, height not given"
+  },
+  {
+   "raw": "CT14 SC (CTM14)",
+   "type": "CT",
+   "score": "CT14",
+   "taps": 14,
+   "propagation": null,
+   "fracture": "SC",
+   "height_cm": 119,
+   "depth_cm": 26,
+   "layer_grain": null,
+   "count": 1,
+   "comment": "Failure at 119 cm interface"
+  },
+  {
+   "raw": "CT25 PC (CTH25)",
+   "type": "CT",
+   "score": "CT25",
+   "taps": 25,
+   "propagation": null,
+   "fracture": "PC",
+   "height_cm": 104,
+   "depth_cm": 41,
+   "layer_grain": null,
+   "count": 1,
+   "comment": "Failure at 104 cm, base of Dec 15 graupel/crust layer"
+  }
+ ],
+ "named_layers": [
+  {
+   "name": "Nov 17 Cr",
+   "height_cm": 17,
+   "depth_cm": 128,
+   "grain": "FC"
+  },
+  {
+   "name": "Dec 15 Cr",
+   "height_cm": 98,
+   "depth_cm": 47,
+   "grain": "PPgp"
+  }
+ ],
+ "notes": "CTN: NR, CT14: SC CTM14, CT25: CTH25 PC,",
+ "summary": "Basal FC/DH 0-34 cm (P/P-, Nov 17 crust layer at 17-23 cm) under hard FCxr 34-60 cm (K), RG 60-98 cm (P), Dec 15 graupel layer 98-104 cm, soft RG/DF above; CT14 SC at 119 cm, CT25 PC at 104 cm, CTN no result; HS 145 cm",
+ "confidence": "medium",
+ "reading_issues": "Layer boundary at 104 cm hidden by the yellow CT25 line, placed from the table row count. Dec 15 layer glyph is a graupel-like dot; classed PPgp with secondary RG (uncertain). Elevation, slope and air temperature blank (\"--\"). HS-level temperature dot hidden under the CTN label; last visible dot at 135 cm. Layer 17-23 named \"Nov 17 Cr\" is only P-."
+}

@@ -1,0 +1,48 @@
+{
+  "source_files": [
+    "profiles/2025-2026/Test profiles/20260115 Mt Field Jan 3 SH ECTP VIDEO.mp4"
+  ],
+  "season": "2025-26",
+  "kind": "other",
+  "site": "Mt Field",
+  "site_slug": "mt-field-video",
+  "chart_format": null,
+  "date": "2026-01-15",
+  "time": null,
+  "observer": null,
+  "lat": null,
+  "lon": null,
+  "elevation_m": null,
+  "elevation_raw": null,
+  "aspect": null,
+  "slope_deg": null,
+  "air_temp_c": null,
+  "sky": null,
+  "precip": null,
+  "wind": null,
+  "blowing_snow": null,
+  "hs_cm": null,
+  "surface_grain": null,
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {},
+  "layers": [],
+  "temps": [],
+  "tests": [],
+  "named_layers": [
+    {
+      "name": "Jan 3 SH",
+      "height_cm": null,
+      "bottom_cm": null,
+      "top_cm": null,
+      "depth_cm": null,
+      "grain": "SH",
+      "comment": "Named in the filename only"
+    }
+  ],
+  "notes": "Video file; documents an ECTP on the 'Jan 3 SH' at Mt Field (from the filename only). The video was not opened.",
+  "summary": "Not a profile: an .mp4 video whose filename says it shows an ECTP on the 'Jan 3 SH' at Mt Field on 2026-01-15. Likely the same pit/test as the ECTP at 160 cm on the 'Jan 3rd' layer in 2026-01-15_mt-field-shoulder-tl.json (inference from the matching date, place and layer name, not verified).",
+  "confidence": "high",
+  "reading_issues": "Not read by design (video). Date, site and test type come from the filename '20260115 Mt Field Jan 3 SH ECTP VIDEO.mp4' only. No header fields, layers or test scores are available.",
+  "not_a_profile": true
+}

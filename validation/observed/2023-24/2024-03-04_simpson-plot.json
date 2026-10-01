@@ -1,0 +1,51 @@
+{
+  "source_files": ["profiles/2023-2024/Simpson/2024-03-04 Simpson Study Plot.png"],
+  "season": "2023-24",
+  "kind": "study_plot",
+  "site": "Simpson Study Plot",
+  "site_slug": "simpson-plot",
+  "chart_format": "propagation_labs",
+  "date": "2024-03-04",
+  "time": "13:00",
+  "observer": "Conrad Janzen",
+  "lat": 50.9848,
+  "lon": -115.9839,
+  "elevation_m": 2110,
+  "elevation_raw": "2110m",
+  "aspect": "S",
+  "slope_deg": 0,
+  "air_temp_c": -9.0,
+  "sky": "Broken",
+  "precip": "Snow <0.5cm/hr",
+  "wind": "Light,SW",
+  "blowing_snow": "No Transport",
+  "hs_cm": 150,
+  "surface_grain": "PP",
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {"profile_name": "Simpson Study Plot", "surface_grain_raw": "Stellars/Dendrites 3.0-5.0mm", "org": null, "foot_pen_raw": "?", "ski_pen_raw": "?"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 25, "depth_top_cm": 125, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": null, "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain size on chart"},
+    {"bottom_cm": 25, "top_cm": 40, "depth_top_cm": 110, "grain": "FCxr", "grain2": null, "grain_raw": "square with rounded top (FCxr glyph)", "size_mm": null, "hardness": "P", "hardness_idx": 4.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain size on chart; CT24 BRK at its top (40 cm)"},
+    {"bottom_cm": 40, "top_cm": 60, "depth_top_cm": 90, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": null, "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain size on chart"},
+    {"bottom_cm": 60, "top_cm": 75, "depth_top_cm": 75, "grain": "FCxr", "grain2": null, "grain_raw": "square with rounded top (FCxr glyph)", "size_mm": null, "hardness": "1F+", "hardness_idx": 3.33, "moisture": null, "density": null, "uncertain": false, "comment": "no grain size on chart"},
+    {"bottom_cm": 75, "top_cm": 84, "depth_top_cm": 66, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": null, "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain size on chart; its table row is stretched with connector lines"},
+    {"bottom_cm": 84, "top_cm": 85, "depth_top_cm": 65, "grain": "IF", "grain2": null, "grain_raw": "■ (filled rectangle)", "size_mm": null, "hardness": "K", "hardness_idx": 5.0, "moisture": null, "density": null, "uncertain": true, "comment": "named 'Feb 2 crust'; thin ~1 cm layer drawn with a filled-rectangle glyph, read as IF. The left end of its hardness bar is hidden behind the CT17SC label: the visible part reaches at least idx 4.86 (K-/K), so K is a lower bound and the true value may be K+ or I"},
+    {"bottom_cm": 85, "top_cm": 90, "depth_top_cm": 60, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": null, "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain size on chart; CT17 SC at its base (85 cm)"},
+    {"bottom_cm": 90, "top_cm": 120, "depth_top_cm": 30, "grain": "RG", "grain2": null, "grain_raw": "●", "size_mm": null, "hardness": "1F", "hardness_idx": 3.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain size on chart"},
+    {"bottom_cm": 120, "top_cm": 140, "depth_top_cm": 10, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": null, "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": "no grain size on chart"},
+    {"bottom_cm": 140, "top_cm": 150, "depth_top_cm": 0, "grain": "PP", "grain2": null, "grain_raw": "+", "size_mm": [2.0, 3.0], "hardness": "F", "hardness_idx": 1.0, "moisture": null, "density": null, "uncertain": false, "comment": "size column '2.0-3.0'; header surface grain reads Stellars/Dendrites 3.0-5.0 mm"}
+  ],
+  "temps": [],
+  "tests": [
+    {"raw": "CT17SC", "type": "CT", "score": "CT17", "taps": 17, "propagation": null, "fracture": "SC", "height_cm": 85, "depth_cm": 65, "layer_grain": "FC", "count": 1},
+    {"raw": "CT24BRK", "type": "CT", "score": "CT24", "taps": 24, "propagation": null, "fracture": "BRK", "height_cm": 40, "depth_cm": 110, "layer_grain": "FC", "count": 1}
+  ],
+  "named_layers": [
+    {"name": "Feb 2 crust", "height_cm": 85, "depth_cm": 65, "grain": "IF"}
+  ],
+  "notes": "Chart 'Notes:' field blank. 'Name' column: Feb 2 crust (84-85 cm layer). Yellow test lines: CT17SC at 85 cm; CT24BRK at 40 cm. Foot Pen and Ski Pen printed as '?'. No temperature profile drawn.",
+  "summary": "FC 0-25 cm (4F) under a P FCxr band at 25-40 cm (CT24 BRK at 40 cm), FC 4F 40-60 cm, FCxr 1F+ 60-75 cm, FC 4F 75-84 cm, a thin 1 cm K-or-harder IF 'Feb 2 crust' at 84-85 cm (CT17 SC at 85 cm), FC 4F 85-90 cm, RG 1F 90-120 cm, DF 4F 120-140 cm and 10 cm of F PP (2-3 mm) on top; HS 150 cm; no grain sizes except the top layer; no temperature profile",
+  "confidence": "medium",
+  "reading_issues": "Propagation Labs PNG (2523x2526). Measured from native pixels: height axis HS 150 cm at y=355.5 and 0 cm at y=1777 (9.48 px/cm); hardness gridlines K, P, 1f, 4f, F at x=326.5, 632, 937.5, 1243, 1548.5. Layer boundaries come from the table row lines and the connector lines between the hardness chart and the table (thin layers have stretched table rows): 0, 25, 40, 60, 75, 84, 85, 90, 120, 140, 150 cm. The Feb 2 crust bar is only 1 cm thick and its left end is hidden behind the CT17SC label, so its hardness is only bounded below (K- or harder; recorded as K and flagged uncertain). Filled-rectangle glyph read as IF. Grain sizes are blank for every layer except the top PP layer, so size_mm is null. No temperature dots on the chart. The chart header gives surface grain 'Stellars/Dendrites 3.0-5.0mm' while the top layer glyph is '+' with size 2.0-3.0; both recorded (surface_grain PP). The two failure heights sit on layer boundaries (85 cm = top of the crust / base of the 85-90 FC; 40 cm = base of the 40-60 FC / top of the P FCxr), so layer_grain is the softer adjoining layer (FC in both cases) and the weak layer could be either side. Foot Pen and Ski Pen are '?'."
+}

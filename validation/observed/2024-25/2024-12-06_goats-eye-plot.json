@@ -1,0 +1,218 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Goats Eye study plot/2024-12-06_Goats Eye Study Plot.pdf"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Goat's Eye Study Plot",
+  "site_slug": "goats-eye-plot",
+  "chart_format": "propagation_labs",
+  "date": "2024-12-06",
+  "time": "11:45",
+  "observer": "ben firth",
+  "lat": 51.0833,
+  "lon": -115.7774,
+  "elevation_m": 2295,
+  "elevation_raw": "7528ft",
+  "aspect": "N",
+  "slope_deg": null,
+  "air_temp_c": null,
+  "sky": "Broken",
+  "precip": "No Precipitation",
+  "wind": "Moderate, W",
+  "blowing_snow": "No Transport",
+  "hs_cm": 60,
+  "surface_grain": "SH",
+  "foot_pen_cm": 50,
+  "ski_pen_cm": 40,
+  "header_other": {
+    "surface_grain_raw": "Surface Hoar 3.0-6.0mm",
+    "profile_name": "241206 Goats Eye Study Plot"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 10,
+      "depth_top_cm": 50,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "◎ (two linked circles)",
+      "size_mm": [
+        5.0,
+        8.0
+      ],
+      "hardness": "P",
+      "hardness_idx": 4,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Basal melt-freeze crust layer, 5.0-8.0 mm."
+    },
+    {
+      "bottom_cm": 10,
+      "top_cm": 14,
+      "depth_top_cm": 46,
+      "grain": "FCxr",
+      "grain2": "DH",
+      "grain_raw": "⊟(∧) (square with rounded top, then DH)",
+      "size_mm": [
+        3.0,
+        6.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Rounded-top square glyph read as FCxr with DH secondary."
+    },
+    {
+      "bottom_cm": 14,
+      "top_cm": 15,
+      "depth_top_cm": 45,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "P",
+      "hardness_idx": 4,
+      "moisture": null,
+      "density": null,
+      "uncertain": true,
+      "comment": "Thin hard layer (1 cm) with no grain form or size recorded in the table (blank row); probably a crust. Hardness P read from bar."
+    },
+    {
+      "bottom_cm": 15,
+      "top_cm": 25,
+      "depth_top_cm": 35,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "⊟ (square with rounded top)",
+      "size_mm": [
+        3.0,
+        6.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "CT22Q3 results \"SC in facets\" / \"SC on facets\" were at the top of this layer (25 cm)."
+    },
+    {
+      "bottom_cm": 25,
+      "top_cm": 27,
+      "depth_top_cm": 33,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.0,
+        2.0
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Table note: \"possibla Nov crust\" (sic). Thin layer, hardness 1F- vs 4F neighbours."
+    },
+    {
+      "bottom_cm": 27,
+      "top_cm": 34,
+      "depth_top_cm": 26,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "⊟ (square with rounded top)",
+      "size_mm": [
+        3.0,
+        4.0
+      ],
+      "hardness": "4F+",
+      "hardness_idx": 2.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 34,
+      "top_cm": 50,
+      "depth_top_cm": 10,
+      "grain": "FC",
+      "grain2": "DF",
+      "grain_raw": "□(⟋)",
+      "size_mm": [
+        2.0,
+        3.0
+      ],
+      "hardness": "4F+",
+      "hardness_idx": 2.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Chart size \"2.0-3.0(2.0-3.0)\": FC 2-3 mm, secondary DF 2-3 mm."
+    },
+    {
+      "bottom_cm": 50,
+      "top_cm": 60,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": "FC",
+      "grain_raw": "⟋(□)",
+      "size_mm": [
+        2.0,
+        3.0
+      ],
+      "hardness": "4F-",
+      "hardness_idx": 1.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Surface layer. Chart size \"2.0-3.0(2.0-3.0)\": DF 2-3 mm, secondary FC 2-3 mm. Header surface grain is surface hoar 3.0-6.0 mm but no SH layer is drawn."
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT22Q3: SC in facets",
+      "type": "CT",
+      "score": "CT22",
+      "taps": 22,
+      "propagation": null,
+      "fracture": "SC",
+      "quality": "Q3",
+      "height_cm": 25,
+      "depth_cm": 35,
+      "layer_grain": "FCxr",
+      "count": 1
+    },
+    {
+      "raw": "CT22Q3: SC on facets",
+      "type": "CT",
+      "score": "CT22",
+      "taps": 22,
+      "propagation": null,
+      "fracture": "SC",
+      "quality": "Q3",
+      "height_cm": 25,
+      "depth_cm": 35,
+      "layer_grain": "FCxr",
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "possible Nov crust",
+      "height_cm": 26,
+      "bottom_cm": 25,
+      "top_cm": 27,
+      "depth_cm": 34,
+      "grain": "FC"
+    }
+  ],
+  "notes": "CT22Q3: SC in facets, CT22Q3: SC on facets,",
+  "summary": "Early-season 60 cm pit: basal MFcr 0-10 cm (P) under FCxr/DH 10-34 cm (4F, thin P layer at 14-15 cm), a 2 cm \"possible Nov crust\" FC layer at 25-27 cm (1F-), FC/DF 34-60 cm; CT22Q3 SC twice at the 25 cm interface (in/on facets).",
+  "confidence": "medium",
+  "reading_issues": "Chart is the depth-from-surface layout (0 at top, HS 60 at bottom): converted to cm above ground (height = 60 - depth); depth_top_cm read directly. Table rows for the thin layers (33-35 cm and 45-46 cm depth) are stretched with connector lines; boundaries taken from bar outlines. Rounded-top square glyph (FCxr) used for four layers; the thin 14-15 cm P-hardness layer has no glyph or size (grain null). Header surface grain is \"Surface Hoar 3.0-6.0mm\" but the table has no SH layer (top layer is DF/FC 2-3 mm). Elevation 7528 ft = 2295 m. Test line at 35 cm depth hides the layer boundary beneath it (boundary placed at 35 cm depth from the table line at 35.4 and the bar edge change). \"Q3\" recorded in the quality field, SC from notes."
+}

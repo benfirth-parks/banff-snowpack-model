@@ -1,0 +1,268 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Test profiles/Mt Field 20241210.pdf"
+  ],
+  "season": "2024-25",
+  "kind": "test_profile",
+  "site": "Mt Field",
+  "site_slug": "mt-field",
+  "chart_format": "snowpilot",
+  "date": "2024-12-10",
+  "time": "14:20",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.43759,
+  "lon": -116.46119,
+  "elevation_m": 2270,
+  "elevation_raw": "2270 m",
+  "aspect": "NE",
+  "slope_deg": 15,
+  "air_temp_c": -8.5,
+  "sky": "SCT",
+  "precip": "NO",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 120,
+  "surface_grain": null,
+  "foot_pen_cm": 40,
+  "ski_pen_cm": 20,
+  "header_other": {
+    "PF": "40",
+    "PS": "20",
+    "chart_title": "Mt Field",
+    "region": "Banff, Yoho and Kootenay, AB",
+    "header_date_raw": "10/12/2024 - 14:20",
+    "wind_loading": null,
+    "stability": null,
+    "specifics": null,
+    "layer_notes": [
+      "98-80cm: Dec 7 layer at 80 cm",
+      "98-80cm: Problematic layer"
+    ]
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 17,
+      "depth_top_cm": 103,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "◎ (two linked circles)",
+      "size_mm": [
+        3.0,
+        5.0
+      ],
+      "hardness": "P+",
+      "hardness_idx": 4.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 17,
+      "top_cm": 18,
+      "depth_top_cm": 102,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": null,
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "thin 1 cm layer, no size entered"
+    },
+    {
+      "bottom_cm": 18,
+      "top_cm": 20,
+      "depth_top_cm": 100,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "◎ (two linked circles)",
+      "size_mm": [
+        2.0,
+        3.0
+      ],
+      "hardness": "K",
+      "hardness_idx": 5.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "thin crust"
+    },
+    {
+      "bottom_cm": 20,
+      "top_cm": 21,
+      "depth_top_cm": 99,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": null,
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "thin 1 cm layer, no size entered"
+    },
+    {
+      "bottom_cm": 21,
+      "top_cm": 35,
+      "depth_top_cm": 85,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.0,
+        3.0
+      ],
+      "hardness": "P-",
+      "hardness_idx": 3.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 35,
+      "top_cm": 65,
+      "depth_top_cm": 55,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "DT23 at 50 cm; DT12 RP at its top (65 cm)"
+    },
+    {
+      "bottom_cm": 65,
+      "top_cm": 80,
+      "depth_top_cm": 40,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "CT19 RP at its top (80 cm, Dec 7 layer)"
+    },
+    {
+      "bottom_cm": 80,
+      "top_cm": 98,
+      "depth_top_cm": 22,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "layer notes '98-80cm: Dec 7 layer at 80 cm' and '98-80cm: Problematic layer'"
+    },
+    {
+      "bottom_cm": 98,
+      "top_cm": 120,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.0,
+        2.0
+      ],
+      "hardness": "F+",
+      "hardness_idx": 1.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "surface layer; CT7 RP at its base (98 cm)"
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT7, RP @98cm",
+      "type": "CT",
+      "score": "CT7",
+      "taps": 7,
+      "propagation": null,
+      "fracture": "RP",
+      "height_cm": 98,
+      "depth_cm": 22,
+      "layer_grain": "DF",
+      "count": 1
+    },
+    {
+      "raw": "CT19, RP @80cm Dec 7",
+      "type": "CT",
+      "score": "CT19",
+      "taps": 19,
+      "propagation": null,
+      "fracture": "RP",
+      "height_cm": 80,
+      "depth_cm": 40,
+      "layer_grain": "FC",
+      "count": 1,
+      "comment": "'Dec 7' layer interface at 80 cm (DF 80-98 above, FC 65-80 below)"
+    },
+    {
+      "raw": "DT12, RP @65cm",
+      "type": "DT",
+      "score": "DT12",
+      "taps": 12,
+      "propagation": null,
+      "fracture": "RP",
+      "height_cm": 65,
+      "depth_cm": 55,
+      "layer_grain": "FC",
+      "count": 1,
+      "comment": "DT = deep tap test"
+    },
+    {
+      "raw": "DT23 @50cm",
+      "type": "DT",
+      "score": "DT23",
+      "taps": 23,
+      "propagation": null,
+      "fracture": null,
+      "height_cm": 50,
+      "depth_cm": 70,
+      "layer_grain": "FC",
+      "count": 1,
+      "comment": "DT = deep tap test; no fracture character given"
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Dec 7 layer (layer note 98-80 cm, flagged problematic)",
+      "height_cm": 80,
+      "depth_cm": 40,
+      "grain": "DF",
+      "bottom_cm": 80,
+      "top_cm": 98
+    }
+  ],
+  "notes": "Chart 'Notes:' blank. Layer Notes: '98-80cm: Dec 7 layer at 80 cm'; '98-80cm: Problematic layer'. Stability tests column: 'CT7, RP @98cm'; 'CT19, RP @80cm Dec 7'; 'DT12, RP @65cm'; 'DT23 @50cm'. Moisture D in every layer. Wind loading and stability blank. No temperature profile.",
+  "summary": "Basal MFcr crusts 0-20 cm (P+ 3-5 mm below, thin K crust 18-20 cm) under FC 1F/P- 21-80 cm (1-3 mm, 0.5-1 mm) and DF 80-120 cm (4F then F+, 1-2 mm); CT19 RP at 80 cm (Dec 7 layer), CT7 RP at 98 cm, DT12 RP at 65 cm, DT23 at 50 cm; all layers dry; PF 40, PS 20; HS 120 cm",
+  "confidence": "high",
+  "reading_issues": "Rendered at 400 dpi: hardness steps and horizontal layer lines measured from pixels (boundaries 17, 18, 20, 21, 35, 65, 80, 98 cm, +-0.2). Table rows for the five basal thin layers are displaced with connectors; matched to the five bar segments in order. 'DT' read as deep tap test (not defined on the chart). layer_grain for tests at layer interfaces uses the layer immediately below the test height (convention for this batch)."
+}

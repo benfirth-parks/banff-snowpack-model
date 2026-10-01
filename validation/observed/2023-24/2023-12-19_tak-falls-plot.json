@@ -1,0 +1,51 @@
+{
+  "source_files": ["profiles/2023-2024/Tak Falls/Tak Falls-19-Dec 2023.jpg"],
+  "season": "2023-24",
+  "kind": "study_plot",
+  "site": "Takakkaw Falls Study Plot",
+  "site_slug": "tak-falls-plot",
+  "chart_format": "snowpilot",
+  "date": "2023-12-19",
+  "time": "13:50",
+  "observer": "Stephen Holeczi",
+  "lat": 51.50075,
+  "lon": -116.49504,
+  "elevation_m": 1850,
+  "elevation_raw": "1850 m",
+  "aspect": null,
+  "slope_deg": null,
+  "air_temp_c": null,
+  "sky": "SCT",
+  "precip": "NO",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 95,
+  "surface_grain": "PP",
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {"HS": "95", "coord_raw": "51.50075N, -116.49504W", "region": "Rockies, BC", "specifics": null, "layer_notes": "20-0cm: Problematic layer", "chart_title": "Tak Falls", "surface_form": "+ (PP) 3 mm in the fixed top row above the HS line (zero thickness)"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 20, "depth_top_cm": 75, "grain": "FCxr", "grain2": "DH", "grain_raw": "⌒(∧)", "size_mm": [2.0, 5.0], "hardness": "1F+", "hardness_idx": 3.33, "moisture": null, "density": null, "uncertain": false, "comment": "square-with-rounded-top primary form, secondary DH; size column '2-5(5)': FCxr 2-5 mm, DH 5 mm; layer note '20-0cm: Problematic layer'; CT10 SP at 0 cm at its base"},
+    {"bottom_cm": 20, "top_cm": 40, "depth_top_cm": 55, "grain": "RGxf", "grain2": null, "grain_raw": "circle with flat top (filled), RGxf glyph", "size_mm": [2.0, 3.0], "hardness": "1F", "hardness_idx": 3.0, "moisture": null, "density": null, "uncertain": false, "comment": "size column '2-3'; CT25 SP at 40 cm at its top"},
+    {"bottom_cm": 40, "top_cm": 47, "depth_top_cm": 48, "grain": "RG", "grain2": null, "grain_raw": "●", "size_mm": [1.0, 1.0], "hardness": "P-", "hardness_idx": 3.67, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 47, "top_cm": 56, "depth_top_cm": 39, "grain": "RG", "grain2": null, "grain_raw": "●", "size_mm": null, "hardness": "P", "hardness_idx": 4.0, "moisture": null, "density": null, "uncertain": false, "comment": "no size given"},
+    {"bottom_cm": 56, "top_cm": 64, "depth_top_cm": 31, "grain": "IF", "grain2": null, "grain_raw": "=", "size_mm": null, "hardness": "K", "hardness_idx": 5.0, "moisture": null, "density": null, "uncertain": false, "comment": "8 cm hard layer drawn with '=' glyph (ice formation / crust); no size given"},
+    {"bottom_cm": 64, "top_cm": 84, "depth_top_cm": 11, "grain": "DF", "grain2": "RG", "grain_raw": "⟋(•)", "size_mm": [1.0, 2.0], "hardness": "4F+", "hardness_idx": 2.33, "moisture": null, "density": null, "uncertain": false, "comment": "size column '1-2(1)': DF 1-2 mm, secondary RG (small filled dot) 1 mm"},
+    {"bottom_cm": 84, "top_cm": 91, "depth_top_cm": 4, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": [2.0, 2.0], "hardness": "F+", "hardness_idx": 1.33, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 91, "top_cm": 95, "depth_top_cm": 0, "grain": "PP", "grain2": null, "grain_raw": "+", "size_mm": [2.0, 2.0], "hardness": "F", "hardness_idx": 1.0, "moisture": null, "density": null, "uncertain": false, "comment": "size column '2-2'"}
+  ],
+  "temps": [
+    {"h_cm": 95, "t_c": -2.5}
+  ],
+  "tests": [
+    {"raw": "CT25, SP @40cm", "type": "CT", "score": "CT25", "taps": 25, "propagation": null, "fracture": "SP", "height_cm": 40, "depth_cm": 55, "layer_grain": "RGxf", "count": 1},
+    {"raw": "CT10, SP @0cm", "type": "CT", "score": "CT10", "taps": 10, "propagation": null, "fracture": "SP", "height_cm": 0, "depth_cm": 95, "layer_grain": "FCxr", "count": 1}
+  ],
+  "named_layers": [
+    {"name": "Problematic layer", "height_cm": 20, "depth_cm": 75, "grain": "FCxr"}
+  ],
+  "notes": "Chart 'Notes:' field blank. Layer Notes: 20-0cm: Problematic layer. Stability tests column: CT25, SP @40cm; CT10, SP @0cm. Header location 'Rockies, BC'. Slope Angle, Aspect, Wind Loading, Specifics, Stability and Air Temperature fields blank; no PF/PS; no moisture entered.",
+  "summary": "Basal FCxr(DH) 0-20 cm (2-5 mm, 1F+; flagged problematic layer; CT10 SP at the ground) under RGxf 20-40 cm (1F; CT25 SP at 40 cm), RG 40-56 cm (P- to P), an 8 cm K IF crust at 56-64 cm, DF(RG) 64-84 cm (4F+) and 11 cm of DF/PP (F+/F) with 3 mm PP on the surface; HS 95 cm; only one temperature point (-2.5 C at the surface)",
+  "confidence": "high",
+  "reading_issues": "Hardness bars, boundaries and the single temperature dot were measured from native pixels (HS line at y=157, ground at y=751 give 6.25 px/cm; hardness ticks every 24 px = 1/3 step); boundaries rounded to integer cm (within 0.2 cm). Only one red temperature dot exists on the chart (at the surface, 95 cm, -2.5 C); the Air Temperature field is blank. Observer field holds a person's name (Stephen Holeczi) instead of 'Banff Visitor Safety', the location line reads 'Rockies BC', and the coordinates/elevation (51.50075N, 1850 m) are about 210 m north of and 50 m higher than the other Tak Falls plot entries (51.4984-51.4987N, 1780-1800 m), so this may be a nearby pit rather than the exact study plot (kind kept as study_plot per the batch instruction). Glyphs: '=' read as IF; filled circle with flat/square top read as RGxf; square-with-rounded-top read as FCxr; small filled dot in parentheses read as RG. No moisture or PF/PS entries. The two CT failures are on layer boundaries: 40 cm (RG above / RGxf below; layer_grain RGxf = the softer layer, which is also the weak layer under a P- slab) and 0 cm (ground; layer_grain is the basal layer flagged as the problematic layer)."
+}

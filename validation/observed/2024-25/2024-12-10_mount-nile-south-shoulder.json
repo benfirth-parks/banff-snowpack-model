@@ -1,0 +1,176 @@
+{
+  "source_files": [
+    "profiles/2024-2025/20241210 Mount Nile South Shoulder.pdf"
+  ],
+  "season": "2024-25",
+  "kind": "test_profile",
+  "site": "Sherbrooke Lake exit shoulder, Mount Nile (South Shoulder)",
+  "site_slug": "mount-nile-south-shoulder",
+  "chart_format": "propagation_labs",
+  "date": "2024-12-10",
+  "time": "15:07",
+  "observer": "ben firth",
+  "lat": 51.497,
+  "lon": -116.4153,
+  "elevation_m": 2517,
+  "elevation_raw": "8259ft",
+  "aspect": "SW",
+  "slope_deg": null,
+  "air_temp_c": -8.5,
+  "sky": "Few",
+  "precip": "No Precipitation",
+  "wind": "Calm",
+  "blowing_snow": "No Transport",
+  "hs_cm": 110,
+  "surface_grain": "PP",
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {
+    "surface_grain_raw": "Precipitation Particles",
+    "profile_name": "Sherbrooke Lake exit shoulder mount Niles",
+    "chart_orientation": "depth-from-surface"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 13,
+      "depth_top_cm": 97,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "○ (single open circle)",
+      "size_mm": null,
+      "hardness": "K",
+      "hardness_idx": 5.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": true,
+      "comment": "K-hard 13 cm layer of melt forms; single open circle (MF by glyph) classed MFcr because of K hardness and thickness; no size entered"
+    },
+    {
+      "bottom_cm": 13,
+      "top_cm": 19,
+      "depth_top_cm": 91,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        4.0,
+        4.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 19,
+      "top_cm": 32,
+      "depth_top_cm": 78,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "○ (single open circle)",
+      "size_mm": null,
+      "hardness": "K",
+      "hardness_idx": 5.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": true,
+      "comment": "K-hard 13 cm layer of melt forms; single open circle (MF by glyph) classed MFcr because of K hardness and thickness; no size entered"
+    },
+    {
+      "bottom_cm": 32,
+      "top_cm": 47,
+      "depth_top_cm": 63,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.0,
+        2.0
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 47,
+      "top_cm": 87,
+      "depth_top_cm": 23,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "CT11 failed at its top (87 cm / 23 cm depth)"
+    },
+    {
+      "bottom_cm": 87,
+      "top_cm": 108,
+      "depth_top_cm": 2,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        0.5,
+        1.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "slab above the CT failure"
+    },
+    {
+      "bottom_cm": 108,
+      "top_cm": 110,
+      "depth_top_cm": 0,
+      "grain": "PP",
+      "grain2": null,
+      "grain_raw": "+",
+      "size_mm": [
+        3.0,
+        3.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "surface layer ~2 cm"
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT11 on □ (notes: CT11Q1: SP CTM11)",
+      "type": "CT",
+      "score": "CT11",
+      "taps": 11,
+      "propagation": null,
+      "fracture": "SP",
+      "height_cm": 87,
+      "depth_cm": 23,
+      "layer_grain": "FC",
+      "count": 1,
+      "comment": "Q1 = quality code; CTM11 = CAA moderate score; failure at 23 cm depth"
+    }
+  ],
+  "named_layers": [],
+  "notes": "CT11Q1: SP CTM11,",
+  "summary": "K-hard basal melt-freeze crust sequence: MFcr 0-13 cm and 19-32 cm (K) separated by 4 mm FC 13-19 cm (4F); FC 1F+/1F 32-87 cm (1-2 mm); DF 87-108 cm (4F) and 2 cm PP at surface; CT11 SP at 87 cm (23 cm depth) on the FC; SW 2517 m; HS 110 cm",
+  "confidence": "high",
+  "reading_issues": "Chart is depth-from-surface (0 at top, HS at bottom); converted to heights above ground (height = HS - depth). Elevation given in feet (8259 ft = 2517 m). Bar edges and layer boundaries measured from pixels against the F/4f/1f/P/K gridlines (boundaries at heights 13, 19, 32, 47, 87, 108 = depths 97, 91, 78, 63, 23, 2); each table row matched to a bar segment in order. The two K-hard layers carry a single open circle (MF glyph) with no size; classed MFcr (uncertain) since they are 13 cm of K-hardness snow. CT label shows 'on □' (the FC layer below the line). Slope blank."
+}

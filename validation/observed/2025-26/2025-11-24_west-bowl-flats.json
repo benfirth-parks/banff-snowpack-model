@@ -1,0 +1,154 @@
+{
+  "source_files": [
+    "profiles/2025-2026/Test profiles/2025-11-24_West_Bowl_flats.pdf"
+  ],
+  "season": "2025-26",
+  "kind": "test_profile",
+  "site": "West Bowl flats",
+  "site_slug": "west-bowl-flats",
+  "chart_format": "snowpilot",
+  "date": "2025-11-24",
+  "time": "12:00",
+  "observer": null,
+  "lat": 51.46511,
+  "lon": -116.14705,
+  "elevation_m": 2366,
+  "elevation_raw": "2366 m",
+  "aspect": "SW",
+  "slope_deg": 5,
+  "air_temp_c": -6,
+  "sky": "BKN",
+  "precip": "NO",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 81,
+  "surface_grain": null,
+  "foot_pen_cm": 70,
+  "ski_pen_cm": null,
+  "header_other": {
+    "PF": "70",
+    "org": "Banff Visitor Safety",
+    "pit_name_in_header": "Bottom of West Bowl",
+    "region": "Banff, Yoho and Kootenay",
+    "province": "AB",
+    "wind_loading": null,
+    "stability": null,
+    "specifics": "Pit dug in a Ski Area",
+    "surface_row": {
+      "form": null,
+      "size_mm": 1
+    }
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 10,
+      "depth_top_cm": 71,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1,
+        2
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": "D",
+      "density": 230,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 10,
+      "top_cm": 35,
+      "depth_top_cm": 46,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "• (small dot)",
+      "size_mm": [
+        1,
+        1
+      ],
+      "hardness": "P-",
+      "hardness_idx": 3.65,
+      "moisture": "D",
+      "density": 280,
+      "uncertain": false,
+      "comment": "Hardest layer in the pit (edge between P and 1F, read as P-)"
+    },
+    {
+      "bottom_cm": 35,
+      "top_cm": 41,
+      "depth_top_cm": 40,
+      "grain": "MF",
+      "grain2": "MF",
+      "grain_raw": "three-circle cluster (MFcl) with secondary (○)",
+      "size_mm": [
+        0.5,
+        1
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": "D",
+      "density": 190,
+      "uncertain": false,
+      "comment": "Layer note 41-35cm: 'Sporadic bits of ice crust' and 'Problematic layer'; CT16 SC failure at its top (41 cm)"
+    },
+    {
+      "bottom_cm": 41,
+      "top_cm": 60,
+      "depth_top_cm": 21,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "/",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": "D",
+      "density": 100,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 60,
+      "top_cm": 81,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "/",
+      "size_mm": [
+        1,
+        1
+      ],
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": "D",
+      "density": 90,
+      "uncertain": false,
+      "comment": null
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT16, SC @41cm x 2",
+      "type": "CT",
+      "score": "CT16",
+      "taps": 16,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 41,
+      "depth_cm": 40,
+      "layer_grain": "MF",
+      "count": 2
+    }
+  ],
+  "named_layers": [],
+  "notes": "Specifics: Pit dug in a Ski Area. Notes: Dug just inside closure area near base of slope. Layer Notes: 41-35cm: Sporadic bits of ice crust; 41-35cm: Problematic layer",
+  "summary": "HS 81 cm: basal FC 1-2 mm (1F, 0-10 cm) under P- RG 10-35 cm; thin MF layer 35-41 cm with sporadic ice-crust bits flagged 'problematic' (CT16 SC at 41 cm, x2); soft DF (4F 41-60 cm, F 60-81 cm) above; no temperature profile",
+  "confidence": "high",
+  "reading_issues": "PDF is a rasterised SnowPilot graph with no text layer; header and notes read visually from the embedded 994x840 image. Observer not given (header shows org 'Banff Visitor Safety'). Site name taken from filename; header pit name is 'Bottom of West Bowl'. Density column (rho) values (90, 100, 190, 280, 230 kg/m3, top to bottom) are overprinted at layer boundaries and appear to be one value per layer, probably SnowPilot-estimated rather than measured. Table surface row shows only a size of 1 (no form). Layer 35-41 primary glyph is a three-circle cluster (MFcl) with secondary open circle (MF); moisture shown as D (dry) for all layers. PF=70 recorded as foot_pen_cm and verbatim in header_other. Specifics text is cut off at the right edge of the header."
+}

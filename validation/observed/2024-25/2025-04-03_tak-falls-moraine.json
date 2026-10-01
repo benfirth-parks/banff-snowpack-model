@@ -1,0 +1,178 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Takkakaw Falls study plot/2025-04-03 Takakaw Falls Morain profile.pdf"
+  ],
+  "season": "2024-25",
+  "kind": "test_profile",
+  "site": "Tack Falls Moraine",
+  "site_slug": "tak-falls-moraine",
+  "chart_format": "propagation_labs",
+  "date": "2025-04-03",
+  "time": "11:49",
+  "observer": "william Lawson",
+  "lat": 51.4978,
+  "lon": -116.5063,
+  "elevation_m": 2009,
+  "elevation_raw": "6591ft",
+  "aspect": "NE",
+  "slope_deg": null,
+  "air_temp_c": -5.0,
+  "sky": "Few",
+  "precip": "No Precipitation",
+  "wind": "Light, SW",
+  "blowing_snow": "No Transport",
+  "hs_cm": 165,
+  "surface_grain": "PP",
+  "foot_pen_cm": 15,
+  "ski_pen_cm": 15,
+  "header_other": {
+    "surface_grain_raw": "Wind-Broken PP",
+    "profile_name": "Tack Falls Moraine",
+    "hs_header": "--"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 57,
+      "depth_top_cm": 108,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "⊟ (square with rounded top and centre line)",
+      "size_mm": [
+        1.5,
+        1.5
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": "M",
+      "density": null,
+      "uncertain": false,
+      "comment": "LWC Moist"
+    },
+    {
+      "bottom_cm": 57,
+      "top_cm": 75,
+      "depth_top_cm": 90,
+      "grain": "FCxr/RGxf",
+      "grain2": null,
+      "grain_raw": "square outline with filled rounded bottom (mixed FC/RG)",
+      "size_mm": [
+        1.5,
+        1.5
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": true,
+      "comment": "Mixed glyph, class uncertain."
+    },
+    {
+      "bottom_cm": 75,
+      "top_cm": 85,
+      "depth_top_cm": 80,
+      "grain": "FCxr/RGxf",
+      "grain2": null,
+      "grain_raw": "square outline with filled rounded bottom (mixed FC/RG)",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "4F+",
+      "hardness_idx": 2.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": true,
+      "comment": "Bar rendered red/salmon (flagged weak layer). CT15 SP at its top (85 cm). Test label gives \"□ 1.5-2.0\" (FC) for the failure layer."
+    },
+    {
+      "bottom_cm": 85,
+      "top_cm": 129,
+      "depth_top_cm": 36,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "●",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 129,
+      "top_cm": 151,
+      "depth_top_cm": 14,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "◎◎",
+      "size_mm": null,
+      "hardness": "P",
+      "hardness_idx": 4.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Size blank."
+    },
+    {
+      "bottom_cm": 151,
+      "top_cm": 165,
+      "depth_top_cm": 0,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": true,
+      "comment": "Surface layer; grain form, size and LWC blank in the table (header surface grain: Wind-Broken PP)."
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 125,
+      "t_c": -1.0
+    },
+    {
+      "h_cm": 135,
+      "t_c": -1.0
+    },
+    {
+      "h_cm": 145,
+      "t_c": -1.2
+    },
+    {
+      "h_cm": 155,
+      "t_c": -1.5
+    },
+    {
+      "h_cm": 165,
+      "t_c": -8.5
+    }
+  ],
+  "tests": [
+    {
+      "raw": "CT15SP on □ 1.5-2.0",
+      "type": "CT",
+      "score": "CT15",
+      "taps": 15,
+      "propagation": null,
+      "fracture": "SP",
+      "height_cm": 85,
+      "depth_cm": 80,
+      "layer_grain": "FCxr/RGxf",
+      "count": 1
+    }
+  ],
+  "named_layers": [],
+  "notes": "CT15SP: repeatable result,",
+  "summary": "Moraine pit HS ~165 cm: moist FCxr 0-57 cm (1F-) under mixed FC/RG-type layers 57-85 cm (1F+, then a flagged 4F+ layer at 75-85 cm failing CT15 SP at 85 cm), RG 85-129 cm (1F+), MFcr 129-151 cm (P) and a soft 14 cm surface layer (F, blank grain); steep surface temperature (-8.5 at top, ~-1 below 30 cm depth).",
+  "confidence": "medium",
+  "reading_issues": "Chart is depth-from-surface (0 at top, ground at 165): converted to cm above ground (height = 165 - depth). HS is \"--\" in the header; 165 taken from the bottom depth-axis label. Elevation 6591 ft = 2009 m. Mixed square/filled-bottom glyph at 57-85 cm is uncertain (FCxr/RGxf). Test label says FC 1.5-2.0 mm but the table size at the 80-90 cm depth row is 1.0; test placed at the 80 cm depth line (85 cm height). Top 14 cm layer has no grain form, size or LWC. Temperatures: top dot (surface, -8.5) plus four points at 10-40 cm depth."
+}

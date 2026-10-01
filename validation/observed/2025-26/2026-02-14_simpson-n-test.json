@@ -1,0 +1,417 @@
+{
+  "source_files": [
+    "profiles/2025-2026/Test profiles/2026-02-14 Simpson N test.png"
+  ],
+  "season": "2025-26",
+  "kind": "test_profile",
+  "site": "Simpson N test",
+  "site_slug": "simpson-n-test",
+  "chart_format": "snowpilot",
+  "date": "2026-02-14",
+  "time": "11:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.00993,
+  "lon": -115.99529,
+  "elevation_m": 1800,
+  "elevation_raw": "1800 m",
+  "aspect": "NE",
+  "slope_deg": 36,
+  "air_temp_c": -2,
+  "sky": "OVC",
+  "precip": "S-1",
+  "wind": "S Light Breeze",
+  "blowing_snow": null,
+  "hs_cm": 165,
+  "surface_grain": "PP",
+  "foot_pen_cm": 30,
+  "ski_pen_cm": 25,
+  "header_other": {
+    "PF": "30",
+    "PS": "25",
+    "org": "Banff, Yoho and Kootenay AB",
+    "chart_title": "Simpson N test",
+    "location": "Vermilion Range KNP",
+    "stability": "Poor",
+    "wind_loading": null,
+    "specifics": "Collapsing, localized; Cracking",
+    "surface_form": "rime (inverted-A / triangle-star glyph) 1 mm, drawn in the fixed top row above the HS line (zero thickness)",
+    "layer_notes": "165-160cm: HN 12; 147-145cm: Jan 24; 147-145cm: Problematic layer; 113-112.9cm: Jan3 - few forms visible; 70-67cm: Dec 15; 18-15cm: Novemer Crust; 15-0cm: well rounded agregates"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 15,
+      "depth_top_cm": 150,
+      "grain": "SH",
+      "grain2": null,
+      "grain_raw": "V",
+      "size_mm": [
+        4.0,
+        10.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": "M",
+      "density": null,
+      "uncertain": true,
+      "comment": "Layer note '15-0cm: well rounded agregates'. Glyph is a V (surface hoar) but the note says well-rounded aggregates (probably rounded/clustered grains); grain code uncertain; moisture M (moist)"
+    },
+    {
+      "bottom_cm": 15,
+      "top_cm": 18,
+      "depth_top_cm": 147,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "two linked double circles",
+      "size_mm": [
+        3.0,
+        15.0
+      ],
+      "hardness": "K",
+      "hardness_idx": 5.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Layer note '18-15cm: Novemer Crust' (as written)"
+    },
+    {
+      "bottom_cm": 18,
+      "top_cm": 35,
+      "depth_top_cm": 130,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "dome-on-box (rounding facet)",
+      "size_mm": [
+        1.5,
+        6.0
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Bar drawn at 1F- (2.65)"
+    },
+    {
+      "bottom_cm": 35,
+      "top_cm": 60,
+      "depth_top_cm": 105,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "dome-on-box (rounding facet)",
+      "size_mm": [
+        1.0,
+        1.5
+      ],
+      "hardness": "P",
+      "hardness_idx": 4.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Moisture cell blank"
+    },
+    {
+      "bottom_cm": 60,
+      "top_cm": 67,
+      "depth_top_cm": 98,
+      "grain": "MF",
+      "grain2": null,
+      "grain_raw": "trefoil (clustered rounds)",
+      "size_mm": [
+        1.0,
+        6.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Trefoil glyph (MFcl) stored as MF"
+    },
+    {
+      "bottom_cm": 67,
+      "top_cm": 70,
+      "depth_top_cm": 95,
+      "grain": "IF",
+      "grain2": null,
+      "grain_raw": "= (double horizontal bar)",
+      "size_mm": [
+        3.0,
+        10.0
+      ],
+      "hardness": "K+",
+      "hardness_idx": 5.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": true,
+      "comment": "Layer note '70-67cm: Dec 15'. Double-bar glyph read as an ice-formation/crust class, exact subclass unknown; bar extends past the K tick (K+, 5.33)"
+    },
+    {
+      "bottom_cm": 70,
+      "top_cm": 90,
+      "depth_top_cm": 75,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "P-",
+      "hardness_idx": 3.65,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "No grain form entered (table glyph cell blank); size 1 mm"
+    },
+    {
+      "bottom_cm": 90,
+      "top_cm": 100,
+      "depth_top_cm": 65,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "dome-on-box (rounding facet)",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "P+",
+      "hardness_idx": 4.32,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 100,
+      "top_cm": 112.9,
+      "depth_top_cm": 52.1,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "dome-on-box (rounding facet)",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "P-",
+      "hardness_idx": 3.65,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 112.9,
+      "top_cm": 113,
+      "depth_top_cm": 52,
+      "grain": "SH",
+      "grain2": null,
+      "grain_raw": "V",
+      "size_mm": [
+        3.0,
+        5.0
+      ],
+      "hardness": null,
+      "hardness_idx": null,
+      "moisture": "D",
+      "density": null,
+      "uncertain": true,
+      "comment": "Layer note '113-112.9cm: Jan3 - few forms visible'. 0.1 cm layer: its bar is only the blue outline line, so hardness cannot be read (null)"
+    },
+    {
+      "bottom_cm": 113,
+      "top_cm": 120,
+      "depth_top_cm": 45,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "dome-on-box (rounding facet)",
+      "size_mm": [
+        1.0,
+        1.5
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.32,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 120,
+      "top_cm": 135,
+      "depth_top_cm": 30,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "dome-on-box (rounding facet)",
+      "size_mm": [
+        1.0,
+        1.5
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.32,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 135,
+      "top_cm": 145,
+      "depth_top_cm": 20,
+      "grain": "RGxf",
+      "grain2": null,
+      "grain_raw": "rounded box with filled lower half (U-box with dot)",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.65,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 145,
+      "top_cm": 147.2,
+      "depth_top_cm": 17.8,
+      "grain": "SH",
+      "grain2": null,
+      "grain_raw": "V",
+      "size_mm": [
+        10.0,
+        10.0
+      ],
+      "hardness": "F-",
+      "hardness_idx": 0.65,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Layer notes '147-145cm: Jan 24' and '147-145cm: Problematic layer'; CT2 SC x2 and ECTN2 at 147 cm (its top)"
+    },
+    {
+      "bottom_cm": 147.2,
+      "top_cm": 155,
+      "depth_top_cm": 10,
+      "grain": "DF",
+      "grain2": "RG",
+      "grain_raw": "/ ( small dot )",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 1.99,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Secondary form small dot read as RG; size cell '1(1)'"
+    },
+    {
+      "bottom_cm": 155,
+      "top_cm": 160,
+      "depth_top_cm": 5,
+      "grain": "DF",
+      "grain2": "PP",
+      "grain_raw": "/ ( + )",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 0.99,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Secondary form '+' read as PP; size cell '1(1)'"
+    },
+    {
+      "bottom_cm": 160,
+      "top_cm": 165,
+      "depth_top_cm": 0,
+      "grain": "PP",
+      "grain2": "PP",
+      "grain_raw": "+r ( rime glyph )",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "F-",
+      "hardness_idx": 0.65,
+      "moisture": "D",
+      "density": null,
+      "uncertain": true,
+      "comment": "Layer note '165-160cm: HN 12' (new snow). Glyph '+r(rime)': PP rimed with secondary rime form (stored as PP); size '1(1)'"
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT2, SC @147cm repeated twice",
+      "type": "CT",
+      "score": "CT2",
+      "taps": 2,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 147,
+      "depth_cm": 18,
+      "layer_grain": "SH",
+      "count": 2
+    },
+    {
+      "raw": "ECTN2 @147cm",
+      "type": "ECT",
+      "score": "ECTN2",
+      "taps": 2,
+      "propagation": "N",
+      "fracture": null,
+      "height_cm": 147,
+      "depth_cm": 18,
+      "layer_grain": "SH",
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Jan 24",
+      "height_cm": 147.2,
+      "bottom_cm": 145,
+      "top_cm": 147.2,
+      "depth_cm": 18,
+      "grain": "SH",
+      "comment": "10 mm SH, F- hardness; flagged 'Problematic layer'; CT2 SC x2 and ECTN2 at 147 cm"
+    },
+    {
+      "name": "Jan3",
+      "height_cm": 113,
+      "bottom_cm": 112.9,
+      "top_cm": 113,
+      "depth_cm": 52,
+      "grain": "SH",
+      "comment": "Layer note '113-112.9cm: Jan3 - few forms visible'; 3-5 mm SH glyph; 0.1 cm layer"
+    },
+    {
+      "name": "Dec 15",
+      "height_cm": 70,
+      "bottom_cm": 67,
+      "top_cm": 70,
+      "depth_cm": 95,
+      "grain": "IF",
+      "comment": "Layer note '70-67cm: Dec 15'; K+ double-bar (crust) layer 3-10 mm"
+    },
+    {
+      "name": "Novemer Crust",
+      "height_cm": 18,
+      "bottom_cm": 15,
+      "top_cm": 18,
+      "depth_cm": 147,
+      "grain": "MFcr",
+      "comment": "Layer note '18-15cm: Novemer Crust' (as written); K hardness MFcr"
+    }
+  ],
+  "notes": "Small roll above first steep pitch of climbing from the road- Whumpfing and cracking up to 20 m away started at 1700m. Ski cut sz 1 15m wide running 50m on adjacent terrain while descending. Bailed from pit expecting increased slab properties higher in the terrain. ECT fractured 30 cm at 2 hits, 60 cm at 3 hits and full block at 11 hits . Additional Layer Comments: 15-18cm: Novemer Crust; 0-15cm: well rounded agregates ;",
+  "summary": "HS 165 cm, 36 deg NE pit at 1800 m (Vermilion Range, stability Poor, whumpfing/cracking, ski cut sz 1): 10 mm 'Jan 24' SH (F-, 145-147) under 4F DF 147-155 and 1F-/1F+ slab (RGxf, FCxr) with a thin 'Jan3' SH at 113 cm, a K+ 'Dec 15' crust at 67-70 cm, 'Novemer' MFcr crust (K) at 15-18 cm, and basal 1F SH/rounded aggregates 0-15 cm; CT2 SC x2 and ECTN2 at 147 cm; HN 12 cm of rimed new snow on top",
+  "confidence": "high",
+  "reading_issues": "PNG of a SnowPilot graph (994x840), height axis (3.6 px/cm, 0 at y=751, HS 165 at y=157); hardness ticks I/K/P/1F/4F/F at x=39/111/183/255/327/399. Table rows do not line up with the bars (funnel leaders), so layer boundaries are taken from the blue bar outlines (15, 18, 35, 60, 67, 70, 90, 100, 112.9/113, 120, 135, 145, 147.2, 155, 160) and matched to the 17 table rows in order; the Layer Notes ranges (165-160, 147-145, 113-112.9, 70-67, 18-15, 15-0) agree. The 112.9-113 cm layer is 0.1 cm thick and hidden by the outline, so its hardness is null. Glyph readings: '+r(rime)' kept as PP; basal 'V' with note 'well rounded agregates' is a conflict (glyph SH, note rounded aggregates) so grain is uncertain; '=' read as IF (uncertain); trefoil stored as MF. Test heights taken from the arrows (147 cm). The notes also say 'ECT fractured 30 cm at 2 hits, 60 cm at 3 hits and full block at 11 hits', which does not match the chart label ECTN2 @147cm; it is kept in notes only and not entered as a separate test because it is ambiguous (whether depth or height, and which ECT). Wind loading blank. Date read DD/MM/YYYY (14/02/2026)."
+}

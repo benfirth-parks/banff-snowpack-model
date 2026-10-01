@@ -1,0 +1,344 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Takkakaw Falls study plot/2025-03-15 Takakaw Falls Study full profile.png"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Takakkaw Falls Study Plot",
+  "site_slug": "tak-falls-plot",
+  "chart_format": "propagation_labs",
+  "date": "2025-03-15",
+  "time": "11:30",
+  "observer": "tim haggarty",
+  "lat": 51.4984,
+  "lon": -116.4963,
+  "elevation_m": 1783,
+  "elevation_raw": "1783m",
+  "aspect": "NE",
+  "slope_deg": null,
+  "air_temp_c": -4,
+  "sky": "Scattered",
+  "precip": "Snow",
+  "wind": "Calm",
+  "blowing_snow": "No Transport",
+  "hs_cm": 192,
+  "surface_grain": null,
+  "foot_pen_cm": 60,
+  "ski_pen_cm": 30,
+  "header_other": {
+    "surface_grain_raw": "--",
+    "profile_name": null
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 15,
+      "depth_top_cm": 177,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        6.0
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "note: aggregates"
+    },
+    {
+      "bottom_cm": 15,
+      "top_cm": 46,
+      "depth_top_cm": 146,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "⊟ (square with rounded top and centre line)",
+      "size_mm": [
+        1.0,
+        2.0
+      ],
+      "hardness": "P",
+      "hardness_idx": 4,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 46,
+      "top_cm": 63,
+      "depth_top_cm": 129,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "⊟ (square with rounded top and centre line)",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "P-",
+      "hardness_idx": 3.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "note: sintering evident"
+    },
+    {
+      "bottom_cm": 63,
+      "top_cm": 97,
+      "depth_top_cm": 95,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.5,
+        1.5
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "note: January 30 FC"
+    },
+    {
+      "bottom_cm": 97,
+      "top_cm": 111,
+      "depth_top_cm": 81,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "⊟",
+      "size_mm": [
+        0.5,
+        1.0
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 111,
+      "top_cm": 129,
+      "depth_top_cm": 63,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "⊟",
+      "size_mm": [
+        0.5,
+        1.0
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Hardness gradient: 1F+ at base to 1F- at top; hardness/idx given at the base value.",
+      "hardness_bottom": "1F+",
+      "hardness_bottom_idx": 3.33,
+      "hardness_top": "1F-",
+      "hardness_top_idx": 2.66
+    },
+    {
+      "bottom_cm": 129,
+      "top_cm": 130,
+      "depth_top_cm": 62,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "◎◎",
+      "size_mm": null,
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": true,
+      "comment": "Thin crust; note: \"March 3 CT fails below crust once it has been cut only\". Size blank. CT30 SC line at 129 cm."
+    },
+    {
+      "bottom_cm": 130,
+      "top_cm": 168,
+      "depth_top_cm": 24,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "●",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.65,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Hardness gradient: 1F- at base softening to 4F+ at top; hardness/idx given at the base value.",
+      "hardness_bottom": "1F-",
+      "hardness_bottom_idx": 2.65,
+      "hardness_top": "4F+",
+      "hardness_top_idx": 2.33
+    },
+    {
+      "bottom_cm": 168,
+      "top_cm": 173,
+      "depth_top_cm": 19,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 173,
+      "top_cm": 174,
+      "depth_top_cm": 18,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "◎◎",
+      "size_mm": null,
+      "hardness": "1F",
+      "hardness_idx": 3,
+      "moisture": "D",
+      "density": null,
+      "uncertain": true,
+      "comment": "note: \"5 mm thick temperature crust\" / \"March 13 crust\". Size blank. Top hidden under the CT line, so the 173-174 extent is inferred."
+    },
+    {
+      "bottom_cm": 174,
+      "top_cm": 185,
+      "depth_top_cm": 7,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "note: PC shear above crust"
+    },
+    {
+      "bottom_cm": 185,
+      "top_cm": 192,
+      "depth_top_cm": 0,
+      "grain": "PP",
+      "grain2": null,
+      "grain_raw": "+",
+      "size_mm": [
+        1.5,
+        1.5
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 10,
+      "t_c": -0.2
+    },
+    {
+      "h_cm": 100,
+      "t_c": -1.6
+    },
+    {
+      "h_cm": 110,
+      "t_c": -1.8
+    },
+    {
+      "h_cm": 120,
+      "t_c": -2.0
+    },
+    {
+      "h_cm": 130,
+      "t_c": -2.2
+    },
+    {
+      "h_cm": 150,
+      "t_c": -3.0
+    },
+    {
+      "h_cm": 160,
+      "t_c": -4.0
+    },
+    {
+      "h_cm": 172,
+      "t_c": -5.0
+    },
+    {
+      "h_cm": 182,
+      "t_c": -5.0
+    },
+    {
+      "h_cm": 192,
+      "t_c": -4.0
+    }
+  ],
+  "tests": [
+    {
+      "raw": "CT5PC on ⟋ March 13 crust",
+      "type": "CT",
+      "score": "CT5",
+      "taps": 5,
+      "propagation": null,
+      "fracture": "PC",
+      "height_cm": 174,
+      "depth_cm": 18,
+      "layer_grain": "DF",
+      "count": 1
+    },
+    {
+      "raw": "CT30SC on □ 1 March 3",
+      "type": "CT",
+      "score": "CT30",
+      "taps": 30,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 129,
+      "depth_cm": 63,
+      "layer_grain": "FC",
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "March 13 crust",
+      "height_cm": 173.5,
+      "depth_cm": 18.5,
+      "grain": "MFcr"
+    },
+    {
+      "name": "March 3 crust/interface",
+      "height_cm": 129.5,
+      "depth_cm": 62.5,
+      "grain": "MFcr"
+    },
+    {
+      "name": "January 30 FC",
+      "height_cm": 80,
+      "depth_cm": 112,
+      "grain": "FC"
+    }
+  ],
+  "notes": "CT30SC: only fails once crust is cut - , Bi-weekly study plot visit - full profile",
+  "summary": "Deep FC/FCxr 0-111 cm (1F+ to P, Jan 30 FC at 63-97 cm), FCxr 111-129 cm under a thin March 3 MFcr crust at 129-130 cm (CT30 SC only once the crust is cut), RG 130-168 cm, DF 168-185 cm with a thin March 13 temperature crust at ~173-174 cm (CT5 PC above it), PP 185-192 cm; HS 192 cm.",
+  "confidence": "medium",
+  "reading_issues": "Table rows for thin layers are stretched; true boundaries taken from the diamond notches on the right axis. Top of the thin 173-174 cm crust is hidden under the CT line (extent inferred); crust grain size blank. Layers 111-129 and 130-168 cm have sloped hardness edges (gradients), values given at the base with top value in hardness_top. Surface grain and slope are \"--\" in the header. HS 192 cm from header. Temperature dots measured from red-dot detection; the dot near 130 cm is merged with the CT line. Header Profile Name blank."
+}

@@ -1,0 +1,345 @@
+{
+ "source_files": [
+  "profiles/2025-2026/Study Plot profiles/Goat's Eye/2026-02-17 Goats Eye Study Plot.pdf"
+ ],
+ "season": "2025-26",
+ "kind": "study_plot",
+ "site": "Goat's Eye Study Plot",
+ "site_slug": "goats-eye-plot",
+ "chart_format": "snowpilot",
+ "date": "2026-02-17",
+ "time": "11:30",
+ "observer": "Banff Visitor Safety",
+ "lat": 51.08997,
+ "lon": -115.75506,
+ "elevation_m": 2280,
+ "elevation_raw": "2280 m",
+ "aspect": null,
+ "slope_deg": 0,
+ "air_temp_c": -15,
+ "sky": "OVC",
+ "precip": "S-1",
+ "wind": "Calm",
+ "blowing_snow": null,
+ "hs_cm": 157,
+ "surface_grain": "DF",
+ "foot_pen_cm": 40,
+ "ski_pen_cm": null,
+ "header_other": {
+  "PF": "40",
+  "chart_title": "Goat's Eye Study Plot",
+  "location": "Banff, Yoho and Kootenay, AB",
+  "surface_form": "/ r 1 mm (drawn in the fixed top row above the HS line)",
+  "stability": "blank",
+  "wind_loading": "blank"
+ },
+ "layers": [
+  {
+   "bottom_cm": 0,
+   "top_cm": 38,
+   "depth_top_cm": 119,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    1.0,
+    3.0
+   ],
+   "hardness": "K",
+   "hardness_idx": 5,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 38,
+   "top_cm": 46,
+   "depth_top_cm": 111,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    3.0,
+    4.0
+   ],
+   "hardness": "P+",
+   "hardness_idx": 4.33,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": "Layer note \"46-38cm: Nov crust\""
+  },
+  {
+   "bottom_cm": 46,
+   "top_cm": 74,
+   "depth_top_cm": 83,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    2.0,
+    2.0
+   ],
+   "hardness": "K",
+   "hardness_idx": 5,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 74,
+   "top_cm": 104,
+   "depth_top_cm": 53,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    1.0,
+    2.0
+   ],
+   "hardness": "K",
+   "hardness_idx": 5,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": "Layer note \"104-74cm: @74 Dec crust\""
+  },
+  {
+   "bottom_cm": 104,
+   "top_cm": 119,
+   "depth_top_cm": 38,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "• (small dot)",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "P",
+   "hardness_idx": 4,
+   "moisture": "D",
+   "density": null,
+   "uncertain": true,
+   "comment": "Layer note \"119-104cm: @104 Jan 3 SH\"; small-dot glyph read as RG"
+  },
+  {
+   "bottom_cm": 119,
+   "top_cm": 126,
+   "depth_top_cm": 31,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    1.0,
+    2.0
+   ],
+   "hardness": "1F-",
+   "hardness_idx": 2.67,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 126,
+   "top_cm": 127,
+   "depth_top_cm": 30,
+   "grain": "SH",
+   "grain2": null,
+   "grain_raw": "V",
+   "size_mm": [
+    10.0,
+    10.0
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": "Layer notes: \"127-126cm: Jan 24 SH\" and \"Problematic layer\" (bar drawn red)"
+  },
+  {
+   "bottom_cm": 127,
+   "top_cm": 131,
+   "depth_top_cm": 26,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "4F",
+   "hardness_idx": 2,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 131,
+   "top_cm": 137,
+   "depth_top_cm": 20,
+   "grain": "FC",
+   "grain2": null,
+   "grain_raw": "□",
+   "size_mm": [
+    0.5,
+    0.5
+   ],
+   "hardness": "4F",
+   "hardness_idx": 2,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 137,
+   "top_cm": 157,
+   "depth_top_cm": 0,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/ r",
+   "size_mm": [
+    1.0,
+    1.0
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": "D",
+   "density": null,
+   "uncertain": false,
+   "comment": "'r' suffix on glyph (possibly rimed) unresolved"
+  }
+ ],
+ "temps": [
+  {
+   "h_cm": 0,
+   "t_c": -1.0
+  },
+  {
+   "h_cm": 10,
+   "t_c": -1.8
+  },
+  {
+   "h_cm": 20,
+   "t_c": -2.3
+  },
+  {
+   "h_cm": 30,
+   "t_c": -3.0
+  },
+  {
+   "h_cm": 40,
+   "t_c": -3.7
+  },
+  {
+   "h_cm": 50,
+   "t_c": -4.0
+  },
+  {
+   "h_cm": 60,
+   "t_c": -4.5
+  },
+  {
+   "h_cm": 70,
+   "t_c": -5.2
+  },
+  {
+   "h_cm": 80,
+   "t_c": -5.7
+  },
+  {
+   "h_cm": 90,
+   "t_c": -6.4
+  },
+  {
+   "h_cm": 100,
+   "t_c": -7.1
+  },
+  {
+   "h_cm": 110,
+   "t_c": -7.6
+  },
+  {
+   "h_cm": 120,
+   "t_c": -8.6
+  },
+  {
+   "h_cm": 130,
+   "t_c": -9.3
+  },
+  {
+   "h_cm": 140,
+   "t_c": -10.1
+  },
+  {
+   "h_cm": 147,
+   "t_c": -9.6
+  },
+  {
+   "h_cm": 157,
+   "t_c": -10.6
+  }
+ ],
+ "tests": [
+  {
+   "raw": "CT5, PC @142cm x 2",
+   "type": "CT",
+   "score": "CT5",
+   "taps": 5,
+   "propagation": null,
+   "fracture": "PC",
+   "height_cm": 142,
+   "depth_cm": 15,
+   "layer_grain": "DF",
+   "count": 2
+  },
+  {
+   "raw": "ECTX No result",
+   "type": "ECT",
+   "score": "ECTX",
+   "taps": null,
+   "propagation": null,
+   "fracture": null,
+   "height_cm": null,
+   "depth_cm": null,
+   "layer_grain": null,
+   "count": 1,
+   "comment": "Arrow at the base of the chart; no result so no height"
+  }
+ ],
+ "named_layers": [
+  {
+   "name": "Jan 24 SH",
+   "height_cm": 126,
+   "depth_cm": 31,
+   "grain": "SH"
+  },
+  {
+   "name": "Jan 3 SH",
+   "height_cm": 104,
+   "depth_cm": 53,
+   "grain": "SH"
+  },
+  {
+   "name": "Dec crust",
+   "height_cm": 74,
+   "depth_cm": 83,
+   "grain": "MFcr"
+  },
+  {
+   "name": "Nov crust",
+   "height_cm": 38,
+   "depth_cm": 119,
+   "grain": null
+  }
+ ],
+ "notes": null,
+ "summary": "HS 157 cm, cold (-15 C air): hard K FCxr/RG pack 0-104 cm with Nov crust (P+, 38-46 cm) and Dec crust at 74 cm, P RG with Jan 3 SH at 104 cm, 1F- FC, Jan 24 SH 10 mm at 126-127 cm (problematic, red), soft FC/DF above; CT5 PC at 142 cm (x2) in the DF slab, ECTX no result; temps -1 C at ground to -10.6 C at surface",
+ "confidence": "medium",
+ "reading_issues": "SnowPilot graph (PDF containing a 994x840 image). Heights from y-axis ticks (3.78 px/cm); layer edges agree with the printed layer-note ranges except 127-131/131-137 and 137 which come from bar edges. Hardness read against the I,K,P,1F,4F,F axis. 104-119 cm glyph is a small dot (RG assumed). Temperature points read at 10 cm steps plus 147 and 157 cm; the 130-147 cm dots are less precise (+/-0.2 C). Surface row \"/ r 1\" is zero-thickness (recorded as surface_grain DF, 1 mm). ECTX label gives no height. Elevation 2280 m vs 2271-2311 m in the Propagation Labs charts for the same plot."
+}

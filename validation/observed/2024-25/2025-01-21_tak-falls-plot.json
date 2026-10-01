@@ -1,0 +1,62 @@
+{
+  "source_files": ["profiles/2024-2025/Takkakaw Falls study plot/20240121 Takk Falls study plot.pdf"],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Takakkaw Falls Study Plot",
+  "site_slug": "tak-falls-plot",
+  "chart_format": "snowpilot",
+  "date": "2025-01-21",
+  "time": "11:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.49866,
+  "lon": -116.49662,
+  "elevation_m": 1800,
+  "elevation_raw": "1800 m",
+  "aspect": "flat",
+  "slope_deg": 0,
+  "air_temp_c": -14.5,
+  "sky": "BKN",
+  "precip": "S-1",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 115,
+  "surface_grain": null,
+  "foot_pen_cm": 30,
+  "ski_pen_cm": 20,
+  "header_other": {"PF": "30", "PS": "20", "HS": "115", "wind_loading": null, "coord_raw": "51.49866N, -116.49662W", "slope_raw": "0°", "specifics": null, "layer_notes": "107-105cm: Problematic layer; 15-0cm: Several laminated crusts", "chart_title": "Takkakaw Falls plot", "surface_form": "no glyph, size 1 mm in the fixed top row above the HS line (zero thickness)", "file_format_note": "PDF (FPDF, A4) wrapping a SnowPilot 994x840 image; header date printed 21/01/2025 (DD/MM/YYYY) although the filename begins '20240121' and the file sits in the 2024-2025 folder", "filename_date_mismatch": "filename says 2024-01-21; chart header says 21/01/2025 (trusted)"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 15, "depth_top_cm": 100, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [3.0, 3.0], "hardness": "P", "hardness_idx": 4.0, "moisture": null, "density": null, "uncertain": false, "comment": "layer note '15-0cm: Several laminated crusts'; no moisture entered"},
+    {"bottom_cm": 15, "top_cm": 40, "depth_top_cm": 75, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [3.0, 4.0], "hardness": "1F+", "hardness_idx": 3.33, "moisture": "D", "density": null, "uncertain": false, "comment": "size column '3-4'"},
+    {"bottom_cm": 40, "top_cm": 63, "depth_top_cm": 52, "grain": "FCxr", "grain2": null, "grain_raw": "square with rounded top (FCxr glyph)", "size_mm": [1.5, 2.0], "hardness": "P", "hardness_idx": 4.0, "moisture": "D", "density": null, "uncertain": false, "comment": "size column '1.5-2'"},
+    {"bottom_cm": 63, "top_cm": 80, "depth_top_cm": 35, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [1.5, 1.5], "hardness": "1F+", "hardness_idx": 3.33, "moisture": "D", "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 80, "top_cm": 100, "depth_top_cm": 15, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [1.5, 1.5], "hardness": "1F", "hardness_idx": 3.0, "moisture": "D", "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 100, "top_cm": 105, "depth_top_cm": 10, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [1.0, 1.0], "hardness": "4F-", "hardness_idx": 1.67, "moisture": null, "density": null, "uncertain": false, "comment": "no moisture entered"},
+    {"bottom_cm": 105, "top_cm": 107, "depth_top_cm": 8, "grain": "MFcr", "grain2": null, "grain_raw": "◎◎", "size_mm": null, "hardness": "1F-", "hardness_idx": 2.67, "moisture": "D", "density": null, "uncertain": false, "comment": "thin 2 cm melt-freeze crust (two linked circles); layer note '107-105cm: Problematic layer'; CT3 PC at its top (107 cm); bar edge at 1F-; no size given"},
+    {"bottom_cm": 107, "top_cm": 115, "depth_top_cm": 0, "grain": "DF", "grain2": "PP", "grain_raw": "⟋(+)", "size_mm": [1.0, 1.0], "hardness": "F", "hardness_idx": 1.0, "moisture": "D", "density": null, "uncertain": false, "comment": "size column '1(1)': DF 1 mm, secondary PP 1 mm"}
+  ],
+  "temps": [
+    {"h_cm": 0, "t_c": -1.0},
+    {"h_cm": 20, "t_c": -2.0},
+    {"h_cm": 30, "t_c": -3.0},
+    {"h_cm": 40, "t_c": -4.0},
+    {"h_cm": 50, "t_c": -4.5},
+    {"h_cm": 60, "t_c": -5.4},
+    {"h_cm": 70, "t_c": -6.5},
+    {"h_cm": 80, "t_c": -8.5},
+    {"h_cm": 90, "t_c": -10.0},
+    {"h_cm": 100, "t_c": -13.5},
+    {"h_cm": 110, "t_c": -15.0},
+    {"h_cm": 115, "t_c": -14.5}
+  ],
+  "tests": [
+    {"raw": "CT3, PC @107cm", "type": "CT", "score": "CT3", "taps": 3, "propagation": null, "fracture": "PC", "height_cm": 107, "depth_cm": 8, "layer_grain": "MFcr", "count": 1}
+  ],
+  "named_layers": [
+    {"name": "Problematic layer", "height_cm": 107, "depth_cm": 8, "grain": "MFcr"},
+    {"name": "Several laminated crusts", "height_cm": 15, "depth_cm": 100, "grain": "FC"}
+  ],
+  "notes": "Chart 'Notes:' field blank. Layer Notes: 107-105cm: Problematic layer; 15-0cm: Several laminated crusts. Stability tests column: CT3, PC @107cm. Aspect, Wind Loading, Specifics and Stability fields blank.",
+  "summary": "Basal FC 0-15 cm (3 mm, P; 'several laminated crusts') under FC 15-40 cm (1F+), FCxr 40-63 cm (P), FC 63-100 cm (1F+/1F), FC 100-105 cm (4F-), a 2 cm MFcr at 105-107 cm (flagged problematic layer; CT3 PC at 107 cm) and 8 cm of F DF/PP; HS 115 cm; very cold: air -14.5 C, snow -1.0 C at the ground, -10.0 C at 90 cm, -15.0 C at 110 cm",
+  "confidence": "high",
+  "reading_issues": "FILE DATE MISMATCH: the filename begins '20240121' and the file sits in profiles/2024-2025/, but the chart header prints 21/01/2025 11:00, so the header date (2025-01-21, season 2024-25) is used and the JSON is filed under validation/observed/2024-25/ rather than 2023-24. It is NOT the same pit as 'Takakkaw Falls Full -21-Jan.jpg' (21/01/2024, 1780 m, air -3 C, different layers). Hardness bars, boundaries and temperature dots measured from native pixels (HS line at y=157, ground at y=751 give 5.17 px/cm; hardness ticks every 24 px = 1/3 step); boundaries rounded to integer cm. The temperature axis on this chart is rescaled (-16..0 C with labels every 2 C, 25.5 px per C, 0 at x=447), so temperature values use that scale; there is no dot at 10 cm; the top dot (surface, -14.5 C) equals the header air temperature. A red line drawn across the hardness chart at 107 cm marks the CT3 PC test height. Glyph readings: two linked circles read as MFcr; open square as FC; square-with-rounded-top as FCxr; '⟋(+)' as DF with secondary PP. The top-row surface form has size 1 but no glyph, so surface_grain is null. Aspect field is blank; 'flat' is assumed from the 0 deg slope. The CT3 PC failure is at the top of the 105-107 cm crust, which the layer note flags as the problematic layer (layer_grain MFcr)."
+}

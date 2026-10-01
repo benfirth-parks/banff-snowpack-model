@@ -1,0 +1,246 @@
+{
+ "source_files": [
+  "profiles/2025-2026/Study Plot profiles/Tak Falls/2025-12-08 Tak Falls.png"
+ ],
+ "season": "2025-26",
+ "kind": "study_plot",
+ "site": "Takakkaw Falls Study Plot",
+ "site_slug": "tak-falls-plot",
+ "chart_format": "propagation_labs",
+ "date": "2025-12-08",
+ "time": "11:59",
+ "observer": "ian jackson",
+ "lat": 51.4985,
+ "lon": -116.4962,
+ "elevation_m": 1788,
+ "elevation_raw": "1788m",
+ "aspect": null,
+ "slope_deg": 2,
+ "air_temp_c": -3.0,
+ "sky": "Overcast",
+ "precip": "Snow <0.5cm/hr",
+ "wind": "Light,S",
+ "blowing_snow": "No Transport",
+ "hs_cm": 113,
+ "surface_grain": "PP",
+ "foot_pen_cm": 65,
+ "ski_pen_cm": 35,
+ "header_other": {
+  "profile_name": "Tak Falls Plot",
+  "org": null
+ },
+ "layers": [
+  {
+   "bottom_cm": 0,
+   "top_cm": 20,
+   "depth_top_cm": 93,
+   "grain": "FCxr/RGxf",
+   "grain2": null,
+   "grain_raw": "square with filled dot",
+   "size_mm": [
+    2.0,
+    3.0
+   ],
+   "hardness": "P-",
+   "hardness_idx": 3.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": true,
+   "comment": null
+  },
+  {
+   "bottom_cm": 20,
+   "top_cm": 29,
+   "depth_top_cm": 84,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    1.0,
+    2.0
+   ],
+   "hardness": "1F+",
+   "hardness_idx": 3.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 29,
+   "top_cm": 32,
+   "depth_top_cm": 81,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    2.0,
+    5.0
+   ],
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "bar edge measured below the CT label; crust above it"
+  },
+  {
+   "bottom_cm": 32,
+   "top_cm": 39,
+   "depth_top_cm": 74,
+   "grain": "MFcr",
+   "grain2": null,
+   "grain_raw": "◎○",
+   "size_mm": null,
+   "hardness": "K",
+   "hardness_idx": 5,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "Named \"Nov 13\""
+  },
+  {
+   "bottom_cm": 39,
+   "top_cm": 70,
+   "depth_top_cm": 43,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    1.0,
+    2.0
+   ],
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 70,
+   "top_cm": 82,
+   "depth_top_cm": 31,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/",
+   "size_mm": [
+    1.5,
+    1.5
+   ],
+   "hardness": "4F+",
+   "hardness_idx": 2.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 82,
+   "top_cm": 84,
+   "depth_top_cm": 29,
+   "grain": "PP",
+   "grain2": null,
+   "grain_raw": "+",
+   "size_mm": [
+    3.0,
+    4.0
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 84,
+   "top_cm": 107,
+   "depth_top_cm": 6,
+   "grain": "PP",
+   "grain2": "DF",
+   "grain_raw": "+(/)",
+   "size_mm": [
+    2.0,
+    2.0
+   ],
+   "hardness": "F+",
+   "hardness_idx": 1.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 107,
+   "top_cm": 113,
+   "depth_top_cm": 0,
+   "grain": "PP",
+   "grain2": null,
+   "grain_raw": "+",
+   "size_mm": [
+    2.0,
+    2.0
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  }
+ ],
+ "temps": [],
+ "tests": [
+  {
+   "raw": "CT2SC",
+   "type": "CT",
+   "score": "CT2",
+   "taps": 2,
+   "propagation": null,
+   "fracture": "SC",
+   "height_cm": 84,
+   "depth_cm": 29,
+   "layer_grain": "PP",
+   "count": 2,
+   "comment": "label reads \"on + 2.0-3.0\"; row size is 3.0-4.0"
+  },
+  {
+   "raw": "CT13RP",
+   "type": "CT",
+   "score": "CT13",
+   "taps": 13,
+   "propagation": null,
+   "fracture": "RP",
+   "height_cm": 70,
+   "depth_cm": 43,
+   "layer_grain": null,
+   "count": 2
+  },
+  {
+   "raw": "CT26PC",
+   "type": "CT",
+   "score": "CT26",
+   "taps": 26,
+   "propagation": null,
+   "fracture": "PC",
+   "height_cm": 39,
+   "depth_cm": 74,
+   "layer_grain": "FCxr",
+   "count": 2,
+   "comment": "Label on FCxr, \"Nov 13\" crust layer"
+  }
+ ],
+ "named_layers": [
+  {
+   "name": "Nov 13",
+   "height_cm": 32,
+   "depth_cm": 81,
+   "grain": "MFcr"
+  }
+ ],
+ "notes": "CT2SC: x2, CT13RP: x2, CT26PC: x2,",
+ "summary": "HS 113 cm: faceted FCxr/RGxf base 0-20 cm (P-), RG 20-29 cm, FCxr 29-32 cm under K Nov 13 crust (32-39 cm), RG 39-70 cm (1F), DF 70-82 cm and soft PP above; CT2 SC (x2) at 84 cm, CT13 RP (x2) at 70 cm, CT26 PC (x2) at 39 cm on Nov 13; no temperatures",
+ "confidence": "medium",
+ "reading_issues": "Linear axis; table has an extra Name column. CT2SC label text (\"on + 2.0-3.0\") disagrees with the table size of the 82-84 cm row (3.0-4.0). Crust bar edge at 32-39 cm partly hidden by the test label; K from lower rows. Square-with-dot glyph at base uncertain between FCxr and RGxf. Aspect blank. No temperature profile. Test heights from the yellow lines."
+}

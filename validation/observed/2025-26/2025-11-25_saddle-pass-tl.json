@@ -1,0 +1,145 @@
+{
+  "source_files": [
+    "profiles/2025-2026/Test profiles/2025-11-25_Saddle Pass TL.png"
+  ],
+  "season": "2025-26",
+  "kind": "test_profile",
+  "site": "Saddle Pass TL",
+  "site_slug": "saddle-pass-tl",
+  "chart_format": "propagation_labs",
+  "date": "2025-11-25",
+  "time": "10:37",
+  "observer": "ian jackson",
+  "lat": 51.3942,
+  "lon": -116.2154,
+  "elevation_m": 2320,
+  "elevation_raw": "2320m",
+  "aspect": "E",
+  "slope_deg": 2,
+  "air_temp_c": -6.0,
+  "sky": "Few",
+  "precip": "No Precipitation",
+  "wind": "Calm",
+  "blowing_snow": "No Transport",
+  "hs_cm": 98,
+  "surface_grain": "DF",
+  "foot_pen_cm": 60,
+  "ski_pen_cm": null,
+  "header_other": {
+    "profile_name": "Saddle Pass TL",
+    "surface_grain_raw": "Partly Decomposed PP 1.0mm",
+    "org": null
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 12,
+      "depth_top_cm": 86,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "●",
+      "size_mm": [
+        1.0,
+        1.5
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": "Moist",
+      "density": null,
+      "uncertain": false,
+      "comment": "LWC column: Moist. CT27 BRK failure at ~2 cm within this layer"
+    },
+    {
+      "bottom_cm": 12,
+      "top_cm": 33,
+      "depth_top_cm": 65,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "rounded-top square glyph (dome on box)",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 33,
+      "top_cm": 52,
+      "depth_top_cm": 46,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "●",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 52,
+      "top_cm": 76,
+      "depth_top_cm": 22,
+      "grain": "DF",
+      "grain2": "FC",
+      "grain_raw": "/(□)",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 76,
+      "top_cm": 98,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": "FC",
+      "grain_raw": "/(□)",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT27BRK",
+      "type": "CT",
+      "score": "CT27",
+      "taps": 27,
+      "propagation": null,
+      "fracture": "BRK",
+      "height_cm": 2,
+      "depth_cm": 96,
+      "layer_grain": null,
+      "count": 1
+    }
+  ],
+  "named_layers": [],
+  "notes": null,
+  "summary": "HS 98 cm treeline pit on a 2 degree slope: moist RG 0-12 cm (1F), FCxr 12-33 cm (1F+), RG 33-52 cm (1F), then soft DF(FC) 52-98 cm (4F then F); only test CT27 BRK at ~2 cm near the base; no temperature profile, no notes",
+  "confidence": "high",
+  "reading_issues": "Notes field is blank. Single test (CT27BRK) is drawn at ~2 cm height (yellow line 1.9 cm above baseline); label gives no failure-layer grain. Hardness bars are flat per layer (no tapers). Hardness axis here has uniform tick spacing. No temperature profile drawn."
+}

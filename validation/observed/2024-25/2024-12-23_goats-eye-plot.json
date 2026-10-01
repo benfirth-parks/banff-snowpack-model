@@ -1,0 +1,289 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Goats Eye study plot/2024-12-23_Goats Eye Study Plot.pdf"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Goat's Eye Study Plot",
+  "site_slug": "goats-eye-plot",
+  "chart_format": "snowpilot",
+  "date": "2024-12-23",
+  "time": "12:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.09029,
+  "lon": -115.75342,
+  "elevation_m": 2300,
+  "elevation_raw": "2300 m",
+  "aspect": null,
+  "slope_deg": 0,
+  "air_temp_c": -3.5,
+  "sky": "OVC",
+  "precip": "NO",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 72,
+  "surface_grain": "PP",
+  "foot_pen_cm": 60,
+  "ski_pen_cm": null,
+  "header_other": {
+    "PF": "60",
+    "HS": "72",
+    "wind_loading": null,
+    "coord_raw": "51.09029N, -115.75342W",
+    "slope_raw": "0°",
+    "specifics": "Pit dug in a Ski Area",
+    "layer_notes": "20-10cm: Problematic layer; 10-9cm: Oct 20 rain crust",
+    "chart_title": "Goat's Eye Study Plot",
+    "surface_form": "asterisk over an open triangle (graupel, PPgp) 1 mm, drawn in the fixed top row above the HS line (zero thickness); moisture blank",
+    "file_format_note": "PDF (FPDF) wrapping a SnowPilot 994x840 image"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 7,
+      "depth_top_cm": 65,
+      "grain": "DH",
+      "grain2": null,
+      "grain_raw": "∧",
+      "size_mm": [
+        1.5,
+        4.0
+      ],
+      "hardness": "P",
+      "hardness_idx": 4,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 7,
+      "top_cm": 9,
+      "depth_top_cm": 63,
+      "grain": "DH",
+      "grain2": null,
+      "grain_raw": "∧",
+      "size_mm": [
+        2.5,
+        3.5
+      ],
+      "hardness": "4F+",
+      "hardness_idx": 2.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "thin 2 cm layer between the basal DH and the rain crust"
+    },
+    {
+      "bottom_cm": 9,
+      "top_cm": 10,
+      "depth_top_cm": 62,
+      "grain": "IF",
+      "grain2": null,
+      "grain_raw": "■ (filled bar glyph)",
+      "size_mm": null,
+      "hardness": "K",
+      "hardness_idx": 5,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "1 cm crust; layer note \"10-9cm: Oct 20 rain crust\" (rain crust, IFrc); no grain size given in the table"
+    },
+    {
+      "bottom_cm": 10,
+      "top_cm": 20,
+      "depth_top_cm": 52,
+      "grain": "FC",
+      "grain2": "DH",
+      "grain_raw": "□(∧)",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "chart size \"2(3)\": FC 2 mm, secondary DH 3 mm. Layer note \"20-10cm: Problematic layer\" (red flag line drawn at its top, 20 cm). CT22 SC @19cm x3 failed in the upper part of this layer."
+    },
+    {
+      "bottom_cm": 20,
+      "top_cm": 34,
+      "depth_top_cm": 38,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.5,
+        2.0
+      ],
+      "hardness": "4F-",
+      "hardness_idx": 1.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 34,
+      "top_cm": 46,
+      "depth_top_cm": 26,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 46,
+      "top_cm": 54,
+      "depth_top_cm": 18,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "⊟ (square with rounded top and centre line)",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "softest layer of the upper pack (1F- between 4F layers). The \"Dec 7 SH\" interface (CT12 RP x2) is at its top, 54 cm; no separate SH layer is drawn in the table."
+    },
+    {
+      "bottom_cm": 54,
+      "top_cm": 60,
+      "depth_top_cm": 12,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 60,
+      "top_cm": 72,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "4F-",
+      "hardness_idx": 1.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "surface layer; the fixed top (surface-form) row above the HS line shows a graupel-type glyph, 1 mm"
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 0,
+      "t_c": -0.5
+    },
+    {
+      "h_cm": 10,
+      "t_c": -1.0
+    },
+    {
+      "h_cm": 20,
+      "t_c": -1.5
+    },
+    {
+      "h_cm": 30,
+      "t_c": -2.5
+    },
+    {
+      "h_cm": 40,
+      "t_c": -3.0
+    },
+    {
+      "h_cm": 50,
+      "t_c": -4.0
+    },
+    {
+      "h_cm": 60,
+      "t_c": -5.0
+    },
+    {
+      "h_cm": 72,
+      "t_c": -3.5
+    }
+  ],
+  "tests": [
+    {
+      "raw": "CT12, RP @54cm Dec 7 SH x2",
+      "type": "CT",
+      "score": "CT12",
+      "taps": 12,
+      "propagation": null,
+      "fracture": "RP",
+      "height_cm": 54,
+      "depth_cm": 18,
+      "layer_grain": "SH",
+      "count": 2
+    },
+    {
+      "raw": "CT22, SC @19cm x3",
+      "type": "CT",
+      "score": "CT22",
+      "taps": 22,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 19,
+      "depth_cm": 53,
+      "layer_grain": "FC",
+      "count": 3
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Dec 7 SH",
+      "height_cm": 54,
+      "depth_cm": 18,
+      "grain": "SH"
+    },
+    {
+      "name": "Oct 20 rain crust",
+      "height_cm": 9.5,
+      "bottom_cm": 9,
+      "top_cm": 10,
+      "depth_cm": 62.5,
+      "grain": "IF"
+    },
+    {
+      "name": "Problematic layer",
+      "height_cm": 15,
+      "bottom_cm": 10,
+      "top_cm": 20,
+      "depth_cm": 57,
+      "grain": "FC"
+    }
+  ],
+  "notes": "Specifics: Pit dug in a Ski Area. Layer Notes (header): '20-10cm: Problematic layer'; '10-9cm: Oct 20 rain crust'. Stability tests column: 'CT12, RP @54cm Dec 7 SH x2'; 'CT22, SC @19cm x3'; '10-9cm: Oct 20 rain crust'. Chart 'Notes:' field blank. Aspect, wind loading and stability fields blank.",
+  "summary": "72 cm HS: basal DH 0-9 cm (P then 4F+, 1.5-4 mm) under a 1 cm Oct 20 rain crust (IF, K) at 9-10 cm, then flagged FC(DH) 10-20 cm (F; CT22 SC at 19 cm x3), FC 20-46 cm (4F-/4F), a 0.5 mm FCxr 1F- layer at 46-54 cm under the Dec 7 SH interface at 54 cm (CT12 RP x2), and DF 54-72 cm (4F, 4F-); graupel on the surface; PF 60; temperature -0.5 at ground to -5.0 at 60 cm and -3.5 at the surface",
+  "confidence": "high",
+  "reading_issues": "PDF is a single embedded 994x840 SnowPilot raster, extracted at native resolution. Hardness bar edges and layer boundaries measured from pixels against the axis ticks (tall ticks = I/K/P/1F/4F/F; minor ticks = +/- thirds); boundaries are integer cm (the thin crust at 9-10 cm and DH at 7-9 cm measure 9.1/10.07/7.04 cm and agree with the \"10-9cm\" layer note). Table rows for the three thin basal layers are stretched with connector lines. Temperature dots read against the top axis (43.3 px/degC): ground -0.5, then every 10 cm to 60 cm, plus the surface point at 72 cm (-3.5, equal to the air temperature). The top-row surface-form glyph (asterisk over open triangle) is read as graupel (PPgp); the top-level surface_grain \"PP\" rests on that reading. Glyph at 46-54 cm (rounded-top square with centre line) read as FCxr. Sizes of the form \"a(b)\" recorded as the primary form size, secondary in the comment. The Dec 7 SH is named only in the test comment (no SH layer in the table); layer_grain \"SH\" for that test follows the comment. Elevation printed 2300 m (other visits of this plot print 2280, 2295 and 2400 m). The red line at 20 cm is the problematic-layer flag, not a test."
+}

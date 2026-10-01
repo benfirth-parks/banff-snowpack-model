@@ -1,0 +1,360 @@
+{
+ "source_files": [
+  "profiles/2025-2026/Study Plot profiles/Goat's Eye/2026-01-12_1428_Goats Eye.pdf"
+ ],
+ "season": "2025-26",
+ "kind": "study_plot",
+ "site": "Goat's Eye Study Plot",
+ "site_slug": "goats-eye-plot",
+ "chart_format": "propagation_labs",
+ "date": "2026-01-12",
+ "time": "14:28",
+ "observer": "Lisa Paulson",
+ "lat": 51.089,
+ "lon": -115.7504,
+ "elevation_m": 2282,
+ "elevation_raw": "2282m",
+ "aspect": null,
+ "slope_deg": null,
+ "air_temp_c": -2.0,
+ "sky": "Overcast",
+ "precip": "Snow 1cm/hr",
+ "wind": "Moderate,SW",
+ "blowing_snow": null,
+ "hs_cm": 149,
+ "surface_grain": "PP",
+ "foot_pen_cm": null,
+ "ski_pen_cm": null,
+ "header_other": {
+  "profile_name": "Goats Eye",
+  "org": null,
+  "surface_grain_raw": "Graupel 0.5-1.0mm"
+ },
+ "layers": [
+  {
+   "bottom_cm": 0,
+   "top_cm": 15,
+   "depth_top_cm": 134,
+   "grain": "DH",
+   "grain2": null,
+   "grain_raw": "A-like glyph with bar",
+   "size_mm": [
+    2.0,
+    4.0
+   ],
+   "hardness": "1F+",
+   "hardness_idx": 3.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": true,
+   "comment": "glyph is a triangle with crossbar; read as DH, could be FCxr/DHcp"
+  },
+  {
+   "bottom_cm": 15,
+   "top_cm": 33,
+   "depth_top_cm": 116,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    1.0,
+    2.0
+   ],
+   "hardness": "P+",
+   "hardness_idx": 4.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 33,
+   "top_cm": 37,
+   "depth_top_cm": 112,
+   "grain": "MFcr",
+   "grain2": null,
+   "grain_raw": "◎○",
+   "size_mm": null,
+   "hardness": "K",
+   "hardness_idx": 5,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "Named \"Nov 13\""
+  },
+  {
+   "bottom_cm": 37,
+   "top_cm": 41,
+   "depth_top_cm": 108,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    2.0,
+    2.0
+   ],
+   "hardness": "1F-",
+   "hardness_idx": 2.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 41,
+   "top_cm": 50,
+   "depth_top_cm": 99,
+   "grain": "FCxr",
+   "grain2": null,
+   "grain_raw": "⌂",
+   "size_mm": [
+    0.5,
+    1.0
+   ],
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 50,
+   "top_cm": 99,
+   "depth_top_cm": 50,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.5,
+    1.0
+   ],
+   "hardness": "P+",
+   "hardness_idx": 4.5,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "K- at base (50 cm) sloping to P+ at top (99 cm)"
+  },
+  {
+   "bottom_cm": 99,
+   "top_cm": 102,
+   "depth_top_cm": 47,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.5,
+    1.0
+   ],
+   "hardness": "1F-",
+   "hardness_idx": 2.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 102,
+   "top_cm": 114,
+   "depth_top_cm": 35,
+   "grain": "RG",
+   "grain2": null,
+   "grain_raw": "●",
+   "size_mm": [
+    0.5,
+    0.5
+   ],
+   "hardness": "1F",
+   "hardness_idx": 3,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 114,
+   "top_cm": 115,
+   "depth_top_cm": 34,
+   "grain": "SH",
+   "grain2": null,
+   "grain_raw": "V",
+   "size_mm": [
+    4.0,
+    6.0
+   ],
+   "hardness": "F-",
+   "hardness_idx": 0.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": "Named \"Jan 3\""
+  },
+  {
+   "bottom_cm": 115,
+   "top_cm": 136,
+   "depth_top_cm": 13,
+   "grain": "DF",
+   "grain2": null,
+   "grain_raw": "/",
+   "size_mm": [
+    0.5,
+    0.5
+   ],
+   "hardness": "4F+",
+   "hardness_idx": 2.33,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  },
+  {
+   "bottom_cm": 136,
+   "top_cm": 139,
+   "depth_top_cm": 10,
+   "grain": "PPgp",
+   "grain2": null,
+   "grain_raw": "*",
+   "size_mm": [
+    1.0,
+    2.0
+   ],
+   "hardness": "F-",
+   "hardness_idx": 0.67,
+   "moisture": null,
+   "density": null,
+   "uncertain": true,
+   "comment": "asterisk glyph read as graupel (header: Graupel 0.5-1.0mm)"
+  },
+  {
+   "bottom_cm": 139,
+   "top_cm": 149,
+   "depth_top_cm": 0,
+   "grain": "PP",
+   "grain2": null,
+   "grain_raw": "+",
+   "size_mm": [
+    0.5,
+    0.5
+   ],
+   "hardness": "F",
+   "hardness_idx": 1,
+   "moisture": null,
+   "density": null,
+   "uncertain": false,
+   "comment": null
+  }
+ ],
+ "temps": [
+  {
+   "h_cm": 0,
+   "t_c": -0.3
+  },
+  {
+   "h_cm": 9,
+   "t_c": -1.0
+  },
+  {
+   "h_cm": 19,
+   "t_c": -1.0
+  },
+  {
+   "h_cm": 29,
+   "t_c": -1.4
+  },
+  {
+   "h_cm": 39,
+   "t_c": -2.0
+  },
+  {
+   "h_cm": 49,
+   "t_c": -3.0
+  },
+  {
+   "h_cm": 59,
+   "t_c": -4.0
+  },
+  {
+   "h_cm": 69,
+   "t_c": -4.0
+  },
+  {
+   "h_cm": 79,
+   "t_c": -5.0
+  },
+  {
+   "h_cm": 89,
+   "t_c": -5.0
+  },
+  {
+   "h_cm": 99,
+   "t_c": -5.0
+  },
+  {
+   "h_cm": 109,
+   "t_c": -5.0
+  },
+  {
+   "h_cm": 119,
+   "t_c": -6.0
+  },
+  {
+   "h_cm": 129,
+   "t_c": -6.0
+  },
+  {
+   "h_cm": 139,
+   "t_c": -5.0
+  },
+  {
+   "h_cm": 149,
+   "t_c": -4.0
+  }
+ ],
+ "tests": [
+  {
+   "raw": "CT13SP",
+   "type": "CT",
+   "score": "CT13",
+   "taps": 13,
+   "propagation": null,
+   "fracture": "SP",
+   "height_cm": 114,
+   "depth_cm": 35,
+   "layer_grain": "SH",
+   "count": 1,
+   "comment": "Label \"CT13SP on V 4.0-6.0 Jan 3\"; notes also say \"CT13 and CT18\""
+  },
+  {
+   "raw": "ECTX",
+   "type": "ECT",
+   "score": "ECTX",
+   "taps": null,
+   "propagation": null,
+   "fracture": null,
+   "height_cm": null,
+   "depth_cm": null,
+   "layer_grain": null,
+   "count": 1,
+   "comment": "ECTX label at top of chart (no result); height not given"
+  }
+ ],
+ "named_layers": [
+  {
+   "name": "Nov 13",
+   "height_cm": 33,
+   "depth_cm": 116,
+   "grain": "MFcr"
+  },
+  {
+   "name": "Jan 3",
+   "height_cm": 114,
+   "depth_cm": 35,
+   "grain": "SH"
+  }
+ ],
+ "notes": "CT13SP: CT13 and CT18,",
+ "summary": "HS 149 cm: faceted base 0-50 cm with Nov 13 crust at 33-37 cm (K), thick RG 50-114 cm hardening to K-/P+ at 50-99 cm, Jan 3 SH 4-6 mm at 114-115 cm failing CT13 SP, DF 115-136 cm and graupel/PP surface; temps -0.3 C at ground to -6 C at 120 cm",
+ "confidence": "medium",
+ "reading_issues": "Linear axis. Basal glyph (0-15 cm) not a standard symbol (triangle with crossbar), recorded DH uncertain. Surface asterisk glyph read as graupel. Notes text \"CT13 and CT18\" read as the second tap sequence; only CT13 SP has a height. Temperature dots every 10 cm from the surface (heights 0, 9, 19, ... 149). Foot/ski pen blank. Aspect/slope blank."
+}

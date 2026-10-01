@@ -1,0 +1,51 @@
+{
+  "source_files": ["profiles/2023-2024/Other Profiles/240321 Mount Field.pdf"],
+  "season": "2023-24",
+  "kind": "test_profile",
+  "site": "Mount Field",
+  "site_slug": "mt-field",
+  "chart_format": "snowpilot",
+  "date": "2024-03-21",
+  "time": "12:00",
+  "observer": "Banff Visitor Safety",
+  "lat": null,
+  "lon": null,
+  "elevation_m": 2100,
+  "elevation_raw": "2100 m",
+  "aspect": "NE",
+  "slope_deg": 29,
+  "air_temp_c": null,
+  "sky": "OVC",
+  "precip": "S1",
+  "wind": null,
+  "blowing_snow": null,
+  "hs_cm": 175,
+  "surface_grain": "PP",
+  "foot_pen_cm": 40,
+  "ski_pen_cm": 15,
+  "header_other": {"PF": "40", "PS": "15", "surface_form": "+ (PP) 2 mm, drawn in the fixed top row above the HS line (zero thickness)", "location": "Banff, Yoho and Kootenay, AB", "wind_loading": null, "stability": null, "specifics": null},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 40, "depth_top_cm": 135, "grain": "DH", "grain2": null, "grain_raw": "∧", "size_mm": [2.0, 4.0], "hardness": "1F+", "hardness_idx": 3.33, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 40, "top_cm": 70, "depth_top_cm": 105, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [2.0, 2.0], "hardness": "1F-", "hardness_idx": 2.67, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 70, "top_cm": 80, "depth_top_cm": 95, "grain": "MF", "grain2": null, "grain_raw": "◎◎ (two linked circles)", "size_mm": [1.0, 5.0], "hardness": "P-", "hardness_idx": 3.67, "moisture": null, "density": null, "uncertain": false, "comment": "read as MFcr (hard layer); layer note '80-70cm: Problematic layer'"},
+    {"bottom_cm": 80, "top_cm": 97, "depth_top_cm": 78, "grain": "FCxr", "grain2": null, "grain_raw": "square with rounded top (FCxr glyph)", "size_mm": [0.5, 0.5], "hardness": "1F-", "hardness_idx": 2.67, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 97, "top_cm": 100, "depth_top_cm": 75, "grain": "FCxr", "grain2": null, "grain_raw": "square with rounded top (FCxr glyph)", "size_mm": [0.5, 0.5], "hardness": "P+", "hardness_idx": 4.33, "moisture": null, "density": null, "uncertain": false, "comment": "thin 3 cm hard layer, bar protrudes to P+ (4.33); table row stretched with leader lines"},
+    {"bottom_cm": 100, "top_cm": 117, "depth_top_cm": 58, "grain": "FCxr", "grain2": null, "grain_raw": "square with rounded top (FCxr glyph)", "size_mm": [0.5, 0.5], "hardness": "P-", "hardness_idx": 3.67, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 117, "top_cm": 150, "depth_top_cm": 25, "grain": "FCxr", "grain2": null, "grain_raw": "square with rounded top (FCxr glyph)", "size_mm": [0.5, 0.5], "hardness": "1F+", "hardness_idx": 3.33, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 150, "top_cm": 160, "depth_top_cm": 15, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": [0.3, 1.0], "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 160, "top_cm": 162, "depth_top_cm": 13, "grain": "MF", "grain2": null, "grain_raw": "◎◎ (two linked circles)", "size_mm": [2.0, 5.0], "hardness": "K", "hardness_idx": 5.0, "moisture": null, "density": null, "uncertain": false, "comment": "thin 2 cm very hard crust, read as MFcr; table row stretched with leader lines; CT2 SC at its base (160 cm)"},
+    {"bottom_cm": 162, "top_cm": 175, "depth_top_cm": 0, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": [1.0, 2.0], "hardness": "F", "hardness_idx": 1.0, "moisture": null, "density": null, "uncertain": false, "comment": null}
+  ],
+  "temps": [],
+  "tests": [
+    {"raw": "CT2, SC @160cm", "type": "CT", "score": "CT2", "taps": 2, "propagation": null, "fracture": "SC", "height_cm": 160, "depth_cm": 15, "layer_grain": null, "count": 1},
+    {"raw": "CT22, SC @70cm", "type": "CT", "score": "CT22", "taps": 22, "propagation": null, "fracture": "SC", "height_cm": 70, "depth_cm": 105, "layer_grain": "MF", "count": 1}
+  ],
+  "named_layers": [
+    {"name": "Problematic layer (80-70cm)", "height_cm": 80, "depth_cm": 95, "grain": "MF"}
+  ],
+  "notes": "Chart 'Notes:' blank. Layer Notes: '80-70cm: Problematic layer'.",
+  "summary": "HS 175 cm: basal DH 0-40 (1F+) under FC 40-70, a P- MFcr 70-80 (noted problematic layer, CT22 SC at 70), 0.5 mm FCxr 80-150 with thin P+ layer at 97-100, DF 150-175 containing a 2 cm K MFcr at 160-162 (CT2 SC at 160), PP on the surface; PF 40, PS 15",
+  "confidence": "high",
+  "reading_issues": "Hardness from bar outer edges against the I-K-P-1F-4F-F axis; boundaries from bar steps and table lines (162, 160, 150, 117, 100, 97, 80, 70, 40 cm). The two thin layers (97-100 and 160-162) have stretched table rows with leader lines. The FCxr glyph (square with rounded top and a bar) was read the same way as in other charts. The ◎◎ glyphs are read as MFcr (stored MF). Test arrows: CT2 at 160 cm is the base of the 2 cm K crust and the top of the 150-160 DF layer, so layer_grain is null; CT22 at 70 cm is the base of the 70-80 MFcr layer, which is the noted problematic layer, so layer_grain is MF. No red weak-layer line was found. Moisture and density columns blank; coordinates, wind, air temperature, wind loading, stability and specifics blank. PDF wraps one 994x840 SnowPilot image. No temperature profile."
+}

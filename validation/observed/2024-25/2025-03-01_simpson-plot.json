@@ -1,0 +1,317 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Simpson/01032025 Simpson Study Full Profile.jpg"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Simpson Study Plot",
+  "site_slug": "simpson-plot",
+  "chart_format": "snowpilot",
+  "date": "2025-03-01",
+  "time": "11:30",
+  "observer": "Banff Visitor Safety",
+  "lat": 50.98835,
+  "lon": -115.98867,
+  "elevation_m": 2100,
+  "elevation_raw": "2100 m",
+  "aspect": "SE",
+  "slope_deg": 0,
+  "air_temp_c": 2.5,
+  "sky": "FEW",
+  "precip": "NO",
+  "wind": "S Light Breeze",
+  "blowing_snow": null,
+  "hs_cm": 117,
+  "surface_grain": "IF",
+  "foot_pen_cm": 60,
+  "ski_pen_cm": 25,
+  "header_other": {
+    "PF": "60",
+    "PS": "25",
+    "HS": "117",
+    "wind_loading": null,
+    "coord_raw": "50.98835N, -115.98867W",
+    "slope_raw": "0°",
+    "specifics": null,
+    "layer_notes": "87-69cm: sintering, aggregrations; 87-69cm: Problematic layer; 43.5-28cm: sintering, aggregates; 28-20cm: sintering, aggregates",
+    "chart_title": "Simpson Study Full",
+    "surface_form": "single dash (ice formation, IF) 0.3 mm in the fixed top row above the HS line (zero thickness); moisture blank",
+    "file_format_note": "JPG, SnowPilot 994x840 export; header date printed 01/03/2025 (DD/MM/YYYY) = 1 March 2025"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 20,
+      "depth_top_cm": 97,
+      "grain": "DH",
+      "grain2": null,
+      "grain_raw": "∧",
+      "size_mm": [
+        2.0,
+        8.0
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 20,
+      "top_cm": 28,
+      "depth_top_cm": 89,
+      "grain": "DH",
+      "grain2": null,
+      "grain_raw": "∧",
+      "size_mm": [
+        2.0,
+        8.0
+      ],
+      "hardness": "P-",
+      "hardness_idx": 3.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "layer note \"28-20cm: sintering, aggregates\""
+    },
+    {
+      "bottom_cm": 28,
+      "top_cm": 43.5,
+      "depth_top_cm": 73.5,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.5,
+        10.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "moisture cell blank; layer note \"43.5-28cm: sintering, aggregates\""
+    },
+    {
+      "bottom_cm": 43.5,
+      "top_cm": 44,
+      "depth_top_cm": 73,
+      "grain": "IF",
+      "grain2": null,
+      "grain_raw": "= (double bar glyph)",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "P",
+      "hardness_idx": 4,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "0.5 cm hard crust; double-bar glyph read as an ice formation (rain-crust style symbol, IFrc); sub-type not stated on the chart"
+    },
+    {
+      "bottom_cm": 44,
+      "top_cm": 55,
+      "depth_top_cm": 62,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        3.0
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 55,
+      "top_cm": 69,
+      "depth_top_cm": 48,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        4.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 69,
+      "top_cm": 87,
+      "depth_top_cm": 30,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "⊟ (square with rounded top and centre line)",
+      "size_mm": [
+        1.5,
+        4.0
+      ],
+      "hardness": "F+",
+      "hardness_idx": 1.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "layer notes \"87-69cm: sintering, aggregrations\" (sic) and \"87-69cm: Problematic layer\" (red flag line at its top, 87 cm); the CT9 SC \"JAN 30 FC 1.5\" failed at 87 cm, its top."
+    },
+    {
+      "bottom_cm": 87,
+      "top_cm": 96,
+      "depth_top_cm": 21,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "⊟ (square with rounded top and centre line)",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "4F-",
+      "hardness_idx": 1.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 96,
+      "top_cm": 109,
+      "depth_top_cm": 8,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "· (tiny filled dot, small rounded grains, RGsr)",
+      "size_mm": [
+        0.3,
+        0.3
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "dot glyph is much smaller than the other symbols; read as small rounded grains (RGsr)"
+    },
+    {
+      "bottom_cm": 109,
+      "top_cm": 116,
+      "depth_top_cm": 1,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "4F+",
+      "hardness_idx": 2.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 116,
+      "top_cm": 117,
+      "depth_top_cm": 0,
+      "grain": "IF",
+      "grain2": null,
+      "grain_raw": "− (single dash glyph)",
+      "size_mm": [
+        0.3,
+        0.3
+      ],
+      "hardness": "K",
+      "hardness_idx": 5,
+      "moisture": "M",
+      "density": null,
+      "uncertain": false,
+      "comment": "1 cm hard moist surface crust (single-dash ice-formation glyph, K); surface form row above shows the same glyph"
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 10,
+      "t_c": -0.8
+    },
+    {
+      "h_cm": 20,
+      "t_c": -1.2
+    },
+    {
+      "h_cm": 30,
+      "t_c": -1.3
+    },
+    {
+      "h_cm": 40,
+      "t_c": -1.9
+    },
+    {
+      "h_cm": 50,
+      "t_c": -2.1
+    },
+    {
+      "h_cm": 60,
+      "t_c": -2.5
+    },
+    {
+      "h_cm": 70,
+      "t_c": -2.7
+    },
+    {
+      "h_cm": 80,
+      "t_c": -3.3
+    },
+    {
+      "h_cm": 90,
+      "t_c": -3.9
+    },
+    {
+      "h_cm": 107,
+      "t_c": -5.2
+    }
+  ],
+  "tests": [
+    {
+      "raw": "CT9, SC @87cm JAN 30 FC 1.5",
+      "type": "CT",
+      "score": "CT9",
+      "taps": 9,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 87,
+      "depth_cm": 30,
+      "layer_grain": "FC",
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "JAN 30 FC",
+      "height_cm": 87,
+      "depth_cm": 30,
+      "grain": "FC"
+    },
+    {
+      "name": "Problematic layer (sintering, aggregations)",
+      "height_cm": 78,
+      "bottom_cm": 69,
+      "top_cm": 87,
+      "depth_cm": 39,
+      "grain": "FCxr"
+    }
+  ],
+  "notes": "first visit this season- landed with helicopter- low HS values to road. Layer Notes (header): '87-69cm: sintering, aggregrations' (sic); '87-69cm: Problematic layer'; '43.5-28cm: sintering, aggregates'; '28-20cm: sintering, aggregates'. Stability tests column: 'CT9, SC @87cm JAN 30 FC 1.5'. Chart title 'Simpson Study Full'.",
+  "summary": "117 cm HS: DH 0-28 cm (2-8 mm; 1F+ then P-) under FC 28-43.5 cm (1F, 1.5-10 mm), a 0.5 cm hard IF crust at 43.5-44 cm (P), FC 44-69 cm (1F+/1F), a 18 cm FCxr 69-87 cm flagged problematic layer (F+) with CT9 SC at its top (87 cm, \"JAN 30 FC 1.5\"), FCxr 87-96, RGsr 96-109, DF 109-116 and a 1 cm moist K crust at the surface; warm spring snowpack (air +2.5, -0.8 at 10 cm to -5.2 at 107 cm); PF 60, PS 25",
+  "confidence": "medium",
+  "reading_issues": "Date: the header prints 01/03/2025 (DD/MM/YYYY) so the pit is 1 March 2025, not 3 Jan (air temperature +2.5 degC, HS 117 cm and the \"JAN 30 FC\" test comment also fit March). Hardness bar edges, layer boundaries and temperature dots measured from native pixels against the axis ticks; measured boundaries sit about 0.15 cm above whole numbers, so they are rounded to 20, 28, 43.5, 44, 55, 69, 87, 96, 109, 116 and 117 cm (43.5 is confirmed by the layer note \"43.5-28cm\"). Table rows for the thin top layer and the 43.5-44 cm crust are stretched with connector lines. Glyphs: single-dash (IF) for the 116-117 cm crust and the surface row, double-bar \"=\" read as an ice formation (rain-crust style) for the 43.5-44 cm layer, tiny dot read as RGsr for 96-109 cm, rounded-top squares with centre line read as FCxr for 69-96 cm; sub-types of IF/RG are not certain. No temperature points at the ground or the surface (first dot at 107 cm, i.e. 10 cm depth). The 28-43.5 cm layer has no moisture entry. The CT9 SC at 87 cm sits at the top of the 69-87 cm problematic layer; layer_grain recorded as FC."
+}

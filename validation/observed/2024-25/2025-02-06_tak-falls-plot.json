@@ -1,0 +1,285 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Takkakaw Falls study plot/2025-02-06 Takakaw Falls Study full profile.jpg"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Takakkaw Falls Study Plot",
+  "site_slug": "tak-falls-plot",
+  "chart_format": "snowpilot",
+  "date": "2025-02-06",
+  "time": "12:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.49835,
+  "lon": -116.49632,
+  "elevation_m": null,
+  "elevation_raw": null,
+  "aspect": null,
+  "slope_deg": null,
+  "air_temp_c": -11,
+  "sky": "CLR",
+  "precip": "NO",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 145,
+  "surface_grain": null,
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {
+    "HS": null,
+    "HS_note": "no HS field is printed in the header; 145 cm is the top label of the height axis",
+    "wind_loading": "previous",
+    "coord_raw": "51.49835N, -116.49632W",
+    "region": "Yoho, BC",
+    "specifics": null,
+    "layer_notes": "98-85cm: Problematic layer",
+    "chart_title": "Takakaw Falls Study",
+    "surface_form": "blank (fixed top row above the HS line is empty)",
+    "file_format_note": "JPG, SnowPilot 994x840 export; header date printed 06/02/2025 (DD/MM/YYYY)"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 19,
+      "depth_top_cm": 126,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "⊟ (square with rounded top and centre line)",
+      "size_mm": [
+        1.5,
+        2.0
+      ],
+      "hardness": "P+",
+      "hardness_idx": 4.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 19,
+      "top_cm": 20,
+      "depth_top_cm": 125,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.5,
+        2.5
+      ],
+      "hardness": "P-",
+      "hardness_idx": 3.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "1 cm layer; its table row is stretched with connector lines"
+    },
+    {
+      "bottom_cm": 20,
+      "top_cm": 50,
+      "depth_top_cm": 95,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "P",
+      "hardness_idx": 4,
+      "moisture": "D",
+      "density": null,
+      "uncertain": true,
+      "comment": "table row has only the moisture entry (D): grain form and size are blank on the chart; 30 cm layer drawn at a uniform P hardness"
+    },
+    {
+      "bottom_cm": 50,
+      "top_cm": 85,
+      "depth_top_cm": 60,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "⊟ (square with rounded top and centre line)",
+      "size_mm": [
+        1.5,
+        2.0
+      ],
+      "hardness": "P→P-",
+      "hardness_idx": 3.83,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "Hardness gradient in chart: P at the base (50 cm) softening linearly to P- at the top (85 cm); hardness_idx is the mean (3.83).",
+      "hardness_bottom": "P",
+      "hardness_bottom_idx": 4.0,
+      "hardness_top": "P-",
+      "hardness_top_idx": 3.67
+    },
+    {
+      "bottom_cm": 85,
+      "top_cm": 98,
+      "depth_top_cm": 47,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        1.5,
+        1.5
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "layer note \"98-85cm: Problematic layer\""
+    },
+    {
+      "bottom_cm": 98,
+      "top_cm": 107,
+      "depth_top_cm": 38,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "⊟ (square with rounded top and centre line)",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 107,
+      "top_cm": 128,
+      "depth_top_cm": 17,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.5,
+        1.5
+      ],
+      "hardness": "F+",
+      "hardness_idx": 1.33,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "CT14 PC (120 cm) and CT16 PC (117 cm) failed inside this layer"
+    },
+    {
+      "bottom_cm": 128,
+      "top_cm": 145,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": "D",
+      "density": null,
+      "uncertain": false,
+      "comment": "surface layer; the fixed top (surface-form) row above the HS line is blank"
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 0,
+      "t_c": -0.5
+    },
+    {
+      "h_cm": 10,
+      "t_c": -1.0
+    },
+    {
+      "h_cm": 20,
+      "t_c": -1.5
+    },
+    {
+      "h_cm": 30,
+      "t_c": -2.0
+    },
+    {
+      "h_cm": 40,
+      "t_c": -3.0
+    },
+    {
+      "h_cm": 50,
+      "t_c": -3.5
+    },
+    {
+      "h_cm": 60,
+      "t_c": -4.0
+    },
+    {
+      "h_cm": 70,
+      "t_c": -5.0
+    },
+    {
+      "h_cm": 80,
+      "t_c": -5.6
+    },
+    {
+      "h_cm": 90,
+      "t_c": -6.5
+    },
+    {
+      "h_cm": 100,
+      "t_c": -8.0
+    },
+    {
+      "h_cm": 110,
+      "t_c": -10.5
+    },
+    {
+      "h_cm": 120,
+      "t_c": -13.0
+    },
+    {
+      "h_cm": 135,
+      "t_c": -16.0
+    }
+  ],
+  "tests": [
+    {
+      "raw": "CT14, PC @120cm",
+      "type": "CT",
+      "score": "CT14",
+      "taps": 14,
+      "propagation": null,
+      "fracture": "PC",
+      "height_cm": 120,
+      "depth_cm": 25,
+      "layer_grain": "DF",
+      "count": 1
+    },
+    {
+      "raw": "CT16, PC @117cm",
+      "type": "CT",
+      "score": "CT16",
+      "taps": 16,
+      "propagation": null,
+      "fracture": "PC",
+      "height_cm": 117,
+      "depth_cm": 28,
+      "layer_grain": "DF",
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Problematic layer",
+      "height_cm": 91.5,
+      "bottom_cm": 85,
+      "top_cm": 98,
+      "depth_cm": 53.5,
+      "grain": "FC"
+    }
+  ],
+  "notes": "two-week scheduled full profile at study plot. Layer Notes (header): '98-85cm: Problematic layer'. Stability tests column: 'CT14, PC @120cm'; 'CT16, PC @117cm'. Wind Loading: previous. Elevation, aspect, slope angle, stability, HS, PF and PS not printed.",
+  "summary": "145 cm HS, cold (-11 air, -16 at 135 cm) pack: 19 cm FCxr (P+, 1.5-2 mm), a 1 cm FC layer, a 30 cm hard layer with blank grain form (P), 35 cm FCxr (P easing to P-), a 13 cm flagged problematic layer 85-98 cm (FC 1.5 mm, 1F-), FCxr 98-107 (1F) and 38 cm of DF storm snow (F+/F) with CT14 PC at 120 cm and CT16 PC at 117 cm inside the 107-128 cm DF layer",
+  "confidence": "high",
+  "reading_issues": "HS is not printed in the header; hs_cm 145 comes from the top label of the height axis (bar tops at 144.9 cm). Hardness bar edges, boundaries and temperature dots measured from native pixels against the axis ticks (boundaries at 19.0, 20.0, 50.0, 85.1, 98.1, 107.1 and 128.1 cm, rounded to integers). The 50-85 cm layer has a sloped bar edge (P at 50 cm to P- at 85 cm): hardness \"P→P-\" with mean idx 3.83 and explicit bottom/top values. The 20-50 cm layer has no grain form or size on the chart (only moisture D), so grain is null and flagged uncertain. Glyph \"square with rounded top and centre line\" read as FCxr in four layers. The 19-20 cm layer table row is stretched with connector lines. No elevation, aspect, slope, PF or PS on the chart (elevation_m null). The top temperature dot is at 135 cm (10 cm below the surface), none at the surface. The 98-85 cm \"Problematic layer\" note has no red flag line drawn on the bars. Chart title reads \"Takakaw Falls Study\" (site name here uses the standard Takakkaw spelling)."
+}

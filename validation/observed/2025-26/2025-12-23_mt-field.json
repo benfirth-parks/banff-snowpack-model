@@ -1,0 +1,281 @@
+{
+  "source_files": [
+    "profiles/2025-2026/Test profiles/2025-12-23 Mt Field.pdf"
+  ],
+  "season": "2025-26",
+  "kind": "test_profile",
+  "site": "Mt Field",
+  "site_slug": "mt-field",
+  "chart_format": "propagation_labs",
+  "date": "2025-12-23",
+  "time": "13:24",
+  "observer": "william Lawson",
+  "lat": 51.4418,
+  "lon": -116.4589,
+  "elevation_m": 2101,
+  "elevation_raw": "6892ft",
+  "aspect": "NE",
+  "slope_deg": 31,
+  "air_temp_c": null,
+  "sky": "Overcast",
+  "precip": "Snow <0.5cm/hr",
+  "wind": "Light,NW",
+  "blowing_snow": "No Transport",
+  "hs_cm": 255,
+  "surface_grain": "PP",
+  "foot_pen_cm": 60,
+  "ski_pen_cm": 30,
+  "header_other": {
+    "profile_name": "mt field",
+    "surface_grain_raw": "Graupel",
+    "org": null
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 55,
+      "depth_top_cm": 200,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "P+",
+      "hardness_idx": 4.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "No grain form entered; bar identical in hardness to the layer above"
+    },
+    {
+      "bottom_cm": 55,
+      "top_cm": 74,
+      "depth_top_cm": 181,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        0.3,
+        0.3
+      ],
+      "hardness": "P+",
+      "hardness_idx": 4.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 74,
+      "top_cm": 105,
+      "depth_top_cm": 150,
+      "grain": "RGxf",
+      "grain2": null,
+      "grain_raw": "U-shaped box with filled dot (flat top, round bottom)",
+      "size_mm": [
+        0.3,
+        0.3
+      ],
+      "hardness": "P",
+      "hardness_idx": 4.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 105,
+      "top_cm": 133,
+      "depth_top_cm": 122,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "●",
+      "size_mm": [
+        0.3,
+        0.5
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 133,
+      "top_cm": 140,
+      "depth_top_cm": 115,
+      "grain": null,
+      "grain2": null,
+      "grain_raw": null,
+      "size_mm": null,
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Thin layer; no grain form entered (table row blank)"
+    },
+    {
+      "bottom_cm": 140,
+      "top_cm": 155,
+      "depth_top_cm": 100,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "/",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "P-",
+      "hardness_idx": 3.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 155,
+      "top_cm": 170,
+      "depth_top_cm": 85,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "/",
+      "size_mm": null,
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 170,
+      "top_cm": 175,
+      "depth_top_cm": 80,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "/",
+      "size_mm": null,
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 175,
+      "top_cm": 210,
+      "depth_top_cm": 45,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "/",
+      "size_mm": null,
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Hardness tapers from 1F- (2.67) at top (210 cm) to 1F+ (3.33) at base (175 cm); idx is layer mean. CT18 RP failure at 190 cm and CT12 at its top (210 cm)"
+    },
+    {
+      "bottom_cm": 210,
+      "top_cm": 230,
+      "depth_top_cm": 25,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "/",
+      "size_mm": null,
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 230,
+      "top_cm": 255,
+      "depth_top_cm": 0,
+      "grain": "PP",
+      "grain2": null,
+      "grain_raw": "∗ (asterisk)",
+      "size_mm": null,
+      "hardness": "F-",
+      "hardness_idx": 0.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Surface layer; header surface grain is Graupel"
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 90,
+      "t_c": -2.0
+    },
+    {
+      "h_cm": 110,
+      "t_c": -2.5
+    },
+    {
+      "h_cm": 130,
+      "t_c": -3.6
+    },
+    {
+      "h_cm": 149,
+      "t_c": -4.0
+    },
+    {
+      "h_cm": 170,
+      "t_c": -5.0
+    },
+    {
+      "h_cm": 190,
+      "t_c": -5.5
+    },
+    {
+      "h_cm": 210,
+      "t_c": -7.1
+    },
+    {
+      "h_cm": 229,
+      "t_c": -8.0
+    },
+    {
+      "h_cm": 255,
+      "t_c": -8.5
+    }
+  ],
+  "tests": [
+    {
+      "raw": "CT18RP",
+      "type": "CT",
+      "score": "CT18",
+      "taps": 18,
+      "propagation": null,
+      "fracture": "RP",
+      "height_cm": 190,
+      "depth_cm": 65,
+      "layer_grain": null,
+      "count": 1
+    },
+    {
+      "raw": "CT12",
+      "type": "CT",
+      "score": "CT12",
+      "taps": 12,
+      "propagation": null,
+      "fracture": null,
+      "height_cm": 210,
+      "depth_cm": 45,
+      "layer_grain": null,
+      "count": 1
+    }
+  ],
+  "named_layers": [],
+  "notes": null,
+  "summary": "Deep HS 255 cm NE pit at 2101 m: very hard P/P+ lower pack (0-105 cm, FC at 55-74 cm and RGxf 74-105 cm), 1F+ RG 105-133 cm, then DF layers with a P- band at 140-155 cm, 1F DF 175-210 cm and soft F/F- DF-PP surface (210-255 cm); CT12 at 210 cm and CT18 RP at 190 cm; temperature profile -8.5 C at surface to -2.0 C at 90 cm",
+  "confidence": "high",
+  "reading_issues": "Height-axis PDF chart, 0 at ground, HS 255 matches header. Elevation given in feet (6892 ft = 2101 m). Notes blank; air temperature blank. CT12 label has no fracture character; neither label gives a failure-layer grain. Table rows 4-7 use leader lines to the true layer boundaries (170, 155, 140, 133 cm) that were taken from the chart axis. Several rows have no grain size. Top-row glyph '*' kept as PP (header surface grain: Graupel). Temperature dots read from the chart (two dots at 210 and 190 cm are split by the yellow test lines and were merged). Hardness axis uniform in this chart."
+}

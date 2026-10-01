@@ -1,0 +1,50 @@
+{
+  "source_files": ["profiles/2023-2024/Other Profiles/2024-02-12 Test pit at Pipestone Bowl.pdf", "profiles/2023-2024/Other Profiles/Pipestone Bowl 12Feb24.pdf"],
+  "season": "2023-24",
+  "kind": "test_profile",
+  "site": "Pipestone Bowl",
+  "site_slug": "pipestone-bowl",
+  "chart_format": "propagation_labs",
+  "date": "2024-02-12",
+  "time": "12:30",
+  "observer": "Conrad Janzen",
+  "lat": 51.4739,
+  "lon": -116.1562,
+  "elevation_m": 2275,
+  "elevation_raw": "2275 m (SnowPilot chart; the Propagation Labs header has 'Elevation: ?')",
+  "aspect": "N",
+  "slope_deg": 30,
+  "air_temp_c": null,
+  "sky": "Broken",
+  "precip": "No Precipitation",
+  "wind": "Calm,SW",
+  "blowing_snow": "No Transport",
+  "hs_cm": 123,
+  "surface_grain": "PP",
+  "foot_pen_cm": 80,
+  "ski_pen_cm": 20,
+  "header_other": {"profile_name": "Test pit at Pipestone Bowl", "surface_grain_raw": "Precipitation Particles", "org": null, "snowpilot_chart_header": {"title": "Pipestone Bowl", "org": "Banff Visitor Safety", "date_time": "12/02/2024 - 13:00", "elevation": "2275 m", "aspect": "N", "slope": "20°", "coord_raw": "51.47131N, -116.14984W", "sky_cover": "OVC", "precipitation": "NO", "wind": "NE Light Breeze", "HS": "123", "PF": "30", "PS": null, "layer_notes": "104-103cm: Problematic layer", "air_temperature": null, "wind_loading": null, "specifics": null}, "same_pit_note": "Propagation Labs PDF (primary header) and SnowPilot PDF describe the same pit: identical HS 123 cm, hardness bars and boundaries, and the same two ECTN tests; header metadata and some grain glyphs differ (see reading_issues)"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 40, "depth_top_cm": 83, "grain": "FC", "grain2": "DH", "grain_raw": "PL □(∧); SP ∧", "size_mm": null, "hardness": "1F-", "hardness_idx": 2.67, "moisture": null, "density": null, "uncertain": true, "comment": "Propagation Labs glyph is square with secondary caret (FC primary, DH secondary); the SnowPilot chart shows only ∧ (DH) for this layer. No sizes on either chart"},
+    {"bottom_cm": 40, "top_cm": 70, "depth_top_cm": 53, "grain": "FC", "grain2": null, "grain_raw": "PL □; SP □(∧)", "size_mm": null, "hardness": "1F", "hardness_idx": 3.0, "moisture": null, "density": null, "uncertain": true, "comment": "Propagation Labs glyph is □ (FC); the SnowPilot chart shows □(∧) (FC with secondary DH). No sizes"},
+    {"bottom_cm": 70, "top_cm": 81, "depth_top_cm": 42, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": null, "hardness": "4F+", "hardness_idx": 2.33, "moisture": null, "density": null, "uncertain": false, "comment": "same glyph on both charts; the 'Dec 31' ECTN19 interface is at its top (81 cm)"},
+    {"bottom_cm": 81, "top_cm": 98, "depth_top_cm": 25, "grain": "RGxf", "grain2": null, "grain_raw": "U-shaped box with filled dot (flat top, round bottom), Propagation Labs", "size_mm": null, "hardness": "1F+", "hardness_idx": 3.33, "moisture": null, "density": null, "uncertain": false, "comment": "glyph only on the Propagation Labs chart; the SnowPilot form column is blank for this layer; circle-based mixed glyph read as RGxf"},
+    {"bottom_cm": 98, "top_cm": 103, "depth_top_cm": 20, "grain": "FC", "grain2": null, "grain_raw": "□ (Propagation Labs)", "size_mm": null, "hardness": "4F", "hardness_idx": 2.0, "moisture": null, "density": null, "uncertain": false, "comment": "glyph only on the Propagation Labs chart; SnowPilot form column blank for this layer"},
+    {"bottom_cm": 103, "top_cm": 104, "depth_top_cm": 19, "grain": "MFcr", "grain2": null, "grain_raw": "PL ▬ (filled bar, IF) named 'Feb 2 crust'; SP ◎◎ (two linked circles, MFcr) with comment 'Feb 3 crust'", "size_mm": null, "hardness": "K", "hardness_idx": 5.0, "moisture": null, "density": null, "uncertain": true, "comment": "1 cm very hard crust; the two charts disagree on type (PL ice-formation bar, SP melt-freeze crust glyph) and on the date (Feb 2 vs Feb 3); stored as MFcr; SnowPilot layer note '104-103cm: Problematic layer'; ECTN12 at its top/base (104 cm SP, 103 cm PL). The PL bar's right end is hidden by the ECTN12 label (visible to >=4.87, K per SnowPilot)"},
+    {"bottom_cm": 104, "top_cm": 120, "depth_top_cm": 3, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": null, "hardness": "F", "hardness_idx": 1.0, "moisture": null, "density": null, "uncertain": false, "comment": "same glyph on both charts"},
+    {"bottom_cm": 120, "top_cm": 123, "depth_top_cm": 0, "grain": "PP", "grain2": null, "grain_raw": "+", "size_mm": null, "hardness": "F-", "hardness_idx": 0.67, "moisture": null, "density": null, "uncertain": false, "comment": "same glyph on both charts; header surface grain Precipitation Particles"}
+  ],
+  "temps": [],
+  "tests": [
+    {"raw": "ECTN12 @104cm Feb 3 crust", "type": "ECT", "score": "ECTN12", "taps": 12, "propagation": "N", "fracture": null, "height_cm": 104, "depth_cm": 19, "layer_grain": "MFcr", "count": 1},
+    {"raw": "ECTN19 @81cm Dec 31", "type": "ECT", "score": "ECTN19", "taps": 19, "propagation": "N", "fracture": null, "height_cm": 81, "depth_cm": 42, "layer_grain": null, "count": 1}
+  ],
+  "named_layers": [
+    {"name": "Feb 2 crust (PL) / Feb 3 crust (SP)", "height_cm": 104, "depth_cm": 19, "grain": "MFcr", "comment": "the 103-104 cm K crust; PL Name column 'Feb 2 crust' (IF glyph), SP test comment 'Feb 3 crust' (MFcr glyph) and layer note '104-103cm: Problematic layer'"},
+    {"name": "Dec 31", "height_cm": 81, "depth_cm": 42, "grain": null, "comment": "SP comment on ECTN19 @81cm; interface between the 70-81 cm FC layer below and the 81-98 cm RGxf layer above; grain not given"}
+  ],
+  "notes": "Propagation Labs 'Notes:' field blank. SnowPilot chart: Layer Notes '104-103cm: Problematic layer'; stability tests 'ECTN12 @104cm' with comment 'Feb 3 crust' and 'ECTN19 @81cm' with comment 'Dec 31'; PF 30; Notes blank.",
+  "summary": "HS 123 cm N-aspect pit (2275 m): 40 cm of 1F- basal FC(DH)/DH, 1F FC(DH) 40-70, 4F+ FC 70-81 under a 17 cm 1F+ RGxf layer 81-98 and 4F FC 98-103; a 1 cm K crust at 103-104 (Feb 2/3 crust, problematic layer) with ECTN12 at its top, then 16 cm F DF and 3 cm F- PP at the surface; ECTN19 at 81 cm ('Dec 31'); no temperatures",
+  "confidence": "medium",
+  "reading_issues": "Merged from two files for the same pit: the Propagation Labs PDF (depth-from-surface chart, 0 at top, converted here to height above ground with HS 123) and the SnowPilot PDF (height chart; SnowPilot image extracted from the FPDF wrapper). Hardness bars and layer boundaries agree exactly between the two (depth boundaries 3, 19, 20, 25, 42, 53, 83 cm = heights 120, 104, 103, 98, 81, 70, 40). Header conflicts, with the Propagation Labs value stored at top level: time 12:30 (PL) vs 13:00 (SP); slope 30 deg vs 20 deg; lat/lon 51.4739,-116.1562 vs 51.47131,-116.14984 (about 530 m apart); foot penetration 80 cm vs 30 cm; wind calm/SW vs NE light breeze; sky Broken vs OVC; observer Conrad Janzen (PL) vs org Banff Visitor Safety (SP). Elevation (2275 m) comes only from the SnowPilot chart (PL has '?'), so it belongs to the SP coordinates. Grain forms differ: PL gives forms for all layers while the SP form column is blank for the 81-98 and 98-103 cm layers; the lowest two layers read DH and FC(DH) on SP but FC(DH) and FC on PL (stored PL, flagged uncertain); the 103-104 cm crust is an ice-formation bar on PL and a two-linked-circle MFcr glyph on SP (stored MFcr, uncertain). Neither chart has sizes, moisture or a temperature profile. ECTN12 is drawn at 104 cm (top of crust) on SP but its PL line is at depth 20 cm (103 cm, base of the crust); 104 cm stored. ECTN19 at 81 cm agrees. ECT results have no fracture character; 'N' = no propagation. The ECT label comments 'Feb 3 crust' and 'Dec 31' are SP free text. PDF metadata for the SP file says created 12 Feb 2024 09:26 MST, earlier than either header time."
+}

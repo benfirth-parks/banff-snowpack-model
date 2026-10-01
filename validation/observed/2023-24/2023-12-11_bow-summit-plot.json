@@ -1,0 +1,53 @@
+{
+  "source_files": ["profiles/2023-2024/Bow Summit/2023-12-11 Bow summit.jpg"],
+  "season": "2023-24",
+  "kind": "study_plot",
+  "site": "Bow Summit Study Plot",
+  "site_slug": "bow-summit-plot",
+  "chart_format": "snowpilot",
+  "date": "2023-12-11",
+  "time": "11:30",
+  "observer": "Banff Visitor Safety",
+  "lat": null,
+  "lon": null,
+  "elevation_m": 2030,
+  "elevation_raw": "2030 m",
+  "aspect": null,
+  "slope_deg": null,
+  "air_temp_c": -5,
+  "sky": "CLR",
+  "precip": "NO",
+  "wind": "Calm",
+  "blowing_snow": null,
+  "hs_cm": 59,
+  "surface_grain": "SH",
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {"surface_form": "V (SH) 1 mm, drawn in the fixed top row above the HS line (zero thickness)", "chart_title": "Bow summit plot"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 13, "depth_top_cm": 46, "grain": "DH", "grain2": null, "grain_raw": "∧", "size_mm": [4.0, 5.0], "hardness": "F+", "hardness_idx": 1.33, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 13, "top_cm": 21, "depth_top_cm": 38, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [2.0, 3.0], "hardness": "4F+", "hardness_idx": 2.33, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 21, "top_cm": 32, "depth_top_cm": 27, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [2.0, 2.0], "hardness": "F+", "hardness_idx": 1.33, "moisture": null, "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 32, "top_cm": 33, "depth_top_cm": 26, "grain": "SH", "grain2": null, "grain_raw": "V", "size_mm": [10.0, 15.0], "hardness": "F-", "hardness_idx": 0.67, "moisture": null, "density": null, "uncertain": false, "comment": "thin buried surface hoar layer"},
+    {"bottom_cm": 33, "top_cm": 45, "depth_top_cm": 14, "grain": "FCxr", "grain2": null, "grain_raw": "square with rounded top (FCxr glyph)", "size_mm": [0.5, 0.5], "hardness": "1F-", "hardness_idx": 2.5, "moisture": null, "density": null, "uncertain": false, "comment": "hardness gradient: 4F+ at top (45 cm) to 1F- at bottom (33 cm); hardness_idx is the mean"},
+    {"bottom_cm": 45, "top_cm": 46, "depth_top_cm": 13, "grain": "IF", "grain2": null, "grain_raw": "=", "size_mm": null, "hardness": "1F", "hardness_idx": 3.0, "moisture": null, "density": null, "uncertain": false, "comment": "thin hard layer drawn with '=' glyph (ice formation / crust), 1 cm"},
+    {"bottom_cm": 46, "top_cm": 59, "depth_top_cm": 0, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": [0.5, 1.0], "hardness": "F", "hardness_idx": 1.0, "moisture": null, "density": null, "uncertain": false, "comment": null}
+  ],
+  "temps": [
+    {"h_cm": 0, "t_c": -0.5},
+    {"h_cm": 10, "t_c": -1.2},
+    {"h_cm": 20, "t_c": -2.5},
+    {"h_cm": 30, "t_c": -3.8},
+    {"h_cm": 40, "t_c": -6.5},
+    {"h_cm": 49, "t_c": -9.5},
+    {"h_cm": 59, "t_c": -11.0}
+  ],
+  "tests": [
+    {"raw": "CT14, SC @7cm", "type": "CT", "score": "CT14", "taps": 14, "propagation": null, "fracture": "SC", "height_cm": 7, "depth_cm": 52, "layer_grain": "DH", "count": 1}
+  ],
+  "named_layers": [],
+  "notes": "Chart 'Notes:' and 'Layer Notes:' fields blank. Stability tests column: 'CT14, SC @7cm'.",
+  "summary": "Basal DH 0-13 cm (F+) under FC 13-32 cm (4F+ 13-21, F+ 21-32); thin buried SH (10-15 mm, F-) at 32-33 cm; FCxr 33-45 cm; thin 1F '=' (ice/crust) layer at 45-46 cm; DF 46-59 cm (F); 1 mm SH on the surface; CT14 SC at 7 cm in the basal DH; HS 59 cm; temps -0.5 C at ground to -11.0 C at surface",
+  "confidence": "high",
+  "reading_issues": "Hardness bar edges and layer boundaries were measured from pixel positions against the chart axes (accurate to about +/-0.1 cm and one hardness third-step). Layer 33-45 cm is a trapezoid (hardness gradient 4F+ top to 1F- bottom); hardness_idx is the mean. The '=' glyph at 45-46 cm is read as IF (ice layer/crust), no size given. The 33-45 cm glyph (square with a rounded top) is read as FCxr. Aspect, slope and coordinates are blank on the chart; surface hoar is listed in the top 'surface form' row, not as a snow layer."
+}

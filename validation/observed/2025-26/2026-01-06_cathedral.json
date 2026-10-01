@@ -1,0 +1,236 @@
+{
+  "source_files": [
+    "profiles/2025-2026/Test profiles/2026-01-06_Cathedral.png"
+  ],
+  "season": "2025-26",
+  "kind": "test_profile",
+  "site": "Cathedral",
+  "site_slug": "cathedral",
+  "chart_format": "propagation_labs",
+  "date": "2026-01-06",
+  "time": "13:08",
+  "observer": "Lisa Paulson",
+  "lat": 51.4199,
+  "lon": -116.4037,
+  "elevation_m": 1932,
+  "elevation_raw": "1932m",
+  "aspect": null,
+  "slope_deg": null,
+  "air_temp_c": null,
+  "sky": "Overcast",
+  "precip": "No Precipitation",
+  "wind": "Light,NE",
+  "blowing_snow": "No Transport",
+  "hs_cm": 165,
+  "surface_grain": "PP",
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {
+    "profile_name": "Cathedral",
+    "surface_grain_raw": "Precipitation Particles 1.0mm",
+    "org": null
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 25,
+      "depth_top_cm": 140,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "dome-on-box (rounding facet)",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "P",
+      "hardness_idx": 4.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Basal layer"
+    },
+    {
+      "bottom_cm": 25,
+      "top_cm": 35,
+      "depth_top_cm": 130,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "dome-on-box (rounding facet)",
+      "size_mm": [
+        2.0,
+        3.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Softer 10 cm band within the hard base"
+    },
+    {
+      "bottom_cm": 35,
+      "top_cm": 55,
+      "depth_top_cm": 110,
+      "grain": "RGxf",
+      "grain2": null,
+      "grain_raw": "U-shaped box with filled dot (flat top, round bottom)",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "P",
+      "hardness_idx": 4.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 55,
+      "top_cm": 88,
+      "depth_top_cm": 77,
+      "grain": "RGxf",
+      "grain2": null,
+      "grain_raw": "U-shaped box with filled dot (flat top, round bottom)",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "P",
+      "hardness_idx": 4.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Table row for this layer is drawn from ~83 cm because the crust row above is expanded; boundary 55/88 from bar outlines"
+    },
+    {
+      "bottom_cm": 88,
+      "top_cm": 90,
+      "depth_top_cm": 75,
+      "grain": "MFcr",
+      "grain2": null,
+      "grain_raw": "open circle on thin K layer",
+      "size_mm": null,
+      "hardness": "K",
+      "hardness_idx": 5.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "2 cm K crust; Notes column 'Dec 15' (named layer)"
+    },
+    {
+      "bottom_cm": 90,
+      "top_cm": 125,
+      "depth_top_cm": 40,
+      "grain": "RG",
+      "grain2": null,
+      "grain_raw": "filled circle",
+      "size_mm": [
+        0.5,
+        0.5
+      ],
+      "hardness": "1F+",
+      "hardness_idx": 3.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 125,
+      "top_cm": 135,
+      "depth_top_cm": 30,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "/",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "4F+",
+      "hardness_idx": 2.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Table row 3 is drawn slightly short (125-133.5) because the row above is expanded"
+    },
+    {
+      "bottom_cm": 135,
+      "top_cm": 140,
+      "depth_top_cm": 25,
+      "grain": "DF",
+      "grain2": "SH",
+      "grain_raw": "/ ( V )",
+      "size_mm": [
+        1.0,
+        3.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Table note: 'two layers with snowbin between'; size 1.0(3.0). Top boundary at 140 cm is hidden under the CT10RP yellow line and inferred from the table row top and its leader line"
+    },
+    {
+      "bottom_cm": 140,
+      "top_cm": 165,
+      "depth_top_cm": 0,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "/",
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1.0,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Surface layer; header surface grain Precipitation Particles 1.0mm. CT4RP line at 150 cm lies inside; no boundary at 150 in the table"
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT4RP",
+      "type": "CT",
+      "score": "CT4",
+      "taps": 4,
+      "propagation": null,
+      "fracture": "RP",
+      "height_cm": 150,
+      "depth_cm": 15,
+      "layer_grain": "DF",
+      "count": 1
+    },
+    {
+      "raw": "CT10RP",
+      "type": "CT",
+      "score": "CT10",
+      "taps": 10,
+      "propagation": null,
+      "fracture": "RP",
+      "height_cm": 140,
+      "depth_cm": 25,
+      "layer_grain": "DF",
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Dec 15",
+      "height_cm": 90,
+      "bottom_cm": 88,
+      "top_cm": 90,
+      "depth_cm": 75,
+      "grain": "MFcr",
+      "comment": "Crust (K) named only 'Dec 15' in the Notes column"
+    }
+  ],
+  "notes": null,
+  "summary": "HS 165 cm at 1932 m (aspect/slope blank): FCxr base (0-35 cm, P with a 1F band at 25-35), RGxf 35-88 cm (P), a 2 cm K 'Dec 15' crust at 88-90 cm under RG 0.5 mm (1F+) to 125 cm, then DF 125-165 cm softening upward (4F+ to F) with a 5 cm DF/SH layer (table note 'two layers with snowbin between') at 135-140 cm; CT10 RP at 140 cm and CT4 RP at 150 cm",
+  "confidence": "medium",
+  "reading_issues": "Full-page Propagation Labs PNG (2523x2526). Heights calibrated on 10 cm gridlines (8.619 px/cm, 0 at y=1778, HS 165 at y=355.5); hardness ticks F/4f/1f/P/K evenly spaced; every outline lands on a whole cm. Aspect, slope, air temp, foot/ski pen and notes blank. Layer boundaries at 140 cm (and any at 150 cm) are hidden under yellow test lines; 140 was inferred from the table row layout and leader line, no boundary at 150. The grain-table rows are expanded around thin layers so row edges are not layer edges. 'two layers with snowbin between' is quoted verbatim, its meaning is unclear. No temperature profile."
+}

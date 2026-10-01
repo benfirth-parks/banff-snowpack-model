@@ -1,0 +1,296 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Goats Eye study plot/2025-03-09_Goats Eye Study Plot.png"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Goat's Eye Study Plot",
+  "site_slug": "goats-eye-plot",
+  "chart_format": "propagation_labs",
+  "date": "2025-03-09",
+  "time": "13:00",
+  "observer": "Conrad Janzen",
+  "lat": 51.0894,
+  "lon": -115.7561,
+  "elevation_m": 2246,
+  "elevation_raw": "2246m",
+  "aspect": "SW",
+  "slope_deg": 0,
+  "air_temp_c": -2.5,
+  "sky": "Overcast",
+  "precip": "Snow <0.5cm/hr",
+  "wind": "Strong, S",
+  "blowing_snow": "Intense",
+  "hs_cm": 119,
+  "surface_grain": "PP",
+  "foot_pen_cm": 60,
+  "ski_pen_cm": 15,
+  "header_other": {
+    "surface_grain_raw": "Graupel 1.0-3.0mm",
+    "profile_name": "Goats Eye Study Plot - SSV"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 15,
+      "depth_top_cm": 104,
+      "grain": "DH",
+      "grain2": "MFcr",
+      "grain_raw": "∧(◎◎)",
+      "size_mm": [
+        3.0,
+        6.0
+      ],
+      "hardness": "P→1F+",
+      "hardness_idx": 3.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Name column: \"Oct crust\". Hardness gradient in chart: P at the ground (0 cm) easing to 1F+ at 15 cm; hardness_idx is the mean (3.67).",
+      "hardness_bottom": "P",
+      "hardness_bottom_idx": 4.0,
+      "hardness_top": "1F+",
+      "hardness_top_idx": 3.33
+    },
+    {
+      "bottom_cm": 15,
+      "top_cm": 25,
+      "depth_top_cm": 94,
+      "grain": "FC",
+      "grain2": "DH",
+      "grain_raw": "□(∧)",
+      "size_mm": [
+        3.0,
+        8.0
+      ],
+      "hardness": "1F",
+      "hardness_idx": 3,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "chart size \"3.0-8.0(3.0-10.0)\": FC 3-8 mm, secondary DH 3-10 mm"
+    },
+    {
+      "bottom_cm": 25,
+      "top_cm": 50,
+      "depth_top_cm": 69,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        5.0
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 50,
+      "top_cm": 77,
+      "depth_top_cm": 42,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        5.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Name column: \"January drought facets\"; bar drawn red/salmon (flagged weak layer). ECTN22 failed on its top (77 cm); CT18 SC and CT19 SC at 67 cm inside it."
+    },
+    {
+      "bottom_cm": 77,
+      "top_cm": 90,
+      "depth_top_cm": 29,
+      "grain": "FCxr",
+      "grain2": null,
+      "grain_raw": "⊟ (square with rounded top and centre line)",
+      "size_mm": [
+        2.0,
+        2.5
+      ],
+      "hardness": "1F-",
+      "hardness_idx": 2.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 90,
+      "top_cm": 97,
+      "depth_top_cm": 22,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.0,
+        2.0
+      ],
+      "hardness": "4F+",
+      "hardness_idx": 2.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 97,
+      "top_cm": 105,
+      "depth_top_cm": 14,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.0,
+        2.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 105,
+      "top_cm": 119,
+      "depth_top_cm": 0,
+      "grain": "PP",
+      "grain2": null,
+      "grain_raw": "+",
+      "size_mm": [
+        1.0,
+        2.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "surface layer; header surface grain is \"Graupel 1.0-3.0mm\""
+    }
+  ],
+  "temps": [
+    {
+      "h_cm": 0,
+      "t_c": -0.3
+    },
+    {
+      "h_cm": 10,
+      "t_c": -0.9
+    },
+    {
+      "h_cm": 20,
+      "t_c": -1.4
+    },
+    {
+      "h_cm": 30,
+      "t_c": -1.7
+    },
+    {
+      "h_cm": 40,
+      "t_c": -2.2
+    },
+    {
+      "h_cm": 50,
+      "t_c": -2.6
+    },
+    {
+      "h_cm": 60,
+      "t_c": -3.0
+    },
+    {
+      "h_cm": 70,
+      "t_c": -3.3
+    },
+    {
+      "h_cm": 80,
+      "t_c": -3.5
+    },
+    {
+      "h_cm": 90,
+      "t_c": -3.5
+    },
+    {
+      "h_cm": 100,
+      "t_c": -3.4
+    },
+    {
+      "h_cm": 109,
+      "t_c": -2.9
+    },
+    {
+      "h_cm": 119,
+      "t_c": -2.9
+    }
+  ],
+  "tests": [
+    {
+      "raw": "ECTN22 on □",
+      "type": "ECT",
+      "score": "ECTN22",
+      "taps": 22,
+      "propagation": "N",
+      "fracture": "SC",
+      "height_cm": 77,
+      "depth_cm": 42,
+      "layer_grain": "FC",
+      "count": 1
+    },
+    {
+      "raw": "CT18SC",
+      "type": "CT",
+      "score": "CT18",
+      "taps": 18,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 67,
+      "depth_cm": 52,
+      "layer_grain": "FC",
+      "count": 1
+    },
+    {
+      "raw": "CT19SC",
+      "type": "CT",
+      "score": "CT19",
+      "taps": 19,
+      "propagation": null,
+      "fracture": "SC",
+      "height_cm": 67,
+      "depth_cm": 52,
+      "layer_grain": "FC",
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "January drought facets",
+      "height_cm": 63.5,
+      "bottom_cm": 50,
+      "top_cm": 77,
+      "depth_cm": 55.5,
+      "grain": "FC"
+    },
+    {
+      "name": "Oct crust",
+      "height_cm": 7.5,
+      "bottom_cm": 0,
+      "top_cm": 15,
+      "depth_cm": 111.5,
+      "grain": "DH"
+    }
+  ],
+  "notes": "ECTN22: Sudden collapse result that propagated 60/90 cm, Pit completed with FV",
+  "summary": "119 cm HS: basal DH(MFcr) \"Oct crust\" 0-15 cm (P easing to 1F+, 3-6 mm) under FC(DH) 15-25 cm (1F) and FC 25-50 cm (1F-), then a 27 cm red-flagged \"January drought facets\" FC layer at 50-77 cm (F, 2-5 mm) with ECTN22 SC on its top (77 cm; SC propagated 60/90 cm) and CT18 SC / CT19 SC at 67 cm, under 42 cm of storm snow (FCxr 1F-, DF 4F+/4F, PP/graupel F); strong S wind, intense blowing snow",
+  "confidence": "high",
+  "reading_issues": "Propagation Labs height-from-ground layout (no depth conversion). Layer boundaries from the table row lines at 15.0, 25.0, 50.0, 77.0, 90.0, 97.0 and 105.0 cm (+-0.1 cm), which also match the bar steps. Hardness read from full-resolution bar edges against the K/P/1f/4f/F gridlines. The 97-105 cm bar edge is partly overdrawn by the temperature polyline; its edge matches the 4F gridline. The basal 0-15 cm layer has a sloped edge (P at 0 cm rising to 1F+ at 15 cm): hardness \"P→1F+\" with mean idx 3.67 and explicit bottom/top values. Test lines are orange horizontals at 77.0 cm (ECTN22 on a square glyph) and 67.0 cm (CT18SC and CT19SC share one leader line). The label says ECTN (no propagation) while the notes say the sudden-collapse result \"propagated 60/90 cm\" (partial propagation); recorded propagation \"N\", fracture \"SC\" from the notes. \"FV\" in the notes is not expanded on the chart. Glyph at 77-90 cm (rounded-top square with centre line) read as FCxr; bottom-row glyph \"∧(◎◎)\" read as DH with secondary MFcr. Header surface grain is Graupel 1.0-3.0 mm while the table top layer is \"+\" (PP) 1.0-2.0 mm; both classed PP. Elevation 2246 m is as printed (this plot is entered at 2246-2400 m across the season)."
+}

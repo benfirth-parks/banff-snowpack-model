@@ -1,0 +1,217 @@
+{
+  "source_files": [
+    "profiles/2024-2025/Bow Summit study plot/2025-02-25 Bow Summit Study Plot.png"
+  ],
+  "season": "2024-25",
+  "kind": "study_plot",
+  "site": "Bow Summit Study Plot",
+  "site_slug": "bow-summit-plot",
+  "chart_format": "propagation_labs",
+  "date": "2025-02-25",
+  "time": "13:25",
+  "observer": "Logan Bennett",
+  "lat": null,
+  "lon": null,
+  "elevation_m": null,
+  "elevation_raw": null,
+  "aspect": null,
+  "slope_deg": null,
+  "air_temp_c": null,
+  "sky": null,
+  "precip": null,
+  "wind": null,
+  "blowing_snow": null,
+  "hs_cm": 90,
+  "surface_grain": null,
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {
+    "profile_name": "--"
+  },
+  "layers": [
+    {
+      "bottom_cm": 0,
+      "top_cm": 15,
+      "depth_top_cm": 75,
+      "grain": "DH",
+      "grain2": null,
+      "grain_raw": "∧",
+      "size_mm": [
+        5.0,
+        8.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 15,
+      "top_cm": 40,
+      "depth_top_cm": 50,
+      "grain": "DH",
+      "grain2": "FC",
+      "grain_raw": "∧(□)",
+      "size_mm": [
+        5.0,
+        5.0
+      ],
+      "hardness": "1F-→4F+",
+      "hardness_idx": 2.5,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Hardness gradient in chart: 1F- at base (15 cm) softening linearly to 4F+ at top (40 cm); hardness_idx is the mean (2.5). DH primary with FC secondary, 5 mm.",
+      "hardness_bottom": "1F-",
+      "hardness_bottom_idx": 2.67,
+      "hardness_top": "4F+",
+      "hardness_top_idx": 2.33
+    },
+    {
+      "bottom_cm": 40,
+      "top_cm": 47,
+      "depth_top_cm": 43,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        3.0,
+        4.0
+      ],
+      "hardness": "4F+",
+      "hardness_idx": 2.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 47,
+      "top_cm": 67,
+      "depth_top_cm": 23,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        3.0
+      ],
+      "hardness": "F+",
+      "hardness_idx": 1.33,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Failure layer for the three CT results (depth 30 cm = 60 cm height); test labels read \"on □ 3 Jan 30\"."
+    },
+    {
+      "bottom_cm": 67,
+      "top_cm": 76,
+      "depth_top_cm": 14,
+      "grain": "FC",
+      "grain2": null,
+      "grain_raw": "□",
+      "size_mm": [
+        2.0,
+        2.0
+      ],
+      "hardness": "4F-",
+      "hardness_idx": 1.67,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 76,
+      "top_cm": 89,
+      "depth_top_cm": 1,
+      "grain": "DF",
+      "grain2": null,
+      "grain_raw": "⟋",
+      "size_mm": [
+        1.0,
+        2.0
+      ],
+      "hardness": "4F",
+      "hardness_idx": 2,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": null
+    },
+    {
+      "bottom_cm": 89,
+      "top_cm": 90,
+      "depth_top_cm": 0,
+      "grain": "PP",
+      "grain2": null,
+      "grain_raw": "+",
+      "size_mm": [
+        3.0,
+        3.0
+      ],
+      "hardness": "F",
+      "hardness_idx": 1,
+      "moisture": null,
+      "density": null,
+      "uncertain": false,
+      "comment": "Surface layer, only 1 cm thick (table row drawn taller than the layer)."
+    }
+  ],
+  "temps": [],
+  "tests": [
+    {
+      "raw": "CT13Q2 on □ 3 Jan 30",
+      "type": "CT",
+      "score": "CT13",
+      "taps": 13,
+      "propagation": null,
+      "fracture": null,
+      "quality": "Q2",
+      "height_cm": 60,
+      "depth_cm": 30,
+      "layer_grain": "FC",
+      "count": 1
+    },
+    {
+      "raw": "CT13Q2 on □ 3 Jan 30",
+      "type": "CT",
+      "score": "CT13",
+      "taps": 13,
+      "propagation": null,
+      "fracture": null,
+      "quality": "Q2",
+      "height_cm": 60,
+      "depth_cm": 30,
+      "layer_grain": "FC",
+      "count": 1
+    },
+    {
+      "raw": "CT12Q2 on □ 3 Jan 30",
+      "type": "CT",
+      "score": "CT12",
+      "taps": 12,
+      "propagation": null,
+      "fracture": null,
+      "quality": "Q2",
+      "height_cm": 60,
+      "depth_cm": 30,
+      "layer_grain": "FC",
+      "count": 1
+    }
+  ],
+  "named_layers": [
+    {
+      "name": "Jan 30",
+      "height_cm": 60,
+      "depth_cm": 30,
+      "grain": "FC"
+    }
+  ],
+  "notes": "",
+  "summary": "90 cm HS: basal DH 0-15 cm (4F), DH/FC 15-40 cm (hardness gradient 1F- to 4F+), FC 40-76 cm (F+ to 4F+), 13 cm DF and 1 cm PP on top; three CTs (CT13Q2 x2, CT12Q2) failing on the \"Jan 30\" FC layer at 60 cm height (30 cm depth).",
+  "confidence": "medium",
+  "reading_issues": "Header has no profile name, location, elevation, aspect, slope, coordinates or weather (all \"--\"); site assigned from the folder/filename only (observer Logan Bennett). Chart is the depth-from-surface layout (0 at top, HS 90 at bottom): converted to cm above ground (height = 90 - depth); depth_top_cm values are read directly. Thin 1 cm surface layer has its table row stretched with connector lines, so layer boundaries were taken from the bar outlines, not the table lines. Test labels \"on □ 3 Jan 30\" are at depth 30 cm which is inside the 23-43 cm-depth FC layer (2-3 mm in table, label says 3), so layer name \"Jan 30\" refers to that layer or an interface in it; no Name column shown. Q2 recorded in the quality field (fracture character not given)."
+}

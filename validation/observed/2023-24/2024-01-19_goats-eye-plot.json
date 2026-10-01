@@ -1,0 +1,50 @@
+{
+  "source_files": ["profiles/2023-2024/Goats Eye/20240119 Goat's Eye.jpg"],
+  "season": "2023-24",
+  "kind": "study_plot",
+  "site": "Goat's Eye Study Plot",
+  "site_slug": "goats-eye-plot",
+  "chart_format": "snowpilot",
+  "date": "2024-01-19",
+  "time": "14:00",
+  "observer": "Banff Visitor Safety",
+  "lat": 51.08901,
+  "lon": -115.75446,
+  "elevation_m": 2284,
+  "elevation_raw": "2284 m",
+  "aspect": null,
+  "slope_deg": null,
+  "air_temp_c": -16,
+  "sky": "BKN",
+  "precip": "S-1",
+  "wind": "SW Moderate",
+  "blowing_snow": null,
+  "hs_cm": 94,
+  "surface_grain": "DF",
+  "foot_pen_cm": null,
+  "ski_pen_cm": null,
+  "header_other": {"HS": "94", "coord_raw": "51.08901N, -115.75446W", "layer_notes": "34-0cm: Problematic layer", "chart_title": "Goat's Eye", "surface_form": "⟋ (DF) 1.5 mm in the fixed top row above the HS line (zero thickness)"},
+  "layers": [
+    {"bottom_cm": 0, "top_cm": 34, "depth_top_cm": 60, "grain": "FC", "grain2": "DH", "grain_raw": "□(∧)", "size_mm": [3.0, 6.0], "hardness": "1F+", "hardness_idx": 3.33, "moisture": "D", "density": null, "uncertain": false, "comment": "layer note: '34-0cm: Problematic layer'; hardness gradient 1F at base (0 cm) to P- at top (34 cm); hardness_idx is the mean"},
+    {"bottom_cm": 34, "top_cm": 38, "depth_top_cm": 56, "grain": "MF", "grain2": "FC", "grain_raw": "○(□)", "size_mm": [1.0, 2.0], "hardness": "P", "hardness_idx": 4.0, "moisture": "D", "density": null, "uncertain": false, "comment": "open-circle primary form read as MF; secondary FC"},
+    {"bottom_cm": 38, "top_cm": 39, "depth_top_cm": 55, "grain": null, "grain2": null, "grain_raw": null, "size_mm": null, "hardness": "K", "hardness_idx": 5.0, "moisture": "D", "density": null, "uncertain": true, "comment": "thin hard (K) layer, ~1 cm; grain form and size blank on chart (likely a crust)"},
+    {"bottom_cm": 39, "top_cm": 55, "depth_top_cm": 39, "grain": "FC", "grain2": "MF", "grain_raw": "□(○)", "size_mm": [3.0, 5.0], "hardness": "1F+", "hardness_idx": 3.33, "moisture": "D", "density": null, "uncertain": false, "comment": "secondary open-circle form read as MF"},
+    {"bottom_cm": 55, "top_cm": 70, "depth_top_cm": 24, "grain": "FC", "grain2": null, "grain_raw": "□", "size_mm": [2.0, 5.0], "hardness": "4F", "hardness_idx": 2.0, "moisture": "D", "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 70, "top_cm": 86, "depth_top_cm": 8, "grain": "DF", "grain2": "FC", "grain_raw": "⟋(□)", "size_mm": [2.0, 3.0], "hardness": "4F-", "hardness_idx": 1.67, "moisture": "D", "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 86, "top_cm": 90, "depth_top_cm": 4, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": [1.0, 2.0], "hardness": "4F", "hardness_idx": 2.0, "moisture": "D", "density": null, "uncertain": false, "comment": null},
+    {"bottom_cm": 90, "top_cm": 94, "depth_top_cm": 0, "grain": "DF", "grain2": null, "grain_raw": "⟋", "size_mm": [1.0, 1.5], "hardness": "4F+", "hardness_idx": 2.33, "moisture": "D", "density": null, "uncertain": false, "comment": null}
+  ],
+  "temps": [],
+  "tests": [
+    {"raw": "CT2, SC @90cm x 3", "type": "CT", "score": "CT2", "taps": 2, "propagation": null, "fracture": "SC", "height_cm": 90, "depth_cm": 4, "layer_grain": "DF", "count": 3},
+    {"raw": "CT17, PC @70cm", "type": "CT", "score": "CT17", "taps": 17, "propagation": null, "fracture": "PC", "height_cm": 70, "depth_cm": 24, "layer_grain": "FC", "count": 1},
+    {"raw": "CT25 @5cm x 1", "type": "CT", "score": "CT25", "taps": 25, "propagation": null, "fracture": null, "height_cm": 5, "depth_cm": 89, "layer_grain": "FC", "count": 1}
+  ],
+  "named_layers": [
+    {"name": "Problematic layer", "height_cm": 34, "depth_cm": 60, "grain": "FC"}
+  ],
+  "notes": "Layer Notes: 34-0cm: Problematic layer. Stability tests column: CT2, SC @90cm x 3; CT17, PC @70cm; CT25 @5cm x 1. Chart 'Notes:' field blank. No temperature profile; no PF/PS.",
+  "summary": "Basal FC(DH) 0-34 cm ('problematic layer', 3-6 mm, hardness 1F at base to P- at top) under thin MF(FC) 34-38 cm (P), a ~1 cm K crust-like layer at 38-39, FC(MF) 39-55 (1F+), FC 55-70 (4F), DF(FC) 70-86 (4F-) and DF 86-94 (4F to 4F+); CT2 SC at 90 cm x3 (in the new DF), CT17 PC at 70 cm, CT25 at 5 cm; HS 94 cm; air -16 C",
+  "confidence": "high",
+  "reading_issues": "Hardness bars and boundaries measured from pixels. Basal layer 0-34 cm is a trapezoid (1F at base, P- at top), hardness_idx is the mean. Open-circle glyph '○' read as MF (the chart elsewhere draws RG as a filled circle, as in RGxf); in a -16 C January profile this could instead be an observer's rounded-grain entry, so the MF/RG call is moderately uncertain. The 38-39 cm K-hard thin layer has no form or size entered, so grain is null. No temperature profile or PF/PS on this chart. 'CT25 @5cm x 1' has no fracture character."
+}
