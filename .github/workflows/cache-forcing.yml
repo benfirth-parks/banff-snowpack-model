@@ -40,6 +40,7 @@ jobs:
         run: node scripts/cache-forcing.mjs
 
       - name: Replace the forcing-cache branch
+        if: always()
         env:
           EXPORT: ${{ runner.temp }}/forcing-out
         run: |
