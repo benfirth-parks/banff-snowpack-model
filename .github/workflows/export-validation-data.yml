@@ -1,0 +1,56 @@
+name: Export validation data
+
+# Pulls the model's past-season point profiles and the station archive into the
+# `validation-data` branch so validation against field profiles can run offline.
+# Runs when this workflow or the export script changes, or by hand.
+on:
+  workflow_dispatch:
+    inputs:
+      seasons:
+        description: Seasons to export (comma-separated)
+        default: 2023-24,2024-25,2025-26
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/export-validation-data.yml
+      - scripts/export-validation-data.mjs
+
+permissions:
+  contents: write
+
+concurrency:
+  group: export-validation-data
+  cancel-in-progress: false
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Export model profiles and station archive
+        env:
+          OUT: ${{ runner.temp }}/export
+          SEASONS: ${{ github.event.inputs.seasons || '2023-24,2024-25,2025-26' }}
+        run: node scripts/export-validation-data.mjs
+
+      - name: Replace the validation-data branch
+        env:
+          EXPORT: ${{ runner.temp }}/export
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan validation-data
+          git rm -rf --quiet .
+          git clean -fdq
+          cp -r "$EXPORT/." .
+          git add -A
+          git commit -q -m "Validation data export $(date -u +%Y-%m-%dT%H:%MZ) [skip netlify]"
+          git push -f origin validation-data
+          du -sh "$EXPORT"
