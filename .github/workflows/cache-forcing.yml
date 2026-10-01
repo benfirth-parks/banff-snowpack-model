@@ -1,0 +1,56 @@
+name: Cache forcing
+
+# Fetches the archived HRDPS forcing (RDPS gap-fill) at every model node for
+# past seasons into the `forcing-cache` branch, for local model replays.
+# Paced to stay inside Open-Meteo's free-tier limits, so it takes a while.
+on:
+  workflow_dispatch:
+    inputs:
+      seasons:
+        description: Seasons to cache (comma-separated)
+        default: 2023-24,2024-25,2025-26
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/cache-forcing.yml
+      - scripts/cache-forcing.mjs
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cache-forcing
+  cancel-in-progress: false
+
+jobs:
+  cache:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch forcing
+        env:
+          OUT: ${{ runner.temp }}/forcing-out
+          SEASONS: ${{ github.event.inputs.seasons || '2023-24,2024-25,2025-26' }}
+        run: node scripts/cache-forcing.mjs
+
+      - name: Replace the forcing-cache branch
+        env:
+          EXPORT: ${{ runner.temp }}/forcing-out
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan forcing-cache
+          git rm -rf --quiet .
+          git clean -fdq
+          cp -r "$EXPORT/." .
+          git add -A
+          git commit -q -m "Forcing cache $(date -u +%Y-%m-%dT%H:%MZ) [skip netlify]"
+          git push -f origin forcing-cache
+          du -sh "$EXPORT"
