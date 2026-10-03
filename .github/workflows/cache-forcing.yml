@@ -9,6 +9,10 @@ on:
       seasons:
         description: Seasons to cache (comma-separated)
         default: 2023-24,2024-25,2025-26
+      fresh:
+        description: Ignore the existing cache and fetch everything again
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths:
@@ -33,9 +37,20 @@ jobs:
         with:
           node-version: 20
 
+      - name: Previous cache
+        run: |
+          if git fetch --depth 1 origin forcing-cache; then
+            mkdir -p "$RUNNER_TEMP/forcing-prev"
+            git archive FETCH_HEAD | tar -x -C "$RUNNER_TEMP/forcing-prev"
+            # Keep the old season files if this run stops before replacing them.
+            mkdir -p "$RUNNER_TEMP/forcing-out"
+            cp -r "$RUNNER_TEMP/forcing-prev/forcing" "$RUNNER_TEMP/forcing-out/" 2>/dev/null || true
+          fi
+
       - name: Fetch forcing
         env:
           OUT: ${{ runner.temp }}/forcing-out
+          PREV: ${{ github.event.inputs.fresh != 'true' && format('{0}/forcing-prev', runner.temp) || '' }}
           SEASONS: ${{ github.event.inputs.seasons || '2023-24,2024-25,2025-26' }}
         run: node scripts/cache-forcing.mjs
 

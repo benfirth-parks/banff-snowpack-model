@@ -11,11 +11,14 @@
 // Output: forcing/{season}.json.gz =
 //   { season, t0 (epoch hour), n, nodes: [{ id, lat, lon, zCell, zDem }],
 //     vars: { T: [[...node 0...], [...node 1...]], RH, P, U, dir, ghi, dirH, difH, cc, snowfall } }
-import { mkdirSync, writeFileSync } from "node:fs";
-import { gzipSync } from "node:zlib";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { gunzipSync, gzipSync } from "node:zlib";
 import { modelNodes } from "../src/model/domain.js";
 
 const OUT = process.env.OUT || "out";
+// PREV: a checkout of the existing forcing-cache branch. When it holds a season,
+// only the node × month blocks that still have gaps are requested again.
+const PREV = process.env.PREV || "";
 const HIST = "https://historical-forecast-api.open-meteo.com/v1/forecast";
 const ELEV = "https://api.open-meteo.com/v1/elevation";
 const SEASONS = {
@@ -41,7 +44,14 @@ const saveStatus = () => { mkdirSync(OUT, { recursive: true }); writeFileSync(`$
 
 async function getJSON(url) {
   for (let i = 0; ; i++) {
-    const res = await fetch(url, { headers: UA });
+    let res;
+    try { res = await fetch(url, { headers: UA, signal: AbortSignal.timeout(180000) }); }
+    catch (e) {
+      // Network-level failures ("fetch failed", timeouts) were not retried before,
+      // which left whole node × month blocks empty.
+      if (i < 6) { console.log(`network error (${e.message}), retry ${i + 1}`); await sleep(30000 * (i + 1)); continue; }
+      throw e;
+    }
     const text = await res.text();
     if (res.ok) return JSON.parse(text);
     if (res.status === 429 && i < 12) {
@@ -112,6 +122,26 @@ async function main() {
     const n = t1 - t0 + 1;
     const vars = Object.fromEntries(cfg.vars.map(([k]) => [k, nodes.map(() => new Array(n).fill(null))]));
     const zCell = nodes.map(() => null);
+    let resumed = false;
+    const prevFile = PREV && `${PREV}/forcing/${season}.json.gz`;
+    if (prevFile && existsSync(prevFile)) {
+      const p = JSON.parse(gunzipSync(readFileSync(prevFile)));
+      if (p.t0 === t0 && p.nodes.length === nodes.length && p.nodes.every((x, i) => x.id === nodes[i].id)) {
+        for (const [k] of cfg.vars) if (p.vars[k]) p.vars[k].forEach((row, i) => row.forEach((v, kk) => { if (kk < n) vars[k][i][kk] = v; }));
+        p.nodes.forEach((x, i) => { zCell[i] = x.zCell; });
+        resumed = true;
+        console.log(`${season}: resuming from previous cache`);
+      }
+    }
+    // Hours [ca..cb] as indexes into the season arrays.
+    const span = (ca, cb) => [Date.parse(ca + "T00:00:00Z") / 3600000 - t0, Date.parse(cb + "T23:00:00Z") / 3600000 - t0];
+    const needs = (i, ca, cb) => {
+      if (!resumed) return true;
+      const [k0, k1] = span(ca, cb);
+      let miss = 0;
+      for (let kk = k0; kk <= Math.min(k1, n - 1); kk++) if (vars.T[i][kk] === null) miss++;
+      return miss > (k1 - k0 + 1) * 0.01;
+    };
     const months = [];
     for (let s = Date.parse(a0 + "T00:00:00Z"); iso(s) <= b; s += CHUNK_DAYS * 86400000) {
       months.push([iso(s), iso(Math.min(s + (CHUNK_DAYS - 1) * 86400000, Date.parse(b + "T00:00:00Z")))]);
@@ -142,12 +172,14 @@ async function main() {
     };
     const all = nodes.map((_, i) => i);
     for (const [ca, cb] of months) {
-      for (const c of chunks(all, CHUNK_NODES)) { await fill([HRDPS], c, ca, cb); await sleep(PACE_MS); }
-      console.log(`${season} HRDPS ${ca}..${cb} done`);
+      const todo = all.filter((i) => needs(i, ca, cb));
+      for (const c of chunks(todo, CHUNK_NODES)) { await fill([HRDPS], c, ca, cb); await sleep(PACE_MS); }
+      console.log(`${season} HRDPS ${ca}..${cb} done (${todo.length} nodes)`);
     }
+    resumed = true; // from here on, only request blocks that still have gaps
     const gappy = all.filter((i) => vars.T[i].filter((x) => x === null).length > n * 0.01);
     if (gappy.length) {
-      for (const [ca, cb] of months) for (const c of chunks(gappy, CHUNK_NODES)) { await fill([HRDPS, RDPS], c, ca, cb); await sleep(PACE_MS); }
+      for (const [ca, cb] of months) for (const c of chunks(gappy.filter((i) => needs(i, ca, cb)), CHUNK_NODES)) { await fill([HRDPS, RDPS], c, ca, cb); await sleep(PACE_MS); }
       console.log(`${season}: RDPS gap-fill for ${gappy.length} nodes`);
     }
     const missing = Math.round(1000 * vars.T.flat().filter((x) => x === null).length / (n * nodes.length)) / 10;
