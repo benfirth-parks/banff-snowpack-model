@@ -30,6 +30,21 @@ console.log("deepest cell text:", f.text[i]);
 const pt = JSON.parse(deps.store.m.get("pts/mt-gordon:ALP"));
 console.log("Mt.Gordon ALP days:", pt.days.length, "last:", pt.days.at(-1).date, pt.days.at(-1).text);
 
+// Forecast spread at a named point: the corrected control and every member run
+// to about 84 h, and the control matches the point's own forecast.
+const ptf = JSON.parse(deps.store.m.get("ptf/mt-gordon:ALP"));
+const sp = ptf.spread;
+if (!sp || sp.members.length !== 13) throw new Error(`spread: expected 13 runs, got ${sp?.members.length}`);
+if (sp.horizon - sp.analysisHour < 72) throw new Error(`spread horizon only ${sp.horizon - sp.analysisHour} h`);
+const ctrl = sp.members[0], nam = sp.members.find((m) => m.id === "noaa_nam12"), hr = sp.members.find((m) => m.id === "gem_hrdps_continental");
+for (const d of ptf.days) {
+  const c = ctrl.days.find((x) => x.t === d.t);
+  if (!c || JSON.stringify(c.p) !== JSON.stringify(d.p) || JSON.stringify(c.hs) !== JSON.stringify(d.hs)) throw new Error(`spread control differs from the point forecast on ${d.date}`);
+}
+if (hr.days.at(-1).t > sp.analysisHour + 49) throw new Error("HRDPS member ran past its data");
+const spread = (k) => { const v = sp.members.map((m) => m.days.find((x) => x.t === ctrl.days.at(-1).t)?.[k]).filter((x) => x != null); return `${Math.min(...v)}–${Math.max(...v)}`; };
+console.log(`spread: ${sp.members.length} runs to +${sp.horizon - sp.analysisHour} h; last day snow24 ${spread("snow24")} cm; NAM ${nam.days.length} days; status`, JSON.stringify(JSON.parse(deps.store.m.get("status")).spread));
+
 if (process.env.INSPECT) {
   for (const d of meta.dates.analysis.slice(-6).concat(meta.dates.forecast)) {
     const f = JSON.parse(deps.store.m.get(`field/${d}`));

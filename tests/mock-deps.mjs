@@ -58,6 +58,28 @@ export const deps = {
     });
     return { nodes: out, source: "mock", errors: [] };
   },
+  // Spread members: the same synthetic weather with a per-member temperature,
+  // precipitation and wind offset. HRDPS stops at 48 h; the NAM run is 6 h old,
+  // runs 84 h and sits 300 m above the point.
+  fetchSpread: async (points, ids) => {
+    const members = {};
+    ids.forEach((id, m) => {
+      const t0 = id === "noaa_nam12" ? clock.now - 6 : Math.floor(clock.now / 24) * 24 - 24;
+      const n = id === "noaa_nam12" ? 85 : id === "gem_hrdps_continental" ? clock.now + 48 - t0 : 5 * 24;
+      const off = { T: 2 * Math.sin(m * 1.7), P: 0.6 + 0.08 * m, U: 0.7 + 0.06 * m };
+      members[id] = points.map((pt) => {
+        const z = id === "noaa_nam12" ? 2300 : 2000;
+        const v = { T: [], RH: [], P: [], U: [], dir: [], ghi: [], cc: [] };
+        for (let t = t0; t < t0 + n; t++) {
+          const w = wx(pt.lat, pt.lon, z, t, { T: 1.5 + off.T, P: 1.3 * off.P });
+          v.T.push(w.T); v.RH.push(w.RH); v.P.push(t === t0 && id === "noaa_nam12" ? null : w.P); v.U.push(w.U * off.U);
+          v.dir.push(w.dir + 10 * m); v.ghi.push(w.ghi); v.cc.push(w.cc / 100);
+        }
+        return { t0, z, v };
+      });
+    });
+    return { members, source: "mock spread", errors: [] };
+  },
   fetchModelHistory: async (nodes, startDate, endDate) => {
     const t0 = Date.parse(startDate + "T00:00:00Z") / 3600000, t1 = Date.parse(endDate + "T23:00:00Z") / 3600000;
     const out = nodes.map((n) => {
