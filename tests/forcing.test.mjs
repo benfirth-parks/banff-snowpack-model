@@ -50,10 +50,33 @@ assert.ok(Math.abs(ff.Ta - (truth + 2)) < 0.2, "far cell keeps the model");
 assert.ok(fv.Ta - (truth + 6.5) > 1.5, "valley cell barely corrected by a ridge station");
 const fc6 = F.at(atStation, kA + 6), fc36 = F.at(atStation, kA + 36);
 console.log(`forecast correction at +6 h ${(fc6.Ta - truth - 2).toFixed(2)}, +36 h ${(fc36.Ta - truth - 2).toFixed(2)}`);
-assert.ok(fc6.Ta - truth - 2 < -1 && fc36.Ta - truth - 2 > -0.3, "correction decays through the forecast");
+// The last residual (−2 °C) fades into the learned per-hour bias, which after two
+// days of samples is still shrunk toward zero.
+assert.ok(fc6.Ta - truth - 2 < -1 && fc36.Ta - truth - 2 > -1.5 && fc36.Ta - truth - 2 < -0.3, "correction fades into a persistent bias");
+// With a full fortnight of bias state the forecast keeps most of the correction.
+let bias = null;
+for (let d = 0; d < 14; d++) bias = prepareForcing({ times, nodes, stations: [st], tA, windows, bias, biasFrom: 0 }).bias;
+const F14 = prepareForcing({ times, nodes, stations: [st], tA, windows, bias, biasFrom: kA + 1 });
+const fc36b = F14.at(F14.weightsFor({ lat: 51.4, lon: -116.2, z: 2300 }), kA + 36);
+console.log(`forecast correction at +36 h after two weeks of the same bias ${(fc36b.Ta - truth - 2).toFixed(2)}`);
+assert.ok(fc36b.Ta - truth - 2 < -1.3, "learned bias persists");
 const pIdx = times.findIndex((t) => t > t0 + 24 && t % 24 < 12);
 console.log(`precip at station ${F.at(atStation, pIdx).P.toFixed(2)} mm/h (model 1.5 ×elev, gauge 1.0×1.2 undercatch)`);
 assert.ok(F.at(atStation, pIdx).P < 1.45, "precip scaled toward the gauge");
 console.log(`wind at station ${(fs.U * 3.6).toFixed(1)} km/h (model 20, obs 40)`);
 assert.ok(fs.U * 3.6 > 30);
+// --- elevation trend: ridges 3 °C warmer than the model, valleys 2 °C colder ---
+const ridgeValley = [];
+for (let i = 0; i < 6; i++) {
+  const z = 1300 + 300 * i, err = -2 + 5 * (z - 1300) / 1500;
+  ridgeValley.push({
+    id: `rv${i}`, name: `RV${i}`, lat: 51.0 + 0.15 * i, lon: -116.8 + 0.25 * i, z, wind: false, precip: null,
+    o: { T: times.map((t) => (t <= tA ? -5 - 0.0065 * (z - 2000) + 2 + err : null)), RH: times.map(() => null), U: times.map(() => null), HS: times.map(() => null), P: times.map(() => null) },
+  });
+}
+const Fe = prepareForcing({ times, nodes, stations: ridgeValley, tA, windows: [] });
+const away = (z) => Fe.at(Fe.weightsFor({ lat: 52.1, lon: -115.4, z }), 30).Ta - (-5 - 0.0065 * (z - 2000) + 2);
+console.log(`trend ${Fe.trend.b} °C/km; correction far from any station at 2800 m ${away(2800).toFixed(2)}, 1400 m ${away(1400).toFixed(2)}`);
+assert.ok(away(2800) > 1.5 && away(1400) < -0.8, "ridge/valley pattern carried to places without a station");
+
 console.log("forcing + time tests passed");

@@ -9,7 +9,9 @@ The model is checked against Parks Canada field profiles, not just station snow 
 | `validation/TRANSCRIBE.md` | How profiles are transcribed: schema, grain symbols, hardness index. |
 | `validation/observed/{season}/*.json` | One JSON per profile: layers, grain form and size, hardness, temperatures, tests, named layers. `index.csv` lists them all. |
 | `validation/compare.mjs` | Scores a set of model point profiles against the observed ones. |
-| `validation/report/` | Scores per model version (`{label}-summary.md`, `{label}-profiles.json`). |
+| `validation/report/` | Scores per model version (`{label}-summary.md`, `{label}-profiles.json`, `{label}-forcing-skill.md`), and `v3-vs-v2.md`. |
+| `scripts/replay.mjs` | Replays past seasons locally for the model's points, from the forcing cache and station archive. `--code` runs another checkout (e.g. a git worktree of an older version) on the same inputs. |
+| `scripts/forcing-skill.mjs` | Scores air temperature and humidity at the stations: analysis with each station withheld, and 48 h forecasts. |
 | `.github/workflows/export-validation-data.yml` | Copies the live site's past-season point profiles and the weather explorer's 3-year hourly station archive to the `validation-data` branch. |
 | `.github/workflows/cache-forcing.yml` | Caches the archived HRDPS forcing at every model node on the `forcing-cache` branch, for local replays. |
 
@@ -19,6 +21,15 @@ git fetch origin validation-data && mkdir -p /tmp/vd && git archive FETCH_HEAD |
 node validation/compare.mjs --model /tmp/vd/model --label v2
 ```
 The model directory needs `points.json` and `{season}/{pointId}.json.gz`, which is the layout of the export and of local replays.
+
+## Replay a model change before releasing it
+```
+git fetch origin forcing-cache && mkdir -p /tmp/fc && git archive FETCH_HEAD | tar -x -C /tmp/fc
+node scripts/replay.mjs --forcing /tmp/fc --stations /tmp/vd/stations --out /tmp/replay --nodes dem
+node validation/compare.mjs --model /tmp/replay --label v4
+node scripts/forcing-skill.mjs --forcing /tmp/fc --stations /tmp/vd/stations --seasons 2023-24,2024-25,2025-26 --nodes dem
+```
+A full three-season replay takes about a minute and a half. `--nodes dem` matches what the live site receives.
 
 ## Matching and scores
 **Matching.**

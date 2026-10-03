@@ -8,12 +8,18 @@
 //     lapse rate fitted across all nodes, precipitation scaled +5 %/100 m.
 //   • Station correction: at each station the observation minus the model
 //     first guess is a residual (temperature, humidity) or a log-ratio (wind,
-//     24 h precipitation). Residuals are spread to the target with a Gaussian
-//     kernel in horizontal distance AND elevation difference, shrunk toward zero
-//     away from stations. Ridge-top stations therefore correct alpine cells and
-//     valley stations correct valley cells.
-//   • Forecast hours: residuals persist from the last observed hours and decay
-//     (e-folding 12 h for temperature and wind, 6 h for humidity); precipitation
+//     24 h precipitation).
+//   • Temperature profile: each hour, the temperature residuals are fitted
+//     against station elevation (a + b·Δz, shrunk toward zero), so the model's
+//     vertical profile is corrected everywhere, e.g. ridge-top inversions the
+//     model misses. What is left at each station (the local residual) is spread
+//     to the target with a Gaussian kernel in horizontal distance AND elevation
+//     difference, shrunk toward zero away from stations. Ridge-top stations
+//     therefore correct alpine cells and valley stations correct valley cells.
+//   • Forecast hours: the last observed residuals fade (e-folding 6 h for
+//     temperature and humidity, 12 h for wind) into a persistent bias learned
+//     per station and hour of day over the last ~2 weeks of analysis (`bias`,
+//     an exponentially weighted state carried between runs). Precipitation
 //     keeps the raw model amounts.
 import { kmBetween } from "./domain.js";
 import { newSnowDensity } from "./snowpack.js";
@@ -44,12 +50,35 @@ export function snowFraction(Ta) {
 const KT = { L: 20, Z: 400, k0: 0.15 };
 const KW = { L: 20, Z: 300, k0: 0.15 };
 const KP = { L: 25, Z: 800, k0: 0.4 };
-const TAU_T = 12, TAU_RH = 6, TAU_U = 12;
+const TAU_T = 6, TAU_RH = 6, TAU_U = 12;
+// Elevation trend of the temperature residuals: reference height, ridge
+// penalties (in "stations' worth" of shrinkage toward zero) and slope limit.
+const Z_REF = 2000, LAM_A = 1, LAM_B = 0.5, B_MAX = 8; // b in °C per km
+const BIAS_ALPHA = 1 / 14; // one sample per hour of day per day → ~2-week memory
 
-export function prepareForcing({ times, nodes, stations, tA, windows }) {
+// Persistent-bias state: per station, exponentially weighted residual means by
+// UTC hour of day ({ v, w, n } per bin; the estimate is v / w, shrunk while n is small).
+export function emptyBias() { return { version: 1, trend: newBins(2), st: {} }; }
+function newBins(m) { return Array.from({ length: m }, () => ({ v: new Array(24).fill(0), w: new Array(24).fill(0), n: new Array(24).fill(0) })); }
+function binUpdate(b, h, x) { b.v[h] += BIAS_ALPHA * (x - b.v[h]); b.w[h] += BIAS_ALPHA * (1 - b.w[h]); b.n[h]++; }
+function binEst(b, h) {
+  // Smooth over neighbouring hours (1-2-1) and shrink toward zero while samples are few.
+  let v = 0, w = 0, n = 0;
+  for (const [dh, f] of [[-1, 1], [0, 2], [1, 1]]) {
+    const j = (h + dh + 24) % 24;
+    if (b.w[j] > 0) { v += f * b.v[j] / b.w[j]; w += f; n += f * b.n[j]; }
+  }
+  if (!w) return null;
+  n /= 4;
+  return (v / w) * n / (n + 3);
+}
+
+export function prepareForcing({ times, nodes, stations, tA, windows, bias = null, biasFrom = 0 }) {
   const N = times.length;
   const kA = times.indexOf(tA);
   const nodeList = nodes.filter((n) => ok(n.z));
+  const B = bias && bias.version === 1 ? JSON.parse(JSON.stringify(bias)) : emptyBias();
+  const hod = (k) => ((times[k] % 24) + 24) % 24;
 
   // Hourly lapse rate from the model nodes (least squares, clamped).
   const gamma = new Float64Array(N);
@@ -108,15 +137,65 @@ export function prepareForcing({ times, nodes, stations, tA, windows }) {
       if (ok(o.RH[k]) && ok(m.RH)) rRH[k] = clamp(o.RH[k] - m.RH, -60, 60);
       if (s.wind && ok(o.U[k]) && ok(m.U)) rU[k] = clamp(Math.log((o.U[k] + 5) / (m.U + 5)), -1.1, 1.1);
     }
-    // Mean residual over the last 6 observed hours → persisted into the forecast.
-    const tail = (arr) => { const v = []; for (let k = kA; k >= 0 && k > kA - 12 && v.length < 6; k--) if (ok(arr[k])) v.push(arr[k]); return v.length >= 2 ? v.reduce((a, b) => a + b, 0) / v.length : null; };
-    const mT_ = tail(rT), mRH_ = tail(rRH), mU_ = tail(rU);
-    for (let k = kA + 1; k < N; k++) {
-      const h = times[k] - tA;
-      if (mT_ !== null) rT[k] = mT_ * Math.exp(-h / TAU_T);
-      if (mRH_ !== null) rRH[k] = mRH_ * Math.exp(-h / TAU_RH);
-      if (mU_ !== null) rU[k] = mU_ * Math.exp(-h / TAU_U);
+    return { s, nw, rT, rRH, rU, mP, mT, x: (s.z - Z_REF) / 1000 };
+  });
+
+  // Hourly elevation trend of the temperature residuals (ridge regression).
+  const trA = new Float64Array(N), trB = new Float64Array(N);
+  const fitTrend = (k) => {
+    let n = 0, sx = 0, sy = 0, sxx = 0, sxy = 0;
+    for (const x of st) { const r = x.rT[k]; if (!ok(r)) continue; n++; sx += x.x; sy += r; sxx += x.x * x.x; sxy += x.x * r; }
+    if (n < 4) return [0, 0];
+    // Minimise Σ(r − a − b·x)² + LAM_A·a² + LAM_B·b²
+    const a11 = n + LAM_A, a12 = sx, a22 = sxx + LAM_B;
+    const det = a11 * a22 - a12 * a12;
+    const a = (sy * a22 - sxy * a12) / det;
+    const b = clamp((a11 * sxy - a12 * sy) / det, -B_MAX, B_MAX);
+    return [(sy - b * sx) / (n + LAM_A), b];
+  };
+  for (let k = 0; k <= kA && k < N; k++) { const [a, b] = fitTrend(k); trA[k] = a; trB[k] = b; }
+  // Local residuals: what the trend leaves at each station.
+  for (const x of st) for (let k = 0; k <= kA && k < N; k++) if (ok(x.rT[k])) x.rT[k] -= trA[k] + trB[k] * x.x;
+
+  // Update the persistent-bias state with the new analysis hours.
+  for (let k = Math.max(0, biasFrom); k <= kA && k < N; k++) {
+    const h = hod(k);
+    if (st.some((x) => ok(x.rT[k]))) { binUpdate(B.trend[0], h, trA[k]); binUpdate(B.trend[1], h, trB[k]); }
+    for (const x of st) {
+      const e = B.st[x.s.id] || (B.st[x.s.id] = { T: newBins(1)[0], RH: newBins(1)[0], U: newBins(1)[0] });
+      if (ok(x.rT[k])) binUpdate(e.T, h, x.rT[k]);
+      if (ok(x.rRH[k])) binUpdate(e.RH, h, x.rRH[k]);
+      if (ok(x.rU[k])) binUpdate(e.U, 0, x.rU[k]); // wind: one bin, not by hour
     }
+  }
+
+  // Mean over the last observed hours → faded into the persistent bias.
+  const tail = (arr, n = 6) => { const v = []; for (let k = kA; k >= 0 && k > kA - 12 && v.length < n; k--) if (ok(arr[k])) v.push(arr[k]); return v.length >= 2 ? v.reduce((a, b) => a + b, 0) / v.length : null; };
+  const blend = (last, persist, h, tau) => {
+    const e = Math.exp(-h / tau);
+    if (last === null && persist === null) return null;
+    return e * (last ?? persist ?? 0) + (1 - e) * (persist ?? 0);
+  };
+  const tA_ = tail(Array.from(trA.subarray(0, kA + 1))), tB_ = tail(Array.from(trB.subarray(0, kA + 1)));
+  for (let k = kA + 1; k < N; k++) {
+    const h = times[k] - tA, hh = hod(k);
+    trA[k] = blend(tA_, binEst(B.trend[0], hh), h, TAU_T) ?? 0;
+    trB[k] = blend(tB_, binEst(B.trend[1], hh), h, TAU_T) ?? 0;
+  }
+  for (const x of st) {
+    const e = B.st[x.s.id];
+    const mT_ = tail(x.rT), mRH_ = tail(x.rRH), mU_ = tail(x.rU);
+    x.bias = { T: mT_, RH: mRH_, U: mU_ };
+    for (let k = kA + 1; k < N; k++) {
+      const h = times[k] - tA, hh = hod(k);
+      x.rT[k] = blend(mT_, e ? binEst(e.T, hh) : null, h, TAU_T);
+      x.rRH[k] = blend(mRH_, e ? binEst(e.RH, hh) : null, h, TAU_RH);
+      x.rU[k] = blend(mU_, e ? binEst(e.U, 0) : null, h, TAU_U);
+    }
+  }
+
+  for (const x of st) {
+    const { s, rT, mP, mT } = x;
     // 24 h precipitation ratios over the analysis windows.
     const lnP = new Array(N).fill(null);
     const precipDiag = [];
@@ -126,7 +205,7 @@ export function prepareForcing({ times, nodes, stations, tA, windows }) {
         let pm = 0, nm = 0, po = 0, no = 0, tsum = 0, tn = 0;
         for (let k = a; k <= b; k++) {
           if (ok(mP[k])) { pm += mP[k]; nm++; }
-          if (ok(mT[k])) { tsum += mT[k] + (rT[k] || 0); tn++; }
+          if (ok(mT[k])) { tsum += mT[k] + trA[k] + trB[k] * x.x + (rT[k] || 0); tn++; }
           if (s.precip === "gauge" && ok(s.o.P[k])) { po += s.o.P[k]; no++; }
         }
         const tMean = tn ? tsum / tn : 0;
@@ -152,9 +231,9 @@ export function prepareForcing({ times, nodes, stations, tA, windows }) {
         for (let k = Math.max(0, from); k <= b; k++) lnP[k] = r;
       }
     }
-    const kern = (p, K) => Math.exp(-((kmBetween(p, s) / K.L) ** 2) - (((p.z - s.z) / K.Z) ** 2));
-    return { s, rT, rRH, rU, lnP, kern, precipDiag, bias: { T: mT_, RH: mRH_, U: mU_ } };
-  });
+    x.kern = (p, K) => Math.exp(-((kmBetween(p, s) / K.L) ** 2) - (((p.z - s.z) / K.Z) ** 2));
+    x.lnP = lnP; x.precipDiag = precipDiag;
+  }
 
   function weightsFor(p) {
     const nw = nodeWeights(p);
@@ -178,7 +257,7 @@ export function prepareForcing({ times, nodes, stations, tA, windows }) {
       if (kW > 0.005 && ok(x.rU[k])) { sU += kW * x.rU[k]; wU += kW; }
       if (kP > 0.005 && ok(x.lnP[k])) { sP += kP * x.lnP[k]; wP += kP; }
     }
-    const Ta = (m.T ?? 0) + (wT ? sT / (wT + KT.k0) : 0);
+    const Ta = (m.T ?? 0) + trA[k] + trB[k] * (W.z - Z_REF) / 1000 + (wT ? sT / (wT + KT.k0) : 0);
     const RH = clamp((m.RH ?? 80) + (wR ? sR / (wR + KT.k0) : 0), 5, 100);
     const Ukmh = Math.max(0, (m.U ?? 10) * Math.exp(wU ? sU / (wU + KW.k0) : 0));
     const P = Math.max(0, (m.P ?? 0) * Math.exp(wP ? sP / (wP + KP.k0) : 0));
@@ -190,14 +269,18 @@ export function prepareForcing({ times, nodes, stations, tA, windows }) {
 
   function stationDiagnostics() {
     return st.map((x) => ({
-      id: x.s.id, name: x.s.name, biasT: x.bias.T === null ? null : +x.bias.T.toFixed(2),
+      // biasT: observed minus raw model over the last hours (elevation trend included);
+      // biasTlocal: what is left after the elevation trend.
+      id: x.s.id, name: x.s.name, biasT: x.bias.T === null ? null : +(x.bias.T + trA[kA] + trB[kA] * x.x).toFixed(2),
+      biasTlocal: x.bias.T === null ? null : +x.bias.T.toFixed(2),
       biasRH: x.bias.RH === null ? null : +x.bias.RH.toFixed(1),
       windRatio: x.bias.U === null ? null : +Math.exp(x.bias.U).toFixed(2),
       precip: x.precipDiag.slice(-7),
     }));
   }
 
-  return { times, kA, weightsFor, at, stationDiagnostics, gamma };
+  const trend = { a: +trA[kA].toFixed(2), b: +trB[kA].toFixed(2), zRef: Z_REF };
+  return { times, kA, weightsFor, at, stationDiagnostics, gamma, trend, bias: B };
 }
 
 // 24 h windows ending at each 17:00-local snapshot hour up to the analysis end

@@ -390,7 +390,7 @@ async function openStatus() {
     $("statusBody").innerHTML =
       `<p>Last run finished ${new Date(s.finishedAt).toLocaleString("en-CA", { timeZone: TZ })} in ${(s.durationMs / 1000).toFixed(1)} s. ` +
       `Analysis ${hf(s.analysisFrom)} → ${hf(s.analysisTo)}; ${s.doForecast ? `forecast to ${hf(s.forecastTo)}` : "forecast not re-run this hour"}. ` +
-      `Model data: ${s.modelSource}. Stations reporting: ${s.stationsReporting}. Current model lapse rate ${s.lapse} °C/km.${running ? " <b>A run is in progress.</b>" : ""}</p>` +
+      `Model data: ${s.modelSource}. Stations reporting: ${s.stationsReporting}. Current model lapse rate ${s.lapse} °C/km${s.trend ? `; stations vs model ${s.trend.a >= 0 ? "+" : ""}${s.trend.a} °C at ${s.trend.zRef} m, ${s.trend.b >= 0 ? "+" : ""}${s.trend.b} °C per km higher` : ""}.${running ? " <b>A run is in progress.</b>" : ""}</p>` +
       (s.stationErrors?.length || s.modelErrors?.length ? `<p class="muted">Fetch issues: ${[...(s.stationErrors || []), ...(s.modelErrors || [])].join("; ")}</p>` : "") +
       (lastError ? `<p class="muted">Last error (${lastError.at}): ${String(lastError.error).split("\n")[0]}</p>` : "") +
       `<p>Station corrections applied to the forecast-model first guess. Temperature and humidity: mean observed − model over the last 6 hours (persisted into the forecast with a 12 h / 6 h decay). Wind: observed ÷ model ratio. Precipitation: observed / model mm for each 24 h window ending 17:00 (gauge or snow-height gain).</p>` +
