@@ -14,6 +14,7 @@
 //     stability-corrected sensible and latent heat, rain heat
 //   • implicit heat conduction through the layers, 0 °C ground below
 //   • melt, refreeze, bucket percolation with irreducible water content
+//     (water entering snow below 0 °C refreezes until it reaches 0 °C)
 //   • sublimation / deposition, including surface-hoar growth and destruction
 //   • settlement (Crocus viscosity + Anderson destructive metamorphism)
 //   • grain metamorphism: dendricity, sphericity and grain-size rates driven by
@@ -268,11 +269,29 @@ function energyStep(sim, f, dt) {
   return { melt, dep, absSW, Ts: sim.Ts };
 }
 
+// Bucket percolation with refreeze on entry. Water moving down into snow below
+// 0 °C first refreezes until that snow reaches 0 °C (its cold content,
+// heatCap·(−T)/LF), the latent heat warming it; the new ice adds to m with d
+// unchanged, so the layer densifies. Only then does the layer hold water up to
+// its irreducible content (3 % by volume, at most 90 % of the pore space) and
+// pass the rest down. Without this, water held in snow below 0 °C stayed liquid
+// until the next energy sub-step, so profiles showed wet layers at −1 to −9 °C
+// at wetting fronts (~4 % of profiles holding liquid water). How deep a
+// front reaches hardly changes: melt arrives a few tenths of a mm per
+// sub-step, and the held water used to refreeze on the next sub-step anyway.
+// A layer the water reached counts as wet (WET) even when all of it refroze.
 function percolate(sim) {
   const L = sim.L;
   let carry = 0;
   for (let i = L.length - 1; i >= 0; i--) {
     const l = L[i];
+    const C = carry > 1e-6 && l.T < 0 ? heatCap(l) : 0;
+    if (C > 0) {
+      const fr = Math.min(carry, C * -l.T / LF);
+      carry -= fr; l.m += fr;
+      l.T = carry > 1e-9 ? 0 : Math.min(0, (C * l.T + fr * LF) / (C + fr * CI));
+      l.mk |= WET;
+    }
     l.w += carry; carry = 0;
     const pore = Math.max(0, 1 - density(l) / RHO_ICE);
     const cap = Math.min(0.03, 0.9 * pore) * 1000 * l.d;
