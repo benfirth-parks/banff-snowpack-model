@@ -10,7 +10,9 @@
 // Forecast: every 3rd day at 12 UTC the analysis stops, and the next 48 h at each
 // station are compared with what it then measured, by lead time. 48 h snowfall
 // at the snow-height stations is compared with the snowfall that this repo's
-// snow-height-driven station columns derive from the measured snow height.
+// snow-height-driven station columns derive from the measured snow height. Wind
+// at the ridge anemometers is scored both ways, for the 10 m wind and for the
+// ridge wind that drifts snow (model v5+; older code reuses the 10 m wind).
 import { readFileSync, readdirSync } from "node:fs";
 import { gunzipSync } from "node:zlib";
 import { join, resolve, dirname } from "node:path";
@@ -30,6 +32,14 @@ const gz = (f) => JSON.parse(gunzipSync(readFileSync(f)));
 const ok = (v) => v !== null && v !== undefined && Number.isFinite(v);
 const mean = (a) => (a.length ? a.reduce((s, x) => s + x, 0) / a.length : NaN);
 const f1 = (x) => (Number.isFinite(x) ? x.toFixed(1) : "–");
+const RIDGE = new Set(["fts-vulture", "fts-bosup", "fts-lookout", "fts-whymper", "fts-simpup"]);
+// Wind scores (km/h): bias, MAE, and how well hours above 25 km/h (about where
+// fresh snow starts to drift) are caught.
+const windScore = (o, m) => {
+  let a = 0, b = 0, c = 0;
+  for (let i = 0; i < o.length; i++) { if (o[i] > 25 && m[i] > 25) a++; else if (o[i] > 25) b++; else if (m[i] > 25) c++; }
+  return `${f1(mean(m) - mean(o))} | ${f1(mean(o.map((x, i) => Math.abs(m[i] - x))))} | ${f1(100 * a / (a + b))} | ${f1(100 * c / (a + c))}`;
+};
 
 const obsAll = {};
 for (const f of readdirSync(args.stations)) {
@@ -65,7 +75,7 @@ for (const season of (args.seasons || "2024-25").split(",")) {
   for (let t = t0 - 30; t <= t1; t++) times.push(t);
   const nodes = nodesFor(times);
   const all = stationsFor(times, t1);
-  const rows = [];
+  const rows = [], wind = { o: [], u: [], ur: [] };
   for (const s of STATIONS) {
     if (![...truth[s.id].values()].some((r) => ok(r.T) && r.t >= t0 && r.t <= t1)) continue;
     const F = prepareForcing({ times, nodes, stations: all.filter((x) => x.id !== s.id), tA: t1, windows: [] });
@@ -77,6 +87,7 @@ for (const season of (args.seasons || "2024-25").split(",")) {
       const f = F.at(W, k);
       if (ok(r.T)) e.push(f.Ta - r.T);
       if (ok(r.RH)) eRH.push(f.RH - r.RH);
+      if (RIDGE.has(s.id) && ok(r.U)) { wind.o.push(r.U); wind.u.push(f.U * 3.6); wind.ur.push((f.Ur ?? f.U) * 3.6); }
     }
     rows.push({ s, n: e.length, bias: mean(e), mae: mean(e.map(Math.abs)), biasRH: mean(eRH), maeRH: mean(eRH.map(Math.abs)) });
   }
@@ -84,6 +95,9 @@ for (const season of (args.seasons || "2024-25").split(",")) {
   console.log("| Station | z | T bias | T MAE | RH bias | RH MAE |\n|---|---|---|---|---|---|");
   for (const r of rows.sort((a, b) => a.s.z - b.s.z)) console.log(`| ${r.s.name} | ${r.s.z} | ${f1(r.bias)} | ${f1(r.mae)} | ${f1(r.biasRH)} | ${f1(r.maeRH)} |`);
   console.log(`| **All** | | ${f1(mean(rows.map((r) => r.bias)))} | ${f1(mean(rows.map((r) => r.mae)))} | ${f1(mean(rows.filter((r) => Number.isFinite(r.biasRH)).map((r) => r.biasRH)))} | ${f1(mean(rows.filter((r) => Number.isFinite(r.maeRH)).map((r) => r.maeRH)))} |`);
+  console.log(`\nWind at the five ridge anemometers, each withheld in turn (observed mean ${f1(mean(wind.o))} km/h)`);
+  console.log("| Wind | bias km/h | MAE km/h | hours > 25 km/h caught % | false alarms % |\n|---|---|---|---|---|");
+  console.log(`| 10 m wind | ${windScore(wind.o, wind.u)} |\n| Ridge wind | ${windScore(wind.o, wind.ur)} |`);
 
   // ---- forecast ----
   // Snowfall "truth" at the HS stations: the snow-height-driven columns, whole season.
@@ -94,7 +108,7 @@ for (const season of (args.seasons || "2024-25").split(",")) {
   const Sobs = Object.fromEntries(Object.entries(trace).map(([id, rows]) => [id, new Map(rows.map((r) => [r.t, r.S]))]));
   const snowErr = [], snowObs = [];
   const leads = [[1, 6], [7, 12], [13, 24], [25, 48]];
-  const errs = leads.map(() => ({ T: [], RH: [] }));
+  const errs = leads.map(() => ({ T: [], RH: [], o: [], u: [], ur: [] }));
   let bias = null, prev = null;
   for (let tI = t0 + 12; tI + 48 <= t1; tI += 72) {
     const from = prev === null ? tI - 30 * 24 : prev - 30;
@@ -113,6 +127,7 @@ for (const season of (args.seasons || "2024-25").split(",")) {
         const li = leads.findIndex(([a, b]) => h >= a && h <= b);
         if (ok(r.T)) errs[li].T.push(f.Ta - r.T);
         if (ok(r.RH)) errs[li].RH.push(f.RH - r.RH);
+        if (RIDGE.has(s.id) && ok(r.U)) { errs[li].o.push(r.U); errs[li].u.push(f.U * 3.6); errs[li].ur.push((f.Ur ?? f.U) * 3.6); }
       }
       if (Sobs[s.id]) {
         let fsn = 0, osn = 0, no = 0;
@@ -125,5 +140,8 @@ for (const season of (args.seasons || "2024-25").split(",")) {
   console.log(`\n## ${season}, forecast at the stations (Dec–Mar, every 3rd day from 12 UTC)`);
   console.log("| Lead h | T bias | T MAE | RH bias | RH MAE |\n|---|---|---|---|---|");
   leads.forEach(([a, b], i) => console.log(`| ${a}–${b} | ${f1(mean(errs[i].T))} | ${f1(mean(errs[i].T.map(Math.abs)))} | ${f1(mean(errs[i].RH))} | ${f1(mean(errs[i].RH.map(Math.abs)))} |`));
+  console.log("\nForecast wind at the ridge anemometers");
+  console.log("| Lead h | Wind | bias km/h | MAE km/h | hours > 25 km/h caught % | false alarms % |\n|---|---|---|---|---|---|");
+  leads.forEach(([a, b], i) => console.log(`| ${a}–${b} | 10 m | ${windScore(errs[i].o, errs[i].u)} |\n| ${a}–${b} | ridge | ${windScore(errs[i].o, errs[i].ur)} |`));
   console.log(`\n48 h snowfall at the snow-height stations (${snowErr.length} forecasts with snow): observed mean ${f1(mean(snowObs))} mm, forecast bias ${f1(mean(snowErr))} mm, MAE ${f1(mean(snowErr.map(Math.abs)))} mm`);
 }

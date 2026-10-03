@@ -28,22 +28,34 @@ export function cloneSite(site) {
   return { ...site, sims: site.sims.map((s) => ({ ...s, L: s.L.map((l) => ({ ...l })) })) };
 }
 
+// How exposed the slopes at an elevation are to the ridge-top wind: none at
+// 1800 m (sheltered below treeline), fully from 2400 m (alpine).
+export function exposure(z) { return Math.min(1, Math.max(0, (z - 1800) / 600)); }
+
 // f: { t, Ta, RH, U (m/s), dir (° from), P (mm), sf (snow fraction), ghi, dirH, difH, lw,
+//      Ur, dirR (optional: ridge-top wind speed and regional flow direction),
 //      Pwx (optional: precipitation in the weather where P is set from snow height) }
+// The flat field (a sheltered study plot) sees the local wind U throughout. On
+// the slopes, snow is moved by a wind between U and the ridge wind Ur, by
+// exposure: it drifts loose snow from the windward slope to the lee slope, loads
+// the lee slope during snowfall, and sets the density and wind mark of the snow
+// deposited. The slopes' energy balance keeps the local wind U.
 export function stepSite(site, f) {
   const sun = sunPosition((f.t - 0.5) * 3600000, site.lat, site.lon);
   const snowTot = f.P * f.sf;
   const rain = f.P * (1 - f.sf);
-  const lee = ((f.dir + 180) % 360) * DEG;
-  const load = Math.min(0.35, Math.max(0, (f.U - 5) / 15));
+  const e = f.Ur === undefined ? 0 : exposure(site.z);
+  const Us = e > 0 ? Math.exp((1 - e) * Math.log(f.U + 1.4) + e * Math.log(f.Ur + 1.4)) - 1.4 : f.U;
+  const lee = (((f.dirR ?? f.dir) + 180) % 360) * DEG;
+  const load = Math.min(0.35, Math.max(0, (Us - 5) / 15));
   const flat = site.sims[0];
   const ut = driftThreshold(flat);
-  const Q = f.U > ut ? Math.min(0.015 * (f.U - ut) ** 2, 0.1 * erodibleMass(flat)) : 0;
+  const Q = Us > ut ? Math.min(0.015 * (Us - ut) ** 2, 0.1 * erodibleMass(flat)) : 0;
   const TaK = f.Ta + 273.15;
   for (const sim of site.sims) {
-    let sw, lw, snow, drift;
+    let sw, lw, snow, drift, Ud = Us;
     if (sim.slope === 0) {
-      sw = f.ghi; lw = f.lw; snow = snowTot; drift = 0;
+      sw = f.ghi; lw = f.lw; snow = snowTot; drift = 0; Ud = f.U;
     } else {
       const c = Math.cos(sim.aspect - lee);
       const sv = (1 + Math.cos(sim.slope)) / 2;
@@ -52,6 +64,6 @@ export function stepSite(site, f) {
       snow = snowTot * (1 + load * c);
       drift = Q * c;
     }
-    stepHour(sim, { t: f.t, Ta: f.Ta, RH: f.RH, U: f.U, P: Math.max(f.P, f.Pwx ?? 0), snow, rain, sw, lw, drift });
+    stepHour(sim, { t: f.t, Ta: f.Ta, RH: f.RH, U: f.U, Ud, P: Math.max(f.P, f.Pwx ?? 0), snow, rain, sw, lw, drift });
   }
 }
