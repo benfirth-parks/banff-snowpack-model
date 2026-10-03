@@ -13,6 +13,7 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Crusts | observed 118, matched 42 (36 %); model crusts with no observed match 171 |
 | Buried surface hoar | observed 21, matched 6 (29 %); model SH with no observed match 339 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 61/180 (34 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 165/197 (84 %) |
 | Snow temperature, model − observed (below 20 cm) | bias -1.3 °C, RMSE 2.5 °C (n 45) |
 
 ### Study plots (60 profiles)
@@ -25,6 +26,7 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Crusts | observed 74, matched 23 (31 %); model crusts with no observed match 90 |
 | Buried surface hoar | observed 14, matched 6 (43 %); model SH with no observed match 209 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 35/89 (39 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 110/117 (94 %) |
 | Snow temperature, model − observed (below 20 cm) | bias -1.1 °C, RMSE 2.5 °C (n 37) |
 
 ### Test profiles (62 profiles)
@@ -37,6 +39,7 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Crusts | observed 44, matched 19 (43 %); model crusts with no observed match 81 |
 | Buried surface hoar | observed 7, matched 0 (0 %); model SH with no observed match 130 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 26/91 (29 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 55/80 (69 %) |
 | Snow temperature, model − observed (below 20 cm) | bias -2.1 °C, RMSE 2.7 °C (n 8) |
 
 ### Season 2023-24 (36 profiles)
@@ -49,6 +52,7 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Crusts | observed 41, matched 16 (39 %); model crusts with no observed match 59 |
 | Buried surface hoar | observed 2, matched 1 (50 %); model SH with no observed match 149 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 26/54 (48 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 79/92 (86 %) |
 | Snow temperature, model − observed (below 20 cm) | bias -0.1 °C, RMSE 2.1 °C (n 16) |
 
 ### Season 2024-25 (41 profiles)
@@ -61,6 +65,7 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Crusts | observed 36, matched 11 (31 %); model crusts with no observed match 24 |
 | Buried surface hoar | observed 0, matched 0 (–); model SH with no observed match 111 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 21/55 (38 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 50/56 (89 %) |
 | Snow temperature, model − observed (below 20 cm) | bias -2.1 °C, RMSE 3 °C (n 15) |
 
 ### Season 2025-26 (45 profiles)
@@ -73,6 +78,7 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Crusts | observed 41, matched 15 (37 %); model crusts with no observed match 88 |
 | Buried surface hoar | observed 19, matched 5 (26 %); model SH with no observed match 79 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 14/71 (20 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 36/49 (73 %) |
 | Snow temperature, model − observed (below 20 cm) | bias -1.8 °C, RMSE 2.4 °C (n 14) |
 
 ### Study plot: bow-summit-plot (23 profiles)
@@ -85,6 +91,7 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Crusts | observed 27, matched 10 (37 %); model crusts with no observed match 27 |
 | Buried surface hoar | observed 4, matched 4 (100 %); model SH with no observed match 80 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 16/32 (50 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 46/50 (92 %) |
 | Snow temperature, model − observed (below 20 cm) | bias -0.8 °C, RMSE 2.8 °C (n 10) |
 
 ### Study plot: goats-eye-plot (18 profiles)
@@ -97,6 +104,7 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Crusts | observed 19, matched 5 (26 %); model crusts with no observed match 47 |
 | Buried surface hoar | observed 5, matched 0 (0 %); model SH with no observed match 73 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 12/30 (40 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 39/40 (98 %) |
 | Snow temperature, model − observed (below 20 cm) | bias 0.2 °C, RMSE 1.4 °C (n 15) |
 
 ### Study plot: simpson-plot (6 profiles)
@@ -109,6 +117,7 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Crusts | observed 11, matched 0 (0 %); model crusts with no observed match 2 |
 | Buried surface hoar | observed 2, matched 2 (100 %); model SH with no observed match 48 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 5/8 (63 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 16/18 (89 %) |
 | Snow temperature, model − observed (below 20 cm) | bias -3.2 °C, RMSE 3.9 °C (n 5) |
 
 ### Study plot: tak-falls-plot (13 profiles)
@@ -121,6 +130,7 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Crusts | observed 17, matched 8 (47 %); model crusts with no observed match 14 |
 | Buried surface hoar | observed 3, matched 0 (0 %); model SH with no observed match 8 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 2/19 (11 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 9/9 (100 %) |
 | Snow temperature, model − observed (below 20 cm) | bias -2.7 °C, RMSE 3.3 °C (n 7) |
 
 ### Grain groups: observed (rows) vs model (columns), grid cells

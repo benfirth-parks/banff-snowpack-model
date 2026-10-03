@@ -65,13 +65,67 @@
    "obs": 1,
    "model": 5,
    "hit": 1,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     59,
+     0.3,
+     true
+    ],
+    [
+     52,
+     0.6,
+     true
+    ],
+    [
+     52,
+     0.6,
+     true
+    ],
+    [
+     51,
+     0.6,
+     true
+    ],
+    [
+     49,
+     0.6,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 1,
    "model": 5,
    "hit": 1,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     33,
+     2.4,
+     true
+    ],
+    [
+     33,
+     3.5,
+     true
+    ],
+    [
+     31,
+     2,
+     true
+    ],
+    [
+     23,
+     2.4,
+     false
+    ],
+    [
+     14,
+     2,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -82,6 +136,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": -1.4,
   "tempRMSE": 1.7,
   "modelSurface": "PP"
@@ -152,13 +210,62 @@
    "obs": 0,
    "model": 5,
    "hit": 0,
-   "falseAlarm": 5
+   "falseAlarm": 5,
+   "layers": [
+    [
+     57,
+     0.3,
+     false
+    ],
+    [
+     51,
+     0.6,
+     false
+    ],
+    [
+     50,
+     0.6,
+     false
+    ],
+    [
+     49,
+     0.6,
+     false
+    ],
+    [
+     48,
+     0.7,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     33,
+     2.6,
+     false
+    ],
+    [
+     32,
+     3.4,
+     false
+    ],
+    [
+     30,
+     2,
+     false
+    ],
+    [
+     7,
+     2.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -169,6 +276,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "SH"
@@ -239,13 +350,37 @@
    "obs": 1,
    "model": 2,
    "hit": 1,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     42,
+     0.7,
+     false
+    ],
+    [
+     34,
+     1,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     21,
+     2.2,
+     false
+    ],
+    [
+     4,
+     3.9,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -263,6 +398,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 2,
+   "confirmed": 2
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -333,13 +472,87 @@
    "obs": 0,
    "model": 5,
    "hit": 0,
-   "falseAlarm": 5
+   "falseAlarm": 5,
+   "layers": [
+    [
+     55,
+     0.7,
+     false
+    ],
+    [
+     49,
+     0.9,
+     false
+    ],
+    [
+     49,
+     0.8,
+     false
+    ],
+    [
+     48,
+     0.8,
+     false
+    ],
+    [
+     46,
+     0.9,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 9,
    "hit": 0,
-   "falseAlarm": 9
+   "falseAlarm": 9,
+   "layers": [
+    [
+     64,
+     2.1,
+     false
+    ],
+    [
+     63,
+     2.2,
+     false
+    ],
+    [
+     63,
+     2.5,
+     false
+    ],
+    [
+     59,
+     2.6,
+     false
+    ],
+    [
+     31,
+     2.4,
+     false
+    ],
+    [
+     31,
+     3.4,
+     false
+    ],
+    [
+     29,
+     2,
+     false
+    ],
+    [
+     22,
+     2.5,
+     false
+    ],
+    [
+     13,
+     2,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -364,6 +577,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "DF"
@@ -434,13 +651,57 @@
    "obs": 1,
    "model": 7,
    "hit": 1,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     29,
+     1.7,
+     true
+    ],
+    [
+     26,
+     1.9,
+     true
+    ],
+    [
+     24,
+     2.1,
+     true
+    ],
+    [
+     22,
+     2.4,
+     false
+    ],
+    [
+     21,
+     2.5,
+     false
+    ],
+    [
+     20,
+     2.8,
+     false
+    ],
+    [
+     18,
+     2.2,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     6,
+     3.5,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -458,6 +719,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": 0.5,
   "tempRMSE": 0.7,
   "modelSurface": "SH"
@@ -528,13 +793,77 @@
    "obs": 0,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     63,
+     0.6,
+     false
+    ],
+    [
+     53,
+     0.9,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 10,
    "hit": 0,
-   "falseAlarm": 10
+   "falseAlarm": 10,
+   "layers": [
+    [
+     64,
+     3.1,
+     false
+    ],
+    [
+     61,
+     2.1,
+     false
+    ],
+    [
+     61,
+     2.3,
+     false
+    ],
+    [
+     60,
+     2.6,
+     false
+    ],
+    [
+     57,
+     2.6,
+     false
+    ],
+    [
+     30,
+     2.4,
+     false
+    ],
+    [
+     30,
+     3.5,
+     false
+    ],
+    [
+     28,
+     2,
+     false
+    ],
+    [
+     21,
+     2.4,
+     false
+    ],
+    [
+     13,
+     2,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -545,6 +874,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "SH"
@@ -615,13 +948,47 @@
    "obs": 1,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     22,
+     2.4,
+     false
+    ],
+    [
+     21,
+     2.7,
+     false
+    ],
+    [
+     20,
+     2.8,
+     false
+    ],
+    [
+     19,
+     3,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     60,
+     3.5,
+     false
+    ],
+    [
+     6,
+     3.5,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -632,6 +999,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 2,
+   "confirmed": 2
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "SH"
@@ -702,15 +1073,48 @@
    "obs": 1,
    "model": 3,
    "hit": 0,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     50,
+     0.8,
+     false
+    ],
+    [
+     49,
+     0.9,
+     false
+    ],
+    [
+     49,
+     1,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     20,
+     2.2,
+     false
+    ],
+    [
+     3,
+     3.9,
+     false
+    ]
+   ]
   },
   "tests": [],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": -2.1,
   "tempRMSE": 2.3,
   "modelSurface": "PP"
@@ -781,13 +1185,56 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 8,
    "hit": 0,
-   "falseAlarm": 8
+   "falseAlarm": 8,
+   "layers": [
+    [
+     73,
+     5.7,
+     false
+    ],
+    [
+     70,
+     2.7,
+     false
+    ],
+    [
+     70,
+     2.3,
+     false
+    ],
+    [
+     69,
+     2.5,
+     false
+    ],
+    [
+     27,
+     5.1,
+     false
+    ],
+    [
+     25,
+     2.2,
+     false
+    ],
+    [
+     19,
+     2.7,
+     false
+    ],
+    [
+     18,
+     2.6,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -805,6 +1252,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -875,15 +1326,42 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     62,
+     2.6,
+     false
+    ],
+    [
+     61,
+     7.4,
+     false
+    ],
+    [
+     55,
+     3.4,
+     false
+    ],
+    [
+     6,
+     2.7,
+     false
+    ]
+   ]
   },
   "tests": [],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": 0.3,
   "tempRMSE": 0.7,
   "modelSurface": "DF"
@@ -954,13 +1432,76 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 12,
    "hit": 0,
-   "falseAlarm": 12
+   "falseAlarm": 12,
+   "layers": [
+    [
+     62,
+     8,
+     false
+    ],
+    [
+     62,
+     3.5,
+     false
+    ],
+    [
+     60,
+     3.1,
+     false
+    ],
+    [
+     57,
+     2.1,
+     false
+    ],
+    [
+     57,
+     2.3,
+     false
+    ],
+    [
+     56,
+     2.6,
+     false
+    ],
+    [
+     53,
+     2.6,
+     false
+    ],
+    [
+     27,
+     2.4,
+     false
+    ],
+    [
+     27,
+     3.5,
+     false
+    ],
+    [
+     25,
+     2,
+     false
+    ],
+    [
+     19,
+     2.4,
+     false
+    ],
+    [
+     12,
+     2,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -971,6 +1512,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": -0.9,
   "tempRMSE": 1.3,
   "modelSurface": "PP"
@@ -1041,13 +1586,26 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     53,
+     2.4,
+     false
+    ],
+    [
+     5,
+     2.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -1065,6 +1623,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 2,
+   "confirmed": 2
+  },
   "tempBias": 1.1,
   "tempRMSE": 1.5,
   "modelSurface": "DF"
@@ -1135,13 +1697,36 @@
    "obs": 2,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     62,
+     2.6,
+     false
+    ],
+    [
+     62,
+     7.5,
+     false
+    ],
+    [
+     55,
+     3.5,
+     false
+    ],
+    [
+     6,
+     3.5,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -1166,6 +1751,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "DF"
@@ -1236,13 +1825,36 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     62,
+     2.6,
+     false
+    ],
+    [
+     62,
+     7.5,
+     false
+    ],
+    [
+     55,
+     3.5,
+     false
+    ],
+    [
+     6,
+     3.5,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -1253,6 +1865,10 @@
     "modelLayer": "PP"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "DF"
@@ -1323,15 +1939,37 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 3,
    "hit": 0,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     49,
+     5.1,
+     false
+    ],
+    [
+     19,
+     2.2,
+     false
+    ],
+    [
+     4,
+     3.9,
+     false
+    ]
+   ]
   },
   "tests": [],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": -2.7,
   "tempRMSE": 3.1,
   "modelSurface": "PP"
@@ -1402,13 +2040,51 @@
    "obs": 6,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 7,
    "hit": 0,
-   "falseAlarm": 7
+   "falseAlarm": 7,
+   "layers": [
+    [
+     48,
+     5.7,
+     false
+    ],
+    [
+     45,
+     2.3,
+     false
+    ],
+    [
+     45,
+     2.6,
+     false
+    ],
+    [
+     16,
+     4.5,
+     false
+    ],
+    [
+     15,
+     2.1,
+     false
+    ],
+    [
+     9,
+     2.9,
+     false
+    ],
+    [
+     6,
+     2.4,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -1419,6 +2095,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": -1.9,
   "tempRMSE": 2.4,
   "modelSurface": "DF"
@@ -1489,13 +2169,31 @@
    "obs": 2,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 3,
    "hit": 0,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     56,
+     2.5,
+     false
+    ],
+    [
+     55,
+     7,
+     false
+    ],
+    [
+     50,
+     3.4,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -1506,6 +2204,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "SH"
@@ -1576,13 +2278,36 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     59,
+     2.6,
+     false
+    ],
+    [
+     59,
+     7.5,
+     false
+    ],
+    [
+     53,
+     3.5,
+     false
+    ],
+    [
+     5,
+     3.5,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -1600,6 +2325,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "DF"
@@ -1670,13 +2399,87 @@
    "obs": 1,
    "model": 12,
    "hit": 1,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     76,
+     1,
+     true
+    ],
+    [
+     75,
+     1,
+     true
+    ],
+    [
+     74,
+     1,
+     true
+    ],
+    [
+     73,
+     1,
+     true
+    ],
+    [
+     72,
+     1,
+     true
+    ],
+    [
+     71,
+     1,
+     true
+    ],
+    [
+     69,
+     1.2,
+     true
+    ],
+    [
+     68,
+     1.3,
+     true
+    ],
+    [
+     67,
+     1.4,
+     true
+    ],
+    [
+     65,
+     1.5,
+     true
+    ],
+    [
+     63,
+     1.5,
+     false
+    ],
+    [
+     60,
+     1.7,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 1,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     76,
+     2.7,
+     false
+    ],
+    [
+     5,
+     3.5,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -1701,6 +2504,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": 1.3,
   "tempRMSE": 1.5,
   "modelSurface": "DF"
@@ -1771,13 +2578,102 @@
    "obs": 2,
    "model": 8,
    "hit": 2,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     71,
+     0.8,
+     true
+    ],
+    [
+     70,
+     1.4,
+     true
+    ],
+    [
+     61,
+     1.3,
+     true
+    ],
+    [
+     59,
+     1.4,
+     true
+    ],
+    [
+     57,
+     1.5,
+     true
+    ],
+    [
+     56,
+     1.6,
+     true
+    ],
+    [
+     54,
+     2.3,
+     true
+    ],
+    [
+     53,
+     2.1,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 9,
    "hit": 0,
-   "falseAlarm": 9
+   "falseAlarm": 9,
+   "layers": [
+    [
+     51,
+     2.1,
+     false
+    ],
+    [
+     51,
+     2.3,
+     false
+    ],
+    [
+     50,
+     2.6,
+     false
+    ],
+    [
+     47,
+     2.6,
+     false
+    ],
+    [
+     25,
+     2.4,
+     false
+    ],
+    [
+     25,
+     3.5,
+     false
+    ],
+    [
+     24,
+     2,
+     false
+    ],
+    [
+     18,
+     2.4,
+     false
+    ],
+    [
+     11,
+     2,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -1795,6 +2691,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": -0.4,
   "tempRMSE": 0.7,
   "modelSurface": "PP"
@@ -1865,15 +2765,63 @@
    "obs": 1,
    "model": 7,
    "hit": 1,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     50,
+     1.7,
+     true
+    ],
+    [
+     49,
+     1.6,
+     true
+    ],
+    [
+     48,
+     1.7,
+     true
+    ],
+    [
+     25,
+     3.2,
+     false
+    ],
+    [
+     18,
+     3.1,
+     false
+    ],
+    [
+     17,
+     3.1,
+     false
+    ],
+    [
+     12,
+     3,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     58,
+     2,
+     false
+    ]
+   ]
   },
   "tests": [],
+  "weak": {
+   "model": 1,
+   "confirmed": 1
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -1944,13 +2892,76 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 12,
    "hit": 0,
-   "falseAlarm": 12
+   "falseAlarm": 12,
+   "layers": [
+    [
+     103,
+     3.9,
+     false
+    ],
+    [
+     101,
+     2.8,
+     false
+    ],
+    [
+     79,
+     7,
+     false
+    ],
+    [
+     77,
+     2.8,
+     false
+    ],
+    [
+     77,
+     2.9,
+     false
+    ],
+    [
+     75,
+     2.1,
+     false
+    ],
+    [
+     74,
+     2.1,
+     false
+    ],
+    [
+     42,
+     5.2,
+     false
+    ],
+    [
+     30,
+     2.7,
+     false
+    ],
+    [
+     29,
+     2.4,
+     false
+    ],
+    [
+     22,
+     4.1,
+     false
+    ],
+    [
+     17,
+     2.7,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -1961,6 +2972,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -2031,13 +3046,31 @@
    "obs": 2,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 3,
    "hit": 0,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     43,
+     5.1,
+     false
+    ],
+    [
+     17,
+     2.2,
+     false
+    ],
+    [
+     3,
+     3.9,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -2048,6 +3081,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": -0.1,
   "tempRMSE": 0.5,
   "modelSurface": "MF"
@@ -2118,13 +3155,57 @@
    "obs": 1,
    "model": 5,
    "hit": 0,
-   "falseAlarm": 5
+   "falseAlarm": 5,
+   "layers": [
+    [
+     19,
+     3.4,
+     false
+    ],
+    [
+     17,
+     3.3,
+     false
+    ],
+    [
+     15,
+     3.3,
+     false
+    ],
+    [
+     13,
+     3.2,
+     false
+    ],
+    [
+     10,
+     3.3,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 3,
    "hit": 0,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     66,
+     2.2,
+     false
+    ],
+    [
+     61,
+     2.3,
+     false
+    ],
+    [
+     8,
+     2,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -2135,6 +3216,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "DF"
@@ -2205,13 +3290,67 @@
    "obs": 1,
    "model": 1,
    "hit": 1,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     68,
+     1.2,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 9,
    "hit": 0,
-   "falseAlarm": 9
+   "falseAlarm": 9,
+   "layers": [
+    [
+     48,
+     2.1,
+     false
+    ],
+    [
+     48,
+     2.3,
+     false
+    ],
+    [
+     48,
+     2.6,
+     false
+    ],
+    [
+     45,
+     2.6,
+     false
+    ],
+    [
+     25,
+     2.4,
+     false
+    ],
+    [
+     24,
+     3.5,
+     false
+    ],
+    [
+     23,
+     2,
+     false
+    ],
+    [
+     17,
+     2.4,
+     false
+    ],
+    [
+     11,
+     2,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -2243,6 +3382,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -2313,13 +3456,51 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 7,
    "hit": 0,
-   "falseAlarm": 7
+   "falseAlarm": 7,
+   "layers": [
+    [
+     41,
+     5.7,
+     false
+    ],
+    [
+     39,
+     2.3,
+     false
+    ],
+    [
+     38,
+     2.6,
+     false
+    ],
+    [
+     14,
+     4.5,
+     false
+    ],
+    [
+     13,
+     2.1,
+     false
+    ],
+    [
+     8,
+     2.9,
+     false
+    ],
+    [
+     6,
+     2.4,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -2330,6 +3511,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "SH"
@@ -2400,13 +3585,47 @@
    "obs": 1,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     39,
+     3.4,
+     false
+    ],
+    [
+     30,
+     3.2,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     85,
+     2.8,
+     false
+    ],
+    [
+     80,
+     4,
+     false
+    ],
+    [
+     69,
+     2.7,
+     false
+    ],
+    [
+     5,
+     3.5,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -2424,6 +3643,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": 0.7,
   "tempRMSE": 1.5,
   "modelSurface": "DF"
@@ -2494,13 +3717,66 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 10,
    "hit": 0,
-   "falseAlarm": 10
+   "falseAlarm": 10,
+   "layers": [
+    [
+     37,
+     3,
+     false
+    ],
+    [
+     37,
+     3.9,
+     false
+    ],
+    [
+     33,
+     2.4,
+     false
+    ],
+    [
+     30,
+     4,
+     false
+    ],
+    [
+     28,
+     2.1,
+     false
+    ],
+    [
+     17,
+     2.6,
+     false
+    ],
+    [
+     17,
+     2.1,
+     false
+    ],
+    [
+     16,
+     3.1,
+     false
+    ],
+    [
+     6,
+     2.7,
+     false
+    ],
+    [
+     2,
+     4.5,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -2511,6 +3787,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 2
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "DF"
@@ -2581,15 +3861,68 @@
    "obs": 1,
    "model": 6,
    "hit": 1,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     92,
+     0.3,
+     false
+    ],
+    [
+     62,
+     1,
+     false
+    ],
+    [
+     60,
+     1.2,
+     true
+    ],
+    [
+     59,
+     1.4,
+     true
+    ],
+    [
+     57,
+     1.6,
+     true
+    ],
+    [
+     55,
+     1.6,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 3,
    "hit": 0,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     41,
+     5.1,
+     false
+    ],
+    [
+     17,
+     2.2,
+     false
+    ],
+    [
+     4,
+     3.9,
+     false
+    ]
+   ]
   },
   "tests": [],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "DF"
@@ -2660,13 +3993,67 @@
    "obs": 2,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     108,
+     0.7,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 9,
    "hit": 0,
-   "falseAlarm": 9
+   "falseAlarm": 9,
+   "layers": [
+    [
+     45,
+     2.1,
+     false
+    ],
+    [
+     45,
+     2.3,
+     false
+    ],
+    [
+     45,
+     2.6,
+     false
+    ],
+    [
+     43,
+     2.6,
+     false
+    ],
+    [
+     23,
+     2.4,
+     false
+    ],
+    [
+     23,
+     3.5,
+     false
+    ],
+    [
+     22,
+     2,
+     false
+    ],
+    [
+     17,
+     2.4,
+     false
+    ],
+    [
+     11,
+     2,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -2698,6 +4085,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": 0.1,
   "tempRMSE": 1.2,
   "modelSurface": "MF"
@@ -2768,13 +4159,47 @@
    "obs": 1,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     39,
+     3.5,
+     false
+    ],
+    [
+     30,
+     3.3,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     82,
+     2.8,
+     false
+    ],
+    [
+     77,
+     4,
+     false
+    ],
+    [
+     67,
+     2.7,
+     false
+    ],
+    [
+     5,
+     3.5,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -2792,6 +4217,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": -0.8,
   "tempRMSE": 1.5,
   "modelSurface": "SH"
@@ -2862,13 +4291,52 @@
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     139,
+     0.8,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 6,
    "hit": 0,
-   "falseAlarm": 6
+   "falseAlarm": 6,
+   "layers": [
+    [
+     76,
+     2.3,
+     false
+    ],
+    [
+     72,
+     3.3,
+     false
+    ],
+    [
+     51,
+     2.6,
+     false
+    ],
+    [
+     50,
+     5.2,
+     false
+    ],
+    [
+     47,
+     2.9,
+     false
+    ],
+    [
+     8,
+     2.2,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -2879,6 +4347,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 1
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "MFcr"
@@ -2949,13 +4421,52 @@
    "obs": 1,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     139,
+     0.8,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 6,
    "hit": 0,
-   "falseAlarm": 6
+   "falseAlarm": 6,
+   "layers": [
+    [
+     76,
+     2.3,
+     false
+    ],
+    [
+     72,
+     3.3,
+     false
+    ],
+    [
+     51,
+     2.6,
+     false
+    ],
+    [
+     50,
+     5.2,
+     false
+    ],
+    [
+     47,
+     2.9,
+     false
+    ],
+    [
+     8,
+     2.2,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -2966,6 +4477,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "MFcr"
@@ -3036,13 +4551,77 @@
    "obs": 1,
    "model": 4,
    "hit": 1,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     122,
+     1.1,
+     true
+    ],
+    [
+     120,
+     1,
+     true
+    ],
+    [
+     118,
+     1,
+     true
+    ],
+    [
+     116,
+     0.9,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 8,
    "hit": 0,
-   "falseAlarm": 8
+   "falseAlarm": 8,
+   "layers": [
+    [
+     57,
+     5.7,
+     false
+    ],
+    [
+     55,
+     2.7,
+     false
+    ],
+    [
+     55,
+     2.3,
+     false
+    ],
+    [
+     54,
+     2.5,
+     false
+    ],
+    [
+     23,
+     5.1,
+     false
+    ],
+    [
+     22,
+     2.2,
+     false
+    ],
+    [
+     17,
+     2.7,
+     false
+    ],
+    [
+     16,
+     2.6,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -3060,6 +4639,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -3130,13 +4713,81 @@
    "obs": 4,
    "model": 13,
    "hit": 4,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     98,
+     0.3,
+     true
+    ],
+    [
+     96,
+     0.3,
+     true
+    ],
+    [
+     95,
+     0.3,
+     true
+    ],
+    [
+     94,
+     0.6,
+     true
+    ],
+    [
+     93,
+     0.7,
+     true
+    ],
+    [
+     91,
+     0.8,
+     true
+    ],
+    [
+     89,
+     0.9,
+     true
+    ],
+    [
+     85,
+     1.6,
+     true
+    ],
+    [
+     84,
+     1.7,
+     true
+    ],
+    [
+     73,
+     2.2,
+     true
+    ],
+    [
+     62,
+     3.2,
+     true
+    ],
+    [
+     58,
+     3,
+     true
+    ],
+    [
+     52,
+     3,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -3154,6 +4805,10 @@
     "modelLayer": "MF"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": 1.3,
   "tempRMSE": 2.4,
   "modelSurface": "PP"
@@ -3224,13 +4879,82 @@
    "obs": 3,
    "model": 9,
    "hit": 2,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     147,
+     0.5,
+     true
+    ],
+    [
+     146,
+     0.6,
+     true
+    ],
+    [
+     144,
+     0.6,
+     true
+    ],
+    [
+     142,
+     0.6,
+     true
+    ],
+    [
+     141,
+     0.6,
+     true
+    ],
+    [
+     114,
+     1.5,
+     true
+    ],
+    [
+     112,
+     1.4,
+     true
+    ],
+    [
+     38,
+     3.6,
+     false
+    ],
+    [
+     29,
+     3.4,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     77,
+     2.8,
+     false
+    ],
+    [
+     73,
+     4,
+     false
+    ],
+    [
+     64,
+     2.7,
+     false
+    ],
+    [
+     5,
+     3.5,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -3248,6 +4972,10 @@
     "modelLayer": "MF"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": 0.4,
   "tempRMSE": 1.1,
   "modelSurface": "DF"
@@ -3318,13 +5046,36 @@
    "obs": 0,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     25,
+     0.3,
+     false
+    ],
+    [
+     23,
+     0.4,
+     false
+    ],
+    [
+     23,
+     0.4,
+     false
+    ],
+    [
+     21,
+     0.5,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -3342,6 +5093,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -3412,13 +5167,31 @@
    "obs": 1,
    "model": 3,
    "hit": 1,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     3,
+     2.6,
+     true
+    ],
+    [
+     1,
+     2.8,
+     true
+    ],
+    [
+     0,
+     2.5,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -3436,6 +5209,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": -1.3,
   "tempRMSE": 1.4,
   "modelSurface": "SH"
@@ -3506,13 +5283,36 @@
    "obs": 2,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     25,
+     0.6,
+     false
+    ],
+    [
+     22,
+     0.9,
+     false
+    ],
+    [
+     21,
+     1,
+     false
+    ],
+    [
+     20,
+     1,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -3523,6 +5323,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -3593,15 +5397,42 @@
    "obs": 3,
    "model": 4,
    "hit": 1,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     26,
+     0.6,
+     false
+    ],
+    [
+     22,
+     0.9,
+     true
+    ],
+    [
+     21,
+     1,
+     true
+    ],
+    [
+     21,
+     1,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -3672,13 +5503,32 @@
    "obs": 2,
    "model": 2,
    "hit": 2,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     3,
+     3.1,
+     true
+    ],
+    [
+     2,
+     3.5,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     21,
+     3.6,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -3696,6 +5546,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 2,
+   "confirmed": 2
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "SH"
@@ -3766,13 +5620,21 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     39,
+     2.6,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -3790,6 +5652,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "FC"
@@ -3860,15 +5726,21 @@
    "obs": 3,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -3939,13 +5811,15 @@
    "obs": 2,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -3956,6 +5830,10 @@
     "modelLayer": "RG"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "RG"
@@ -4026,13 +5904,15 @@
    "obs": 2,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -4064,6 +5944,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 1,
+   "confirmed": 1
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "DF"
@@ -4134,13 +6018,32 @@
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     21,
+     0.6,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     20,
+     3.5,
+     false
+    ],
+    [
+     13,
+     2.5,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -4158,6 +6061,10 @@
     "modelLayer": "MFcr"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "SH"
@@ -4228,13 +6135,15 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -4245,6 +6154,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "DF"
@@ -4315,13 +6228,15 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -4339,6 +6254,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": -2.7,
   "tempRMSE": 3.3,
   "modelSurface": "SH"
@@ -4409,13 +6328,36 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     53,
+     4.7,
+     false
+    ],
+    [
+     52,
+     5.5,
+     false
+    ],
+    [
+     35,
+     4.8,
+     false
+    ],
+    [
+     34,
+     2.6,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -4433,6 +6375,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 2,
+   "confirmed": 2
+  },
   "tempBias": 0.3,
   "tempRMSE": 0.4,
   "modelSurface": "DF"
@@ -4503,13 +6449,21 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     104,
+     2.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -4527,6 +6481,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -4597,13 +6555,37 @@
    "obs": 1,
    "model": 2,
    "hit": 1,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     26,
+     1.4,
+     true
+    ],
+    [
+     1,
+     3.2,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     146,
+     2.1,
+     false
+    ],
+    [
+     121,
+     2,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -4614,6 +6596,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 2,
+   "confirmed": 1
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "SH"
@@ -4684,15 +6670,52 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 6,
    "hit": 0,
-   "falseAlarm": 6
+   "falseAlarm": 6,
+   "layers": [
+    [
+     67,
+     2.3,
+     false
+    ],
+    [
+     65,
+     3.7,
+     false
+    ],
+    [
+     47,
+     4.7,
+     false
+    ],
+    [
+     46,
+     5.5,
+     false
+    ],
+    [
+     31,
+     4.8,
+     false
+    ],
+    [
+     30,
+     2.6,
+     false
+    ]
+   ]
   },
   "tests": [],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": -0.3,
   "tempRMSE": 0.8,
   "modelSurface": "SH"
@@ -4763,15 +6786,68 @@
    "obs": 1,
    "model": 3,
    "hit": 1,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     14,
+     2.3,
+     true
+    ],
+    [
+     10,
+     2.8,
+     true
+    ],
+    [
+     4,
+     3.5,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 6,
    "hit": 0,
-   "falseAlarm": 6
+   "falseAlarm": 6,
+   "layers": [
+    [
+     144,
+     5.4,
+     false
+    ],
+    [
+     114,
+     2.9,
+     false
+    ],
+    [
+     110,
+     8,
+     false
+    ],
+    [
+     84,
+     4.8,
+     false
+    ],
+    [
+     76,
+     2.2,
+     false
+    ],
+    [
+     52,
+     3.3,
+     false
+    ]
+   ]
   },
   "tests": [],
+  "weak": {
+   "model": 3,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "SH"
@@ -4842,15 +6918,37 @@
    "obs": 1,
    "model": 3,
    "hit": 0,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     48,
+     0.5,
+     false
+    ],
+    [
+     47,
+     0.6,
+     false
+    ],
+    [
+     47,
+     0.7,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -4921,13 +7019,15 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -4938,6 +7038,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": -3.8,
   "tempRMSE": 4.8,
   "modelSurface": "PP"
@@ -5008,15 +7112,52 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 6,
    "hit": 0,
-   "falseAlarm": 6
+   "falseAlarm": 6,
+   "layers": [
+    [
+     64,
+     2.3,
+     false
+    ],
+    [
+     62,
+     3.7,
+     false
+    ],
+    [
+     44,
+     4.7,
+     false
+    ],
+    [
+     43,
+     5.5,
+     false
+    ],
+    [
+     30,
+     4.8,
+     false
+    ],
+    [
+     29,
+     2.6,
+     false
+    ]
+   ]
   },
   "tests": [],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": 0.3,
   "tempRMSE": 2,
   "modelSurface": "SH"
@@ -5087,15 +7228,21 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": -4.1,
   "tempRMSE": 4.4,
   "modelSurface": "PP"
@@ -5166,15 +7313,32 @@
    "obs": 0,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     47,
+     0.8,
+     false
+    ],
+    [
+     46,
+     0.9,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": -2.7,
   "tempRMSE": 3.5,
   "modelSurface": "PP"
@@ -5245,13 +7409,61 @@
    "obs": 1,
    "model": 9,
    "hit": 1,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     97,
+     1,
+     false
+    ],
+    [
+     97,
+     1.1,
+     false
+    ],
+    [
+     96,
+     1.1,
+     false
+    ],
+    [
+     94,
+     1.1,
+     true
+    ],
+    [
+     92,
+     1.4,
+     true
+    ],
+    [
+     89,
+     1.5,
+     true
+    ],
+    [
+     88,
+     1.5,
+     true
+    ],
+    [
+     88,
+     1.5,
+     true
+    ],
+    [
+     87,
+     1.6,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -5269,6 +7481,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 1,
+   "confirmed": 1
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -5339,13 +7555,15 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -5363,6 +7581,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": -3.6,
   "tempRMSE": 4.5,
   "modelSurface": "PP"
@@ -5433,15 +7655,57 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 7,
    "hit": 0,
-   "falseAlarm": 7
+   "falseAlarm": 7,
+   "layers": [
+    [
+     69,
+     3.7,
+     false
+    ],
+    [
+     60,
+     2.3,
+     false
+    ],
+    [
+     58,
+     3.7,
+     false
+    ],
+    [
+     42,
+     4.7,
+     false
+    ],
+    [
+     41,
+     5.5,
+     false
+    ],
+    [
+     28,
+     4.8,
+     false
+    ],
+    [
+     27,
+     2.6,
+     false
+    ]
+   ]
   },
   "tests": [],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": 0.4,
   "tempRMSE": 1.8,
   "modelSurface": "SH"
@@ -5512,13 +7776,15 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -5529,6 +7795,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -5599,13 +7869,21 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     89,
+     2.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -5623,6 +7901,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "SH"
@@ -5693,13 +7975,36 @@
    "obs": 0,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     53,
+     0.9,
+     false
+    ],
+    [
+     52,
+     0.9,
+     false
+    ],
+    [
+     51,
+     0.9,
+     false
+    ],
+    [
+     49,
+     1,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -5724,6 +8029,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -5794,13 +8103,26 @@
    "obs": 0,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     101,
+     0.3,
+     false
+    ],
+    [
+     93,
+     0.6,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -5818,6 +8140,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": -1.2,
   "tempRMSE": 1.7,
   "modelSurface": "DF"
@@ -5888,13 +8214,47 @@
    "obs": 2,
    "model": 1,
    "hit": 1,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     79,
+     0.5,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 5,
    "hit": 0,
-   "falseAlarm": 5
+   "falseAlarm": 5,
+   "layers": [
+    [
+     71,
+     2.8,
+     false
+    ],
+    [
+     61,
+     3.1,
+     false
+    ],
+    [
+     55,
+     3.3,
+     false
+    ],
+    [
+     52,
+     2.5,
+     false
+    ],
+    [
+     34,
+     2.2,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -5905,6 +8265,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 2,
+   "confirmed": 2
+  },
   "tempBias": -2.7,
   "tempRMSE": 3.2,
   "modelSurface": "SH"
@@ -5975,13 +8339,56 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 8,
    "hit": 0,
-   "falseAlarm": 8
+   "falseAlarm": 8,
+   "layers": [
+    [
+     96,
+     2.7,
+     false
+    ],
+    [
+     63,
+     3.7,
+     false
+    ],
+    [
+     55,
+     2.3,
+     false
+    ],
+    [
+     53,
+     3.7,
+     false
+    ],
+    [
+     39,
+     4.7,
+     false
+    ],
+    [
+     38,
+     5.5,
+     false
+    ],
+    [
+     26,
+     4.8,
+     false
+    ],
+    [
+     26,
+     2.6,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -5999,6 +8406,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": -1.2,
   "tempRMSE": 1.5,
   "modelSurface": "DF"
@@ -6069,13 +8480,37 @@
    "obs": 1,
    "model": 3,
    "hit": 0,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     67,
+     0.3,
+     false
+    ],
+    [
+     65,
+     0.3,
+     false
+    ],
+    [
+     59,
+     0.8,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     60,
+     2.4,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -6093,6 +8528,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 1,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -6163,13 +8602,42 @@
    "obs": 1,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     90,
+     0.3,
+     false
+    ],
+    [
+     66,
+     0.3,
+     false
+    ],
+    [
+     64,
+     0.3,
+     false
+    ],
+    [
+     59,
+     0.9,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     60,
+     2.4,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -6180,6 +8648,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 1,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "MFcr"
@@ -6246,13 +8718,26 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     121,
+     2.1,
+     false
+    ],
+    [
+     85,
+     2.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -6263,6 +8748,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "DF"
@@ -6333,13 +8822,86 @@
    "obs": 2,
    "model": 14,
    "hit": 2,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     114,
+     0.3,
+     true
+    ],
+    [
+     98,
+     0.5,
+     true
+    ],
+    [
+     96,
+     0.5,
+     true
+    ],
+    [
+     92,
+     0.7,
+     true
+    ],
+    [
+     91,
+     0.8,
+     true
+    ],
+    [
+     87,
+     1.1,
+     true
+    ],
+    [
+     86,
+     1.4,
+     true
+    ],
+    [
+     85,
+     1.5,
+     true
+    ],
+    [
+     82,
+     1.4,
+     true
+    ],
+    [
+     76,
+     1.6,
+     true
+    ],
+    [
+     73,
+     1.8,
+     true
+    ],
+    [
+     72,
+     1.8,
+     true
+    ],
+    [
+     69,
+     2.2,
+     true
+    ],
+    [
+     65,
+     2.4,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -6357,6 +8919,10 @@
     "modelLayer": "MFcr"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": -3.7,
   "tempRMSE": 4.1,
   "modelSurface": "PP"
@@ -6427,13 +8993,15 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -6451,6 +9019,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -6521,13 +9093,32 @@
    "obs": 0,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     98,
+     0.3,
+     false
+    ],
+    [
+     62,
+     0.8,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     57,
+     2.3,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -6545,6 +9136,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 1,
+   "confirmed": 1
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -6611,13 +9206,26 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     116,
+     2.1,
+     false
+    ],
+    [
+     83,
+     2.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -6628,6 +9236,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -6698,13 +9310,32 @@
    "obs": 0,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     86,
+     0.8,
+     false
+    ],
+    [
+     60,
+     1,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     55,
+     2.4,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -6715,6 +9346,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 1,
+   "confirmed": 1
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -6785,13 +9420,56 @@
    "obs": 3,
    "model": 8,
    "hit": 2,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     86,
+     0.8,
+     true
+    ],
+    [
+     86,
+     0.9,
+     true
+    ],
+    [
+     85,
+     0.9,
+     true
+    ],
+    [
+     84,
+     1,
+     true
+    ],
+    [
+     83,
+     1,
+     true
+    ],
+    [
+     81,
+     1,
+     true
+    ],
+    [
+     80,
+     1.1,
+     true
+    ],
+    [
+     79,
+     1,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -6809,6 +9487,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "MF"
@@ -6879,13 +9561,127 @@
    "obs": 1,
    "model": 21,
    "hit": 1,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     183,
+     0.5,
+     false
+    ],
+    [
+     181,
+     0.4,
+     true
+    ],
+    [
+     180,
+     0.7,
+     true
+    ],
+    [
+     179,
+     0.8,
+     true
+    ],
+    [
+     177,
+     0.8,
+     true
+    ],
+    [
+     175,
+     0.8,
+     true
+    ],
+    [
+     174,
+     0.8,
+     true
+    ],
+    [
+     174,
+     0.9,
+     true
+    ],
+    [
+     169,
+     1.1,
+     true
+    ],
+    [
+     168,
+     1.2,
+     true
+    ],
+    [
+     166,
+     1.2,
+     true
+    ],
+    [
+     164,
+     1.1,
+     true
+    ],
+    [
+     162,
+     1.1,
+     true
+    ],
+    [
+     161,
+     1.3,
+     true
+    ],
+    [
+     159,
+     1.3,
+     true
+    ],
+    [
+     157,
+     1,
+     true
+    ],
+    [
+     156,
+     0.9,
+     true
+    ],
+    [
+     154,
+     1,
+     true
+    ],
+    [
+     154,
+     0.9,
+     true
+    ],
+    [
+     153,
+     0.9,
+     true
+    ],
+    [
+     152,
+     0.9,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     118,
+     2.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -6896,6 +9692,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 2,
+   "confirmed": 2
+  },
   "tempBias": -3.4,
   "tempRMSE": 3.7,
   "modelSurface": "PP"
@@ -6966,13 +9766,21 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     50,
+     2.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -6997,6 +9805,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": -0.9,
   "tempRMSE": 1.2,
   "modelSurface": "DF"
@@ -7067,13 +9879,61 @@
    "obs": 0,
    "model": 9,
    "hit": 0,
-   "falseAlarm": 9
+   "falseAlarm": 9,
+   "layers": [
+    [
+     53,
+     0.5,
+     false
+    ],
+    [
+     53,
+     0.5,
+     false
+    ],
+    [
+     52,
+     0.5,
+     false
+    ],
+    [
+     51,
+     0.5,
+     false
+    ],
+    [
+     51,
+     0.5,
+     false
+    ],
+    [
+     50,
+     0.6,
+     false
+    ],
+    [
+     49,
+     0.6,
+     false
+    ],
+    [
+     49,
+     0.8,
+     false
+    ],
+    [
+     47,
+     1,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -7084,6 +9944,10 @@
     "modelLayer": "MF"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "DF"
@@ -7154,15 +10018,77 @@
    "obs": 2,
    "model": 11,
    "hit": 2,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     35,
+     0.5,
+     false
+    ],
+    [
+     33,
+     0.6,
+     false
+    ],
+    [
+     32,
+     0.8,
+     true
+    ],
+    [
+     31,
+     0.8,
+     true
+    ],
+    [
+     31,
+     0.9,
+     true
+    ],
+    [
+     30,
+     1,
+     true
+    ],
+    [
+     16,
+     1.8,
+     true
+    ],
+    [
+     15,
+     1.9,
+     true
+    ],
+    [
+     14,
+     2,
+     true
+    ],
+    [
+     12,
+     2,
+     true
+    ],
+    [
+     11,
+     2,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -7233,13 +10159,96 @@
    "obs": 0,
    "model": 16,
    "hit": 0,
-   "falseAlarm": 16
+   "falseAlarm": 16,
+   "layers": [
+    [
+     42,
+     0.9,
+     false
+    ],
+    [
+     40,
+     0.9,
+     false
+    ],
+    [
+     39,
+     0.8,
+     false
+    ],
+    [
+     38,
+     0.8,
+     false
+    ],
+    [
+     38,
+     0.8,
+     false
+    ],
+    [
+     37,
+     0.8,
+     false
+    ],
+    [
+     36,
+     0.9,
+     false
+    ],
+    [
+     36,
+     0.9,
+     false
+    ],
+    [
+     35,
+     0.9,
+     false
+    ],
+    [
+     34,
+     1.1,
+     false
+    ],
+    [
+     33,
+     1,
+     false
+    ],
+    [
+     32,
+     1.3,
+     false
+    ],
+    [
+     31,
+     1.4,
+     false
+    ],
+    [
+     29,
+     1.7,
+     false
+    ],
+    [
+     27,
+     1.7,
+     false
+    ],
+    [
+     25,
+     1.5,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -7250,6 +10259,10 @@
     "modelLayer": "MFcr"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -7320,15 +10333,53 @@
    "obs": 0,
    "model": 5,
    "hit": 0,
-   "falseAlarm": 5
+   "falseAlarm": 5,
+   "layers": [
+    [
+     33,
+     0.9,
+     false
+    ],
+    [
+     32,
+     0.8,
+     false
+    ],
+    [
+     32,
+     0.9,
+     false
+    ],
+    [
+     31,
+     0.9,
+     false
+    ],
+    [
+     30,
+     0.9,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     36,
+     2.2,
+     false
+    ]
+   ]
   },
   "tests": [],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -7399,13 +10450,15 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -7430,6 +10483,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -7496,13 +10553,15 @@
    "obs": 2,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -7513,6 +10572,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "DF"
@@ -7583,13 +10646,41 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 5,
    "hit": 0,
-   "falseAlarm": 5
+   "falseAlarm": 5,
+   "layers": [
+    [
+     50,
+     2.2,
+     false
+    ],
+    [
+     33,
+     3.1,
+     false
+    ],
+    [
+     30,
+     3.4,
+     false
+    ],
+    [
+     18,
+     2.6,
+     false
+    ],
+    [
+     13,
+     2.4,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -7600,6 +10691,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -7670,13 +10765,77 @@
    "obs": 1,
    "model": 9,
    "hit": 0,
-   "falseAlarm": 9
+   "falseAlarm": 9,
+   "layers": [
+    [
+     25,
+     3,
+     false
+    ],
+    [
+     22,
+     3.3,
+     false
+    ],
+    [
+     18,
+     3.3,
+     false
+    ],
+    [
+     14,
+     3.3,
+     false
+    ],
+    [
+     12,
+     3.2,
+     false
+    ],
+    [
+     11,
+     3.2,
+     false
+    ],
+    [
+     10,
+     3.2,
+     false
+    ],
+    [
+     7,
+     3.1,
+     false
+    ],
+    [
+     3,
+     3.1,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 3,
    "hit": 0,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     115,
+     2,
+     false
+    ],
+    [
+     71,
+     3,
+     false
+    ],
+    [
+     71,
+     6.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -7694,6 +10853,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": -2.5,
   "tempRMSE": 2.5,
   "modelSurface": "DF"
@@ -7764,13 +10927,46 @@
    "obs": 3,
    "model": 6,
    "hit": 0,
-   "falseAlarm": 6
+   "falseAlarm": 6,
+   "layers": [
+    [
+     86,
+     0.5,
+     false
+    ],
+    [
+     85,
+     0.5,
+     false
+    ],
+    [
+     84,
+     0.5,
+     false
+    ],
+    [
+     83,
+     0.5,
+     false
+    ],
+    [
+     81,
+     0.5,
+     false
+    ],
+    [
+     77,
+     0.5,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -7781,6 +10977,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": -2.9,
   "tempRMSE": 3.2,
   "modelSurface": "PP"
@@ -7851,13 +11051,31 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 3,
    "hit": 0,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     83,
+     2.2,
+     false
+    ],
+    [
+     55,
+     2.1,
+     false
+    ],
+    [
+     11,
+     3.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -7868,6 +11086,10 @@
     "modelLayer": "DF"
    }
   ],
+  "weak": {
+   "model": 2,
+   "confirmed": 2
+  },
   "tempBias": -2.7,
   "tempRMSE": 3.1,
   "modelSurface": "SH"
@@ -7938,13 +11160,27 @@
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     94,
+     0.5,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     25,
+     2.2,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -7962,6 +11198,10 @@
     "modelLayer": "DF"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": -3.7,
   "tempRMSE": 3.9,
   "modelSurface": "PP"
@@ -8032,13 +11272,72 @@
    "obs": 2,
    "model": 8,
    "hit": 1,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     76,
+     1,
+     true
+    ],
+    [
+     75,
+     0.9,
+     true
+    ],
+    [
+     74,
+     1,
+     true
+    ],
+    [
+     71,
+     0.9,
+     true
+    ],
+    [
+     67,
+     0.9,
+     true
+    ],
+    [
+     65,
+     1.1,
+     true
+    ],
+    [
+     63,
+     0.8,
+     true
+    ],
+    [
+     61,
+     0.9,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 3,
    "hit": 0,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     88,
+     2.2,
+     false
+    ],
+    [
+     33,
+     2.1,
+     false
+    ],
+    [
+     33,
+     2.2,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -8056,6 +11355,10 @@
     "modelLayer": "MFcr"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -8126,13 +11429,26 @@
    "obs": 3,
    "model": 2,
    "hit": 2,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     86,
+     0.7,
+     true
+    ],
+    [
+     84,
+     0.6,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -8150,6 +11466,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -8220,13 +11540,71 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 11,
    "hit": 0,
-   "falseAlarm": 11
+   "falseAlarm": 11,
+   "layers": [
+    [
+     139,
+     5.8,
+     false
+    ],
+    [
+     130,
+     2,
+     false
+    ],
+    [
+     51,
+     2.8,
+     false
+    ],
+    [
+     51,
+     5.6,
+     false
+    ],
+    [
+     39,
+     2.2,
+     false
+    ],
+    [
+     28,
+     2.5,
+     false
+    ],
+    [
+     27,
+     3.4,
+     false
+    ],
+    [
+     23,
+     2.8,
+     false
+    ],
+    [
+     13,
+     2.1,
+     false
+    ],
+    [
+     11,
+     2.1,
+     false
+    ],
+    [
+     6,
+     2.2,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -8244,6 +11622,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "DF"
@@ -8314,13 +11696,15 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -8338,6 +11722,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": -2.5,
   "tempRMSE": 3.3,
   "modelSurface": "PP"
@@ -8404,13 +11792,21 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     178,
+     4.5,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -8421,6 +11817,10 @@
     "modelLayer": "DF"
    }
   ],
+  "weak": {
+   "model": 1,
+   "confirmed": 1
+  },
   "tempBias": -2.6,
   "tempRMSE": 2.7,
   "modelSurface": "DF"
@@ -8491,13 +11891,31 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 1,
    "model": 3,
    "hit": 0,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     71,
+     2.2,
+     false
+    ],
+    [
+     48,
+     2.1,
+     false
+    ],
+    [
+     9,
+     3.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -8508,6 +11926,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": -2.4,
   "tempRMSE": 3.1,
   "modelSurface": "PP"
@@ -8578,13 +12000,62 @@
    "obs": 1,
    "model": 5,
    "hit": 0,
-   "falseAlarm": 5
+   "falseAlarm": 5,
+   "layers": [
+    [
+     101,
+     0.7,
+     false
+    ],
+    [
+     23,
+     3.2,
+     false
+    ],
+    [
+     18,
+     3.5,
+     false
+    ],
+    [
+     12,
+     3.4,
+     false
+    ],
+    [
+     5,
+     3.3,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 1,
    "model": 4,
    "hit": 1,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     161,
+     8,
+     true
+    ],
+    [
+     88,
+     2,
+     false
+    ],
+    [
+     59,
+     3,
+     false
+    ],
+    [
+     59,
+     6.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -8595,6 +12066,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 1,
+   "confirmed": 1
+  },
   "tempBias": -0.4,
   "tempRMSE": 0.8,
   "modelSurface": "DF"
@@ -8661,13 +12136,15 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -8678,6 +12155,10 @@
     "modelLayer": "RG"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "SH"
@@ -8744,13 +12225,15 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -8775,6 +12258,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "DF"
@@ -8845,13 +12332,21 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 1,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     37,
+     2.5,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -8876,6 +12371,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 2,
+   "confirmed": 2
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "SH"
@@ -8942,13 +12441,15 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -8973,6 +12474,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "SH"
@@ -9043,13 +12548,15 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -9074,6 +12581,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "SH"
@@ -9144,13 +12655,21 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     6,
+     2.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -9161,6 +12680,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 1,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "SH"
@@ -9231,13 +12754,15 @@
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -9255,6 +12780,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": -2.4,
   "tempRMSE": 3.3,
   "modelSurface": "PP"
@@ -9325,13 +12854,57 @@
    "obs": 0,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     96,
+     0.8,
+     false
+    ],
+    [
+     22,
+     3.2,
+     false
+    ],
+    [
+     16,
+     3.5,
+     false
+    ],
+    [
+     5,
+     3.4,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 1,
    "model": 4,
    "hit": 1,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     149,
+     8,
+     true
+    ],
+    [
+     83,
+     2,
+     false
+    ],
+    [
+     57,
+     3,
+     false
+    ],
+    [
+     57,
+     6.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -9356,6 +12929,10 @@
     "modelLayer": "FCxr"
    }
   ],
+  "weak": {
+   "model": 2,
+   "confirmed": 2
+  },
   "tempBias": 1.3,
   "tempRMSE": 2.3,
   "modelSurface": "SH"
@@ -9422,13 +12999,26 @@
    "obs": 3,
    "model": 2,
    "hit": 2,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     141,
+     0.3,
+     true
+    ],
+    [
+     141,
+     0.3,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 2,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -9446,6 +13036,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "MFcr"
@@ -9520,13 +13114,26 @@
    "obs": 1,
    "model": 2,
    "hit": 1,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     124,
+     0.7,
+     true
+    ],
+    [
+     123,
+     0.9,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -9537,6 +13144,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -9607,13 +13218,21 @@
    "obs": 2,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     108,
+     0.3,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 3,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -9624,6 +13243,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "MFcr"
@@ -9694,13 +13317,57 @@
    "obs": 0,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     91,
+     0.9,
+     false
+    ],
+    [
+     22,
+     3.4,
+     false
+    ],
+    [
+     16,
+     3.7,
+     false
+    ],
+    [
+     5,
+     3.5,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 1,
    "model": 4,
    "hit": 1,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     139,
+     8,
+     true
+    ],
+    [
+     80,
+     2,
+     false
+    ],
+    [
+     55,
+     3,
+     false
+    ],
+    [
+     55,
+     6.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -9711,6 +13378,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": 0.7,
   "tempRMSE": 0.9,
   "modelSurface": "PP"
@@ -9781,13 +13452,26 @@
    "obs": 0,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     148,
+     0.3,
+     false
+    ],
+    [
+     147,
+     0.3,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -9798,6 +13482,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "MFcr"
@@ -9868,13 +13556,52 @@
    "obs": 2,
    "model": 3,
    "hit": 2,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     88,
+     1,
+     true
+    ],
+    [
+     16,
+     3.7,
+     false
+    ],
+    [
+     5,
+     3.6,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 1,
    "model": 4,
    "hit": 1,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     134,
+     8,
+     true
+    ],
+    [
+     77,
+     2,
+     false
+    ],
+    [
+     53,
+     3,
+     false
+    ],
+    [
+     53,
+     6.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -9892,6 +13619,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": -0.8,
   "tempRMSE": 1.3,
   "modelSurface": "SH"
@@ -9958,13 +13689,26 @@
    "obs": 0,
    "model": 2,
    "hit": 0,
-   "falseAlarm": 2
+   "falseAlarm": 2,
+   "layers": [
+    [
+     148,
+     0.3,
+     false
+    ],
+    [
+     147,
+     0.3,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -9975,6 +13719,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "MFcr"
@@ -10041,13 +13789,15 @@
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -10065,6 +13815,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -10131,13 +13885,36 @@
    "obs": 1,
    "model": 4,
    "hit": 1,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     153,
+     0.4,
+     true
+    ],
+    [
+     151,
+     0.6,
+     true
+    ],
+    [
+     148,
+     0.6,
+     true
+    ],
+    [
+     146,
+     0.7,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -10148,6 +13925,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "MFcr"
@@ -10214,13 +13995,36 @@
    "obs": 1,
    "model": 4,
    "hit": 1,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     153,
+     0.4,
+     true
+    ],
+    [
+     151,
+     0.6,
+     true
+    ],
+    [
+     148,
+     0.6,
+     true
+    ],
+    [
+     146,
+     0.7,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 1,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -10238,6 +14042,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "MFcr"
@@ -10308,13 +14116,72 @@
    "obs": 0,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     139,
+     0.3,
+     false
+    ],
+    [
+     137,
+     0.3,
+     false
+    ],
+    [
+     135,
+     0.5,
+     false
+    ],
+    [
+     134,
+     0.7,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 1,
    "model": 7,
    "hit": 1,
-   "falseAlarm": 3
+   "falseAlarm": 3,
+   "layers": [
+    [
+     120,
+     2.2,
+     true
+    ],
+    [
+     118,
+     4.4,
+     true
+    ],
+    [
+     118,
+     8,
+     true
+    ],
+    [
+     108,
+     3.6,
+     true
+    ],
+    [
+     60,
+     2.2,
+     false
+    ],
+    [
+     41,
+     2.1,
+     false
+    ],
+    [
+     9,
+     3.1,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -10339,6 +14206,10 @@
     "modelLayer": "MFcr"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": -3.5,
   "tempRMSE": 4.2,
   "modelSurface": "DF"
@@ -10405,13 +14276,42 @@
    "obs": 0,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     107,
+     0.6,
+     false
+    ],
+    [
+     106,
+     0.9,
+     false
+    ],
+    [
+     105,
+     0.9,
+     false
+    ],
+    [
+     104,
+     0.9,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 1,
    "hit": 0,
-   "falseAlarm": 1
+   "falseAlarm": 1,
+   "layers": [
+    [
+     77,
+     5.4,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -10422,6 +14322,10 @@
     "modelLayer": "DH"
    }
   ],
+  "weak": {
+   "model": 2,
+   "confirmed": 1
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "PP"
@@ -10488,13 +14392,101 @@
    "obs": 3,
    "model": 17,
    "hit": 3,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     82,
+     1.6,
+     true
+    ],
+    [
+     81,
+     1.7,
+     true
+    ],
+    [
+     79,
+     2.5,
+     true
+    ],
+    [
+     78,
+     2.5,
+     true
+    ],
+    [
+     77,
+     3.1,
+     true
+    ],
+    [
+     76,
+     3.1,
+     true
+    ],
+    [
+     75,
+     3.1,
+     true
+    ],
+    [
+     74,
+     3.1,
+     true
+    ],
+    [
+     73,
+     3.1,
+     true
+    ],
+    [
+     72,
+     3.1,
+     true
+    ],
+    [
+     70,
+     3.1,
+     true
+    ],
+    [
+     68,
+     3.1,
+     true
+    ],
+    [
+     67,
+     3.1,
+     true
+    ],
+    [
+     66,
+     3.1,
+     true
+    ],
+    [
+     64,
+     3.1,
+     true
+    ],
+    [
+     61,
+     3.1,
+     true
+    ],
+    [
+     55,
+     3.2,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -10505,6 +14497,10 @@
     "modelLayer": "MFcr"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "DF"
@@ -10571,13 +14567,57 @@
    "obs": 1,
    "model": 4,
    "hit": 1,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     132,
+     0.5,
+     true
+    ],
+    [
+     130,
+     0.5,
+     true
+    ],
+    [
+     128,
+     0.7,
+     true
+    ],
+    [
+     126,
+     0.9,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 4,
    "hit": 0,
-   "falseAlarm": 4
+   "falseAlarm": 4,
+   "layers": [
+    [
+     114,
+     2.1,
+     false
+    ],
+    [
+     112,
+     4.3,
+     false
+    ],
+    [
+     112,
+     8,
+     false
+    ],
+    [
+     103,
+     3.5,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -10588,6 +14628,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "SH"
@@ -10654,13 +14698,81 @@
    "obs": 0,
    "model": 13,
    "hit": 0,
-   "falseAlarm": 13
+   "falseAlarm": 13,
+   "layers": [
+    [
+     174,
+     0.7,
+     false
+    ],
+    [
+     173,
+     1.1,
+     false
+    ],
+    [
+     172,
+     1.2,
+     false
+    ],
+    [
+     171,
+     1.2,
+     false
+    ],
+    [
+     170,
+     1.2,
+     false
+    ],
+    [
+     169,
+     1.3,
+     false
+    ],
+    [
+     168,
+     1.2,
+     false
+    ],
+    [
+     166,
+     1.1,
+     false
+    ],
+    [
+     164,
+     1.1,
+     false
+    ],
+    [
+     162,
+     1.2,
+     false
+    ],
+    [
+     161,
+     1.2,
+     false
+    ],
+    [
+     160,
+     1.2,
+     false
+    ],
+    [
+     159,
+     1.2,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -10671,6 +14783,10 @@
     "modelLayer": "MF"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "FCxr"
@@ -10741,13 +14857,71 @@
    "obs": 2,
    "model": 11,
    "hit": 0,
-   "falseAlarm": 11
+   "falseAlarm": 11,
+   "layers": [
+    [
+     209,
+     0.9,
+     false
+    ],
+    [
+     208,
+     1.2,
+     false
+    ],
+    [
+     207,
+     1.1,
+     false
+    ],
+    [
+     205,
+     1.3,
+     false
+    ],
+    [
+     203,
+     1.3,
+     false
+    ],
+    [
+     202,
+     1.3,
+     false
+    ],
+    [
+     200,
+     1.4,
+     false
+    ],
+    [
+     199,
+     1.5,
+     false
+    ],
+    [
+     197,
+     1.5,
+     false
+    ],
+    [
+     195,
+     1.4,
+     false
+    ],
+    [
+     192,
+     1.5,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -10758,6 +14932,10 @@
     "modelLayer": "MFcr"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "DF"
@@ -10824,13 +15002,111 @@
    "obs": 1,
    "model": 19,
    "hit": 1,
-   "falseAlarm": 6
+   "falseAlarm": 6,
+   "layers": [
+    [
+     138,
+     0.7,
+     false
+    ],
+    [
+     137,
+     0.8,
+     false
+    ],
+    [
+     137,
+     0.8,
+     false
+    ],
+    [
+     136,
+     1,
+     false
+    ],
+    [
+     134,
+     1.2,
+     false
+    ],
+    [
+     133,
+     1.3,
+     false
+    ],
+    [
+     130,
+     1.4,
+     true
+    ],
+    [
+     129,
+     1.5,
+     true
+    ],
+    [
+     129,
+     1.5,
+     true
+    ],
+    [
+     124,
+     1.7,
+     true
+    ],
+    [
+     123,
+     1.8,
+     true
+    ],
+    [
+     122,
+     1.8,
+     true
+    ],
+    [
+     121,
+     1.9,
+     true
+    ],
+    [
+     119,
+     2,
+     true
+    ],
+    [
+     117,
+     2.2,
+     true
+    ],
+    [
+     114,
+     2.4,
+     true
+    ],
+    [
+     113,
+     2.5,
+     true
+    ],
+    [
+     112,
+     2.5,
+     true
+    ],
+    [
+     110,
+     2.6,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -10841,6 +15117,10 @@
     "modelLayer": "MFcr"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "MF"
@@ -10907,13 +15187,21 @@
    "obs": 1,
    "model": 1,
    "hit": 1,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": [
+    [
+     114,
+     2.8,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
    "model": 0,
    "hit": 0,
-   "falseAlarm": 0
+   "falseAlarm": 0,
+   "layers": []
   },
   "tests": [
    {
@@ -10931,6 +15219,10 @@
     "modelLayer": "FC"
    }
   ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
   "tempBias": null,
   "tempRMSE": null,
   "modelSurface": "MF"

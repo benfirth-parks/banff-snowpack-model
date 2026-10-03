@@ -16,6 +16,7 @@ Both versions were replayed locally through 2023–24, 2024–25 and 2025–26 w
 | HS error, study plots (n 58) | −16.8 cm, mean abs 28.4 | −7.8 cm, mean abs 12.5 |
 | HS error, test profiles away from stations (n 46) | −25.8 cm, mean abs 33.2 | −18.4 cm, mean abs 30.0 |
 | Test failures with a model weak layer | 58 / 180 | 61 / 180 |
+| Model weak layers at an observed persistent layer or test failure | 146 / 172 | 165 / 197 |
 | Grain-group agreement | 49.1 % | 49.6 % |
 | Crusts, matched / unmatched | 47 / 188 | 42 / 171 |
 | Buried SH, matched / unmatched | 6 / 296 | 6 / 339 |
@@ -43,6 +44,13 @@ In May, melt still runs ahead of the sensor at some stations.
 | 2025–26 | −4.4 / 9.3 | −4.4 / 9.3 |
 
 The bias falls in two of the three seasons. The error on individual forecasts is about the same. Air temperature and humidity scores are unchanged from v3.
+
+## Surface hoar and crusts (tried, not included)
+- The model's buried surface hoar has no skill. About 2 % of its buried SH layers line up with an observed one, roughly what chance would give.
+  - Reporting buried hoar under 3 mm as facets halves the false SH (339 → 166) and leaves weak-layer detection unchanged, but matched SH falls from 6 to 3.
+  - Preserving less hoar, or destroying it at lower wind speeds, cuts test-failure detection from 61 to 29–41 of 180. Those layers are where the model puts many of its weak layers.
+  - Fixing this needs better surface hoar formation physics: humidity, cloud and wind near the surface. A size threshold won't do it.
+- Marking a crust only once a layer has held at least 0.5 % liquid water cuts false crusts from 171 to 152, while matched crusts fall from 42 to 40. That is too small a change to be worth a model version.
 
 ## Still wrong
 - Pits away from the stations are still about 18 cm too shallow.
