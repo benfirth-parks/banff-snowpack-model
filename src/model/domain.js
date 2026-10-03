@@ -4,20 +4,21 @@
 // FTS stations read from the Rockies Weather Data Explorer (/api/fts). Positions
 // and elevations are copied from the explorer's station list.
 //   wind:   anemometer is representative (the explorer hides the sheltered ones)
+//   ridge:  exposed ridge-top anemometer, used for the ridge wind that drifts snow
 //   precip: "gauge" = weighing gauge, "hs" = precipitation from snow-height gain,
 //           null = not used for precipitation (e.g. summer tipping buckets)
 export const STATIONS = [
-  { id: "fts-bosup", name: "Bosworth Upper", lat: 51.46954, lon: -116.34969, z: 2745, park: "Yoho", wind: true, precip: null },
+  { id: "fts-bosup", name: "Bosworth Upper", lat: 51.46954, lon: -116.34969, z: 2745, park: "Yoho", wind: true, ridge: true, precip: null },
   { id: "fts-boslo", name: "Bosworth Lower", lat: 51.45722, lon: -116.357834, z: 2210, park: "Yoho", wind: false, precip: "hs" },
   { id: "fts-bowsummit", name: "Bow Summit", lat: 51.709373, lon: -116.47904, z: 2040, park: "Banff", wind: false, precip: "hs" },
   { id: "fts-bowprecip", name: "Bow Summit Precip Gauge", lat: 51.712, lon: -116.481, z: 2040, park: "Banff", wind: false, precip: "gauge", noPoint: true },
-  { id: "fts-lookout", name: "Lookout", lat: 51.07417, lon: -115.754295, z: 2640, park: "Banff", wind: true, precip: null },
+  { id: "fts-lookout", name: "Lookout", lat: 51.07417, lon: -115.754295, z: 2640, park: "Banff", wind: true, ridge: true, precip: null },
   { id: "fts-simplo", name: "Simpson Lower", lat: 50.98507, lon: -115.984215, z: 2115, park: "Kootenay", wind: false, precip: "hs" },
-  { id: "fts-simpup", name: "Simpson Upper", lat: 50.990124, lon: -115.991165, z: 2320, park: "Kootenay", wind: true, precip: null },
+  { id: "fts-simpup", name: "Simpson Upper", lat: 50.990124, lon: -115.991165, z: 2320, park: "Kootenay", wind: true, ridge: true, precip: null },
   { id: "fts-stanley", name: "Stanley Lower", lat: 51.184673, lon: -116.0892, z: 1930, park: "Kootenay", wind: false, precip: "hs" },
   { id: "fts-sunshine", name: "Sunshine Village", lat: 51.078358, lon: -115.782455, z: 2200, park: "Banff", wind: false, precip: "hs" },
-  { id: "fts-vulture", name: "Vulture Peak", lat: 51.6244, lon: -116.47188, z: 2930, park: "Banff", wind: true, precip: null },
-  { id: "fts-whymper", name: "Whymper", lat: 51.2126, lon: -116.11409, z: 2600, park: "Kootenay", wind: true, precip: null },
+  { id: "fts-vulture", name: "Vulture Peak", lat: 51.6244, lon: -116.47188, z: 2930, park: "Banff", wind: true, ridge: true, precip: null },
+  { id: "fts-whymper", name: "Whymper", lat: 51.2126, lon: -116.11409, z: 2600, park: "Kootenay", wind: true, ridge: true, precip: null },
   { id: "fts-boulder", name: "Boulder Creek", lat: 51.3665, lon: -116.5264, z: 1650, park: "Yoho", wind: true, precip: null },
   { id: "fts-pikarun", name: "Pika Run", lat: 51.442, lon: -116.217, z: 2200, park: "Banff", wind: true, precip: "hs" },
   { id: "fts-vermillion", name: "Vermilion Crossing", lat: 51.0194, lon: -115.9766, z: 1310, park: "Kootenay", wind: true, precip: null },

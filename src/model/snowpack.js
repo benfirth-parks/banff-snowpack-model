@@ -441,11 +441,14 @@ function manageLayers(sim) {
 //   t (epoch hour at the END of the step), Ta (°C), RH (%), U (m/s, 10 m),
 //   snow (kg/m² of snowfall reaching this slope), rain (kg/m²),
 //   sw (incoming shortwave on the slope, W/m²), lw (incoming longwave, W/m²),
-//   drift (kg/m², + deposition / − erosion of loose snow on this slope)
+//   drift (kg/m², + deposition / − erosion of loose snow on this slope),
+//   Ud (optional, m/s: the wind that transports the new and drifted snow, which
+//   sets its density and wind mark; defaults to U)
 export function stepHour(sim, f) {
-  if (f.drift > 0) addSnow(sim, f.drift, f.Ta, f.U, f.t, true);
+  const Ud = f.Ud ?? f.U;
+  if (f.drift > 0) addSnow(sim, f.drift, f.Ta, Ud, f.t, true);
   else if (f.drift < 0) erode(sim, -f.drift);
-  if (f.snow > 0) addSnow(sim, f.snow, f.Ta, f.U, f.t, false);
+  if (f.snow > 0) addSnow(sim, f.snow, f.Ta, Ud, f.t, false);
   const L = sim.L;
   if (!L.length) { sim.Ts = Math.min(0, f.Ta); sim.t = f.t; return; }
   if (f.rain > 0) { L[L.length - 1].w += f.rain; L[L.length - 1].mk |= RAIN; }

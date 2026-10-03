@@ -3,6 +3,8 @@
 import assert from "node:assert/strict";
 import { prepareForcing, snapshotWindows, cleanHS } from "../src/model/forcing.js";
 import { snapHour, isSnapHour, localDate, tzOffset } from "../src/model/time.js";
+import { createSite, stepSite } from "../src/model/site.js";
+import { snowDepth, WIND } from "../src/model/snowpack.js";
 
 // --- time helpers across the DST change (1 Nov 2026) ---
 assert.equal(tzOffset(Date.parse("2026-09-30T18:00:00Z") / 3.6e6), -6);
@@ -106,5 +108,24 @@ console.log(`HS column ${Fh.stationDiagnostics()[0].hsModel} cm (sensor 30 cm ab
 assert.ok(Fh.stationDiagnostics()[0].hsModel > 18 && Fh.stationDiagnostics()[0].hsModel < 34, "column follows the sensor");
 assert.ok(snowOwn > 20, "the station's own point gets the snowfall the model missed");
 assert.ok(col && col.S.v.length > 0, "column state is carried for the next run");
+
+// --- ridge wind: a ridge anemometer reads 45 km/h where the model has 20 from the west ---
+const ridgeSt = {
+  id: "r1", name: "R1", lat: 51.4, lon: -116.2, z: 2700, wind: true, ridge: true, precip: null,
+  o: { T: times.map(() => null), RH: times.map(() => null), U: times.map((t) => (t <= tA ? 45 : null)), HS: times.map(() => null), P: times.map(() => null) },
+};
+const Fr = prepareForcing({ times, nodes, stations: [ridgeSt], tA, windows: [] });
+const fr = Fr.at(Fr.weightsFor({ lat: 51.4, lon: -116.2, z: 2700 }), 30);
+const fr24 = Fr.at(Fr.weightsFor({ lat: 51.4, lon: -116.2, z: 2700 }), kA + 24);
+console.log(`ridge wind at the station ${(fr.Ur * 3.6).toFixed(1)} km/h from ${fr.dirR.toFixed(0)}° (obs 45), +24 h ${(fr24.Ur * 3.6).toFixed(1)}; 10 m wind ${(fr.U * 3.6).toFixed(1)}`);
+assert.ok(fr.Ur * 3.6 > 40 && fr.Ur * 3.6 < 52 && Math.abs(fr.dirR - 270) < 1, "ridge wind follows the ridge station");
+assert.ok(fr24.Ur * 3.6 > 35, "ridge wind ratio persists into the forecast");
+// Snow falling in that wind at 2500 m loads the east (lee) slope and strips the west one.
+const site = createSite({ id: "x", lat: 51.4, lon: -116.2, z: 2500 });
+for (let k = 0; k < 72; k++) stepSite(site, { ...fr, t: times[k], Ta: -8, RH: 90, P: k < 24 ? 1.5 : 0, sf: 1, ghi: 0, dirH: 0, difH: 0, lw: 230 });
+const [flat, , east, , west] = site.sims;
+console.log(`HS after 36 mm of snow in the ridge wind: flat ${(snowDepth(flat) * 100).toFixed(0)} cm, E ${(snowDepth(east) * 100).toFixed(0)} cm, W ${(snowDepth(west) * 100).toFixed(0)} cm`);
+assert.ok(snowDepth(east) > 1.3 * snowDepth(flat) && snowDepth(west) < 0.8 * snowDepth(flat), "lee slope loaded, windward slope stripped");
+assert.ok(east.L.some((l) => l.mk & WIND), "lee deposit is wind-marked");
 
 console.log("forcing + time tests passed");
