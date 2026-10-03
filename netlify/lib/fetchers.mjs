@@ -40,6 +40,39 @@ async function fetchJSON(url, { timeoutMs = 25000, retries = 1, rateLimitRetries
   throw lastErr;
 }
 
+// Explorer rows ({ measurementDateTime, airTempAvg, … }) → quality-checked hourly
+// records. Shared with the local replay (scripts/replay.mjs).
+export function parseStationRows(rows) {
+  const recs = [];
+  let prevTotal = null;
+  for (const r of rows) {
+    const ms = Date.parse(r.measurementDateTime);
+    if (!Number.isFinite(ms)) continue;
+    const t = Math.round(ms / 3600000);
+    let P = null;
+    if (ok(r.precipIncr)) P = r.precipIncr;
+    else if (ok(r.precipTotal)) {
+      if (ok(prevTotal)) { const d = r.precipTotal - prevTotal; P = d >= 0 && d < 40 ? d : null; }
+      prevTotal = r.precipTotal;
+    }
+    recs.push({
+      t,
+      T: ok(r.airTempAvg) && r.airTempAvg > -50 && r.airTempAvg < 35 ? r.airTempAvg : null,
+      RH: ok(r.relativeHumidity) && r.relativeHumidity > 1 ? Math.min(100, r.relativeHumidity) : null,
+      U: ok(r.windSpeedAvg) && r.windSpeedAvg >= 0 && r.windSpeedAvg < 250 ? r.windSpeedAvg : null,
+      dir: ok(r.windDirAvg) ? r.windDirAvg : null,
+      HS: ok(r.snowHeight) && r.snowHeight >= 0 && r.snowHeight < 900 ? r.snowHeight : null,
+      P: ok(P) && P >= 0 && P < 40 ? P : null,
+    });
+  }
+  // Temperature spike filter: drop values > 8 °C off the median of ±2 h.
+  for (let i = 2; i < recs.length - 2; i++) {
+    const w = [recs[i - 2].T, recs[i - 1].T, recs[i + 1].T, recs[i + 2].T].filter(ok).sort((a, b) => a - b);
+    if (w.length >= 3 && ok(recs[i].T) && Math.abs(recs[i].T - w[Math.floor(w.length / 2)]) > 8) recs[i].T = null;
+  }
+  return recs;
+}
+
 // ---- Station actuals --------------------------------------------------------
 // Returns { [stationId]: [{ t (epoch hour), T, RH, U, dir, HS, P }] } — P is the
 // hourly precipitation increment in mm (from the increment channel, or from the
@@ -50,34 +83,7 @@ export async function fetchStationObs(stations, hours) {
   await Promise.all(stations.map(async (s) => {
     try {
       const rows = await fetchJSON(`${EXPLORER}/api/fts?station=${encodeURIComponent(s.id)}&hours=${Math.ceil(hours)}`, { retries: 1 });
-      const recs = [];
-      let prevTotal = null;
-      for (const r of Array.isArray(rows) ? rows : []) {
-        const ms = Date.parse(r.measurementDateTime);
-        if (!Number.isFinite(ms)) continue;
-        const t = Math.round(ms / 3600000);
-        let P = null;
-        if (ok(r.precipIncr)) P = r.precipIncr;
-        else if (ok(r.precipTotal)) {
-          if (ok(prevTotal)) { const d = r.precipTotal - prevTotal; P = d >= 0 && d < 40 ? d : null; }
-          prevTotal = r.precipTotal;
-        }
-        recs.push({
-          t,
-          T: ok(r.airTempAvg) && r.airTempAvg > -50 && r.airTempAvg < 35 ? r.airTempAvg : null,
-          RH: ok(r.relativeHumidity) && r.relativeHumidity > 1 ? Math.min(100, r.relativeHumidity) : null,
-          U: ok(r.windSpeedAvg) && r.windSpeedAvg >= 0 && r.windSpeedAvg < 250 ? r.windSpeedAvg : null,
-          dir: ok(r.windDirAvg) ? r.windDirAvg : null,
-          HS: ok(r.snowHeight) && r.snowHeight >= 0 && r.snowHeight < 900 ? r.snowHeight : null,
-          P: ok(P) && P >= 0 && P < 40 ? P : null,
-        });
-      }
-      // Temperature spike filter: drop values > 8 °C off the median of ±2 h.
-      for (let i = 2; i < recs.length - 2; i++) {
-        const w = [recs[i - 2].T, recs[i - 1].T, recs[i + 1].T, recs[i + 2].T].filter(ok).sort((a, b) => a - b);
-        if (w.length >= 3 && ok(recs[i].T) && Math.abs(recs[i].T - w[Math.floor(w.length / 2)]) > 8) recs[i].T = null;
-      }
-      out[s.id] = recs;
+      out[s.id] = parseStationRows(Array.isArray(rows) ? rows : []);
     } catch (e) {
       errors.push(`${s.id}: ${e.message}`);
       out[s.id] = [];

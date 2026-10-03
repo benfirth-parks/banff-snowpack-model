@@ -12,7 +12,7 @@ import { tzOffset, localDate, snapHour, isSnapHour, addDays } from "../../src/mo
 export const SEASON_START = "2026-09-01";
 // Bump when model physics or forcing change: stored seasons are then re-run from
 // their start by the next live run / season chunk.
-export const MODEL_VERSION = 2;
+export const MODEL_VERSION = 3;
 export const LIVE_SEASON = "2026-27";
 export const BATCH = 250;
 export const HIST = 30; // hours of history before the analysis start (residual tails, 24 h precip windows)
@@ -208,7 +208,10 @@ export async function runPipeline(deps, opts = {}) {
   const a0 = Math.max(t0, start - 1);
   if (a0 > t0) log(`gap: model data starts ${a0 - t0} h after the last analysis hour`);
   const windows = snapshotWindows(times, kA, isSnapHour);
-  const F = prepareForcing({ times, nodes, stations, tA, windows });
+  // Per-station forecast bias learned from past analyses (reset with the season).
+  const biasIn = idx ? await store.get("bias", { type: "json" }) : null;
+  const F = prepareForcing({ times, nodes, stations, tA, windows, bias: biasIn, biasFrom: kIndex(a0) + 1 });
+  await store.setJSON("bias", F.bias);
   const catchingUp = tNow - tA > 6;
   const doForecast = !catchingUp && (opts.forceForecast || !meta.forecastIssued || tNow - (meta.forecastHour || 0) >= 3 || tA - (meta.analysisHour || 0) >= 3 || !idx);
   log(`analysis ${new Date(t0 * 3.6e6).toISOString()} → ${new Date(tA * 3.6e6).toISOString()} (${tA - t0} h); forecast ${doForecast ? "to " + new Date(end * 3.6e6).toISOString() : "skipped"}; model ${model.source}, past_days ${pastDays}`);
@@ -326,6 +329,7 @@ export async function runPipeline(deps, opts = {}) {
     stationsReporting: lastObs.length, stationErrors: obsErr, modelErrors: model.errors,
     stations: F.stationDiagnostics(),
     lapse: Math.round(F.gamma[kA] * 10000) / 10,
+    trend: F.trend,
     hsCheck,
   };
   const hist = (await store.get("status", { type: "json" }))?.history || [];

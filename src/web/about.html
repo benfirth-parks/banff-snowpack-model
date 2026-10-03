@@ -35,10 +35,11 @@
   <p>The model grid is about 5 km (0.045° × 0.07°). Each cell is simulated at its mean terrain elevation (five samples from a 90 m DEM). For every hour:</p>
   <ol>
     <li><b>Model first guess.</b> Inverse-distance weighting of the six nearest model columns. Temperature is moved to the cell elevation with the lapse rate fitted across all columns that hour, so inversions are kept. Precipitation is scaled +5 % per 100 m.</li>
-    <li><b>Station correction.</b> At each station the difference between the observation and the first guess is a residual (temperature, humidity) or a log-ratio (wind, 24 h precipitation). Residuals are spread with a Gaussian kernel of 20–25 km horizontally <i>and</i> 300–800 m vertically, and shrink to zero away from stations. Ridge stations therefore correct alpine cells and valley stations correct valley cells. Wind corrections use only representative anemometers.</li>
+    <li><b>Temperature profile.</b> Each hour the station temperature residuals are fitted against station elevation (1310–2930 m), so the model's vertical profile is corrected everywhere, including ridge-top inversions the model misses. The fit is shrunk toward no correction when few stations report.</li>
+    <li><b>Station correction.</b> At each station the difference between the observation and the first guess is a residual (temperature, humidity; for temperature, what the elevation fit leaves) or a log-ratio (wind, 24 h precipitation). Residuals are spread with a Gaussian kernel of 20–25 km horizontally <i>and</i> 300–800 m vertically, and shrink to zero away from stations. Ridge stations therefore correct alpine cells and valley stations correct valley cells. Wind corrections use only representative anemometers.</li>
     <li><b>Precipitation from stations</b> uses weighing gauges (Bow Summit, Sunshine, Skoki, Pika Run, with a 20 % snow undercatch allowance) and snow-height gain at Bow Summit, Bosworth Lower, Stanley Lower, Simpson Lower and Coleman, in 24 h windows ending 17:00.</li>
-    <li><b>Forecast hours.</b> The last 6 hours of temperature, humidity and wind residuals persist and decay (12 h, 6 h and 12 h e-folding). Forecast precipitation is the raw model amount.</li>
-    <li>Rain and snow are split on air temperature (all snow ≤ −0.5 °C, all rain ≥ +1.5 °C). Incoming longwave is estimated from temperature, humidity and model cloud cover.</li>
+    <li><b>Forecast hours.</b> The last 6 hours of temperature, humidity and wind residuals fade (6 h, 6 h and 12 h e-folding) into a bias learned for each station and hour of day over roughly the last two weeks of analysis, which then persists through the forecast. Forecast precipitation is the raw model amount.</li>
+    <li>Rain and snow are split on air temperature (all snow ≤ 0 °C, all rain ≥ +2 °C). Incoming longwave is estimated from temperature, humidity and model cloud cover.</li>
   </ol>
 
   <h2>3. The snow model</h2>
@@ -50,7 +51,7 @@
     <tr><td>Energy balance</td><td>Slope shortwave (sun geometry, no terrain shading) with an albedo that depends on age and wetness; longwave with sky view; stability-corrected sensible and latent heat; rain heat. Solved implicitly, with heat conduction through the layers (Calonne et al. 2011 conductivity) to 0 °C ground.</td></tr>
     <tr><td>Water</td><td>Melt, refreeze and bucket percolation (3 % irreducible water). Refrozen wet layers become melt-freeze crusts.</td></tr>
     <tr><td>Settlement</td><td>Crocus overburden viscosity plus Anderson (1976) destructive metamorphism of new snow.</td></tr>
-    <tr><td>Metamorphism</td><td>Dendricity, sphericity and grain size change with temperature, temperature gradient and liquid water: rounding below about 5 K/m and faceting above about 7 K/m, plus wet grain growth.</td></tr>
+    <tr><td>Metamorphism</td><td>Dendricity, sphericity and grain size change with temperature, temperature gradient and liquid water: rounding below about 5 K/m and faceting above about 7 K/m, plus wet grain growth. Large faceted grains round slowly, and a layer that has faceted stays FCxr, or DH once it has grown depth hoar, rather than turning into rounded grains.</td></tr>
     <tr><td>Surface hoar</td><td>Grows from deposition on calm (&lt; 3.5 m/s), clear nights. Wind, sun or melt destroys it. When buried it is kept as its own layer if the crystals are 2 mm or larger.</td></tr>
   </table>
   <p>Grain types are mapped from these state variables to AVID's five groups: PP/DF, RG/FCxr, SH/DH/FC, MFcr and MF. Hand hardness comes from density and grain type, after the regressions of Geldsetzer &amp; Jamieson (2000).</p>
@@ -58,7 +59,7 @@
   <h2>4. Avalanche-problem indices</h2>
   <table>
     <tr><th>Map property</th><th>Definition</th></tr>
-    <tr><td>Persistent weak layers</td><td>Threshold-sum ("lemons") structural instability of each buried SH, DH, FC or FCxr layer (Schweizer &amp; Jamieson 2007): persistent grain type, grain size ≥ 1.25 mm, hardness ≤ F+, grain-size difference ≥ 0.75 mm, hardness difference ≥ 1.7 steps, and depth 18–94 cm. The index is a logistic curve centred between 4 and 5 lemons, reduced when the slab is thin or very deep. A layer counts as a <i>critical PWL</i> when the index is ≥ 70 % at 18–150 cm depth.</td></tr>
+    <tr><td>Persistent weak layers</td><td>Threshold-sum ("lemons") structural instability of each buried weak zone: adjacent SH, DH, FC or FCxr layers are scored together, on their largest grains and softest hardness against the slab above and the layer below (Schweizer &amp; Jamieson 2007): persistent grain type, grain size ≥ 1.25 mm, hardness ≤ F+, grain-size difference ≥ 0.75 mm, hardness difference ≥ 1.7 steps, and depth 18–94 cm. The index is a logistic curve centred between 4 and 5 lemons, reduced when the slab is thin or very deep. A layer counts as a <i>critical PWL</i> when the index is ≥ 70 % at 18–150 cm depth. Weak zones deeper than 94 cm are scored again as if they had the depth lemon and reported in the text as a <i>deep persistent</i> layer.</td></tr>
     <tr><td>New snow</td><td>From the settled thickness of snow deposited in the last 24 h (centred at 20 cm) and 72 h (centred at 30 cm).</td></tr>
     <tr><td>Wind slab</td><td>From the thickness of dry, wind-affected layers deposited in the last 96 h in the top metre (centred at 15 cm).</td></tr>
     <tr><td>Wet snow</td><td>From the mean liquid water content of the top 50 cm relative to 3 % (the SNOWPACK LWC index), and from rain in the last 24 h.</td></tr>
