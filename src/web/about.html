@@ -32,7 +32,7 @@
   </ul>
 
   <h2>2. Getting weather to every cell</h2>
-  <p>The model grid is about 5 km (0.045° × 0.07°). Each cell is simulated at its mean terrain elevation (five samples from a 90 m DEM). For every hour:</p>
+  <p>The model grid is about 5 km (0.045° × 0.07°). Each cell is simulated at its mean terrain elevation (the mean of every pixel of the open Terrarium elevation tiles inside the cell, about 190 m apart). For every hour:</p>
   <ol>
     <li><b>Model first guess.</b> Inverse-distance weighting of the six nearest model columns. Temperature is moved to the cell elevation with the lapse rate fitted across all columns that hour, so inversions are kept. Precipitation is scaled +5 % per 100 m.</li>
     <li><b>Temperature profile.</b> Each hour the station temperature residuals are fitted against station elevation (1310–2930 m), so the model's vertical profile is corrected everywhere, including ridge-top inversions the model misses. The fit is shrunk toward no correction when few stations report.</li>
