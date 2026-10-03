@@ -10,7 +10,9 @@
 // albedo, rain and melt.
 //   Early: 1 Oct – 30 Nov. Winter: Dec – Mar. Spring: 1 Apr – 30 Jun.
 //   Melt-out: the first day after 1 March from which snow height stays under
-//   5 cm for 7 days (sensor) or stays under 5 cm (model).
+//   5 cm to 15 July, for the sensor (its valid readings) and the model alike.
+//   The sensors often have gaps after melt-out, so needing readings in the
+//   following days would date melt-out to when data resume.
 // Sensor readings more than 25 cm off the median of the 7 days around them are
 // skipped as faults.
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
@@ -56,10 +58,7 @@ for (const season of ["2023-24", "2024-25", "2025-26"]) {
     const idx = days.map((d, i) => [d, i]).filter(([d]) => d.date >= `${y1}-03-01` && d.date <= `${y1}-07-15`);
     let mo = null, mm = null;
     for (const [d, i] of idx) {
-      if (mo === null && ok(clean[i]) && clean[i] < 5) {
-        const next = clean.slice(i, i + 7).filter(ok);
-        if (next.length >= 3 && next.every((v) => v < 5)) mo = d.date;
-      }
+      if (mo === null && ok(clean[i]) && clean[i] < 5 && idx.filter(([e]) => e.date >= d.date).every(([, j]) => !ok(clean[j]) || clean[j] < 5)) mo = d.date;
       if (mm === null && d.hs[0] < 5 && idx.filter(([e]) => e.date >= d.date).every(([e]) => e.hs[0] < 5)) mm = d.date;
     }
     if (mo && mm) melt.push(dayNum(mm) - dayNum(mo));
