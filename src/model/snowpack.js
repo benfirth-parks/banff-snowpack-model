@@ -4,16 +4,17 @@
 // stored bottom → top. Each layer carries ice mass m (kg/m²), liquid water mass w
 // (kg/m²), thickness d (m), temperature T (°C), the Brun/Crocus microstructure
 // state variables dendricity dd (0–1) and sphericity sp (0–1), grain size gs (mm),
-// birth time bd (epoch hours, UTC) and a marker bit field mk.
+// birth time bd (epoch hours, UTC), hours spent wet wt and a marker bit field mk.
 //
 // Processes, per hourly step (the energy balance is sub-stepped):
 //   • snowfall (Crocus new-snow density/dendricity from air temperature + wind)
 //   • wind redistribution by aspect (loading during snowfall + drift of loose snow)
 //   • rain (liquid water + advected heat)
-//   • surface energy balance: shortwave (age-dependent albedo), longwave,
+//   • surface energy balance: shortwave (albedo from age and hours spent wet), longwave,
 //     stability-corrected sensible and latent heat, rain heat
 //   • implicit heat conduction through the layers, 0 °C ground below
 //   • melt, refreeze, bucket percolation with irreducible water content
+//     (water entering snow below 0 °C refreezes until it reaches 0 °C)
 //   • sublimation / deposition, including surface-hoar growth and destruction
 //   • settlement (Crocus viscosity + Anderson destructive metamorphism)
 //   • grain metamorphism: dendricity, sphericity and grain-size rates driven by
@@ -79,6 +80,7 @@ function mergeInto(a, b) {
   a.sp = fa * a.sp + fb * b.sp;
   a.gs = fa * a.gs + fb * b.gs;
   a.bd = fa * a.bd + fb * b.bd;
+  a.wt = fa * a.wt + fb * b.wt;
   a.m = m; a.w += b.w; a.d += b.d;
   a.mk = (a.mk | b.mk) & ~SH;
   return a;
@@ -101,7 +103,7 @@ function addSnow(sim, mass, Ta, U, t, windDeposit = false) {
     gs = 0.3; mk = U > 6 ? WIND : 0;
   }
   const T = Math.min(Ta, 0);
-  const layer = { d: mass / rho, m: mass, w: 0, T, dd, sp, gs, bd: t, mk };
+  const layer = { d: mass / rho, m: mass, w: 0, T, dd, sp, gs, bd: t, wt: 0, mk };
   const L = sim.L;
   let top = L[L.length - 1];
   // Tiny surface hoar (< ~2 mm) is not preserved as a distinct layer when buried.
@@ -164,10 +166,20 @@ function energyStep(sim, f, dt) {
   const ea = (f.RH / 100) * esatWater(Ta);
   const qa = 0.622 * ea / p;
 
-  // Albedo from the age / wetness of the surface layer.
+  // Albedo of the surface layer. Dry snow ages from 0.9 toward 0.7 (e-folding
+  // 6 d). Time spent wet coarsens the grains and lowers it further, toward 0.6
+  // with an e-folding of 100 wet hours, the melting-snow rate of ISBA (Douville
+  // et al. 1995) and CLASS (Verseghy 1991). Those schemes floor at 0.5; the 0.6
+  // floor is the low end of old clean wet snow (0.60–0.70, Cuffey & Paterson
+  // 2010) and fitted the station snow-height sensors best (0.5: spring snow
+  // ~4.5 cm too low; 0.55: ~3 cm; 0.6: ~0). Counting wet
+  // hours rather than the age since deposition keeps a surface that sat cold for
+  // two weeks bright on its first melt day, and a refrozen melt surface stays
+  // as dark as it was wet (liquid water lowers albedo through grain size, not
+  // directly). The earlier wet branch (0.5 + 0.4·exp(−age/2 d)) melted the
+  // station snowpacks ~1.5× faster than the sensors on spring days without snowfall.
   const ageD = Math.max(0, (f.t - top.bd) / 24);
-  const wetTop = theta(top) > 0.001;
-  let alb = (top.mk & SH) ? 0.9 : wetTop ? 0.5 + 0.4 * Math.exp(-ageD / 2) : 0.7 + 0.2 * Math.exp(-ageD / 6);
+  let alb = (top.mk & SH) ? 0.9 : 0.6 + (0.1 + 0.2 * Math.exp(-ageD / 6)) * Math.exp(-top.wt / 100);
   const hs = sim.L.reduce((s, l) => s + l.d, 0);
   // Very thin snow lets the ground show through (fresh snow is optically thick at ~3 cm).
   if (hs < 0.03) alb = 0.2 + (alb - 0.2) * hs / 0.03;
@@ -257,11 +269,29 @@ function energyStep(sim, f, dt) {
   return { melt, dep, absSW, Ts: sim.Ts };
 }
 
+// Bucket percolation with refreeze on entry. Water moving down into snow below
+// 0 °C first refreezes until that snow reaches 0 °C (its cold content,
+// heatCap·(−T)/LF), the latent heat warming it; the new ice adds to m with d
+// unchanged, so the layer densifies. Only then does the layer hold water up to
+// its irreducible content (3 % by volume, at most 90 % of the pore space) and
+// pass the rest down. Without this, water held in snow below 0 °C stayed liquid
+// until the next energy sub-step, so profiles showed wet layers at −1 to −9 °C
+// at wetting fronts (~4 % of profiles holding liquid water). How deep a
+// front reaches hardly changes: melt arrives a few tenths of a mm per
+// sub-step, and the held water used to refreeze on the next sub-step anyway.
+// A layer the water reached counts as wet (WET) even when all of it refroze.
 function percolate(sim) {
   const L = sim.L;
   let carry = 0;
   for (let i = L.length - 1; i >= 0; i--) {
     const l = L[i];
+    const C = carry > 1e-6 && l.T < 0 ? heatCap(l) : 0;
+    if (C > 0) {
+      const fr = Math.min(carry, C * -l.T / LF);
+      carry -= fr; l.m += fr;
+      l.T = carry > 1e-9 ? 0 : Math.min(0, (C * l.T + fr * LF) / (C + fr * CI));
+      l.mk |= WET;
+    }
     l.w += carry; carry = 0;
     const pore = Math.max(0, 1 - density(l) / RHO_ICE);
     const cap = Math.min(0.03, 0.9 * pore) * 1000 * l.d;
@@ -306,7 +336,9 @@ function metamorphism(sim, dtDays) {
     const l = L[i];
     const th = theta(l);
     if (l.mk & SH) {
-      if (th > 0.001) { l.mk &= ~SH; l.mk |= WET; l.dd = 0; l.sp = 0.6; }
+      // Surface hoar that has held melt or rain water (WET, even if it drained) is
+      // destroyed; surfaceHoar() misses it in hours of net sublimation.
+      if (th > 0.001 || (i === n - 1 && (l.mk & WET))) { l.mk &= ~SH; l.mk |= WET; l.dd = 0; l.sp = 0.6; }
       continue; // buried surface hoar is persistent
     }
     const k = conductivity(density(l));
@@ -331,6 +363,7 @@ function metamorphism(sim, dtDays) {
       l.dd = Math.max(0, l.dd - r * dtDays);
       l.sp = Math.min(1, l.sp + r * dtDays);
       l.gs = Math.min(3, l.gs + 0.04 * (1 + tp) * dtDays);
+      l.wt += 24 * dtDays;
       l.mk |= WET;
       continue;
     }
@@ -370,8 +403,9 @@ function surfaceHoar(sim, f, dep, absSW) {
   if (!top) return;
   const calm = f.U < 3.5 && (f.P || 0) < 0.05 && f.Ta < 0;
   if (top.mk & SH) {
-    // Destroy by wind, sun or melt.
-    if (f.U > 6 || theta(top) > 0.001 || (sim.Ts > -0.5 && absSW > 80) || absSW > 180) {
+    // Destroy by wind, sun or melt. Melt water drains out of the thin hoar layer
+    // within the hour, so any water it has held (WET) counts as melt.
+    if (f.U > 6 || theta(top) > 0.001 || (top.mk & WET) || (sim.Ts > -0.5 && absSW > 80) || absSW > 180) {
       top.mk &= ~SH; top.dd = 0; top.sp = 0.5; top.gs = Math.min(top.gs, 1);
       if (L.length > 1) mergeInto(L[L.length - 2], L.pop());
       return;
@@ -382,7 +416,7 @@ function surfaceHoar(sim, f, dep, absSW) {
     return;
   }
   if (dep > 0.004 && calm) {
-    L.push({ d: dep / 100, m: dep, w: 0, T: sim.Ts, dd: 0, sp: 0, gs: 1 + 15 * dep, bd: f.t, mk: SH });
+    L.push({ d: dep / 100, m: dep, w: 0, T: sim.Ts, dd: 0, sp: 0, gs: 1 + 15 * dep, bd: f.t, wt: 0, mk: SH });
   } else if (dep > 0) {
     top.m += dep;
   }
@@ -474,19 +508,20 @@ export function stepHour(sim, f) {
 export function snowDepth(sim) { let h = 0; for (const l of sim.L) h += l.d; return h; }
 export function swe(sim) { let s = 0; for (const l of sim.L) s += l.m + l.w; return s; }
 
-// Compact serialisation: one array per layer.
+// Compact serialisation: one array per layer. Wet hours are the tenth element;
+// in state packed before they existed, a layer that has been wet gets 100 h.
 export function packSim(sim) {
   const r = (x, k) => Math.round(x * k) / k;
   return {
     Ts: r(sim.Ts, 100), ro: r(sim.runoff, 10), t: sim.t,
-    L: sim.L.map((l) => [r(l.d, 1e5), r(l.m, 1e3), r(l.w, 1e3), r(l.T, 1e3), r(l.dd, 1e4), r(l.sp, 1e4), r(l.gs, 1e3), r(l.bd, 100), l.mk]),
+    L: sim.L.map((l) => [r(l.d, 1e5), r(l.m, 1e3), r(l.w, 1e3), r(l.T, 1e3), r(l.dd, 1e4), r(l.sp, 1e4), r(l.gs, 1e3), r(l.bd, 100), l.mk, r(l.wt, 10)]),
   };
 }
 export function unpackSim(base, p) {
   const sim = createSim(base);
   if (!p) return sim;
   sim.Ts = p.Ts; sim.runoff = p.ro || 0; sim.t = p.t;
-  sim.L = p.L.map((a) => ({ d: a[0], m: a[1], w: a[2], T: a[3], dd: a[4], sp: a[5], gs: a[6], bd: a[7], mk: a[8] }));
+  sim.L = p.L.map((a) => ({ d: a[0], m: a[1], w: a[2], T: a[3], dd: a[4], sp: a[5], gs: a[6], bd: a[7], mk: a[8], wt: a[9] ?? ((a[8] & WET) ? 100 : 0) }));
   return sim;
 }
 export function cloneSim(sim) {

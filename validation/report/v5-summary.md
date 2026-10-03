@@ -11,6 +11,8 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Hand hardness, model − observed | bias -0.2 steps, mean abs 1 (n 122) |
 | Basal persistent grains (bottom 30 %) | observed in 79/104; model has them in 79 of those; model shows ≥2 mm "RG" at the base in 0 |
 | Crusts | observed 118, matched 43 (36 %); model crusts with no observed match 172 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 4/37 / 21/55 / 18/26 |
+| Model crust zones (adjacent crust layers count once) | 97, with no observed match 56 |
 | Buried surface hoar | observed 21, matched 6 (29 %); model SH with no observed match 340 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 62/180 (34 %) |
 | Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 170/203 (84 %) |
@@ -24,6 +26,8 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Hand hardness, model − observed | bias 0 steps, mean abs 0.9 (n 60) |
 | Basal persistent grains (bottom 30 %) | observed in 54/58; model has them in 54 of those; model shows ≥2 mm "RG" at the base in 0 |
 | Crusts | observed 74, matched 23 (31 %); model crusts with no observed match 90 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 0/21 / 11/38 / 12/15 |
+| Model crust zones (adjacent crust layers count once) | 53, with no observed match 31 |
 | Buried surface hoar | observed 14, matched 6 (43 %); model SH with no observed match 209 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 35/89 (39 %) |
 | Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 110/117 (94 %) |
@@ -37,6 +41,8 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Hand hardness, model − observed | bias -0.3 steps, mean abs 1.1 (n 62) |
 | Basal persistent grains (bottom 30 %) | observed in 25/46; model has them in 25 of those; model shows ≥2 mm "RG" at the base in 0 |
 | Crusts | observed 44, matched 20 (45 %); model crusts with no observed match 82 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 4/16 / 10/17 / 6/11 |
+| Model crust zones (adjacent crust layers count once) | 44, with no observed match 25 |
 | Buried surface hoar | observed 7, matched 0 (0 %); model SH with no observed match 131 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 27/91 (30 %) |
 | Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 60/86 (70 %) |
@@ -50,6 +56,8 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Hand hardness, model − observed | bias 0.2 steps, mean abs 1 (n 36) |
 | Basal persistent grains (bottom 30 %) | observed in 29/36; model has them in 29 of those; model shows ≥2 mm "RG" at the base in 0 |
 | Crusts | observed 41, matched 16 (39 %); model crusts with no observed match 57 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 0/3 / 7/26 / 9/12 |
+| Model crust zones (adjacent crust layers count once) | 34, with no observed match 20 |
 | Buried surface hoar | observed 2, matched 1 (50 %); model SH with no observed match 146 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 26/54 (48 %) |
 | Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 81/93 (87 %) |
@@ -63,6 +71,8 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Hand hardness, model − observed | bias 0 steps, mean abs 0.9 (n 41) |
 | Basal persistent grains (bottom 30 %) | observed in 29/39; model has them in 29 of those; model shows ≥2 mm "RG" at the base in 0 |
 | Crusts | observed 36, matched 12 (33 %); model crusts with no observed match 27 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 4/22 / 3/7 / 5/7 |
+| Model crust zones (adjacent crust layers count once) | 23, with no observed match 10 |
 | Buried surface hoar | observed 0, matched 0 (–); model SH with no observed match 118 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 20/55 (36 %) |
 | Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 50/56 (89 %) |
@@ -76,6 +86,8 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Hand hardness, model − observed | bias -0.6 steps, mean abs 1.1 (n 45) |
 | Basal persistent grains (bottom 30 %) | observed in 21/29; model has them in 21 of those; model shows ≥2 mm "RG" at the base in 0 |
 | Crusts | observed 41, matched 15 (37 %); model crusts with no observed match 88 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 0/12 / 11/22 / 4/7 |
+| Model crust zones (adjacent crust layers count once) | 40, with no observed match 26 |
 | Buried surface hoar | observed 19, matched 5 (26 %); model SH with no observed match 76 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 16/71 (23 %) |
 | Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 39/54 (72 %) |
@@ -89,6 +101,8 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Hand hardness, model − observed | bias 0.3 steps, mean abs 1 (n 23) |
 | Basal persistent grains (bottom 30 %) | observed in 21/23; model has them in 21 of those; model shows ≥2 mm "RG" at the base in 0 |
 | Crusts | observed 27, matched 10 (37 %); model crusts with no observed match 27 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 0/11 / 4/9 / 6/7 |
+| Model crust zones (adjacent crust layers count once) | 17, with no observed match 10 |
 | Buried surface hoar | observed 4, matched 4 (100 %); model SH with no observed match 80 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 16/32 (50 %) |
 | Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 46/50 (92 %) |
@@ -102,6 +116,8 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Hand hardness, model − observed | bias -0.3 steps, mean abs 0.9 (n 18) |
 | Basal persistent grains (bottom 30 %) | observed in 17/18; model has them in 17 of those; model shows ≥2 mm "RG" at the base in 0 |
 | Crusts | observed 19, matched 5 (26 %); model crusts with no observed match 47 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 0/5 / 3/12 / 2/2 |
+| Model crust zones (adjacent crust layers count once) | 17, with no observed match 12 |
 | Buried surface hoar | observed 5, matched 0 (0 %); model SH with no observed match 73 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 12/30 (40 %) |
 | Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 39/40 (98 %) |
@@ -115,6 +131,8 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Hand hardness, model − observed | bias -0.1 steps, mean abs 0.8 (n 6) |
 | Basal persistent grains (bottom 30 %) | observed in 5/6; model has them in 5 of those; model shows ≥2 mm "RG" at the base in 0 |
 | Crusts | observed 11, matched 0 (0 %); model crusts with no observed match 2 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 0/4 / 0/6 / 0/1 |
+| Model crust zones (adjacent crust layers count once) | 2, with no observed match 2 |
 | Buried surface hoar | observed 2, matched 2 (100 %); model SH with no observed match 48 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 5/8 (63 %) |
 | Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 16/18 (89 %) |
@@ -128,6 +146,8 @@ Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth 
 | Hand hardness, model − observed | bias -0.3 steps, mean abs 0.9 (n 13) |
 | Basal persistent grains (bottom 30 %) | observed in 11/11; model has them in 11 of those; model shows ≥2 mm "RG" at the base in 0 |
 | Crusts | observed 17, matched 8 (47 %); model crusts with no observed match 14 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 0/1 / 4/11 / 4/5 |
+| Model crust zones (adjacent crust layers count once) | 17, with no observed match 7 |
 | Buried surface hoar | observed 3, matched 0 (0 %); model SH with no observed match 8 |
 | Test failures with a model weak layer (p ≥ 50 %) within tolerance | 2/19 (11 %) |
 | Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 9/9 (100 %) |

@@ -191,6 +191,19 @@ function score(o) {
   // Per model layer: [height cm, grain size mm, matched an observed layer]
   const detail = (A, layers) => layers.map((l) => { const h = (l.hBot + l.hTop) / 2; return [Math.round(h), l.gs, A.some((a) => tolMatch(a, h))]; });
   const mSHl = M.L.filter((l) => l.cls === 6 && M.hs - l.hTop > 2 && inRange(l)), mCrl = M.L.filter((l) => l.cls === 8 && inRange(l));
+  // Observed crusts by position (bottom 30 % of HS, top 30 cm, mid-pack between),
+  // and the model's crusts counted as zones: adjacent crust layers are one crust,
+  // as an observer would log a thick melt-freeze crust.
+  const pos = (h) => (h < 0.3 * HS ? 0 : HS - h <= 30 ? 2 : 1);
+  const crustPos = [0, 1, 2].map((z) => { const A = oCr.filter((h) => pos(h) === z); return [A.length, A.filter((a) => mCr.some((b) => tolMatch(a, b))).length]; });
+  const zones = [];
+  M.L.forEach((l, i) => {
+    if (l.cls !== 8 || !inRange(l)) return;
+    const h = (l.hBot + l.hTop) / 2, hit = oCr.some((a) => tolMatch(a, h));
+    if (i > 0 && M.L[i - 1].cls === 8 && zones.length && zones[zones.length - 1].last === i - 1) { const z = zones[zones.length - 1]; z.last = i; z.hit ||= hit; }
+    else zones.push({ last: i, hit });
+  });
+  const crustZones = { model: zones.length, falseAlarm: zones.filter((z) => !z.hit).length };
 
   // Test failures
   const fails = (o.tests || []).filter((t) => ok(t.height_cm) && !/(CTN|ECTX|ECTN\b|CTV)/i.test(t.score || "") && (t.taps === null || t.taps === undefined || t.taps <= 30) && !/BRK/i.test(t.fracture || ""));
@@ -223,7 +236,7 @@ function score(o) {
     hsObs: HS, hsModel: M.hs, hsErr: r1(M.hs - HS), partial: pitBottom > 2,
     groupAgree: gN ? Math.round((100 * gHit) / gN) : null, groupN: gN, conf,
     hardBias: r1(mean(hd)), hardMAE: r1(mean(hd.map(Math.abs))),
-    basal, crusts: { ...matchSets(oCr, mCr), layers: detail(oCr, mCrl) }, sh: { ...matchSets(oSH, mSH), layers: detail(oSH, mSHl) }, tests: failRes, weak,
+    basal, crusts: { ...matchSets(oCr, mCr), layers: detail(oCr, mCrl), byPos: crustPos, zones: crustZones }, sh: { ...matchSets(oSH, mSH), layers: detail(oSH, mSHl) }, tests: failRes, weak,
     tempBias: r1(mean(tErr)), tempRMSE: tErr.length ? r1(Math.sqrt(mean(tErr.map((x) => x * x)))) : null,
     modelSurface: CLASSES[M.L[0]?.cls] ?? null,
   };
@@ -253,6 +266,8 @@ function block(name, R) {
     `| Hand hardness, model − observed | bias ${r1(mean(hb.map((r) => r.hardBias)))} steps, mean abs ${r1(mean(hb.map((r) => r.hardMAE)))} (n ${hb.length}) |`,
     `| Basal persistent grains (bottom 30 %) | observed in ${bas.filter((r) => r.basal.obs).length}/${bas.length}; model has them in ${bas.filter((r) => r.basal.obs && r.basal.model).length} of those; model shows ≥2 mm "RG" at the base in ${bas.filter((r) => r.basal.modelLargeRG).length} |`,
     `| Crusts | observed ${sum("crusts", "obs")}, matched ${sum("crusts", "hit")} (${pct(sum("crusts", "hit"), sum("crusts", "obs"))}); model crusts with no observed match ${sum("crusts", "falseAlarm")} |`,
+    `| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | ${[0, 1, 2].map((z) => `${R.reduce((x, r) => x + r.crusts.byPos[z][1], 0)}/${R.reduce((x, r) => x + r.crusts.byPos[z][0], 0)}`).join(" / ")} |`,
+    `| Model crust zones (adjacent crust layers count once) | ${R.reduce((x, r) => x + r.crusts.zones.model, 0)}, with no observed match ${R.reduce((x, r) => x + r.crusts.zones.falseAlarm, 0)} |`,
     `| Buried surface hoar | observed ${sum("sh", "obs")}, matched ${sum("sh", "hit")} (${pct(sum("sh", "hit"), sum("sh", "obs"))}); model SH with no observed match ${sum("sh", "falseAlarm")} |`,
     `| Test failures with a model weak layer (p ≥ 50 %) within tolerance | ${tests.filter((t) => t.flagged).length}/${tests.length} (${pct(tests.filter((t) => t.flagged).length, tests.length)}) |`,
     `| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | ${R.reduce((x, r) => x + (r.weak?.confirmed || 0), 0)}/${R.reduce((x, r) => x + (r.weak?.model || 0), 0)} (${pct(R.reduce((x, r) => x + (r.weak?.confirmed || 0), 0), R.reduce((x, r) => x + (r.weak?.model || 0), 0))}) |`,

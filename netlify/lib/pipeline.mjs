@@ -12,7 +12,7 @@ import { tzOffset, localDate, snapHour, isSnapHour, addDays } from "../../src/mo
 export const SEASON_START = "2026-09-01";
 // Bump when model physics or forcing change: stored seasons are then re-run from
 // their start by the next live run / season chunk.
-export const MODEL_VERSION = 5;
+export const MODEL_VERSION = 6;
 export const LIVE_SEASON = "2026-27";
 export const BATCH = 250;
 export const HIST = 30; // hours of history before the analysis start (residual tails, 24 h precip windows)
