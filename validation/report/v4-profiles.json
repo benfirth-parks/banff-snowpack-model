@@ -12,17 +12,17 @@
   "km": null,
   "dz": null,
   "hsObs": 59,
-  "hsModel": 64,
-  "hsErr": 5,
+  "hsModel": 61,
+  "hsErr": 2,
   "partial": false,
-  "groupAgree": 63,
+  "groupAgree": 65,
   "groupN": 40,
   "conf": [
    [
-    3,
+    4,
     0,
     3,
-    3,
+    2,
     0
    ],
    [
@@ -63,32 +63,17 @@
   },
   "crusts": {
    "obs": 1,
-   "model": 5,
+   "model": 2,
    "hit": 1,
    "falseAlarm": 0,
    "layers": [
     [
-     59,
-     0.3,
-     true
-    ],
-    [
-     52,
-     0.6,
-     true
-    ],
-    [
-     52,
-     0.6,
-     true
-    ],
-    [
-     51,
-     0.6,
-     true
-    ],
-    [
      49,
+     0.6,
+     true
+    ],
+    [
+     47,
      0.6,
      true
     ]
@@ -96,33 +81,23 @@
   },
   "sh": {
    "obs": 1,
-   "model": 5,
+   "model": 3,
    "hit": 1,
-   "falseAlarm": 2,
+   "falseAlarm": 1,
    "layers": [
     [
-     33,
+     35,
+     8,
+     true
+    ],
+    [
+     28,
      2.4,
      true
     ],
     [
-     33,
-     3.5,
-     true
-    ],
-    [
-     31,
-     2,
-     true
-    ],
-    [
-     23,
-     2.4,
-     false
-    ],
-    [
-     14,
-     2,
+     9,
+     3.6,
      false
     ]
    ]
@@ -140,9 +115,9 @@
    "model": 3,
    "confirmed": 3
   },
-  "tempBias": -1.4,
-  "tempRMSE": 1.7,
-  "modelSurface": "PP"
+  "tempBias": -1.3,
+  "tempRMSE": 1.4,
+  "modelSurface": "SH"
  },
  {
   "file": "2023-24/2023-12-12_dolomite-shoulder-2280m.json",
@@ -157,8 +132,8 @@
   "km": 11.3,
   "dz": -240,
   "hsObs": 65,
-  "hsModel": 62,
-  "hsErr": -3,
+  "hsModel": 60,
+  "hsErr": -5,
   "partial": false,
   "groupAgree": 53,
   "groupN": 40,
@@ -166,8 +141,8 @@
    [
     3,
     0,
-    8,
-    4,
+    9,
+    3,
     0
    ],
    [
@@ -199,7 +174,7 @@
     0
    ]
   ],
-  "hardBias": 0.3,
+  "hardBias": 0.5,
   "hardMAE": 0.9,
   "basal": {
    "obs": true,
@@ -208,61 +183,31 @@
   },
   "crusts": {
    "obs": 0,
-   "model": 5,
+   "model": 2,
    "hit": 0,
-   "falseAlarm": 5,
+   "falseAlarm": 2,
    "layers": [
     [
-     57,
-     0.3,
-     false
-    ],
-    [
-     51,
-     0.6,
-     false
-    ],
-    [
-     50,
-     0.6,
-     false
-    ],
-    [
-     49,
-     0.6,
-     false
-    ],
-    [
      48,
-     0.7,
+     0.6,
+     false
+    ],
+    [
+     46,
+     0.6,
      false
     ]
    ]
   },
   "sh": {
    "obs": 0,
-   "model": 4,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 4,
+   "falseAlarm": 1,
    "layers": [
     [
-     33,
-     2.6,
-     false
-    ],
-    [
-     32,
-     3.4,
-     false
-    ],
-    [
-     30,
-     2,
-     false
-    ],
-    [
-     7,
-     2.1,
+     35,
+     8,
      false
     ]
    ]
@@ -272,13 +217,13 @@
     "score": "CT13",
     "h": 15,
     "grain": "FC",
-    "flagged": true,
+    "flagged": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
-   "model": 3,
-   "confirmed": 3
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -297,17 +242,17 @@
   "km": null,
   "dz": null,
   "hsObs": 95,
-  "hsModel": 54,
-  "hsErr": -41,
+  "hsModel": 67,
+  "hsErr": -28,
   "partial": false,
-  "groupAgree": 10,
+  "groupAgree": 13,
   "groupN": 40,
   "conf": [
    [
     4,
     0,
-    6,
-    3,
+    7,
+    2,
     0
    ],
    [
@@ -327,8 +272,8 @@
    [
     0,
     0,
-    3,
-    0,
+    2,
+    1,
     0
    ],
    [
@@ -339,8 +284,8 @@
     0
    ]
   ],
-  "hardBias": -0.7,
-  "hardMAE": 1.2,
+  "hardBias": -0.5,
+  "hardMAE": 1,
   "basal": {
    "obs": true,
    "model": true,
@@ -348,36 +293,46 @@
   },
   "crusts": {
    "obs": 1,
-   "model": 2,
+   "model": 5,
    "hit": 1,
-   "falseAlarm": 1,
+   "falseAlarm": 4,
    "layers": [
     [
-     42,
+     56,
+     0.6,
+     false
+    ],
+    [
+     55,
+     0.6,
+     false
+    ],
+    [
+     54,
+     0.6,
+     false
+    ],
+    [
+     53,
      0.7,
      false
     ],
     [
-     34,
-     1,
+     41,
+     0.9,
      true
     ]
    ]
   },
   "sh": {
    "obs": 0,
-   "model": 2,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 2,
+   "falseAlarm": 1,
    "layers": [
     [
-     21,
+     28,
      2.2,
-     false
-    ],
-    [
-     4,
-     3.9,
      false
     ]
    ]
@@ -394,13 +349,13 @@
     "score": "CT10",
     "h": 0,
     "grain": "FCxr",
-    "flagged": true,
+    "flagged": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
-   "model": 2,
-   "confirmed": 2
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -419,24 +374,24 @@
   "km": 1.9,
   "dz": -250,
   "hsObs": 85,
-  "hsModel": 66,
-  "hsErr": -19,
+  "hsModel": 62,
+  "hsErr": -23,
   "partial": false,
-  "groupAgree": 55,
+  "groupAgree": 50,
   "groupN": 40,
   "conf": [
    [
-    2,
     0,
-    7,
-    3,
+    0,
+    10,
+    2,
     0
    ],
    [
     0,
     0,
-    7,
-    1,
+    8,
+    0,
     0
    ],
    [
@@ -444,6 +399,140 @@
     0,
     20,
     0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.3,
+  "hardMAE": 0.9,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2,
+   "layers": [
+    [
+     46,
+     0.8,
+     false
+    ],
+    [
+     45,
+     0.9,
+     false
+    ]
+   ]
+  },
+  "sh": {
+   "obs": 0,
+   "model": 3,
+   "hit": 0,
+   "falseAlarm": 3,
+   "layers": [
+    [
+     58,
+     5.5,
+     false
+    ],
+    [
+     33,
+     8,
+     false
+    ],
+    [
+     26,
+     2.5,
+     false
+    ]
+   ]
+  },
+  "tests": [
+   {
+    "score": "CT13",
+    "h": 70,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT22",
+    "h": 42,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "CT27",
+    "h": 42,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "weak": {
+   "model": 2,
+   "confirmed": 2
+  },
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2023-24/2023-12-21_goats-eye-plot.json",
+  "season": "2023-24",
+  "date": "2023-12-21",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 71,
+  "hsModel": 70,
+  "hsErr": -1,
+  "partial": false,
+  "groupAgree": 35,
+  "groupN": 26,
+  "conf": [
+   [
+    0,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    4,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    9,
+    9,
     0
    ],
    [
@@ -469,222 +558,53 @@
    "modelLargeRG": false
   },
   "crusts": {
-   "obs": 0,
-   "model": 5,
-   "hit": 0,
-   "falseAlarm": 5,
-   "layers": [
-    [
-     55,
-     0.7,
-     false
-    ],
-    [
-     49,
-     0.9,
-     false
-    ],
-    [
-     49,
-     0.8,
-     false
-    ],
-    [
-     48,
-     0.8,
-     false
-    ],
-    [
-     46,
-     0.9,
-     false
-    ]
-   ]
-  },
-  "sh": {
-   "obs": 0,
-   "model": 9,
-   "hit": 0,
-   "falseAlarm": 9,
-   "layers": [
-    [
-     64,
-     2.1,
-     false
-    ],
-    [
-     63,
-     2.2,
-     false
-    ],
-    [
-     63,
-     2.5,
-     false
-    ],
-    [
-     59,
-     2.6,
-     false
-    ],
-    [
-     31,
-     2.4,
-     false
-    ],
-    [
-     31,
-     3.4,
-     false
-    ],
-    [
-     29,
-     2,
-     false
-    ],
-    [
-     22,
-     2.5,
-     false
-    ],
-    [
-     13,
-     2,
-     false
-    ]
-   ]
-  },
-  "tests": [
-   {
-    "score": "CT13",
-    "h": 70,
-    "grain": null,
-    "flagged": false,
-    "modelLayer": "MFcr"
-   },
-   {
-    "score": "CT22",
-    "h": 42,
-    "grain": "FC",
-    "flagged": true,
-    "modelLayer": "FC"
-   },
-   {
-    "score": "CT27",
-    "h": 42,
-    "grain": "FC",
-    "flagged": true,
-    "modelLayer": "FC"
-   }
-  ],
-  "weak": {
-   "model": 3,
-   "confirmed": 3
-  },
-  "tempBias": null,
-  "tempRMSE": null,
-  "modelSurface": "DF"
- },
- {
-  "file": "2023-24/2023-12-21_goats-eye-plot.json",
-  "season": "2023-24",
-  "date": "2023-12-21",
-  "kind": "study_plot",
-  "site": "goats-eye-plot",
-  "aspect": null,
-  "sim": "flat",
-  "point": "fts-sunshine",
-  "match": "study plot",
-  "km": null,
-  "dz": null,
-  "hsObs": 71,
-  "hsModel": 64,
-  "hsErr": -7,
-  "partial": false,
-  "groupAgree": 42,
-  "groupN": 26,
-  "conf": [
-   [
-    0,
-    0,
-    3,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    4,
-    1,
-    0
-   ],
-   [
-    0,
-    0,
-    11,
-    7,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": 0.3,
-  "hardMAE": 0.9,
-  "basal": {
-   "obs": true,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
    "obs": 1,
-   "model": 7,
+   "model": 9,
    "hit": 1,
-   "falseAlarm": 4,
+   "falseAlarm": 7,
    "layers": [
     [
-     29,
-     1.7,
+     32,
+     1.8,
      true
+    ],
+    [
+     31,
+     1.8,
+     true
+    ],
+    [
+     28,
+     1.8,
+     false
     ],
     [
      26,
-     1.9,
-     true
-    ],
-    [
-     24,
-     2.1,
-     true
-    ],
-    [
-     22,
-     2.4,
+     2,
      false
     ],
     [
-     21,
-     2.5,
+     25,
+     2.1,
+     false
+    ],
+    [
+     23,
+     2.3,
      false
     ],
     [
      20,
-     2.8,
+     3,
      false
     ],
     [
      18,
+     3,
+     false
+    ],
+    [
+     16,
      2.2,
      false
     ]
@@ -697,8 +617,8 @@
    "falseAlarm": 1,
    "layers": [
     [
-     6,
-     3.5,
+     9,
+     3.7,
      false
     ]
    ]
@@ -708,7 +628,7 @@
     "score": "CT10",
     "h": 32,
     "grain": "FC",
-    "flagged": true,
+    "flagged": false,
     "modelLayer": "MFcr"
    },
    {
@@ -723,8 +643,8 @@
    "model": 3,
    "confirmed": 3
   },
-  "tempBias": 0.5,
-  "tempRMSE": 0.7,
+  "tempBias": 0.8,
+  "tempRMSE": 1,
   "modelSurface": "SH"
  },
  {
@@ -740,10 +660,10 @@
   "km": null,
   "dz": null,
   "hsObs": 62,
-  "hsModel": 67,
-  "hsErr": 5,
+  "hsModel": 66,
+  "hsErr": 4,
   "partial": false,
-  "groupAgree": 78,
+  "groupAgree": 75,
   "groupN": 40,
   "conf": [
    [
@@ -756,14 +676,14 @@
    [
     0,
     0,
-    5,
-    1,
+    6,
+    0,
     0
    ],
    [
-    2,
+    3,
     0,
-    31,
+    30,
     1,
     0
    ],
@@ -783,7 +703,7 @@
    ]
   ],
   "hardBias": 0.8,
-  "hardMAE": 1.2,
+  "hardMAE": 1.3,
   "basal": {
    "obs": true,
    "model": true,
@@ -791,76 +711,51 @@
   },
   "crusts": {
    "obs": 0,
-   "model": 2,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 2,
+   "falseAlarm": 1,
    "layers": [
     [
-     63,
+     61,
      0.6,
-     false
-    ],
-    [
-     53,
-     0.9,
      false
     ]
    ]
   },
   "sh": {
    "obs": 0,
-   "model": 10,
+   "model": 6,
    "hit": 0,
-   "falseAlarm": 10,
+   "falseAlarm": 6,
    "layers": [
     [
-     64,
+     62,
      3.1,
      false
     ],
     [
-     61,
-     2.1,
-     false
-    ],
-    [
-     61,
-     2.3,
-     false
-    ],
-    [
      60,
-     2.6,
+     6.9,
      false
     ],
     [
-     57,
-     2.6,
+     56,
+     5.6,
      false
     ],
     [
-     30,
+     32,
+     8,
+     false
+    ],
+    [
+     25,
      2.4,
      false
     ],
     [
-     30,
-     3.5,
-     false
-    ],
-    [
-     28,
-     2,
-     false
-    ],
-    [
-     21,
-     2.4,
-     false
-    ],
-    [
-     13,
-     2,
+     9,
+     3.6,
      false
     ]
    ]
@@ -895,8 +790,8 @@
   "km": 1.6,
   "dz": null,
   "hsObs": 88,
-  "hsModel": 67,
-  "hsErr": -21,
+  "hsModel": 71,
+  "hsErr": -17,
   "partial": false,
   "groupAgree": 0,
   "groupN": 1,
@@ -937,7 +832,7 @@
     0
    ]
   ],
-  "hardBias": 0.3,
+  "hardBias": 0.4,
   "hardMAE": 1.1,
   "basal": {
    "obs": false,
@@ -946,46 +841,61 @@
   },
   "crusts": {
    "obs": 1,
-   "model": 4,
+   "model": 8,
    "hit": 0,
-   "falseAlarm": 4,
+   "falseAlarm": 8,
    "layers": [
     [
+     29,
+     2.1,
+     false
+    ],
+    [
+     27,
+     2.1,
+     false
+    ],
+    [
+     25,
+     2.3,
+     false
+    ],
+    [
+     24,
+     2.3,
+     false
+    ],
+    [
      22,
-     2.4,
-     false
-    ],
-    [
-     21,
-     2.7,
-     false
-    ],
-    [
-     20,
-     2.8,
+     2.5,
      false
     ],
     [
      19,
-     3,
+     3.3,
+     false
+    ],
+    [
+     17,
+     3.3,
+     false
+    ],
+    [
+     15,
+     2.5,
      false
     ]
    ]
   },
   "sh": {
    "obs": 0,
-   "model": 2,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 2,
+   "falseAlarm": 1,
    "layers": [
     [
-     60,
-     3.5,
-     false
-    ],
-    [
-     6,
-     3.5,
+     8,
+     3.7,
      false
     ]
    ]
@@ -1020,8 +930,8 @@
   "km": null,
   "dz": null,
   "hsObs": 96,
-  "hsModel": 52,
-  "hsErr": -44,
+  "hsModel": 64,
+  "hsErr": -32,
   "partial": false,
   "groupAgree": 43,
   "groupN": 40,
@@ -1029,8 +939,8 @@
    [
     0,
     0,
-    6,
-    2,
+    7,
+    1,
     0
    ],
    [
@@ -1062,8 +972,8 @@
     0
    ]
   ],
-  "hardBias": 0.5,
-  "hardMAE": 1,
+  "hardBias": 0.6,
+  "hardMAE": 1.1,
   "basal": {
    "obs": true,
    "model": true,
@@ -1076,17 +986,17 @@
    "falseAlarm": 3,
    "layers": [
     [
-     50,
+     62,
      0.8,
      false
     ],
     [
-     49,
+     61,
      0.9,
      false
     ],
     [
-     49,
+     61,
      1,
      false
     ]
@@ -1094,29 +1004,24 @@
   },
   "sh": {
    "obs": 0,
-   "model": 2,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 2,
+   "falseAlarm": 1,
    "layers": [
     [
-     20,
+     25,
      2.2,
-     false
-    ],
-    [
-     3,
-     3.9,
      false
     ]
    ]
   },
   "tests": [],
   "weak": {
-   "model": 3,
-   "confirmed": 3
+   "model": 0,
+   "confirmed": 0
   },
-  "tempBias": -2.1,
-  "tempRMSE": 2.3,
+  "tempBias": -2.5,
+  "tempRMSE": 2.8,
   "modelSurface": "PP"
  },
  {
@@ -1132,8 +1037,8 @@
   "km": 4.9,
   "dz": 35,
   "hsObs": 118,
-  "hsModel": 80,
-  "hsErr": -38,
+  "hsModel": 96,
+  "hsErr": -22,
   "partial": false,
   "groupAgree": null,
   "groupN": 0,
@@ -1174,8 +1079,8 @@
     0
    ]
   ],
-  "hardBias": -0.2,
-  "hardMAE": 1,
+  "hardBias": 0.1,
+  "hardMAE": 0.8,
   "basal": {
    "obs": false,
    "model": true,
@@ -1183,10 +1088,16 @@
   },
   "crusts": {
    "obs": 0,
-   "model": 0,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
+   "falseAlarm": 1,
+   "layers": [
+    [
+     2,
+     2.8,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
@@ -1195,43 +1106,43 @@
    "falseAlarm": 8,
    "layers": [
     [
-     73,
+     90,
      5.7,
      false
     ],
     [
-     70,
+     86,
      2.7,
      false
     ],
     [
-     70,
+     86,
      2.3,
      false
     ],
     [
-     69,
+     84,
      2.5,
      false
     ],
     [
-     27,
-     5.1,
+     34,
+     5.2,
      false
     ],
     [
-     25,
+     33,
      2.2,
      false
     ],
     [
-     19,
-     2.7,
+     24,
+     2.8,
      false
     ],
     [
-     18,
-     2.6,
+     23,
+     2.7,
      false
     ]
    ]
@@ -1249,7 +1160,7 @@
     "h": 77,
     "grain": null,
     "flagged": false,
-    "modelLayer": "DH"
+    "modelLayer": "FC"
    }
   ],
   "weak": {
@@ -1273,16 +1184,16 @@
   "km": 1.8,
   "dz": -100,
   "hsObs": 105,
-  "hsModel": 81,
-  "hsErr": -24,
+  "hsModel": 85,
+  "hsErr": -20,
   "partial": false,
-  "groupAgree": 73,
+  "groupAgree": 63,
   "groupN": 40,
   "conf": [
    [
     8,
-    0,
-    2,
+    1,
+    1,
     0,
     0
    ],
@@ -1296,8 +1207,8 @@
    [
     0,
     0,
-    21,
-    0,
+    17,
+    4,
     0
    ],
    [
@@ -1315,7 +1226,7 @@
     0
    ]
   ],
-  "hardBias": 0,
+  "hardBias": 0.1,
   "hardMAE": 0.7,
   "basal": {
    "obs": true,
@@ -1324,45 +1235,56 @@
   },
   "crusts": {
    "obs": 1,
-   "model": 0,
-   "hit": 0,
+   "model": 5,
+   "hit": 1,
    "falseAlarm": 0,
-   "layers": []
+   "layers": [
+    [
+     20,
+     2.7,
+     true
+    ],
+    [
+     18,
+     3.5,
+     true
+    ],
+    [
+     16,
+     3.4,
+     true
+    ],
+    [
+     15,
+     3.4,
+     true
+    ],
+    [
+     13,
+     3.4,
+     true
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
-   "model": 4,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 4,
+   "falseAlarm": 1,
    "layers": [
     [
-     62,
-     2.6,
-     false
-    ],
-    [
-     61,
-     7.4,
-     false
-    ],
-    [
-     55,
-     3.4,
-     false
-    ],
-    [
-     6,
-     2.7,
+     8,
+     3.5,
      false
     ]
    ]
   },
   "tests": [],
   "weak": {
-   "model": 3,
-   "confirmed": 3
+   "model": 2,
+   "confirmed": 2
   },
-  "tempBias": 0.3,
+  "tempBias": -0.1,
   "tempRMSE": 0.7,
   "modelSurface": "DF"
  },
@@ -1379,16 +1301,16 @@
   "km": null,
   "dz": null,
   "hsObs": 74,
-  "hsModel": 82,
-  "hsErr": 8,
+  "hsModel": 74,
+  "hsErr": 0,
   "partial": false,
-  "groupAgree": 98,
+  "groupAgree": 93,
   "groupN": 40,
   "conf": [
    [
-    9,
+    7,
     0,
-    1,
+    3,
     0,
     0
    ],
@@ -1422,7 +1344,7 @@
    ]
   ],
   "hardBias": 0.4,
-  "hardMAE": 0.9,
+  "hardMAE": 1,
   "basal": {
    "obs": true,
    "model": true,
@@ -1437,68 +1359,43 @@
   },
   "sh": {
    "obs": 0,
-   "model": 12,
+   "model": 7,
    "hit": 0,
-   "falseAlarm": 12,
+   "falseAlarm": 7,
    "layers": [
     [
-     62,
+     61,
      8,
      false
     ],
     [
-     62,
-     3.5,
-     false
-    ],
-    [
-     60,
+     57,
      3.1,
      false
     ],
     [
-     57,
-     2.1,
+     55,
+     6.9,
      false
     ],
     [
-     57,
-     2.3,
+     51,
+     5.6,
      false
     ],
     [
-     56,
-     2.6,
+     29,
+     8,
      false
     ],
     [
-     53,
-     2.6,
-     false
-    ],
-    [
-     27,
+     23,
      2.4,
      false
     ],
     [
-     27,
-     3.5,
-     false
-    ],
-    [
-     25,
-     2,
-     false
-    ],
-    [
-     19,
-     2.4,
-     false
-    ],
-    [
-     12,
-     2,
+     7,
+     3.6,
      false
     ]
    ]
@@ -1517,7 +1414,7 @@
    "confirmed": 3
   },
   "tempBias": -0.9,
-  "tempRMSE": 1.3,
+  "tempRMSE": 1.2,
   "modelSurface": "PP"
  },
  {
@@ -1533,16 +1430,16 @@
   "km": 12.8,
   "dz": 120,
   "hsObs": 82,
-  "hsModel": 76,
-  "hsErr": -6,
+  "hsModel": 85,
+  "hsErr": 3,
   "partial": false,
-  "groupAgree": 88,
+  "groupAgree": 85,
   "groupN": 40,
   "conf": [
    [
-    6,
-    0,
     5,
+    0,
+    6,
     0,
     0
    ],
@@ -1575,7 +1472,7 @@
     0
    ]
   ],
-  "hardBias": -0.2,
+  "hardBias": 0,
   "hardMAE": 0.6,
   "basal": {
    "obs": true,
@@ -1596,13 +1493,13 @@
    "falseAlarm": 2,
    "layers": [
     [
-     53,
+     64,
      2.4,
      false
     ],
     [
-     5,
-     2.1,
+     6,
+     2.2,
      false
     ]
    ]
@@ -1619,7 +1516,7 @@
     "score": "CT25",
     "h": 20,
     "grain": null,
-    "flagged": true,
+    "flagged": false,
     "modelLayer": "DH"
    }
   ],
@@ -1644,16 +1541,16 @@
   "km": null,
   "dz": null,
   "hsObs": 94,
-  "hsModel": 101,
-  "hsErr": 7,
+  "hsModel": 91,
+  "hsErr": -3,
   "partial": false,
-  "groupAgree": 90,
+  "groupAgree": 77,
   "groupN": 39,
   "conf": [
    [
-    8,
+    3,
     0,
-    2,
+    7,
     0,
     0
    ],
@@ -1686,8 +1583,8 @@
     0
    ]
   ],
-  "hardBias": -0.6,
-  "hardMAE": 0.7,
+  "hardBias": -0.4,
+  "hardMAE": 0.5,
   "basal": {
    "obs": true,
    "model": true,
@@ -1702,28 +1599,13 @@
   },
   "sh": {
    "obs": 0,
-   "model": 4,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 4,
+   "falseAlarm": 1,
    "layers": [
     [
-     62,
-     2.6,
-     false
-    ],
-    [
-     62,
-     7.5,
-     false
-    ],
-    [
-     55,
-     3.5,
-     false
-    ],
-    [
-     6,
-     3.5,
+     8,
+     3.7,
      false
     ]
    ]
@@ -1752,8 +1634,8 @@
    }
   ],
   "weak": {
-   "model": 3,
-   "confirmed": 3
+   "model": 2,
+   "confirmed": 2
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -1772,8 +1654,8 @@
   "km": 1.5,
   "dz": -130,
   "hsObs": 112,
-  "hsModel": 101,
-  "hsErr": -11,
+  "hsModel": 91,
+  "hsErr": -21,
   "partial": false,
   "groupAgree": null,
   "groupN": 0,
@@ -1814,8 +1696,8 @@
     0
    ]
   ],
-  "hardBias": 0.3,
-  "hardMAE": 0.8,
+  "hardBias": 0.5,
+  "hardMAE": 0.7,
   "basal": {
    "obs": false,
    "model": true,
@@ -1830,28 +1712,13 @@
   },
   "sh": {
    "obs": 0,
-   "model": 4,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 4,
+   "falseAlarm": 1,
    "layers": [
     [
-     62,
-     2.6,
-     false
-    ],
-    [
-     62,
-     7.5,
-     false
-    ],
-    [
-     55,
-     3.5,
-     false
-    ],
-    [
-     6,
-     3.5,
+     8,
+     3.7,
      false
     ]
    ]
@@ -1862,11 +1729,11 @@
     "h": 104,
     "grain": null,
     "flagged": false,
-    "modelLayer": "PP"
+    "modelLayer": "DF"
    }
   ],
   "weak": {
-   "model": 3,
+   "model": 2,
    "confirmed": 0
   },
   "tempBias": null,
@@ -1886,8 +1753,8 @@
   "km": null,
   "dz": null,
   "hsObs": 115,
-  "hsModel": 69,
-  "hsErr": -46,
+  "hsModel": 80,
+  "hsErr": -35,
   "partial": false,
   "groupAgree": 65,
   "groupN": 40,
@@ -1928,8 +1795,8 @@
     0
    ]
   ],
-  "hardBias": -0.6,
-  "hardMAE": 1.1,
+  "hardBias": -0.4,
+  "hardMAE": 1,
   "basal": {
    "obs": true,
    "model": true,
@@ -1944,34 +1811,29 @@
   },
   "sh": {
    "obs": 0,
-   "model": 3,
+   "model": 2,
    "hit": 0,
-   "falseAlarm": 3,
+   "falseAlarm": 2,
    "layers": [
     [
-     49,
+     60,
      5.1,
      false
     ],
     [
-     19,
+     24,
      2.2,
-     false
-    ],
-    [
-     4,
-     3.9,
      false
     ]
    ]
   },
   "tests": [],
   "weak": {
-   "model": 3,
-   "confirmed": 3
+   "model": 2,
+   "confirmed": 2
   },
-  "tempBias": -2.7,
-  "tempRMSE": 3.1,
+  "tempBias": -3.2,
+  "tempRMSE": 3.7,
   "modelSurface": "PP"
  },
  {
@@ -1987,8 +1849,8 @@
   "km": null,
   "dz": null,
   "hsObs": 104,
-  "hsModel": 70,
-  "hsErr": -34,
+  "hsModel": 99,
+  "hsErr": -5,
   "partial": false,
   "groupAgree": 80,
   "groupN": 40,
@@ -2029,8 +1891,8 @@
     0
    ]
   ],
-  "hardBias": -0.6,
-  "hardMAE": 0.9,
+  "hardBias": -0.2,
+  "hardMAE": 0.8,
   "basal": {
    "obs": true,
    "model": true,
@@ -2050,38 +1912,38 @@
    "falseAlarm": 7,
    "layers": [
     [
-     48,
-     5.7,
+     65,
+     5.9,
      false
     ],
     [
-     45,
-     2.3,
+     59,
+     5.3,
      false
     ],
     [
-     45,
-     2.6,
-     false
-    ],
-    [
-     16,
-     4.5,
-     false
-    ],
-    [
-     15,
+     58,
      2.1,
      false
     ],
     [
-     9,
-     2.9,
+     26,
+     2,
      false
     ],
     [
-     6,
-     2.4,
+     22,
+     6.7,
+     false
+    ],
+    [
+     14,
+     3.7,
+     false
+    ],
+    [
+     11,
+     3,
      false
     ]
    ]
@@ -2099,8 +1961,8 @@
    "model": 3,
    "confirmed": 3
   },
-  "tempBias": -1.9,
-  "tempRMSE": 2.4,
+  "tempBias": -3.3,
+  "tempRMSE": 4.2,
   "modelSurface": "DF"
  },
  {
@@ -2116,8 +1978,8 @@
   "km": 1.6,
   "dz": -200,
   "hsObs": 100,
-  "hsModel": 87,
-  "hsErr": -13,
+  "hsModel": 85,
+  "hsErr": -15,
   "partial": false,
   "groupAgree": 58,
   "groupN": 40,
@@ -2158,8 +2020,8 @@
     0
    ]
   ],
-  "hardBias": 0.1,
-  "hardMAE": 1.4,
+  "hardBias": 0.3,
+  "hardMAE": 1.5,
   "basal": {
    "obs": true,
    "model": true,
@@ -2174,23 +2036,13 @@
   },
   "sh": {
    "obs": 0,
-   "model": 3,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 3,
+   "falseAlarm": 1,
    "layers": [
     [
-     56,
-     2.5,
-     false
-    ],
-    [
-     55,
-     7,
-     false
-    ],
-    [
-     50,
-     3.4,
+     8,
+     2.7,
      false
     ]
    ]
@@ -2200,13 +2052,13 @@
     "score": "CT5",
     "h": 65,
     "grain": "FC",
-    "flagged": true,
-    "modelLayer": "FC"
+    "flagged": false,
+    "modelLayer": "DH"
    }
   ],
   "weak": {
-   "model": 3,
-   "confirmed": 3
+   "model": 2,
+   "confirmed": 2
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -2225,16 +2077,16 @@
   "km": 0.1,
   "dz": null,
   "hsObs": 95,
-  "hsModel": 91,
-  "hsErr": -4,
+  "hsModel": 92,
+  "hsErr": -3,
   "partial": false,
-  "groupAgree": 58,
+  "groupAgree": 60,
   "groupN": 40,
   "conf": [
    [
+    1,
     0,
-    0,
-    2,
+    1,
     0,
     0
    ],
@@ -2268,7 +2120,7 @@
    ]
   ],
   "hardBias": 0.9,
-  "hardMAE": 1.4,
+  "hardMAE": 1.3,
   "basal": {
    "obs": true,
    "model": true,
@@ -2283,28 +2135,18 @@
   },
   "sh": {
    "obs": 0,
-   "model": 4,
+   "model": 2,
    "hit": 0,
-   "falseAlarm": 4,
+   "falseAlarm": 2,
    "layers": [
     [
-     59,
-     2.6,
+     89,
+     6.9,
      false
     ],
     [
-     59,
-     7.5,
-     false
-    ],
-    [
-     53,
-     3.5,
-     false
-    ],
-    [
-     5,
-     3.5,
+     8,
+     3.7,
      false
     ]
    ]
@@ -2314,7 +2156,7 @@
     "score": "CT11",
     "h": 70,
     "grain": "FCxr",
-    "flagged": true,
+    "flagged": false,
     "modelLayer": "FC"
    },
    {
@@ -2326,8 +2168,8 @@
    }
   ],
   "weak": {
-   "model": 3,
-   "confirmed": 3
+   "model": 2,
+   "confirmed": 2
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -2346,17 +2188,17 @@
   "km": null,
   "dz": null,
   "hsObs": 95,
-  "hsModel": 85,
-  "hsErr": -10,
+  "hsModel": 94,
+  "hsErr": -1,
   "partial": false,
-  "groupAgree": 31,
+  "groupAgree": 37,
   "groupN": 35,
   "conf": [
    [
-    4,
+    3,
     0,
+    2,
     0,
-    1,
     0
    ],
    [
@@ -2369,8 +2211,8 @@
    [
     0,
     0,
-    7,
-    8,
+    10,
+    5,
     3
    ],
    [
@@ -2397,68 +2239,58 @@
   },
   "crusts": {
    "obs": 1,
-   "model": 12,
+   "model": 10,
    "hit": 1,
-   "falseAlarm": 2,
+   "falseAlarm": 3,
    "layers": [
     [
-     76,
-     1,
-     true
-    ],
-    [
-     75,
-     1,
-     true
-    ],
-    [
-     74,
-     1,
-     true
-    ],
-    [
-     73,
-     1,
-     true
-    ],
-    [
-     72,
-     1,
-     true
-    ],
-    [
-     71,
-     1,
-     true
-    ],
-    [
-     69,
-     1.2,
-     true
-    ],
-    [
-     68,
-     1.3,
-     true
-    ],
-    [
-     67,
+     78,
      1.4,
      true
     ],
     [
-     65,
+     78,
+     1.6,
+     true
+    ],
+    [
+     77,
+     1.4,
+     true
+    ],
+    [
+     75,
+     1.2,
+     true
+    ],
+    [
+     74,
+     1.4,
+     true
+    ],
+    [
+     73,
      1.5,
      true
     ],
     [
-     63,
+     72,
+     1.5,
+     true
+    ],
+    [
+     70,
      1.5,
      false
     ],
     [
-     60,
-     1.7,
+     68,
+     1.5,
+     false
+    ],
+    [
+     66,
+     1.5,
      false
     ]
    ]
@@ -2470,13 +2302,13 @@
    "falseAlarm": 2,
    "layers": [
     [
-     76,
+     86,
      2.7,
      false
     ],
     [
-     5,
-     3.5,
+     7,
+     3.7,
      false
     ]
    ]
@@ -2487,7 +2319,7 @@
     "h": 85,
     "grain": "PP",
     "flagged": false,
-    "modelLayer": "MFcr"
+    "modelLayer": "FC"
    },
    {
     "score": "CT12",
@@ -2508,9 +2340,9 @@
    "model": 3,
    "confirmed": 3
   },
-  "tempBias": 1.3,
+  "tempBias": 1.4,
   "tempRMSE": 1.5,
-  "modelSurface": "DF"
+  "modelSurface": "PP"
  },
  {
   "file": "2023-24/2024-02-07_bow-summit-plot.json",
@@ -2525,38 +2357,38 @@
   "km": null,
   "dz": null,
   "hsObs": 87,
-  "hsModel": 79,
-  "hsErr": -8,
+  "hsModel": 87,
+  "hsErr": 0,
   "partial": false,
   "groupAgree": 78,
   "groupN": 40,
   "conf": [
    [
-    4,
+    6,
     0,
-    2,
     1,
+    0,
     0
    ],
    [
     0,
     0,
+    1,
+    2,
+    0
+   ],
+   [
     0,
+    0,
+    23,
     3,
     0
    ],
    [
     0,
     0,
-    26,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    2,
     1,
+    2,
     0
    ],
    [
@@ -2568,7 +2400,7 @@
    ]
   ],
   "hardBias": 0.6,
-  "hardMAE": 1,
+  "hardMAE": 0.9,
   "basal": {
    "obs": true,
    "model": true,
@@ -2576,101 +2408,91 @@
   },
   "crusts": {
    "obs": 2,
-   "model": 8,
+   "model": 10,
    "hit": 2,
-   "falseAlarm": 0,
+   "falseAlarm": 2,
    "layers": [
     [
-     71,
-     0.8,
-     true
-    ],
-    [
      70,
-     1.4,
+     0.9,
      true
     ],
     [
-     61,
+     69,
+     1.1,
+     true
+    ],
+    [
+     66,
+     1.2,
+     true
+    ],
+    [
+     60,
      1.3,
      true
     ],
     [
      59,
-     1.4,
+     1.2,
+     true
+    ],
+    [
+     58,
+     1.3,
      true
     ],
     [
      57,
-     1.5,
+     1.4,
      true
     ],
     [
      56,
-     1.6,
+     1.5,
      true
     ],
     [
      54,
-     2.3,
-     true
+     3.1,
+     false
     ],
     [
-     53,
-     2.1,
-     true
+     52,
+     2,
+     false
     ]
    ]
   },
   "sh": {
    "obs": 0,
-   "model": 9,
+   "model": 5,
    "hit": 0,
-   "falseAlarm": 9,
+   "falseAlarm": 5,
    "layers": [
     [
-     51,
-     2.1,
+     49,
+     6.9,
      false
     ],
     [
-     51,
-     2.3,
+     46,
+     5.6,
      false
     ],
     [
-     50,
-     2.6,
+     27,
+     8,
      false
     ],
     [
-     47,
-     2.6,
-     false
-    ],
-    [
-     25,
+     21,
      2.4,
      false
     ],
     [
-     25,
-     3.5,
-     false
-    ],
-    [
-     24,
-     2,
-     false
-    ],
-    [
-     18,
-     2.4,
-     false
-    ],
-    [
-     11,
-     2,
+     7,
+     3.6,
      false
     ]
    ]
@@ -2687,7 +2509,7 @@
     "score": "CT12",
     "h": 0,
     "grain": "DH",
-    "flagged": false,
+    "flagged": true,
     "modelLayer": "DH"
    }
   ],
@@ -2695,9 +2517,9 @@
    "model": 3,
    "confirmed": 3
   },
-  "tempBias": -0.4,
-  "tempRMSE": 0.7,
-  "modelSurface": "PP"
+  "tempBias": -0.1,
+  "tempRMSE": 0.4,
+  "modelSurface": "SH"
  },
  {
   "file": "2023-24/2024-02-12_pipestone-bowl.json",
@@ -2712,16 +2534,16 @@
   "km": 2.9,
   "dz": -125,
   "hsObs": 123,
-  "hsModel": 61,
-  "hsErr": -62,
+  "hsModel": 74,
+  "hsErr": -49,
   "partial": false,
-  "groupAgree": 25,
+  "groupAgree": 38,
   "groupN": 40,
   "conf": [
    [
-    3,
+    4,
     0,
-    3,
+    2,
     0,
     0
    ],
@@ -2735,8 +2557,8 @@
    [
     0,
     0,
-    7,
-    17,
+    11,
+    13,
     3
    ],
    [
@@ -2754,7 +2576,7 @@
     0
    ]
   ],
-  "hardBias": 0.6,
+  "hardBias": 0.5,
   "hardMAE": 1,
   "basal": {
    "obs": true,
@@ -2765,36 +2587,36 @@
    "obs": 1,
    "model": 7,
    "hit": 1,
-   "falseAlarm": 4,
+   "falseAlarm": 5,
    "layers": [
     [
-     50,
-     1.7,
-     true
-    ],
-    [
-     49,
+     58,
      1.6,
      true
     ],
     [
-     48,
-     1.7,
+     57,
+     1.6,
      true
     ],
     [
-     25,
-     3.2,
+     37,
+     3.3,
      false
     ],
     [
-     18,
+     30,
      3.1,
      false
     ],
     [
-     17,
-     3.1,
+     23,
+     3,
+     false
+    ],
+    [
+     21,
+     3,
      false
     ],
     [
@@ -2806,21 +2628,26 @@
   },
   "sh": {
    "obs": 0,
-   "model": 1,
+   "model": 2,
    "hit": 0,
-   "falseAlarm": 1,
+   "falseAlarm": 2,
    "layers": [
     [
-     58,
+     70,
      2,
+     false
+    ],
+    [
+     9,
+     3.9,
      false
     ]
    ]
   },
   "tests": [],
   "weak": {
-   "model": 1,
-   "confirmed": 1
+   "model": 3,
+   "confirmed": 3
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -2839,8 +2666,8 @@
   "km": 1.5,
   "dz": 120,
   "hsObs": 160,
-  "hsModel": 115,
-  "hsErr": -45,
+  "hsModel": 138,
+  "hsErr": -22,
   "partial": false,
   "groupAgree": null,
   "groupN": 0,
@@ -2882,7 +2709,7 @@
    ]
   ],
   "hardBias": -0.6,
-  "hardMAE": 0.9,
+  "hardMAE": 0.8,
   "basal": {
    "obs": false,
    "model": true,
@@ -2902,63 +2729,63 @@
    "falseAlarm": 12,
    "layers": [
     [
-     103,
+     121,
      3.9,
      false
     ],
     [
-     101,
+     117,
      2.8,
      false
     ],
     [
-     79,
+     95,
      7,
      false
     ],
     [
-     77,
+     93,
      2.8,
      false
     ],
     [
-     77,
+     93,
      2.9,
      false
     ],
     [
-     75,
+     91,
      2.1,
      false
     ],
     [
-     74,
+     90,
      2.1,
      false
     ],
     [
-     42,
+     50,
      5.2,
      false
     ],
     [
-     30,
-     2.7,
+     36,
+     2.8,
      false
     ],
     [
-     29,
+     34,
      2.4,
      false
     ],
     [
-     22,
-     4.1,
+     28,
+     4.2,
      false
     ],
     [
-     17,
-     2.7,
+     18,
+     2.6,
      false
     ]
    ]
@@ -2993,8 +2820,8 @@
   "km": null,
   "dz": null,
   "hsObs": 129,
-  "hsModel": 67,
-  "hsErr": -62,
+  "hsModel": 81,
+  "hsErr": -48,
   "partial": false,
   "groupAgree": 30,
   "groupN": 40,
@@ -3035,7 +2862,7 @@
     0
    ]
   ],
-  "hardBias": -0.5,
+  "hardBias": -0.4,
   "hardMAE": 0.7,
   "basal": {
    "obs": true,
@@ -3044,30 +2871,36 @@
   },
   "crusts": {
    "obs": 2,
-   "model": 0,
+   "model": 2,
    "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
+   "falseAlarm": 2,
+   "layers": [
+    [
+     77,
+     0.6,
+     false
+    ],
+    [
+     71,
+     0.9,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
-   "model": 3,
+   "model": 2,
    "hit": 0,
-   "falseAlarm": 3,
+   "falseAlarm": 2,
    "layers": [
     [
-     43,
+     53,
      5.1,
      false
     ],
     [
-     17,
+     22,
      2.2,
-     false
-    ],
-    [
-     3,
-     3.9,
      false
     ]
    ]
@@ -3078,15 +2911,15 @@
     "h": 87,
     "grain": "IF",
     "flagged": true,
-    "modelLayer": "DH"
+    "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
   },
-  "tempBias": -0.1,
-  "tempRMSE": 0.5,
+  "tempBias": -0.7,
+  "tempRMSE": 1.1,
   "modelSurface": "MF"
  },
  {
@@ -3102,8 +2935,8 @@
   "km": 6.9,
   "dz": null,
   "hsObs": 81,
-  "hsModel": 69,
-  "hsErr": -12,
+  "hsModel": 88,
+  "hsErr": 7,
   "partial": false,
   "groupAgree": null,
   "groupN": 0,
@@ -3145,7 +2978,7 @@
    ]
   ],
   "hardBias": 1,
-  "hardMAE": 1.5,
+  "hardMAE": 1.4,
   "basal": {
    "obs": false,
    "model": true,
@@ -3153,33 +2986,23 @@
   },
   "crusts": {
    "obs": 1,
-   "model": 5,
+   "model": 3,
    "hit": 0,
-   "falseAlarm": 5,
+   "falseAlarm": 3,
    "layers": [
     [
-     19,
+     47,
+     2.7,
+     false
+    ],
+    [
+     46,
+     3.3,
+     false
+    ],
+    [
+     34,
      3.4,
-     false
-    ],
-    [
-     17,
-     3.3,
-     false
-    ],
-    [
-     15,
-     3.3,
-     false
-    ],
-    [
-     13,
-     3.2,
-     false
-    ],
-    [
-     10,
-     3.3,
      false
     ]
    ]
@@ -3191,17 +3014,17 @@
    "falseAlarm": 3,
    "layers": [
     [
-     66,
+     85,
      2.2,
      false
     ],
     [
-     61,
+     77,
      2.3,
      false
     ],
     [
-     8,
+     11,
      2,
      false
     ]
@@ -3213,7 +3036,7 @@
     "h": 62,
     "grain": null,
     "flagged": false,
-    "modelLayer": "DH"
+    "modelLayer": "FC"
    }
   ],
   "weak": {
@@ -3237,30 +3060,30 @@
   "km": null,
   "dz": null,
   "hsObs": 115,
-  "hsModel": 105,
-  "hsErr": -10,
+  "hsModel": 115,
+  "hsErr": 0,
   "partial": false,
   "groupAgree": 95,
   "groupN": 40,
   "conf": [
    [
-    9,
+    10,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
     1,
     0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    29,
+    28,
     0,
     0
    ],
@@ -3279,8 +3102,8 @@
     0
    ]
   ],
-  "hardBias": 0.9,
-  "hardMAE": 1.3,
+  "hardBias": 1,
+  "hardMAE": 1.4,
   "basal": {
    "obs": true,
    "model": true,
@@ -3288,66 +3111,45 @@
   },
   "crusts": {
    "obs": 1,
-   "model": 1,
-   "hit": 1,
+   "model": 0,
+   "hit": 0,
    "falseAlarm": 0,
-   "layers": [
-    [
-     68,
-     1.2,
-     true
-    ]
-   ]
+   "layers": []
   },
   "sh": {
    "obs": 0,
-   "model": 9,
+   "model": 6,
    "hit": 0,
-   "falseAlarm": 9,
+   "falseAlarm": 6,
    "layers": [
     [
-     48,
-     2.1,
+     83,
+     2.7,
      false
     ],
     [
-     48,
-     2.3,
+     46,
+     6.9,
      false
     ],
     [
-     48,
-     2.6,
+     43,
+     5.6,
      false
     ],
     [
-     45,
-     2.6,
+     26,
+     8,
      false
     ],
     [
-     25,
+     20,
      2.4,
      false
     ],
     [
-     24,
-     3.5,
-     false
-    ],
-    [
-     23,
-     2,
-     false
-    ],
-    [
-     17,
-     2.4,
-     false
-    ],
-    [
-     11,
-     2,
+     7,
+     3.6,
      false
     ]
    ]
@@ -3357,15 +3159,15 @@
     "score": "CT13",
     "h": 70,
     "grain": "FC",
-    "flagged": true,
-    "modelLayer": "DH"
+    "flagged": false,
+    "modelLayer": "FC"
    },
    {
     "score": "CT16",
     "h": 70,
     "grain": "FC",
-    "flagged": true,
-    "modelLayer": "DH"
+    "flagged": false,
+    "modelLayer": "FC"
    },
    {
     "score": "CT22",
@@ -3388,7 +3190,7 @@
   },
   "tempBias": null,
   "tempRMSE": null,
-  "modelSurface": "PP"
+  "modelSurface": "DF"
  },
  {
   "file": "2023-24/2024-03-04_simpson-plot.json",
@@ -3403,8 +3205,8 @@
   "km": null,
   "dz": null,
   "hsObs": 150,
-  "hsModel": 100,
-  "hsErr": -50,
+  "hsModel": 149,
+  "hsErr": -1,
   "partial": false,
   "groupAgree": 58,
   "groupN": 40,
@@ -3417,9 +3219,9 @@
     0
    ],
    [
-    2,
     0,
-    14,
+    0,
+    16,
     0,
     0
    ],
@@ -3445,7 +3247,7 @@
     0
    ]
   ],
-  "hardBias": 0,
+  "hardBias": 0.3,
   "hardMAE": 1,
   "basal": {
    "obs": true,
@@ -3461,43 +3263,48 @@
   },
   "sh": {
    "obs": 0,
-   "model": 7,
+   "model": 8,
    "hit": 0,
-   "falseAlarm": 7,
+   "falseAlarm": 8,
    "layers": [
     [
-     41,
-     5.7,
+     83,
+     3.3,
      false
     ],
     [
-     39,
-     2.3,
+     54,
+     5.9,
      false
     ],
     [
-     38,
-     2.6,
+     49,
+     5.3,
      false
     ],
     [
-     14,
-     4.5,
-     false
-    ],
-    [
-     13,
+     49,
      2.1,
      false
     ],
     [
-     8,
-     2.9,
+     23,
+     2,
      false
     ],
     [
-     6,
-     2.4,
+     19,
+     6.7,
+     false
+    ],
+    [
+     13,
+     3.7,
+     false
+    ],
+    [
+     10,
+     3,
      false
     ]
    ]
@@ -3507,7 +3314,7 @@
     "score": "CT17",
     "h": 85,
     "grain": "FC",
-    "flagged": false,
+    "flagged": true,
     "modelLayer": "FC"
    }
   ],
@@ -3517,7 +3324,7 @@
   },
   "tempBias": null,
   "tempRMSE": null,
-  "modelSurface": "SH"
+  "modelSurface": "PP"
  },
  {
   "file": "2023-24/2024-03-05_goats-eye-plot.json",
@@ -3532,31 +3339,31 @@
   "km": null,
   "dz": null,
   "hsObs": 128,
-  "hsModel": 147,
-  "hsErr": 19,
+  "hsModel": 137,
+  "hsErr": 9,
   "partial": false,
-  "groupAgree": 63,
+  "groupAgree": 53,
   "groupN": 40,
   "conf": [
    [
-    4,
-    3,
     1,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
+    1,
     6,
     0,
     0
    ],
    [
     0,
-    0,
-    21,
+    1,
     5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    19,
+    7,
     0
    ],
    [
@@ -3574,7 +3381,7 @@
     0
    ]
   ],
-  "hardBias": -0.3,
+  "hardBias": -0.2,
   "hardMAE": 0.9,
   "basal": {
    "obs": true,
@@ -3583,46 +3390,61 @@
   },
   "crusts": {
    "obs": 1,
-   "model": 2,
+   "model": 3,
    "hit": 0,
-   "falseAlarm": 2,
+   "falseAlarm": 3,
    "layers": [
     [
-     39,
+     47,
      3.4,
      false
     ],
     [
-     30,
+     37,
      3.2,
+     false
+    ],
+    [
+     30,
+     3.1,
      false
     ]
    ]
   },
   "sh": {
    "obs": 0,
-   "model": 4,
+   "model": 6,
    "hit": 0,
-   "falseAlarm": 4,
+   "falseAlarm": 6,
    "layers": [
     [
-     85,
-     2.8,
+     94,
+     2.6,
      false
     ],
     [
-     80,
-     4,
+     93,
+     2.4,
      false
     ],
     [
-     69,
+     90,
+     4.4,
+     false
+    ],
+    [
+     89,
      2.7,
      false
     ],
     [
-     5,
-     3.5,
+     78,
+     2.7,
+     false
+    ],
+    [
+     7,
+     3.7,
      false
     ]
    ]
@@ -3639,17 +3461,17 @@
     "score": "ECTP24",
     "h": 68,
     "grain": "FC",
-    "flagged": true,
-    "modelLayer": "FC"
+    "flagged": false,
+    "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
   },
-  "tempBias": 0.7,
-  "tempRMSE": 1.5,
-  "modelSurface": "DF"
+  "tempBias": 0.8,
+  "tempRMSE": 1.4,
+  "modelSurface": "SH"
  },
  {
   "file": "2023-24/2024-03-06_west-nile.json",
@@ -3664,8 +3486,8 @@
   "km": 11.4,
   "dz": 99,
   "hsObs": 145,
-  "hsModel": 96,
-  "hsErr": -49,
+  "hsModel": 111,
+  "hsErr": -34,
   "partial": false,
   "groupAgree": 0,
   "groupN": 2,
@@ -3706,8 +3528,8 @@
     0
    ]
   ],
-  "hardBias": -0.4,
-  "hardMAE": 1.4,
+  "hardBias": 0,
+  "hardMAE": 1.1,
   "basal": {
    "obs": false,
    "model": true,
@@ -3727,53 +3549,53 @@
    "falseAlarm": 10,
    "layers": [
     [
-     37,
+     44,
      3,
      false
     ],
     [
-     37,
+     43,
      3.9,
      false
     ],
     [
-     33,
+     40,
      2.4,
      false
     ],
     [
-     30,
-     4,
+     37,
+     4.1,
      false
     ],
     [
-     28,
+     35,
      2.1,
      false
     ],
     [
-     17,
+     21,
      2.6,
      false
     ],
     [
-     17,
+     21,
      2.1,
      false
     ],
     [
-     16,
+     21,
      3.1,
      false
     ],
     [
-     6,
+     9,
      2.7,
      false
     ],
     [
-     2,
-     4.5,
+     5,
+     5.2,
      false
     ]
    ]
@@ -3784,7 +3606,7 @@
     "h": 70,
     "grain": "MF",
     "flagged": true,
-    "modelLayer": "DH"
+    "modelLayer": "FC"
    }
   ],
   "weak": {
@@ -3808,8 +3630,8 @@
   "km": null,
   "dz": null,
   "hsObs": 175,
-  "hsModel": 95,
-  "hsErr": -80,
+  "hsModel": 113,
+  "hsErr": -62,
   "partial": false,
   "groupAgree": 43,
   "groupN": 40,
@@ -3817,15 +3639,15 @@
    [
     1,
     0,
-    12,
-    2,
+    11,
+    3,
     0
    ],
    [
     0,
     0,
-    4,
-    2,
+    5,
+    1,
     0
    ],
    [
@@ -3850,8 +3672,8 @@
     0
    ]
   ],
-  "hardBias": -0.1,
-  "hardMAE": 0.9,
+  "hardBias": 0,
+  "hardMAE": 0.8,
   "basal": {
    "obs": true,
    "model": true,
@@ -3859,61 +3681,51 @@
   },
   "crusts": {
    "obs": 1,
-   "model": 6,
+   "model": 5,
    "hit": 1,
-   "falseAlarm": 2,
+   "falseAlarm": 3,
    "layers": [
     [
-     92,
+     110,
      0.3,
      false
     ],
     [
-     62,
-     1,
+     75,
+     0.9,
      false
     ],
     [
-     60,
+     73,
+     1.1,
+     false
+    ],
+    [
+     71,
      1.2,
      true
     ],
     [
-     59,
+     68,
      1.4,
-     true
-    ],
-    [
-     57,
-     1.6,
-     true
-    ],
-    [
-     55,
-     1.6,
      true
     ]
    ]
   },
   "sh": {
    "obs": 0,
-   "model": 3,
+   "model": 2,
    "hit": 0,
-   "falseAlarm": 3,
+   "falseAlarm": 2,
    "layers": [
     [
-     41,
+     50,
      5.1,
      false
     ],
     [
-     17,
+     22,
      2.2,
-     false
-    ],
-    [
-     4,
-     3.9,
      false
     ]
    ]
@@ -3940,8 +3752,8 @@
   "km": null,
   "dz": null,
   "hsObs": 115,
-  "hsModel": 118,
-  "hsErr": 3,
+  "hsModel": 113,
+  "hsErr": -2,
   "partial": false,
   "groupAgree": 60,
   "groupN": 40,
@@ -3950,15 +3762,15 @@
     0,
     0,
     0,
-    0,
-    2
+    2,
+    0
    ],
    [
     0,
     0,
-    12,
-    1,
-    0
+    3,
+    2,
+    8
    ],
    [
     0,
@@ -3982,8 +3794,8 @@
     1
    ]
   ],
-  "hardBias": 0,
-  "hardMAE": 1,
+  "hardBias": 0.1,
+  "hardMAE": 1.3,
   "basal": {
    "obs": true,
    "model": true,
@@ -3991,66 +3803,61 @@
   },
   "crusts": {
    "obs": 2,
-   "model": 1,
+   "model": 3,
    "hit": 0,
-   "falseAlarm": 1,
+   "falseAlarm": 3,
    "layers": [
     [
-     108,
-     0.7,
+     109,
+     0.8,
+     false
+    ],
+    [
+     104,
+     0.9,
+     false
+    ],
+    [
+     101,
+     0.9,
      false
     ]
    ]
   },
   "sh": {
    "obs": 0,
-   "model": 9,
+   "model": 6,
    "hit": 0,
-   "falseAlarm": 9,
+   "falseAlarm": 6,
    "layers": [
     [
-     45,
-     2.1,
-     false
-    ],
-    [
-     45,
-     2.3,
-     false
-    ],
-    [
-     45,
-     2.6,
+     76,
+     2.7,
      false
     ],
     [
      43,
-     2.6,
+     6.9,
      false
     ],
     [
-     23,
+     41,
+     5.6,
+     false
+    ],
+    [
+     24,
+     8,
+     false
+    ],
+    [
+     19,
      2.4,
      false
     ],
     [
-     23,
-     3.5,
-     false
-    ],
-    [
-     22,
-     2,
-     false
-    ],
-    [
-     17,
-     2.4,
-     false
-    ],
-    [
-     11,
-     2,
+     7,
+     3.6,
      false
     ]
    ]
@@ -4089,9 +3896,9 @@
    "model": 3,
    "confirmed": 3
   },
-  "tempBias": 0.1,
-  "tempRMSE": 1.2,
-  "modelSurface": "MF"
+  "tempBias": 6.7,
+  "tempRMSE": 7,
+  "modelSurface": "SH"
  },
  {
   "file": "2023-24/2024-03-16_goats-eye-plot.json",
@@ -4106,10 +3913,10 @@
   "km": null,
   "dz": null,
   "hsObs": 126,
-  "hsModel": 142,
-  "hsErr": 16,
+  "hsModel": 134,
+  "hsErr": 8,
   "partial": false,
-  "groupAgree": 18,
+  "groupAgree": 20,
   "groupN": 40,
   "conf": [
    [
@@ -4122,15 +3929,15 @@
    [
     0,
     0,
-    25,
-    2,
+    22,
+    5,
     0
    ],
    [
     0,
     0,
-    7,
-    3,
+    8,
+    2,
     0
    ],
    [
@@ -4148,7 +3955,7 @@
     0
    ]
   ],
-  "hardBias": -0.3,
+  "hardBias": -0.2,
   "hardMAE": 0.9,
   "basal": {
    "obs": true,
@@ -4162,41 +3969,51 @@
    "falseAlarm": 2,
    "layers": [
     [
-     39,
+     47,
      3.5,
      false
     ],
     [
-     30,
-     3.3,
+     35,
+     3.2,
      false
     ]
    ]
   },
   "sh": {
    "obs": 0,
-   "model": 4,
+   "model": 6,
    "hit": 0,
-   "falseAlarm": 4,
+   "falseAlarm": 6,
    "layers": [
     [
-     82,
-     2.8,
+     91,
+     2.6,
      false
     ],
     [
-     77,
-     4,
+     90,
+     2.4,
      false
     ],
     [
-     67,
+     87,
+     4.4,
+     false
+    ],
+    [
+     86,
      2.7,
      false
     ],
     [
-     5,
-     3.5,
+     77,
+     2.7,
+     false
+    ],
+    [
+     7,
+     3.7,
      false
     ]
    ]
@@ -4207,22 +4024,22 @@
     "h": 73,
     "grain": "MF",
     "flagged": true,
-    "modelLayer": "FC"
+    "modelLayer": "DH"
    },
    {
     "score": "CT15",
     "h": 71,
     "grain": "MF",
     "flagged": true,
-    "modelLayer": "FC"
+    "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
   },
-  "tempBias": -0.8,
-  "tempRMSE": 1.5,
+  "tempBias": -0.5,
+  "tempRMSE": 1.3,
   "modelSurface": "SH"
  },
  {
@@ -4238,763 +4055,8 @@
   "km": 6.8,
   "dz": 150,
   "hsObs": 115,
-  "hsModel": 139,
-  "hsErr": 24,
-  "partial": false,
-  "groupAgree": null,
-  "groupN": 0,
-  "conf": [
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": 0.5,
-  "hardMAE": 1.3,
-  "basal": {
-   "obs": false,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 0,
-   "model": 1,
-   "hit": 0,
-   "falseAlarm": 1,
-   "layers": [
-    [
-     139,
-     0.8,
-     false
-    ]
-   ]
-  },
-  "sh": {
-   "obs": 0,
-   "model": 6,
-   "hit": 0,
-   "falseAlarm": 6,
-   "layers": [
-    [
-     76,
-     2.3,
-     false
-    ],
-    [
-     72,
-     3.3,
-     false
-    ],
-    [
-     51,
-     2.6,
-     false
-    ],
-    [
-     50,
-     5.2,
-     false
-    ],
-    [
-     47,
-     2.9,
-     false
-    ],
-    [
-     8,
-     2.2,
-     false
-    ]
-   ]
-  },
-  "tests": [
-   {
-    "score": "CT1",
-    "h": 32,
-    "grain": null,
-    "flagged": true,
-    "modelLayer": "DH"
-   }
-  ],
-  "weak": {
-   "model": 3,
-   "confirmed": 1
-  },
-  "tempBias": null,
-  "tempRMSE": null,
-  "modelSurface": "MFcr"
- },
- {
-  "file": "2023-24/2024-03-19_wolverine-valley-2650m.json",
-  "season": "2023-24",
-  "date": "2024-03-19",
-  "kind": "test_profile",
-  "site": "wolverine-valley-2650m",
-  "aspect": "N",
-  "sim": "N",
-  "point": "ll-richardson:ALP",
-  "match": "gazetteer",
-  "km": 6.8,
-  "dz": -150,
-  "hsObs": 145,
-  "hsModel": 139,
-  "hsErr": -6,
-  "partial": false,
-  "groupAgree": 60,
-  "groupN": 40,
-  "conf": [
-   [
-    0,
-    0,
-    9,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    24,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    7,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": -0.9,
-  "hardMAE": 1.2,
-  "basal": {
-   "obs": true,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 1,
-   "model": 1,
-   "hit": 0,
-   "falseAlarm": 1,
-   "layers": [
-    [
-     139,
-     0.8,
-     false
-    ]
-   ]
-  },
-  "sh": {
-   "obs": 0,
-   "model": 6,
-   "hit": 0,
-   "falseAlarm": 6,
-   "layers": [
-    [
-     76,
-     2.3,
-     false
-    ],
-    [
-     72,
-     3.3,
-     false
-    ],
-    [
-     51,
-     2.6,
-     false
-    ],
-    [
-     50,
-     5.2,
-     false
-    ],
-    [
-     47,
-     2.9,
-     false
-    ],
-    [
-     8,
-     2.2,
-     false
-    ]
-   ]
-  },
-  "tests": [
-   {
-    "score": "CT13",
-    "h": 59,
-    "grain": "FC",
-    "flagged": true,
-    "modelLayer": "DH"
-   }
-  ],
-  "weak": {
-   "model": 3,
-   "confirmed": 3
-  },
-  "tempBias": null,
-  "tempRMSE": null,
-  "modelSurface": "MFcr"
- },
- {
-  "file": "2023-24/2024-03-21_mt-field.json",
-  "season": "2023-24",
-  "date": "2024-03-21",
-  "kind": "test_profile",
-  "site": "mt-field",
-  "aspect": "NE",
-  "sim": "N",
-  "point": "mt-dennis:TL",
-  "match": "gazetteer",
-  "km": 4.9,
-  "dz": 50,
-  "hsObs": 175,
-  "hsModel": 138,
-  "hsErr": -37,
-  "partial": false,
-  "groupAgree": 50,
-  "groupN": 40,
-  "conf": [
-   [
-    4,
-    0,
-    0,
-    2,
-    0
-   ],
-   [
-    0,
-    0,
-    15,
-    1,
-    0
-   ],
-   [
-    0,
-    0,
-    16,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    2,
-    0,
-    0
-   ]
-  ],
-  "hardBias": 0,
-  "hardMAE": 0.7,
-  "basal": {
-   "obs": true,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 1,
-   "model": 4,
-   "hit": 1,
-   "falseAlarm": 0,
-   "layers": [
-    [
-     122,
-     1.1,
-     true
-    ],
-    [
-     120,
-     1,
-     true
-    ],
-    [
-     118,
-     1,
-     true
-    ],
-    [
-     116,
-     0.9,
-     true
-    ]
-   ]
-  },
-  "sh": {
-   "obs": 0,
-   "model": 8,
-   "hit": 0,
-   "falseAlarm": 8,
-   "layers": [
-    [
-     57,
-     5.7,
-     false
-    ],
-    [
-     55,
-     2.7,
-     false
-    ],
-    [
-     55,
-     2.3,
-     false
-    ],
-    [
-     54,
-     2.5,
-     false
-    ],
-    [
-     23,
-     5.1,
-     false
-    ],
-    [
-     22,
-     2.2,
-     false
-    ],
-    [
-     17,
-     2.7,
-     false
-    ],
-    [
-     16,
-     2.6,
-     false
-    ]
-   ]
-  },
-  "tests": [
-   {
-    "score": "CT2",
-    "h": 160,
-    "grain": null,
-    "flagged": false,
-    "modelLayer": "DF"
-   },
-   {
-    "score": "CT22",
-    "h": 70,
-    "grain": "MF",
-    "flagged": true,
-    "modelLayer": "DH"
-   }
-  ],
-  "weak": {
-   "model": 3,
-   "confirmed": 3
-  },
-  "tempBias": null,
-  "tempRMSE": null,
-  "modelSurface": "PP"
- },
- {
-  "file": "2023-24/2024-03-29_bow-summit-plot.json",
-  "season": "2023-24",
-  "date": "2024-03-29",
-  "kind": "study_plot",
-  "site": "bow-summit-plot",
-  "aspect": "flat",
-  "sim": "flat",
-  "point": "fts-bowsummit",
-  "match": "study plot",
-  "km": null,
-  "dz": null,
-  "hsObs": 125,
-  "hsModel": 105,
-  "hsErr": -20,
-  "partial": false,
-  "groupAgree": 5,
-  "groupN": 40,
-  "conf": [
-   [
-    2,
-    0,
-    1,
-    4,
-    0
-   ],
-   [
-    0,
-    0,
-    1,
-    12,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    1,
-    17
-   ],
-   [
-    0,
-    0,
-    1,
-    0,
-    1
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": -0.1,
-  "hardMAE": 1,
-  "basal": {
-   "obs": true,
-   "model": false,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 4,
-   "model": 13,
-   "hit": 4,
-   "falseAlarm": 0,
-   "layers": [
-    [
-     98,
-     0.3,
-     true
-    ],
-    [
-     96,
-     0.3,
-     true
-    ],
-    [
-     95,
-     0.3,
-     true
-    ],
-    [
-     94,
-     0.6,
-     true
-    ],
-    [
-     93,
-     0.7,
-     true
-    ],
-    [
-     91,
-     0.8,
-     true
-    ],
-    [
-     89,
-     0.9,
-     true
-    ],
-    [
-     85,
-     1.6,
-     true
-    ],
-    [
-     84,
-     1.7,
-     true
-    ],
-    [
-     73,
-     2.2,
-     true
-    ],
-    [
-     62,
-     3.2,
-     true
-    ],
-    [
-     58,
-     3,
-     true
-    ],
-    [
-     52,
-     3,
-     true
-    ]
-   ]
-  },
-  "sh": {
-   "obs": 0,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
-  },
-  "tests": [
-   {
-    "score": "CT13",
-    "h": 23,
-    "grain": "DH",
-    "flagged": false,
-    "modelLayer": "MF"
-   },
-   {
-    "score": "CT14",
-    "h": 23,
-    "grain": "DH",
-    "flagged": false,
-    "modelLayer": "MF"
-   }
-  ],
-  "weak": {
-   "model": 0,
-   "confirmed": 0
-  },
-  "tempBias": 1.3,
-  "tempRMSE": 2.4,
-  "modelSurface": "PP"
- },
- {
-  "file": "2023-24/2024-04-04_goats-eye-plot.json",
-  "season": "2023-24",
-  "date": "2024-04-04",
-  "kind": "study_plot",
-  "site": "goats-eye-plot",
-  "aspect": "flat",
-  "sim": "flat",
-  "point": "fts-sunshine",
-  "match": "study plot",
-  "km": null,
-  "dz": null,
-  "hsObs": 150,
-  "hsModel": 157,
-  "hsErr": 7,
-  "partial": false,
-  "groupAgree": 20,
-  "groupN": 40,
-  "conf": [
-   [
-    2,
-    0,
-    0,
-    2,
-    1
-   ],
-   [
-    0,
-    0,
-    18,
-    3,
-    4
-   ],
-   [
-    0,
-    0,
-    6,
-    2,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    2
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": -0.3,
-  "hardMAE": 1.1,
-  "basal": {
-   "obs": true,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 3,
-   "model": 9,
-   "hit": 2,
-   "falseAlarm": 2,
-   "layers": [
-    [
-     147,
-     0.5,
-     true
-    ],
-    [
-     146,
-     0.6,
-     true
-    ],
-    [
-     144,
-     0.6,
-     true
-    ],
-    [
-     142,
-     0.6,
-     true
-    ],
-    [
-     141,
-     0.6,
-     true
-    ],
-    [
-     114,
-     1.5,
-     true
-    ],
-    [
-     112,
-     1.4,
-     true
-    ],
-    [
-     38,
-     3.6,
-     false
-    ],
-    [
-     29,
-     3.4,
-     false
-    ]
-   ]
-  },
-  "sh": {
-   "obs": 0,
-   "model": 4,
-   "hit": 0,
-   "falseAlarm": 4,
-   "layers": [
-    [
-     77,
-     2.8,
-     false
-    ],
-    [
-     73,
-     4,
-     false
-    ],
-    [
-     64,
-     2.7,
-     false
-    ],
-    [
-     5,
-     3.5,
-     false
-    ]
-   ]
-  },
-  "tests": [
-   {
-    "score": "CT23",
-    "h": 120,
-    "grain": "FC",
-    "flagged": false,
-    "modelLayer": "MF"
-   },
-   {
-    "score": "CT24",
-    "h": 120,
-    "grain": "FC",
-    "flagged": false,
-    "modelLayer": "MF"
-   }
-  ],
-  "weak": {
-   "model": 3,
-   "confirmed": 3
-  },
-  "tempBias": 0.4,
-  "tempRMSE": 1.1,
-  "modelSurface": "DF"
- },
- {
-  "file": "2024-25/2024-11-12_bow-summit-glades.json",
-  "season": "2024-25",
-  "date": "2024-11-12",
-  "kind": "test_profile",
-  "site": "bow-summit-glades",
-  "aspect": "NE",
-  "sim": "N",
-  "point": "fts-bowsummit",
-  "match": "coordinates",
-  "km": 1.4,
-  "dz": -261,
-  "hsObs": 59,
-  "hsModel": 28,
-  "hsErr": -31,
+  "hsModel": 159,
+  "hsErr": 44,
   "partial": false,
   "groupAgree": null,
   "groupN": 0,
@@ -5036,7 +4098,768 @@
    ]
   ],
   "hardBias": 0.7,
-  "hardMAE": 1.3,
+  "hardMAE": 1.4,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1,
+   "layers": [
+    [
+     157,
+     0.8,
+     false
+    ]
+   ]
+  },
+  "sh": {
+   "obs": 0,
+   "model": 6,
+   "hit": 0,
+   "falseAlarm": 6,
+   "layers": [
+    [
+     91,
+     2.4,
+     false
+    ],
+    [
+     85,
+     3.3,
+     false
+    ],
+    [
+     61,
+     2.6,
+     false
+    ],
+    [
+     61,
+     5.2,
+     false
+    ],
+    [
+     56,
+     2.9,
+     false
+    ],
+    [
+     11,
+     2.2,
+     false
+    ]
+   ]
+  },
+  "tests": [
+   {
+    "score": "CT1",
+    "h": 32,
+    "grain": null,
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "weak": {
+   "model": 3,
+   "confirmed": 2
+  },
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "MF"
+ },
+ {
+  "file": "2023-24/2024-03-19_wolverine-valley-2650m.json",
+  "season": "2023-24",
+  "date": "2024-03-19",
+  "kind": "test_profile",
+  "site": "wolverine-valley-2650m",
+  "aspect": "N",
+  "sim": "N",
+  "point": "ll-richardson:ALP",
+  "match": "gazetteer",
+  "km": 6.8,
+  "dz": -150,
+  "hsObs": 145,
+  "hsModel": 159,
+  "hsErr": 14,
+  "partial": false,
+  "groupAgree": 60,
+  "groupN": 40,
+  "conf": [
+   [
+    0,
+    1,
+    7,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    24,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    7,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.8,
+  "hardMAE": 1.1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1,
+   "layers": [
+    [
+     157,
+     0.8,
+     false
+    ]
+   ]
+  },
+  "sh": {
+   "obs": 0,
+   "model": 6,
+   "hit": 0,
+   "falseAlarm": 6,
+   "layers": [
+    [
+     91,
+     2.4,
+     false
+    ],
+    [
+     85,
+     3.3,
+     false
+    ],
+    [
+     61,
+     2.6,
+     false
+    ],
+    [
+     61,
+     5.2,
+     false
+    ],
+    [
+     56,
+     2.9,
+     false
+    ],
+    [
+     11,
+     2.2,
+     false
+    ]
+   ]
+  },
+  "tests": [
+   {
+    "score": "CT13",
+    "h": 59,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "MF"
+ },
+ {
+  "file": "2023-24/2024-03-21_mt-field.json",
+  "season": "2023-24",
+  "date": "2024-03-21",
+  "kind": "test_profile",
+  "site": "mt-field",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "mt-dennis:TL",
+  "match": "gazetteer",
+  "km": 4.9,
+  "dz": 50,
+  "hsObs": 175,
+  "hsModel": 157,
+  "hsErr": -18,
+  "partial": false,
+  "groupAgree": 45,
+  "groupN": 40,
+  "conf": [
+   [
+    3,
+    0,
+    1,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    16,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    15,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.1,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 5,
+   "hit": 1,
+   "falseAlarm": 1,
+   "layers": [
+    [
+     143,
+     1.1,
+     true
+    ],
+    [
+     141,
+     1,
+     true
+    ],
+    [
+     139,
+     1,
+     true
+    ],
+    [
+     137,
+     0.9,
+     true
+    ],
+    [
+     2,
+     3.2,
+     false
+    ]
+   ]
+  },
+  "sh": {
+   "obs": 0,
+   "model": 8,
+   "hit": 0,
+   "falseAlarm": 8,
+   "layers": [
+    [
+     70,
+     5.7,
+     false
+    ],
+    [
+     67,
+     2.7,
+     false
+    ],
+    [
+     67,
+     2.3,
+     false
+    ],
+    [
+     66,
+     2.5,
+     false
+    ],
+    [
+     29,
+     5.2,
+     false
+    ],
+    [
+     28,
+     2.2,
+     false
+    ],
+    [
+     21,
+     2.8,
+     false
+    ],
+    [
+     20,
+     2.7,
+     false
+    ]
+   ]
+  },
+  "tests": [
+   {
+    "score": "CT2",
+    "h": 160,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "DF"
+   },
+   {
+    "score": "CT22",
+    "h": 70,
+    "grain": "MF",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2024-03-29_bow-summit-plot.json",
+  "season": "2023-24",
+  "date": "2024-03-29",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": "flat",
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 125,
+  "hsModel": 135,
+  "hsErr": 10,
+  "partial": false,
+  "groupAgree": 50,
+  "groupN": 40,
+  "conf": [
+   [
+    2,
+    0,
+    4,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    3,
+    10,
+    0
+   ],
+   [
+    0,
+    0,
+    18,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.7,
+  "hardMAE": 1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 4,
+   "model": 9,
+   "hit": 4,
+   "falseAlarm": 0,
+   "layers": [
+    [
+     127,
+     0.7,
+     true
+    ],
+    [
+     126,
+     0.7,
+     true
+    ],
+    [
+     106,
+     0.9,
+     true
+    ],
+    [
+     101,
+     1.4,
+     true
+    ],
+    [
+     95,
+     1.3,
+     true
+    ],
+    [
+     91,
+     1.6,
+     true
+    ],
+    [
+     86,
+     1.6,
+     true
+    ],
+    [
+     80,
+     1.6,
+     true
+    ],
+    [
+     74,
+     1.2,
+     true
+    ]
+   ]
+  },
+  "sh": {
+   "obs": 0,
+   "model": 6,
+   "hit": 0,
+   "falseAlarm": 6,
+   "layers": [
+    [
+     72,
+     2.7,
+     false
+    ],
+    [
+     42,
+     6.9,
+     false
+    ],
+    [
+     39,
+     5.6,
+     false
+    ],
+    [
+     24,
+     8,
+     false
+    ],
+    [
+     19,
+     2.4,
+     false
+    ],
+    [
+     7,
+     3.6,
+     false
+    ]
+   ]
+  },
+  "tests": [
+   {
+    "score": "CT13",
+    "h": 23,
+    "grain": "DH",
+    "flagged": true,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "CT14",
+    "h": 23,
+    "grain": "DH",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "tempBias": -0.2,
+  "tempRMSE": 2.4,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2023-24/2024-04-04_goats-eye-plot.json",
+  "season": "2023-24",
+  "date": "2024-04-04",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": "flat",
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 150,
+  "hsModel": 150,
+  "hsErr": 0,
+  "partial": false,
+  "groupAgree": 25,
+  "groupN": 40,
+  "conf": [
+   [
+    3,
+    0,
+    0,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    13,
+    6,
+    6
+   ],
+   [
+    0,
+    0,
+    7,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    2
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.3,
+  "hardMAE": 1.2,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 3,
+   "model": 5,
+   "hit": 2,
+   "falseAlarm": 2,
+   "layers": [
+    [
+     136,
+     0.6,
+     true
+    ],
+    [
+     133,
+     0.6,
+     true
+    ],
+    [
+     101,
+     1.6,
+     true
+    ],
+    [
+     46,
+     3.6,
+     false
+    ],
+    [
+     34,
+     3.3,
+     false
+    ]
+   ]
+  },
+  "sh": {
+   "obs": 0,
+   "model": 6,
+   "hit": 0,
+   "falseAlarm": 6,
+   "layers": [
+    [
+     87,
+     2.6,
+     false
+    ],
+    [
+     86,
+     2.4,
+     false
+    ],
+    [
+     83,
+     4.4,
+     false
+    ],
+    [
+     83,
+     2.7,
+     false
+    ],
+    [
+     74,
+     2.7,
+     false
+    ],
+    [
+     7,
+     3.7,
+     false
+    ]
+   ]
+  },
+  "tests": [
+   {
+    "score": "CT23",
+    "h": 120,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "MF"
+   },
+   {
+    "score": "CT24",
+    "h": 120,
+    "grain": "FC",
+    "flagged": false,
+    "modelLayer": "MF"
+   }
+  ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "tempBias": 0.8,
+  "tempRMSE": 1.4,
+  "modelSurface": "DF"
+ },
+ {
+  "file": "2024-25/2024-11-12_bow-summit-glades.json",
+  "season": "2024-25",
+  "date": "2024-11-12",
+  "kind": "test_profile",
+  "site": "bow-summit-glades",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "fts-bowsummit",
+  "match": "coordinates",
+  "km": 1.4,
+  "dz": -261,
+  "hsObs": 59,
+  "hsModel": 40,
+  "hsErr": -19,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.8,
+  "hardMAE": 1.2,
   "basal": {
    "obs": false,
    "model": true,
@@ -5049,23 +4872,23 @@
    "falseAlarm": 4,
    "layers": [
     [
-     25,
+     32,
      0.3,
      false
     ],
     [
-     23,
-     0.4,
+     30,
+     0.3,
      false
     ],
     [
-     23,
-     0.4,
+     29,
+     0.3,
      false
     ],
     [
-     21,
-     0.5,
+     27,
+     0.6,
      false
     ]
    ]
@@ -5114,31 +4937,31 @@
   "km": 1.8,
   "dz": -195,
   "hsObs": 58,
-  "hsModel": 36,
-  "hsErr": -22,
+  "hsModel": 42,
+  "hsErr": -16,
   "partial": false,
-  "groupAgree": 16,
+  "groupAgree": 26,
   "groupN": 38,
   "conf": [
    [
     4,
-    3,
     1,
+    3,
     0,
     0
    ],
    [
     0,
     0,
-    24,
-    0,
+    18,
+    6,
     0
    ],
    [
     0,
     0,
-    2,
-    4,
+    6,
+    0,
     0
    ],
    [
@@ -5156,8 +4979,8 @@
     0
    ]
   ],
-  "hardBias": -0.5,
-  "hardMAE": 0.7,
+  "hardBias": -0.2,
+  "hardMAE": 0.9,
   "basal": {
    "obs": true,
    "model": true,
@@ -5165,33 +4988,34 @@
   },
   "crusts": {
    "obs": 1,
-   "model": 3,
-   "hit": 1,
-   "falseAlarm": 0,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2,
    "layers": [
     [
-     3,
-     2.6,
-     true
-    ],
-    [
-     1,
-     2.8,
-     true
-    ],
-    [
-     0,
+     14,
      2.5,
-     true
+     false
+    ],
+    [
+     11,
+     2.2,
+     false
     ]
    ]
   },
   "sh": {
    "obs": 0,
-   "model": 0,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
+   "falseAlarm": 1,
+   "layers": [
+    [
+     36,
+     2.5,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -5213,9 +5037,9 @@
    "model": 0,
    "confirmed": 0
   },
-  "tempBias": -1.3,
+  "tempBias": -1.4,
   "tempRMSE": 1.4,
-  "modelSurface": "SH"
+  "modelSurface": "PP"
  },
  {
   "file": "2024-25/2024-11-21_jj-bowl.json",
@@ -5230,31 +5054,31 @@
   "km": 1.9,
   "dz": -310,
   "hsObs": 90,
-  "hsModel": 35,
-  "hsErr": -55,
+  "hsModel": 42,
+  "hsErr": -48,
   "partial": false,
-  "groupAgree": 78,
+  "groupAgree": 70,
   "groupN": 40,
   "conf": [
    [
-    9,
+    5,
     0,
-    2,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
+    6,
     0,
     0
    ],
    [
     0,
     0,
-    22,
-    2,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    23,
+    1,
     0
    ],
    [
@@ -5272,8 +5096,8 @@
     0
    ]
   ],
-  "hardBias": -0.3,
-  "hardMAE": 1.1,
+  "hardBias": -0.1,
+  "hardMAE": 1.2,
   "basal": {
    "obs": true,
    "model": true,
@@ -5281,27 +5105,12 @@
   },
   "crusts": {
    "obs": 2,
-   "model": 4,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 4,
+   "falseAlarm": 1,
    "layers": [
     [
-     25,
-     0.6,
-     false
-    ],
-    [
-     22,
-     0.9,
-     false
-    ],
-    [
-     21,
-     1,
-     false
-    ],
-    [
-     20,
+     29,
      1,
      false
     ]
@@ -5329,7 +5138,7 @@
   },
   "tempBias": null,
   "tempRMSE": null,
-  "modelSurface": "PP"
+  "modelSurface": "DF"
  },
  {
   "file": "2024-25/2024-11-22_bow-summit-plot.json",
@@ -5344,17 +5153,17 @@
   "km": null,
   "dz": null,
   "hsObs": 50,
-  "hsModel": 35,
-  "hsErr": -15,
+  "hsModel": 42,
+  "hsErr": -8,
   "partial": false,
-  "groupAgree": 45,
+  "groupAgree": 33,
   "groupN": 40,
   "conf": [
    [
-    9,
-    0,
-    5,
     4,
+    0,
+    13,
+    1,
     0
    ],
    [
@@ -5387,7 +5196,7 @@
    ]
   ],
   "hardBias": -0.3,
-  "hardMAE": 1.3,
+  "hardMAE": 1.2,
   "basal": {
    "obs": false,
    "model": true,
@@ -5395,27 +5204,12 @@
   },
   "crusts": {
    "obs": 3,
-   "model": 4,
+   "model": 1,
    "hit": 1,
-   "falseAlarm": 1,
+   "falseAlarm": 0,
    "layers": [
     [
-     26,
-     0.6,
-     false
-    ],
-    [
-     22,
-     0.9,
-     true
-    ],
-    [
-     21,
-     1,
-     true
-    ],
-    [
-     21,
+     29,
      1,
      true
     ]
@@ -5435,7 +5229,7 @@
   },
   "tempBias": null,
   "tempRMSE": null,
-  "modelSurface": "PP"
+  "modelSurface": "DF"
  },
  {
   "file": "2024-25/2024-11-24_wolverine-valley.json",
@@ -5450,16 +5244,16 @@
   "km": 6.9,
   "dz": 0,
   "hsObs": 65,
-  "hsModel": 45,
-  "hsErr": -20,
+  "hsModel": 47,
+  "hsErr": -18,
   "partial": false,
-  "groupAgree": 65,
+  "groupAgree": 60,
   "groupN": 40,
   "conf": [
    [
-    4,
+    3,
     0,
-    8,
+    9,
     0,
     0
    ],
@@ -5480,8 +5274,8 @@
    [
     0,
     0,
-    6,
-    2,
+    7,
+    1,
     0
    ],
    [
@@ -5506,13 +5300,13 @@
    "falseAlarm": 0,
    "layers": [
     [
-     3,
-     3.1,
+     5,
+     2.9,
      true
     ],
     [
-     2,
-     3.5,
+     4,
+     3.4,
      true
     ]
    ]
@@ -5567,8 +5361,8 @@
   "km": null,
   "dz": null,
   "hsObs": 60,
-  "hsModel": 41,
-  "hsErr": -19,
+  "hsModel": 53,
+  "hsErr": -7,
   "partial": false,
   "groupAgree": 28,
   "groupN": 39,
@@ -5609,7 +5403,7 @@
     0
    ]
   ],
-  "hardBias": -0.6,
+  "hardBias": -0.3,
   "hardMAE": 0.7,
   "basal": {
    "obs": true,
@@ -5625,12 +5419,32 @@
   },
   "sh": {
    "obs": 0,
-   "model": 1,
+   "model": 5,
    "hit": 0,
-   "falseAlarm": 1,
+   "falseAlarm": 5,
    "layers": [
     [
+     45,
+     4.2,
+     false
+    ],
+    [
+     43,
+     2.6,
+     false
+    ],
+    [
      39,
+     2.2,
+     false
+    ],
+    [
+     33,
+     2.5,
+     false
+    ],
+    [
+     30,
      2.6,
      false
     ]
@@ -5673,8 +5487,8 @@
   "km": null,
   "dz": null,
   "hsObs": 56,
-  "hsModel": 44,
-  "hsErr": -12,
+  "hsModel": 53,
+  "hsErr": -3,
   "partial": false,
   "groupAgree": 83,
   "groupN": 40,
@@ -5715,7 +5529,7 @@
     0
    ]
   ],
-  "hardBias": 0.5,
+  "hardBias": 0.6,
   "hardMAE": 0.8,
   "basal": {
    "obs": true,
@@ -5731,10 +5545,16 @@
   },
   "sh": {
    "obs": 0,
-   "model": 0,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
+   "falseAlarm": 1,
+   "layers": [
+    [
+     41,
+     6.4,
+     false
+    ]
+   ]
   },
   "tests": [],
   "weak": {
@@ -5743,7 +5563,7 @@
   },
   "tempBias": null,
   "tempRMSE": null,
-  "modelSurface": "PP"
+  "modelSurface": "SH"
  },
  {
   "file": "2024-25/2024-12-10_mount-nile-south-shoulder.json",
@@ -5758,16 +5578,16 @@
   "km": 6.7,
   "dz": -17,
   "hsObs": 110,
-  "hsModel": 101,
-  "hsErr": -9,
+  "hsModel": 109,
+  "hsErr": -1,
   "partial": false,
-  "groupAgree": 53,
+  "groupAgree": 43,
   "groupN": 40,
   "conf": [
    [
     0,
-    6,
-    2,
+    5,
+    3,
     0,
     0
    ],
@@ -5780,8 +5600,8 @@
    ],
    [
     0,
-    1,
-    21,
+    5,
+    17,
     0,
     0
    ],
@@ -5801,7 +5621,7 @@
    ]
   ],
   "hardBias": -1,
-  "hardMAE": 1.1,
+  "hardMAE": 1.2,
   "basal": {
    "obs": true,
    "model": true,
@@ -5851,8 +5671,8 @@
   "km": 4.6,
   "dz": -120,
   "hsObs": 120,
-  "hsModel": 100,
-  "hsErr": -20,
+  "hsModel": 104,
+  "hsErr": -16,
   "partial": false,
   "groupAgree": 78,
   "groupN": 40,
@@ -5894,7 +5714,7 @@
    ]
   ],
   "hardBias": -0.2,
-  "hardMAE": 1.1,
+  "hardMAE": 1,
   "basal": {
    "obs": true,
    "model": true,
@@ -5965,8 +5785,8 @@
   "km": 4.1,
   "dz": -46,
   "hsObs": 75,
-  "hsModel": 30,
-  "hsErr": -45,
+  "hsModel": 32,
+  "hsErr": -43,
   "partial": false,
   "groupAgree": null,
   "groupN": 0,
@@ -6021,7 +5841,7 @@
    "falseAlarm": 1,
    "layers": [
     [
-     21,
+     23,
      0.6,
      false
     ]
@@ -6034,12 +5854,12 @@
    "falseAlarm": 2,
    "layers": [
     [
-     20,
+     21,
      3.5,
      false
     ],
     [
-     13,
+     14,
      2.5,
      false
     ]
@@ -6082,8 +5902,8 @@
   "km": 5.2,
   "dz": 4,
   "hsObs": 65,
-  "hsModel": 48,
-  "hsErr": -17,
+  "hsModel": 45,
+  "hsErr": -20,
   "partial": false,
   "groupAgree": null,
   "groupN": 0,
@@ -6175,8 +5995,8 @@
   "km": null,
   "dz": null,
   "hsObs": 65,
-  "hsModel": 50,
-  "hsErr": -15,
+  "hsModel": 62,
+  "hsErr": -3,
   "partial": false,
   "groupAgree": 93,
   "groupN": 40,
@@ -6217,8 +6037,8 @@
     0
    ]
   ],
-  "hardBias": 0.6,
-  "hardMAE": 0.7,
+  "hardBias": 0.8,
+  "hardMAE": 0.8,
   "basal": {
    "obs": true,
    "model": true,
@@ -6233,10 +6053,21 @@
   },
   "sh": {
    "obs": 0,
-   "model": 0,
+   "model": 2,
    "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
+   "falseAlarm": 2,
+   "layers": [
+    [
+     47,
+     4.2,
+     false
+    ],
+    [
+     38,
+     6.4,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -6255,11 +6086,11 @@
    }
   ],
   "weak": {
-   "model": 0,
-   "confirmed": 0
+   "model": 1,
+   "confirmed": 1
   },
-  "tempBias": -2.7,
-  "tempRMSE": 3.3,
+  "tempBias": -2.9,
+  "tempRMSE": 3.6,
   "modelSurface": "SH"
  },
  {
@@ -6275,16 +6106,16 @@
   "km": null,
   "dz": null,
   "hsObs": 72,
-  "hsModel": 71,
-  "hsErr": -1,
+  "hsModel": 64,
+  "hsErr": -8,
   "partial": false,
-  "groupAgree": 70,
+  "groupAgree": 65,
   "groupN": 40,
   "conf": [
    [
-    3,
-    6,
     1,
+    1,
+    8,
     0,
     0
    ],
@@ -6317,7 +6148,7 @@
     0
    ]
   ],
-  "hardBias": 0.1,
+  "hardBias": 0.3,
   "hardMAE": 0.8,
   "basal": {
    "obs": true,
@@ -6333,27 +6164,32 @@
   },
   "sh": {
    "obs": 0,
-   "model": 4,
+   "model": 5,
    "hit": 0,
-   "falseAlarm": 4,
+   "falseAlarm": 5,
    "layers": [
     [
-     53,
-     4.7,
+     40,
+     4.2,
      false
     ],
     [
-     52,
-     5.5,
+     39,
+     2.6,
      false
     ],
     [
      35,
-     4.8,
+     2.2,
      false
     ],
     [
-     34,
+     31,
+     2.5,
+     false
+    ],
+    [
+     28,
      2.6,
      false
     ]
@@ -6364,8 +6200,8 @@
     "score": "CT12",
     "h": 54,
     "grain": "SH",
-    "flagged": false,
-    "modelLayer": "RG"
+    "flagged": true,
+    "modelLayer": "FC"
    },
    {
     "score": "CT22",
@@ -6379,8 +6215,8 @@
    "model": 2,
    "confirmed": 2
   },
-  "tempBias": 0.3,
-  "tempRMSE": 0.4,
+  "tempBias": 0.4,
+  "tempRMSE": 0.5,
   "modelSurface": "DF"
  },
  {
@@ -6396,1428 +6232,8 @@
   "km": 5.6,
   "dz": 80,
   "hsObs": 75,
-  "hsModel": 124,
-  "hsErr": 49,
-  "partial": false,
-  "groupAgree": null,
-  "groupN": 0,
-  "conf": [
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": 0.8,
-  "hardMAE": 0.8,
-  "basal": {
-   "obs": false,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 0,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
-  },
-  "sh": {
-   "obs": 0,
-   "model": 1,
-   "hit": 0,
-   "falseAlarm": 1,
-   "layers": [
-    [
-     104,
-     2.1,
-     false
-    ]
-   ]
-  },
-  "tests": [
-   {
-    "score": "CT15",
-    "h": 35,
-    "grain": null,
-    "flagged": false,
-    "modelLayer": "FC"
-   },
-   {
-    "score": "CT13",
-    "h": 5,
-    "grain": null,
-    "flagged": false,
-    "modelLayer": "DH"
-   }
-  ],
-  "weak": {
-   "model": 0,
-   "confirmed": 0
-  },
-  "tempBias": null,
-  "tempRMSE": null,
-  "modelSurface": "PP"
- },
- {
-  "file": "2024-25/2025-01-07_little-crowfoot.json",
-  "season": "2024-25",
-  "date": "2025-01-07",
-  "kind": "test_profile",
-  "site": "little-crowfoot",
-  "aspect": "N",
-  "sim": "N",
-  "point": "fts-vulture",
-  "match": "coordinates",
-  "km": 1.3,
-  "dz": 190,
-  "hsObs": 153,
-  "hsModel": 181,
-  "hsErr": 28,
-  "partial": false,
-  "groupAgree": null,
-  "groupN": 0,
-  "conf": [
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": -1,
-  "hardMAE": 1,
-  "basal": {
-   "obs": false,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 1,
-   "model": 2,
-   "hit": 1,
-   "falseAlarm": 0,
-   "layers": [
-    [
-     26,
-     1.4,
-     true
-    ],
-    [
-     1,
-     3.2,
-     true
-    ]
-   ]
-  },
-  "sh": {
-   "obs": 0,
-   "model": 2,
-   "hit": 0,
-   "falseAlarm": 2,
-   "layers": [
-    [
-     146,
-     2.1,
-     false
-    ],
-    [
-     121,
-     2,
-     false
-    ]
-   ]
-  },
-  "tests": [
-   {
-    "score": "CT23",
-    "h": 133,
-    "grain": null,
-    "flagged": true,
-    "modelLayer": "FC"
-   }
-  ],
-  "weak": {
-   "model": 2,
-   "confirmed": 1
-  },
-  "tempBias": null,
-  "tempRMSE": null,
-  "modelSurface": "SH"
- },
- {
-  "file": "2024-25/2025-01-08_goats-eye-plot.json",
-  "season": "2024-25",
-  "date": "2025-01-08",
-  "kind": "study_plot",
-  "site": "goats-eye-plot",
-  "aspect": null,
-  "sim": "flat",
-  "point": "fts-sunshine",
-  "match": "study plot",
-  "km": null,
-  "dz": null,
-  "hsObs": 73,
-  "hsModel": 72,
-  "hsErr": -1,
-  "partial": false,
-  "groupAgree": 95,
-  "groupN": 40,
-  "conf": [
-   [
-    1,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    1,
-    0,
-    37,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    1,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": 0.4,
-  "hardMAE": 0.7,
-  "basal": {
-   "obs": true,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 1,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
-  },
-  "sh": {
-   "obs": 0,
-   "model": 6,
-   "hit": 0,
-   "falseAlarm": 6,
-   "layers": [
-    [
-     67,
-     2.3,
-     false
-    ],
-    [
-     65,
-     3.7,
-     false
-    ],
-    [
-     47,
-     4.7,
-     false
-    ],
-    [
-     46,
-     5.5,
-     false
-    ],
-    [
-     31,
-     4.8,
-     false
-    ],
-    [
-     30,
-     2.6,
-     false
-    ]
-   ]
-  },
-  "tests": [],
-  "weak": {
-   "model": 3,
-   "confirmed": 3
-  },
-  "tempBias": -0.3,
-  "tempRMSE": 0.8,
-  "modelSurface": "SH"
- },
- {
-  "file": "2024-25/2025-01-15_crowfoot-treeline.json",
-  "season": "2024-25",
-  "date": "2025-01-15",
-  "kind": "test_profile",
-  "site": "crowfoot-treeline",
-  "aspect": "NE",
-  "sim": "N",
-  "point": "mt-gordon:TL",
-  "match": "coordinates",
-  "km": 7.9,
-  "dz": -86,
-  "hsObs": 110,
-  "hsModel": 151,
-  "hsErr": 41,
-  "partial": false,
-  "groupAgree": null,
-  "groupN": 0,
-  "conf": [
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": 0.2,
-  "hardMAE": 0.5,
-  "basal": {
-   "obs": false,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 1,
-   "model": 3,
-   "hit": 1,
-   "falseAlarm": 0,
-   "layers": [
-    [
-     14,
-     2.3,
-     true
-    ],
-    [
-     10,
-     2.8,
-     true
-    ],
-    [
-     4,
-     3.5,
-     true
-    ]
-   ]
-  },
-  "sh": {
-   "obs": 0,
-   "model": 6,
-   "hit": 0,
-   "falseAlarm": 6,
-   "layers": [
-    [
-     144,
-     5.4,
-     false
-    ],
-    [
-     114,
-     2.9,
-     false
-    ],
-    [
-     110,
-     8,
-     false
-    ],
-    [
-     84,
-     4.8,
-     false
-    ],
-    [
-     76,
-     2.2,
-     false
-    ],
-    [
-     52,
-     3.3,
-     false
-    ]
-   ]
-  },
-  "tests": [],
-  "weak": {
-   "model": 3,
-   "confirmed": 0
-  },
-  "tempBias": null,
-  "tempRMSE": null,
-  "modelSurface": "SH"
- },
- {
-  "file": "2024-25/2025-01-19_bow-summit-plot.json",
-  "season": "2024-25",
-  "date": "2025-01-19",
-  "kind": "study_plot",
-  "site": "bow-summit-plot",
-  "aspect": null,
-  "sim": "flat",
-  "point": "fts-bowsummit",
-  "match": "study plot",
-  "km": null,
-  "dz": null,
-  "hsObs": 73,
-  "hsModel": 53,
-  "hsErr": -20,
-  "partial": false,
-  "groupAgree": 93,
-  "groupN": 40,
-  "conf": [
-   [
-    3,
-    0,
-    0,
-    1,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    34,
-    1,
-    0
-   ],
-   [
-    0,
-    0,
-    1,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": 0.1,
-  "hardMAE": 1,
-  "basal": {
-   "obs": true,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 1,
-   "model": 3,
-   "hit": 0,
-   "falseAlarm": 3,
-   "layers": [
-    [
-     48,
-     0.5,
-     false
-    ],
-    [
-     47,
-     0.6,
-     false
-    ],
-    [
-     47,
-     0.7,
-     false
-    ]
-   ]
-  },
-  "sh": {
-   "obs": 0,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
-  },
-  "tests": [],
-  "weak": {
-   "model": 0,
-   "confirmed": 0
-  },
-  "tempBias": null,
-  "tempRMSE": null,
-  "modelSurface": "PP"
- },
- {
-  "file": "2024-25/2025-01-21_tak-falls-plot.json",
-  "season": "2024-25",
-  "date": "2025-01-21",
-  "kind": "study_plot",
-  "site": "tak-falls-plot",
-  "aspect": "flat",
-  "sim": "flat",
-  "point": "emerald-pk:BTL",
-  "match": "study plot",
-  "km": null,
-  "dz": null,
-  "hsObs": 115,
-  "hsModel": 87,
-  "hsErr": -28,
-  "partial": false,
-  "groupAgree": 75,
-  "groupN": 40,
-  "conf": [
-   [
-    1,
-    0,
-    2,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    8,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    29,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": -0.7,
-  "hardMAE": 0.9,
-  "basal": {
-   "obs": true,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 1,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
-  },
-  "sh": {
-   "obs": 0,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
-  },
-  "tests": [
-   {
-    "score": "CT3",
-    "h": 107,
-    "grain": "MFcr",
-    "flagged": false,
-    "modelLayer": "FC"
-   }
-  ],
-  "weak": {
-   "model": 0,
-   "confirmed": 0
-  },
-  "tempBias": -3.8,
-  "tempRMSE": 4.8,
-  "modelSurface": "PP"
- },
- {
-  "file": "2024-25/2025-01-26_goats-eye-plot.json",
-  "season": "2024-25",
-  "date": "2025-01-26",
-  "kind": "study_plot",
-  "site": "goats-eye-plot",
-  "aspect": null,
-  "sim": "flat",
-  "point": "fts-sunshine",
-  "match": "study plot",
-  "km": null,
-  "dz": null,
-  "hsObs": 84,
-  "hsModel": 75,
-  "hsErr": -9,
-  "partial": false,
-  "groupAgree": 83,
-  "groupN": 40,
-  "conf": [
-   [
-    0,
-    0,
-    7,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    33,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": 0,
-  "hardMAE": 0.5,
-  "basal": {
-   "obs": true,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 0,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
-  },
-  "sh": {
-   "obs": 0,
-   "model": 6,
-   "hit": 0,
-   "falseAlarm": 6,
-   "layers": [
-    [
-     64,
-     2.3,
-     false
-    ],
-    [
-     62,
-     3.7,
-     false
-    ],
-    [
-     44,
-     4.7,
-     false
-    ],
-    [
-     43,
-     5.5,
-     false
-    ],
-    [
-     30,
-     4.8,
-     false
-    ],
-    [
-     29,
-     2.6,
-     false
-    ]
-   ]
-  },
-  "tests": [],
-  "weak": {
-   "model": 3,
-   "confirmed": 3
-  },
-  "tempBias": 0.3,
-  "tempRMSE": 2,
-  "modelSurface": "SH"
- },
- {
-  "file": "2024-25/2025-01-30_tak-falls-area.json",
-  "season": "2024-25",
-  "date": "2025-01-30",
-  "kind": "test_profile",
-  "site": "tak-falls-area",
-  "aspect": "E",
-  "sim": "E",
-  "point": "emerald-pk:BTL",
-  "match": "coordinates",
-  "km": 6.5,
-  "dz": -50,
-  "hsObs": 135,
-  "hsModel": 86,
-  "hsErr": -49,
-  "partial": false,
-  "groupAgree": 55,
-  "groupN": 40,
-  "conf": [
-   [
-    1,
-    0,
-    5,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    13,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    21,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": 0,
-  "hardMAE": 0.5,
-  "basal": {
-   "obs": true,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 0,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
-  },
-  "sh": {
-   "obs": 0,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
-  },
-  "tests": [],
-  "weak": {
-   "model": 0,
-   "confirmed": 0
-  },
-  "tempBias": -4.1,
-  "tempRMSE": 4.4,
-  "modelSurface": "PP"
- },
- {
-  "file": "2024-25/2025-02-01_bow-summit-plot.json",
-  "season": "2024-25",
-  "date": "2025-02-01",
-  "kind": "study_plot",
-  "site": "bow-summit-plot",
-  "aspect": null,
-  "sim": "flat",
-  "point": "fts-bowsummit",
-  "match": "study plot",
-  "km": null,
-  "dz": null,
-  "hsObs": 85,
-  "hsModel": 59,
-  "hsErr": -26,
-  "partial": false,
-  "groupAgree": 95,
-  "groupN": 40,
-  "conf": [
-   [
-    6,
-    0,
-    1,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    32,
-    1,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": 0.7,
-  "hardMAE": 0.9,
-  "basal": {
-   "obs": true,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 0,
-   "model": 2,
-   "hit": 0,
-   "falseAlarm": 2,
-   "layers": [
-    [
-     47,
-     0.8,
-     false
-    ],
-    [
-     46,
-     0.9,
-     false
-    ]
-   ]
-  },
-  "sh": {
-   "obs": 0,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
-  },
-  "tests": [],
-  "weak": {
-   "model": 0,
-   "confirmed": 0
-  },
-  "tempBias": -2.7,
-  "tempRMSE": 3.5,
-  "modelSurface": "PP"
- },
- {
-  "file": "2024-25/2025-02-04_ruby-trees.json",
-  "season": "2024-25",
-  "date": "2025-02-04",
-  "kind": "test_profile",
-  "site": "ruby-trees",
-  "aspect": "S",
-  "sim": "S",
-  "point": "emerald-pk:TL",
-  "match": "coordinates",
-  "km": 0.5,
-  "dz": -40,
-  "hsObs": 145,
-  "hsModel": 120,
-  "hsErr": -25,
-  "partial": false,
-  "groupAgree": null,
-  "groupN": 0,
-  "conf": [
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": 0,
-  "hardMAE": 1.1,
-  "basal": {
-   "obs": false,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 1,
-   "model": 9,
-   "hit": 1,
-   "falseAlarm": 3,
-   "layers": [
-    [
-     97,
-     1,
-     false
-    ],
-    [
-     97,
-     1.1,
-     false
-    ],
-    [
-     96,
-     1.1,
-     false
-    ],
-    [
-     94,
-     1.1,
-     true
-    ],
-    [
-     92,
-     1.4,
-     true
-    ],
-    [
-     89,
-     1.5,
-     true
-    ],
-    [
-     88,
-     1.5,
-     true
-    ],
-    [
-     88,
-     1.5,
-     true
-    ],
-    [
-     87,
-     1.6,
-     true
-    ]
-   ]
-  },
-  "sh": {
-   "obs": 0,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
-  },
-  "tests": [
-   {
-    "score": "CT14",
-    "h": 95,
-    "grain": "FC",
-    "flagged": true,
-    "modelLayer": "DH"
-   },
-   {
-    "score": "CT1",
-    "h": 95,
-    "grain": null,
-    "flagged": true,
-    "modelLayer": "DH"
-   }
-  ],
-  "weak": {
-   "model": 1,
-   "confirmed": 1
-  },
-  "tempBias": null,
-  "tempRMSE": null,
-  "modelSurface": "PP"
- },
- {
-  "file": "2024-25/2025-02-06_tak-falls-plot.json",
-  "season": "2024-25",
-  "date": "2025-02-06",
-  "kind": "study_plot",
-  "site": "tak-falls-plot",
-  "aspect": null,
-  "sim": "flat",
-  "point": "emerald-pk:BTL",
-  "match": "study plot",
-  "km": null,
-  "dz": null,
-  "hsObs": 145,
-  "hsModel": 100,
-  "hsErr": -45,
-  "partial": false,
-  "groupAgree": 38,
-  "groupN": 32,
-  "conf": [
-   [
-    7,
-    0,
-    3,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    17,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    5,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": -0.4,
-  "hardMAE": 1,
-  "basal": {
-   "obs": true,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 0,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
-  },
-  "sh": {
-   "obs": 0,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
-  },
-  "tests": [
-   {
-    "score": "CT14",
-    "h": 120,
-    "grain": "DF",
-    "flagged": false,
-    "modelLayer": "FC"
-   },
-   {
-    "score": "CT16",
-    "h": 117,
-    "grain": "DF",
-    "flagged": false,
-    "modelLayer": "FC"
-   }
-  ],
-  "weak": {
-   "model": 0,
-   "confirmed": 0
-  },
-  "tempBias": -3.6,
-  "tempRMSE": 4.5,
-  "modelSurface": "PP"
- },
- {
-  "file": "2024-25/2025-02-12_goats-eye-plot.json",
-  "season": "2024-25",
-  "date": "2025-02-12",
-  "kind": "study_plot",
-  "site": "goats-eye-plot",
-  "aspect": null,
-  "sim": "flat",
-  "point": "fts-sunshine",
-  "match": "study plot",
-  "km": null,
-  "dz": null,
-  "hsObs": 86,
-  "hsModel": 84,
-  "hsErr": -2,
-  "partial": false,
-  "groupAgree": 90,
-  "groupN": 40,
-  "conf": [
-   [
-    2,
-    0,
-    4,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    34,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": 0,
-  "hardMAE": 0.7,
-  "basal": {
-   "obs": true,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 1,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
-  },
-  "sh": {
-   "obs": 0,
-   "model": 7,
-   "hit": 0,
-   "falseAlarm": 7,
-   "layers": [
-    [
-     69,
-     3.7,
-     false
-    ],
-    [
-     60,
-     2.3,
-     false
-    ],
-    [
-     58,
-     3.7,
-     false
-    ],
-    [
-     42,
-     4.7,
-     false
-    ],
-    [
-     41,
-     5.5,
-     false
-    ],
-    [
-     28,
-     4.8,
-     false
-    ],
-    [
-     27,
-     2.6,
-     false
-    ]
-   ]
-  },
-  "tests": [],
-  "weak": {
-   "model": 3,
-   "confirmed": 3
-  },
-  "tempBias": 0.4,
-  "tempRMSE": 1.8,
-  "modelSurface": "SH"
- },
- {
-  "file": "2024-25/2025-02-14_bow-summit-plot.json",
-  "season": "2024-25",
-  "date": "2025-02-14",
-  "kind": "study_plot",
-  "site": "bow-summit-plot",
-  "aspect": "SE",
-  "sim": "flat",
-  "point": "fts-bowsummit",
-  "match": "study plot",
-  "km": null,
-  "dz": null,
-  "hsObs": 83,
-  "hsModel": 57,
-  "hsErr": -26,
-  "partial": false,
-  "groupAgree": 93,
-  "groupN": 40,
-  "conf": [
-   [
-    4,
-    0,
-    3,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    33,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ]
-  ],
-  "hardBias": -0.1,
-  "hardMAE": 0.8,
-  "basal": {
-   "obs": true,
-   "model": true,
-   "modelLargeRG": false
-  },
-  "crusts": {
-   "obs": 0,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
-  },
-  "sh": {
-   "obs": 0,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
-  },
-  "tests": [
-   {
-    "score": "CT26",
-    "h": 24,
-    "grain": "DH",
-    "flagged": false,
-    "modelLayer": "DH"
-   }
-  ],
-  "weak": {
-   "model": 0,
-   "confirmed": 0
-  },
-  "tempBias": null,
-  "tempRMSE": null,
-  "modelSurface": "PP"
- },
- {
-  "file": "2024-25/2025-02-24_schaefer-bowl-tl.json",
-  "season": "2024-25",
-  "date": "2025-02-24",
-  "kind": "test_profile",
-  "site": "schaefer-bowl-tl",
-  "aspect": "NW",
-  "sim": "N",
-  "point": "mt-dennis:TL",
-  "match": "coordinates",
-  "km": 11.6,
-  "dz": -61,
-  "hsObs": 150,
-  "hsModel": 129,
-  "hsErr": -21,
+  "hsModel": 135,
+  "hsErr": 60,
   "partial": false,
   "groupAgree": null,
   "groupN": 0,
@@ -7879,7 +6295,1488 @@
    "falseAlarm": 1,
    "layers": [
     [
-     89,
+     109,
+     2.1,
+     false
+    ]
+   ]
+  },
+  "tests": [
+   {
+    "score": "CT15",
+    "h": 35,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT13",
+    "h": 5,
+    "grain": null,
+    "flagged": false,
+    "modelLayer": "DH"
+   }
+  ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-01-07_little-crowfoot.json",
+  "season": "2024-25",
+  "date": "2025-01-07",
+  "kind": "test_profile",
+  "site": "little-crowfoot",
+  "aspect": "N",
+  "sim": "N",
+  "point": "fts-vulture",
+  "match": "coordinates",
+  "km": 1.3,
+  "dz": 190,
+  "hsObs": 153,
+  "hsModel": 194,
+  "hsErr": 41,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.9,
+  "hardMAE": 1,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 2,
+   "hit": 1,
+   "falseAlarm": 0,
+   "layers": [
+    [
+     28,
+     1.3,
+     true
+    ],
+    [
+     2,
+     3.1,
+     true
+    ]
+   ]
+  },
+  "sh": {
+   "obs": 0,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2,
+   "layers": [
+    [
+     153,
+     2.1,
+     false
+    ],
+    [
+     126,
+     2,
+     false
+    ]
+   ]
+  },
+  "tests": [
+   {
+    "score": "CT23",
+    "h": 133,
+    "grain": null,
+    "flagged": true,
+    "modelLayer": "FC"
+   }
+  ],
+  "weak": {
+   "model": 2,
+   "confirmed": 1
+  },
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2025-01-08_goats-eye-plot.json",
+  "season": "2024-25",
+  "date": "2025-01-08",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 73,
+  "hsModel": 72,
+  "hsErr": -1,
+  "partial": false,
+  "groupAgree": 98,
+  "groupN": 40,
+  "conf": [
+   [
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    38,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.1,
+  "hardMAE": 0.9,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0,
+   "layers": []
+  },
+  "sh": {
+   "obs": 0,
+   "model": 6,
+   "hit": 0,
+   "falseAlarm": 6,
+   "layers": [
+    [
+     63,
+     6.2,
+     false
+    ],
+    [
+     38,
+     4.2,
+     false
+    ],
+    [
+     36,
+     2.6,
+     false
+    ],
+    [
+     33,
+     2.2,
+     false
+    ],
+    [
+     29,
+     2.5,
+     false
+    ],
+    [
+     27,
+     2.6,
+     false
+    ]
+   ]
+  },
+  "tests": [],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "tempBias": 0.2,
+  "tempRMSE": 0.7,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2025-01-15_crowfoot-treeline.json",
+  "season": "2024-25",
+  "date": "2025-01-15",
+  "kind": "test_profile",
+  "site": "crowfoot-treeline",
+  "aspect": "NE",
+  "sim": "N",
+  "point": "mt-gordon:TL",
+  "match": "coordinates",
+  "km": 7.9,
+  "dz": -86,
+  "hsObs": 110,
+  "hsModel": 158,
+  "hsErr": 48,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.2,
+  "hardMAE": 0.4,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 3,
+   "hit": 1,
+   "falseAlarm": 0,
+   "layers": [
+    [
+     15,
+     2.2,
+     true
+    ],
+    [
+     11,
+     2.8,
+     true
+    ],
+    [
+     5,
+     3.5,
+     true
+    ]
+   ]
+  },
+  "sh": {
+   "obs": 0,
+   "model": 6,
+   "hit": 0,
+   "falseAlarm": 6,
+   "layers": [
+    [
+     149,
+     5.4,
+     false
+    ],
+    [
+     115,
+     2.9,
+     false
+    ],
+    [
+     111,
+     8,
+     false
+    ],
+    [
+     84,
+     4.8,
+     false
+    ],
+    [
+     76,
+     2.2,
+     false
+    ],
+    [
+     51,
+     3.3,
+     false
+    ]
+   ]
+  },
+  "tests": [],
+  "weak": {
+   "model": 3,
+   "confirmed": 0
+  },
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2025-01-19_bow-summit-plot.json",
+  "season": "2024-25",
+  "date": "2025-01-19",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 73,
+  "hsModel": 69,
+  "hsErr": -4,
+  "partial": false,
+  "groupAgree": 98,
+  "groupN": 40,
+  "conf": [
+   [
+    4,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    35,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.2,
+  "hardMAE": 1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0,
+   "layers": []
+  },
+  "sh": {
+   "obs": 0,
+   "model": 4,
+   "hit": 0,
+   "falseAlarm": 4,
+   "layers": [
+    [
+     62,
+     3.5,
+     false
+    ],
+    [
+     55,
+     3.3,
+     false
+    ],
+    [
+     42,
+     4.2,
+     false
+    ],
+    [
+     34,
+     6.4,
+     false
+    ]
+   ]
+  },
+  "tests": [],
+  "weak": {
+   "model": 2,
+   "confirmed": 2
+  },
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2025-01-21_tak-falls-plot.json",
+  "season": "2024-25",
+  "date": "2025-01-21",
+  "kind": "study_plot",
+  "site": "tak-falls-plot",
+  "aspect": "flat",
+  "sim": "flat",
+  "point": "emerald-pk:BTL",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 115,
+  "hsModel": 96,
+  "hsErr": -19,
+  "partial": false,
+  "groupAgree": 75,
+  "groupN": 40,
+  "conf": [
+   [
+    1,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    8,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    29,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.6,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0,
+   "layers": []
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0,
+   "layers": []
+  },
+  "tests": [
+   {
+    "score": "CT3",
+    "h": 107,
+    "grain": "MFcr",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "tempBias": -3.6,
+  "tempRMSE": 4.6,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-01-26_goats-eye-plot.json",
+  "season": "2024-25",
+  "date": "2025-01-26",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 84,
+  "hsModel": 74,
+  "hsErr": -10,
+  "partial": false,
+  "groupAgree": 85,
+  "groupN": 40,
+  "conf": [
+   [
+    1,
+    0,
+    6,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    33,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.1,
+  "hardMAE": 0.5,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0,
+   "layers": []
+  },
+  "sh": {
+   "obs": 0,
+   "model": 8,
+   "hit": 0,
+   "falseAlarm": 8,
+   "layers": [
+    [
+     71,
+     3.7,
+     false
+    ],
+    [
+     66,
+     2.1,
+     false
+    ],
+    [
+     59,
+     6.2,
+     false
+    ],
+    [
+     35,
+     4.2,
+     false
+    ],
+    [
+     34,
+     2.6,
+     false
+    ],
+    [
+     31,
+     2.2,
+     false
+    ],
+    [
+     27,
+     2.5,
+     false
+    ],
+    [
+     25,
+     2.6,
+     false
+    ]
+   ]
+  },
+  "tests": [],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "tempBias": 0.9,
+  "tempRMSE": 2,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2025-01-30_tak-falls-area.json",
+  "season": "2024-25",
+  "date": "2025-01-30",
+  "kind": "test_profile",
+  "site": "tak-falls-area",
+  "aspect": "E",
+  "sim": "E",
+  "point": "emerald-pk:BTL",
+  "match": "coordinates",
+  "km": 6.5,
+  "dz": -50,
+  "hsObs": 135,
+  "hsModel": 95,
+  "hsErr": -40,
+  "partial": false,
+  "groupAgree": 55,
+  "groupN": 40,
+  "conf": [
+   [
+    1,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    13,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    21,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0,
+  "hardMAE": 0.5,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0,
+   "layers": []
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0,
+   "layers": []
+  },
+  "tests": [],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "tempBias": -4.2,
+  "tempRMSE": 4.5,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-02-01_bow-summit-plot.json",
+  "season": "2024-25",
+  "date": "2025-02-01",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 85,
+  "hsModel": 83,
+  "hsErr": -2,
+  "partial": false,
+  "groupAgree": 98,
+  "groupN": 40,
+  "conf": [
+   [
+    7,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    32,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.8,
+  "hardMAE": 1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0,
+   "layers": []
+  },
+  "sh": {
+   "obs": 0,
+   "model": 5,
+   "hit": 0,
+   "falseAlarm": 5,
+   "layers": [
+    [
+     66,
+     4.5,
+     false
+    ],
+    [
+     60,
+     3.5,
+     false
+    ],
+    [
+     53,
+     3.3,
+     false
+    ],
+    [
+     40,
+     4.2,
+     false
+    ],
+    [
+     33,
+     6.4,
+     false
+    ]
+   ]
+  },
+  "tests": [],
+  "weak": {
+   "model": 3,
+   "confirmed": 2
+  },
+  "tempBias": -3.7,
+  "tempRMSE": 4.6,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-02-04_ruby-trees.json",
+  "season": "2024-25",
+  "date": "2025-02-04",
+  "kind": "test_profile",
+  "site": "ruby-trees",
+  "aspect": "S",
+  "sim": "S",
+  "point": "emerald-pk:TL",
+  "match": "coordinates",
+  "km": 0.5,
+  "dz": -40,
+  "hsObs": 145,
+  "hsModel": 129,
+  "hsErr": -16,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0,
+  "hardMAE": 1,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 9,
+   "hit": 1,
+   "falseAlarm": 2,
+   "layers": [
+    [
+     105,
+     1,
+     false
+    ],
+    [
+     104,
+     1,
+     false
+    ],
+    [
+     102,
+     1.1,
+     true
+    ],
+    [
+     100,
+     1.3,
+     true
+    ],
+    [
+     99,
+     1.4,
+     true
+    ],
+    [
+     98,
+     1.4,
+     true
+    ],
+    [
+     97,
+     1.4,
+     true
+    ],
+    [
+     96,
+     1.4,
+     true
+    ],
+    [
+     95,
+     1.4,
+     true
+    ]
+   ]
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0,
+   "layers": []
+  },
+  "tests": [
+   {
+    "score": "CT14",
+    "h": 95,
+    "grain": "FC",
+    "flagged": true,
+    "modelLayer": "DH"
+   },
+   {
+    "score": "CT1",
+    "h": 95,
+    "grain": null,
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "weak": {
+   "model": 1,
+   "confirmed": 1
+  },
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-02-06_tak-falls-plot.json",
+  "season": "2024-25",
+  "date": "2025-02-06",
+  "kind": "study_plot",
+  "site": "tak-falls-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "emerald-pk:BTL",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 145,
+  "hsModel": 110,
+  "hsErr": -35,
+  "partial": false,
+  "groupAgree": 38,
+  "groupN": 32,
+  "conf": [
+   [
+    7,
+    0,
+    3,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    17,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": -0.3,
+  "hardMAE": 1,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0,
+   "layers": []
+  },
+  "sh": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0,
+   "layers": []
+  },
+  "tests": [
+   {
+    "score": "CT14",
+    "h": 120,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "FC"
+   },
+   {
+    "score": "CT16",
+    "h": 117,
+    "grain": "DF",
+    "flagged": false,
+    "modelLayer": "FC"
+   }
+  ],
+  "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "tempBias": -3.4,
+  "tempRMSE": 4.4,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-02-12_goats-eye-plot.json",
+  "season": "2024-25",
+  "date": "2025-02-12",
+  "kind": "study_plot",
+  "site": "goats-eye-plot",
+  "aspect": null,
+  "sim": "flat",
+  "point": "fts-sunshine",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 86,
+  "hsModel": 83,
+  "hsErr": -3,
+  "partial": false,
+  "groupAgree": 88,
+  "groupN": 40,
+  "conf": [
+   [
+    1,
+    1,
+    4,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    34,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0,
+  "hardMAE": 0.7,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 1,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0,
+   "layers": []
+  },
+  "sh": {
+   "obs": 0,
+   "model": 8,
+   "hit": 0,
+   "falseAlarm": 8,
+   "layers": [
+    [
+     67,
+     3.7,
+     false
+    ],
+    [
+     63,
+     2.1,
+     false
+    ],
+    [
+     56,
+     6.2,
+     false
+    ],
+    [
+     34,
+     4.2,
+     false
+    ],
+    [
+     33,
+     2.6,
+     false
+    ],
+    [
+     30,
+     2.2,
+     false
+    ],
+    [
+     26,
+     2.5,
+     false
+    ],
+    [
+     24,
+     2.6,
+     false
+    ]
+   ]
+  },
+  "tests": [],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "tempBias": 0.8,
+  "tempRMSE": 2.1,
+  "modelSurface": "SH"
+ },
+ {
+  "file": "2024-25/2025-02-14_bow-summit-plot.json",
+  "season": "2024-25",
+  "date": "2025-02-14",
+  "kind": "study_plot",
+  "site": "bow-summit-plot",
+  "aspect": "SE",
+  "sim": "flat",
+  "point": "fts-bowsummit",
+  "match": "study plot",
+  "km": null,
+  "dz": null,
+  "hsObs": 83,
+  "hsModel": 79,
+  "hsErr": -4,
+  "partial": false,
+  "groupAgree": 95,
+  "groupN": 40,
+  "conf": [
+   [
+    5,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    33,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0,
+  "hardMAE": 0.8,
+  "basal": {
+   "obs": true,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0,
+   "layers": []
+  },
+  "sh": {
+   "obs": 0,
+   "model": 5,
+   "hit": 0,
+   "falseAlarm": 5,
+   "layers": [
+    [
+     64,
+     4.5,
+     false
+    ],
+    [
+     58,
+     3.5,
+     false
+    ],
+    [
+     51,
+     3.3,
+     false
+    ],
+    [
+     39,
+     4.2,
+     false
+    ],
+    [
+     32,
+     6.4,
+     false
+    ]
+   ]
+  },
+  "tests": [
+   {
+    "score": "CT26",
+    "h": 24,
+    "grain": "DH",
+    "flagged": true,
+    "modelLayer": "DH"
+   }
+  ],
+  "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "tempBias": null,
+  "tempRMSE": null,
+  "modelSurface": "PP"
+ },
+ {
+  "file": "2024-25/2025-02-24_schaefer-bowl-tl.json",
+  "season": "2024-25",
+  "date": "2025-02-24",
+  "kind": "test_profile",
+  "site": "schaefer-bowl-tl",
+  "aspect": "NW",
+  "sim": "N",
+  "point": "mt-dennis:TL",
+  "match": "coordinates",
+  "km": 11.6,
+  "dz": -61,
+  "hsObs": 150,
+  "hsModel": 138,
+  "hsErr": -12,
+  "partial": false,
+  "groupAgree": null,
+  "groupN": 0,
+  "conf": [
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "hardBias": 0.9,
+  "hardMAE": 1,
+  "basal": {
+   "obs": false,
+   "model": true,
+   "modelLargeRG": false
+  },
+  "crusts": {
+   "obs": 0,
+   "model": 0,
+   "hit": 0,
+   "falseAlarm": 0,
+   "layers": []
+  },
+  "sh": {
+   "obs": 0,
+   "model": 1,
+   "hit": 0,
+   "falseAlarm": 1,
+   "layers": [
+    [
+     93,
      2.1,
      false
     ]
@@ -7898,7 +7795,7 @@
     "h": 107,
     "grain": "FC",
     "flagged": false,
-    "modelLayer": "DH"
+    "modelLayer": "FC"
    }
   ],
   "weak": {
@@ -7922,10 +7819,10 @@
   "km": null,
   "dz": null,
   "hsObs": 90,
-  "hsModel": 63,
-  "hsErr": -27,
+  "hsModel": 89,
+  "hsErr": -1,
   "partial": false,
-  "groupAgree": 90,
+  "groupAgree": 100,
   "groupN": 40,
   "conf": [
    [
@@ -7945,8 +7842,8 @@
    [
     0,
     0,
-    30,
-    4,
+    34,
+    0,
     0
    ],
    [
@@ -7964,8 +7861,8 @@
     0
    ]
   ],
-  "hardBias": 0.8,
-  "hardMAE": 0.9,
+  "hardBias": 0.7,
+  "hardMAE": 0.8,
   "basal": {
    "obs": true,
    "model": true,
@@ -7973,69 +7870,74 @@
   },
   "crusts": {
    "obs": 0,
-   "model": 4,
-   "hit": 0,
-   "falseAlarm": 4,
-   "layers": [
-    [
-     53,
-     0.9,
-     false
-    ],
-    [
-     52,
-     0.9,
-     false
-    ],
-    [
-     51,
-     0.9,
-     false
-    ],
-    [
-     49,
-     1,
-     false
-    ]
-   ]
-  },
-  "sh": {
-   "obs": 0,
    "model": 0,
    "hit": 0,
    "falseAlarm": 0,
    "layers": []
+  },
+  "sh": {
+   "obs": 0,
+   "model": 5,
+   "hit": 0,
+   "falseAlarm": 5,
+   "layers": [
+    [
+     62,
+     4.5,
+     false
+    ],
+    [
+     56,
+     3.5,
+     false
+    ],
+    [
+     50,
+     3.3,
+     false
+    ],
+    [
+     38,
+     4.2,
+     false
+    ],
+    [
+     32,
+     6.4,
+     false
+    ]
+   ]
   },
   "tests": [
    {
     "score": "CT13",
     "h": 60,
     "grain": "FC",
-    "flagged": false,
-    "modelLayer": "DH"
+    "flagged": true,
+    "modelLayer": "FC"
    },
    {
     "score": "CT13",
     "h": 60,
     "grain": "FC",
-    "flagged": false,
-    "modelLayer": "DH"
+    "flagged": true,
+    "modelLayer": "FC"
    },
    {
     "score": "CT12",
     "h": 60,
     "grain": "FC",
-    "flagged": false,
-    "modelLayer": "DH"
+    "flagged": true,
+    "modelLayer": "FC"
    }
   ],
   "weak": {
-   "model": 0,
-   "confirmed": 0
+   "model": 3,
+   "confirmed": 3
   },
   "tempBias": null,
   "tempRMSE": null,
-  "modelSurface": "PP"
+  "modelSurface": "DF"
  },
  {
   "file": "2024-25/2025-02-25_tak-falls-plot.json",
@@ -8050,17 +7952,17 @@
   "km": null,
   "dz": null,
   "hsObs": 155,
-  "hsModel": 103,
-  "hsErr": -52,
+  "hsModel": 114,
+  "hsErr": -41,
   "partial": false,
-  "groupAgree": 73,
+  "groupAgree": 70,
   "groupN": 40,
   "conf": [
    [
-    4,
+    3,
     0,
-    7,
-    0,
+    6,
+    2,
     0
    ],
    [
@@ -8092,7 +7994,7 @@
     0
    ]
   ],
-  "hardBias": -0.4,
+  "hardBias": -0.3,
   "hardMAE": 0.8,
   "basal": {
    "obs": true,
@@ -8106,12 +8008,12 @@
    "falseAlarm": 2,
    "layers": [
     [
-     101,
+     111,
      0.3,
      false
     ],
     [
-     93,
+     102,
      0.6,
      false
     ]
@@ -8144,8 +8046,8 @@
    "model": 0,
    "confirmed": 0
   },
-  "tempBias": -1.2,
-  "tempRMSE": 1.7,
+  "tempBias": -1.7,
+  "tempRMSE": 2.1,
   "modelSurface": "DF"
  },
  {
@@ -8161,23 +8063,23 @@
   "km": null,
   "dz": null,
   "hsObs": 117,
-  "hsModel": 79,
-  "hsErr": -38,
+  "hsModel": 107,
+  "hsErr": -10,
   "partial": false,
-  "groupAgree": 60,
+  "groupAgree": 68,
   "groupN": 40,
   "conf": [
    [
-    0,
-    0,
     3,
+    0,
+    0,
     0,
     0
    ],
    [
+    1,
     0,
-    0,
-    13,
+    12,
     0,
     0
    ],
@@ -8203,8 +8105,8 @@
     0
    ]
   ],
-  "hardBias": -0.2,
-  "hardMAE": 0.5,
+  "hardBias": 0.1,
+  "hardMAE": 0.6,
   "basal": {
    "obs": true,
    "model": true,
@@ -8212,45 +8114,59 @@
   },
   "crusts": {
    "obs": 2,
-   "model": 1,
-   "hit": 1,
+   "model": 0,
+   "hit": 0,
    "falseAlarm": 0,
-   "layers": [
-    [
-     79,
-     0.5,
-     true
-    ]
-   ]
+   "layers": []
   },
   "sh": {
    "obs": 0,
-   "model": 5,
+   "model": 9,
    "hit": 0,
-   "falseAlarm": 5,
+   "falseAlarm": 9,
    "layers": [
     [
-     71,
+     92,
      2.8,
      false
     ],
     [
-     61,
+     77,
      3.1,
      false
     ],
     [
-     55,
-     3.3,
+     75,
+     3.1,
      false
     ],
     [
-     52,
-     2.5,
+     73,
+     2.9,
      false
     ],
     [
-     34,
+     60,
+     3.4,
+     false
+    ],
+    [
+     59,
+     2.6,
+     false
+    ],
+    [
+     45,
+     4,
+     false
+    ],
+    [
+     36,
+     2.2,
+     false
+    ],
+    [
+     19,
      2.2,
      false
     ]
@@ -8262,15 +8178,15 @@
     "h": 87,
     "grain": "FC",
     "flagged": false,
-    "modelLayer": "DH"
+    "modelLayer": "FC"
    }
   ],
   "weak": {
-   "model": 2,
-   "confirmed": 2
+   "model": 3,
+   "confirmed": 3
   },
-  "tempBias": -2.7,
-  "tempRMSE": 3.2,
+  "tempBias": -3.2,
+  "tempRMSE": 3.8,
   "modelSurface": "SH"
  },
  {
@@ -8286,16 +8202,16 @@
   "km": null,
   "dz": null,
   "hsObs": 119,
-  "hsModel": 105,
-  "hsErr": -14,
+  "hsModel": 115,
+  "hsErr": -4,
   "partial": false,
   "groupAgree": 65,
   "groupN": 40,
   "conf": [
    [
     0,
-    3,
-    7,
+    2,
+    8,
     0,
     0
    ],
@@ -8344,47 +8260,52 @@
   },
   "sh": {
    "obs": 0,
-   "model": 8,
+   "model": 9,
    "hit": 0,
-   "falseAlarm": 8,
+   "falseAlarm": 9,
    "layers": [
     [
-     96,
+     108,
      2.7,
      false
     ],
     [
-     63,
+     60,
      3.7,
      false
     ],
     [
-     55,
-     2.3,
+     56,
+     2.1,
      false
     ],
     [
-     53,
-     3.7,
+     51,
+     6.2,
      false
     ],
     [
-     39,
-     4.7,
+     31,
+     4.2,
      false
     ],
     [
-     38,
-     5.5,
+     31,
+     2.6,
      false
     ],
     [
-     26,
-     4.8,
+     28,
+     2.2,
      false
     ],
     [
-     26,
+     24,
+     2.5,
+     false
+    ],
+    [
+     22,
      2.6,
      false
     ]
@@ -8396,23 +8317,23 @@
     "h": 67,
     "grain": "FC",
     "flagged": true,
-    "modelLayer": "DH"
+    "modelLayer": "FC"
    },
    {
     "score": "CT19",
     "h": 67,
     "grain": "FC",
     "flagged": true,
-    "modelLayer": "DH"
+    "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
   },
-  "tempBias": -1.2,
-  "tempRMSE": 1.5,
-  "modelSurface": "DF"
+  "tempBias": -1.3,
+  "tempRMSE": 1.7,
+  "modelSurface": "RG"
  },
  {
   "file": "2024-25/2025-03-10_bow-summit-plot.json",
@@ -8427,16 +8348,16 @@
   "km": null,
   "dz": null,
   "hsObs": 160,
-  "hsModel": 95,
-  "hsErr": -65,
+  "hsModel": 155,
+  "hsErr": -5,
   "partial": false,
-  "groupAgree": 68,
+  "groupAgree": 83,
   "groupN": 40,
   "conf": [
    [
-    11,
+    17,
     0,
-    8,
+    2,
     2,
     0
    ],
@@ -8469,8 +8390,8 @@
     0
    ]
   ],
-  "hardBias": 0.8,
-  "hardMAE": 1.1,
+  "hardBias": 0.9,
+  "hardMAE": 1.2,
   "basal": {
    "obs": true,
    "model": true,
@@ -8478,22 +8399,27 @@
   },
   "crusts": {
    "obs": 1,
-   "model": 3,
+   "model": 4,
    "hit": 0,
-   "falseAlarm": 3,
+   "falseAlarm": 4,
    "layers": [
     [
-     67,
-     0.3,
+     88,
+     0.4,
      false
     ],
     [
-     65,
-     0.3,
+     87,
+     0.4,
      false
     ],
     [
-     59,
+     85,
+     0.4,
+     false
+    ],
+    [
+     83,
      0.8,
      false
     ]
@@ -8501,13 +8427,33 @@
   },
   "sh": {
    "obs": 0,
-   "model": 1,
+   "model": 5,
    "hit": 0,
-   "falseAlarm": 1,
+   "falseAlarm": 5,
    "layers": [
     [
-     60,
-     2.4,
+     58,
+     4.5,
+     false
+    ],
+    [
+     52,
+     3.5,
+     false
+    ],
+    [
+     47,
+     3.3,
+     false
+    ],
+    [
+     37,
+     4.2,
+     false
+    ],
+    [
+     30,
+     6.4,
      false
     ]
    ]
@@ -8518,19 +8464,19 @@
     "h": 75,
     "grain": "FC",
     "flagged": false,
-    "modelLayer": "DH"
+    "modelLayer": "FC"
    },
    {
     "score": "CT25",
     "h": 70,
     "grain": "FC",
     "flagged": false,
-    "modelLayer": "DH"
+    "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 1,
-   "confirmed": 0
+   "confirmed": 1
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -8549,16 +8495,16 @@
   "km": null,
   "dz": null,
   "hsObs": 145,
-  "hsModel": 90,
-  "hsErr": -55,
+  "hsModel": 141,
+  "hsErr": -4,
   "partial": false,
-  "groupAgree": 65,
+  "groupAgree": 80,
   "groupN": 40,
   "conf": [
    [
-    10,
+    16,
     0,
-    8,
+    2,
     1,
     0
    ],
@@ -8591,7 +8537,7 @@
     0
    ]
   ],
-  "hardBias": 0.6,
+  "hardBias": 0.9,
   "hardMAE": 1.1,
   "basal": {
    "obs": true,
@@ -8605,36 +8551,56 @@
    "falseAlarm": 4,
    "layers": [
     [
-     90,
-     0.3,
+     86,
+     0.4,
      false
     ],
     [
-     66,
-     0.3,
+     85,
+     0.4,
      false
     ],
     [
-     64,
-     0.3,
+     84,
+     0.4,
      false
     ],
     [
-     59,
-     0.9,
+     82,
+     0.8,
      false
     ]
    ]
   },
   "sh": {
    "obs": 0,
-   "model": 1,
+   "model": 5,
    "hit": 0,
-   "falseAlarm": 1,
+   "falseAlarm": 5,
    "layers": [
     [
-     60,
-     2.4,
+     57,
+     4.5,
+     false
+    ],
+    [
+     52,
+     3.5,
+     false
+    ],
+    [
+     47,
+     3.3,
+     false
+    ],
+    [
+     37,
+     4.2,
+     false
+    ],
+    [
+     30,
+     6.4,
      false
     ]
    ]
@@ -8644,17 +8610,17 @@
     "score": "CT22",
     "h": 45,
     "grain": "FC",
-    "flagged": false,
+    "flagged": true,
     "modelLayer": "DH"
    }
   ],
   "weak": {
-   "model": 1,
-   "confirmed": 0
+   "model": 3,
+   "confirmed": 3
   },
   "tempBias": null,
   "tempRMSE": null,
-  "modelSurface": "MFcr"
+  "modelSurface": "DF"
  },
  {
   "file": "2024-25/2025-03-13_mt-field-tl.json",
@@ -8669,8 +8635,8 @@
   "km": 5.4,
   "dz": 194,
   "hsObs": 210,
-  "hsModel": 144,
-  "hsErr": -66,
+  "hsModel": 156,
+  "hsErr": -54,
   "partial": true,
   "groupAgree": null,
   "groupN": 0,
@@ -8728,12 +8694,12 @@
    "falseAlarm": 2,
    "layers": [
     [
-     121,
+     128,
      2.1,
      false
     ],
     [
-     85,
+     89,
      2.1,
      false
     ]
@@ -8744,13 +8710,13 @@
     "score": "CT13",
     "h": 115,
     "grain": "FCxr",
-    "flagged": false,
+    "flagged": true,
     "modelLayer": "DH"
    }
   ],
   "weak": {
-   "model": 0,
-   "confirmed": 0
+   "model": 3,
+   "confirmed": 2
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -8769,8 +8735,8 @@
   "km": null,
   "dz": null,
   "hsObs": 192,
-  "hsModel": 121,
-  "hsErr": -71,
+  "hsModel": 142,
+  "hsErr": -50,
   "partial": false,
   "groupAgree": 35,
   "groupN": 40,
@@ -8785,8 +8751,8 @@
    [
     0,
     0,
-    15,
-    10,
+    16,
+    9,
     0
    ],
    [
@@ -8811,8 +8777,8 @@
     0
    ]
   ],
-  "hardBias": 0.2,
-  "hardMAE": 0.6,
+  "hardBias": 0.1,
+  "hardMAE": 0.5,
   "basal": {
    "obs": true,
    "model": true,
@@ -8820,42 +8786,47 @@
   },
   "crusts": {
    "obs": 2,
-   "model": 14,
+   "model": 13,
    "hit": 2,
    "falseAlarm": 0,
    "layers": [
     [
-     114,
+     130,
      0.3,
      true
     ],
     [
-     98,
+     110,
      0.5,
      true
     ],
     [
-     96,
+     105,
      0.5,
      true
     ],
     [
-     92,
+     100,
      0.7,
      true
     ],
     [
-     91,
-     0.8,
-     true
-    ],
-    [
-     87,
+     96,
      1.1,
      true
     ],
     [
-     86,
+     94,
+     1.3,
+     true
+    ],
+    [
+     93,
+     1.4,
+     true
+    ],
+    [
+     91,
      1.4,
      true
     ],
@@ -8865,33 +8836,23 @@
      true
     ],
     [
-     82,
-     1.4,
-     true
-    ],
-    [
-     76,
+     81,
      1.6,
      true
     ],
     [
-     73,
-     1.8,
+     80,
+     1.7,
      true
     ],
     [
-     72,
-     1.8,
+     79,
+     1.7,
      true
     ],
     [
-     69,
-     2.2,
-     true
-    ],
-    [
-     65,
-     2.4,
+     77,
+     1.9,
      true
     ]
    ]
@@ -8909,7 +8870,7 @@
     "h": 174,
     "grain": "DF",
     "flagged": false,
-    "modelLayer": "DF"
+    "modelLayer": "MFcr"
    },
    {
     "score": "CT30",
@@ -8940,8 +8901,8 @@
   "km": 2.3,
   "dz": 120,
   "hsObs": 153,
-  "hsModel": 95,
-  "hsErr": -58,
+  "hsModel": 111,
+  "hsErr": -42,
   "partial": false,
   "groupAgree": null,
   "groupN": 0,
@@ -8982,7 +8943,7 @@
     0
    ]
   ],
-  "hardBias": 0.4,
+  "hardBias": 0.3,
   "hardMAE": 0.9,
   "basal": {
    "obs": false,
@@ -9040,8 +9001,8 @@
   "km": 1.5,
   "dz": null,
   "hsObs": 175,
-  "hsModel": 100,
-  "hsErr": -75,
+  "hsModel": 144,
+  "hsErr": -31,
   "partial": false,
   "groupAgree": 100,
   "groupN": 13,
@@ -9091,31 +9052,46 @@
   },
   "crusts": {
    "obs": 0,
-   "model": 2,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 2,
+   "falseAlarm": 1,
    "layers": [
     [
-     98,
-     0.3,
-     false
-    ],
-    [
-     62,
-     0.8,
+     80,
+     0.7,
      false
     ]
    ]
   },
   "sh": {
    "obs": 0,
-   "model": 1,
+   "model": 5,
    "hit": 0,
-   "falseAlarm": 1,
+   "falseAlarm": 5,
    "layers": [
     [
-     57,
-     2.3,
+     77,
+     2.4,
+     false
+    ],
+    [
+     50,
+     3.4,
+     false
+    ],
+    [
+     45,
+     3.2,
+     false
+    ],
+    [
+     36,
+     4.1,
+     false
+    ],
+    [
+     30,
+     6.1,
      false
     ]
    ]
@@ -9125,24 +9101,24 @@
     "score": "CT4",
     "h": 40,
     "grain": "FC",
-    "flagged": false,
+    "flagged": true,
     "modelLayer": "DH"
    },
    {
     "score": "CT1",
     "h": 40,
     "grain": "FC",
-    "flagged": false,
+    "flagged": true,
     "modelLayer": "DH"
    }
   ],
   "weak": {
-   "model": 1,
-   "confirmed": 1
+   "model": 3,
+   "confirmed": 3
   },
   "tempBias": null,
   "tempRMSE": null,
-  "modelSurface": "PP"
+  "modelSurface": "SH"
  },
  {
   "file": "2024-25/2025-03-22_mt-field.json",
@@ -9157,8 +9133,8 @@
   "km": 4.8,
   "dz": 0,
   "hsObs": 205,
-  "hsModel": 143,
-  "hsErr": -62,
+  "hsModel": 153,
+  "hsErr": -52,
   "partial": true,
   "groupAgree": 100,
   "groupN": 4,
@@ -9199,8 +9175,8 @@
     0
    ]
   ],
-  "hardBias": -0.7,
-  "hardMAE": 1,
+  "hardBias": -0.8,
+  "hardMAE": 0.8,
   "basal": null,
   "crusts": {
    "obs": 0,
@@ -9216,12 +9192,12 @@
    "falseAlarm": 2,
    "layers": [
     [
-     116,
+     124,
      2.1,
      false
     ],
     [
-     83,
+     87,
      2.1,
      false
     ]
@@ -9257,10 +9233,10 @@
   "km": null,
   "dz": null,
   "hsObs": 143,
-  "hsModel": 108,
-  "hsErr": -35,
+  "hsModel": 131,
+  "hsErr": -12,
   "partial": false,
-  "groupAgree": 55,
+  "groupAgree": 58,
   "groupN": 40,
   "conf": [
    [
@@ -9273,9 +9249,9 @@
    [
     0,
     0,
-    10,
-    3,
-    4
+    2,
+    1,
+    14
    ],
    [
     0,
@@ -9292,15 +9268,15 @@
     0
    ],
    [
-    1,
     0,
     0,
     0,
-    1
+    0,
+    2
    ]
   ],
-  "hardBias": -0.2,
-  "hardMAE": 1.3,
+  "hardBias": -0.5,
+  "hardMAE": 1.7,
   "basal": {
    "obs": true,
    "model": true,
@@ -9308,31 +9284,46 @@
   },
   "crusts": {
    "obs": 0,
-   "model": 2,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 2,
+   "falseAlarm": 1,
    "layers": [
     [
-     86,
-     0.8,
-     false
-    ],
-    [
-     60,
-     1,
+     75,
+     0.7,
      false
     ]
    ]
   },
   "sh": {
    "obs": 0,
-   "model": 1,
+   "model": 5,
    "hit": 0,
-   "falseAlarm": 1,
+   "falseAlarm": 5,
    "layers": [
     [
-     55,
-     2.4,
+     52,
+     4.5,
+     false
+    ],
+    [
+     48,
+     3.5,
+     false
+    ],
+    [
+     43,
+     3.3,
+     false
+    ],
+    [
+     34,
+     4.2,
+     false
+    ],
+    [
+     28,
+     6.4,
      false
     ]
    ]
@@ -9347,8 +9338,8 @@
    }
   ],
   "weak": {
-   "model": 1,
-   "confirmed": 1
+   "model": 3,
+   "confirmed": 3
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -9367,8 +9358,8 @@
   "km": 2.2,
   "dz": 120,
   "hsObs": 143,
-  "hsModel": 96,
-  "hsErr": -47,
+  "hsModel": 105,
+  "hsErr": -38,
   "partial": false,
   "groupAgree": 91,
   "groupN": 23,
@@ -9409,7 +9400,7 @@
     0
    ]
   ],
-  "hardBias": -0.4,
+  "hardBias": -0.3,
   "hardMAE": 1.1,
   "basal": {
    "obs": true,
@@ -9418,48 +9409,38 @@
   },
   "crusts": {
    "obs": 3,
-   "model": 8,
+   "model": 6,
    "hit": 2,
    "falseAlarm": 0,
    "layers": [
     [
-     86,
-     0.8,
-     true
-    ],
-    [
-     86,
-     0.9,
-     true
-    ],
-    [
-     85,
-     0.9,
-     true
-    ],
-    [
-     84,
+     97,
      1,
      true
     ],
     [
-     83,
+     95,
      1,
      true
     ],
     [
-     81,
-     1,
-     true
-    ],
-    [
-     80,
+     94,
      1.1,
      true
     ],
     [
-     79,
+     93,
      1,
+     true
+    ],
+    [
+     91,
+     1,
+     true
+    ],
+    [
+     89,
+     0.9,
      true
     ]
    ]
@@ -9508,10 +9489,10 @@
   "km": 6.1,
   "dz": 141,
   "hsObs": 165,
-  "hsModel": 188,
-  "hsErr": 23,
+  "hsModel": 202,
+  "hsErr": 37,
   "partial": false,
-  "groupAgree": 11,
+  "groupAgree": 16,
   "groupN": 37,
   "conf": [
    [
@@ -9523,9 +9504,9 @@
    ],
    [
     0,
-    0,
-    31,
-    0,
+    3,
+    27,
+    1,
     0
    ],
    [
@@ -9538,8 +9519,8 @@
    [
     0,
     0,
-    2,
-    4,
+    3,
+    3,
     0
    ],
    [
@@ -9550,8 +9531,8 @@
     0
    ]
   ],
-  "hardBias": 0.3,
-  "hardMAE": 0.8,
+  "hardBias": 0.2,
+  "hardMAE": 0.9,
   "basal": {
    "obs": true,
    "model": true,
@@ -9559,114 +9540,104 @@
   },
   "crusts": {
    "obs": 1,
-   "model": 21,
+   "model": 19,
    "hit": 1,
-   "falseAlarm": 1,
+   "falseAlarm": 2,
    "layers": [
     [
-     183,
+     196,
      0.5,
      false
     ],
     [
-     181,
-     0.4,
-     true
-    ],
-    [
-     180,
+     195,
      0.7,
      true
     ],
     [
-     179,
+     194,
+     0.7,
+     true
+    ],
+    [
+     192,
      0.8,
      true
     ],
     [
-     177,
+     191,
      0.8,
      true
     ],
     [
-     175,
+     189,
+     1,
+     true
+    ],
+    [
+     187,
+     1,
+     true
+    ],
+    [
+     186,
+     1,
+     true
+    ],
+    [
+     184,
+     1.1,
+     true
+    ],
+    [
+     182,
+     1,
+     true
+    ],
+    [
+     180,
+     1.2,
+     true
+    ],
+    [
+     178,
+     1.1,
+     true
+    ],
+    [
+     176,
      0.8,
      true
     ],
     [
      174,
+     0.7,
+     true
+    ],
+    [
+     173,
+     0.9,
+     true
+    ],
+    [
+     172,
      0.8,
      true
     ],
     [
-     174,
+     172,
+     0.8,
+     true
+    ],
+    [
+     171,
      0.9,
      true
     ],
     [
-     169,
-     1.1,
-     true
-    ],
-    [
-     168,
-     1.2,
-     true
-    ],
-    [
-     166,
-     1.2,
-     true
-    ],
-    [
-     164,
-     1.1,
-     true
-    ],
-    [
-     162,
-     1.1,
-     true
-    ],
-    [
-     161,
-     1.3,
-     true
-    ],
-    [
-     159,
-     1.3,
-     true
-    ],
-    [
-     157,
-     1,
-     true
-    ],
-    [
-     156,
-     0.9,
-     true
-    ],
-    [
-     154,
-     1,
-     true
-    ],
-    [
-     154,
-     0.9,
-     true
-    ],
-    [
-     153,
-     0.9,
-     true
-    ],
-    [
-     152,
-     0.9,
-     true
+     8,
+     3.3,
+     false
     ]
    ]
   },
@@ -9677,7 +9648,7 @@
    "falseAlarm": 1,
    "layers": [
     [
-     118,
+     128,
      2.1,
      false
     ]
@@ -9696,8 +9667,8 @@
    "model": 2,
    "confirmed": 2
   },
-  "tempBias": -3.4,
-  "tempRMSE": 3.7,
+  "tempBias": -5.2,
+  "tempRMSE": 5.4,
   "modelSurface": "PP"
  },
  {
@@ -9713,16 +9684,16 @@
   "km": 5.8,
   "dz": 145,
   "hsObs": 105,
-  "hsModel": 58,
-  "hsErr": -47,
+  "hsModel": 54,
+  "hsErr": -51,
   "partial": false,
-  "groupAgree": 8,
+  "groupAgree": 5,
   "groupN": 40,
   "conf": [
    [
-    3,
     2,
-    6,
+    1,
+    8,
     0,
     0
    ],
@@ -9776,7 +9747,7 @@
    "falseAlarm": 1,
    "layers": [
     [
-     50,
+     49,
      2.1,
      false
     ]
@@ -9826,18 +9797,18 @@
   "km": 1,
   "dz": -143,
   "hsObs": 55,
-  "hsModel": 59,
-  "hsErr": 4,
+  "hsModel": 52,
+  "hsErr": -3,
   "partial": false,
-  "groupAgree": 5,
+  "groupAgree": 8,
   "groupN": 40,
   "conf": [
    [
-    2,
+    3,
     0,
-    2,
-    5,
-    6
+    0,
+    7,
+    5
    ],
    [
     0,
@@ -9868,8 +9839,8 @@
     0
    ]
   ],
-  "hardBias": -1.2,
-  "hardMAE": 1.6,
+  "hardBias": -1.1,
+  "hardMAE": 1.7,
   "basal": {
    "obs": false,
    "model": false,
@@ -9877,53 +9848,33 @@
   },
   "crusts": {
    "obs": 0,
-   "model": 9,
+   "model": 5,
    "hit": 0,
-   "falseAlarm": 9,
+   "falseAlarm": 5,
    "layers": [
     [
-     53,
-     0.5,
-     false
-    ],
-    [
-     53,
-     0.5,
-     false
-    ],
-    [
-     52,
-     0.5,
-     false
-    ],
-    [
-     51,
-     0.5,
-     false
-    ],
-    [
-     51,
-     0.5,
-     false
-    ],
-    [
-     50,
-     0.6,
-     false
-    ],
-    [
-     49,
-     0.6,
-     false
-    ],
-    [
-     49,
-     0.8,
-     false
-    ],
-    [
      47,
-     1,
+     0.9,
+     false
+    ],
+    [
+     45,
+     0.9,
+     false
+    ],
+    [
+     43,
+     1.3,
+     false
+    ],
+    [
+     41,
+     1.3,
+     false
+    ],
+    [
+     39,
+     1.3,
      false
     ]
    ]
@@ -9965,38 +9916,38 @@
   "km": null,
   "dz": null,
   "hsObs": 65,
-  "hsModel": 54,
-  "hsErr": -11,
+  "hsModel": 58,
+  "hsErr": -7,
   "partial": false,
   "groupAgree": 35,
   "groupN": 40,
   "conf": [
    [
-    14,
+    10,
     0,
-    0,
-    4,
-    0
-   ],
-   [
-    0,
-    0,
-    12,
-    4,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
+    2,
     6,
+    0
+   ],
+   [
     0,
+    0,
+    14,
+    2,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    2,
+    4,
     0
    ],
    [
@@ -10016,63 +9967,43 @@
   },
   "crusts": {
    "obs": 2,
-   "model": 11,
+   "model": 7,
    "hit": 2,
-   "falseAlarm": 2,
+   "falseAlarm": 3,
    "layers": [
     [
-     35,
-     0.5,
+     41,
+     0.8,
      false
     ],
     [
-     33,
-     0.6,
-     false
-    ],
-    [
-     32,
-     0.8,
-     true
-    ],
-    [
-     31,
-     0.8,
-     true
-    ],
-    [
-     31,
+     38,
      0.9,
-     true
+     false
     ],
     [
-     30,
+     36,
      1,
+     false
+    ],
+    [
+     28,
+     1.5,
      true
     ],
     [
-     16,
+     26,
+     1.7,
+     true
+    ],
+    [
+     24,
+     1.7,
+     true
+    ],
+    [
+     22,
      1.8,
-     true
-    ],
-    [
-     15,
-     1.9,
-     true
-    ],
-    [
-     14,
-     2,
-     true
-    ],
-    [
-     12,
-     2,
-     true
-    ],
-    [
-     11,
-     2,
      true
     ]
    ]
@@ -10091,7 +10022,7 @@
   },
   "tempBias": null,
   "tempRMSE": null,
-  "modelSurface": "PP"
+  "modelSurface": "SH"
  },
  {
   "file": "2025-26/2025-11-24_west-bowl-flats.json",
@@ -10106,24 +10037,24 @@
   "km": 3.3,
   "dz": 134,
   "hsObs": 81,
-  "hsModel": 66,
-  "hsErr": -15,
+  "hsModel": 67,
+  "hsErr": -14,
   "partial": false,
-  "groupAgree": 23,
+  "groupAgree": 28,
   "groupN": 40,
   "conf": [
    [
-    4,
-    7,
-    3,
     6,
+    8,
+    3,
+    3,
     0
    ],
    [
     0,
     0,
-    9,
-    3,
+    11,
+    1,
     0
    ],
    [
@@ -10148,8 +10079,8 @@
     0
    ]
   ],
-  "hardBias": -0.1,
-  "hardMAE": 0.6,
+  "hardBias": -0.3,
+  "hardMAE": 0.7,
   "basal": {
    "obs": true,
    "model": true,
@@ -10157,73 +10088,43 @@
   },
   "crusts": {
    "obs": 0,
-   "model": 16,
+   "model": 9,
    "hit": 0,
-   "falseAlarm": 16,
+   "falseAlarm": 9,
    "layers": [
     [
-     42,
-     0.9,
-     false
-    ],
-    [
-     40,
-     0.9,
-     false
-    ],
-    [
      39,
-     0.8,
+     0.9,
      false
     ],
     [
      38,
-     0.8,
-     false
-    ],
-    [
-     38,
-     0.8,
-     false
-    ],
-    [
-     37,
-     0.8,
-     false
-    ],
-    [
-     36,
      0.9,
      false
     ],
     [
      36,
-     0.9,
+     0.8,
      false
     ],
     [
-     35,
-     0.9,
+     36,
+     0.8,
      false
     ],
     [
      34,
-     1.1,
-     false
-    ],
-    [
-     33,
-     1,
+     0.9,
      false
     ],
     [
      32,
-     1.3,
+     1.2,
      false
     ],
     [
      31,
-     1.4,
+     1.3,
      false
     ],
     [
@@ -10234,11 +10135,6 @@
     [
      27,
      1.7,
-     false
-    ],
-    [
-     25,
-     1.5,
      false
     ]
    ]
@@ -10280,16 +10176,16 @@
   "km": 5.3,
   "dz": -120,
   "hsObs": 98,
-  "hsModel": 46,
-  "hsErr": -52,
+  "hsModel": 40,
+  "hsErr": -58,
   "partial": false,
-  "groupAgree": 18,
+  "groupAgree": 20,
   "groupN": 40,
   "conf": [
    [
-    7,
+    8,
     0,
-    9,
+    8,
     3,
     0
    ],
@@ -10322,8 +10218,8 @@
     0
    ]
   ],
-  "hardBias": 0,
-  "hardMAE": 1,
+  "hardBias": -0.2,
+  "hardMAE": 1.1,
   "basal": {
    "obs": true,
    "model": true,
@@ -10336,28 +10232,28 @@
    "falseAlarm": 5,
    "layers": [
     [
-     33,
+     27,
      0.9,
      false
     ],
     [
-     32,
-     0.8,
-     false
-    ],
-    [
-     32,
+     26,
      0.9,
      false
     ],
     [
-     31,
+     26,
      0.9,
      false
     ],
     [
-     30,
+     25,
      0.9,
+     false
+    ],
+    [
+     24,
+     1,
      false
     ]
    ]
@@ -10369,7 +10265,7 @@
    "falseAlarm": 1,
    "layers": [
     [
-     36,
+     30,
      2.2,
      false
     ]
@@ -10397,8 +10293,8 @@
   "km": null,
   "dz": null,
   "hsObs": 113,
-  "hsModel": 60,
-  "hsErr": -53,
+  "hsModel": 59,
+  "hsErr": -54,
   "partial": false,
   "groupAgree": 23,
   "groupN": 40,
@@ -10504,8 +10400,8 @@
   "km": 8.4,
   "dz": null,
   "hsObs": 120,
-  "hsModel": 173,
-  "hsErr": 53,
+  "hsModel": 197,
+  "hsErr": 77,
   "partial": true,
   "groupAgree": 29,
   "groupN": 7,
@@ -10546,7 +10442,7 @@
     0
    ]
   ],
-  "hardBias": 0.3,
+  "hardBias": 0,
   "hardMAE": 0.6,
   "basal": null,
   "crusts": {
@@ -10569,7 +10465,7 @@
     "h": 75,
     "grain": null,
     "flagged": false,
-    "modelLayer": "FC"
+    "modelLayer": "DF"
    }
   ],
   "weak": {
@@ -10593,8 +10489,8 @@
   "km": 11,
   "dz": 190,
   "hsObs": 120,
-  "hsModel": 85,
-  "hsErr": -35,
+  "hsModel": 87,
+  "hsErr": -33,
   "partial": false,
   "groupAgree": 100,
   "groupN": 2,
@@ -10635,7 +10531,7 @@
     0
    ]
   ],
-  "hardBias": -0.5,
+  "hardBias": -0.6,
   "hardMAE": 1,
   "basal": {
    "obs": false,
@@ -10651,32 +10547,37 @@
   },
   "sh": {
    "obs": 0,
-   "model": 5,
+   "model": 6,
    "hit": 0,
-   "falseAlarm": 5,
+   "falseAlarm": 6,
    "layers": [
     [
-     50,
+     42,
      2.2,
      false
     ],
     [
-     33,
+     42,
+     2.3,
+     false
+    ],
+    [
+     25,
      3.1,
      false
     ],
     [
-     30,
+     23,
      3.4,
      false
     ],
     [
-     18,
-     2.6,
+     15,
+     2.5,
      false
     ],
     [
-     13,
+     12,
      2.4,
      false
     ]
@@ -10697,7 +10598,7 @@
   },
   "tempBias": null,
   "tempRMSE": null,
-  "modelSurface": "PP"
+  "modelSurface": "DF"
  },
  {
   "file": "2025-26/2025-12-13_goats-eye-plot.json",
@@ -10712,24 +10613,24 @@
   "km": null,
   "dz": null,
   "hsObs": 109,
-  "hsModel": 121,
-  "hsErr": 12,
+  "hsModel": 112,
+  "hsErr": 3,
   "partial": false,
-  "groupAgree": 23,
+  "groupAgree": 33,
   "groupN": 40,
   "conf": [
    [
-    3,
-    7,
+    6,
+    4,
     0,
     0,
     0
    ],
    [
     0,
-    6,
-    14,
-    8,
+    7,
+    16,
+    5,
     0
    ],
    [
@@ -10754,8 +10655,8 @@
     0
    ]
   ],
-  "hardBias": -0.4,
-  "hardMAE": 0.8,
+  "hardBias": -0.5,
+  "hardMAE": 0.9,
   "basal": {
    "obs": true,
    "model": true,
@@ -10763,76 +10664,56 @@
   },
   "crusts": {
    "obs": 1,
-   "model": 9,
+   "model": 6,
    "hit": 0,
-   "falseAlarm": 9,
+   "falseAlarm": 6,
    "layers": [
     [
-     25,
-     3,
-     false
-    ],
-    [
-     22,
-     3.3,
-     false
-    ],
-    [
-     18,
-     3.3,
-     false
-    ],
-    [
-     14,
-     3.3,
-     false
-    ],
-    [
-     12,
-     3.2,
+     13,
+     3.5,
      false
     ],
     [
      11,
-     3.2,
+     3.4,
      false
     ],
     [
-     10,
-     3.2,
+     9,
+     3.4,
      false
     ],
     [
      7,
-     3.1,
+     3.3,
      false
     ],
     [
-     3,
-     3.1,
+     4,
+     3.3,
+     false
+    ],
+    [
+     1,
+     3.2,
      false
     ]
    ]
   },
   "sh": {
    "obs": 0,
-   "model": 3,
+   "model": 2,
    "hit": 0,
-   "falseAlarm": 3,
+   "falseAlarm": 2,
    "layers": [
     [
-     115,
+     98,
      2,
      false
     ],
     [
-     71,
-     3,
-     false
-    ],
-    [
-     71,
-     6.1,
+     61,
+     8,
      false
     ]
    ]
@@ -10854,11 +10735,11 @@
    }
   ],
   "weak": {
-   "model": 3,
-   "confirmed": 3
+   "model": 2,
+   "confirmed": 2
   },
-  "tempBias": -2.5,
-  "tempRMSE": 2.5,
+  "tempBias": -2.6,
+  "tempRMSE": 2.6,
   "modelSurface": "DF"
  },
  {
@@ -10874,24 +10755,24 @@
   "km": null,
   "dz": null,
   "hsObs": 138,
-  "hsModel": 120,
-  "hsErr": -18,
+  "hsModel": 141,
+  "hsErr": 3,
   "partial": false,
-  "groupAgree": 23,
+  "groupAgree": 25,
   "groupN": 40,
   "conf": [
    [
-    9,
+    8,
     0,
-    2,
+    3,
     0,
     0
    ],
    [
     0,
-    0,
-    24,
-    4,
+    2,
+    21,
+    5,
     0
    ],
    [
@@ -10916,7 +10797,7 @@
     0
    ]
   ],
-  "hardBias": -0.1,
+  "hardBias": 0,
   "hardMAE": 0.7,
   "basal": {
    "obs": true,
@@ -10930,17 +10811,27 @@
    "falseAlarm": 6,
    "layers": [
     [
-     86,
+     100,
      0.5,
      false
     ],
     [
-     85,
+     97,
      0.5,
      false
     ],
     [
-     84,
+     95,
+     0.4,
+     false
+    ],
+    [
+     93,
+     0.4,
+     false
+    ],
+    [
+     90,
      0.5,
      false
     ],
@@ -10948,25 +10839,21 @@
      83,
      0.5,
      false
-    ],
-    [
-     81,
-     0.5,
-     false
-    ],
-    [
-     77,
-     0.5,
-     false
     ]
    ]
   },
   "sh": {
    "obs": 0,
-   "model": 0,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
+   "falseAlarm": 1,
+   "layers": [
+    [
+     80,
+     2.8,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -10978,12 +10865,12 @@
    }
   ],
   "weak": {
-   "model": 0,
+   "model": 1,
    "confirmed": 0
   },
-  "tempBias": -2.9,
-  "tempRMSE": 3.2,
-  "modelSurface": "PP"
+  "tempBias": -1.7,
+  "tempRMSE": 1.8,
+  "modelSurface": "SH"
  },
  {
   "file": "2025-26/2025-12-21_simpson-plot.json",
@@ -10998,23 +10885,23 @@
   "km": null,
   "dz": null,
   "hsObs": 180,
-  "hsModel": 122,
-  "hsErr": -58,
+  "hsModel": 170,
+  "hsErr": -10,
   "partial": false,
-  "groupAgree": 25,
+  "groupAgree": 48,
   "groupN": 40,
   "conf": [
    [
-    10,
+    11,
     0,
-    1,
+    0,
     0,
     0
    ],
    [
-    0,
-    0,
-    29,
+    2,
+    8,
+    19,
     0,
     0
    ],
@@ -11040,8 +10927,8 @@
     0
    ]
   ],
-  "hardBias": -0.4,
-  "hardMAE": 0.9,
+  "hardBias": -0.3,
+  "hardMAE": 1,
   "basal": {
    "obs": false,
    "model": true,
@@ -11056,23 +10943,48 @@
   },
   "sh": {
    "obs": 0,
-   "model": 3,
+   "model": 8,
    "hit": 0,
-   "falseAlarm": 3,
+   "falseAlarm": 8,
    "layers": [
     [
-     83,
+     144,
+     2.3,
+     false
+    ],
+    [
+     111,
      2.2,
      false
     ],
     [
-     55,
-     2.1,
+     59,
+     2.2,
      false
     ],
     [
-     11,
+     35,
      3.1,
+     false
+    ],
+    [
+     16,
+     2.9,
+     false
+    ],
+    [
+     13,
+     2.8,
+     false
+    ],
+    [
+     10,
+     2.7,
+     false
+    ],
+    [
+     6,
+     3.2,
      false
     ]
    ]
@@ -11082,16 +10994,16 @@
     "score": "CT19",
     "h": 145,
     "grain": null,
-    "flagged": true,
+    "flagged": false,
     "modelLayer": "DF"
    }
   ],
   "weak": {
-   "model": 2,
-   "confirmed": 2
+   "model": 3,
+   "confirmed": 1
   },
-  "tempBias": -2.7,
-  "tempRMSE": 3.1,
+  "tempBias": -3.5,
+  "tempRMSE": 4,
   "modelSurface": "SH"
  },
  {
@@ -11107,16 +11019,16 @@
   "km": 5.1,
   "dz": 49,
   "hsObs": 255,
-  "hsModel": 133,
-  "hsErr": -122,
+  "hsModel": 144,
+  "hsErr": -111,
   "partial": false,
-  "groupAgree": 37,
+  "groupAgree": 43,
   "groupN": 30,
   "conf": [
    [
-    8,
+    10,
     0,
-    9,
+    7,
     1,
     0
    ],
@@ -11149,7 +11061,7 @@
     0
    ]
   ],
-  "hardBias": -0.6,
+  "hardBias": -0.4,
   "hardMAE": 1,
   "basal": {
    "obs": true,
@@ -11163,7 +11075,7 @@
    "falseAlarm": 1,
    "layers": [
     [
-     94,
+     102,
      0.5,
      false
     ]
@@ -11176,7 +11088,7 @@
    "falseAlarm": 1,
    "layers": [
     [
-     25,
+     24,
      2.2,
      false
     ]
@@ -11202,7 +11114,7 @@
    "model": 0,
    "confirmed": 0
   },
-  "tempBias": -3.7,
+  "tempBias": -3.8,
   "tempRMSE": 3.9,
   "modelSurface": "PP"
  },
@@ -11219,8 +11131,8 @@
   "km": 7.4,
   "dz": null,
   "hsObs": 130,
-  "hsModel": 109,
-  "hsErr": -21,
+  "hsModel": 99,
+  "hsErr": -31,
   "partial": false,
   "groupAgree": null,
   "groupN": 0,
@@ -11262,7 +11174,7 @@
    ]
   ],
   "hardBias": 0.3,
-  "hardMAE": 0.9,
+  "hardMAE": 0.8,
   "basal": {
    "obs": false,
    "model": true,
@@ -11270,48 +11182,38 @@
   },
   "crusts": {
    "obs": 2,
-   "model": 8,
+   "model": 6,
    "hit": 1,
    "falseAlarm": 0,
    "layers": [
     [
-     76,
-     1,
-     true
-    ],
-    [
-     75,
-     0.9,
-     true
-    ],
-    [
-     74,
-     1,
-     true
-    ],
-    [
-     71,
-     0.9,
-     true
-    ],
-    [
-     67,
-     0.9,
-     true
-    ],
-    [
      65,
+     1,
+     true
+    ],
+    [
+     58,
+     1,
+     true
+    ],
+    [
+     55,
      1.1,
      true
     ],
     [
-     63,
+     53,
+     0.9,
+     true
+    ],
+    [
+     51,
      0.8,
      true
     ],
     [
-     61,
-     0.9,
+     49,
+     0.7,
      true
     ]
    ]
@@ -11323,18 +11225,18 @@
    "falseAlarm": 3,
    "layers": [
     [
-     88,
-     2.2,
+     81,
+     2.4,
      false
     ],
     [
-     33,
-     2.1,
+     29,
+     5.8,
      false
     ],
     [
-     33,
-     2.2,
+     22,
+     3.4,
      false
     ]
    ]
@@ -11352,7 +11254,7 @@
     "h": 84,
     "grain": null,
     "flagged": false,
-    "modelLayer": "MFcr"
+    "modelLayer": "FC"
    }
   ],
   "weak": {
@@ -11376,16 +11278,16 @@
   "km": null,
   "dz": null,
   "hsObs": 190,
-  "hsModel": 133,
-  "hsErr": -57,
+  "hsModel": 143,
+  "hsErr": -47,
   "partial": false,
-  "groupAgree": 40,
+  "groupAgree": 35,
   "groupN": 40,
   "conf": [
    [
-    6,
+    4,
     0,
-    0,
+    2,
     0,
     0
    ],
@@ -11419,7 +11321,7 @@
    ]
   ],
   "hardBias": -0.7,
-  "hardMAE": 1.2,
+  "hardMAE": 1.1,
   "basal": {
    "obs": true,
    "model": true,
@@ -11427,17 +11329,12 @@
   },
   "crusts": {
    "obs": 3,
-   "model": 2,
-   "hit": 2,
+   "model": 1,
+   "hit": 1,
    "falseAlarm": 0,
    "layers": [
     [
-     86,
-     0.7,
-     true
-    ],
-    [
-     84,
+     96,
      0.6,
      true
     ]
@@ -11487,37 +11384,37 @@
   "km": 5.2,
   "dz": 278,
   "hsObs": 165,
-  "hsModel": 154,
-  "hsErr": -11,
+  "hsModel": 178,
+  "hsErr": 13,
   "partial": false,
-  "groupAgree": 10,
+  "groupAgree": 40,
   "groupN": 40,
   "conf": [
    [
-    4,
+    3,
     0,
-    6,
+    7,
+    0,
+    0
+   ],
+   [
+    0,
+    13,
+    16,
     0,
     0
    ],
    [
     0,
     0,
-    29,
-    0,
-    0
-   ],
-   [
-    0,
-    0,
     0,
     0,
     0
    ],
    [
-    0,
     0,
     1,
+    0,
     0,
     0
    ],
@@ -11529,8 +11426,8 @@
     0
    ]
   ],
-  "hardBias": -0.3,
-  "hardMAE": 0.8,
+  "hardBias": -0.6,
+  "hardMAE": 1,
   "basal": {
    "obs": true,
    "model": true,
@@ -11545,57 +11442,52 @@
   },
   "sh": {
    "obs": 0,
-   "model": 11,
+   "model": 10,
    "hit": 0,
-   "falseAlarm": 11,
+   "falseAlarm": 10,
    "layers": [
     [
-     139,
-     5.8,
+     166,
+     6.9,
      false
     ],
     [
-     130,
-     2,
+     157,
+     3,
      false
     ],
     [
-     51,
-     2.8,
-     false
-    ],
-    [
-     51,
-     5.6,
-     false
-    ],
-    [
-     39,
+     141,
      2.2,
      false
     ],
     [
-     28,
+     69,
+     8,
+     false
+    ],
+    [
+     41,
+     2.2,
+     false
+    ],
+    [
+     31,
      2.5,
      false
     ],
     [
-     27,
-     3.4,
+     29,
+     3.6,
      false
     ],
     [
-     23,
-     2.8,
+     18,
+     2.2,
      false
     ],
     [
-     13,
-     2.1,
-     false
-    ],
-    [
-     11,
+     16,
      2.1,
      false
     ],
@@ -11611,20 +11503,20 @@
     "score": "CT4",
     "h": 150,
     "grain": "DF",
-    "flagged": false,
-    "modelLayer": "DF"
+    "flagged": true,
+    "modelLayer": "FC"
    },
    {
     "score": "CT10",
     "h": 140,
     "grain": "DF",
-    "flagged": false,
+    "flagged": true,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 3,
-   "confirmed": 3
+   "confirmed": 2
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -11643,24 +11535,24 @@
   "km": null,
   "dz": null,
   "hsObs": 145,
-  "hsModel": 135,
-  "hsErr": -10,
+  "hsModel": 142,
+  "hsErr": -3,
   "partial": false,
-  "groupAgree": 35,
+  "groupAgree": 30,
   "groupN": 40,
   "conf": [
    [
-    5,
+    3,
     0,
-    4,
+    6,
     0,
     0
    ],
    [
     0,
     0,
-    22,
-    0,
+    21,
+    1,
     0
    ],
    [
@@ -11685,8 +11577,8 @@
     0
    ]
   ],
-  "hardBias": -0.9,
-  "hardMAE": 1.1,
+  "hardBias": -0.8,
+  "hardMAE": 0.9,
   "basal": {
    "obs": true,
    "model": true,
@@ -11694,17 +11586,34 @@
   },
   "crusts": {
    "obs": 0,
-   "model": 0,
+   "model": 1,
    "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
+   "falseAlarm": 1,
+   "layers": [
+    [
+     81,
+     1,
+     false
+    ]
+   ]
   },
   "sh": {
    "obs": 0,
-   "model": 0,
+   "model": 2,
    "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
+   "falseAlarm": 2,
+   "layers": [
+    [
+     133,
+     2.6,
+     false
+    ],
+    [
+     69,
+     2.8,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -11723,12 +11632,12 @@
    }
   ],
   "weak": {
-   "model": 0,
-   "confirmed": 0
+   "model": 2,
+   "confirmed": 2
   },
-  "tempBias": -2.5,
-  "tempRMSE": 3.3,
-  "modelSurface": "PP"
+  "tempBias": -2.4,
+  "tempRMSE": 3.2,
+  "modelSurface": "SH"
  },
  {
   "file": "2025-26/2026-01-07_west-nile.json",
@@ -11743,16 +11652,16 @@
   "km": 11.4,
   "dz": -26,
   "hsObs": 245,
-  "hsModel": 215,
-  "hsErr": -30,
+  "hsModel": 210,
+  "hsErr": -35,
   "partial": true,
-  "groupAgree": 84,
+  "groupAgree": 68,
   "groupN": 19,
   "conf": [
    [
-    6,
-    1,
-    2,
+    3,
+    3,
+    3,
     0,
     0
    ],
@@ -11785,8 +11694,8 @@
     0
    ]
   ],
-  "hardBias": -1.4,
-  "hardMAE": 1.7,
+  "hardBias": -1.7,
+  "hardMAE": 1.8,
   "basal": null,
   "crusts": {
    "obs": 0,
@@ -11802,7 +11711,7 @@
    "falseAlarm": 1,
    "layers": [
     [
-     178,
+     188,
      4.5,
      false
     ]
@@ -11813,13 +11722,13 @@
     "score": "CT24",
     "h": 209,
     "grain": null,
-    "flagged": true,
-    "modelLayer": "DF"
+    "flagged": false,
+    "modelLayer": "FC"
    }
   ],
   "weak": {
-   "model": 1,
-   "confirmed": 1
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": -2.6,
   "tempRMSE": 2.7,
@@ -11838,16 +11747,16 @@
   "km": null,
   "dz": null,
   "hsObs": 185,
-  "hsModel": 133,
-  "hsErr": -52,
+  "hsModel": 177,
+  "hsErr": -8,
   "partial": false,
-  "groupAgree": 54,
+  "groupAgree": 56,
   "groupN": 39,
   "conf": [
    [
-    4,
+    5,
     0,
-    4,
+    3,
     0,
     0
    ],
@@ -11880,8 +11789,8 @@
     0
    ]
   ],
-  "hardBias": -0.3,
-  "hardMAE": 0.9,
+  "hardBias": -0.2,
+  "hardMAE": 0.7,
   "basal": {
    "obs": true,
    "model": true,
@@ -11896,23 +11805,48 @@
   },
   "sh": {
    "obs": 1,
-   "model": 3,
-   "hit": 0,
-   "falseAlarm": 3,
+   "model": 8,
+   "hit": 1,
+   "falseAlarm": 7,
    "layers": [
     [
-     71,
+     123,
+     2.3,
+     true
+    ],
+    [
+     95,
      2.2,
      false
     ],
     [
-     48,
-     2.1,
+     52,
+     2.2,
+     false
+    ],
+    [
+     31,
+     3.1,
+     false
+    ],
+    [
+     15,
+     2.9,
+     false
+    ],
+    [
+     12,
+     2.8,
      false
     ],
     [
      9,
-     3.1,
+     2.7,
+     false
+    ],
+    [
+     6,
+     3.2,
      false
     ]
    ]
@@ -11922,7 +11856,7 @@
     "score": "CT13",
     "h": 144,
     "grain": "SH",
-    "flagged": false,
+    "flagged": true,
     "modelLayer": "FC"
    }
   ],
@@ -11930,8 +11864,8 @@
    "model": 3,
    "confirmed": 3
   },
-  "tempBias": -2.4,
-  "tempRMSE": 3.1,
+  "tempBias": -2.7,
+  "tempRMSE": 3.3,
   "modelSurface": "PP"
  },
  {
@@ -11947,31 +11881,31 @@
   "km": null,
   "dz": null,
   "hsObs": 149,
-  "hsModel": 201,
-  "hsErr": 52,
+  "hsModel": 165,
+  "hsErr": 16,
   "partial": false,
-  "groupAgree": 45,
+  "groupAgree": 35,
   "groupN": 40,
   "conf": [
    [
     3,
+    1,
+    5,
+    0,
+    0
+   ],
+   [
+    0,
+    10,
+    14,
     2,
-    4,
-    0,
     0
    ],
    [
     0,
-    15,
-    8,
+    0,
+    1,
     3,
-    0
-   ],
-   [
-    0,
-    0,
-    0,
-    4,
     0
    ],
    [
@@ -11989,8 +11923,8 @@
     0
    ]
   ],
-  "hardBias": -0.9,
-  "hardMAE": 1.4,
+  "hardBias": -0.8,
+  "hardMAE": 1.2,
   "basal": {
    "obs": true,
    "model": true,
@@ -12003,56 +11937,46 @@
    "falseAlarm": 5,
    "layers": [
     [
-     101,
-     0.7,
+     90,
+     0.8,
      false
     ],
     [
-     23,
-     3.2,
+     13,
+     3.6,
      false
     ],
     [
-     18,
+     10,
+     3.6,
+     false
+    ],
+    [
+     7,
      3.5,
      false
     ],
     [
-     12,
+     3,
      3.4,
-     false
-    ],
-    [
-     5,
-     3.3,
      false
     ]
    ]
   },
   "sh": {
    "obs": 1,
-   "model": 4,
-   "hit": 1,
-   "falseAlarm": 3,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2,
    "layers": [
     [
-     161,
-     8,
-     true
-    ],
-    [
-     88,
+     77,
      2,
      false
     ],
     [
-     59,
-     3,
-     false
-    ],
-    [
-     59,
-     6.1,
+     52,
+     8,
      false
     ]
    ]
@@ -12062,16 +11986,16 @@
     "score": "CT13",
     "h": 114,
     "grain": "SH",
-    "flagged": true,
+    "flagged": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 1,
-   "confirmed": 1
+   "confirmed": 0
   },
-  "tempBias": -0.4,
-  "tempRMSE": 0.8,
+  "tempBias": -0.2,
+  "tempRMSE": 0.7,
   "modelSurface": "DF"
  },
  {
@@ -12087,8 +12011,8 @@
   "km": 4.5,
   "dz": -289,
   "hsObs": 400,
-  "hsModel": 293,
-  "hsErr": -107,
+  "hsModel": 288,
+  "hsErr": -112,
   "partial": true,
   "groupAgree": null,
   "groupN": 0,
@@ -12176,8 +12100,8 @@
   "km": 5.3,
   "dz": 129,
   "hsObs": 235,
-  "hsModel": 152,
-  "hsErr": -83,
+  "hsModel": 150,
+  "hsErr": -85,
   "partial": true,
   "groupAgree": null,
   "groupN": 0,
@@ -12219,7 +12143,7 @@
    ]
   ],
   "hardBias": -0.5,
-  "hardMAE": 1,
+  "hardMAE": 0.8,
   "basal": null,
   "crusts": {
    "obs": 1,
@@ -12279,8 +12203,8 @@
   "km": 7.5,
   "dz": 10,
   "hsObs": 193,
-  "hsModel": 129,
-  "hsErr": -64,
+  "hsModel": 139,
+  "hsErr": -54,
   "partial": false,
   "groupAgree": 18,
   "groupN": 40,
@@ -12321,8 +12245,8 @@
     0
    ]
   ],
-  "hardBias": -1.2,
-  "hardMAE": 1.2,
+  "hardBias": -1.1,
+  "hardMAE": 1.1,
   "basal": {
    "obs": true,
    "model": true,
@@ -12337,13 +12261,28 @@
   },
   "sh": {
    "obs": 1,
-   "model": 1,
+   "model": 4,
    "hit": 0,
-   "falseAlarm": 1,
+   "falseAlarm": 4,
    "layers": [
     [
-     37,
-     2.5,
+     123,
+     4,
+     false
+    ],
+    [
+     64,
+     2.7,
+     false
+    ],
+    [
+     40,
+     3.8,
+     false
+    ],
+    [
+     31,
+     2.2,
      false
     ]
    ]
@@ -12373,7 +12312,7 @@
   ],
   "weak": {
    "model": 2,
-   "confirmed": 2
+   "confirmed": 1
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -12392,8 +12331,8 @@
   "km": 7.2,
   "dz": 68,
   "hsObs": 157,
-  "hsModel": 129,
-  "hsErr": -28,
+  "hsModel": 139,
+  "hsErr": -18,
   "partial": true,
   "groupAgree": 0,
   "groupN": 23,
@@ -12434,8 +12373,8 @@
     0
    ]
   ],
-  "hardBias": -1.4,
-  "hardMAE": 1.4,
+  "hardBias": -1.3,
+  "hardMAE": 1.3,
   "basal": null,
   "crusts": {
    "obs": 1,
@@ -12446,10 +12385,21 @@
   },
   "sh": {
    "obs": 1,
-   "model": 0,
+   "model": 2,
    "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
+   "falseAlarm": 2,
+   "layers": [
+    [
+     123,
+     4,
+     false
+    ],
+    [
+     64,
+     2.7,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -12475,7 +12425,7 @@
    }
   ],
   "weak": {
-   "model": 0,
+   "model": 1,
    "confirmed": 0
   },
   "tempBias": null,
@@ -12495,8 +12445,8 @@
   "km": 2.5,
   "dz": 107,
   "hsObs": 170,
-  "hsModel": 131,
-  "hsErr": -39,
+  "hsModel": 133,
+  "hsErr": -37,
   "partial": false,
   "groupAgree": null,
   "groupN": 0,
@@ -12537,8 +12487,8 @@
     0
    ]
   ],
-  "hardBias": -0.4,
-  "hardMAE": 0.8,
+  "hardBias": -0.6,
+  "hardMAE": 1,
   "basal": {
    "obs": false,
    "model": true,
@@ -12602,8 +12552,8 @@
   "km": 2.4,
   "dz": 10,
   "hsObs": 205,
-  "hsModel": 156,
-  "hsErr": -49,
+  "hsModel": 159,
+  "hsErr": -46,
   "partial": false,
   "groupAgree": 0,
   "groupN": 3,
@@ -12644,8 +12594,8 @@
     0
    ]
   ],
-  "hardBias": -0.9,
-  "hardMAE": 1.2,
+  "hardBias": -1.1,
+  "hardMAE": 1.3,
   "basal": {
    "obs": false,
    "model": true,
@@ -12701,16 +12651,16 @@
   "km": null,
   "dz": null,
   "hsObs": 135,
-  "hsModel": 132,
-  "hsErr": -3,
+  "hsModel": 139,
+  "hsErr": 4,
   "partial": false,
-  "groupAgree": 30,
+  "groupAgree": 25,
   "groupN": 40,
   "conf": [
    [
-    2,
     0,
-    6,
+    0,
+    8,
     0,
     0
    ],
@@ -12743,8 +12693,8 @@
     0
    ]
   ],
-  "hardBias": -0.2,
-  "hardMAE": 0.6,
+  "hardBias": 0,
+  "hardMAE": 0.5,
   "basal": {
    "obs": true,
    "model": true,
@@ -12759,10 +12709,26 @@
   },
   "sh": {
    "obs": 1,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
+   "model": 3,
+   "hit": 1,
+   "falseAlarm": 1,
+   "layers": [
+    [
+     128,
+     2.6,
+     true
+    ],
+    [
+     123,
+     2.6,
+     true
+    ],
+    [
+     65,
+     2.8,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -12781,12 +12747,12 @@
    }
   ],
   "weak": {
-   "model": 0,
-   "confirmed": 0
+   "model": 2,
+   "confirmed": 2
   },
-  "tempBias": -2.4,
-  "tempRMSE": 3.3,
-  "modelSurface": "PP"
+  "tempBias": -1.7,
+  "tempRMSE": 2.5,
+  "modelSurface": "FC"
  },
  {
   "file": "2025-26/2026-01-26_goats-eye-plot.json",
@@ -12801,10 +12767,10 @@
   "km": null,
   "dz": null,
   "hsObs": 135,
-  "hsModel": 190,
-  "hsErr": 55,
+  "hsModel": 159,
+  "hsErr": 24,
   "partial": false,
-  "groupAgree": 40,
+  "groupAgree": 25,
   "groupN": 40,
   "conf": [
    [
@@ -12816,9 +12782,9 @@
    ],
    [
     0,
-    16,
-    16,
-    7,
+    10,
+    23,
+    6,
     0
    ],
    [
@@ -12843,8 +12809,8 @@
     0
    ]
   ],
-  "hardBias": -1,
-  "hardMAE": 1.1,
+  "hardBias": -0.9,
+  "hardMAE": 1,
   "basal": {
    "obs": true,
    "model": true,
@@ -12852,56 +12818,51 @@
   },
   "crusts": {
    "obs": 0,
-   "model": 4,
+   "model": 5,
    "hit": 0,
-   "falseAlarm": 4,
+   "falseAlarm": 5,
    "layers": [
     [
-     96,
-     0.8,
+     85,
+     1,
      false
     ],
     [
-     22,
-     3.2,
+     12,
+     3.7,
      false
     ],
     [
-     16,
+     10,
+     3.6,
+     false
+    ],
+    [
+     7,
+     3.6,
+     false
+    ],
+    [
+     3,
      3.5,
-     false
-    ],
-    [
-     5,
-     3.4,
      false
     ]
    ]
   },
   "sh": {
    "obs": 1,
-   "model": 4,
-   "hit": 1,
-   "falseAlarm": 3,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2,
    "layers": [
     [
-     149,
-     8,
-     true
-    ],
-    [
-     83,
+     73,
      2,
      false
     ],
     [
-     57,
-     3,
-     false
-    ],
-    [
-     57,
-     6.1,
+     49,
+     8,
      false
     ]
    ]
@@ -12911,14 +12872,14 @@
     "score": "CT22",
     "h": 105,
     "grain": "SH",
-    "flagged": true,
+    "flagged": false,
     "modelLayer": "FC"
    },
    {
     "score": "CT23",
     "h": 105,
     "grain": "SH",
-    "flagged": true,
+    "flagged": false,
     "modelLayer": "FC"
    },
    {
@@ -12926,15 +12887,15 @@
     "h": 30,
     "grain": "FC",
     "flagged": true,
-    "modelLayer": "FCxr"
+    "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 2
   },
-  "tempBias": 1.3,
-  "tempRMSE": 2.3,
+  "tempBias": 0.7,
+  "tempRMSE": 2.2,
   "modelSurface": "SH"
  },
  {
@@ -12950,8 +12911,8 @@
   "km": null,
   "dz": null,
   "hsObs": 205,
-  "hsModel": 141,
-  "hsErr": -64,
+  "hsModel": 144,
+  "hsErr": -61,
   "partial": true,
   "groupAgree": 8,
   "groupN": 25,
@@ -12992,8 +12953,8 @@
     0
    ]
   ],
-  "hardBias": -1.1,
-  "hardMAE": 1.1,
+  "hardBias": -1,
+  "hardMAE": 1,
   "basal": null,
   "crusts": {
    "obs": 3,
@@ -13002,12 +12963,12 @@
    "falseAlarm": 0,
    "layers": [
     [
-     141,
+     144,
      0.3,
      true
     ],
     [
-     141,
+     144,
      0.3,
      true
     ]
@@ -13061,16 +13022,16 @@
   "km": null,
   "dz": null,
   "hsObs": 121,
-  "hsModel": 126,
-  "hsErr": 5,
+  "hsModel": 132,
+  "hsErr": 11,
   "partial": false,
-  "groupAgree": 8,
+  "groupAgree": 5,
   "groupN": 40,
   "conf": [
    [
+    0,
+    0,
     1,
-    0,
-    0,
     0,
     0
    ],
@@ -13103,8 +13064,8 @@
     0
    ]
   ],
-  "hardBias": -0.5,
-  "hardMAE": 0.7,
+  "hardBias": -0.4,
+  "hardMAE": 0.5,
   "basal": {
    "obs": true,
    "model": true,
@@ -13112,28 +13073,33 @@
   },
   "crusts": {
    "obs": 1,
-   "model": 2,
-   "hit": 1,
-   "falseAlarm": 0,
-   "layers": [
-    [
-     124,
-     0.7,
-     true
-    ],
-    [
-     123,
-     0.9,
-     true
-    ]
-   ]
-  },
-  "sh": {
-   "obs": 1,
    "model": 0,
    "hit": 0,
    "falseAlarm": 0,
    "layers": []
+  },
+  "sh": {
+   "obs": 1,
+   "model": 3,
+   "hit": 1,
+   "falseAlarm": 1,
+   "layers": [
+    [
+     121,
+     2.6,
+     true
+    ],
+    [
+     116,
+     2.6,
+     true
+    ],
+    [
+     62,
+     2.8,
+     false
+    ]
+   ]
   },
   "tests": [
    {
@@ -13145,12 +13111,12 @@
    }
   ],
   "weak": {
-   "model": 0,
+   "model": 2,
    "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
-  "modelSurface": "PP"
+  "modelSurface": "SH"
  },
  {
   "file": "2025-26/2026-02-14_simpson-n-test.json",
@@ -13165,16 +13131,16 @@
   "km": 3.3,
   "dz": -50,
   "hsObs": 165,
-  "hsModel": 108,
-  "hsErr": -57,
+  "hsModel": 98,
+  "hsErr": -67,
   "partial": false,
-  "groupAgree": 17,
+  "groupAgree": 14,
   "groupN": 35,
   "conf": [
    [
-    1,
     0,
-    3,
+    0,
+    4,
     0,
     0
    ],
@@ -13207,8 +13173,8 @@
     0
    ]
   ],
-  "hardBias": -0.2,
-  "hardMAE": 0.8,
+  "hardBias": -0.4,
+  "hardMAE": 0.9,
   "basal": {
    "obs": true,
    "model": true,
@@ -13221,7 +13187,7 @@
    "falseAlarm": 1,
    "layers": [
     [
-     108,
+     98,
      0.3,
      false
     ]
@@ -13264,24 +13230,24 @@
   "km": null,
   "dz": null,
   "hsObs": 157,
-  "hsModel": 194,
-  "hsErr": 37,
+  "hsModel": 159,
+  "hsErr": 2,
   "partial": false,
-  "groupAgree": 50,
+  "groupAgree": 40,
   "groupN": 40,
   "conf": [
    [
-    2,
-    1,
+    3,
+    0,
     2,
     0,
     0
    ],
    [
     0,
-    13,
     8,
-    7,
+    14,
+    6,
     0
    ],
    [
@@ -13315,56 +13281,41 @@
   },
   "crusts": {
    "obs": 0,
-   "model": 4,
+   "model": 3,
    "hit": 0,
-   "falseAlarm": 4,
+   "falseAlarm": 3,
    "layers": [
     [
-     91,
-     0.9,
+     81,
+     1.2,
      false
     ],
     [
-     22,
-     3.4,
-     false
-    ],
-    [
-     16,
-     3.7,
+     12,
+     3.8,
      false
     ],
     [
      5,
-     3.5,
+     3.7,
      false
     ]
    ]
   },
   "sh": {
    "obs": 1,
-   "model": 4,
-   "hit": 1,
-   "falseAlarm": 3,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2,
    "layers": [
     [
-     139,
-     8,
-     true
-    ],
-    [
-     80,
+     70,
      2,
      false
     ],
     [
-     55,
-     3,
-     false
-    ],
-    [
-     55,
-     6.1,
+     48,
+     8,
      false
     ]
    ]
@@ -13375,16 +13326,16 @@
     "h": 142,
     "grain": "DF",
     "flagged": false,
-    "modelLayer": "DH"
+    "modelLayer": "FC"
    }
   ],
   "weak": {
-   "model": 3,
-   "confirmed": 3
+   "model": 2,
+   "confirmed": 2
   },
-  "tempBias": 0.7,
-  "tempRMSE": 0.9,
-  "modelSurface": "PP"
+  "tempBias": 0.6,
+  "tempRMSE": 1,
+  "modelSurface": "DF"
  },
  {
   "file": "2025-26/2026-03-04_bow-summit-plot.json",
@@ -13399,8 +13350,8 @@
   "km": null,
   "dz": null,
   "hsObs": 150,
-  "hsModel": 148,
-  "hsErr": -2,
+  "hsModel": 155,
+  "hsErr": 5,
   "partial": false,
   "groupAgree": 70,
   "groupN": 40,
@@ -13408,8 +13359,8 @@
    [
     4,
     0,
-    5,
-    0,
+    4,
+    1,
     0
    ],
    [
@@ -13455,12 +13406,12 @@
    "falseAlarm": 2,
    "layers": [
     [
-     148,
+     154,
      0.3,
      false
     ],
     [
-     147,
+     152,
      0.3,
      false
     ]
@@ -13468,23 +13419,44 @@
   },
   "sh": {
    "obs": 1,
-   "model": 0,
-   "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
+   "model": 4,
+   "hit": 1,
+   "falseAlarm": 1,
+   "layers": [
+    [
+     126,
+     6.5,
+     true
+    ],
+    [
+     116,
+     2.6,
+     true
+    ],
+    [
+     111,
+     2.6,
+     true
+    ],
+    [
+     60,
+     2.8,
+     false
+    ]
+   ]
   },
   "tests": [
    {
     "score": "CTM12",
     "h": 114,
     "grain": "FC",
-    "flagged": false,
+    "flagged": true,
     "modelLayer": "FC"
    }
   ],
   "weak": {
-   "model": 0,
-   "confirmed": 0
+   "model": 3,
+   "confirmed": 3
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -13503,18 +13475,18 @@
   "km": null,
   "dz": null,
   "hsObs": 160,
-  "hsModel": 207,
-  "hsErr": 47,
+  "hsModel": 156,
+  "hsErr": -4,
   "partial": false,
-  "groupAgree": 33,
+  "groupAgree": 38,
   "groupN": 40,
   "conf": [
    [
     0,
-    3,
-    4,
     0,
-    0
+    5,
+    0,
+    2
    ],
    [
     0,
@@ -13525,8 +13497,8 @@
    ],
    [
     0,
-    11,
-    13,
+    9,
+    15,
     6,
     0
    ],
@@ -13545,8 +13517,8 @@
     0
    ]
   ],
-  "hardBias": -0.3,
-  "hardMAE": 0.7,
+  "hardBias": -0.1,
+  "hardMAE": 0.5,
   "basal": {
    "obs": true,
    "model": true,
@@ -13555,50 +13527,40 @@
   "crusts": {
    "obs": 2,
    "model": 3,
-   "hit": 2,
+   "hit": 1,
    "falseAlarm": 2,
    "layers": [
     [
-     88,
-     1,
+     79,
+     1.4,
      true
     ],
     [
-     16,
-     3.7,
+     11,
+     3.9,
      false
     ],
     [
      5,
-     3.6,
+     3.8,
      false
     ]
    ]
   },
   "sh": {
    "obs": 1,
-   "model": 4,
-   "hit": 1,
-   "falseAlarm": 3,
+   "model": 2,
+   "hit": 0,
+   "falseAlarm": 2,
    "layers": [
     [
-     134,
-     8,
-     true
-    ],
-    [
-     77,
+     68,
      2,
      false
     ],
     [
-     53,
-     3,
-     false
-    ],
-    [
-     53,
-     6.1,
+     47,
+     8,
      false
     ]
    ]
@@ -13615,17 +13577,17 @@
     "score": "CT18",
     "h": 122,
     "grain": "SH",
-    "flagged": true,
+    "flagged": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
-   "model": 3,
-   "confirmed": 3
+   "model": 2,
+   "confirmed": 2
   },
-  "tempBias": -0.8,
-  "tempRMSE": 1.3,
-  "modelSurface": "SH"
+  "tempBias": -0.3,
+  "tempRMSE": 0.8,
+  "modelSurface": "MF"
  },
  {
   "file": "2025-26/2026-03-04_jimmy-junior-bowl.json",
@@ -13640,8 +13602,8 @@
   "km": 2.1,
   "dz": -95,
   "hsObs": 200,
-  "hsModel": 148,
-  "hsErr": -52,
+  "hsModel": 155,
+  "hsErr": -45,
   "partial": true,
   "groupAgree": 28,
   "groupN": 18,
@@ -13649,8 +13611,8 @@
    [
     4,
     0,
-    3,
-    0,
+    2,
+    1,
     0
    ],
    [
@@ -13682,8 +13644,8 @@
     0
    ]
   ],
-  "hardBias": 0.1,
-  "hardMAE": 0.8,
+  "hardBias": 0,
+  "hardMAE": 0.9,
   "basal": null,
   "crusts": {
    "obs": 0,
@@ -13692,12 +13654,12 @@
    "falseAlarm": 2,
    "layers": [
     [
-     148,
+     154,
      0.3,
      false
     ],
     [
-     147,
+     152,
      0.3,
      false
     ]
@@ -13705,23 +13667,39 @@
   },
   "sh": {
    "obs": 0,
-   "model": 0,
+   "model": 3,
    "hit": 0,
-   "falseAlarm": 0,
-   "layers": []
+   "falseAlarm": 3,
+   "layers": [
+    [
+     126,
+     6.5,
+     false
+    ],
+    [
+     116,
+     2.6,
+     false
+    ],
+    [
+     111,
+     2.6,
+     false
+    ]
+   ]
   },
   "tests": [
    {
     "score": "CT25",
     "h": 140,
     "grain": "FC",
-    "flagged": false,
-    "modelLayer": "FC"
+    "flagged": true,
+    "modelLayer": "DH"
    }
   ],
   "weak": {
-   "model": 0,
-   "confirmed": 0
+   "model": 3,
+   "confirmed": 3
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -13740,8 +13718,8 @@
   "km": 11.3,
   "dz": -50,
   "hsObs": 200,
-  "hsModel": 158,
-  "hsErr": -42,
+  "hsModel": 152,
+  "hsErr": -48,
   "partial": true,
   "groupAgree": 58,
   "groupN": 19,
@@ -13782,8 +13760,8 @@
     0
    ]
   ],
-  "hardBias": -0.3,
-  "hardMAE": 0.6,
+  "hardBias": -0.4,
+  "hardMAE": 0.7,
   "basal": null,
   "crusts": {
    "obs": 0,
@@ -13878,8 +13856,8 @@
     0
    ]
   ],
-  "hardBias": -0.4,
-  "hardMAE": 0.6,
+  "hardBias": -0.3,
+  "hardMAE": 0.5,
   "basal": null,
   "crusts": {
    "obs": 1,
@@ -14063,8 +14041,8 @@
   "km": null,
   "dz": null,
   "hsObs": 220,
-  "hsModel": 161,
-  "hsErr": -59,
+  "hsModel": 215,
+  "hsErr": -5,
   "partial": false,
   "groupAgree": 20,
   "groupN": 40,
@@ -14079,8 +14057,8 @@
    [
     0,
     0,
-    30,
-    2,
+    31,
+    1,
     0
    ],
    [
@@ -14105,8 +14083,8 @@
     0
    ]
   ],
-  "hardBias": -0.6,
-  "hardMAE": 0.8,
+  "hardBias": -0.3,
+  "hardMAE": 0.7,
   "basal": {
    "obs": true,
    "model": true,
@@ -14114,27 +14092,17 @@
   },
   "crusts": {
    "obs": 0,
-   "model": 4,
+   "model": 2,
    "hit": 0,
-   "falseAlarm": 4,
+   "falseAlarm": 2,
    "layers": [
     [
-     139,
+     189,
      0.3,
      false
     ],
     [
-     137,
-     0.3,
-     false
-    ],
-    [
-     135,
-     0.5,
-     false
-    ],
-    [
-     134,
+     185,
      0.7,
      false
     ]
@@ -14142,43 +14110,68 @@
   },
   "sh": {
    "obs": 1,
-   "model": 7,
+   "model": 12,
    "hit": 1,
-   "falseAlarm": 3,
+   "falseAlarm": 9,
    "layers": [
     [
-     120,
+     171,
+     3,
+     false
+    ],
+    [
+     155,
      2.2,
      true
     ],
     [
-     118,
-     4.4,
-     true
-    ],
-    [
-     118,
+     154,
      8,
      true
     ],
     [
-     108,
-     3.6,
+     139,
+     4.5,
      true
     ],
     [
-     60,
+     101,
+     2.3,
+     false
+    ],
+    [
+     79,
      2.2,
      false
     ],
     [
-     41,
-     2.1,
+     44,
+     2.2,
      false
     ],
     [
-     9,
+     27,
      3.1,
+     false
+    ],
+    [
+     13,
+     2.9,
+     false
+    ],
+    [
+     10,
+     2.8,
+     false
+    ],
+    [
+     8,
+     2.7,
+     false
+    ],
+    [
+     5,
+     3.2,
      false
     ]
    ]
@@ -14211,8 +14204,8 @@
    "confirmed": 3
   },
   "tempBias": -3.5,
-  "tempRMSE": 4.2,
-  "modelSurface": "DF"
+  "tempRMSE": 4,
+  "modelSurface": "PP"
  },
  {
   "file": "2025-26/2026-03-15_fairview-btl-e.json",
@@ -14227,8 +14220,8 @@
   "km": 4.8,
   "dz": 30,
   "hsObs": 223,
-  "hsModel": 134,
-  "hsErr": -89,
+  "hsModel": 138,
+  "hsErr": -85,
   "partial": true,
   "groupAgree": 100,
   "groupN": 1,
@@ -14269,14 +14262,14 @@
     0
    ]
   ],
-  "hardBias": -0.2,
-  "hardMAE": 0.5,
+  "hardBias": -0.1,
+  "hardMAE": 0.6,
   "basal": null,
   "crusts": {
    "obs": 0,
-   "model": 4,
+   "model": 5,
    "hit": 0,
-   "falseAlarm": 4,
+   "falseAlarm": 5,
    "layers": [
     [
      107,
@@ -14285,29 +14278,39 @@
     ],
     [
      106,
-     0.9,
+     0.8,
      false
     ],
     [
      105,
+     1,
+     false
+    ],
+    [
+     103,
      0.9,
      false
     ],
     [
-     104,
-     0.9,
+     101,
+     1,
      false
     ]
    ]
   },
   "sh": {
    "obs": 0,
-   "model": 1,
+   "model": 2,
    "hit": 0,
-   "falseAlarm": 1,
+   "falseAlarm": 2,
    "layers": [
     [
-     77,
+     94,
+     2,
+     false
+    ],
+    [
+     84,
      5.4,
      false
     ]
@@ -14324,7 +14327,7 @@
   ],
   "weak": {
    "model": 2,
-   "confirmed": 1
+   "confirmed": 2
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -14343,8 +14346,8 @@
   "km": 5.2,
   "dz": -180,
   "hsObs": 240,
-  "hsModel": 109,
-  "hsErr": -131,
+  "hsModel": 110,
+  "hsErr": -130,
   "partial": true,
   "groupAgree": 25,
   "groupN": 4,
@@ -14385,52 +14388,37 @@
     0
    ]
   ],
-  "hardBias": 0.6,
+  "hardBias": 0.5,
   "hardMAE": 1.2,
   "basal": null,
   "crusts": {
    "obs": 3,
-   "model": 17,
+   "model": 14,
    "hit": 3,
-   "falseAlarm": 0,
+   "falseAlarm": 1,
    "layers": [
     [
-     82,
-     1.6,
-     true
-    ],
-    [
-     81,
-     1.7,
-     true
-    ],
-    [
      79,
-     2.5,
+     1.3,
      true
     ],
     [
      78,
-     2.5,
+     2.8,
      true
     ],
     [
      77,
-     3.1,
+     2.7,
      true
     ],
     [
      76,
-     3.1,
+     3,
      true
     ],
     [
      75,
-     3.1,
-     true
-    ],
-    [
-     74,
      3.1,
      true
     ],
@@ -14445,12 +14433,12 @@
      true
     ],
     [
-     70,
+     71,
      3.1,
      true
     ],
     [
-     68,
+     69,
      3.1,
      true
     ],
@@ -14460,24 +14448,24 @@
      true
     ],
     [
-     66,
+     65,
      3.1,
      true
     ],
     [
-     64,
+     62,
+     3,
+     true
+    ],
+    [
+     57,
      3.1,
      true
     ],
     [
-     61,
+     51,
      3.1,
-     true
-    ],
-    [
-     55,
-     3.2,
-     true
+     false
     ]
    ]
   },
@@ -14518,8 +14506,8 @@
   "km": 0.4,
   "dz": 131,
   "hsObs": 230,
-  "hsModel": 170,
-  "hsErr": -60,
+  "hsModel": 230,
+  "hsErr": 0,
   "partial": true,
   "groupAgree": 35,
   "groupN": 17,
@@ -14532,8 +14520,8 @@
     0
    ],
    [
-    1,
     0,
+    1,
     9,
     1,
     0
@@ -14548,8 +14536,8 @@
    [
     0,
     0,
-    0,
     1,
+    0,
     0
    ],
    [
@@ -14561,32 +14549,22 @@
    ]
   ],
   "hardBias": -0.1,
-  "hardMAE": 0.7,
+  "hardMAE": 0.8,
   "basal": null,
   "crusts": {
    "obs": 1,
-   "model": 4,
+   "model": 2,
    "hit": 1,
    "falseAlarm": 0,
    "layers": [
     [
-     132,
+     182,
      0.5,
      true
     ],
     [
-     130,
-     0.5,
-     true
-    ],
-    [
-     128,
+     176,
      0.7,
-     true
-    ],
-    [
-     126,
-     0.9,
      true
     ]
    ]
@@ -14598,23 +14576,23 @@
    "falseAlarm": 4,
    "layers": [
     [
-     114,
+     165,
+     2.6,
+     false
+    ],
+    [
+     150,
      2.1,
      false
     ],
     [
-     112,
-     4.3,
-     false
-    ],
-    [
-     112,
+     149,
      8,
      false
     ],
     [
-     103,
-     3.5,
+     135,
+     4.5,
      false
     ]
    ]
@@ -14649,8 +14627,8 @@
   "km": 2.9,
   "dz": 147,
   "hsObs": 250,
-  "hsModel": 176,
-  "hsErr": -74,
+  "hsModel": 183,
+  "hsErr": -67,
   "partial": true,
   "groupAgree": null,
   "groupN": 0,
@@ -14691,77 +14669,82 @@
     0
    ]
   ],
-  "hardBias": -0.8,
-  "hardMAE": 1.6,
+  "hardBias": -0.7,
+  "hardMAE": 1.7,
   "basal": null,
   "crusts": {
    "obs": 0,
-   "model": 13,
+   "model": 14,
    "hit": 0,
-   "falseAlarm": 13,
+   "falseAlarm": 14,
    "layers": [
     [
-     174,
+     182,
      0.7,
      false
     ],
     [
-     173,
+     181,
+     1,
+     false
+    ],
+    [
+     179,
      1.1,
      false
     ],
     [
-     172,
+     177,
      1.2,
      false
     ],
     [
-     171,
+     176,
      1.2,
      false
     ],
     [
-     170,
+     175,
      1.2,
      false
     ],
     [
-     169,
+     174,
      1.3,
      false
     ],
     [
-     168,
+     172,
+     1.3,
+     false
+    ],
+    [
+     171,
+     1.1,
+     false
+    ],
+    [
+     169,
      1.2,
      false
     ],
     [
-     166,
-     1.1,
+     167,
+     1.2,
+     false
+    ],
+    [
+     165,
+     1.2,
      false
     ],
     [
      164,
-     1.1,
-     false
-    ],
-    [
-     162,
      1.2,
      false
     ],
     [
-     161,
-     1.2,
-     false
-    ],
-    [
-     160,
-     1.2,
-     false
-    ],
-    [
-     159,
+     163,
      1.2,
      false
     ]
@@ -14804,8 +14787,8 @@
   "km": null,
   "dz": null,
   "hsObs": 175,
-  "hsModel": 236,
-  "hsErr": 61,
+  "hsModel": 211,
+  "hsErr": 36,
   "partial": false,
   "groupAgree": null,
   "groupN": 0,
@@ -14846,8 +14829,8 @@
     0
    ]
   ],
-  "hardBias": -1.3,
-  "hardMAE": 1.9,
+  "hardBias": -1.2,
+  "hardMAE": 1.8,
   "basal": {
    "obs": false,
    "model": false,
@@ -14855,63 +14838,53 @@
   },
   "crusts": {
    "obs": 2,
-   "model": 11,
+   "model": 9,
    "hit": 0,
-   "falseAlarm": 11,
+   "falseAlarm": 9,
    "layers": [
     [
-     209,
-     0.9,
-     false
-    ],
-    [
-     208,
-     1.2,
-     false
-    ],
-    [
-     207,
-     1.1,
-     false
-    ],
-    [
-     205,
+     155,
      1.3,
      false
     ],
     [
-     203,
+     154,
      1.3,
      false
     ],
     [
-     202,
-     1.3,
-     false
-    ],
-    [
-     200,
+     153,
      1.4,
      false
     ],
     [
-     199,
-     1.5,
+     153,
+     1.3,
      false
     ],
     [
-     197,
-     1.5,
-     false
-    ],
-    [
-     195,
+     152,
      1.4,
      false
     ],
     [
-     192,
-     1.5,
+     150,
+     1.4,
+     false
+    ],
+    [
+     148,
+     1.3,
+     false
+    ],
+    [
+     146,
+     1.4,
+     false
+    ],
+    [
+     142,
+     1.6,
      false
     ]
    ]
@@ -14929,7 +14902,7 @@
     "h": 145,
     "grain": null,
     "flagged": false,
-    "modelLayer": "MFcr"
+    "modelLayer": "RG"
    }
   ],
   "weak": {
@@ -14953,8 +14926,8 @@
   "km": 10.8,
   "dz": -249,
   "hsObs": 283,
-  "hsModel": 149,
-  "hsErr": -134,
+  "hsModel": 162,
+  "hsErr": -121,
   "partial": true,
   "groupAgree": null,
   "groupN": 0,
@@ -14995,108 +14968,48 @@
     0
    ]
   ],
-  "hardBias": -1.8,
-  "hardMAE": 2.1,
+  "hardBias": -2.1,
+  "hardMAE": 2.2,
   "basal": null,
   "crusts": {
    "obs": 1,
-   "model": 19,
+   "model": 7,
    "hit": 1,
-   "falseAlarm": 6,
+   "falseAlarm": 1,
    "layers": [
     [
-     138,
-     0.7,
+     162,
+     0.3,
      false
-    ],
-    [
-     137,
-     0.8,
-     false
-    ],
-    [
-     137,
-     0.8,
-     false
-    ],
-    [
-     136,
-     1,
-     false
-    ],
-    [
-     134,
-     1.2,
-     false
-    ],
-    [
-     133,
-     1.3,
-     false
-    ],
-    [
-     130,
-     1.4,
-     true
     ],
     [
      129,
-     1.5,
+     0.6,
      true
     ],
     [
-     129,
-     1.5,
+     127,
+     0.9,
+     true
+    ],
+    [
+     126,
+     0.9,
      true
     ],
     [
      124,
-     1.7,
-     true
-    ],
-    [
-     123,
-     1.8,
-     true
-    ],
-    [
-     122,
-     1.8,
+     1,
      true
     ],
     [
      121,
-     1.9,
+     1.3,
      true
     ],
     [
-     119,
-     2,
-     true
-    ],
-    [
-     117,
-     2.2,
-     true
-    ],
-    [
-     114,
-     2.4,
-     true
-    ],
-    [
-     113,
-     2.5,
-     true
-    ],
-    [
-     112,
-     2.5,
-     true
-    ],
-    [
-     110,
-     2.6,
+     120,
+     1.4,
      true
     ]
    ]
@@ -15114,7 +15027,7 @@
     "h": 255,
     "grain": null,
     "flagged": false,
-    "modelLayer": "MFcr"
+    "modelLayer": "MF"
    }
   ],
   "weak": {
@@ -15123,7 +15036,7 @@
   },
   "tempBias": null,
   "tempRMSE": null,
-  "modelSurface": "MF"
+  "modelSurface": "MFcr"
  },
  {
   "file": "2025-26/2026-04-05_peyto-path.json",
@@ -15138,18 +15051,18 @@
   "km": 2.5,
   "dz": -118,
   "hsObs": 253,
-  "hsModel": 160,
-  "hsErr": -93,
+  "hsModel": 196,
+  "hsErr": -57,
   "partial": true,
-  "groupAgree": 10,
+  "groupAgree": 0,
   "groupN": 10,
   "conf": [
    [
     0,
     0,
-    5,
+    4,
     0,
-    3
+    4
    ],
    [
     0,
@@ -15168,8 +15081,8 @@
    [
     0,
     0,
-    1,
-    1,
+    2,
+    0,
     0
    ],
    [
@@ -15180,18 +15093,23 @@
     0
    ]
   ],
-  "hardBias": -1.2,
-  "hardMAE": 1.2,
+  "hardBias": -1.7,
+  "hardMAE": 1.7,
   "basal": null,
   "crusts": {
    "obs": 1,
-   "model": 1,
+   "model": 2,
    "hit": 1,
    "falseAlarm": 0,
    "layers": [
     [
-     114,
-     2.8,
+     136,
+     1.8,
+     true
+    ],
+    [
+     131,
+     2.5,
      true
     ]
    ]
@@ -15209,14 +15127,14 @@
     "h": 230,
     "grain": "DF",
     "flagged": false,
-    "modelLayer": "FC"
+    "modelLayer": "MF"
    },
    {
     "score": "CT13",
     "h": 230,
     "grain": null,
     "flagged": false,
-    "modelLayer": "FC"
+    "modelLayer": "MF"
    }
   ],
   "weak": {

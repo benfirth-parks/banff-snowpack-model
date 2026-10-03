@@ -1,7 +1,7 @@
 // Checks the station-correction interpolation and the time helpers.
 //   node tests/forcing.test.mjs
 import assert from "node:assert/strict";
-import { prepareForcing, snapshotWindows } from "../src/model/forcing.js";
+import { prepareForcing, snapshotWindows, cleanHS } from "../src/model/forcing.js";
 import { snapHour, isSnapHour, localDate, tzOffset } from "../src/model/time.js";
 
 // --- time helpers across the DST change (1 Nov 2026) ---
@@ -78,5 +78,33 @@ const Fe = prepareForcing({ times, nodes, stations: ridgeValley, tA, windows: []
 const away = (z) => Fe.at(Fe.weightsFor({ lat: 52.1, lon: -115.4, z }), 30).Ta - (-5 - 0.0065 * (z - 2000) + 2);
 console.log(`trend ${Fe.trend.b} °C/km; correction far from any station at 2800 m ${away(2800).toFixed(2)}, 1400 m ${away(1400).toFixed(2)}`);
 assert.ok(away(2800) > 1.5 && away(1400) < -0.8, "ridge/valley pattern carried to places without a station");
+
+// --- snow height quality control ---
+const raw = [];
+for (let k = 0; k < 120; k++) raw.push(50 + (k >= 60 ? Math.min(30, (k - 60) * 2) : 0) + (k % 3) * 0.4);
+raw[10] = 220.9; raw[20] = 190; raw[21] = 191; raw[22] = 189; raw[40] = 5; raw[100] = 317;
+const cl = cleanHS(raw);
+assert.equal(cl[10], null); assert.equal(cl[21], null); assert.equal(cl[40], null); assert.equal(cl[100], null);
+assert.ok(cl[90] > 78 && cl[90] < 82, "a real storm (+30 cm over 15 h) is kept");
+console.log("snow height QC: spikes and error values dropped, storm kept");
+
+// --- snow-height-driven snowfall: the station sees 30 cm, the model had no precipitation ---
+const tm = Array.from({ length: 96 }, (_, i) => t0 + i);
+const dry = nodes.map((n) => ({ ...n, v: { ...n.v, T: n.v.T.map((x) => x - 10), P: tm.map(() => 0) } }));
+const hsSt = {
+  id: "hs1", name: "HS1", lat: 51.4, lon: -116.2, z: 2300, wind: false, precip: "hs", hsBase: 2,
+  o: { T: tm.map(() => -12 - 0.0065 * 300), RH: tm.map(() => 90), U: tm.map(() => null), P: tm.map(() => null),
+    HS: tm.map((t, i) => 2 + (i < 30 ? 0 : Math.min(30, (i - 30) * 2))) },
+};
+const Fh = prepareForcing({ times: tm, nodes: dry, stations: [hsSt], tA: tm[95], windows: snapshotWindows(tm, 95, (t) => (t - t0) % 24 === 23) });
+const own = Fh.weightsFor({ id: "hs1", lat: 51.4, lon: -116.2, z: 2300 });
+let snowOwn = 0;
+for (let k = 0; k < 96; k++) { const f = Fh.at(own, k); snowOwn += f.P * f.sf; }
+const col = Fh.bias.hs.hs1;
+console.log(`HS column ${Fh.stationDiagnostics()[0].hsModel} cm (sensor 30 cm above its baseline), snowfall at the station point ${snowOwn.toFixed(1)} mm`);
+// The column's new snow settles after the storm while this synthetic sensor does not.
+assert.ok(Fh.stationDiagnostics()[0].hsModel > 18 && Fh.stationDiagnostics()[0].hsModel < 34, "column follows the sensor");
+assert.ok(snowOwn > 20, "the station's own point gets the snowfall the model missed");
+assert.ok(col && col.S.v.length > 0, "column state is carried for the next run");
 
 console.log("forcing + time tests passed");

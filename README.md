@@ -24,7 +24,7 @@ Model weather is interpolated to a ~5 km grid (0.045° × 0.07°) and to named p
 | `tests/` | Synthetic-season physics test and an end-to-end pipeline test on mock data |
 
 ## Past seasons (reanalysis)
-`netlify/lib/reanalysis.mjs` reruns the same model through 2023–24, 2024–25 and 2025–26. It uses archived HRDPS from the Open-Meteo Historical Forecast API, with RDPS filling any gaps, plus the station actuals held in the explorer archive. From 30 Dec 2023 the archive has air temperature and snow height, but no humidity, wind or precipitation. Seasons are built in month-long chunks by `season-background`, which re-invokes itself. The hourly `schedule` function restarts the queue if that chain breaks. Progress is kept in the `seasons` blob and shown in the season picker and the status dialog.
+`netlify/lib/reanalysis.mjs` reruns the same model through 2023–24, 2024–25 and 2025–26. It uses archived HRDPS from the Open-Meteo Historical Forecast API, with RDPS filling any gaps, plus the station actuals held in the explorer archive. The archive has air temperature, humidity, wind, snow height and gauge precipitation from early October 2023 (some stations start later). Learned forecast biases and the snow-height-driven station columns carry between chunks in `seasons/{id}/bias`. Seasons are built in month-long chunks by `season-background`, which re-invokes itself. The hourly `schedule` function restarts the queue if that chain breaks. Progress is kept in the `seasons` blob and shown in the season picker and the status dialog.
 ```
 # rebuild one season from scratch (e.g. after a model change)
 curl -X POST -H "x-run-token: $RUN_TOKEN" "https://<site>/.netlify/functions/season-background?season=2024-25&reset=1"

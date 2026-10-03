@@ -1,5 +1,5 @@
 
-## 2023-24, analysis with each station withheld (Dec–Mar), dem nodes, model v3
+## 2023-24, analysis with each station withheld (Dec–Mar), dem nodes, model v4
 | Station | z | T bias | T MAE | RH bias | RH MAE |
 |---|---|---|---|---|---|
 | Vermilion Crossing | 1310 | 1.7 | 2.3 | -3.7 | 8.8 |
@@ -24,9 +24,9 @@
 | 13–24 | 0.3 | 2.1 | -0.2 | 9.4 |
 | 25–48 | 0.0 | 2.3 | -0.4 | 10.5 |
 
-48 h snowfall at the snow-height stations (91 forecasts with snow): observed mean 8.5 mm, forecast bias -3.8 mm, MAE 5.7 mm
+48 h snowfall at the snow-height stations (117 forecasts with snow): observed mean 8.5 mm, forecast bias -1.5 mm, MAE 6.0 mm
 
-## 2024-25, analysis with each station withheld (Dec–Mar), dem nodes, model v3
+## 2024-25, analysis with each station withheld (Dec–Mar), dem nodes, model v4
 | Station | z | T bias | T MAE | RH bias | RH MAE |
 |---|---|---|---|---|---|
 | Vermilion Crossing | 1310 | 1.5 | 2.4 | -2.4 | 8.2 |
@@ -51,9 +51,9 @@
 | 13–24 | -0.1 | 1.8 | -1.6 | 11.4 |
 | 25–48 | -0.1 | 1.9 | -1.1 | 11.0 |
 
-48 h snowfall at the snow-height stations (73 forecasts with snow): observed mean 9.3 mm, forecast bias -4.7 mm, MAE 6.1 mm
+48 h snowfall at the snow-height stations (90 forecasts with snow): observed mean 9.2 mm, forecast bias -2.6 mm, MAE 5.4 mm
 
-## 2025-26, analysis with each station withheld (Dec–Mar), dem nodes, model v3
+## 2025-26, analysis with each station withheld (Dec–Mar), dem nodes, model v4
 | Station | z | T bias | T MAE | RH bias | RH MAE |
 |---|---|---|---|---|---|
 | Vermilion Crossing | 1310 | 1.4 | 2.1 | -1.1 | 9.5 |
@@ -79,4 +79,4 @@
 | 13–24 | 0.3 | 1.9 | -0.5 | 10.1 |
 | 25–48 | 0.1 | 2.1 | -0.2 | 11.7 |
 
-48 h snowfall at the snow-height stations (88 forecasts with snow): observed mean 15.4 mm, forecast bias -4.4 mm, MAE 9.3 mm
+48 h snowfall at the snow-height stations (108 forecasts with snow): observed mean 15.4 mm, forecast bias -4.4 mm, MAE 9.3 mm
