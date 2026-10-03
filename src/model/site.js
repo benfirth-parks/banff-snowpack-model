@@ -28,7 +28,8 @@ export function cloneSite(site) {
   return { ...site, sims: site.sims.map((s) => ({ ...s, L: s.L.map((l) => ({ ...l })) })) };
 }
 
-// f: { t, Ta, RH, U (m/s), dir (° from), P (mm), sf (snow fraction), ghi, dirH, difH, lw }
+// f: { t, Ta, RH, U (m/s), dir (° from), P (mm), sf (snow fraction), ghi, dirH, difH, lw,
+//      Pwx (optional: precipitation in the weather where P is set from snow height) }
 export function stepSite(site, f) {
   const sun = sunPosition((f.t - 0.5) * 3600000, site.lat, site.lon);
   const snowTot = f.P * f.sf;
@@ -51,6 +52,6 @@ export function stepSite(site, f) {
       snow = snowTot * (1 + load * c);
       drift = Q * c;
     }
-    stepHour(sim, { t: f.t, Ta: f.Ta, RH: f.RH, U: f.U, P: f.P, snow, rain, sw, lw, drift });
+    stepHour(sim, { t: f.t, Ta: f.Ta, RH: f.RH, U: f.U, P: Math.max(f.P, f.Pwx ?? 0), snow, rain, sw, lw, drift });
   }
 }

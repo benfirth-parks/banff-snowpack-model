@@ -118,10 +118,13 @@ export async function runSeasonChunk(deps, seasonId, opts = {}) {
       const k = t - staged.t0;
       for (const key of Object.keys(o)) o[key].push(a && k >= 0 && k < staged.n ? a[key][k] : null);
     }
-    return { ...s, o };
+    return { ...s, o, hsBase: (job.baselines || {})[s.id]?.base ?? 0 };
   });
   const kA = kIndex(tA);
-  const F = prepareForcing({ times, nodes, stations, tA, windows: snapshotWindows(times, kA, isSnapHour) });
+  // The snow-height-driven station columns and learned biases carry over between chunks.
+  const biasIn = t0 === seasonT0(season) ? null : await store.get(`${P}bias`, { type: "json" });
+  const F = prepareForcing({ times, nodes, stations, tA, windows: snapshotWindows(times, kA, isSnapHour), bias: biasIn, biasFrom: kIndex(t0) + 1 });
+  await store.setJSON(`${P}bias`, F.bias);
   const snaps = times.filter((t) => t > t0 && t <= tA && isSnapHour(t));
   const fields = new Map(snaps.map((t) => [t, {
     date: localDate(t), t, kind: "reanalysis", season: season.id, issued: new Date().toISOString(),

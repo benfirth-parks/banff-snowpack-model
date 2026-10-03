@@ -12,7 +12,7 @@ import { tzOffset, localDate, snapHour, isSnapHour, addDays } from "../../src/mo
 export const SEASON_START = "2026-09-01";
 // Bump when model physics or forcing change: stored seasons are then re-run from
 // their start by the next live run / season chunk.
-export const MODEL_VERSION = 3;
+export const MODEL_VERSION = 4;
 export const LIVE_SEASON = "2026-27";
 export const BATCH = 250;
 export const HIST = 30; // hours of history before the analysis start (residual tails, 24 h precip windows)
@@ -53,7 +53,7 @@ export async function ensureMeta(store, cellElevations, log) {
 
 // ---- snow-height sensor baselines -----------------------------------------
 // Ultrasonic HS sensors read a few cm (vegetation, rocks, mounting) over bare
-// ground. The baseline is the 20th percentile of HS during warm hours (> 5 °C,
+// ground. The baseline is the 20th percentile of HS during warm July–September hours (> 5 °C,
 // from the station or the nearest station with a thermometer, lapse-adjusted),
 // which are snow-free in practice; it is subtracted before comparing with the model.
 export function hsBaselines(obsById) {
@@ -66,7 +66,10 @@ export function hsBaselines(obsById) {
     const src = tMaps[s.id] ? s : withT.slice().sort((a, b) => (kmBetween(s, a) + Math.abs(s.z - a.z) / 50) - (kmBetween(s, b) + Math.abs(s.z - b.z) / 50))[0];
     if (!src) continue;
     const tm = tMaps[src.id], dz = s.z - src.z;
-    const vals = recs.filter((r) => { const T = tm.get(r.t); return ok(T) && T - 0.0065 * dz > 5; }).map((r) => r.HS).sort((a, b) => a - b);
+    // July–September only: warm spring hours often still have snow on the ground,
+    // which put baselines of up to 30 cm on Bow Summit, Sunshine and others.
+    const summer = (t) => { const m = new Date(t * 3600000).getUTCMonth(); return m >= 6 && m <= 8; };
+    const vals = recs.filter((r) => { const T = tm.get(r.t); return summer(r.t) && ok(T) && T - 0.0065 * dz > 5; }).map((r) => r.HS).sort((a, b) => a - b);
     if (vals.length >= 24) out[s.id] = { base: Math.max(-5, Math.min(30, Math.round(vals[Math.floor(vals.length * 0.2)] * 10) / 10)), n: vals.length };
   }
   return out;
@@ -201,7 +204,7 @@ export async function runPipeline(deps, opts = {}) {
       const r = t <= tA ? byT.get(t) : null;
       o.T.push(r ? r.T : null); o.RH.push(r ? r.RH : null); o.U.push(r ? r.U : null); o.HS.push(r ? r.HS : null); o.P.push(r ? r.P : null);
     }
-    return { ...s, o };
+    return { ...s, o, hsBase: baselines[s.id]?.base ?? 0 };
   });
   const kA = kIndex(tA);
   // If the model archive doesn't reach back to the last analysis hour, resume at its first hour.
@@ -370,11 +373,12 @@ export async function traceSite(deps, { id }, opts = {}) {
     for (const key of Object.keys(n.v)) v[key] = times.map((t) => { const j = t - n.t0; return j >= 0 && j < n.v[key].length ? n.v[key][j] : null; });
     return { ...n, v };
   });
+  const tb = hsBaselines(obs);
   const stations = STATIONS.map((s) => {
     const o = { T: [], RH: [], U: [], HS: [], P: [] };
     const byT = new Map((obs[s.id] || []).map((r) => [r.t, r]));
     for (const t of times) { const r = byT.get(t); for (const k of Object.keys(o)) o[k].push(r ? r[k] : null); }
-    return { ...s, o };
+    return { ...s, o, hsBase: tb[s.id]?.base ?? 0 };
   });
   const kA = times.length - 1;
   const F = prepareForcing({ times, nodes, stations, tA, windows: snapshotWindows(times, kA, isSnapHour) });

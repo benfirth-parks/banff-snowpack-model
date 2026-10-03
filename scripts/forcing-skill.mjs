@@ -8,7 +8,9 @@
 // temperature at its location is compared with what it measured, December to
 // March. This is how well the model knows the weather at places without a station.
 // Forecast: every 3rd day at 12 UTC the analysis stops, and the next 48 h at each
-// station are compared with what it then measured, by lead time.
+// station are compared with what it then measured, by lead time. 48 h snowfall
+// at the snow-height stations is compared with the snowfall that this repo's
+// snow-height-driven station columns derive from the measured snow height.
 import { readFileSync, readdirSync } from "node:fs";
 import { gunzipSync } from "node:zlib";
 import { join, resolve, dirname } from "node:path";
@@ -22,6 +24,8 @@ const NODES = args.nodes || "cell";
 const imp = (p) => import(pathToFileURL(join(CODE, p)).href);
 const { STATIONS } = await imp("src/model/domain.js");
 const { prepareForcing } = await imp("src/model/forcing.js");
+const here = await import(pathToFileURL(join(HERE, "../src/model/forcing.js")).href);
+const { hsBaselines } = await import(pathToFileURL(join(HERE, "../netlify/lib/pipeline.mjs")).href);
 const gz = (f) => JSON.parse(gunzipSync(readFileSync(f)));
 const ok = (v) => v !== null && v !== undefined && Number.isFinite(v);
 const mean = (a) => (a.length ? a.reduce((s, x) => s + x, 0) / a.length : NaN);
@@ -47,11 +51,12 @@ for (const season of (args.seasons || "2024-25").split(",")) {
     if (NODES === "dem" && ok(nd.zDem) && ok(nd.zCell)) { const dT = -0.0065 * (nd.zDem - nd.zCell); v.T = v.T.map((x) => (ok(x) ? x + dT : x)); z = nd.zDem; }
     return { id: nd.id, lat: nd.lat, lon: nd.lon, z, v };
   }).filter((n) => ok(n.z));
+  const bl = hsBaselines(obsAll);
   const stationsFor = (times, tA) => STATIONS.map((s) => {
     const byT = new Map((obsAll[s.id] || []).map((r) => [r.t, r]));
     const o = { T: [], RH: [], U: [], HS: [], P: [] };
     for (const t of times) { const r = t <= tA ? byT.get(t) : null; for (const k of Object.keys(o)) o[k].push(r ? r[k] : null); }
-    return { ...s, o };
+    return { ...s, o, hsBase: bl[s.id]?.base ?? 0 };
   });
   const truth = Object.fromEntries(STATIONS.map((s) => [s.id, new Map((obsAll[s.id] || []).map((r) => [r.t, r]))]));
 
@@ -81,6 +86,13 @@ for (const season of (args.seasons || "2024-25").split(",")) {
   console.log(`| **All** | | ${f1(mean(rows.map((r) => r.bias)))} | ${f1(mean(rows.map((r) => r.mae)))} | ${f1(mean(rows.filter((r) => Number.isFinite(r.biasRH)).map((r) => r.biasRH)))} | ${f1(mean(rows.filter((r) => Number.isFinite(r.maeRH)).map((r) => r.maeRH)))} |`);
 
   // ---- forecast ----
+  // Snowfall "truth" at the HS stations: the snow-height-driven columns, whole season.
+  const tAll = [];
+  for (let t = fc.t0; t < fc.t0 + fc.n; t++) tAll.push(t);
+  const trace = {};
+  here.prepareForcing({ times: tAll, nodes: nodesFor(tAll), stations: stationsFor(tAll, tAll[tAll.length - 1]), tA: tAll[tAll.length - 1], windows: [], trace });
+  const Sobs = Object.fromEntries(Object.entries(trace).map(([id, rows]) => [id, new Map(rows.map((r) => [r.t, r.S]))]));
+  const snowErr = [], snowObs = [];
   const leads = [[1, 6], [7, 12], [13, 24], [25, 48]];
   const errs = leads.map(() => ({ T: [], RH: [] }));
   let bias = null, prev = null;
@@ -88,7 +100,9 @@ for (const season of (args.seasons || "2024-25").split(",")) {
     const from = prev === null ? tI - 30 * 24 : prev - 30;
     const tm = [];
     for (let t = from; t <= tI + 48; t++) tm.push(t);
-    const F = prepareForcing({ times: tm, nodes: nodesFor(tm), stations: stationsFor(tm, tI), tA: tI, windows: [], bias, biasFrom: prev === null ? 0 : prev - from + 1 });
+    const { snapshotWindows } = await imp("src/model/forcing.js");
+    const { isSnapHour } = await imp("src/model/time.js");
+    const F = prepareForcing({ times: tm, nodes: nodesFor(tm), stations: stationsFor(tm, tI), tA: tI, windows: snapshotWindows(tm, tI - from, isSnapHour), bias, biasFrom: prev === null ? 0 : prev - from + 1 });
     bias = F.bias || null; prev = tI;
     for (const s of STATIONS) {
       const W = F.weightsFor(s);
@@ -100,9 +114,16 @@ for (const season of (args.seasons || "2024-25").split(",")) {
         if (ok(r.T)) errs[li].T.push(f.Ta - r.T);
         if (ok(r.RH)) errs[li].RH.push(f.RH - r.RH);
       }
+      if (Sobs[s.id]) {
+        let fsn = 0, osn = 0, no = 0;
+        const W0 = F.weightsFor({ lat: s.lat, lon: s.lon, z: s.z });
+        for (let h = 1; h <= 48; h++) { const f = F.at(W0, tI + h - from); fsn += f.P * f.sf; const v = Sobs[s.id].get(tI + h); if (ok(v)) { osn += v; no++; } }
+        if (no >= 36 && (osn >= 2 || fsn >= 2)) { snowErr.push(fsn - osn); snowObs.push(osn); }
+      }
     }
   }
   console.log(`\n## ${season}, forecast at the stations (Dec–Mar, every 3rd day from 12 UTC)`);
   console.log("| Lead h | T bias | T MAE | RH bias | RH MAE |\n|---|---|---|---|---|");
   leads.forEach(([a, b], i) => console.log(`| ${a}–${b} | ${f1(mean(errs[i].T))} | ${f1(mean(errs[i].T.map(Math.abs)))} | ${f1(mean(errs[i].RH))} | ${f1(mean(errs[i].RH.map(Math.abs)))} |`));
+  console.log(`\n48 h snowfall at the snow-height stations (${snowErr.length} forecasts with snow): observed mean ${f1(mean(snowObs))} mm, forecast bias ${f1(mean(snowErr))} mm, MAE ${f1(mean(snowErr.map(Math.abs)))} mm`);
 }

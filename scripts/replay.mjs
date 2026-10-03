@@ -74,13 +74,13 @@ for (const season of wanted) {
     }
     return { id: nd.id, lat: nd.lat, lon: nd.lon, z, t0: start, v };
   }).filter((n) => ok(n.z));
+  const baselines = hsBaselines(Object.fromEntries(STATIONS.map((s) => [s.id, (obsAll[s.id] || []).filter((r) => r.t >= start && r.t <= end)])));
   const stations = STATIONS.map((s) => {
     const byT = new Map((obsAll[s.id] || []).map((r) => [r.t, r]));
     const o = { T: [], RH: [], U: [], HS: [], P: [] };
     for (const t of times) { const r = byT.get(t); for (const k of Object.keys(o)) o[k].push(r ? r[k] : null); }
-    return { ...s, o };
+    return { ...s, o, hsBase: baselines[s.id]?.base ?? 0 };
   });
-  const baselines = hsBaselines(Object.fromEntries(STATIONS.map((s) => [s.id, (obsAll[s.id] || []).filter((r) => r.t >= start && r.t <= end)])));
   const kA = times.length - 1;
   const F = prepareForcing({ times, nodes, stations, tA: end, windows: snapshotWindows(times, kA, isSnapHour) });
   mkdirSync(join(OUT, season), { recursive: true });
