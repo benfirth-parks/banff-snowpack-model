@@ -171,8 +171,11 @@ export async function fetchModel(nodes, pastDays, forecastDays = 4) {
 // once per forecast run and shared through the proxy's cache.
 // Returns { members: { id: [{ t0, z, v: { T, RH, P, U, dir, ghi, cc } } | null per point] },
 // source, errors }, U in km/h and cc as a fraction.
+// The spread is optional, so no request waits out a rate limit: a failure is
+// recorded in errors and the next forecast run tries again.
 const SPREAD_VARS = [["T", "temperature_2m"], ["RH", "relative_humidity_2m"], ["P", "precipitation"], ["U", "wind_speed_10m"], ["dir", "wind_direction_10m"], ["ghi", "shortwave_radiation"], ["cc", "cloud_cover"]];
 const NAM_ID = "noaa_nam12";
+const SPREAD_FETCH = { retries: 0, rateLimitRetries: 0, timeoutMs: 20000 };
 export async function fetchSpread(points, memberIds) {
   const errors = [], members = {}, sources = [];
   const om = memberIds.filter((id) => id !== NAM_ID);
@@ -184,10 +187,10 @@ export async function fetchSpread(points, memberIds) {
   p.set("past_days", "1"); p.set("forecast_days", "4");
   p.set("timeformat", "unixtime"); p.set("timezone", "GMT");
   let data = null;
-  try { data = await fetchJSON(`${FXTOOL}/api/forecast?${p}`, { retries: 1, timeoutMs: 30000 }); sources.push("Parks Wx Fx proxy"); }
+  try { data = await fetchJSON(`${FXTOOL}/api/forecast?${p}`, SPREAD_FETCH); sources.push("Parks Wx Fx proxy"); }
   catch (e) {
     errors.push(`spread via fx proxy: ${e.message}`);
-    try { data = await fetchJSON(`${OPEN_METEO}?${p}`, { retries: 1, timeoutMs: 30000 }); sources.push("Open-Meteo direct"); }
+    try { data = await fetchJSON(`${OPEN_METEO}?${p}`, SPREAD_FETCH); sources.push("Open-Meteo direct"); }
     catch (e2) { errors.push(`spread via Open-Meteo: ${e2.message}`); }
   }
   const list = data ? (Array.isArray(data) ? data : [data]) : [];
@@ -206,7 +209,7 @@ export async function fetchSpread(points, memberIds) {
   if (memberIds.includes(NAM_ID)) {
     try {
       const q = new URLSearchParams({ latitude: points.map((n) => n.lat).join(","), longitude: points.map((n) => n.lon).join(","), timezone: "GMT" });
-      const nam = await fetchJSON(`${FXTOOL}/api/nam12?${q}`, { retries: 1, timeoutMs: 30000 });
+      const nam = await fetchJSON(`${FXTOOL}/api/nam12?${q}`, SPREAD_FETCH);
       if (!Array.isArray(nam) || nam.length !== points.length) throw new Error("unexpected NAM response");
       members[NAM_ID] = nam.map((d) => {
         const H = d && d.hourly;
@@ -220,7 +223,11 @@ export async function fetchSpread(points, memberIds) {
           P: H.time.map((_, j) => (ok(g("precipitation")[j]) ? g("precipitation")[j] : null)),
           U: H.time.map((_, j) => (ok(g("wind_speed_10m")[j]) ? g("wind_speed_10m")[j] : null)),
           dir: H.time.map((_, j) => (ok(g("wind_direction_10m")[j]) ? g("wind_direction_10m")[j] : null)),
-          ghi: H.time.map((_, j) => (ok(g("shortwave_radiation")[j]) ? g("shortwave_radiation")[j] : null)),
+          // The feed's radiation is the instantaneous 3-hourly field interpolated to
+          // hours, not Open-Meteo's preceding-hour mean, so it is not used as a
+          // departure: the NAM row keeps the control's sun (its cloud still enters
+          // the longwave).
+          ghi: H.time.map(() => null),
           cc: H.time.map((_, j) => (ok(g("cloud_cover")[j]) ? g("cloud_cover")[j] / 100 : null)),
         };
         // Times are "YYYY-MM-DDTHH:MM" in the requested time zone (GMT); the first hour (F000) has no precipitation.

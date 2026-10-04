@@ -2,7 +2,7 @@
 // station/model data (the real sources aren't reachable from CI sandboxes).
 //   node tests/pipeline-mock.mjs
 import { runPipeline } from "../netlify/lib/pipeline.mjs";
-import { deps, clock } from "./mock-deps.mjs";
+import { deps, clock, mock } from "./mock-deps.mjs";
 
 const t = Date.now();
 const st1 = await runPipeline(deps, { log: (m) => console.log("  run1:", m) });
@@ -42,8 +42,44 @@ for (const d of ptf.days) {
   if (!c || JSON.stringify(c.p) !== JSON.stringify(d.p) || JSON.stringify(c.hs) !== JSON.stringify(d.hs)) throw new Error(`spread control differs from the point forecast on ${d.date}`);
 }
 if (hr.days.at(-1).t > sp.analysisHour + 49) throw new Error("HRDPS member ran past its data");
+// HRDPS is the control's own model, so its row reproduces the control's weather within rounding.
+const sameAsControl = (s, label) => {
+  const c0 = s.members[0], h = s.members.find((m) => m.id === "gem_hrdps_continental");
+  for (const d of h.days) {
+    const c = c0.days.find((x) => x.t === d.t);
+    if (!c || Math.abs(c.snow24 - d.snow24) > 1 || Math.abs(c.precip24 - d.precip24) > 1) throw new Error(`${label}: HRDPS member differs from the control on ${d.date}: ${d.snow24} cm / ${d.precip24} mm vs ${c?.snow24} / ${c?.precip24}`);
+  }
+};
+sameAsControl(sp, "run3");
 const spread = (k) => { const v = sp.members.map((m) => m.days.find((x) => x.t === ctrl.days.at(-1).t)?.[k]).filter((x) => x != null); return `${Math.min(...v)}–${Math.max(...v)}`; };
 console.log(`spread: ${sp.members.length} runs to +${sp.horizon - sp.analysisHour} h; last day snow24 ${spread("snow24")} cm; NAM ${nam.days.length} days; status`, JSON.stringify(JSON.parse(deps.store.m.get("status")).spread));
+
+// Run 4, 60 h later at 08:00 UTC with the gauges reading 2.2× the model: the
+// newest Canadian run (00Z) ends 7 h before analysis + 84 h, so the spread stops
+// at the data, and the control's precipitation correction is well over ×2 at
+// ALP, which the HRDPS row must still reproduce.
+mock.gauge = 2.2; clock.now += 60;
+const st4 = await runPipeline(deps, { log: (m) => console.log("  run4:", m) });
+const dataEnd = Math.floor((clock.now - mock.lag) / 6) * 6 + 84;
+const sp4 = JSON.parse(deps.store.m.get("ptf/mt-gordon:ALP")).spread;
+if (!sp4 || sp4.members.length !== 13) throw new Error(`run4 spread: expected 13 runs, got ${sp4?.members.length}`);
+if (sp4.horizon > dataEnd) throw new Error(`spread horizon runs ${sp4.horizon - dataEnd} h past the Canadian models' data`);
+if (sp4.horizon - sp4.analysisHour < 70) throw new Error(`spread horizon only ${sp4.horizon - sp4.analysisHour} h`);
+for (const m of sp4.members) for (const d of m.days) if (d.t > sp4.horizon) throw new Error(`${m.id} ran past the spread horizon`);
+if (sp4.members[0].days.at(-1).t !== sp4.horizon) throw new Error("control has no column at the horizon");
+sameAsControl(sp4, "run4");
+console.log(`spread run4: to +${sp4.horizon - sp4.analysisHour} h, data to +${dataEnd - sp4.analysisHour} h; status`, JSON.stringify(st4.spread));
+
+// Run 5, 3 h later with the spread fetch failing: the previous spread is kept and reported.
+const realSpread = deps.fetchSpread;
+deps.fetchSpread = async (pts, ids) => ({ members: Object.fromEntries(ids.map((id) => [id, pts.map(() => null)])), source: "", errors: ["mock outage"] });
+clock.now += 3;
+const st5 = await runPipeline(deps, { log: (m) => console.log("  run5:", m) });
+deps.fetchSpread = realSpread; mock.gauge = 1;
+const ptf5 = JSON.parse(deps.store.m.get("ptf/mt-gordon:ALP"));
+if (ptf5.analysisHour <= sp4.analysisHour || !ptf5.spread || ptf5.spread.members.length !== 13 || ptf5.spread.analysisHour !== sp4.analysisHour) throw new Error("spread not kept over a failed fetch");
+if (!st5.spread || !st5.spread.carried || st5.spread.members !== 0) throw new Error(`kept spread not reported: ${JSON.stringify(st5.spread)}`);
+console.log(`spread run5: fetch failed, ${st5.spread.carried} points kept the previous spread`);
 
 if (process.env.INSPECT) {
   for (const d of meta.dates.analysis.slice(-6).concat(meta.dates.forecast)) {

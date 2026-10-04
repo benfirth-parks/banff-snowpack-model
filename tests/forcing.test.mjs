@@ -138,6 +138,9 @@ assert.ok(Math.abs(mem.U / fc0.U - 65 / 25) < 1e-9 && Math.abs(mem.Ur / fc0.Ur -
 assert.ok(Math.abs(mem.dirR - ((fc0.dirR + 30) % 360)) < 1e-9, "loading direction turns with the member");
 assert.equal(mem.ghi, 200); assert.ok(Math.abs(mem.cc - 0.9) < 1e-9 && mem.lw > fc0.lw);
 assert.equal(memberForcing(fc0, rawC, null, 1), fc0, "no member data: control");
+assert.equal(memberForcing(fc0, rawC, { T: -4, RH: 95, U: 60, dir: 300, P: 2, ghi: null, cc: 0.9 }, 1).ghi, fc0.ghi, "no member radiation: the control's sun");
 assert.equal(precipScale([2, 2, null], [1, 1, 5]), 2); assert.equal(precipScale([0.2], [0.5]), 1);
+assert.equal(precipScale([3, 3], [1, 1]), 3, "the correction is not clamped tighter than the forcing's own bounds");
+assert.ok(Math.abs(precipScale([10, 10], [1, 1]) - 7.2) < 1e-9 && Math.abs(precipScale([0.1, 0.1], [1, 1]) - 0.15) < 1e-9, "bounded at the product of the forcing's bounds");
 
 console.log("forcing + time tests passed");

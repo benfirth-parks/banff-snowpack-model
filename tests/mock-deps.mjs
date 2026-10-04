@@ -29,6 +29,11 @@ function wx(lat, lon, z, t, bias = { T: 0, P: 1 }) {
 
 export const NOW0 = Math.floor(Date.parse("2026-09-30T16:00:00Z") / 3600000);
 export const clock = { now: NOW0 };
+// Knobs the tests turn: the age of the newest 6-hourly Canadian run (its data
+// ends 84 h after the run, 48 h for HRDPS; Open-Meteo pads the rest with nulls)
+// and a factor on what the gauges report against the model's precipitation.
+export const mock = { lag: 4, gauge: 1 };
+const latestRun = () => Math.floor((clock.now - mock.lag) / 6) * 6;
 
 export const deps = {
   store: new MemStore(),
@@ -40,40 +45,48 @@ export const deps = {
       obs[s.id] = [];
       for (let t = clock.now - Math.ceil(hours); t <= clock.now - 1; t++) {
         const w = wx(s.lat, s.lon, s.z, t);
-        obs[s.id].push({ t, T: w.T, RH: w.RH, U: w.U * (s.z > 2400 ? 1.6 : 0.6), dir: w.dir, HS: null, P: s.precip === "gauge" ? w.P : null });
+        obs[s.id].push({ t, T: w.T, RH: w.RH, U: w.U * (s.z > 2400 ? 1.6 : 0.6), dir: w.dir, HS: null, P: s.precip === "gauge" ? w.P * mock.gauge : null });
       }
     }
     return { obs, errors: [] };
   },
+  // Canadian-model columns: HRDPS then RDPS, so the data ends 84 h after the
+  // newest run and the arrays are null beyond it.
   fetchModel: async (nodes, pastDays) => {
-    const t0 = Math.floor(clock.now / 24) * 24 - pastDays * 24;
+    const t0 = Math.floor(clock.now / 24) * 24 - pastDays * 24, dataEnd = latestRun() + 84;
     const out = nodes.map((n) => {
       const z = 1500 + 900 * hash(n.lat * 100 + n.lon);
       const v = { T: [], RH: [], U: [], dir: [], P: [], ghi: [], dirH: [], difH: [], cc: [] };
       for (let t = t0; t < t0 + (pastDays + 4) * 24; t++) {
         const w = wx(n.lat, n.lon, z, t, { T: 1.5, P: 1.3 });
-        for (const k of Object.keys(v)) v[k].push(w[k]);
+        for (const k of Object.keys(v)) v[k].push(t <= dataEnd ? w[k] : null);
       }
       return { id: n.id, lat: n.lat, lon: n.lon, z, t0, v };
     });
     return { nodes: out, source: "mock", errors: [] };
   },
   // Spread members: the same synthetic weather with a per-member temperature,
-  // precipitation and wind offset. HRDPS stops at 48 h; the NAM run is 6 h old,
-  // runs 84 h and sits 300 m above the point.
+  // precipitation and wind offset. The Open-Meteo members sit at the model
+  // node's elevation; HRDPS is the model nodes' own weather and ends 48 h after
+  // the newest run, RDPS 84 h after it; the NAM run is 6 h old, runs 84 h and
+  // sits 300 m above the point.
   fetchSpread: async (points, ids) => {
-    const members = {};
+    const members = {}, run = latestRun();
     ids.forEach((id, m) => {
       const t0 = id === "noaa_nam12" ? clock.now - 6 : Math.floor(clock.now / 24) * 24 - 24;
-      const n = id === "noaa_nam12" ? 85 : id === "gem_hrdps_continental" ? clock.now + 48 - t0 : 5 * 24;
+      const n = id === "noaa_nam12" ? 85 : 5 * 24;
+      const last = id === "gem_hrdps_continental" ? run + 48 : id === "gem_regional" ? run + 84 : Infinity;
       const off = { T: 2 * Math.sin(m * 1.7), P: 0.6 + 0.08 * m, U: 0.7 + 0.06 * m };
+      if (m === 0) Object.assign(off, { T: 0, P: 1, U: 1 }); // HRDPS: the model nodes' own weather
+      if (m === 1) off.P = 1; // RDPS: the control's precipitation beyond HRDPS's 48 h
       members[id] = points.map((pt) => {
-        const z = id === "noaa_nam12" ? 2300 : 2000;
+        const z = id === "noaa_nam12" ? 2300 : 1500 + 900 * hash(pt.lat * 100 + pt.lon);
         const v = { T: [], RH: [], P: [], U: [], dir: [], ghi: [], cc: [] };
         for (let t = t0; t < t0 + n; t++) {
           const w = wx(pt.lat, pt.lon, z, t, { T: 1.5 + off.T, P: 1.3 * off.P });
-          v.T.push(w.T); v.RH.push(w.RH); v.P.push(t === t0 && id === "noaa_nam12" ? null : w.P); v.U.push(w.U * off.U);
-          v.dir.push(w.dir + 10 * m); v.ghi.push(w.ghi); v.cc.push(w.cc / 100);
+          const has = t <= last;
+          v.T.push(has ? w.T : null); v.RH.push(has ? w.RH : null); v.P.push(!has || (t === t0 && id === "noaa_nam12") ? null : w.P); v.U.push(has ? w.U * off.U : null);
+          v.dir.push(has ? w.dir + 10 * m : null); v.ghi.push(has ? w.ghi : null); v.cc.push(has ? w.cc / 100 : null);
         }
         return { t0, z, v };
       });

@@ -197,16 +197,38 @@ export async function runPipeline(deps, opts = {}) {
   const model = await fetchModel(nodesDef, pastDays, 4);
   if (!model.nodes.length) throw new Error("no forecast-model data");
   const modelStart = Math.min(...model.nodes.map((n) => n.t0));
-  const modelEnd = Math.max(...model.nodes.map((n) => n.t0 + n.v.T.length - 1));
+  // The model data ends at the last hour with a temperature, not at the end of
+  // the arrays: Open-Meteo pads a model's columns with nulls to the requested
+  // days, and the RDPS run is 84 h long and a few hours old. The median over the
+  // nodes, so one stray value cannot extend the window. Beyond this hour the
+  // forcing would fall back to its defaults (0 °C, no precipitation).
+  const lastOk = (n) => { let l = n.t0 - 1; n.v.T.forEach((x, j) => { if (ok(x)) l = n.t0 + j; }); return l; };
+  const ends = model.nodes.map(lastOk).sort((a, b) => a - b);
+  const modelEnd = ends[ends.length >> 1];
 
   // Time axis. The maps and point profiles are forecast to tEnd; the named
-  // points' forecast spread runs on to SPREAD_HOURS after now.
+  // points' forecast spread runs on to SPREAD_HOURS after now, within the data.
   const start = Math.max(tFrom, modelStart);
   const end = Math.min(Math.max(tEnd, tNow + SPREAD_HOURS), modelEnd);
   const times = [];
   for (let t = start; t <= end; t++) times.push(t);
   const kIndex = (t) => t - start;
   if (tA > end) tA = end;
+  const catchingUp = tNow - tA > 6;
+  const doForecast = !catchingUp && (opts.forceForecast || !meta.forecastIssued || tNow - (meta.forecastHour || 0) >= 3 || tA - (meta.analysisHour || 0) >= 3 || !idx);
+
+  // ---- Forecast spread at the named points: fetch -------------------------
+  // Started now, before any state is written, and awaited where it is needed:
+  // a run killed while waiting on the network must not leave the cell states
+  // ahead of the index (the next run would advance them twice). Any failure is
+  // recorded; the spread is optional.
+  let spreadP = null;
+  if (doForecast && deps.fetchSpread) {
+    const locs = [], locOf = new Map();
+    for (const p of meta.points) if (p.kind === "named" && !locOf.has(`${p.lat},${p.lon}`)) { locOf.set(`${p.lat},${p.lon}`, locs.length); locs.push({ lat: p.lat, lon: p.lon }); }
+    spreadP = Promise.resolve().then(() => deps.fetchSpread(locs, SPREAD_MEMBERS.map((m) => m.id)))
+      .then((s) => ({ ...s, locOf }), (e) => ({ members: {}, source: "", errors: [e.message], locOf }));
+  }
   const nodes = model.nodes.map((n) => {
     const v = {};
     for (const key of Object.keys(n.v)) v[key] = times.map((t) => { const j = t - n.t0; return j >= 0 && j < n.v[key].length ? n.v[key][j] : null; });
@@ -230,8 +252,6 @@ export async function runPipeline(deps, opts = {}) {
   const biasIn = idx ? await store.get("bias", { type: "json" }) : null;
   const F = prepareForcing({ times, nodes, stations, tA, windows, bias: biasIn, biasFrom: kIndex(a0) + 1 });
   await store.setJSON("bias", F.bias);
-  const catchingUp = tNow - tA > 6;
-  const doForecast = !catchingUp && (opts.forceForecast || !meta.forecastIssued || tNow - (meta.forecastHour || 0) >= 3 || tA - (meta.analysisHour || 0) >= 3 || !idx);
   log(`analysis ${new Date(t0 * 3.6e6).toISOString()} → ${new Date(tA * 3.6e6).toISOString()} (${tA - t0} h); forecast ${doForecast ? "to " + new Date(Math.min(tEnd, end) * 3.6e6).toISOString() : "skipped"}; model ${model.source}, past_days ${pastDays}`);
 
   // Snapshot hours
@@ -268,17 +288,14 @@ export async function runPipeline(deps, opts = {}) {
   }
   const cellMs = Date.now() - tStart;
 
-  // ---- Forecast spread at the named points ------------------------------
+  // ---- Forecast spread at the named points: runs ---------------------------
   // Each Wx Fx spread member's departure from the Canadian models at the point,
   // added to the station-corrected forcing (src/model/spread.js).
-  let spread = null;
-  if (doForecast && deps.fetchSpread) {
-    const locs = [], locOf = new Map();
-    for (const p of meta.points) if (p.kind === "named" && !locOf.has(`${p.lat},${p.lon}`)) { locOf.set(`${p.lat},${p.lon}`, locs.length); locs.push({ lat: p.lat, lon: p.lon }); }
-    try { spread = { ...(await deps.fetchSpread(locs, SPREAD_MEMBERS.map((m) => m.id))), locOf }; }
-    catch (e) { spread = { members: {}, source: "", errors: [e.message], locOf }; }
-    for (const e of spread.errors) log(`spread: ${e}`);
-  }
+  const spread = spreadP ? await spreadP : null;
+  if (spread) for (const e of spread.errors) log(`spread: ${e}`);
+  const spreadHasData = !!spread && Object.values(spread.members).some((a) => a.some(Boolean));
+  let spreadHorizon = null, spreadCarried = 0;
+  // Last hour of a spread run: SPREAD_HOURS past the analysis, within the Canadian models' data (end).
   const tH = Math.min(tA + SPREAD_HOURS, end);
   const val = (e, key, t) => { const j = t - e.t0, a = e.v[key]; return j >= 0 && j < a.length && ok(a[j]) ? a[j] : null; };
   // Raw member values at hour t, temperature moved to elevation z at the
@@ -287,29 +304,43 @@ export async function runPipeline(deps, opts = {}) {
     if (!e || !ok(val(e, "T", t))) return null;
     return { T: val(e, "T", t) + (ok(z) && ok(e.z) ? 0.0065 * (e.z - z) : 0), RH: val(e, "RH", t), U: val(e, "U", t), dir: val(e, "dir", t), P: val(e, "P", t), ghi: val(e, "ghi", t), cc: val(e, "cc", t) };
   };
-  function runSpread(site, W, li) {
+  // → { horizon, runs: [{ id, short, label, days }] }, or null when the spread
+  // fetch has no Canadian model at the point (then nothing can be a departure).
+  function runSpread(site, W, li, name) {
     const hrdps = spread.members[SPREAD_MEMBERS[0].id]?.[li], rdps = spread.members[SPREAD_MEMBERS[1].id]?.[li];
     const z = (hrdps || rdps)?.z;
-    const T = [];
-    for (let t = tA + 1; t <= tH; t++) T.push(t);
+    let T = [], R = [];
+    for (let t = tA + 1; t <= tH; t++) { T.push(t); R.push(rawAt(hrdps, t, z) || rawAt(rdps, t, z)); }
+    // The run also ends at the last hour the spread fetch has a Canadian value:
+    // its proxy cache line can hold an older cycle than the control's columns.
+    const n = R.reduce((l, r, i) => (r ? i + 1 : l), 0);
+    if (!n) {
+      const msg = `no Canadian model in the spread fetch at ${name}: spread skipped`;
+      if (!spread.errors.includes(msg)) { spread.errors.push(msg); log(`spread: ${msg}`); }
+      return null;
+    }
+    T = T.slice(0, n); R = R.slice(0, n);
+    const hEnd = T[n - 1];
     const Fc = T.map((t) => F.at(W, kIndex(t)));
-    const R = T.map((t) => rawAt(hrdps, t, z) || rawAt(rdps, t, z));
     const pScale = precipScale(Fc.map((f) => f.Pwx), R.map((r) => (r ? r.P : null)));
     // Daily 17:00 snapshots, and the end of the run when it is 6 h or more past the last one.
     const snaps = new Set(T.filter((t) => isSnapHour(t)));
-    if (T.length && tH - Math.max(tA, ...snaps) >= 6) snaps.add(tH);
-    const runs = [{ id: "control", short: "Corrected", e: null }];
-    for (const M of SPREAD_MEMBERS) { const e = spread.members[M.id]?.[li]; if (e) runs.push({ id: M.id, short: M.short, e }); }
-    return runs.map((run) => {
-      let last = tH;
-      if (run.e) { last = run.e.t0 - 1; run.e.v.T.forEach((x, j) => { if (ok(x)) last = run.e.t0 + j; }); }
-      const fc = cloneFull(site), days = [];
-      for (let i = 0; i < T.length && T[i] <= last; i++) {
-        advance(fc, run.e ? memberForcing(Fc[i], R[i], rawAt(run.e, T[i], z), pScale) : Fc[i]);
-        if (snaps.has(T[i])) { closeDay(fc, T[i]); days.push(spreadSnap(fc, T[i])); }
-      }
-      return { id: run.id, short: run.short, days };
-    });
+    if (hEnd - Math.max(tA, ...snaps) >= 6) snaps.add(hEnd);
+    const runs = [{ id: "control", short: "Corrected", label: "Station-corrected Canadian models (HRDPS, then RDPS): the site's own forecast", e: null }];
+    for (const M of SPREAD_MEMBERS) { const e = spread.members[M.id]?.[li]; if (e) runs.push({ id: M.id, short: M.short, label: M.label, e }); }
+    return {
+      horizon: hEnd,
+      runs: runs.map((run) => {
+        let last = hEnd;
+        if (run.e) { last = run.e.t0 - 1; run.e.v.T.forEach((x, j) => { if (ok(x)) last = run.e.t0 + j; }); }
+        const fc = cloneFull(site), days = [];
+        for (let i = 0; i < T.length && T[i] <= last; i++) {
+          advance(fc, run.e ? memberForcing(Fc[i], R[i], rawAt(run.e, T[i], z), pScale) : Fc[i]);
+          if (snaps.has(T[i])) { closeDay(fc, T[i]); days.push(spreadSnap(fc, T[i])); }
+        }
+        return { id: run.id, short: run.short, label: run.label, days };
+      }),
+    };
   }
 
   // ---- Named points and stations ----------------------------------------
@@ -347,8 +378,9 @@ export async function runPipeline(deps, opts = {}) {
         if (fields.has(t)) { closeDay(fc, t); const s = snapshot(fc, t, true); fdays.push({ t, date: localDate(t), ...s.prof, v: s.v, text: s.text }); }
       }
     }
-    const sp = spread && p.kind === "named" && spread.locOf.has(`${p.lat},${p.lon}`) ? runSpread(site, W, spread.locOf.get(`${p.lat},${p.lon}`)) : null;
-    pFc.set(p.id, { now: { t: tA, ...now.prof, v: now.v, text: now.text }, days: fdays, ...(sp ? { spread: { analysisHour: tA, horizon: tH, source: spread.source, members: sp } } : {}) });
+    const sp = spreadHasData && p.kind === "named" && spread.locOf.has(`${p.lat},${p.lon}`) ? runSpread(site, W, spread.locOf.get(`${p.lat},${p.lon}`), p.name) : null;
+    if (sp) spreadHorizon = Math.max(spreadHorizon ?? sp.horizon, sp.horizon);
+    pFc.set(p.id, { now: { t: tA, ...now.prof, v: now.v, text: now.text }, days: fdays, ...(sp ? { spread: { analysisHour: tA, horizon: sp.horizon, source: spread.source, members: sp.runs } } : {}) });
   }
   await store.setJSON("state/points", { t: tA, sites: psites.map(packFull) });
 
@@ -364,8 +396,16 @@ export async function runPipeline(deps, opts = {}) {
       await store.setJSON(`pts/${p.id}`, cur);
     }
     const f = pFc.get(p.id);
-    if (doForecast || !idx) await store.setJSON(`ptf/${p.id}`, { id: p.id, issued, analysisHour: tA, ...f });
-    else {
+    if (doForecast || !idx) {
+      // A forecast run whose spread fetch came back empty keeps the previous
+      // run's spread (its own analysisHour tells the panel it is older) rather
+      // than dropping the table until the next forecast run; not past a day.
+      if (spread && !f.spread && p.kind === "named" && idx) {
+        const prev = await store.get(`ptf/${p.id}`, { type: "json" });
+        if (prev?.spread?.members?.length > 1 && prev.spread.horizon >= tA + 24) { f.spread = prev.spread; spreadCarried++; }
+      }
+      await store.setJSON(`ptf/${p.id}`, { id: p.id, issued, analysisHour: tA, ...f });
+    } else {
       // Between forecast runs only the current state is refreshed; days and the spread stay.
       const prev = (await store.get(`ptf/${p.id}`, { type: "json" })) || { days: [] };
       await store.setJSON(`ptf/${p.id}`, { ...prev, id: p.id, analysisHour: tA, now: f.now });
@@ -390,7 +430,7 @@ export async function runPipeline(deps, opts = {}) {
     finishedAt: new Date().toISOString(), durationMs: Date.now() - started, cellMs,
     analysisFrom: t0, analysisTo: tA, forecastTo: fcSnaps.length ? fcSnaps[fcSnaps.length - 1] : null,
     catchingUp, doForecast, modelSource: model.source, pastDays,
-    spread: spread ? { source: spread.source, members: Object.values(spread.members).filter((a) => a.some(Boolean)).length, horizon: tH, errors: spread.errors } : null,
+    spread: spread ? { source: spread.source, members: Object.values(spread.members).filter((a) => a.some(Boolean)).length, horizon: spreadHorizon, carried: spreadCarried, errors: spread.errors } : null,
     stationsReporting: lastObs.length, stationErrors: obsErr, modelErrors: model.errors,
     stations: F.stationDiagnostics(),
     lapse: Math.round(F.gamma[kA] * 10000) / 10,

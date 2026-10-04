@@ -89,15 +89,19 @@ a { color: var(--accent); }
 .chip.pwl { background: #121f45; color: #fff; }
 .chip.wet { background: #f7f0b6; color: #4a3a05; border-color: #e5d97a; }
 
-.spread h3 { margin: 0 0 6px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+.spread .head { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; margin: 0 0 6px; }
+.spread h3 { margin: 0; font-size: 13px; }
+.spread .pick { font-size: 12px; }
 .spread select { font: inherit; font-size: 12px; }
 .spread .scroll { overflow-x: auto; }
-.spread table { border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums; }
+.spread table { border-collapse: separate; border-spacing: 0; font-size: 12px; font-variant-numeric: tabular-nums; }
 .spread th, .spread td { padding: 2px 6px; text-align: center; white-space: nowrap; }
-.spread th { font-weight: 600; color: var(--ink2); }
-.spread th:first-child, .spread td:first-child { text-align: left; }
-.spread tr.ctrl td { border-bottom: 1px solid var(--border); font-weight: 600; }
-.spread tr.sum td { border-top: 1px solid var(--border); color: var(--ink2); }
+.spread thead th { font-weight: 600; color: var(--ink2); }
+.spread tbody th { font-weight: inherit; color: inherit; }
+/* The model column stays in view while the table scrolls sideways on a phone. */
+.spread th:first-child, .spread td:first-child { text-align: left; position: sticky; left: 0; z-index: 1; background: #fff; }
+.spread tr.ctrl > * { border-bottom: 1px solid var(--border); font-weight: 600; }
+.spread tr.sum > * { border-top: 1px solid var(--border); color: var(--ink2); }
 .spread p { margin: 6px 0 0; }
 
 .maplibregl-popup-content { font: 13px/1.4 var(--font); padding: 10px 12px; max-width: 320px; }
