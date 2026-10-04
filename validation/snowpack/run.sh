@@ -25,7 +25,8 @@
 #
 # Env: SNOWPACK_BIN (default /tmp/claude-0/item7/usr/bin/snowpack),
 #      LD_LIBRARY_PATH (default /tmp/claude-0/item7/usr/lib),
-#      SEASONS ("2023-24 2024-25", default: every <smet-dir>/*/meta.json).
+#      SEASONS ("2023-24 2024-25", default: every <smet-dir>/*/meta.json),
+#      POINTS (file stems, "fts-bowsummit parker-ridge_ALP"; default: all).
 #      The PRO files are large (~100 MB per point-season at 0.02 m elements), so
 #      a full three-season run is best done one season at a time: run, convert
 #      with pro2days.mjs, delete the PRO files, next season.
@@ -110,6 +111,7 @@ for meta in "$SMET"/*/meta.json; do
     const f = (ms) => new Date(ms).toISOString().slice(0, 16);
     for (const p of m) console.log([p.file.replace(/\.smet$/, ""), p.hasHS ? 1 : 0, f(utc(p.start) + 36e5), f(utc(p.end)), p.lat, p.lon, p.z].join(" "));
   ' "$meta" | while read -r id hasHS begin end lat lon z; do
+    if [ -n "${POINTS:-}" ]; then case " $POINTS " in *" $id "*) ;; *) continue;; esac; fi
     [ -f "$SMET/$season/$id.smet" ] || { echo "FAILED  $season/$id  0s  (no $id.smet)" >>"$prefail"; continue; }
     write_sno "$out/sno/$id.sno" "$id" "$id" "$lat" "$lon" "$z" 0.0 0.0 "$begin"
     k=1; for azi in 0.0 90.0 180.0 270.0; do write_sno "$out/sno/$id$k.sno" "$id$k" "$id" "$lat" "$lon" "$z" 38.0 "$azi" "$begin"; k=$((k + 1)); done
