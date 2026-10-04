@@ -16,6 +16,8 @@ The model is checked against Parks Canada field profiles, not just station snow 
 | `scripts/forcing-skill.mjs` | Scores air temperature and humidity at the stations, and the 10 m and ridge wind at the ridge anemometers: analysis with each station withheld, and 48 h forecasts. Also 48 h forecast snowfall at the snow-height stations. |
 | `.github/workflows/export-validation-data.yml` | Copies the live site's past-season point profiles and the weather explorer's 3-year hourly station archive to the `validation-data` branch. |
 | `.github/workflows/cache-forcing.yml` | Caches the archived HRDPS forcing at every model node on the `forcing-cache` branch, for local replays. |
+| `validation/snowpack/` | Reference run of SLF's SNOWPACK at the same points on the same forcing: `export-smet.mjs` (forcing → SMET), `snowpack.ini` + `run.sh` (five sectors per point, measured snow height enforced at the sensor stations), `pro2days.mjs` (PRO profiles → our day records), `reference.sh` (all of it). Scored with the same `compare.mjs` and `station-hs.mjs`; `report/snowpack-vs-v6.md` is the comparison. |
+| `.github/workflows/snowpack-reference.yml` | Builds SNOWPACK (cached) and runs `reference.sh` weekly, publishing the day records and scores to the `snowpack-reference` branch. |
 
 ## Run a comparison
 ```
@@ -32,6 +34,14 @@ node validation/compare.mjs --model /tmp/replay --label v4
 node scripts/forcing-skill.mjs --forcing /tmp/fc --stations /tmp/vd/stations --seasons 2023-24,2024-25,2025-26 --nodes dem
 ```
 A full three-season replay takes about a minute and a half. `--nodes dem` matches what the live site receives.
+
+## Run SNOWPACK as a reference
+SLF's SNOWPACK can be run at the same points on the same forcing and scored with the same scripts, to separate what the forcing gets wrong from what our physics gets wrong. It needs a SNOWPACK build (`snowpack` binary; see the build step in `.github/workflows/snowpack-reference.yml`, about two minutes with cmake and ninja):
+```
+SNOWPACK_BIN=/path/to/snowpack LD_LIBRARY_PATH=/path/to/lib \
+  validation/snowpack/reference.sh /tmp/fc /tmp/vd/stations /tmp/snowpack-ref
+```
+That exports the forcing as SMET, runs SNOWPACK one season at a time (58 points × 3 seasons, about 25 s each on four cores), converts the profiles and writes `report/snowpack-summary.md` and `report/snowpack-station-hs.md` under the output directory; the day records in `days/` can be compared with a replay by any other means. Details of what SNOWPACK is fed and how its output maps onto our records are in the headers of the scripts in `validation/snowpack/`. The weekly action publishes the same output to the `snowpack-reference` branch.
 
 ## Matching and scores
 **Matching.**

@@ -1,0 +1,125 @@
+name: SNOWPACK reference
+
+# Runs SLF's open-source SNOWPACK at every model point for the past seasons, on
+# the same station-corrected forcing our model replays from (the forcing-cache
+# and validation-data branches), converts its profiles to our day records and
+# scores them against the field profiles and the snow-height stations exactly
+# like our model (validation/snowpack/). The day records and the scores go to
+# the `snowpack-reference` branch. Weekly, by hand, or when the tooling changes.
+on:
+  schedule:
+    - cron: "0 10 * * 1" # Mondays 10:00 UTC
+  workflow_dispatch:
+    inputs:
+      seasons:
+        description: Seasons to run (comma-separated)
+        default: 2023-24,2024-25,2025-26
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/snowpack-reference.yml
+      - validation/snowpack/**
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snowpack-reference
+  cancel-in-progress: false
+
+env:
+  # SNOWPACK (with MeteoIO in-tree) at a fixed commit: the run is reproducible
+  # and the built binaries are cached by it. Bump deliberately.
+  SNOWPACK_REPO: https://github.com/snowpack-model/snowpack.git
+  SNOWPACK_REF: b324cbdd1b7f4da4db8ff8a5b408274e88ac1945
+
+jobs:
+  reference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # The built MeteoIO + SNOWPACK (shared libraries and binary) keyed by the
+      # commit and the runner image, whose libstdc++ they link against.
+      - name: Runner image
+        run: echo "IMAGE=${ImageOS:-unknown}-${ImageVersion:-unknown}" >>"$GITHUB_ENV"
+
+      - name: SNOWPACK build cache
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/snowpack-usr
+          key: snowpack-${{ env.SNOWPACK_REF }}-${{ env.IMAGE }}
+
+      - name: Build SNOWPACK
+        if: steps.cache.outputs.cache-hit != 'true'
+        env:
+          PREFIX: ${{ runner.temp }}/snowpack-usr
+          SRC: ${{ runner.temp }}/snowpack-src
+        run: |
+          set -euo pipefail
+          sudo apt-get install -y --no-install-recommends ninja-build >/dev/null
+          git init -q "$SRC" && cd "$SRC"
+          git remote add origin "$SNOWPACK_REPO"
+          git fetch -q --depth 1 origin "$SNOWPACK_REF"
+          git checkout -q FETCH_HEAD
+          cmake -S Source/meteoio -B build-meteoio -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$PREFIX" -DBUILD_SHARED_LIBS=ON -DPLUGIN_SMETIO=ON >/dev/null
+          ninja -C build-meteoio install >/dev/null
+          METEOIO_ROOT=$PREFIX cmake -S Source/snowpack -B build-snowpack -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$PREFIX" -DMETEOIO_ROOT="$PREFIX" -DCMAKE_PREFIX_PATH="$PREFIX" >/dev/null
+          ninja -C build-snowpack install >/dev/null
+          LD_LIBRARY_PATH=$PREFIX/lib "$PREFIX/bin/snowpack" -v 2>&1 | head -2
+
+      - name: Forcing cache and station archive
+        env:
+          FC: ${{ runner.temp }}/forcing-cache
+          VD: ${{ runner.temp }}/validation-data
+        run: |
+          set -euo pipefail
+          mkdir -p "$FC" "$VD"
+          git fetch -q --depth 1 origin forcing-cache && git archive FETCH_HEAD forcing | tar -x -C "$FC"
+          git fetch -q --depth 1 origin validation-data && git archive FETCH_HEAD stations | tar -x -C "$VD"
+          du -sh "$FC" "$VD"
+
+      - name: Run SNOWPACK and score it
+        env:
+          SNOWPACK_BIN: ${{ runner.temp }}/snowpack-usr/bin/snowpack
+          LD_LIBRARY_PATH: ${{ runner.temp }}/snowpack-usr/lib
+          OUT: ${{ runner.temp }}/reference
+          SEASONS: ${{ github.event.inputs.seasons || '2023-24,2024-25,2025-26' }}
+        run: |
+          set -o pipefail
+          validation/snowpack/reference.sh "$RUNNER_TEMP/forcing-cache" "$RUNNER_TEMP/validation-data/stations" "$OUT" "$SEASONS" 2>&1 | tee "$RUNNER_TEMP/reference.log"
+          rc=${PIPESTATUS[0]}
+          # Failed point-seasons are reported in runs/summary.txt and scored as missing; they do not fail the job.
+          [ "$rc" -le 1 ] || exit "$rc"
+
+      - name: Replace the snowpack-reference branch
+        if: always()
+        env:
+          OUT: ${{ runner.temp }}/reference
+        run: |
+          set -euo pipefail
+          [ -d "$OUT/days" ] || { echo "nothing to publish"; exit 0; }
+          mkdir -p "$RUNNER_TEMP/publish/runs"
+          cp -r "$OUT/days" "$RUNNER_TEMP/publish/"
+          cp -r "$OUT/report" "$RUNNER_TEMP/publish/" 2>/dev/null || true
+          cp "$OUT/runs/summary.txt" "$RUNNER_TEMP/publish/runs/" 2>/dev/null || true
+          # SNOWPACK's log of each failed point-season (the ok ones are not worth the space)
+          { grep '^FAILED' "$OUT/runs/summary.txt" 2>/dev/null || true; } | awk '{print $2}' | while read -r ps; do cp "$OUT/runs/$ps.log" "$RUNNER_TEMP/publish/runs/${ps/\//_}.log" 2>/dev/null || true; done
+          cp "$RUNNER_TEMP/reference.log" "$RUNNER_TEMP/publish/"
+          cp validation/snowpack/snowpack.ini "$RUNNER_TEMP/publish/"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan snowpack-reference
+          git rm -rf --quiet .
+          git clean -fdq
+          cp -r "$RUNNER_TEMP/publish/." .
+          git add -A
+          git commit -q -m "SNOWPACK reference $(date -u +%Y-%m-%dT%H:%MZ) [skip netlify]"
+          git push -f origin snowpack-reference
+          du -sh "$RUNNER_TEMP/publish"
