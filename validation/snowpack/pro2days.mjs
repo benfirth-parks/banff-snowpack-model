@@ -18,10 +18,13 @@
 // Day records, one per local date (America/Edmonton), from the 3-hourly profile
 // nearest 17:00 local, in the layout of scripts/replay.mjs:
 //   t     epoch hour of 17:00 local; tp: epoch hour of the profile used
-//   hs    [flat, N, E, S, W] snow height, cm, perpendicular to the slope. PRO
-//         heights are vertical (SNOWPACK divides by cos(slope) on output); they
-//         are multiplied back, which is what a pit measures and what our columns
-//         are. null for a sector whose PRO file is missing.
+//   hs    [flat, N, E, S, W] snow height, cm, as the PRO reports it: SNOWPACK gives
+//         a virtual slope cos(slope) of the flat snowfall and writes heights
+//         divided by cos(slope) again, so PRO heights are flat-equivalent, which
+//         is the convention of our model's slope columns too (site.js adds no
+//         cos factor; a pit's perpendicular depth would be these × cos 38°). All
+//         depths in A, W and S below are in the same units. null for a sector
+//         whose PRO file is missing.
 //   A     per sector, top-down, 6 ints per element: [top depth cm x10, class,
 //         hand hardness x10, T degC x10, grain size mm x10, density kg/m3].
 //         Class from the Swiss code F1 in 0513 (1 PP, 2 DF, 3 RG, 4 FC, 5 DH,
@@ -51,7 +54,7 @@
 //         difference >= 0.4 mm (0602), hardness difference >= 1.7 (0603), depth
 //         18-94 cm.
 //   S     per sector, SNOWPACK's 0530 line: [profile type, stability class,
-//         z_Sdef, Sdef, z_Sn38, Sn38, z_Sk38, Sk38], z in perpendicular cm above
+//         z_Sdef, Sdef, z_Sn38, Sn38, z_Sk38, Sk38], z in cm above
 //         the ground (so hs - S[6] is the depth of SNOWPACK's weak layer).
 //   obsHS station points: the baseline-adjusted sensor snow height, cm, at 17:00
 //         local (previous hour when missing), from <smet>/<season>/<id>.hs.json,
@@ -216,7 +219,7 @@ function skierSearch(topS, HSv, Pk, ssi, nlem) {
 // One profile block -> { hs, A, W, S }. `cos` is cos(slope), `cfg` the file's units.
 function decodeBlock(L, cos, cfg, tp) {
   const s530 = nums(L["0530"]);
-  const S = s530 && s530.length >= 8 ? [s530[0], s530[1], rN(s530[2] * cos, 10) / 10, s530[3], rN(s530[4] * cos, 10) / 10, s530[5], rN(s530[6] * cos, 10) / 10, s530[7]] : null;
+  const S = s530 && s530.length >= 8 ? [s530[0], s530[1], rN(s530[2], 10) / 10, s530[3], rN(s530[4], 10) / 10, s530[5], rN(s530[6], 10) / 10, s530[7]] : null;
   const tops = nums(L["0501"]);
   const rho = nums(L["0502"]);
   if (!tops || !rho || tops.length < 1 || (tops.length === 1 && tops[0] === 0)) return { hs: 0, A: [], W: [], S };
@@ -233,14 +236,14 @@ function decodeBlock(L, cos, cfg, tp) {
   const sk = nums(L["0533"]), ssi = nums(L["0604"]), rta = nums(L["0607"]), dgs = nums(L["0602"]), dh = nums(L["0603"]), str = nums(L["0601"]);
   const topS = top.slice(off), botS = topS.map((_, e) => (e > 0 ? topS[e - 1] : 0));
   const HSv = topS[nS - 1];
-  const hs = r0(HSv * cos);
+  const hs = r0(HSv);
   const cls = new Array(nS);
   const A = [];
   for (let e = nS - 1; e >= 0; e--) {
     cls[e] = classOf(type?.[e] ?? 0);
-    A.push(rN((HSv - topS[e]) * cos, 10), cls[e], hard ? rN(hard[e], 10) : null, T ? rN(T[off + e], 10) : null, gs ? rN(gs[e], 10) : null, r0(rho[off + e]));
+    A.push(rN(HSv - topS[e], 10), cls[e], hard ? rN(hard[e], 10) : null, T ? rN(T[off + e], 10) : null, gs ? rN(gs[e], 10) : null, r0(rho[off + e]));
   }
-  const depthOf = (e) => (HSv - topS[e]) * cos;     // perpendicular cm below the surface
+  const depthOf = (e) => HSv - topS[e];             // cm below the surface, in the PRO's (vertical) heights
   // SNOWPACK's two lemons (Stability::initStructuralStabilityIndex: dhard > 1.5, dgsz > 0.5), or back from SSI = 2 - n + Sk38.
   const nlem = new Array(nS).fill(0).map((_, e) => (dh && dgs ? (dh[e] > 1.5 ? 1 : 0) + (dgs[e] > 0.5 ? 1 : 0) : ssi && sk && ssi[e] < MAX_STAB ? Math.min(2, Math.max(0, Math.round(2 + sk[e] - ssi[e]))) : 0));
   // The layer that fails at the interface on top of element e: the weaker of e and e+1
@@ -252,10 +255,14 @@ function decodeBlock(L, cos, cfg, tp) {
     return (f1 === 4 || f1 === 5 || f1 === 6 || f1 === 9 ? 1 : 0) + (gs && gs[w] >= 1.25 ? 1 : 0) + (hard && hard[w] <= 1.3 ? 1 : 0) +
       (dgs && dgs[e] >= 0.4 ? 1 : 0) + (dh && dh[e] >= 1.7 ? 1 : 0) + (d >= 18 && d <= 94 ? 1 : 0);
   };
+  // W depth is the top of the weak layer, as the replay's weakLayers() writes it (the
+  // failure interface is the top of element e; when the weaker side is the layer
+  // above, e + 1, its top is one element higher).
+  const depthW = (e) => depthOf(weakOf(e));
   const entry = (e, p) => {
     const w = weakOf(e);
     // burial as the replay writes it: the epoch hour the layer above the weak one was deposited (0505 is its age in days at tp)
-    return [r0(depthOf(e)), cls[w], age ? r0(tp - 24 * age[off + Math.min(w + 1, nS - 1)]) : null, p, lemons(e, w), rN(sk?.[e], 100), rN(ssi?.[e], 100), rN(rta?.[w], 100)];
+    return [r0(depthW(e)), cls[w], age ? r0(tp - 24 * age[off + Math.min(w + 1, nS - 1)]) : null, p, lemons(e, w), rN(sk?.[e], 100), rN(ssi?.[e], 100), rN(rta?.[w], 100)];
   };
   const W = [];
   if (sk && ssi) {
@@ -263,7 +270,10 @@ function decodeBlock(L, cos, cfg, tp) {
     const { pick, win } = skierSearch(topS, HSv, Pk, ssi, nlem);
     // SNOWPACK's own pick when 0530 has it (z_Sk38 is the interface height, vertical cm), else the replicated search.
     let e0 = null, p0 = null;
-    if (s530 && ok(s530[6]) && s530[7] < MAX_STAB) {
+    // Sk38 = -999 (nodata) with z at the surface and class -1 means the skier search found
+    // no interface (thin packs: the first interface below the penetration is already in
+    // the bottom 20 cm); it must not read as a weak layer at depth 0.
+    if (s530 && ok(s530[6]) && s530[7] > 0 && s530[7] < MAX_STAB) {
       e0 = topS.findIndex((z) => Math.abs(z - s530[6]) <= 0.06);
       if (e0 >= 0) p0 = P_OF_CLASS[s530[1]] ?? 0; else e0 = null;
       if (pick !== null && e0 !== null && pick !== e0) decodeBlock.mismatch++;
@@ -272,7 +282,7 @@ function decodeBlock(L, cos, cfg, tp) {
     for (const e of [...win].sort((a, b) => ssi[a] - ssi[b])) {
       if (W.length >= 3) break;
       if (e === e0 || sk[e] >= MAX_STAB || class0(ssi[e]) > 3) continue;
-      if (W.some((w) => Math.abs(w[0] - depthOf(e)) < 10)) continue;
+      if (W.some((w) => Math.abs(w[0] - depthW(e)) < 10)) continue;
       W.push(entry(e, P_OF_CLASS[class0(ssi[e])]));
     }
   }

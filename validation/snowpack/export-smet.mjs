@@ -12,8 +12,27 @@
 // --nodes  as in replay.mjs; the v5/v6 replays used "dem".
 //
 // Output: <out>/<season>/<id>.smet (SMET 1.1 ASCII, hourly, UTC, tz = 0) with
-// fields timestamp TA RH VW DW ISWR ILWR PSUM PSUM_PH TSG HS. HS (m) is given
-// only at station points with a snow-height sensor, for
+// fields timestamp TA RH VW DW VW_DRIFT DW_DRIFT ISWR ILWR PSUM PSUM_PH TSG HS.
+// Conventions, matching what our model makes of the same numbers:
+//   - PSUM is the sum over the hour ending at the stamp (SMET's convention, and
+//     the forcing's); every other field is the value at the stamp.
+//   - The forcing's ghi is the mean over the hour ending at the stamp (Open-Meteo),
+//     which our model honours by placing the sun at t - 0.5 h (src/model/site.js,
+//     solar.js). SNOWPACK reads ISWR as instantaneous and puts the sun at the step,
+//     so ISWR here is centred on the stamp, the mean of the hourly means either
+//     side of it; otherwise its sun runs half an hour late (east slopes lose a
+//     tenth of their daily shortwave, west slopes gain it).
+//   - VW/DW are the local 10 m wind, as in our model's energy balance. VW_DRIFT/
+//     DW_DRIFT are what moves snow on our model's slopes (site.js): the local wind
+//     blended toward the ridge wind Ur by elevation exposure, and the regional
+//     flow direction dirR. SNOWPACK uses them for erosion and lee deposition on the
+//     virtual slopes and falls back to VW/DW where they are missing.
+//   - TSG = 273.15 K with no soil: SNOWPACK holds its bottom node at 0 °C (a
+//     Dirichlet condition). Our model's ground is also 0 °C, but behind a thermal
+//     resistance (GROUND_R in src/model/snowpack.js), so basal heat flux into a
+//     thin early pack is not identical between the two.
+// HS (m) is given only at the stations whose snowfall our model drives from the
+// snow-height sensor (precip "hs" in domain.js, with readings), for
 // ENFORCE_MEASURED_SNOW_HEIGHTS, and is the sensor series as our model reads it:
 // cleaned by cleanHS (plateaus, spikes and drop-outs removed), baseline-adjusted,
 // and made gap-free (0 before the first accepted reading, linear across gaps,
@@ -21,8 +40,7 @@
 // value when heights are enforced. The unfiltered baseline-adjusted sensor
 // series, which the replay scores against (obsHS), goes to <out>/<season>/<id>.hs.json
 // as { t0: epoch hour of v[0], v: [cm or null per hour] } so pro2days.mjs can
-// give SNOWPACK the same obsHS as our model. TSG is 273.15 K: no soil, 0 °C
-// ground, like our model. <out>/<season>/meta.json lists the files
+// give SNOWPACK the same obsHS as our model. <out>/<season>/meta.json lists the files
 // ({ id, file, lat, lon, z, hasHS, start, end }); <out>/points.json is the
 // replay's point list, which compare.mjs reads.
 import { readFileSync, writeFileSync, mkdirSync, readdirSync } from "node:fs";
@@ -42,6 +60,7 @@ if (!FORCING || !STN || !OUT) { console.error("--forcing, --stations and --out a
 const imp = (p) => import(pathToFileURL(join(CODE, p)).href);
 const { STATIONS, NAMED_POINTS, BANDS } = await imp("src/model/domain.js");
 const { prepareForcing, snapshotWindows, cleanHS } = await imp("src/model/forcing.js");
+const { exposure } = await imp("src/model/site.js");
 const { snapHour, isSnapHour } = await imp("src/model/time.js");
 const { HIST, hsBaselines, adjHS } = await imp("netlify/lib/pipeline.mjs");
 
@@ -102,7 +121,7 @@ function header(p) {
     `station_name     = ${p.name}${p.band ? " " + p.band : ""}`,
     `latitude         = ${p.lat}`, `longitude        = ${p.lon}`, `altitude         = ${p.z}`,
     `nodata           = ${NODATA}`, "tz               = 0",
-    "fields           = timestamp TA RH VW DW ISWR ILWR PSUM PSUM_PH TSG HS",
+    "fields           = timestamp TA RH VW DW VW_DRIFT DW_DRIFT ISWR ILWR PSUM PSUM_PH TSG HS",
     "[DATA]",
   ];
 }
@@ -145,19 +164,26 @@ for (const season of wanted) {
     const W = F.weightsFor({ id: p.id, lat: p.lat, lon: p.lon, z: p.z });
     const stn = p.kind === "station" ? stations.find((s) => s.id === p.id) : null;
     const base = baselines[p.id]?.base ?? 0; // the station's hsBase in the model, and adjHS's offset in the replay
-    const hs = stn && stn.o.HS.some(ok) ? hsSeries(stn.o.HS, base, kA) : null;
+    // Heights are enforced where our model drives snowfall from the sensor (forcing.js: precip "hs").
+    const hs = stn && stn.precip === "hs" && stn.o.HS.some(ok) ? hsSeries(stn.o.HS, base, kA) : null;
+    const e = exposure(p.z); // slopes' drift wind: U blended toward Ur by exposure, as site.js does
+    const drift = (f) => (e > 0 && ok(f.Ur) ? Math.exp((1 - e) * Math.log(Math.max(0, f.U) + 1.4) + e * Math.log(Math.max(0, f.Ur) + 1.4)) - 1.4 : Math.max(0, f.U));
+    const deg = (d) => (ok(d) ? String(((Math.round(d) % 360) + 360) % 360) : NODATA);
     const lines = header(p);
     let filled = 0;
+    let f = F.at(W, kOf(from));
     for (let t = from; t <= end; t++) {
-      const k = kOf(t), f = F.at(W, k);
+      const k = kOf(t), fNext = t < end ? F.at(W, k + 1) : f;
       const P = +Math.max(0, f.P).toFixed(4); // rounded first, so a dry row also has phase 0
+      const iswr = (Math.max(0, f.ghi) + Math.max(0, fNext.ghi)) / 2; // centred on the stamp (see header)
       let HS = NODATA;
       if (hs) { HS = (hs.v[k] / 100).toFixed(3); if (hs.fill[k]) filled++; }
       lines.push([
-        iso(t), (f.Ta + T0K).toFixed(2), clamp(f.RH / 100, 0.01, 1).toFixed(3), Math.max(0, f.U).toFixed(2),
-        ok(f.dir) ? String(((Math.round(f.dir) % 360) + 360) % 360) : NODATA, Math.max(0, f.ghi).toFixed(1), f.lw.toFixed(1),
+        iso(t), (f.Ta + T0K).toFixed(2), clamp(f.RH / 100, 0.01, 1).toFixed(3), Math.max(0, f.U).toFixed(2), deg(f.dir),
+        drift(f).toFixed(2), deg(f.dirR ?? f.dir), iswr.toFixed(1), f.lw.toFixed(1),
         P.toFixed(4), (P > 0 ? clamp(1 - f.sf, 0, 1) : 0).toFixed(3), T0K.toFixed(2), HS,
       ].join(" "));
+      f = fNext;
     }
     const stem = p.id.replace(":", "_");
     writeFileSync(join(OUT, season, `${stem}.smet`), lines.join("\n") + "\n");
