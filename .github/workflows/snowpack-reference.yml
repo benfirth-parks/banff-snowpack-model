@@ -63,7 +63,7 @@ jobs:
           SRC: ${{ runner.temp }}/snowpack-src
         run: |
           set -euo pipefail
-          sudo apt-get install -y --no-install-recommends ninja-build >/dev/null
+          command -v ninja >/dev/null || { sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ninja-build >/dev/null; } # on the ubuntu-24.04 image already
           git init -q "$SRC" && cd "$SRC"
           git remote add origin "$SNOWPACK_REPO"
           git fetch -q --depth 1 origin "$SNOWPACK_REF"
@@ -72,7 +72,8 @@ jobs:
           ninja -C build-meteoio install >/dev/null
           METEOIO_ROOT=$PREFIX cmake -S Source/snowpack -B build-snowpack -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$PREFIX" -DMETEOIO_ROOT="$PREFIX" -DCMAKE_PREFIX_PATH="$PREFIX" >/dev/null
           ninja -C build-snowpack install >/dev/null
-          LD_LIBRARY_PATH=$PREFIX/lib "$PREFIX/bin/snowpack" -v 2>&1 | head -2
+          # `snowpack -v` wants an operand and exits 1 after printing the version; only the print is wanted here
+          LD_LIBRARY_PATH=$PREFIX/lib "$PREFIX/bin/snowpack" -v 2>&1 | grep -i version || true
 
       - name: Forcing cache and station archive
         env:
@@ -85,6 +86,17 @@ jobs:
           git fetch -q --depth 1 origin validation-data && git archive FETCH_HEAD stations | tar -x -C "$VD"
           du -sh "$FC" "$VD"
 
+      # Start from the previous publication so a run of one season (or one that
+      # stops early) replaces only the point-seasons it converted, as
+      # cache-forcing.yml keeps its old season files.
+      - name: Previous reference
+        env:
+          OUT: ${{ runner.temp }}/reference
+        run: |
+          if git fetch -q --depth 1 origin snowpack-reference 2>/dev/null; then
+            mkdir -p "$OUT" && git archive FETCH_HEAD days 2>/dev/null | tar -x -C "$OUT" || echo "no previous day records"
+          fi
+
       - name: Run SNOWPACK and score it
         env:
           SNOWPACK_BIN: ${{ runner.temp }}/snowpack-usr/bin/snowpack
@@ -92,11 +104,16 @@ jobs:
           OUT: ${{ runner.temp }}/reference
           SEASONS: ${{ github.event.inputs.seasons || '2023-24,2024-25,2025-26' }}
         run: |
+          # The default shell is `bash -e`; errexit is lifted for the pipeline so the
+          # exit code can be read. reference.sh exits 2 when some point-seasons
+          # failed (they are listed in runs/summary.txt and scored as missing),
+          # which does not fail the job; anything else does.
+          set +e
           set -o pipefail
           validation/snowpack/reference.sh "$RUNNER_TEMP/forcing-cache" "$RUNNER_TEMP/validation-data/stations" "$OUT" "$SEASONS" 2>&1 | tee "$RUNNER_TEMP/reference.log"
           rc=${PIPESTATUS[0]}
-          # Failed point-seasons are reported in runs/summary.txt and scored as missing; they do not fail the job.
-          [ "$rc" -le 1 ] || exit "$rc"
+          set -e
+          [ "$rc" -eq 0 ] || [ "$rc" -eq 2 ] || exit "$rc"
 
       - name: Replace the snowpack-reference branch
         if: always()

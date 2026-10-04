@@ -16,7 +16,9 @@
 // <smet>/points.json to <out>/points.json.
 //
 // Day records, one per local date (America/Edmonton), from the 3-hourly profile
-// nearest 17:00 local, in the layout of scripts/replay.mjs:
+// nearest 17:00 local, in the layout of scripts/replay.mjs. Profiles fall on
+// 00/03/.../21 UTC, so the record is the 17:00 profile in MST (00 UTC) but the
+// 18:00 one in MDT (autumn and spring), an hour later than our model's snapshot:
 //   t     epoch hour of 17:00 local; tp: epoch hour of the profile used
 //   hs    [flat, N, E, S, W] snow height, cm, as the PRO reports it: SNOWPACK gives
 //         a virtual slope cos(slope) of the flat snowfall and writes heights
@@ -42,11 +44,13 @@
 //         interface its skier search picks (0530 z_Sk38; Stability::findWeakLayer
 //         replicated when 0530 is missing) with p from its stability class,
 //         Schweizer/Bellaire 2007 scheme as in StabilityAlgorithms.cc: poor 100,
-//         fair 60, good 0. The next entries are the lowest-SSI interfaces in the
-//         same search window (below the skier penetration depth, above the
-//         bottom 20 cm, at least 10 cm from a listed one) that SNOWPACK's SSI
-//         classes call poor (SSI < 1.25, p 100) or fair (< 1.55, p 60). Interfaces
-//         at the stability cap (Sk38 = 6, "not evaluated") are never listed.
+//         fair 60, good 0. SNOWPACK's search window stops 20 cm above the ground
+//         and at the skier penetration depth; the next entries are the lowest-SSI
+//         interfaces anywhere from 10 cm depth to the ground (at least 10 cm from
+//         a listed one) that SNOWPACK's SSI classes call poor (SSI < 1.25, p 100)
+//         or fair (< 1.55, p 60), so the list can reach basal layers like our
+//         model's. Interfaces at the stability cap (Sk38 = 6, "not evaluated")
+//         are never listed.
 //         lemons = round(6 x RTA) from 0607 (Monti & Schweizer relative threshold
 //         sum; the weakest layer is 6 by construction); without 0607 the count of
 //         Schweizer & Jamieson (2007) criteria that the file allows: persistent
@@ -279,12 +283,18 @@ function decodeBlock(L, cos, cfg, tp) {
       if (pick !== null && e0 !== null && pick !== e0) decodeBlock.mismatch++;
     } else if (pick !== null && sk[pick] < MAX_STAB) { e0 = pick; p0 = P_OF_CLASS[class2(nlem[pick], sk[pick])]; }
     if (e0 !== null) W.push(entry(e0, p0));
-    for (const e of [...win].sort((a, b) => ssi[a] - ssi[b])) {
+    // The next entries come from the whole column (0604 is written for every
+    // interface), from 10 cm depth to the ground, not only from the skier search
+    // window, which stops 20 cm above the ground: our model's list has no bottom
+    // limit, and a fifth of the observed test failures are in those 20 cm.
+    const cands = [];
+    for (let e = 0; e < nS - 1; e++) if (e !== e0 && sk[e] < MAX_STAB && class0(ssi[e]) <= 3 && depthW(e) >= 10) cands.push(e);
+    for (const e of cands.sort((a, b) => ssi[a] - ssi[b])) {
       if (W.length >= 3) break;
-      if (e === e0 || sk[e] >= MAX_STAB || class0(ssi[e]) > 3) continue;
       if (W.some((w) => Math.abs(w[0] - depthW(e)) < 10)) continue;
       W.push(entry(e, P_OF_CLASS[class0(ssi[e])]));
     }
+    void win;
   }
   return { hs, A, W, S };
 }

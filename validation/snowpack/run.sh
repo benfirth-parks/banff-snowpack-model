@@ -23,8 +23,8 @@
 # missing) has its partial PRO/SMET output removed, so pro2days.mjs sees no
 # output for that point-season rather than a truncated one; its .log stays.
 #
-# Env: SNOWPACK_BIN (default /tmp/claude-0/item7/usr/bin/snowpack),
-#      LD_LIBRARY_PATH (default /tmp/claude-0/item7/usr/lib),
+# Env: SNOWPACK_BIN (default: `snowpack` on PATH), LD_LIBRARY_PATH when its
+#      shared libraries live outside the system paths,
 #      SEASONS ("2023-24 2024-25", default: every <smet-dir>/*/meta.json),
 #      POINTS (file stems, "fts-bowsummit parker-ridge_ALP"; default: all).
 #      The PRO files are large (~100 MB per point-season at 0.02 m elements), so
@@ -34,13 +34,14 @@ set -u
 SMET=${1:?usage: run.sh <smet-dir> <out-dir> [jobs]}
 OUT=${2:?usage: run.sh <smet-dir> <out-dir> [jobs]}
 JOBS=${3:-$(nproc 2>/dev/null || echo 2)}
-export SNOWPACK_BIN=${SNOWPACK_BIN:-/tmp/claude-0/item7/usr/bin/snowpack}
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:-/tmp/claude-0/item7/usr/lib}
+# Exit codes: 1 = some point-seasons failed (the rest ran), 2 = could not run at all.
+export SNOWPACK_BIN=${SNOWPACK_BIN:-$(command -v snowpack || true)}
+[ -z "${LD_LIBRARY_PATH:-}" ] || export LD_LIBRARY_PATH
 HERE=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 TEMPLATE=$HERE/snowpack.ini
-SMET=$(cd "$SMET" && pwd) || exit 1
-mkdir -p "$OUT" && OUT=$(cd "$OUT" && pwd) || exit 1
-[ -x "$SNOWPACK_BIN" ] || { echo "snowpack binary not found: $SNOWPACK_BIN" >&2; exit 1; }
+SMET=$(cd "$SMET" && pwd) || exit 2
+mkdir -p "$OUT" && OUT=$(cd "$OUT" && pwd) || exit 2
+[ -n "$SNOWPACK_BIN" ] && [ -x "$SNOWPACK_BIN" ] || { echo "snowpack binary not found (set SNOWPACK_BIN, and LD_LIBRARY_PATH for its libraries): '${SNOWPACK_BIN:-}'" >&2; exit 2; }
 
 # One bare-ground .sno per sector. SNOWPACK names sectors by appending 1..4 to
 # the station id; it takes slope and azimuth from here (SLOPE_FROM_SNO).
@@ -130,7 +131,7 @@ EOF
   done
 done
 n=$(wc -l <"$jobs")
-[ "$n" -gt 0 ] || { echo "no point-seasons found under $SMET (need <season>/meta.json with existing .smet files)" >&2; cat "$prefail" >&2; exit 1; }
+[ "$n" -gt 0 ] || { echo "no point-seasons found under $SMET (need <season>/meta.json with existing .smet files)" >&2; cat "$prefail" >&2; exit 2; }
 echo "snowpack: $n point-seasons, $JOBS parallel, out $OUT"
 t0=$SECONDS
 { cat "$prefail"; xargs -P "$JOBS" -L1 bash -c 'run_one "$@"' _ <"$jobs"; } | tee "$OUT/summary.txt"

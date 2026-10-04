@@ -33,19 +33,21 @@ echo "[$(ts)] export SMET forcing: $SEASONS"
 node "$HERE/export-smet.mjs" --forcing "$FC" --stations "$STN" --out "$OUT/smet" --nodes dem --seasons "$SEASONS"
 
 mkdir -p "$OUT/runs" "$OUT/days"
+# Exit codes: 0 all ran; 2 some point-seasons failed (listed in runs/summary.txt,
+# scored as missing); anything else = a step could not run (set -e stops here).
 failed=0
 for season in ${SEASONS//,/ }; do
   echo "[$(ts)] snowpack $season ($JOBS jobs)"
-  SEASONS=$season "$HERE/run.sh" "$OUT/smet" "$OUT/runs" "$JOBS" || failed=1 # writes runs/<season>/summary.txt
+  SEASONS=$season "$HERE/run.sh" "$OUT/smet" "$OUT/runs" "$JOBS" || { rc=$?; [ "$rc" -eq 1 ] && failed=1 || exit "$rc"; } # writes runs/<season>/summary.txt
   echo "[$(ts)] convert $season"
   node "$HERE/pro2days.mjs" --runs "$OUT/runs" --smet "$OUT/smet" --out "$OUT/days" --seasons "$season"
   [ -n "${KEEP_PRO:-}" ] || rm -f "$OUT/runs/$season"/*.pro "$OUT/runs/$season"/*_byk.smet
 done
-cat "$OUT"/runs/*/summary.txt >"$OUT/runs/summary.txt" # all seasons (run.sh's own copy holds only the last)
+shopt -s nullglob; cat "$OUT"/runs/*/summary.txt >"$OUT/runs/summary.txt"; shopt -u nullglob # all seasons (run.sh's own copy holds only the last)
 
 echo "[$(ts)] score"
 mkdir -p "$OUT/report"
 node "$ROOT/validation/compare.mjs" --model "$OUT/days" --label "$LABEL" --out "$OUT/report"
 node "$ROOT/validation/station-hs.mjs" --model "$OUT/days" --label "$LABEL" --out "$OUT/report"
-echo "[$(ts)] done: $(grep -c '^ok' "$OUT/runs/summary.txt") point-seasons ok, $(grep -c '^FAILED' "$OUT/runs/summary.txt" || true) failed"
-exit $failed
+echo "[$(ts)] done: $(grep -c '^ok' "$OUT/runs/summary.txt" || true) point-seasons ok, $(grep -c '^FAILED' "$OUT/runs/summary.txt" || true) failed"
+exit $((failed ? 2 : 0))

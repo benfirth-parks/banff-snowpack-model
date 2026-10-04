@@ -10,8 +10,10 @@
 // Over every point, season and day from 1 December to 30 April with the flat
 // column at least --min-hs cm deep (default 50): the share of profiles (all
 // five sectors) with at least one p >= 50 weak layer, the mean number of such
-// layers per profile, and the same for p >= 60 and p = 100, which are the
-// values SNOWPACK's fair and poor classes map to in pro2days.mjs.
+// layers per profile, and the same at p >= 60 and p >= 90. Our model's p is
+// continuous and tops out near 96 (six lemons); SNOWPACK's is 100 / 60 / 0 for
+// its poor / fair / good classes (pro2days.mjs), so p >= 90 means "poor" there
+// and ">= 6 lemons" here, and p >= 60 admits "fair".
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { gunzipSync } from "node:zlib";
 import { join } from "node:path";
@@ -41,7 +43,7 @@ for (const { label, dir } of runs) {
         const W = d.W?.[a];
         if (!W) continue;
         c.profiles++;
-        const n50 = W.filter((w) => w[3] >= 50).length, n60 = W.filter((w) => w[3] >= 60).length, n100 = W.filter((w) => w[3] >= 100).length;
+        const n50 = W.filter((w) => w[3] >= 50).length, n60 = W.filter((w) => w[3] >= 60).length, n100 = W.filter((w) => w[3] >= 90).length;
         c.n50 += n50; c.n60 += n60; c.n100 += n100;
         if (n50) c.p50++; if (n60) c.p60++; if (n100) c.p100++;
       }
@@ -52,6 +54,6 @@ for (const { label, dir } of runs) {
 const pct = (a, b) => (b ? `${((100 * a) / b).toFixed(0)} %` : "–");
 const per = (a, b) => (b ? (a / b).toFixed(2) : "–");
 console.log(`Weak-layer flag rate, 1 Dec – 30 Apr, flat HS >= ${MIN_HS} cm, all five sectors\n`);
-console.log("| Run | Seasons | Profiles | ≥1 layer p ≥ 50 | layers p ≥ 50 per profile | ≥1 layer p ≥ 60 | ≥1 layer p = 100 |");
+console.log("| Run | Seasons | Profiles | ≥1 layer p ≥ 50 | layers p ≥ 50 per profile | ≥1 layer p ≥ 60 | ≥1 layer p ≥ 90 |");
 console.log("|---|---|---|---|---|---|---|");
 for (const r of rows) console.log(`| ${r.label} | ${r.seasons} | ${r.profiles} | ${pct(r.p50, r.profiles)} | ${per(r.n50, r.profiles)} | ${pct(r.p60, r.profiles)} | ${pct(r.p100, r.profiles)} |`);

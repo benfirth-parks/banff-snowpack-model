@@ -95,6 +95,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 60,
+    "covered": 22
    }
   },
   "sh": {
@@ -126,12 +130,17 @@
     "h": 7,
     "grain": "DH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": -1.3,
   "tempRMSE": 1.4,
@@ -233,6 +242,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 66,
+    "covered": 22
    }
   },
   "sh": {
@@ -259,12 +272,17 @@
     "h": 15,
     "grain": "FC",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -381,6 +399,10 @@
    "zones": {
     "model": 2,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 96,
+    "covered": 46
    }
   },
   "sh": {
@@ -402,6 +424,7 @@
     "h": 40,
     "grain": "RGxf",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -409,12 +432,17 @@
     "h": 0,
     "grain": "FCxr",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 1,
    "confirmed": 1
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -516,6 +544,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 86,
+    "covered": 29
    }
   },
   "sh": {
@@ -547,6 +579,7 @@
     "h": 70,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -554,6 +587,7 @@
     "h": 42,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    },
    {
@@ -561,12 +595,17 @@
     "h": 42,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -703,6 +742,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 72,
+    "covered": 36
    }
   },
   "sh": {
@@ -724,6 +767,7 @@
     "h": 32,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "MFcr"
    },
    {
@@ -731,12 +775,17 @@
     "h": 5,
     "grain": "DH",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": 0.9,
   "tempRMSE": 1,
@@ -833,6 +882,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 63,
+    "covered": 16
    }
   },
   "sh": {
@@ -879,12 +932,17 @@
     "h": 10,
     "grain": "DH",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -1016,6 +1074,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 89,
+    "covered": 48
    }
   },
   "sh": {
@@ -1037,12 +1099,17 @@
     "h": 5,
     "grain": null,
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -1149,6 +1216,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 97,
+    "covered": 17
    }
   },
   "sh": {
@@ -1166,6 +1237,10 @@
   },
   "tests": [],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -1269,6 +1344,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 119,
+    "covered": 36
    }
   },
   "sh": {
@@ -1330,6 +1409,7 @@
     "h": 95,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -1337,11 +1417,16 @@
     "h": 77,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
+   "confirmed": 0
+  },
+  "weak90": {
+   "model": 2,
    "confirmed": 0
   },
   "tempBias": null,
@@ -1459,6 +1544,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 106,
+    "covered": 49
    }
   },
   "sh": {
@@ -1478,6 +1567,10 @@
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": -0.2,
   "tempRMSE": 0.8,
@@ -1568,6 +1661,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 75,
+    "covered": 0
    }
   },
   "sh": {
@@ -1619,12 +1716,17 @@
     "h": 5,
     "grain": "FC",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 2,
+   "confirmed": 2
   },
   "tempBias": -0.9,
   "tempRMSE": 1.2,
@@ -1715,6 +1817,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 83,
+    "covered": 0
    }
   },
   "sh": {
@@ -1741,6 +1847,7 @@
     "h": 60,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -1748,12 +1855,17 @@
     "h": 20,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": 1.1,
   "tempRMSE": 1.5,
@@ -1844,6 +1956,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 95,
+    "covered": 0
    }
   },
   "sh": {
@@ -1865,6 +1981,7 @@
     "h": 90,
     "grain": "DF",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DF"
    },
    {
@@ -1872,6 +1989,7 @@
     "h": 70,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -1879,12 +1997,17 @@
     "h": 5,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -1975,6 +2098,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 113,
+    "covered": 0
    }
   },
   "sh": {
@@ -1996,11 +2123,16 @@
     "h": 104,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DF"
    }
   ],
   "weak": {
    "model": 2,
+   "confirmed": 0
+  },
+  "weak90": {
+   "model": 0,
    "confirmed": 0
   },
   "tempBias": null,
@@ -2092,6 +2224,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 116,
+    "covered": 0
    }
   },
   "sh": {
@@ -2116,6 +2252,10 @@
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": -3,
   "tempRMSE": 3.5,
@@ -2206,6 +2346,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 105,
+    "covered": 0
    }
   },
   "sh": {
@@ -2252,10 +2396,15 @@
     "h": 67,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "weak90": {
    "model": 3,
    "confirmed": 3
   },
@@ -2348,6 +2497,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 101,
+    "covered": 0
    }
   },
   "sh": {
@@ -2369,12 +2522,17 @@
     "h": 65,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -2465,6 +2623,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 96,
+    "covered": 0
    }
   },
   "sh": {
@@ -2491,6 +2653,7 @@
     "h": 70,
     "grain": "FCxr",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -2498,12 +2661,17 @@
     "h": 0,
     "grain": "DH",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -2645,6 +2813,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 96,
+    "covered": 35
    }
   },
   "sh": {
@@ -2671,6 +2843,7 @@
     "h": 85,
     "grain": "PP",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -2678,6 +2851,7 @@
     "h": 63,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "MF"
    },
    {
@@ -2685,12 +2859,17 @@
     "h": 10,
     "grain": null,
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": 1.4,
   "tempRMSE": 1.5,
@@ -2845,8 +3024,12 @@
     ]
    ],
    "zones": {
-    "model": 2,
+    "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 88,
+    "covered": 38
    }
   },
   "sh": {
@@ -2893,6 +3076,7 @@
     "h": 28,
     "grain": "DH",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "DH"
    },
    {
@@ -2900,10 +3084,15 @@
     "h": 0,
     "grain": "DH",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "DH"
    }
   ],
   "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "weak90": {
    "model": 3,
    "confirmed": 3
   },
@@ -3022,6 +3211,10 @@
    "zones": {
     "model": 2,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 124,
+    "covered": 90
    }
   },
   "sh": {
@@ -3051,6 +3244,10 @@
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -3141,6 +3338,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 161,
+    "covered": 0
    }
   },
   "sh": {
@@ -3177,11 +3378,16 @@
     "h": 135,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 3,
+   "confirmed": 0
+  },
+  "weak90": {
+   "model": 0,
    "confirmed": 0
   },
   "tempBias": null,
@@ -3279,6 +3485,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 130,
+    "covered": 31
    }
   },
   "sh": {
@@ -3305,12 +3515,17 @@
     "h": 87,
     "grain": "IF",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": -0.7,
   "tempRMSE": 1.1,
@@ -3401,6 +3616,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 82,
+    "covered": 0
    }
   },
   "sh": {
@@ -3447,10 +3666,15 @@
     "h": 62,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 3,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 3,
    "confirmed": 0
   },
@@ -3554,6 +3778,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 116,
+    "covered": 28
    }
   },
   "sh": {
@@ -3605,6 +3833,7 @@
     "h": 70,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -3612,6 +3841,7 @@
     "h": 70,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -3619,6 +3849,7 @@
     "h": 35,
     "grain": "FC",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "DH"
    },
    {
@@ -3626,10 +3857,15 @@
     "h": 35,
     "grain": "FC",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "DH"
    }
   ],
   "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "weak90": {
    "model": 3,
    "confirmed": 3
   },
@@ -3722,6 +3958,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 151,
+    "covered": 0
    }
   },
   "sh": {
@@ -3773,12 +4013,17 @@
     "h": 85,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -3885,6 +4130,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 129,
+    "covered": 48
    }
   },
   "sh": {
@@ -3931,6 +4180,7 @@
     "h": 82,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -3938,12 +4188,17 @@
     "h": 68,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": 0.8,
   "tempRMSE": 1.4,
@@ -4034,6 +4289,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 146,
+    "covered": 0
    }
   },
   "sh": {
@@ -4100,12 +4359,17 @@
     "h": 70,
     "grain": "MF",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 2,
+   "confirmed": 2
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -4222,6 +4486,10 @@
    "zones": {
     "model": 2,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 176,
+    "covered": 84
    }
   },
   "sh": {
@@ -4246,6 +4514,10 @@
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 2,
+   "confirmed": 2
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -4342,6 +4614,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 116,
+    "covered": 27
    }
   },
   "sh": {
@@ -4393,6 +4669,7 @@
     "h": 69,
     "grain": "MF",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -4400,6 +4677,7 @@
     "h": 69,
     "grain": "MF",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -4407,6 +4685,7 @@
     "h": 68,
     "grain": "MF",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -4414,10 +4693,15 @@
     "h": 31,
     "grain": "DH",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "DH"
    }
   ],
   "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "weak90": {
    "model": 3,
    "confirmed": 3
   },
@@ -4521,6 +4805,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 127,
+    "covered": 43
    }
   },
   "sh": {
@@ -4567,6 +4855,7 @@
     "h": 73,
     "grain": "MF",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    },
    {
@@ -4574,12 +4863,17 @@
     "h": 71,
     "grain": "MF",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": -0.6,
   "tempRMSE": 1.4,
@@ -4681,6 +4975,10 @@
    "zones": {
     "model": 2,
     "falseAlarm": 2
+   },
+   "chance": {
+    "grid": 116,
+    "covered": 63
    }
   },
   "sh": {
@@ -4732,12 +5030,17 @@
     "h": 32,
     "grain": null,
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 2,
+   "confirmed": 1
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -4839,6 +5142,10 @@
    "zones": {
     "model": 2,
     "falseAlarm": 2
+   },
+   "chance": {
+    "grid": 146,
+    "covered": 56
    }
   },
   "sh": {
@@ -4890,12 +5197,17 @@
     "h": 59,
     "grain": "FC",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 2,
+   "confirmed": 2
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -4992,6 +5304,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 176,
+    "covered": 27
    }
   },
   "sh": {
@@ -5053,6 +5369,7 @@
     "h": 160,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -5060,12 +5377,17 @@
     "h": 70,
     "grain": "MF",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 2,
+   "confirmed": 2
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -5222,6 +5544,10 @@
    "zones": {
     "model": 2,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 126,
+    "covered": 72
    }
   },
   "sh": {
@@ -5253,6 +5579,7 @@
     "h": 23,
     "grain": "DH",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    },
    {
@@ -5260,12 +5587,17 @@
     "h": 23,
     "grain": "DH",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": 1.8,
   "tempRMSE": 2.5,
@@ -5385,8 +5717,12 @@
     ]
    ],
    "zones": {
-    "model": 4,
+    "model": 3,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 151,
+    "covered": 94
    }
   },
   "sh": {
@@ -5433,6 +5769,7 @@
     "h": 120,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -5440,10 +5777,15 @@
     "h": 120,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "weak90": {
    "model": 3,
    "confirmed": 3
   },
@@ -5557,6 +5899,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 60,
+    "covered": 26
    }
   },
   "sh": {
@@ -5572,6 +5918,7 @@
     "h": 39,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -5579,10 +5926,15 @@
     "h": 18,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -5694,8 +6046,12 @@
     ]
    ],
    "zones": {
-    "model": 2,
-    "falseAlarm": 2
+    "model": 1,
+    "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 59,
+    "covered": 31
    }
   },
   "sh": {
@@ -5727,6 +6083,7 @@
     "h": 24,
     "grain": "SH",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -5734,12 +6091,17 @@
     "h": 24,
     "grain": "SH",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 1,
    "confirmed": 1
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": -1.6,
   "tempRMSE": 1.7,
@@ -5846,6 +6208,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 91,
+    "covered": 42
    }
   },
   "sh": {
@@ -5861,10 +6227,15 @@
     "h": 13,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -5963,6 +6334,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 51,
+    "covered": 20
    }
   },
   "sh": {
@@ -5974,6 +6349,10 @@
   },
   "tests": [],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -6077,6 +6456,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 66,
+    "covered": 31
    }
   },
   "sh": {
@@ -6103,6 +6486,7 @@
     "h": 31,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    },
    {
@@ -6110,12 +6494,17 @@
     "h": 31,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -6206,6 +6595,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 61,
+    "covered": 0
    }
   },
   "sh": {
@@ -6252,6 +6645,7 @@
     "h": 25,
     "grain": "FCxr",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    },
    {
@@ -6259,12 +6653,17 @@
     "h": 25,
     "grain": "FCxr",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 1,
    "confirmed": 1
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -6355,6 +6754,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 57,
+    "covered": 0
    }
   },
   "sh": {
@@ -6372,6 +6775,10 @@
   },
   "tests": [],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -6464,6 +6871,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 111,
+    "covered": 0
    }
   },
   "sh": {
@@ -6479,10 +6890,15 @@
     "h": 87,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "RG"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -6581,6 +6997,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 121,
+    "covered": 38
    }
   },
   "sh": {
@@ -6596,6 +7016,7 @@
     "h": 98,
     "grain": "DF",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DF"
    },
    {
@@ -6603,6 +7024,7 @@
     "h": 80,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -6610,6 +7032,7 @@
     "h": 65,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -6617,12 +7040,17 @@
     "h": 50,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 1,
    "confirmed": 1
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -6713,6 +7141,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 76,
+    "covered": 0
    }
   },
   "sh": {
@@ -6739,6 +7171,7 @@
     "h": 65,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -6746,10 +7179,15 @@
     "h": 50,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -6842,6 +7280,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 66,
+    "covered": 0
    }
   },
   "sh": {
@@ -6857,10 +7299,15 @@
     "h": 40,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -6953,6 +7400,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 66,
+    "covered": 0
    }
   },
   "sh": {
@@ -6979,6 +7430,7 @@
     "h": 58,
     "grain": "PP",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DF"
    },
    {
@@ -6986,12 +7438,17 @@
     "h": 9,
     "grain": "DH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 1,
    "confirmed": 1
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": -2.9,
   "tempRMSE": 3.6,
@@ -7082,6 +7539,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 73,
+    "covered": 0
    }
   },
   "sh": {
@@ -7128,6 +7589,7 @@
     "h": 54,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -7135,12 +7597,17 @@
     "h": 19,
     "grain": "FC",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": 0.5,
   "tempRMSE": 0.5,
@@ -7237,6 +7704,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 76,
+    "covered": 15
    }
   },
   "sh": {
@@ -7258,6 +7729,7 @@
     "h": 35,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -7265,10 +7737,15 @@
     "h": 5,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -7372,6 +7849,10 @@
    "zones": {
     "model": 2,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 154,
+    "covered": 41
    }
   },
   "sh": {
@@ -7403,10 +7884,15 @@
     "h": 133,
     "grain": null,
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 3,
+   "confirmed": 2
+  },
+  "weak90": {
    "model": 3,
    "confirmed": 2
   },
@@ -7499,6 +7985,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 74,
+    "covered": 0
    }
   },
   "sh": {
@@ -7548,6 +8038,10 @@
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": 0,
   "tempRMSE": 0.8,
@@ -7649,6 +8143,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 111,
+    "covered": 25
    }
   },
   "sh": {
@@ -7701,6 +8199,10 @@
   },
   "tests": [],
   "weak": {
+   "model": 3,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 3,
    "confirmed": 0
   },
@@ -7793,6 +8295,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 74,
+    "covered": 0
    }
   },
   "sh": {
@@ -7827,6 +8333,10 @@
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -7917,6 +8427,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 116,
+    "covered": 0
    }
   },
   "sh": {
@@ -7932,10 +8446,15 @@
     "h": 107,
     "grain": "MFcr",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -8028,6 +8547,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 85,
+    "covered": 0
    }
   },
   "sh": {
@@ -8085,6 +8608,10 @@
   },
   "tests": [],
   "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "weak90": {
    "model": 3,
    "confirmed": 3
   },
@@ -8177,6 +8704,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 136,
+    "covered": 0
    }
   },
   "sh": {
@@ -8188,6 +8719,10 @@
   },
   "tests": [],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -8280,6 +8815,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 86,
+    "covered": 0
    }
   },
   "sh": {
@@ -8319,6 +8858,10 @@
   "weak": {
    "model": 3,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": -3.8,
   "tempRMSE": 4.6,
@@ -8415,6 +8958,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 146,
+    "covered": 35
    }
   },
   "sh": {
@@ -8430,6 +8977,7 @@
     "h": 95,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -8437,10 +8985,15 @@
     "h": 95,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -8533,6 +9086,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 146,
+    "covered": 0
    }
   },
   "sh": {
@@ -8548,6 +9105,7 @@
     "h": 120,
     "grain": "DF",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -8555,10 +9113,15 @@
     "h": 117,
     "grain": "DF",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -8651,6 +9214,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 87,
+    "covered": 0
    }
   },
   "sh": {
@@ -8708,6 +9275,10 @@
   },
   "tests": [],
   "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "weak90": {
    "model": 3,
    "confirmed": 3
   },
@@ -8800,6 +9371,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 84,
+    "covered": 0
    }
   },
   "sh": {
@@ -8841,12 +9416,17 @@
     "h": 24,
     "grain": "DH",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -8943,6 +9523,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 151,
+    "covered": 33
    }
   },
   "sh": {
@@ -8964,6 +9548,7 @@
     "h": 135,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -8971,12 +9556,17 @@
     "h": 107,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 1,
    "confirmed": 1
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -9067,6 +9657,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 91,
+    "covered": 0
    }
   },
   "sh": {
@@ -9108,6 +9702,7 @@
     "h": 60,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -9115,6 +9710,7 @@
     "h": 60,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -9122,12 +9718,17 @@
     "h": 60,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -9229,6 +9830,10 @@
    "zones": {
     "model": 2,
     "falseAlarm": 2
+   },
+   "chance": {
+    "grid": 156,
+    "covered": 36
    }
   },
   "sh": {
@@ -9244,6 +9849,7 @@
     "h": 137,
     "grain": "DF",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "MFcr"
    },
    {
@@ -9251,10 +9857,15 @@
     "h": 137,
     "grain": "DF",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "MFcr"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -9347,6 +9958,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 118,
+    "covered": 0
    }
   },
   "sh": {
@@ -9408,10 +10023,15 @@
     "h": 87,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "weak90": {
    "model": 3,
    "confirmed": 3
   },
@@ -9504,6 +10124,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 120,
+    "covered": 0
    }
   },
   "sh": {
@@ -9570,6 +10194,7 @@
     "h": 67,
     "grain": "FC",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "FC"
    },
    {
@@ -9577,10 +10202,15 @@
     "h": 67,
     "grain": "FC",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "weak90": {
    "model": 3,
    "confirmed": 3
   },
@@ -9679,6 +10309,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 161,
+    "covered": 38
    }
   },
   "sh": {
@@ -9725,6 +10359,7 @@
     "h": 75,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -9732,12 +10367,17 @@
     "h": 70,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -9834,6 +10474,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 146,
+    "covered": 35
    }
   },
   "sh": {
@@ -9880,12 +10524,17 @@
     "h": 45,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -9972,6 +10621,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 141,
+    "covered": 0
    }
   },
   "sh": {
@@ -9998,12 +10651,17 @@
     "h": 115,
     "grain": "FCxr",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -10128,8 +10786,12 @@
     ]
    ],
    "zones": {
-    "model": 5,
+    "model": 3,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 193,
+    "covered": 89
    }
   },
   "sh": {
@@ -10145,6 +10807,7 @@
     "h": 174,
     "grain": "DF",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DF"
    },
    {
@@ -10152,10 +10815,15 @@
     "h": 129,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "MFcr"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -10248,6 +10916,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 154,
+    "covered": 0
    }
   },
   "sh": {
@@ -10263,6 +10935,7 @@
     "h": 83,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -10270,10 +10943,15 @@
     "h": 50,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -10366,6 +11044,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 176,
+    "covered": 0
    }
   },
   "sh": {
@@ -10407,6 +11089,7 @@
     "h": 40,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    },
    {
@@ -10414,12 +11097,17 @@
     "h": 40,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -10506,6 +11194,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 126,
+    "covered": 0
    }
   },
   "sh": {
@@ -10532,12 +11224,17 @@
     "h": 160,
     "grain": null,
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -10639,6 +11336,10 @@
    "zones": {
     "model": 2,
     "falseAlarm": 2
+   },
+   "chance": {
+    "grid": 144,
+    "covered": 61
    }
   },
   "sh": {
@@ -10685,10 +11386,15 @@
     "h": 65,
     "grain": "DH",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 3,
+   "confirmed": 3
+  },
+  "weak90": {
    "model": 3,
    "confirmed": 3
   },
@@ -10805,8 +11511,12 @@
     ]
    ],
    "zones": {
-    "model": 2,
+    "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 144,
+    "covered": 47
    }
   },
   "sh": {
@@ -10822,6 +11532,7 @@
     "h": 68,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -10829,10 +11540,15 @@
     "h": 68,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -10991,6 +11707,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 166,
+    "covered": 41
    }
   },
   "sh": {
@@ -11012,12 +11732,17 @@
     "h": 85,
     "grain": "FCxr/RGxf",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": -6.9,
   "tempRMSE": 7,
@@ -11108,6 +11833,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 106,
+    "covered": 0
    }
   },
   "sh": {
@@ -11129,6 +11858,7 @@
     "h": 7,
     "grain": "FCxr",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    },
    {
@@ -11136,6 +11866,7 @@
     "h": 77,
     "grain": "PP",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -11143,10 +11874,15 @@
     "h": 87,
     "grain": "PP",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -11265,6 +12001,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 56,
+    "covered": 23
    }
   },
   "sh": {
@@ -11280,10 +12020,15 @@
     "h": 35,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "MF"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -11412,6 +12157,10 @@
    "zones": {
     "model": 2,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 66,
+    "covered": 41
    }
   },
   "sh": {
@@ -11423,6 +12172,10 @@
   },
   "tests": [],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -11561,6 +12314,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 82,
+    "covered": 39
    }
   },
   "sh": {
@@ -11576,10 +12333,15 @@
     "h": 41,
     "grain": "MF",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "MFcr"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -11698,6 +12460,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 99,
+    "covered": 47
    }
   },
   "sh": {
@@ -11715,6 +12481,10 @@
   },
   "tests": [],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -11807,6 +12577,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 114,
+    "covered": 0
    }
   },
   "sh": {
@@ -11822,6 +12596,7 @@
     "h": 84,
     "grain": "PP",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -11829,6 +12604,7 @@
     "h": 70,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -11836,10 +12612,15 @@
     "h": 39,
     "grain": "FCxr",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -11928,6 +12709,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 114,
+    "covered": 0
    }
   },
   "sh": {
@@ -11949,12 +12734,17 @@
     "h": 75,
     "grain": null,
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "RG"
    }
   ],
   "weak": {
    "model": 1,
    "confirmed": 1
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -12045,6 +12835,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 121,
+    "covered": 0
    }
   },
   "sh": {
@@ -12071,12 +12865,17 @@
     "h": 62,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -12208,6 +13007,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 110,
+    "covered": 26
    }
   },
   "sh": {
@@ -12234,6 +13037,7 @@
     "h": 60,
     "grain": null,
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -12241,12 +13045,17 @@
     "h": 55,
     "grain": "FCxr",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": -2.6,
   "tempRMSE": 2.6,
@@ -12363,6 +13172,10 @@
    "zones": {
     "model": 2,
     "falseAlarm": 2
+   },
+   "chance": {
+    "grid": 139,
+    "covered": 49
    }
   },
   "sh": {
@@ -12384,11 +13197,16 @@
     "h": 28,
     "grain": "FCxr",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 1,
+   "confirmed": 0
+  },
+  "weak90": {
+   "model": 0,
    "confirmed": 0
   },
   "tempBias": -1.7,
@@ -12480,6 +13298,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 181,
+    "covered": 0
    }
   },
   "sh": {
@@ -12536,12 +13358,17 @@
     "h": 145,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DF"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 1
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": -3.6,
   "tempRMSE": 4,
@@ -12638,6 +13465,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 256,
+    "covered": 71
    }
   },
   "sh": {
@@ -12659,6 +13490,7 @@
     "h": 190,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FCxr"
    },
    {
@@ -12666,12 +13498,17 @@
     "h": 210,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 1,
    "confirmed": 1
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": -4.2,
   "tempRMSE": 4.4,
@@ -12788,6 +13625,10 @@
    "zones": {
     "model": 2,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 131,
+    "covered": 58
    }
   },
   "sh": {
@@ -12819,6 +13660,7 @@
     "h": 95,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -12826,11 +13668,16 @@
     "h": 84,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 3,
+   "confirmed": 0
+  },
+  "weak90": {
+   "model": 2,
    "confirmed": 0
   },
   "tempBias": null,
@@ -12928,6 +13775,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 191,
+    "covered": 47
    }
   },
   "sh": {
@@ -12943,6 +13794,7 @@
     "h": 160,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -12950,10 +13802,15 @@
     "h": 150,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -13046,6 +13903,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 166,
+    "covered": 0
    }
   },
   "sh": {
@@ -13112,6 +13973,7 @@
     "h": 150,
     "grain": "DF",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -13119,12 +13981,17 @@
     "h": 140,
     "grain": "DF",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -13221,6 +14088,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 146,
+    "covered": 34
    }
   },
   "sh": {
@@ -13247,6 +14118,7 @@
     "h": 119,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -13254,12 +14126,17 @@
     "h": 104,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": -2.4,
   "tempRMSE": 3.3,
@@ -13346,6 +14223,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 116,
+    "covered": 0
    }
   },
   "sh": {
@@ -13372,12 +14253,17 @@
     "h": 209,
     "grain": null,
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "RG"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": -2.8,
   "tempRMSE": 3,
@@ -13468,6 +14354,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 186,
+    "covered": 0
    }
   },
   "sh": {
@@ -13524,12 +14414,17 @@
     "h": 144,
     "grain": "SH",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": -2.7,
   "tempRMSE": 3.3,
@@ -13651,6 +14546,10 @@
    "zones": {
     "model": 2,
     "falseAlarm": 2
+   },
+   "chance": {
+    "grid": 150,
+    "covered": 71
    }
   },
   "sh": {
@@ -13677,10 +14576,15 @@
     "h": 114,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 1,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 1,
    "confirmed": 0
   },
@@ -13769,6 +14673,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 121,
+    "covered": 0
    }
   },
   "sh": {
@@ -13784,10 +14692,15 @@
     "h": 375,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "RG"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -13876,6 +14789,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 121,
+    "covered": 0
    }
   },
   "sh": {
@@ -13891,6 +14808,7 @@
     "h": 193,
     "grain": "PP",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -13898,6 +14816,7 @@
     "h": 160,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -13905,10 +14824,15 @@
     "h": 160,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -14001,6 +14925,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 194,
+    "covered": 0
    }
   },
   "sh": {
@@ -14037,6 +14965,7 @@
     "h": 184,
     "grain": "DF",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -14044,6 +14973,7 @@
     "h": 173,
     "grain": "DF",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -14051,12 +14981,17 @@
     "h": 135,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 1
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -14143,6 +15078,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 91,
+    "covered": 0
    }
   },
   "sh": {
@@ -14169,6 +15108,7 @@
     "h": 142,
     "grain": "DF",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -14176,6 +15116,7 @@
     "h": 142,
     "grain": "DF",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -14183,11 +15124,16 @@
     "h": 109,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 2,
+   "confirmed": 0
+  },
+  "weak90": {
+   "model": 1,
    "confirmed": 0
   },
   "tempBias": null,
@@ -14279,6 +15225,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 171,
+    "covered": 0
    }
   },
   "sh": {
@@ -14294,6 +15244,7 @@
     "h": 158,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -14301,6 +15252,7 @@
     "h": 150,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -14308,10 +15260,15 @@
     "h": 139,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -14410,6 +15367,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 206,
+    "covered": 61
    }
   },
   "sh": {
@@ -14431,10 +15392,15 @@
     "h": 190,
     "grain": "PP",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -14527,6 +15493,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 136,
+    "covered": 0
    }
   },
   "sh": {
@@ -14558,6 +15528,7 @@
     "h": 125,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -14565,12 +15536,17 @@
     "h": 105,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": -1.9,
   "tempRMSE": 2.7,
@@ -14687,6 +15663,10 @@
    "zones": {
     "model": 2,
     "falseAlarm": 2
+   },
+   "chance": {
+    "grid": 136,
+    "covered": 64
    }
   },
   "sh": {
@@ -14713,6 +15693,7 @@
     "h": 105,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -14720,6 +15701,7 @@
     "h": 105,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -14727,12 +15709,17 @@
     "h": 30,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": 0.7,
   "tempRMSE": 2.1,
@@ -14830,6 +15817,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 128,
+    "covered": 25
    }
   },
   "sh": {
@@ -14845,6 +15836,7 @@
     "h": 189,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -14852,10 +15844,15 @@
     "h": 189,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -14952,6 +15949,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 122,
+    "covered": 0
    }
   },
   "sh": {
@@ -14983,11 +15984,16 @@
     "h": 111,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 2,
+   "confirmed": 0
+  },
+  "weak90": {
+   "model": 1,
    "confirmed": 0
   },
   "tempBias": null,
@@ -15085,6 +16091,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 166,
+    "covered": 21
    }
   },
   "sh": {
@@ -15100,10 +16110,15 @@
     "h": 147,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -15222,6 +16237,10 @@
    "zones": {
     "model": 2,
     "falseAlarm": 2
+   },
+   "chance": {
+    "grid": 158,
+    "covered": 69
    }
   },
   "sh": {
@@ -15248,12 +16267,17 @@
     "h": 142,
     "grain": "DF",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": 0.7,
   "tempRMSE": 1,
@@ -15350,6 +16374,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 151,
+    "covered": 20
    }
   },
   "sh": {
@@ -15386,12 +16414,17 @@
     "h": 114,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -15508,6 +16541,10 @@
    "zones": {
     "model": 3,
     "falseAlarm": 2
+   },
+   "chance": {
+    "grid": 161,
+    "covered": 93
    }
   },
   "sh": {
@@ -15534,6 +16571,7 @@
     "h": 130,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    },
    {
@@ -15541,12 +16579,17 @@
     "h": 122,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 2
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": -0.3,
   "tempRMSE": 0.8,
@@ -15639,6 +16682,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 92,
+    "covered": 26
    }
   },
   "sh": {
@@ -15670,12 +16717,17 @@
     "h": 140,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 0,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -15762,6 +16814,10 @@
    "zones": {
     "model": 0,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 96,
+    "covered": 0
    }
   },
   "sh": {
@@ -15777,6 +16833,7 @@
     "h": 154,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -15784,10 +16841,15 @@
     "h": 154,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -15892,6 +16954,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 101,
+    "covered": 32
    }
   },
   "sh": {
@@ -15907,10 +16973,15 @@
     "h": 170,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -16015,6 +17086,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 117,
+    "covered": 33
    }
   },
   "sh": {
@@ -16030,6 +17105,7 @@
     "h": 170,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -16037,10 +17113,15 @@
     "h": 181,
     "grain": "SH",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -16142,8 +17223,12 @@
     ]
    ],
    "zones": {
-    "model": 2,
-    "falseAlarm": 2
+    "model": 1,
+    "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 221,
+    "covered": 56
    }
   },
   "sh": {
@@ -16220,6 +17305,7 @@
     "h": 148,
     "grain": "SH",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "FC"
    },
    {
@@ -16227,6 +17313,7 @@
     "h": 170,
     "grain": "RG",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -16234,12 +17321,17 @@
     "h": 190,
     "grain": "RG",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "MFcr"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": -3.6,
   "tempRMSE": 4.1,
@@ -16342,6 +17434,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 121,
+    "covered": 56
    }
   },
   "sh": {
@@ -16363,12 +17459,17 @@
     "h": 135,
     "grain": "FC",
     "flagged": true,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
    "model": 2,
    "confirmed": 1
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 0
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -16479,8 +17580,12 @@
     ]
    ],
    "zones": {
-    "model": 2,
+    "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 126,
+    "covered": 75
    }
   },
   "sh": {
@@ -16496,10 +17601,15 @@
     "h": 165,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "DH"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -16597,8 +17707,12 @@
     ]
    ],
    "zones": {
-    "model": 2,
+    "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 101,
+    "covered": 59
    }
   },
   "sh": {
@@ -16635,12 +17749,17 @@
     "h": 140,
     "grain": "FC",
     "flagged": true,
+    "flagged90": true,
     "modelLayer": "FC"
    }
   ],
   "weak": {
    "model": 3,
    "confirmed": 3
+  },
+  "weak90": {
+   "model": 1,
+   "confirmed": 1
   },
   "tempBias": null,
   "tempRMSE": null,
@@ -16793,6 +17912,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 141,
+    "covered": 57
    }
   },
   "sh": {
@@ -16808,10 +17931,15 @@
     "h": 145,
     "grain": "FC",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "MF"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -16945,6 +18073,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 1
+   },
+   "chance": {
+    "grid": 176,
+    "covered": 54
    }
   },
   "sh": {
@@ -16960,10 +18092,15 @@
     "h": 145,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "RG"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -17133,6 +18270,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 176,
+    "covered": 100
    }
   },
   "sh": {
@@ -17148,10 +18289,15 @@
     "h": 255,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
@@ -17251,6 +18397,10 @@
    "zones": {
     "model": 1,
     "falseAlarm": 0
+   },
+   "chance": {
+    "grid": 81,
+    "covered": 30
    }
   },
   "sh": {
@@ -17266,6 +18416,7 @@
     "h": 230,
     "grain": "DF",
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    },
    {
@@ -17273,10 +18424,15 @@
     "h": 230,
     "grain": null,
     "flagged": false,
+    "flagged90": false,
     "modelLayer": "FC"
    }
   ],
   "weak": {
+   "model": 0,
+   "confirmed": 0
+  },
+  "weak90": {
    "model": 0,
    "confirmed": 0
   },
