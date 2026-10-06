@@ -343,6 +343,7 @@ async function renderPanel() {
   $("aspectTabs").querySelectorAll("button").forEach((b) => b.onclick = () => { state.aspect = Number(b.dataset.aspect); writeUrl(); renderPanel(); });
   if (!chart) chart = new ProfileChart($("profileCanvas"), $("profileTip"), { onPickDate: (d) => setDate(d), tzOffset });
   chart.set(null);
+  renderSpread(null);
   let data;
   try { data = await pointData(entry.id); } catch (e) {
     $("summaryText").textContent = `Couldn't load this point: ${e.message}`; $("chips").innerHTML = ""; return;
@@ -372,6 +373,70 @@ async function renderPanel() {
     } else extra += "<br>No snow-height sensor data from this station yet.";
   }
   $("pointExtra").innerHTML = extra;
+  renderSpread(named && isLive() ? data.forecast : null);
+}
+
+// ---------- forecast spread (named points) ----------
+// One row per weather model: the point's snowpack run through that model's
+// forecast. Values for the selected aspect; cells shaded with the map's ramp.
+const SPREAD_SHOW = [
+  { key: "snow24", label: "New snow, 24 h (cm)", get: (d) => d.snow24 },
+  { key: "hs", label: "Snow depth (cm)", get: (d, a) => d.hs[a] },
+  { key: "hazard", label: "Hazard (%)", get: (d, a) => d.p[a][0] },
+  { key: "pNew", label: "New snow problem (%)", get: (d, a) => d.p[a][1] },
+  { key: "pWind", label: "Wind slab problem (%)", get: (d, a) => d.p[a][2] },
+  { key: "pPwl", label: "Persistent weak layers (%)", get: (d, a) => d.p[a][3] },
+  { key: "pWet", label: "Wet snow problem (%)", get: (d, a) => d.p[a][4] },
+];
+state.spreadKey = "snow24";
+const spreadLabel = new Intl.DateTimeFormat("en-US", { timeZone: TZ, weekday: "short", hour: "2-digit", minute: "2-digit", hour12: false });
+// Cell fill: the map's ramp blended half-way to white, so the panel's dark text
+// stays readable (at least 4.5:1) on every ramp.
+function rampColor(p, v) {
+  const [a, b] = p.domain, r = p.ramp;
+  const x = Math.max(0, Math.min(1, (v - a) / (b - a))) * (r.length - 1);
+  const i = Math.min(r.length - 2, Math.floor(x)), f = x - i;
+  const c = (h, k) => parseInt(h.slice(1 + 2 * k, 3 + 2 * k), 16);
+  const rgb = [0, 1, 2].map((k) => Math.round(127.5 + 0.5 * (c(r[i], k) + (c(r[i + 1], k) - c(r[i], k)) * f)));
+  return `rgb(${rgb.join(",")})`;
+}
+// f: the point's forecast file, whose spread can be from an earlier run than its
+// days when this run's spread weather could not be fetched.
+function renderSpread(f) {
+  const el = $("spread"), sp = f && f.spread;
+  if (!sp || !sp.members || sp.members.length < 2) { el.hidden = true; el.innerHTML = ""; el.dataset.sig = ""; return; }
+  // The heading and the value picker are built once per spread and aspect, so
+  // changing the value keeps the picker, and the keyboard focus on it, in place.
+  const sig = `${f.id}:${sp.analysisHour}:${sp.horizon}:${state.aspect}`;
+  if (el.dataset.sig !== sig) {
+    el.dataset.sig = sig;
+    el.innerHTML =
+      `<div class="head"><h3 id="spreadTitle">Forecast spread to +${sp.horizon - sp.analysisHour} h · ${ASPECTS[state.aspect] === "Flat" ? "flat" : ASPECTS[state.aspect] + " 38°"}</h3>` +
+      `<span class="pick"><label for="spreadKey" class="muted">Show</label> <select id="spreadKey">${SPREAD_SHOW.map((s) => `<option value="${s.key}">${s.label}</option>`).join("")}</select></span></div><div class="body"></div>`;
+    $("spreadKey").onchange = (e) => { state.spreadKey = e.target.value; renderSpreadBody(f); };
+  }
+  $("spreadKey").value = state.spreadKey;
+  renderSpreadBody(f);
+  el.hidden = false;
+}
+function renderSpreadBody(f) {
+  const sp = f.spread, body = $("spread").querySelector(".body");
+  const show = SPREAD_SHOW.find((s) => s.key === state.spreadKey) || SPREAD_SHOW[0], prop = PROP[show.key];
+  // A spread kept from an earlier run: its columns already past this run's analysis hour are dropped.
+  const kept = f.analysisHour != null && sp.analysisHour < f.analysisHour;
+  const times = [...new Set(sp.members.flatMap((m) => m.days.map((d) => d.t)))].filter((t) => !kept || t > f.analysisHour).sort((a, b) => a - b);
+  const valueAt = (m, t) => { const d = m.days.find((x) => x.t === t); const v = d ? show.get(d, state.aspect) : null; return v === null || v === undefined ? null : v; };
+  const cell = (v) => (v === null ? "<td>–</td>" : `<td style="background:${rampColor(prop, v)}">${Math.round(v)}</td>`);
+  const ai = new Set(["ecmwf_aifs025_single"]);
+  const rows = sp.members.map((m, i) => `<tr${i === 0 ? ' class="ctrl"' : ""}><th scope="row" title="${m.label || m.id}">${m.id === "control" ? "Station-corrected" : m.short + (ai.has(m.id) ? "*" : "")}</th>${times.map((t) => cell(valueAt(m, t))).join("")}</tr>`);
+  const med = (a) => { const s = [...a].sort((x, y) => x - y), n = s.length; return n % 2 ? s[(n - 1) / 2] : (s[n / 2 - 1] + s[n / 2]) / 2; };
+  const sum = times.map((t) => { const v = sp.members.slice(1).map((m) => valueAt(m, t)).filter((x) => x !== null); return v.length ? `<td>${Math.round(med(v))} (${Math.round(Math.min(...v))}–${Math.round(Math.max(...v))})</td>` : "<td>–</td>"; });
+  const scroll = body.querySelector(".scroll"), x = scroll ? scroll.scrollLeft : 0;
+  body.innerHTML =
+    `<div class="scroll"><table aria-labelledby="spreadTitle"><thead><tr><th scope="col">Model</th>${times.map((t) => `<th scope="col">${spreadLabel.format(new Date(t * 3600000))}</th>`).join("")}</tr></thead>` +
+    `<tbody>${rows.join("")}<tr class="sum"><th scope="row">Median (range)</th>${sum.join("")}</tr></tbody></table></div>` +
+    `<p class="muted small">${kept ? `Spread weather from the run of ${spreadLabel.format(new Date(sp.analysisHour * 3600000))}; this run's could not be fetched. ` : ""}Each row runs this point's snowpack through one weather model of the Parks Wx Fx spread, as that model's difference from the Canadian models added to the station-corrected forecast (top row). New snow is for the 24 h before each time. This is a spread of separate models, not a calibrated ensemble${sp.members.some((m) => ai.has(m.id)) ? "; * is a machine-learning emulator" : ""}. Unverified simulation: the indices are not danger ratings.</p>`;
+  body.querySelector(".scroll").scrollLeft = x;
 }
 
 // ---------- status dialog ----------

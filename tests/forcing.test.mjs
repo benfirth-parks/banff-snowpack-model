@@ -5,6 +5,7 @@ import { prepareForcing, snapshotWindows, cleanHS } from "../src/model/forcing.j
 import { snapHour, isSnapHour, localDate, tzOffset } from "../src/model/time.js";
 import { createSite, stepSite } from "../src/model/site.js";
 import { snowDepth, WIND } from "../src/model/snowpack.js";
+import { memberForcing, precipScale } from "../src/model/spread.js";
 
 // --- time helpers across the DST change (1 Nov 2026) ---
 assert.equal(tzOffset(Date.parse("2026-09-30T18:00:00Z") / 3.6e6), -6);
@@ -127,5 +128,19 @@ const [flat, , east, , west] = site.sims;
 console.log(`HS after 36 mm of snow in the ridge wind: flat ${(snowDepth(flat) * 100).toFixed(0)} cm, E ${(snowDepth(east) * 100).toFixed(0)} cm, W ${(snowDepth(west) * 100).toFixed(0)} cm`);
 assert.ok(snowDepth(east) > 1.3 * snowDepth(flat) && snowDepth(west) < 0.8 * snowDepth(flat), "lee slope loaded, windward slope stripped");
 assert.ok(east.L.some((l) => l.mk & WIND), "lee deposit is wind-marked");
+
+// --- forecast spread: a member is the corrected control plus its departure ---
+const fc0 = { ...fr, Ta: -3, RH: 80, P: 1, Pwx: 1, sf: 1, cc: 0.5, ghi: 400, dirH: 300, difH: 100 };
+const rawC = { T: -6, RH: 85, U: 20, dir: 270, P: 0.5, ghi: 400, cc: 0.5 };
+const mem = memberForcing(fc0, rawC, { T: -4, RH: 95, U: 60, dir: 300, P: 2, ghi: 200, cc: 0.9 }, 1.5);
+assert.equal(mem.Ta, -1); assert.equal(mem.RH, 90); assert.equal(mem.P, 3); assert.equal(mem.Pwx, 3);
+assert.ok(Math.abs(mem.U / fc0.U - 65 / 25) < 1e-9 && Math.abs(mem.Ur / fc0.Ur - 65 / 25) < 1e-9, "wind scales by the member's ratio");
+assert.ok(Math.abs(mem.dirR - ((fc0.dirR + 30) % 360)) < 1e-9, "loading direction turns with the member");
+assert.equal(mem.ghi, 200); assert.ok(Math.abs(mem.cc - 0.9) < 1e-9 && mem.lw > fc0.lw);
+assert.equal(memberForcing(fc0, rawC, null, 1), fc0, "no member data: control");
+assert.equal(memberForcing(fc0, rawC, { T: -4, RH: 95, U: 60, dir: 300, P: 2, ghi: null, cc: 0.9 }, 1).ghi, fc0.ghi, "no member radiation: the control's sun");
+assert.equal(precipScale([2, 2, null], [1, 1, 5]), 2); assert.equal(precipScale([0.2], [0.5]), 1);
+assert.equal(precipScale([3, 3], [1, 1]), 3, "the correction is not clamped tighter than the forcing's own bounds");
+assert.ok(Math.abs(precipScale([10, 10], [1, 1]) - 7.2) < 1e-9 && Math.abs(precipScale([0.1, 0.1], [1, 1]) - 0.15) < 1e-9, "bounded at the product of the forcing's bounds");
 
 console.log("forcing + time tests passed");
