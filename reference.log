@@ -1,0 +1,420 @@
+[23:05:46] export SMET forcing: 2023-24,2024-25,2025-26
+2023-24: 58 points, 7289 hours, 3 s
+  HS fts-boslo accepted 2023-10-14..2024-06-30, 1186 h filled
+  HS fts-bowsummit accepted 2023-10-04..2024-06-16, 2364 h filled
+  HS fts-simplo accepted 2023-10-03..2024-06-30, 860 h filled
+  HS fts-stanley accepted 2023-10-03..2024-06-30, 1956 h filled
+  HS fts-sunshine accepted 2023-10-03..2024-06-30, 817 h filled
+2024-25: 58 points, 7265 hours, 3 s
+  HS fts-boslo accepted 2024-08-31..2025-06-30, 997 h filled
+  HS fts-bowsummit accepted 2024-10-01..2025-06-19, 2387 h filled
+  HS fts-simplo accepted 2024-08-31..2025-06-28, 926 h filled
+  HS fts-stanley accepted 2024-08-31..2025-06-30, 1534 h filled
+  HS fts-sunshine accepted 2024-09-20..2025-06-29, 3108 h filled
+2025-26: 58 points, 7265 hours, 3 s
+  HS fts-boslo accepted 2025-09-03..2026-06-30, 2534 h filled
+  HS fts-bowsummit accepted 2025-09-28..2026-06-25, 2522 h filled
+  HS fts-simplo accepted 2025-08-31..2026-06-30, 840 h filled
+  HS fts-stanley accepted 2025-09-03..2026-06-07, 1813 h filled
+  HS fts-sunshine accepted 2025-08-31..2026-06-30, 1161 h filled
+[23:05:55] snowpack 2023-24 (4 jobs)
+snowpack: 58 point-seasons, 4 parallel, out /home/runner/work/_temp/reference/runs
+ok      2023-24/parker-ridge_BTL  19s
+ok      2023-24/parker-ridge_TL  20s
+ok      2023-24/parker-ridge_ALP  23s
+ok      2023-24/coleman-cliffs_ALP  25s
+ok      2023-24/coleman-cliffs_BTL  20s
+ok      2023-24/coleman-cliffs_TL  22s
+ok      2023-24/mt-wilson_ALP  22s
+ok      2023-24/mt-wilson_TL  20s
+ok      2023-24/mt-wilson_BTL  19s
+ok      2023-24/observation-pk_ALP  22s
+ok      2023-24/observation-pk_BTL  21s
+ok      2023-24/observation-pk_TL  21s
+ok      2023-24/mt-gordon_TL  21s
+ok      2023-24/mt-gordon_ALP  25s
+ok      2023-24/mt-gordon_BTL  19s
+ok      2023-24/emerald-pk_ALP  29s
+ok      2023-24/emerald-pk_BTL  22s
+ok      2023-24/emerald-pk_TL  26s
+ok      2023-24/mt-dennis_ALP  30s
+ok      2023-24/mt-dennis_TL  28s
+ok      2023-24/mt-dennis_BTL  23s
+ok      2023-24/mt-bosworth_ALP  24s
+ok      2023-24/mt-bosworth_TL  22s
+ok      2023-24/mt-bosworth_BTL  19s
+ok      2023-24/ll-richardson_TL  22s
+ok      2023-24/ll-richardson_ALP  27s
+ok      2023-24/ll-richardson_BTL  20s
+ok      2023-24/mt-whymper_ALP  27s
+ok      2023-24/mt-whymper_BTL  20s
+ok      2023-24/mt-whymper_TL  22s
+ok      2023-24/cascade_ALP  22s
+ok      2023-24/cascade_TL  20s
+ok      2023-24/cascade_BTL  19s
+ok      2023-24/mt-bourgeau_TL  19s
+ok      2023-24/mt-bourgeau_ALP  24s
+ok      2023-24/mt-bourgeau_BTL  20s
+ok      2023-24/simpson_TL  26s
+ok      2023-24/simpson_ALP  29s
+ok      2023-24/simpson_BTL  24s
+ok      2023-24/fts-bosup  26s
+ok      2023-24/fts-bowsummit  24s
+ok      2023-24/fts-boslo  30s
+ok      2023-24/fts-lookout  30s
+ok      2023-24/fts-simplo  28s
+ok      2023-24/fts-simpup  25s
+ok      2023-24/fts-stanley  24s
+ok      2023-24/fts-sunshine  31s
+ok      2023-24/fts-vulture  32s
+ok      2023-24/fts-whymper  26s
+ok      2023-24/fts-boulder  21s
+ok      2023-24/fts-pikarun  24s
+ok      2023-24/fts-vermillion  18s
+ok      2023-24/fts-castle  17s
+ok      2023-24/fts-lakelouise  20s
+ok      2023-24/fts-skoki  22s
+ok      2023-24/fts-coleman  21s
+ok      2023-24/fts-bigbend  19s
+ok      2023-24/fts-saskcrossing  17s
+done: 58 ok, 0 failed, 336 s wall; summary in /home/runner/work/_temp/reference/runs/summary.txt
+[23:11:31] convert 2023-24
+2023-24: 58 points, 17632 days, 12 s
+376 profiles where the replicated skier search differs from 0530 (0530 used)
+[23:11:44] snowpack 2024-25 (4 jobs)
+snowpack: 58 point-seasons, 4 parallel, out /home/runner/work/_temp/reference/runs
+ok      2024-25/parker-ridge_BTL  19s
+ok      2024-25/coleman-cliffs_ALP  23s
+ok      2024-25/parker-ridge_TL  23s
+ok      2024-25/parker-ridge_ALP  28s
+ok      2024-25/coleman-cliffs_TL  20s
+ok      2024-25/coleman-cliffs_BTL  20s
+ok      2024-25/mt-wilson_ALP  21s
+ok      2024-25/mt-wilson_TL  17s
+ok      2024-25/mt-wilson_BTL  17s
+ok      2024-25/observation-pk_BTL  18s
+ok      2024-25/observation-pk_TL  20s
+ok      2024-25/observation-pk_ALP  21s
+ok      2024-25/mt-gordon_ALP  35s
+ok      2024-25/mt-gordon_BTL  31s
+ok      2024-25/mt-gordon_TL  34s
+ok      2024-25/emerald-pk_ALP  34s
+ok      2024-25/emerald-pk_TL  30s
+ok      2024-25/emerald-pk_BTL  26s
+ok      2024-25/mt-dennis_TL  29s
+ok      2024-25/mt-dennis_ALP  31s
+ok      2024-25/mt-dennis_BTL  25s
+ok      2024-25/mt-bosworth_ALP  29s
+ok      2024-25/mt-bosworth_BTL  25s
+ok      2024-25/mt-bosworth_TL  27s
+ok      2024-25/ll-richardson_ALP  21s
+ok      2024-25/ll-richardson_TL  20s
+ok      2024-25/ll-richardson_BTL  18s
+ok      2024-25/mt-whymper_ALP  25s
+ok      2024-25/mt-whymper_TL  21s
+ok      2024-25/mt-whymper_BTL  19s
+ok      2024-25/cascade_ALP  18s
+ok      2024-25/cascade_TL  15s
+ok      2024-25/cascade_BTL  15s
+ok      2024-25/mt-bourgeau_TL  18s
+ok      2024-25/mt-bourgeau_ALP  19s
+ok      2024-25/mt-bourgeau_BTL  18s
+ok      2024-25/simpson_ALP  26s
+ok      2024-25/simpson_BTL  21s
+ok      2024-25/simpson_TL  23s
+ok      2024-25/fts-bosup  33s
+ok      2024-25/fts-bowsummit  24s
+ok      2024-25/fts-lookout  24s
+ok      2024-25/fts-boslo  30s
+ok      2024-25/fts-simplo  28s
+ok      2024-25/fts-simpup  24s
+ok      2024-25/fts-stanley  24s
+ok      2024-25/fts-sunshine  31s
+ok      2024-25/fts-boulder  18s
+ok      2024-25/fts-whymper  23s
+ok      2024-25/fts-vulture  40s
+ok      2024-25/fts-pikarun  24s
+ok      2024-25/fts-vermillion  19s
+ok      2024-25/fts-lakelouise  21s
+ok      2024-25/fts-castle  16s
+ok      2024-25/fts-skoki  20s
+ok      2024-25/fts-coleman  23s
+ok      2024-25/fts-bigbend  19s
+ok      2024-25/fts-saskcrossing  13s
+done: 58 ok, 0 failed, 342 s wall; summary in /home/runner/work/_temp/reference/runs/summary.txt
+[23:17:26] convert 2024-25
+2024-25: 58 points, 17574 days, 12 s
+556 profiles where the replicated skier search differs from 0530 (0530 used)
+[23:17:39] snowpack 2025-26 (4 jobs)
+snowpack: 58 point-seasons, 4 parallel, out /home/runner/work/_temp/reference/runs
+ok      2025-26/parker-ridge_BTL  23s
+ok      2025-26/coleman-cliffs_ALP  30s
+ok      2025-26/parker-ridge_TL  31s
+ok      2025-26/parker-ridge_ALP  36s
+ok      2025-26/coleman-cliffs_TL  26s
+ok      2025-26/coleman-cliffs_BTL  20s
+ok      2025-26/mt-wilson_ALP  25s
+ok      2025-26/mt-wilson_TL  24s
+ok      2025-26/mt-wilson_BTL  20s
+ok      2025-26/observation-pk_ALP  24s
+ok      2025-26/observation-pk_TL  24s
+ok      2025-26/observation-pk_BTL  22s
+ok      2025-26/mt-gordon_TL  31s
+ok      2025-26/mt-gordon_ALP  36s
+ok      2025-26/mt-gordon_BTL  33s
+ok      2025-26/emerald-pk_ALP  36s
+ok      2025-26/emerald-pk_BTL  30s
+ok      2025-26/emerald-pk_TL  35s
+ok      2025-26/mt-dennis_ALP  31s
+ok      2025-26/mt-dennis_TL  30s
+ok      2025-26/mt-dennis_BTL  28s
+ok      2025-26/mt-bosworth_ALP  28s
+ok      2025-26/mt-bosworth_TL  26s
+ok      2025-26/mt-bosworth_BTL  27s
+ok      2025-26/ll-richardson_ALP  25s
+ok      2025-26/ll-richardson_TL  23s
+ok      2025-26/ll-richardson_BTL  21s
+ok      2025-26/mt-whymper_ALP  33s
+ok      2025-26/mt-whymper_BTL  21s
+ok      2025-26/cascade_ALP  24s
+ok      2025-26/mt-whymper_TL  28s
+ok      2025-26/cascade_TL  21s
+ok      2025-26/cascade_BTL  18s
+ok      2025-26/mt-bourgeau_TL  21s
+ok      2025-26/mt-bourgeau_ALP  26s
+ok      2025-26/mt-bourgeau_BTL  19s
+ok      2025-26/simpson_ALP  35s
+ok      2025-26/simpson_TL  28s
+ok      2025-26/simpson_BTL  24s
+ok      2025-26/fts-bosup  34s
+ok      2025-26/fts-bowsummit  33s
+ok      2025-26/fts-lookout  34s
+ok      2025-26/fts-boslo  42s
+ok      2025-26/fts-simplo  36s
+ok      2025-26/fts-stanley  31s
+ok      2025-26/fts-simpup  34s
+ok      2025-26/fts-sunshine  37s
+ok      2025-26/fts-boulder  22s
+ok      2025-26/fts-whymper  28s
+ok      2025-26/fts-vulture  45s
+ok      2025-26/fts-pikarun  28s
+ok      2025-26/fts-vermillion  21s
+ok      2025-26/fts-castle  19s
+ok      2025-26/fts-lakelouise  25s
+ok      2025-26/fts-skoki  27s
+ok      2025-26/fts-saskcrossing  18s
+ok      2025-26/fts-coleman  28s
+ok      2025-26/fts-bigbend  25s
+done: 58 ok, 0 failed, 407 s wall; summary in /home/runner/work/_temp/reference/runs/summary.txt
+[23:24:26] convert 2025-26
+2025-26: 58 points, 17574 days, 15 s
+568 profiles where the replicated skier search differs from 0530 (0530 used)
+[23:24:42] score
+# Model vs field profiles: snowpack
+
+123 field profiles; 122 scored, 1 skipped (no usable location).
+Matching tolerance for layers: 12 % of HS in relative height, or 10 cm in depth from the surface.
+
+### All (122 profiles)
+| Measure | Value |
+|---|---|
+| HS error, model − observed (full-depth pits) | mean -17.3 cm, mean abs 22.3 cm (n 104) |
+| Grain-group agreement (relative height) | 46.5 % (n 100) |
+| Hand hardness, model − observed | bias -0.8 steps, mean abs 1.4 (n 122) |
+| Basal persistent grains (bottom 30 %) | observed in 79/104; model has them in 68 of those; model shows ≥2 mm "RG" at the base in 0 |
+| Crusts | observed 118, matched 83 (70 %; by chance 43 % of the pit range lies within tolerance of a model crust); model crusts with no observed match 737 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 33/37 / 35/55 / 15/26 |
+| Model crust zones (crust layers less than 3 cm apart count once) | 191, with no observed match 110 |
+| Buried surface hoar | observed 21, matched 0 (0 %); model SH with no observed match 7 |
+| Test failures with a model weak layer (p ≥ 50 %) within tolerance | 77/180 (43 %) |
+| Test failures with a model weak layer (p ≥ 90 %) within tolerance | 46/180 (26 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 95/106 (90 %) |
+| Model weak layers (p ≥ 90 %) at an observed persistent layer or test failure | 55/61 (90 %) |
+| Snow temperature, model − observed (below 20 cm) | bias 0.5 °C, RMSE 1.5 °C (n 45) |
+
+### Study plots (60 profiles)
+| Measure | Value |
+|---|---|
+| HS error, model − observed (full-depth pits) | mean -8 cm, mean abs 11.9 cm (n 58) |
+| Grain-group agreement (relative height) | 49.5 % (n 59) |
+| Hand hardness, model − observed | bias -0.6 steps, mean abs 1.2 (n 60) |
+| Basal persistent grains (bottom 30 %) | observed in 54/58; model has them in 47 of those; model shows ≥2 mm "RG" at the base in 0 |
+| Crusts | observed 74, matched 54 (73 %; by chance 50 % of the pit range lies within tolerance of a model crust); model crusts with no observed match 490 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 19/21 / 26/38 / 9/15 |
+| Model crust zones (crust layers less than 3 cm apart count once) | 119, with no observed match 67 |
+| Buried surface hoar | observed 14, matched 0 (0 %); model SH with no observed match 2 |
+| Test failures with a model weak layer (p ≥ 50 %) within tolerance | 34/89 (38 %) |
+| Test failures with a model weak layer (p ≥ 90 %) within tolerance | 16/89 (18 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 54/57 (95 %) |
+| Model weak layers (p ≥ 90 %) at an observed persistent layer or test failure | 28/29 (97 %) |
+| Snow temperature, model − observed (below 20 cm) | bias 0.6 °C, RMSE 1.5 °C (n 37) |
+
+### Test profiles (62 profiles)
+| Measure | Value |
+|---|---|
+| HS error, model − observed (full-depth pits) | mean -29.1 cm, mean abs 35.4 cm (n 46) |
+| Grain-group agreement (relative height) | 42.2 % (n 41) |
+| Hand hardness, model − observed | bias -1 steps, mean abs 1.5 (n 62) |
+| Basal persistent grains (bottom 30 %) | observed in 25/46; model has them in 21 of those; model shows ≥2 mm "RG" at the base in 0 |
+| Crusts | observed 44, matched 29 (66 %; by chance 37 % of the pit range lies within tolerance of a model crust); model crusts with no observed match 247 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 14/16 / 9/17 / 6/11 |
+| Model crust zones (crust layers less than 3 cm apart count once) | 72, with no observed match 43 |
+| Buried surface hoar | observed 7, matched 0 (0 %); model SH with no observed match 5 |
+| Test failures with a model weak layer (p ≥ 50 %) within tolerance | 43/91 (47 %) |
+| Test failures with a model weak layer (p ≥ 90 %) within tolerance | 30/91 (33 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 41/49 (84 %) |
+| Model weak layers (p ≥ 90 %) at an observed persistent layer or test failure | 27/32 (84 %) |
+| Snow temperature, model − observed (below 20 cm) | bias -0.1 °C, RMSE 1.7 °C (n 8) |
+
+### Season 2023-24 (36 profiles)
+| Measure | Value |
+|---|---|
+| HS error, model − observed (full-depth pits) | mean -13.4 cm, mean abs 14.4 cm (n 36) |
+| Grain-group agreement (relative height) | 44.4 % (n 31) |
+| Hand hardness, model − observed | bias -0.5 steps, mean abs 1.4 (n 36) |
+| Basal persistent grains (bottom 30 %) | observed in 29/36; model has them in 20 of those; model shows ≥2 mm "RG" at the base in 0 |
+| Crusts | observed 41, matched 29 (71 %; by chance 61 % of the pit range lies within tolerance of a model crust); model crusts with no observed match 325 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 1/3 / 19/26 / 9/12 |
+| Model crust zones (crust layers less than 3 cm apart count once) | 79, with no observed match 50 |
+| Buried surface hoar | observed 2, matched 0 (0 %); model SH with no observed match 3 |
+| Test failures with a model weak layer (p ≥ 50 %) within tolerance | 22/54 (41 %) |
+| Test failures with a model weak layer (p ≥ 90 %) within tolerance | 13/54 (24 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 36/42 (86 %) |
+| Model weak layers (p ≥ 90 %) at an observed persistent layer or test failure | 19/21 (90 %) |
+| Snow temperature, model − observed (below 20 cm) | bias 1.2 °C, RMSE 1.7 °C (n 16) |
+
+### Season 2024-25 (41 profiles)
+| Measure | Value |
+|---|---|
+| HS error, model − observed (full-depth pits) | mean -14.8 cm, mean abs 21.8 cm (n 39) |
+| Grain-group agreement (relative height) | 65.8 % (n 31) |
+| Hand hardness, model − observed | bias -0.7 steps, mean abs 1.3 (n 41) |
+| Basal persistent grains (bottom 30 %) | observed in 29/39; model has them in 28 of those; model shows ≥2 mm "RG" at the base in 0 |
+| Crusts | observed 36, matched 28 (78 %; by chance 36 % of the pit range lies within tolerance of a model crust); model crusts with no observed match 173 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 20/22 / 4/7 / 4/7 |
+| Model crust zones (crust layers less than 3 cm apart count once) | 62, with no observed match 32 |
+| Buried surface hoar | observed 0, matched 0 (–); model SH with no observed match 1 |
+| Test failures with a model weak layer (p ≥ 50 %) within tolerance | 27/55 (49 %) |
+| Test failures with a model weak layer (p ≥ 90 %) within tolerance | 19/55 (35 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 31/33 (94 %) |
+| Model weak layers (p ≥ 90 %) at an observed persistent layer or test failure | 18/20 (90 %) |
+| Snow temperature, model − observed (below 20 cm) | bias 0.2 °C, RMSE 1.5 °C (n 15) |
+
+### Season 2025-26 (45 profiles)
+| Measure | Value |
+|---|---|
+| HS error, model − observed (full-depth pits) | mean -25.5 cm, mean abs 32.7 cm (n 29) |
+| Grain-group agreement (relative height) | 32.4 % (n 38) |
+| Hand hardness, model − observed | bias -1.1 steps, mean abs 1.5 (n 45) |
+| Basal persistent grains (bottom 30 %) | observed in 21/29; model has them in 20 of those; model shows ≥2 mm "RG" at the base in 0 |
+| Crusts | observed 41, matched 26 (63 %; by chance 38 % of the pit range lies within tolerance of a model crust); model crusts with no observed match 239 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 12/12 / 12/22 / 2/7 |
+| Model crust zones (crust layers less than 3 cm apart count once) | 50, with no observed match 28 |
+| Buried surface hoar | observed 19, matched 0 (0 %); model SH with no observed match 3 |
+| Test failures with a model weak layer (p ≥ 50 %) within tolerance | 28/71 (39 %) |
+| Test failures with a model weak layer (p ≥ 90 %) within tolerance | 14/71 (20 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 28/31 (90 %) |
+| Model weak layers (p ≥ 90 %) at an observed persistent layer or test failure | 18/20 (90 %) |
+| Snow temperature, model − observed (below 20 cm) | bias 0 °C, RMSE 1.5 °C (n 14) |
+
+### Study plot: bow-summit-plot (23 profiles)
+| Measure | Value |
+|---|---|
+| HS error, model − observed (full-depth pits) | mean -1.7 cm, mean abs 4.3 cm (n 23) |
+| Grain-group agreement (relative height) | 59 % (n 23) |
+| Hand hardness, model − observed | bias -0.2 steps, mean abs 1.1 (n 23) |
+| Basal persistent grains (bottom 30 %) | observed in 21/23; model has them in 21 of those; model shows ≥2 mm "RG" at the base in 0 |
+| Crusts | observed 27, matched 26 (96 %; by chance 56 % of the pit range lies within tolerance of a model crust); model crusts with no observed match 173 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 11/11 / 9/9 / 6/7 |
+| Model crust zones (crust layers less than 3 cm apart count once) | 57, with no observed match 37 |
+| Buried surface hoar | observed 4, matched 0 (0 %); model SH with no observed match 0 |
+| Test failures with a model weak layer (p ≥ 50 %) within tolerance | 13/32 (41 %) |
+| Test failures with a model weak layer (p ≥ 90 %) within tolerance | 8/32 (25 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 26/28 (93 %) |
+| Model weak layers (p ≥ 90 %) at an observed persistent layer or test failure | 17/18 (94 %) |
+| Snow temperature, model − observed (below 20 cm) | bias 0.5 °C, RMSE 1.6 °C (n 10) |
+
+### Study plot: goats-eye-plot (18 profiles)
+| Measure | Value |
+|---|---|
+| HS error, model − observed (full-depth pits) | mean 1.5 cm, mean abs 7.7 cm (n 18) |
+| Grain-group agreement (relative height) | 40.9 % (n 17) |
+| Hand hardness, model − observed | bias -0.2 steps, mean abs 1.2 (n 18) |
+| Basal persistent grains (bottom 30 %) | observed in 17/18; model has them in 10 of those; model shows ≥2 mm "RG" at the base in 0 |
+| Crusts | observed 19, matched 16 (84 %; by chance 53 % of the pit range lies within tolerance of a model crust); model crusts with no observed match 264 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 5/5 / 9/12 / 2/2 |
+| Model crust zones (crust layers less than 3 cm apart count once) | 33, with no observed match 13 |
+| Buried surface hoar | observed 5, matched 0 (0 %); model SH with no observed match 2 |
+| Test failures with a model weak layer (p ≥ 50 %) within tolerance | 7/30 (23 %) |
+| Test failures with a model weak layer (p ≥ 90 %) within tolerance | 4/30 (13 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 14/15 (93 %) |
+| Model weak layers (p ≥ 90 %) at an observed persistent layer or test failure | 6/6 (100 %) |
+| Snow temperature, model − observed (below 20 cm) | bias 1.4 °C, RMSE 1.7 °C (n 15) |
+
+### Study plot: simpson-plot (6 profiles)
+| Measure | Value |
+|---|---|
+| HS error, model − observed (full-depth pits) | mean -6.2 cm, mean abs 6.2 cm (n 6) |
+| Grain-group agreement (relative height) | 56.8 % (n 6) |
+| Hand hardness, model − observed | bias -1.2 steps, mean abs 1.3 (n 6) |
+| Basal persistent grains (bottom 30 %) | observed in 5/6; model has them in 5 of those; model shows ≥2 mm "RG" at the base in 0 |
+| Crusts | observed 11, matched 2 (18 %; by chance 22 % of the pit range lies within tolerance of a model crust); model crusts with no observed match 8 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 2/4 / 0/6 / 0/1 |
+| Model crust zones (crust layers less than 3 cm apart count once) | 9, with no observed match 7 |
+| Buried surface hoar | observed 2, matched 0 (0 %); model SH with no observed match 0 |
+| Test failures with a model weak layer (p ≥ 50 %) within tolerance | 3/8 (38 %) |
+| Test failures with a model weak layer (p ≥ 90 %) within tolerance | 1/8 (13 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 3/3 (100 %) |
+| Model weak layers (p ≥ 90 %) at an observed persistent layer or test failure | 1/1 (100 %) |
+| Snow temperature, model − observed (below 20 cm) | bias -0.7 °C, RMSE 1.5 °C (n 5) |
+
+### Study plot: tak-falls-plot (13 profiles)
+| Measure | Value |
+|---|---|
+| HS error, model − observed (full-depth pits) | mean -37.7 cm, mean abs 37.7 cm (n 11) |
+| Grain-group agreement (relative height) | 40.3 % (n 13) |
+| Hand hardness, model − observed | bias -1.3 steps, mean abs 1.5 (n 13) |
+| Basal persistent grains (bottom 30 %) | observed in 11/11; model has them in 11 of those; model shows ≥2 mm "RG" at the base in 0 |
+| Crusts | observed 17, matched 10 (59 %; by chance 55 % of the pit range lies within tolerance of a model crust); model crusts with no observed match 45 |
+| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | 1/1 / 8/11 / 1/5 |
+| Model crust zones (crust layers less than 3 cm apart count once) | 20, with no observed match 10 |
+| Buried surface hoar | observed 3, matched 0 (0 %); model SH with no observed match 0 |
+| Test failures with a model weak layer (p ≥ 50 %) within tolerance | 11/19 (58 %) |
+| Test failures with a model weak layer (p ≥ 90 %) within tolerance | 3/19 (16 %) |
+| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | 11/11 (100 %) |
+| Model weak layers (p ≥ 90 %) at an observed persistent layer or test failure | 4/4 (100 %) |
+| Snow temperature, model − observed (below 20 cm) | bias 0.1 °C, RMSE 1.1 °C (n 7) |
+
+### Grain groups: observed (rows) vs model (columns), grid cells
+| obs \ model | PP/DF | RG/FCxr | SH/DH/FC | MFcr | MF |
+|---|---|---|---|---|---|
+| PP/DF | 469 | 68 | 194 | 11 | 6 |
+| RG/FCxr | 72 | 181 | 618 | 172 | 38 |
+| SH/DH/FC | 37 | 97 | 941 | 315 | 26 |
+| MFcr | 4 | 16 | 72 | 60 | 1 |
+| MF | 3 | 3 | 7 | 7 | 1 |
+
+# Station snow height: snowpack
+
+Model (flat column at the station's point) minus the sensor, cm, as bias / mean abs. Melt-out dates are the sensor's and the model's.
+
+| Station | Season | Early (Oct–Nov) | Winter (Dec–Mar) | Spring (Apr–Jun) | Melt-out, sensor | Melt-out, model |
+|---|---|---|---|---|---|---|
+| Bosworth Lower | 2023-24 | 0 / 1 | 0 / 1 | 0 / 2 | – | – |
+| Bow Summit | 2023-24 | 1 / 2 | 0 / 1 | 5 / 5 | 2024-06-02 | 2024-06-07 |
+| Simpson Lower | 2023-24 | -1 / 1 | -1 / 1 | 0 / 2 | 2024-06-23 | 2024-06-24 |
+| Stanley Lower | 2023-24 | 0 / 1 | 0 / 1 | 1 / 2 | 2024-05-27 | 2024-05-29 |
+| Sunshine Village | 2023-24 | 1 / 1 | 1 / 2 | -1 / 2 | – | – |
+| Bosworth Lower | 2024-25 | 0 / 1 | -1 / 1 | 1 / 2 | 2025-06-20 | 2025-06-10 |
+| Bow Summit | 2024-25 | 0 / 1 | -1 / 1 | 4 / 4 | 2025-05-23 | 2025-05-25 |
+| Simpson Lower | 2024-25 | -1 / 1 | -1 / 1 | 1 / 2 | 2025-05-31 | 2025-06-01 |
+| Stanley Lower | 2024-25 | 0 / 1 | -1 / 1 | 4 / 5 | 2025-05-16 | 2025-05-20 |
+| Sunshine Village | 2024-25 | 2 / 3 | 5 / 6 | 0 / 2 | – | – |
+| Bosworth Lower | 2025-26 | -1 / 1 | 0 / 2 | 12 / 14 | 2026-06-29 | – |
+| Bow Summit | 2025-26 | 1 / 1 | 3 / 4 | 12 / 12 | 2026-06-02 | 2026-06-09 |
+| Simpson Lower | 2025-26 | 0 / 1 | -1 / 1 | 0 / 2 | 2026-06-28 | 2026-06-25 |
+| Stanley Lower | 2025-26 | 1 / 2 | 2 / 3 | 2 / 2 | – | 2026-05-28 |
+| Sunshine Village | 2025-26 | 0 / 1 | 4 / 5 | 1 / 2 | – | – |
+| **All** | | 0 / 1 | 1 / 2 | 2 / 3 | model − sensor: mean 1 d, mean abs 4 d (n 9) | |
+
+[23:24:43] done: 174 point-seasons ok, 0 failed
