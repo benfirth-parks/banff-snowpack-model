@@ -1,6 +1,6 @@
 // Grain classification, hand hardness, weak-layer detection and avalanche-problem
 // indices computed from a simulated profile.
-import { SH, WET, FACET, WIND, density, theta } from "./snowpack.js";
+import { SH, WET, FACET, WIND, DHM, density, theta } from "./snowpack.js";
 
 export const CLASSES = ["PP", "DF", "RG", "FCxr", "FC", "DH", "SH", "MF", "MFcr"];
 export const C = Object.fromEntries(CLASSES.map((c, i) => [c, i]));
@@ -15,7 +15,13 @@ export function classify(l) {
   if (l.mk & WET) return C.MFcr;
   if (l.dd > 0.75) return C.PP;
   if (l.dd > 0.02) return C.DF;
-  if (l.sp >= 0.5) return (l.mk & FACET) && l.sp < 0.75 ? C.FCxr : C.RG;
+  if (l.sp >= 0.5) {
+    // A layer that has faceted never becomes plain rounded grains while its
+    // grains are still large: depth hoar stays DH, facets round to FCxr.
+    if ((l.mk & DHM) && l.gs >= 1.5) return C.DH;
+    if ((l.mk & FACET) && (l.sp < 0.75 || l.gs >= 1)) return C.FCxr;
+    return C.RG;
+  }
   return l.gs >= 1.8 ? C.DH : C.FC;
 }
 
@@ -56,35 +62,48 @@ export function layersTopDown(sim) {
   return out;
 }
 
-// Structural instability of each persistent layer: threshold-sum ("lemons")
+// Structural instability of each persistent weak zone: threshold-sum ("lemons")
 // approach of Schweizer & Jamieson (2007), turned into a probability-like
-// index with a logistic curve centred between 4 and 5 lemons.
+// index with a logistic curve centred between 4 and 5 lemons. Adjacent
+// persistent layers are one weak zone, scored on its weakest grains and softest
+// hardness against the slab above and the layer below the zone, not sublayer by
+// sublayer (a thick basal DH zone has no contrast inside it). Zones deeper than
+// 94 cm are flagged `deep`: they miss the depth lemon, but are kept and
+// reported as a deep persistent problem.
 export function weakLayers(sim) {
   const td = layersTopDown(sim);
   const out = [];
-  for (let k = 1; k < td.length; k++) {
-    const w = td[k];
-    if (!PERSISTENT.has(w.cls)) continue;
-    const depthCm = w.top * 100;
+  let k = 1;
+  while (k < td.length) {
+    if (!PERSISTENT.has(td[k].cls)) { k++; continue; }
+    let e = k;
+    while (e + 1 < td.length && PERSISTENT.has(td[e + 1].cls) && td[e + 1].cls !== C.SH && td[k].cls !== C.SH) e++;
+    const zone = td.slice(k, e + 1);
+    const above = td[k - 1], below = td[e + 1];
+    const k0 = k;
+    k = e + 1;
+    const depthCm = zone[0].top * 100;
     if (depthCm < 10) continue;
-    const above = td[k - 1];
-    const below = td[k + 1];
+    const weak = zone.reduce((a, b) => (b.l.gs > a.l.gs ? b : a));
+    const gs = weak.l.gs;
+    const h = Math.min(...zone.map((x) => x.h));
     let lem = 1; // persistent grain type
-    if (w.l.gs >= 1.25) lem++;
-    if (w.h <= 1.3) lem++;
-    const dgs = Math.max(Math.abs(w.l.gs - above.l.gs), below ? Math.abs(w.l.gs - below.l.gs) : 0);
+    if (gs >= 1.25) lem++;
+    if (h <= 1.3) lem++;
+    const dgs = Math.max(Math.abs(gs - above.l.gs), below ? Math.abs(gs - below.l.gs) : 0);
     if (dgs >= 0.75) lem++;
-    const dh = Math.max(Math.abs(w.h - above.h), below ? Math.abs(w.h - below.h) : 0);
+    const dh = Math.max(Math.abs(h - above.h), below ? Math.abs(h - below.h) : 0);
     if (dh >= 1.7) lem++;
     if (depthCm >= 18 && depthCm <= 94) lem++;
     // Slab: need a cohesive slab above; weaken the index for thin or very deep burial.
     let slabMass = 0;
-    for (let j = 0; j < k; j++) slabMass += td[j].l.m;
-    const slabRho = w.top > 0 ? slabMass / w.top : 0;
+    for (let j = 0; j < k0; j++) slabMass += td[j].l.m;
+    const slabRho = zone[0].top > 0 ? slabMass / zone[0].top : 0;
     const slabF = Math.min(1, Math.max(0, (depthCm - 12) / 18)) * Math.min(1, Math.max(0.2, (slabRho - 60) / 80)) *
       (depthCm > 150 ? Math.max(0.2, 1 - (depthCm - 150) / 100) : 1);
     const p = logistic(2.2 * (lem - 4.5)) * slabF;
-    out.push({ depth: Math.round(depthCm), cls: w.cls, gs: w.l.gs, h: w.h, lemons: lem, p, burial: above.l.bd, formed: w.l.bd });
+    out.push({ depth: Math.round(depthCm), cls: weak.cls, gs, h, lemons: lem, p, burial: above.l.bd, formed: weak.l.bd,
+      thick: Math.round((zone[zone.length - 1].bottom - zone[0].top) * 100), deep: depthCm > 94 });
   }
   return out.sort((a, b) => b.p - a.p);
 }
@@ -125,14 +144,19 @@ export function diagnose(sim, t, wx = {}) {
   const pNew = hs < 0.05 ? 0 : Math.max(logistic((hn24 * 100 - 20) / 4), logistic((hn72 * 100 - 30) / 6));
   const pWind = hs < 0.1 ? 0 : logistic((windSlab * 100 - 15) / 4);
   const pPwl = wl.length ? wl[0].p : 0;
+  // Deep persistent: the most unstable weak zone deeper than 94 cm, scored as if
+  // it had the depth lemon (a deep layer that would otherwise be critical).
+  const deep = wl.filter((w) => w.deep).map((w) => ({ ...w, p: logistic(2.2 * (w.lemons + 1 - 4.5)) * (w.depth > 150 ? Math.max(0.2, 1 - (w.depth - 150) / 100) : 1) }))
+    .sort((a, b) => b.p - a.p)[0] || null;
+  const pDeep = deep ? deep.p : 0;
   let pWet = hs < 0.05 ? 0 : logistic((lwcIndex - 0.8) / 0.15);
   if ((wx.rain24 || 0) > 5 && hs > 0.1) pWet = Math.max(pWet, logistic(((wx.rain24 || 0) - 8) / 3));
   const hazard = 1 - (1 - pNew) * (1 - pWind) * (1 - 0.6 * pPwl) * (1 - pWet);
   return {
     hs: hs * 100, hn24: hn24 * 100, hn72: hn72 * 100, windSlab: windSlab * 100,
     lwm, lwcMax, lwcIndex, skiPen: skiPenetration(sim),
-    pNew, pWind, pPwl, pWet, hazard,
-    weak: wl.slice(0, 4), crit,
+    pNew, pWind, pPwl, pWet, pDeep, hazard,
+    weak: wl.slice(0, 4), crit, deep,
     surface: td.length ? CLASSES[td[0].cls] : null,
   };
 }
@@ -197,6 +221,12 @@ export function summarize(diags, daily, tzOffsetH = -7) {
   } else {
     const anyPwl = diags.some((d) => d.weak.length && d.weak[0].p >= 0.3);
     if (anyPwl) parts.push("Buried persistent grains present, structure not critical.");
+  }
+  const deep = diags.filter((d) => d.pDeep >= 0.7);
+  if (deep.length) {
+    const depths = deep.map((d) => d.deep.depth);
+    const cls = deep.map((d) => d.deep.cls).sort((a, b) => b - a)[0];
+    parts.push(`Deep persistent ${CLASSES[cls]} in ${Math.round(100 * deep.length / diags.length)}% of profiles at ${Math.round(Math.min(...depths) / 10) * 10}-${Math.round(Math.max(...depths) / 10) * 10}cm.`);
   }
   const wet = diags.filter((d) => d.pWet >= 0.5).length;
   if (wet) parts.push(`Wet snow in ${Math.round(100 * wet / diags.length)}% of profiles.`);

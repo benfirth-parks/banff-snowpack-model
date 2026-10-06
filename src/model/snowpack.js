@@ -28,6 +28,7 @@ export const SH = 2;     // surface hoar (at surface or buried)
 export const WET = 4;    // has been wet → melt-freeze crust once refrozen
 export const FACET = 8;  // has faceted at some point (for FCxr)
 export const RAIN = 16;  // rain-affected (rain crust once refrozen)
+export const DHM = 32;   // has grown depth hoar (faceted to ≥ 1.8 mm)
 
 const LF = 3.34e5;      // latent heat of fusion, J/kg
 const LS = 2.834e6;     // latent heat of sublimation, J/kg
@@ -347,13 +348,17 @@ function metamorphism(sim, dtDays) {
       l.sp += (rRound * 1.25 - rFacet) * dtDays;
       if (l.dd <= 0) { l.dd = 0; l.gs = Math.max(l.gs, 0.35 + 0.15 * (1 - l.sp)); }
     } else {
-      l.sp += (rRound - rFacet) * dtDays;
+      // Large faceted grains round far more slowly than small ones (they need to
+      // lose much more mass to bond), so buried facets and depth hoar stay
+      // persistent for months, as observed in the Rockies' basal layers.
+      const slow = (l.mk & FACET) ? clamp(0.5 / l.gs, 0.12, 1) : 1;
+      l.sp += (rRound * slow - rFacet) * dtDays;
       l.gs += (0.004 * fT + 0.05 * xs * fT * fRho) * dtDays;
     }
     l.dd = clamp(l.dd, 0, 1);
     l.sp = clamp(l.sp, 0, 1);
     l.gs = clamp(l.gs, 0.1, 6);
-    if (l.dd === 0 && l.sp < 0.45) l.mk |= FACET;
+    if (l.dd === 0 && l.sp < 0.45) { l.mk |= FACET; if (l.gs >= 1.8) l.mk |= DHM; }
     // Strong faceting eventually erases a thin crust's identity.
     if ((l.mk & WET) && l.sp < 0.2 && l.gs > 1) l.mk &= ~WET;
   }
