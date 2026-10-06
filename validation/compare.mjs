@@ -196,12 +196,21 @@ function score(o) {
   // as an observer would log a thick melt-freeze crust.
   const pos = (h) => (h < 0.3 * HS ? 0 : HS - h <= 30 ? 2 : 1);
   const crustPos = [0, 1, 2].map((z) => { const A = oCr.filter((h) => pos(h) === z); return [A.length, A.filter((a) => mCr.some((b) => tolMatch(a, b))).length]; });
+  // Chance rate: the share of the pit's depth range (1 cm steps) that lies within
+  // tolerance of some model crust. A model with many thin crusts "matches" observed
+  // crusts at about this rate by placement alone, so a matched rate is only skill
+  // where it beats it.
+  const cmGrid = []; for (let h = Math.max(0, pitBottom); h <= HS; h++) cmGrid.push(h);
+  const crustChance = { grid: cmGrid.length, covered: cmGrid.filter((h) => mCr.some((b) => tolMatch(h, b))).length };
+  // Crust layers separated by less than 3 cm of other snow are one zone too: a model
+  // with 2 cm elements leaves thin interlayers inside a refrozen zone.
   const zones = [];
   M.L.forEach((l, i) => {
     if (l.cls !== 8 || !inRange(l)) return;
     const h = (l.hBot + l.hTop) / 2, hit = oCr.some((a) => tolMatch(a, h));
-    if (i > 0 && M.L[i - 1].cls === 8 && zones.length && zones[zones.length - 1].last === i - 1) { const z = zones[zones.length - 1]; z.last = i; z.hit ||= hit; }
-    else zones.push({ last: i, hit });
+    const z = zones[zones.length - 1];
+    if (z && z.hBot - l.hTop < 3) { z.last = i; z.hBot = l.hBot; z.hit ||= hit; }
+    else zones.push({ last: i, hBot: l.hBot, hit });
   });
   const crustZones = { model: zones.length, falseAlarm: zones.filter((z) => !z.hit).length };
 
@@ -210,17 +219,21 @@ function score(o) {
   const failRes = fails.map((t) => {
     const hrO = t.height_cm / HS;
     const flagged = M.W.filter((w) => w.p >= 50 && tolMatch(t.height_cm, M.hs - w.depth));
+    const flagged90 = flagged.filter((w) => w.p >= 90); // the strict threshold: ≥ 6 lemons in our model, SNOWPACK's "poor" class
     const ml = atMod(Math.min(0.999, Math.max(0.001, hrO)));
-    return { score: t.score, h: t.height_cm, grain: t.layer_grain || null, flagged: flagged.length > 0, modelLayer: ml ? CLASSES[ml.cls] : null };
+    return { score: t.score, h: t.height_cm, grain: t.layer_grain || null, flagged: flagged.length > 0, flagged90: flagged90.length > 0, modelLayer: ml ? CLASSES[ml.cls] : null };
   });
 
   // Precision of the model's weak layers: each model weak layer (p ≥ 50 %) within
   // the pit's range is "confirmed" if an observed persistent layer (FC, FCxr, DH,
-  // SH) or an observed test failure lies within tolerance of it.
+  // SH) or an observed test failure lies within tolerance of it. Also at p ≥ 90 %.
   const oPers = L.filter((l) => obsPersistent(l) || obsSH(l)).flatMap((l) => [l.top_cm, (l.bottom_cm + l.top_cm) / 2]);
   const oFail = fails.map((t) => t.height_cm);
-  const mWeak = M.W.filter((w) => w.p >= 50).map((w) => M.hs - w.depth).filter((h) => h >= 0 && inRange({ hTop: h, hBot: h }));
-  const weak = { model: mWeak.length, confirmed: mWeak.filter((h) => oPers.concat(oFail).some((x) => tolMatch(x, h))).length };
+  const weakAt = (pMin) => {
+    const mWeak = M.W.filter((w) => w.p >= pMin).map((w) => M.hs - w.depth).filter((h) => h >= 0 && inRange({ hTop: h, hBot: h }));
+    return { model: mWeak.length, confirmed: mWeak.filter((h) => oPers.concat(oFail).some((x) => tolMatch(x, h))).length };
+  };
+  const weak = weakAt(50), weak90 = weakAt(90);
 
   // Temperatures below 20 cm depth
   const tErr = [];
@@ -236,7 +249,7 @@ function score(o) {
     hsObs: HS, hsModel: M.hs, hsErr: r1(M.hs - HS), partial: pitBottom > 2,
     groupAgree: gN ? Math.round((100 * gHit) / gN) : null, groupN: gN, conf,
     hardBias: r1(mean(hd)), hardMAE: r1(mean(hd.map(Math.abs))),
-    basal, crusts: { ...matchSets(oCr, mCr), layers: detail(oCr, mCrl), byPos: crustPos, zones: crustZones }, sh: { ...matchSets(oSH, mSH), layers: detail(oSH, mSHl) }, tests: failRes, weak,
+    basal, crusts: { ...matchSets(oCr, mCr), layers: detail(oCr, mCrl), byPos: crustPos, zones: crustZones, chance: crustChance }, sh: { ...matchSets(oSH, mSH), layers: detail(oSH, mSHl) }, tests: failRes, weak, weak90,
     tempBias: r1(mean(tErr)), tempRMSE: tErr.length ? r1(Math.sqrt(mean(tErr.map((x) => x * x)))) : null,
     modelSurface: CLASSES[M.L[0]?.cls] ?? null,
   };
@@ -265,12 +278,14 @@ function block(name, R) {
     `| Grain-group agreement (relative height) | ${r1(mean(ga.map((r) => r.groupAgree)))} % (n ${ga.length}) |`,
     `| Hand hardness, model − observed | bias ${r1(mean(hb.map((r) => r.hardBias)))} steps, mean abs ${r1(mean(hb.map((r) => r.hardMAE)))} (n ${hb.length}) |`,
     `| Basal persistent grains (bottom 30 %) | observed in ${bas.filter((r) => r.basal.obs).length}/${bas.length}; model has them in ${bas.filter((r) => r.basal.obs && r.basal.model).length} of those; model shows ≥2 mm "RG" at the base in ${bas.filter((r) => r.basal.modelLargeRG).length} |`,
-    `| Crusts | observed ${sum("crusts", "obs")}, matched ${sum("crusts", "hit")} (${pct(sum("crusts", "hit"), sum("crusts", "obs"))}); model crusts with no observed match ${sum("crusts", "falseAlarm")} |`,
+    `| Crusts | observed ${sum("crusts", "obs")}, matched ${sum("crusts", "hit")} (${pct(sum("crusts", "hit"), sum("crusts", "obs"))}; by chance ${pct(R.reduce((x, r) => x + (r.crusts.chance?.covered || 0), 0), R.reduce((x, r) => x + (r.crusts.chance?.grid || 0), 0))} of the pit range lies within tolerance of a model crust); model crusts with no observed match ${sum("crusts", "falseAlarm")} |`,
     `| Crusts matched by position: bottom 30 % / mid-pack / top 30 cm | ${[0, 1, 2].map((z) => `${R.reduce((x, r) => x + r.crusts.byPos[z][1], 0)}/${R.reduce((x, r) => x + r.crusts.byPos[z][0], 0)}`).join(" / ")} |`,
-    `| Model crust zones (adjacent crust layers count once) | ${R.reduce((x, r) => x + r.crusts.zones.model, 0)}, with no observed match ${R.reduce((x, r) => x + r.crusts.zones.falseAlarm, 0)} |`,
+    `| Model crust zones (crust layers less than 3 cm apart count once) | ${R.reduce((x, r) => x + r.crusts.zones.model, 0)}, with no observed match ${R.reduce((x, r) => x + r.crusts.zones.falseAlarm, 0)} |`,
     `| Buried surface hoar | observed ${sum("sh", "obs")}, matched ${sum("sh", "hit")} (${pct(sum("sh", "hit"), sum("sh", "obs"))}); model SH with no observed match ${sum("sh", "falseAlarm")} |`,
     `| Test failures with a model weak layer (p ≥ 50 %) within tolerance | ${tests.filter((t) => t.flagged).length}/${tests.length} (${pct(tests.filter((t) => t.flagged).length, tests.length)}) |`,
+    `| Test failures with a model weak layer (p ≥ 90 %) within tolerance | ${tests.filter((t) => t.flagged90).length}/${tests.length} (${pct(tests.filter((t) => t.flagged90).length, tests.length)}) |`,
     `| Model weak layers (p ≥ 50 %) at an observed persistent layer or test failure | ${R.reduce((x, r) => x + (r.weak?.confirmed || 0), 0)}/${R.reduce((x, r) => x + (r.weak?.model || 0), 0)} (${pct(R.reduce((x, r) => x + (r.weak?.confirmed || 0), 0), R.reduce((x, r) => x + (r.weak?.model || 0), 0))}) |`,
+    `| Model weak layers (p ≥ 90 %) at an observed persistent layer or test failure | ${R.reduce((x, r) => x + (r.weak90?.confirmed || 0), 0)}/${R.reduce((x, r) => x + (r.weak90?.model || 0), 0)} (${pct(R.reduce((x, r) => x + (r.weak90?.confirmed || 0), 0), R.reduce((x, r) => x + (r.weak90?.model || 0), 0))}) |`,
     `| Snow temperature, model − observed (below 20 cm) | bias ${r1(mean(tb.map((r) => r.tempBias)))} °C, RMSE ${r1(mean(tb.map((r) => r.tempRMSE)))} °C (n ${tb.length}) |`,
     "",
   ].join("\n");
