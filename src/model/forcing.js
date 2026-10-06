@@ -21,6 +21,15 @@
 //     per station and hour of day over the last ~2 weeks of analysis (`bias`,
 //     an exponentially weighted state carried between runs). Precipitation
 //     keeps the raw model amounts.
+//   • Ridge-top wind: the model's 10 m wind is a grid-cell average and reads 2–4×
+//     lower than the ridge anemometers. The ridge wind `Ur` scales the model's
+//     mean wind over the surrounding ~40 km by each ridge station's log-ratio of
+//     observed to that regional wind, spread horizontally (any elevation) and
+//     shrunk toward the mean of the ridge stations. Its direction `dirR` is the
+//     regional flow, which matches the ridge stations better than the channelled
+//     10 m direction of the nearest grid cells. In forecast hours each station's
+//     ratio fades into its learned mean, like the other biases. site.js uses the
+//     ridge wind to drift and load snow on alpine and treeline slopes.
 import { kmBetween } from "./domain.js";
 import { newSnowDensity, createSim, stepHour, snowDepth, packSim, unpackSim } from "./snowpack.js";
 
@@ -95,6 +104,12 @@ const KT = { L: 20, Z: 400, k0: 0.15 };
 const KW = { L: 20, Z: 300, k0: 0.15 };
 const KP = { L: 40, Z: 1200, k0: 0.1 };
 const TAU_T = 6, TAU_RH = 6, TAU_U = 12;
+// Ridge wind: ln((obs + 5) / (regional model + 5)) is 0.4–1.1 by ridge station
+// (Dec–Mar 2023–26); RIDGE_PRIOR is where it is shrunk to when no ridge station
+// reports. Each station's ratio is spread horizontally over KR.L km and shrunk
+// toward the mean of the stations reporting that hour. Tuned leaving each ridge
+// station out in turn.
+const RIDGE_PRIOR = 0.9, KR = { L: 15, k0: 1 }, R_REGION = 40;
 // Elevation trend of the temperature residuals: reference height, ridge
 // penalties (in "stations' worth" of shrinkage toward zero) and slope limit.
 const Z_REF = 2000, LAM_A = 1, LAM_B = 0.5, B_MAX = 8; // b in °C per km
@@ -168,11 +183,32 @@ export function prepareForcing({ times, nodes, stations, tA, windows, bias = nul
     };
   }
 
+  // Regional flow over the model nodes within R_REGION km: mean speed and the
+  // direction of the vector mean.
+  const regionNodes = (p) => {
+    const r = nodeList.map((nd, i) => [i, kmBetween(p, nd)]).filter(([, d]) => d <= R_REGION).map(([i]) => i);
+    return r.length ? r : nodeWeights(p).map(([i]) => i);
+  };
+  function regionWind(reg, k) {
+    let su = 0, n = 0, ux = 0, uy = 0;
+    for (const i of reg) {
+      const v = nodeList[i].v;
+      if (!ok(v.U[k])) continue;
+      su += v.U[k]; n++;
+      if (ok(v.dir[k])) { const a = v.dir[k] * Math.PI / 180; ux += v.U[k] * Math.sin(a); uy += v.U[k] * Math.cos(a); }
+    }
+    let dir = ux || uy ? Math.atan2(ux, uy) * 180 / Math.PI : null;
+    if (dir !== null && dir < 0) dir += 360;
+    return { U: n ? su / n : null, dir };
+  }
+
   // ---- Station residuals -------------------------------------------------
   const st = stations.map((s) => {
     const nw = nodeWeights(s);
+    const reg = s.ridge ? regionNodes(s) : null;
     const rT = new Array(N).fill(null), rRH = new Array(N).fill(null), rU = new Array(N).fill(null);
     const mP = new Array(N).fill(null), mT = new Array(N).fill(null);
+    const rR = s.ridge ? new Array(N).fill(null) : null;
     for (let k = 0; k <= kA && k < N; k++) {
       const m = modelAt(nw, s.z, k);
       mP[k] = m.P; mT[k] = m.T;
@@ -180,8 +216,10 @@ export function prepareForcing({ times, nodes, stations, tA, windows, bias = nul
       if (ok(o.T[k]) && ok(m.T)) rT[k] = clamp(o.T[k] - m.T, -15, 15);
       if (ok(o.RH[k]) && ok(m.RH)) rRH[k] = clamp(o.RH[k] - m.RH, -60, 60);
       if (s.wind && ok(o.U[k]) && ok(m.U)) rU[k] = clamp(Math.log((o.U[k] + 5) / (m.U + 5)), -1.1, 1.1);
+      const mR = rR ? regionWind(reg, k).U : null;
+      if (rR && ok(o.U[k]) && ok(mR)) rR[k] = clamp(Math.log((o.U[k] + 5) / (mR + 5)), -0.5, 2) - RIDGE_PRIOR;
     }
-    return { s, nw, rT, rRH, rU, mP, mT, x: (s.z - Z_REF) / 1000 };
+    return { s, nw, rT, rRH, rU, rR, mP, mT, x: (s.z - Z_REF) / 1000 };
   });
 
   // Hourly elevation trend of the temperature residuals (ridge regression).
@@ -210,6 +248,7 @@ export function prepareForcing({ times, nodes, stations, tA, windows, bias = nul
       if (ok(x.rT[k])) binUpdate(e.T, h, x.rT[k]);
       if (ok(x.rRH[k])) binUpdate(e.RH, h, x.rRH[k]);
       if (ok(x.rU[k])) binUpdate(e.U, 0, x.rU[k]); // wind: one bin, not by hour
+      if (x.rR && ok(x.rR[k])) binUpdate(e.R || (e.R = newBins(1)[0]), 0, x.rR[k]);
     }
   }
 
@@ -236,6 +275,19 @@ export function prepareForcing({ times, nodes, stations, tA, windows, bias = nul
       x.rRH[k] = blend(mRH_, e ? binEst(e.RH, hh) : null, h, TAU_RH);
       x.rU[k] = blend(mU_, e ? binEst(e.U, 0) : null, h, TAU_U);
     }
+    if (x.rR) {
+      const mR_ = tail(x.rR), pR = e?.R ? binEst(e.R, 0) : null;
+      x.bias.R = mR_;
+      for (let k = kA + 1; k < N; k++) x.rR[k] = blend(mR_, pR, times[k] - tA, TAU_U);
+    }
+  }
+  // Mean ridge-wind residual of the stations reporting each hour (0 = the prior).
+  const ridges = st.filter((x) => x.rR);
+  const rRbar = new Float64Array(N);
+  for (let k = 0; k < N; k++) {
+    let sr = 0, nr = 0;
+    for (const x of ridges) if (ok(x.rR[k])) { sr += x.rR[k]; nr++; }
+    rRbar[k] = nr ? sr / (nr + 1) : 0;
   }
 
   for (const x of st) {
@@ -347,9 +399,11 @@ export function prepareForcing({ times, nodes, stations, tA, windows, bias = nul
       const kP = x.s.precip ? x.kern(p, KP) : 0;
       if (kT > 0.005 || kW > 0.005 || kP > 0.005) sw.push([j, kT, kW, kP]);
     }
+    const rw = [];
+    for (let j = 0; j < st.length; j++) if (st[j].rR) { const w = Math.exp(-((kmBetween(p, st[j].s) / KR.L) ** 2)); if (w > 0.005) rw.push([j, w]); }
     // The station's own point takes its snow-height-driven snowfall directly.
     const own = p.id ? st.findIndex((x) => x.s.id === p.id && x.S) : -1;
-    return { nw, sw, z: p.z, own: own >= 0 ? own : null };
+    return { nw, sw, rw, reg: regionNodes(p), z: p.z, own: own >= 0 ? own : null };
   }
 
   function at(W, k) {
@@ -365,6 +419,11 @@ export function prepareForcing({ times, nodes, stations, tA, windows, bias = nul
     const Ta = (m.T ?? 0) + trA[k] + trB[k] * (W.z - Z_REF) / 1000 + (wT ? sT / (wT + KT.k0) : 0);
     const RH = clamp((m.RH ?? 80) + (wR ? sR / (wR + KT.k0) : 0), 5, 100);
     const Ukmh = Math.max(0, (m.U ?? 10) * Math.exp(wU ? sU / (wU + KW.k0) : 0));
+    let sRr = KR.k0 * rRbar[k], wRr = KR.k0;
+    for (const [j, w] of W.rw) if (ok(st[j].rR[k])) { sRr += w * st[j].rR[k]; wRr += w; }
+    const rg = regionWind(W.reg, k);
+    const Ur = Math.max(0, ((rg.U ?? m.U ?? 10) + 5) * Math.exp(RIDGE_PRIOR + sRr / wRr) - 5);
+    const dirR = rg.dir ?? m.dir;
     let P = Math.max(0, (m.P ?? 0) * Math.exp(wP ? sP / (wP + KP.k0) : 0));
     let sf = snowFraction(Ta);
     const Pwx = P; // precipitation in the weather (no surface hoar growth while it falls)
@@ -374,7 +433,7 @@ export function prepareForcing({ times, nodes, stations, tA, windows, bias = nul
       sf = P > 0 ? snow / P : sf;
     }
     return {
-      t: times[k], Ta, RH, U: Ukmh / 3.6, dir: m.dir, P, sf, Pwx,
+      t: times[k], Ta, RH, U: Ukmh / 3.6, dir: m.dir, Ur: Ur / 3.6, dirR, P, sf, Pwx,
       ghi: m.ghi, dirH: m.dirH, difH: m.difH, cc: m.cc, lw: longwaveIn(Ta, RH, m.cc),
     };
   }
@@ -387,6 +446,7 @@ export function prepareForcing({ times, nodes, stations, tA, windows, bias = nul
       biasTlocal: x.bias.T === null ? null : +x.bias.T.toFixed(2),
       biasRH: x.bias.RH === null ? null : +x.bias.RH.toFixed(1),
       windRatio: x.bias.U === null ? null : +Math.exp(x.bias.U).toFixed(2),
+      ridgeRatio: x.rR && x.bias.R !== null ? +Math.exp(RIDGE_PRIOR + x.bias.R).toFixed(2) : null,
       precip: x.precipDiag.slice(-7),
       hsModel: x.hsModel ?? null,
     }));
